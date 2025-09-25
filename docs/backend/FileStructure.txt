@@ -1,0 +1,13 @@
+terrariadle-backend/
+├── cmd/
+│   └── server/          # Entry point for starting the server
+│       └── main.go
+├── internal/
+│   ├── routes/          # Define API routes
+│   ├── middleware/      # Request validation, logging, auth, etc.
+│   ├── controllers/     # Handle HTTP requests/responses
+│   ├── services/        # Business logic
+│   ├── models/          # Database models, structs
+│   └── db/              # Database connection setup
+├── go.mod
+└── go.sum
