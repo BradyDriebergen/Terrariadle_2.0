@@ -2,9 +2,12 @@ package db
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 	"time"
+
+	"terrariadle-backend/internal/models"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -25,6 +28,7 @@ func Connect() {
 		log.Fatal("MongoDB URI not defined")
 	}
 
+	// Use a context with a timeout to prevent the application from hanging.
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
@@ -43,7 +47,75 @@ func Connect() {
 	Client = client
 }
 
+// DisconnectDB closes the MongoDB connection. It's good practice to defer this call.
+func DisconnectDB() {
+	if Client != nil {
+		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+		defer cancel()
+		if err := Client.Disconnect(ctx); err != nil {
+			log.Fatalf("Failed to disconnect from MongoDB: %v", err)
+		}
+		fmt.Println("Disconnected from MongoDB.")
+	}
+}
+
 // GetCollection is a helper to grab a collection
 func GetCollection(database, collection string) *mongo.Collection {
 	return Client.Database(database).Collection(collection)
+}
+
+func GetRecord(collection *mongo.Collection, filter any) (*models.GuessDocument, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	var user models.GuessDocument
+	res := collection.FindOne(ctx, filter)
+	err := res.Decode(&user)
+	if err != nil {
+		return nil, fmt.Errorf("failed to find record %v", err)
+	}
+
+	return &user, nil
+}
+
+// Inserts a record into a collection
+func InsertRecord(collection *mongo.Collection, data any) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	res, err := collection.InsertOne(ctx, data)
+	if err != nil {
+		return fmt.Errorf("failed to insert record: %v", err)
+	}
+
+	fmt.Printf("Inserted a single document with ID: %v\n", res.InsertedID)
+	return nil
+}
+
+// UpdateRecord updates a single record in a collection.
+func UpdateRecord(collection *mongo.Collection, filter, update any) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	res, err := collection.UpdateOne(ctx, filter, update)
+	if err != nil {
+		return fmt.Errorf("failed to update record: %v", err)
+	}
+
+	fmt.Printf("Matched %v document(s) and updated %v document(s).\n", res.MatchedCount, res.ModifiedCount)
+	return nil
+}
+
+// Delete record from a collection
+func DeleteRecord(collection *mongo.Collection, filter any) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	res, err := collection.DeleteOne(ctx, filter)
+	if err != nil {
+		return fmt.Errorf("failed to delete record: %v", err)
+	}
+
+	fmt.Printf("Deleted %v document\n", res.DeletedCount)
+	return nil
 }
