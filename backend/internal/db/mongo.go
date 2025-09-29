@@ -18,9 +18,11 @@ var Client *mongo.Client
 
 // Connect initializes a MongoDB client and stores it in db.Client
 func Connect() {
-	err := godotenv.Load("../../.env")
+	// paths := []string{".env", "../.env", "../../.env"}
+	err := godotenv.Load("../.env")
 	if err != nil {
-		log.Println("No .env file found, using system environment variables")
+		wd, _ := os.Getwd()
+		log.Printf("dotenv load failed: %v (cwd=%s). Falling back to system env", err, wd)
 	}
 
 	uri := os.Getenv("MONGODB_URI")
