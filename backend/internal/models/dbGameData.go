@@ -6,10 +6,10 @@ import (
 )
 
 type DbGameData struct {
-	DsData DailySlashData `bson:"dsData"`
-	TcData types.Category `bson:"tcData"`
-	GnData GuessNpcData   `bson:"gnData"`
-	HmPos  int            `bson:"hmPos"`
+	DsData DailySlashData    `bson:"dsData"`
+	TcData [4]types.Category `bson:"tcData"`
+	GnData GuessNpcData      `bson:"gnData"`
+	HmPos  int               `bson:"hmPos"`
 	// 7 little words storage
 	LastReset time.Time `bson:"lastReset"`
 }
