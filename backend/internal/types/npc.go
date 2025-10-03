@@ -1,5 +1,12 @@
 package types
 
+type NPCdata struct {
+	NPC     string   `json:"npc"`
+	NPCPath string   `json:"npc-path"`
+	Quote   string   `json:"quote"`
+	Names   []string `json:"names"`
+}
+
 type NPC struct {
 	NPC     string   `json:"npc"`
 	NPCPath string   `json:"npc-path"`

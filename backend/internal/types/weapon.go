@@ -1,6 +1,6 @@
 package types
 
-type Weapons struct {
+type WeaponData struct {
 	CurrentWeapon  Weapon `json:"currentWeapon"`
 	PreviousWeapon Weapon `json:"previousWeapon"`
 }
@@ -14,12 +14,12 @@ type Weapon struct {
 }
 
 type WeaponInfo struct {
-	ImagePath  string `json:"image-path"`
-	DamageType string `json:"damage-type"`
-	Damage     int    `json:"damage"`
-	UseTime    string `json:"use-time"`
-	Rarity     string `json:"rarity"`
-	Operation  string `json:"operation"`
-	Material   string `json:"material"`
-	Obtained   string `json:"obtained"`
+	ImagePath  string   `json:"image-path"`
+	DamageType string   `json:"damage-type"`
+	Damage     int      `json:"damage"`
+	UseTime    string   `json:"use-time"`
+	Rarity     string   `json:"rarity"`
+	Operation  string   `json:"operation"`
+	Material   string   `json:"material"`
+	Obtained   []string `json:"obtained"`
 }

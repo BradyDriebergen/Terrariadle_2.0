@@ -3,6 +3,8 @@ package jobs
 import (
 	"context"
 	"fmt"
+	"log"
+	"math/rand"
 	"terrariadle-backend/internal/types"
 	"time"
 )
@@ -45,10 +47,36 @@ and assign them to each guess_counts (in case the server crashes)*/
 func reset(data *types.GameData) {
 	fmt.Println("Reseting daily game data at:", time.Now())
 
-	fmt.Printf("type=%T value=%+v\n", data, data) // shows pointer and fields
-	if data != nil {
-		fmt.Printf("deref=%+v\n", *data) // shows the struct values
-	} else {
-		fmt.Println("data is nil")
+	// fmt.Printf("type=%T value=%+v\n", data, data) // shows pointer and fields
+	// if data != nil {
+	// 	fmt.Printf("deref=%+v\n", *data) // shows the struct values
+	// } else {
+	// 	fmt.Println("data is nil")
+	// }
+
+	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	weapons, err := randomDailyWeapons(rnd)
+	if err != nil {
+		log.Fatal(err)
 	}
+	fmt.Printf("\nWeapon: \n%v\n", weapons)
+
+	categories, err := randomCategories(rnd)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("\nCategories: \n%v\n", categories)
+
+	npc, err := randomNpcData(rnd)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("\nNPC: \n%v\n", npc)
+
+	enemy, err := randomEnemy(rnd)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("\nEnemy: \n%v\n", enemy)
 }

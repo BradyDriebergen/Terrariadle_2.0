@@ -1,8 +1,8 @@
 package types
 
 type GameData struct {
-	DailySlash  Weapons    `json:"dailySlash"`
+	DailySlash  WeaponData `json:"dailySlash"`
 	Connections []Category `json:"connections"`
-	GuessTheNpc NPC        `json:"guessTheNpc"`
+	GuessTheNpc NPCdata    `json:"guessTheNpc"`
 	Hangman     Enemy      `json:"hangman"`
 }
