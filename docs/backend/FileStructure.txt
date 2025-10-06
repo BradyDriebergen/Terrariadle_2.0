@@ -1,13 +1,33 @@
-terrariadle-backend/
-├── cmd/
-│   └── server/          # Entry point for starting the server
-│       └── main.go
-├── internal/
-│   ├── routes/          # Define API routes
-│   ├── middleware/      # Request validation, logging, auth, etc.
-│   ├── controllers/     # Handle HTTP requests/responses
-│   ├── services/        # Business logic
-│   ├── models/          # Database models, structs
-│   └── db/              # Database connection setup
-├── go.mod
-└── go.sum
+.
+└── Terrariadle/api/
+    ├── cmd/
+    │   └── main.go
+    ├── data/
+    │   └── # Json files
+    ├── internal/
+    │   ├── config/
+    │   │   └── config.go 
+    │   ├── db/
+    │   │   ├── models.go
+    │   │   └── mongo.go
+    │   ├── jobs/
+    │   │   ├── daily_reset.go
+    │   │   └── daily_reset_helpers.go
+    │   ├── server/
+    │   │   ├── handlers.go
+    │   │   ├── services.go
+    │   │   ├── adapters/
+    │   │   │   ├── get_puzzle_data.go
+    │   │   │   ├── user_guess_data.go
+    │   │   │   ├── get_position.go
+    │   │   │   └── check_guess.go
+    │   │   ├── routes.go
+    │   │   └── server.go
+    │   └── types/
+    │       ├── category.go
+    │       ├── enemy.go
+    │       ├── game_data.go
+    │       ├── npc.go
+    │       └── weapon.go
+    ├── go.mod
+    └── go.sum
