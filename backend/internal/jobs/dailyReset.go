@@ -5,18 +5,36 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/types"
 	"time"
+
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 // StartMidnightReset blocks until ctx is canceled.
 // Call it from a goroutine in main().
-func StartResetJob(ctx context.Context, data *types.GameData) {
+func StartResetJob(data *types.GameData) {
 	// For Boise time: loc, _ := time.LoadLocation("America/Boise")
 	loc := time.Now().Location()
 
+	col := db.GetCollection("terrariadle", "daily_data")
+
+	// Gets the game data to check if it's already updated
+	gameData, err := db.GetGameData(col, bson.M{"_id": 1})
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	// Initial reset for if the server crashes
-	reset(data)
+	t := time.Now().In(loc)
+	if t.After(gameData.NextResetTime) {
+		reset(col, loc, data)
+	}
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 
 	for {
 		now := time.Now().In(loc)
@@ -28,7 +46,7 @@ func StartResetJob(ctx context.Context, data *types.GameData) {
 			timer.Stop()
 			return
 		case <-timer.C:
-			reset(data)
+			reset(col, loc, data)
 			// then loop to compute the *next* midnight again
 		}
 	}
@@ -41,18 +59,15 @@ func nextMidnight(t time.Time) time.Time {
 	return time.Date(y, m, d+1, 0, 0, 0, 0, loc)
 }
 
+// func nextTenSeconds(t time.Time) time.Time {
+// 	return t.Truncate(10 * time.Second).Add(10 * time.Second)
+// }
+
 /* Dont store guess amounts on the backend. Instead, read the length of guesses
 and assign them to each guess_counts (in case the server crashes)*/
 
-func reset(data *types.GameData) {
+func reset(col *mongo.Collection, loc *time.Location, data *types.GameData) {
 	fmt.Println("Reseting daily game data at:", time.Now())
-
-	// fmt.Printf("type=%T value=%+v\n", data, data) // shows pointer and fields
-	// if data != nil {
-	// 	fmt.Printf("deref=%+v\n", *data) // shows the struct values
-	// } else {
-	// 	fmt.Println("data is nil")
-	// }
 
 	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
 
@@ -60,23 +75,32 @@ func reset(data *types.GameData) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("\nWeapon: \n%v\n", weapons)
 
 	categories, err := randomCategories(rnd)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("\nCategories: \n%v\n", categories)
 
 	npc, err := randomNpcData(rnd)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("\nNPC: \n%v\n", npc)
 
 	enemy, err := randomEnemy(rnd)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("\nEnemy: \n%v\n", enemy)
+
+	gameData := types.GameData{
+		DailySlash:    weapons,
+		Connections:   categories,
+		GuessTheNpc:   npc,
+		Hangman:       enemy,
+		ResetTime:     time.Now().In(loc),
+		NextResetTime: nextMidnight(time.Now().In(loc)),
+	}
+
+	if err := db.UpsertRecord(col, bson.M{"_id": 1}, bson.M{"$set": gameData}); err != nil {
+		log.Fatal(err)
+	}
 }

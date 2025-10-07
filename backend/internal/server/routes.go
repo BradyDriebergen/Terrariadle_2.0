@@ -1,15 +1,13 @@
-package routes
+package server
 
 import (
-	"terrariadle-backend/internal/handlers"
-
 	"github.com/go-chi/chi/v5"
 )
 
 func SetupRouter() *chi.Mux {
 	r := chi.NewRouter()
 
-	r.Get("/health", handlers.HealthHandler)
+	r.Get("/health", HealthHandler)
 
 	return r
 }

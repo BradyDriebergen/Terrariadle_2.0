@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"terrariadle-backend/internal/models"
+	"terrariadle-backend/internal/types"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -66,11 +66,11 @@ func GetCollection(database, collection string) *mongo.Collection {
 	return Client.Database(database).Collection(collection)
 }
 
-func GetRecord(collection *mongo.Collection, filter any) (*models.GuessDocument, error) {
+func GetGuessRecord(collection *mongo.Collection, filter any) (*GuessDocument, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	var user models.GuessDocument
+	var user GuessDocument
 	res := collection.FindOne(ctx, filter)
 	err := res.Decode(&user)
 	if err != nil {
@@ -78,6 +78,24 @@ func GetRecord(collection *mongo.Collection, filter any) (*models.GuessDocument,
 	}
 
 	return &user, nil
+}
+
+func GetGameData(collection *mongo.Collection, filter any) (*types.GameData, error) {
+	if collection.Name() != "daily_data" {
+		return &types.GameData{}, fmt.Errorf("tried to get game data from invalid collection: %s", collection.Name())
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	var data types.GameData
+	res := collection.FindOne(ctx, filter)
+	err := res.Decode(&data)
+	if err != nil {
+		return nil, fmt.Errorf("failed to find record %v", err)
+	}
+
+	return &data, nil
 }
 
 // Inserts a record into a collection
@@ -105,6 +123,20 @@ func UpdateRecord(collection *mongo.Collection, filter, update any) error {
 	}
 
 	fmt.Printf("Matched %v document(s) and updated %v document(s).\n", res.MatchedCount, res.ModifiedCount)
+	return nil
+}
+
+func UpsertRecord(collection *mongo.Collection, filter, update any) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	opts := options.Update().SetUpsert(true)
+	res, err := collection.UpdateOne(ctx, filter, update, opts)
+	if err != nil {
+		return fmt.Errorf("failed to upsert record: %v", err)
+	}
+
+	fmt.Printf("Matched %v, modified %v, upsertedID %v\n", res.MatchedCount, res.ModifiedCount, res.UpsertedID)
 	return nil
 }
 
