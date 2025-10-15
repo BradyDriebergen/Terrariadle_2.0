@@ -1,25 +1,30 @@
 package utils
 
-import "sync"
+import (
+	"sync"
+	"terrariadle-backend/internal/types"
+)
 
-type MemoryStore[T any] struct {
+type MemoryStore struct {
 	mu   sync.RWMutex
-	data map[string]T
+	data map[string]types.GameData
 }
 
-func NewMemoryStore[T any]() *MemoryStore[T] {
-	return &MemoryStore[T]{data: make(map[string]T)}
+var MemStore *MemoryStore
+
+func NewMemoryStore() {
+	MemStore = &MemoryStore{data: make(map[string]types.GameData)}
 }
 
-func (m *MemoryStore[T]) Set(key string, value T) {
-	m.mu.Lock()
-	defer m.mu.Unlock()
-	m.data[key] = value
+func SetMemData(value types.GameData) {
+	MemStore.mu.Lock()
+	defer MemStore.mu.Unlock()
+	MemStore.data["gameData"] = value
 }
 
-func (m *MemoryStore[T]) Get(key string) (T, bool) {
-	m.mu.RLock()
-	defer m.mu.RUnlock()
-	val, ok := m.data[key]
+func GetMemData() (types.GameData, bool) {
+	MemStore.mu.RLock()
+	defer MemStore.mu.RUnlock()
+	val, ok := MemStore.data["gameData"]
 	return val, ok
 }

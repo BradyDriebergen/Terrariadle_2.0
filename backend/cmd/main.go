@@ -5,7 +5,6 @@ import (
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/jobs"
 	"terrariadle-backend/internal/server"
-	"terrariadle-backend/internal/types"
 	"terrariadle-backend/internal/utils"
 )
 
@@ -13,10 +12,10 @@ func main() {
 	// Setup
 	db.Connect()
 	r := server.SetupRouter()
-	mStore := utils.NewMemoryStore[types.GameData]()
+	utils.NewMemoryStore()
 
 	// Starts the reset job
-	go jobs.StartResetJob(mStore)
+	go jobs.StartResetJob()
 
 	// Starts the server
 	if err := server.RunServer(":3000", r); err != nil {

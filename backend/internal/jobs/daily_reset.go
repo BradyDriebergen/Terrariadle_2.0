@@ -16,7 +16,7 @@ import (
 
 // StartMidnightReset blocks until ctx is canceled.
 // Call it from a goroutine in main().
-func StartResetJob(mStore *utils.MemoryStore[types.GameData]) {
+func StartResetJob() {
 	// For Boise time: loc, _ := time.LoadLocation("America/Boise")
 	loc := time.Now().Location()
 
@@ -26,15 +26,15 @@ func StartResetJob(mStore *utils.MemoryStore[types.GameData]) {
 	gameData, err := db.GetGameData(col, bson.M{"_id": 1})
 	if err != nil {
 		fmt.Print(err)
-		reset(col, loc, mStore)
+		reset(col, loc)
 	} else {
 		// Initial reset for if the server crashes
 		t := time.Now().In(loc)
 		if t.After(gameData.NextResetTime) {
-			reset(col, loc, mStore)
+			reset(col, loc)
 		} else {
 			// Puts game data in memory if same day
-			mStore.Set("gameData", *gameData)
+			utils.SetMemData(*gameData)
 			fmt.Println("Game data successfully restored")
 		}
 	}
@@ -52,7 +52,7 @@ func StartResetJob(mStore *utils.MemoryStore[types.GameData]) {
 			timer.Stop()
 			return
 		case <-timer.C:
-			reset(col, loc, mStore)
+			reset(col, loc)
 			// then loop to compute the *next* midnight again
 		}
 	}
@@ -72,7 +72,7 @@ func nextMidnight(t time.Time) time.Time {
 /* Dont store guess amounts on the backend. Instead, read the length of guesses
 and assign them to each guess_counts (in case the server crashes)*/
 
-func reset(col *mongo.Collection, loc *time.Location, mStore *utils.MemoryStore[types.GameData]) {
+func reset(col *mongo.Collection, loc *time.Location) {
 	fmt.Println("Reseting daily game data at:", time.Now())
 
 	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -110,6 +110,6 @@ func reset(col *mongo.Collection, loc *time.Location, mStore *utils.MemoryStore[
 		log.Fatal(err)
 	}
 
-	mStore.Set("gameData", gameData)
+	utils.SetMemData(gameData)
 	fmt.Println("Game data stored in cache")
 }
