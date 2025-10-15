@@ -1,5 +1,12 @@
 package types
 
+type WeaponOutput struct {
+	PreviousWeaponName string `json:"previousWeaponName"`
+	Hint1              string `json:"hint1"`
+	Hint2              string `json:"hint2"`
+	Hint3              string `json:"hing3"`
+}
+
 type WeaponData struct {
 	CurrentWeapon  Weapon `json:"currentWeapon"`
 	PreviousWeapon Weapon `json:"previousWeapon"`
