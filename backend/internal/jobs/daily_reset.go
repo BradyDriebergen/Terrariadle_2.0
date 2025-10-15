@@ -44,7 +44,7 @@ func StartResetJob() {
 
 	for {
 		now := time.Now().In(loc)
-		next := nextMidnight(now)
+		next := utils.NextMidnight(now)
 		timer := time.NewTimer(time.Until(next))
 
 		select {
@@ -58,17 +58,6 @@ func StartResetJob() {
 	}
 }
 
-func nextMidnight(t time.Time) time.Time {
-	// Midnight at the *start* of the next day in the same location.
-	y, m, d := t.Date()
-	loc := t.Location()
-	return time.Date(y, m, d+1, 0, 0, 0, 0, loc)
-}
-
-// func nextTenSeconds(t time.Time) time.Time {
-// 	return t.Truncate(10 * time.Second).Add(10 * time.Second)
-// }
-
 /* Dont store guess amounts on the backend. Instead, read the length of guesses
 and assign them to each guess_counts (in case the server crashes)*/
 
@@ -76,8 +65,12 @@ func reset(col *mongo.Collection, loc *time.Location) {
 	fmt.Println("Reseting daily game data at:", time.Now())
 
 	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
+	game, err := db.GetGameData(col, bson.M{"_id": 1})
+	if err != nil {
+		log.Fatal("failed to get game data when resetting")
+	}
 
-	weapons, err := randomDailyWeapons(rnd)
+	weapons, err := randomDailyWeapons(rnd, game.DailySlash.PreviousWeapon)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -97,13 +90,16 @@ func reset(col *mongo.Collection, loc *time.Location) {
 		log.Fatal(err)
 	}
 
+	guessCounts := resetGuessCounts()
+
 	gameData := types.GameData{
 		DailySlash:    weapons,
 		Connections:   categories,
 		GuessTheNpc:   npc,
 		Hangman:       enemy,
+		GuessCounts:   guessCounts,
 		ResetTime:     time.Now().In(loc),
-		NextResetTime: nextMidnight(time.Now().In(loc)),
+		NextResetTime: utils.NextMidnight(time.Now().In(loc)),
 	}
 
 	if err := db.UpsertRecord(col, bson.M{"_id": 1}, bson.M{"$set": gameData}); err != nil {

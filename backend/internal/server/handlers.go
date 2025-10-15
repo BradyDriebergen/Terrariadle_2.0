@@ -18,8 +18,6 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 func GetPuzzleData(w http.ResponseWriter, r *http.Request) {
 	mode := chi.URLParam(r, "mode")
 
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-
 	switch mode {
 	case "daily-slash":
 		data, err := services.GetDailySlashPuzzleData()
@@ -61,5 +59,5 @@ func GetTotalPlayersGuessed(w http.ResponseWriter, r *http.Request) {
 
 // Handler for getting the remaining time in the day in seconds
 func GetRemainingTime(w http.ResponseWriter, r *http.Request) {
-
+	utils.WriteJSON(w, http.StatusOK, int64(utils.TimeUntilNextMidnightFromNow().Seconds()))
 }
