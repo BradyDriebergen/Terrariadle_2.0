@@ -54,7 +54,7 @@ func hasDuplicates(slice []string) bool {
 // ---------------------------------------------
 
 // Generates a pair of random weapons
-func randomDailyWeapons(rnd *rand.Rand) (types.WeaponData, error) {
+func randomDailyWeapons(rnd *rand.Rand, prevWeapon types.Weapon) (types.WeaponData, error) {
 	weapons, err := loadJSONData[types.Weapon]("../data/weapons.json")
 	if err != nil {
 		return types.WeaponData{}, err
@@ -65,7 +65,7 @@ func randomDailyWeapons(rnd *rand.Rand) (types.WeaponData, error) {
 
 	shuffle(weapons, rnd)
 
-	return types.WeaponData{CurrentWeapon: weapons[0], PreviousWeapon: weapons[1]}, nil
+	return types.WeaponData{CurrentWeapon: weapons[0], PreviousWeapon: prevWeapon}, nil
 }
 
 // Generates a set of categories with unique options
@@ -157,4 +157,13 @@ func randomEnemy(rnd *rand.Rand) (types.Enemy, error) {
 	shuffle(enemies, rnd)
 
 	return enemies[0], nil
+}
+
+func resetGuessCounts() types.PlayerGuessCounts {
+	return types.PlayerGuessCounts{
+		DailySlashCount:  0,
+		ConnectionsCount: 0,
+		GuessTheNpcCount: 0,
+		HangmanCount:     0,
+	}
 }
