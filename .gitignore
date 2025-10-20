@@ -3,3 +3,6 @@
 # Remember to delete these once complete
 DailyGuessAPI.js
 DailyReset.js
+
+# Mac specific
+.DS_Store

@@ -1,34 +1,15 @@
 package jobs
 
 import (
-	"encoding/json"
 	"fmt"
 	"math/rand"
-	"os"
 	"terrariadle-backend/internal/types"
+	"terrariadle-backend/internal/utils/cache"
 )
 
 // ---------------------------------------------
 // Helper methods
 // ---------------------------------------------
-
-// Generic method for getting json data
-func loadJSONData[T any](path string) ([]T, error) {
-	bytes, err := os.ReadFile(path)
-	if err != nil {
-		return nil, err
-	}
-
-	var data []T
-	if err := json.Unmarshal(bytes, &data); err != nil {
-		return nil, err
-	}
-	if len(data) == 0 {
-		return nil, fmt.Errorf("no data in %v", path)
-	}
-
-	return data, nil
-}
 
 // Shuffles a slice (no reference needed)
 func shuffle[T any](list []T, rnd *rand.Rand) {
@@ -55,7 +36,7 @@ func hasDuplicates(slice []string) bool {
 
 // Generates a pair of random weapons
 func randomDailyWeapons(rnd *rand.Rand, prevWeapon types.Weapon) (types.WeaponData, error) {
-	weapons, err := loadJSONData[types.Weapon]("../data/weapons.json")
+	weapons, err := cache.GetPuzzleData[types.Weapon]("DailySlash")
 	if err != nil {
 		return types.WeaponData{}, err
 	}
@@ -70,7 +51,7 @@ func randomDailyWeapons(rnd *rand.Rand, prevWeapon types.Weapon) (types.WeaponDa
 
 // Generates a set of categories with unique options
 func randomCategories(rnd *rand.Rand) ([]types.Category, error) {
-	categories, err := loadJSONData[types.Category]("../data/categories.json")
+	categories, err := cache.GetPuzzleData[types.Category]("Connections")
 	if err != nil {
 		return []types.Category{}, err
 	}
@@ -106,7 +87,7 @@ func randomCategories(rnd *rand.Rand) ([]types.Category, error) {
 
 // Gets random NPC data with unique names
 func randomNpcData(rnd *rand.Rand) (types.NPCdata, error) {
-	npcs, err := loadJSONData[types.NPC]("../data/npcs.json")
+	npcs, err := cache.GetPuzzleData[types.NPC]("GuessTheNpc")
 	if err != nil {
 		return types.NPCdata{}, err
 	}
@@ -149,7 +130,7 @@ func randomNpcData(rnd *rand.Rand) (types.NPCdata, error) {
 
 // Gets a random enemy
 func randomEnemy(rnd *rand.Rand) (types.Enemy, error) {
-	enemies, err := loadJSONData[types.Enemy]("../data/enemies.json")
+	enemies, err := cache.GetPuzzleData[types.Enemy]("Hangman")
 	if err != nil {
 		return types.Enemy{}, err
 	}

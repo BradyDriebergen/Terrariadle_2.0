@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log"
 	"os"
@@ -67,6 +68,10 @@ func GetCollection(database, collection string) *mongo.Collection {
 }
 
 func GetGuessRecord(collection *mongo.Collection, filter any) (*GuessDocument, error) {
+	if collection.Name() != "user_guesses" {
+		return &GuessDocument{}, fmt.Errorf("tried to get user from invalid collection: %s", collection.Name())
+	}
+
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
@@ -74,6 +79,9 @@ func GetGuessRecord(collection *mongo.Collection, filter any) (*GuessDocument, e
 	res := collection.FindOne(ctx, filter)
 	err := res.Decode(&user)
 	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return nil, mongo.ErrNoDocuments
+		}
 		return nil, fmt.Errorf("failed to find record %v", err)
 	}
 
@@ -131,12 +139,12 @@ func UpsertRecord(collection *mongo.Collection, filter, update any) error {
 	defer cancel()
 
 	opts := options.Update().SetUpsert(true)
-	res, err := collection.UpdateOne(ctx, filter, update, opts)
+	_, err := collection.UpdateOne(ctx, filter, update, opts)
 	if err != nil {
 		return fmt.Errorf("failed to upsert record: %v", err)
 	}
 
-	fmt.Printf("Matched %v, modified %v, upsertedID %v\n", res.MatchedCount, res.ModifiedCount, res.UpsertedID)
+	// fmt.Printf("Matched %v, modified %v, upsertedID %v\n", res.MatchedCount, res.ModifiedCount, res.UpsertedID)
 	return nil
 }
 

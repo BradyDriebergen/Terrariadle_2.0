@@ -1,16 +1,12 @@
 package services
 
 import (
-	"fmt"
 	"terrariadle-backend/internal/types"
-	"terrariadle-backend/internal/utils"
+	"terrariadle-backend/internal/utils/cache"
 )
 
 func GetDailySlashPuzzleData() (types.WeaponOutput, error) {
-	gameData, ok := utils.GetMemData()
-	if !ok {
-		return types.WeaponOutput{}, fmt.Errorf("no game data cached")
-	}
+	gameData := cache.GetGameData()
 
 	weapons := gameData.DailySlash
 	weaponData := types.WeaponOutput{

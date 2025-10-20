@@ -8,6 +8,7 @@ import (
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/types"
 	"terrariadle-backend/internal/utils"
+	"terrariadle-backend/internal/utils/cache"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -34,7 +35,7 @@ func StartResetJob() {
 			reset(col, loc)
 		} else {
 			// Puts game data in memory if same day
-			utils.SetMemData(*gameData)
+			cache.SetGameData(*gameData)
 			fmt.Println("Game data successfully restored")
 		}
 	}
@@ -106,6 +107,6 @@ func reset(col *mongo.Collection, loc *time.Location) {
 		log.Fatal(err)
 	}
 
-	utils.SetMemData(gameData)
+	cache.SetGameData(gameData)
 	fmt.Println("Game data stored in cache")
 }
