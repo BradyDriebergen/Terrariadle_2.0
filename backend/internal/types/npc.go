@@ -1,6 +1,7 @@
 package types
 
 type NPCdata struct {
+	ID      int      `json:"id"`
 	NPC     string   `json:"npc"`
 	NPCPath string   `json:"npc-path"`
 	Quote   string   `json:"quote"`

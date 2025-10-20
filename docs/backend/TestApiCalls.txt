@@ -3,3 +3,5 @@ curl -i http://localhost:3000/api/daily-slash/puzzle-data
 
 Testing remaining time:
 curl -i http://localhost:3000/api/remaining-time
+
+curl -X POST http://localhost:3000/api/daily-slash/check -H "Content-Type: application/json" -d '{"userID": "10", "guess":10}'

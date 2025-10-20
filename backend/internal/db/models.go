@@ -14,7 +14,7 @@ type GuessDocument struct {
 // Game represents one game entry inside GuessDocument
 type Game struct {
 	GameType string         `bson:"gameType"`           // required in Mongoose
-	Guesses  []string       `bson:"guesses,omitempty"`  // default: []
+	Guesses  []int          `bson:"guesses,omitempty"`  // default: []
 	HasWon   bool           `bson:"hasWon,omitempty"`   // default: false
 	Position int            `bson:"position,omitempty"` // default: -1
 	Extra    map[string]any `bson:"extra,omitempty"`    // flexible field for game-specific data
