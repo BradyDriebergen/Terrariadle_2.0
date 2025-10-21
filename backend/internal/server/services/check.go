@@ -22,6 +22,10 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, types.Weapon, erro
 	}
 
 	gameData := cache.GetGameData()
+	weapons, err := cache.GetPuzzleData[types.Weapon]("DailySlash")
+	if err != nil {
+		return false, types.Weapon{}, err
+	}
 
 	won := false
 	if weaponId == gameData.DailySlash.CurrentWeapon.ID {
@@ -45,10 +49,8 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, types.Weapon, erro
 		return false, types.Weapon{}, err
 	}
 
-	fmt.Printf("Guess count: %d\n", gameData.GuessCounts.DailySlashCount)
-
-	// Get guessed weapon from database and return it here
-	return won, types.Weapon{}, nil
+	guessedWeapon := weapons[weaponId-1]
+	return won, guessedWeapon, nil
 }
 
 // Helper method to get users
