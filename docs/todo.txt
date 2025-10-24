@@ -1,0 +1,8 @@
+Update the backend
+- Move services outside of server
+- Redo types, make them interfaces and declare types in the places they're used
+- Add comments
+- Remove methods that aren't used/can be simplified
+- Update routes to use standard library
+- create seperate handlers for each game mode, add to new folder
+- rename daily_reset_helpers.go to a more clear name
