@@ -11,7 +11,8 @@ import (
 func main() {
 	// Setup
 	db.Connect()
-	r := server.SetupRouter()
+	// r := server.SetupRouter()
+	h := server.NewMux()
 	cache.NewGameStore()
 	cache.NewPuzzleStore()
 
@@ -19,7 +20,7 @@ func main() {
 	go jobs.StartResetJob()
 
 	// Starts the server
-	if err := server.RunServer(":3000", r); err != nil {
+	if err := server.RunServer(":3000", h); err != nil {
 		log.Fatal(err)
 	}
 }
