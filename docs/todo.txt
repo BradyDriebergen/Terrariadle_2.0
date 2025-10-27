@@ -6,3 +6,4 @@ Update the backend
 - Update routes to use standard library
 - create seperate handlers for each game mode, add to new folder
 - rename daily_reset_helpers.go to a more clear name
+- add route for searching for items

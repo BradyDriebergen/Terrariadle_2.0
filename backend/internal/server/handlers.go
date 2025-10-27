@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"terrariadle-backend/internal/server/services"
+	"terrariadle-backend/internal/services"
 	"terrariadle-backend/internal/utils"
 
 	"github.com/go-chi/chi/v5"
