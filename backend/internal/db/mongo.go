@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"terrariadle-backend/internal/types"
+	"terrariadle-backend/internal/domain"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -88,15 +88,15 @@ func GetGuessRecord(collection *mongo.Collection, filter any) (*GuessDocument, e
 	return &user, nil
 }
 
-func GetGameData(collection *mongo.Collection, filter any) (*types.GameData, error) {
+func GetGameData(collection *mongo.Collection, filter any) (*domain.GameData, error) {
 	if collection.Name() != "daily_data" {
-		return &types.GameData{}, fmt.Errorf("tried to get game data from invalid collection: %s", collection.Name())
+		return &domain.GameData{}, fmt.Errorf("tried to get game data from invalid collection: %s", collection.Name())
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	var data types.GameData
+	var data domain.GameData
 	res := collection.FindOne(ctx, filter)
 	err := res.Decode(&data)
 	if err != nil {

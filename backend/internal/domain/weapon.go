@@ -1,11 +1,4 @@
-package types
-
-type WeaponOutput struct {
-	PreviousWeaponName string `json:"previousWeaponName"`
-	Hint1              string `json:"hint1"`
-	Hint2              string `json:"hint2"`
-	Hint3              string `json:"hing3"`
-}
+package domain
 
 type WeaponData struct {
 	CurrentWeapon  Weapon `json:"currentWeapon"`

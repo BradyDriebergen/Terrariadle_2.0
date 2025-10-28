@@ -1,4 +1,4 @@
-package types
+package domain
 
 type NPCdata struct {
 	ID      int      `json:"id"`
