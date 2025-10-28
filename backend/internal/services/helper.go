@@ -4,58 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/utils/memstore"
 
+	"github.com/google/uuid"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
-
-func CheckDailySlashGuess(userId string, weaponId int) (bool, domain.Weapon, error) {
-	// Check if weaponId is valid
-	// Check if userId is valid
-
-	col := db.GetCollection("terrariadle", "user_guesses")
-	user, err := getUser(col, userId)
-	if err != nil {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get user in check API")
-	}
-
-	gameData, ok := memstore.GameData.Get()
-	if !ok {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get data from memstore")
-	}
-
-	weapons, ok := memstore.WeaponData.Get()
-	if !ok {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
-	}
-
-	won := false
-	if weaponId == gameData.DailySlash.CurrentWeapon.ID {
-		won = true
-	}
-
-	for i := range user.Games {
-		if user.Games[i].GameType == "DailySlash" {
-			user.Games[i].Guesses = append(user.Games[i].Guesses, weaponId)
-			if won {
-				user.Games[i].HasWon = true
-				gameData.GuessCounts.DailySlashCount += 1
-				user.Games[i].Position = gameData.GuessCounts.DailySlashCount
-				memstore.GameData.Set(gameData)
-			}
-			break
-		}
-	}
-	err = updateUser(col, user)
-	if err != nil {
-		return false, domain.Weapon{}, err
-	}
-
-	guessedWeapon := weapons[weaponId-1]
-	return won, guessedWeapon, nil
-}
 
 // Helper method to get users
 func getUser(col *mongo.Collection, userId string) (*db.GuessDocument, error) {
@@ -106,7 +59,17 @@ func getUser(col *mongo.Collection, userId string) (*db.GuessDocument, error) {
 	return user, nil
 }
 
+// Helper method to update user
 func updateUser(col *mongo.Collection, user *db.GuessDocument) error {
 	err := db.UpsertRecord(col, bson.M{"userId": user.UserID}, bson.M{"$set": user})
 	return err
+}
+
+// Checks if a UUID is valid
+func isValidUUID(id string) bool {
+	if id == "" {
+		return false
+	}
+	_, err := uuid.Parse(id)
+	return err == nil
 }
