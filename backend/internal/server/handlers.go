@@ -18,50 +18,26 @@ type GuessRequest struct {
 
 // Handler for checking the health of the backend
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
-	utils.WriteJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
 }
 
-// Handler for getting the daily puzzle data
-func GetPuzzleData(w http.ResponseWriter, r *http.Request) {
-	mode := chi.URLParam(r, "mode")
+// Handler for getting the data for the user to start playing
+func InitializeGame(w http.ResponseWriter, r *http.Request) {
+	mode := r.URL.Query().Get("mode")
 
 	switch mode {
 	case "daily-slash":
-		data, err := services.GetDailySlashPuzzleData()
+		data, err := services.InitializeDailySlashGame()
 		if err != nil {
-			utils.WriteJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
 		}
-		utils.WriteJSON(w, http.StatusOK, data)
+		writeJSON(w, http.StatusOK, data)
 		return
 	case "connections":
 	case "guess-the-npc":
 	case "hangman":
 	default:
-		utils.WriteJSON(w, http.StatusNotFound, map[string]any{
-			"error": fmt.Sprintf("Gamemode %s not found", mode),
-		})
-		return
-	}
-}
-
-// Handler for getting the user guesses
-func GetUserGuesses(w http.ResponseWriter, r *http.Request) {
-	mode := chi.URLParam(r, "mode")
-	userId := chi.URLParam(r, "userId")
-
-	switch mode {
-	case "daily-slash":
-		data, err := services.GetDailySlashUserGuesses(userId)
-		if err != nil {
-			utils.WriteJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
-		}
-		utils.WriteJSON(w, http.StatusOK, data)
-		return
-	case "connections":
-	case "guess-the-npc":
-	case "hangman":
-	default:
-		utils.WriteJSON(w, http.StatusNotFound, map[string]any{
+		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found", mode),
 		})
 		return
@@ -70,7 +46,7 @@ func GetUserGuesses(w http.ResponseWriter, r *http.Request) {
 
 // Handler for checking the user guesses and saving the guess in the database
 func CheckGuess(w http.ResponseWriter, r *http.Request) {
-	mode := chi.URLParam(r, "mode")
+	mode := "daily-slash"
 	var req GuessRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
 	if err != nil {
@@ -82,15 +58,15 @@ func CheckGuess(w http.ResponseWriter, r *http.Request) {
 	case "daily-slash":
 		won, guess, err := services.CheckDailySlashGuess(req.UserID, req.Guess)
 		if err != nil {
-			utils.WriteJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
 		}
-		utils.WriteJSON(w, http.StatusOK, map[string]any{"won": won, "guess": guess})
+		writeJSON(w, http.StatusOK, map[string]any{"won": won, "guess": guess})
 		return
 	case "connections":
 	case "guess-the-npc":
 	case "hangman":
 	default:
-		utils.WriteJSON(w, http.StatusNotFound, map[string]any{
+		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found", mode),
 		})
 		return
@@ -106,15 +82,15 @@ func GetUserPosition(w http.ResponseWriter, r *http.Request) {
 	case "daily-slash":
 		pos, err := services.GetDailySlashPlayerPosition(userId)
 		if err != nil {
-			utils.WriteJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
 		}
-		utils.WriteJSON(w, http.StatusOK, pos)
+		writeJSON(w, http.StatusOK, pos)
 		return
 	case "connections":
 	case "guess-the-npc":
 	case "hangman":
 	default:
-		utils.WriteJSON(w, http.StatusNotFound, map[string]any{
+		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found", mode),
 		})
 		return
@@ -129,15 +105,15 @@ func GetTotalPlayersGuessed(w http.ResponseWriter, r *http.Request) {
 	case "daily-slash":
 		data, err := services.GetDailySlashPlayersGuessed()
 		if err != nil {
-			utils.WriteJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
 		}
-		utils.WriteJSON(w, http.StatusOK, data)
+		writeJSON(w, http.StatusOK, data)
 		return
 	case "connections":
 	case "guess-the-npc":
 	case "hangman":
 	default:
-		utils.WriteJSON(w, http.StatusNotFound, map[string]any{
+		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found", mode),
 		})
 		return
@@ -146,5 +122,12 @@ func GetTotalPlayersGuessed(w http.ResponseWriter, r *http.Request) {
 
 // Handler for getting the remaining time in the day in seconds
 func GetRemainingTime(w http.ResponseWriter, r *http.Request) {
-	utils.WriteJSON(w, http.StatusOK, int64(utils.TimeUntilNextMidnightFromNow().Seconds()))
+	writeJSON(w, http.StatusOK, int64(utils.TimeUntilNextMidnightFromNow().Seconds()))
+}
+
+// Helper method for writing a response
+func writeJSON(w http.ResponseWriter, status int, data any) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(status)
+	json.NewEncoder(w).Encode(data)
 }

@@ -5,16 +5,16 @@ import (
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/jobs"
 	"terrariadle-backend/internal/server"
-	"terrariadle-backend/internal/utils/cache"
+	"terrariadle-backend/internal/utils/memstore"
 )
 
 func main() {
-	// Setup
 	db.Connect()
-	// r := server.SetupRouter()
+	defer db.DisconnectDB()
+
+	memstore.InitializeDataFromJsonFiles()
+
 	h := server.NewMux()
-	cache.NewGameStore()
-	cache.NewPuzzleStore()
 
 	// Starts the reset job
 	go jobs.StartResetJob()

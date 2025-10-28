@@ -6,9 +6,9 @@ import (
 	"log"
 	"math/rand"
 	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/types"
+	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/utils"
-	"terrariadle-backend/internal/utils/cache"
+	"terrariadle-backend/internal/utils/memstore"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -35,7 +35,7 @@ func StartResetJob() {
 			reset(col, loc)
 		} else {
 			// Puts game data in memory if same day
-			cache.SetGameData(*gameData)
+			memstore.GameData.Set(*gameData)
 			fmt.Println("Game data successfully restored")
 		}
 	}
@@ -93,7 +93,7 @@ func reset(col *mongo.Collection, loc *time.Location) {
 
 	guessCounts := resetGuessCounts()
 
-	gameData := types.GameData{
+	gameData := domain.GameData{
 		DailySlash:    weapons,
 		Connections:   categories,
 		GuessTheNpc:   npc,
@@ -107,6 +107,6 @@ func reset(col *mongo.Collection, loc *time.Location) {
 		log.Fatal(err)
 	}
 
-	cache.SetGameData(gameData)
+	memstore.GameData.Set(gameData)
 	fmt.Println("Game data stored in cache")
 }

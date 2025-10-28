@@ -4,27 +4,31 @@ import (
 	"errors"
 	"fmt"
 	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/types"
-	"terrariadle-backend/internal/utils/cache"
+	"terrariadle-backend/internal/domain"
+	"terrariadle-backend/internal/utils/memstore"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func CheckDailySlashGuess(userId string, weaponId int) (bool, types.Weapon, error) {
+func CheckDailySlashGuess(userId string, weaponId int) (bool, domain.Weapon, error) {
 	// Check if weaponId is valid
 	// Check if userId is valid
 
 	col := db.GetCollection("terrariadle", "user_guesses")
 	user, err := getUser(col, userId)
 	if err != nil {
-		return false, types.Weapon{}, fmt.Errorf("failed to get user in check API")
+		return false, domain.Weapon{}, fmt.Errorf("failed to get user in check API")
 	}
 
-	gameData := cache.GetGameData()
-	weapons, err := cache.GetPuzzleData[types.Weapon]("DailySlash")
-	if err != nil {
-		return false, types.Weapon{}, err
+	gameData, ok := memstore.GameData.Get()
+	if !ok {
+		return false, domain.Weapon{}, fmt.Errorf("failed to get data from memstore")
+	}
+
+	weapons, ok := memstore.WeaponData.Get()
+	if !ok {
+		return false, domain.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	won := false
@@ -39,14 +43,14 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, types.Weapon, erro
 				user.Games[i].HasWon = true
 				gameData.GuessCounts.DailySlashCount += 1
 				user.Games[i].Position = gameData.GuessCounts.DailySlashCount
-				cache.SetGameData(gameData)
+				memstore.GameData.Set(gameData)
 			}
 			break
 		}
 	}
 	err = updateUser(col, user)
 	if err != nil {
-		return false, types.Weapon{}, err
+		return false, domain.Weapon{}, err
 	}
 
 	guessedWeapon := weapons[weaponId-1]

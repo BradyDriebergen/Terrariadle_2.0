@@ -3,15 +3,24 @@ package services
 import (
 	"fmt"
 	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/types"
-	"terrariadle-backend/internal/utils/cache"
+	"terrariadle-backend/internal/utils/memstore"
 )
 
-func GetDailySlashPuzzleData() (types.WeaponOutput, error) {
-	gameData := cache.GetGameData()
+type WeaponOutput struct {
+	PreviousWeaponName string `json:"previousWeaponName"`
+	Hint1              string `json:"hint1"`
+	Hint2              string `json:"hint2"`
+	Hint3              string `json:"hint3"`
+}
+
+func InitializeDailySlashGame() (WeaponOutput, error) {
+	gameData, ok := memstore.GameData.Get()
+	if !ok {
+		return WeaponOutput{}, fmt.Errorf("failed to get data from memstore")
+	}
 
 	weapons := gameData.DailySlash
-	weaponData := types.WeaponOutput{
+	weaponData := WeaponOutput{
 		PreviousWeaponName: weapons.PreviousWeapon.Name,
 		Hint1:              weapons.CurrentWeapon.ModeObtained,
 		Hint2:              weapons.CurrentWeapon.WeaponType,
@@ -57,7 +66,10 @@ func GetDailySlashPlayerPosition(userId string) (int, error) {
 }
 
 func GetDailySlashPlayersGuessed() (int, error) {
-	gameData := cache.GetGameData()
+	gameData, ok := memstore.GameData.Get()
+	if !ok {
+		return 0, fmt.Errorf("failed to get data from memstore")
+	}
 
 	return gameData.GuessCounts.DailySlashCount, nil
 }

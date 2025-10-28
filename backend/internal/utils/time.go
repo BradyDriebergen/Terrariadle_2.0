@@ -10,12 +10,12 @@ func NextMidnight(t time.Time) time.Time {
 	return time.Date(y, m, d+1, 0, 0, 0, 0, loc)
 }
 
-// TimeUntilNextMidnight returns the duration until the next midnight from t.
+// Returns the duration until the next midnight from t.
 func TimeUntilNextMidnight(t time.Time) time.Duration {
 	return NextMidnight(t).Sub(t)
 }
 
-// TimeUntilNextMidnightFromNow returns the duration until the next midnight from now.
+// Returns the duration until the next midnight from now.
 func TimeUntilNextMidnightFromNow() time.Duration {
 	return TimeUntilNextMidnight(time.Now())
 }
