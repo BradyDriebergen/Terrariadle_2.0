@@ -12,3 +12,9 @@ curl -i http://localhost:3000/api/daily-slash/user-guesses/10
 
 Testing getting user position:
 curl -i http://localhost:3000/api/daily-slash/get-position/10
+
+
+# Updated requests:
+
+Testing search:
+curl -i -X GET 'http://localhost:3000/api/daily-slash/search?q=T'

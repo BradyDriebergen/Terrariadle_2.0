@@ -4,7 +4,10 @@ go 1.22.2
 
 require go.mongodb.org/mongo-driver v1.17.4
 
-require github.com/go-chi/chi/v5 v5.2.3 // indirect
+require (
+	github.com/go-chi/chi/v5 v5.2.3 // indirect
+	github.com/google/uuid v1.6.0 // indirect
+)
 
 require (
 	github.com/go-chi/chi v1.5.5
