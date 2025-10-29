@@ -1,33 +1,43 @@
 .
-└── Terrariadle/api/
-    ├── cmd/
+└── Terrariadle/backend/
+    ├── cmd/api/
     │   └── main.go
     ├── data/
-    │   └── # Json files
+    │   ├── weapons.json
+    │   ├── categories.json
+    │   ├── npcs.json
+    │   └── enemies.json
     ├── internal/
     │   ├── config/
-    │   │   └── config.go 
+    │   │   └── config.go             # Configuration for .env variables
     │   ├── db/
-    │   │   ├── models.go
-    │   │   └── mongo.go
+    │   │   └── mongo.go              # Contains database functionaility
+    │   ├── models/
+    │   │   ├── user_guesses.go       # Contains type and db access functionailty
+    │   │   └── game_data.go          # Contains type and db access functionailty
+    │   ├── jsonreader/
+    │   │   ├── weapon.go             # Weapon type and functionality
+    │   │   ├── category.go           # Category type and functionaility
+    │   │   ├── npc.go                # Npc type and functionaility
+    │   │   ├── enemy.go              # Enemy type and functionality
+    │   │   └── reader.go             # Helper for loading json data
+    │   ├── store/
+    │   │   └── store.go              # Stores the game data and json
     │   ├── jobs/
-    │   │   ├── daily_reset.go
-    │   │   └── daily_reset_helpers.go
+    │   │   ├── daily_reset.go        # Daily reset jobs for updating puzzle data
+    │   │   └── random_picker.go      # Helpers for daily_reset.go
     │   ├── server/
-    │   │   ├── handlers.go
-    │   │   ├── services.go
-    │   │   ├── adapters/
-    │   │   │   ├── get_puzzle_data.go
-    │   │   │   ├── user_guess_data.go
-    │   │   │   ├── get_position.go
-    │   │   │   └── check_guess.go
-    │   │   ├── routes.go
-    │   │   └── server.go
-    │   └── types/
-    │       ├── category.go
-    │       ├── enemy.go
-    │       ├── game_data.go
-    │       ├── npc.go
-    │       └── weapon.go
+    │   │   ├── handlers.go           # Handlers
+    │   │   ├── routes.go             # Routes
+    │   │   └── server.go             # Server functionaility
+    │   ├── services/
+    │   │   ├── daily_slash.go        # Daily slash services
+    │   │   ├── connections.go        # Connections services
+    │   │   ├── guess_the_npc.go      # Guess the NPC services
+    │   │   └── hangman.go            # Hangman services
+    │   └── utils/
+    │       ├── time.go               # Time helper methods
+    │       └── memstore/
+    │           └── memstore.go       # Saving data to memory
     ├── go.mod
     └── go.sum
