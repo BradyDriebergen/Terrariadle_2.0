@@ -8,6 +8,7 @@ Update the backend
 - move store to jobs or make it tasks
 - create a config package (pulls enviroment variables)
 - Update file structure
+- Rename memstore to atomicstore
 
 How to fix types:
 
