@@ -3,5 +3,17 @@ Update the backend
 - Add comments
 - Remove methods that aren't used/can be simplified
 - create seperate handlers for each game mode, add to new folder
-- rename daily_reset_helpers.go to a more clear name
+- rename daily_reset_helpers.go to a more clear name: random_picker.go
 - Add drop method in daily_reset.go that drops all the data from the user guess collection
+- move store to jobs or make it tasks
+- create a config package (pulls enviroment variables)
+- Update file structure
+
+How to fix types:
+
+Make each package like it's own dependency. Treat it as, if I were going to pull this package into another
+project, it should have everything it needs to preform. Expand on models and make each type have a set of
+methods that can help it. Potentially ditch the JSON files to keep it in the database, or make models for
+the JSON file and it's reader.
+
+I've added a image on what the flow should look like and updated the file structure file
