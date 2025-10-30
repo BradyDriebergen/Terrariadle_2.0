@@ -1,4 +1,4 @@
-package memstore
+package atomicstore
 
 import "sync"
 

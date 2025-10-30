@@ -3,8 +3,9 @@ package jobs
 import (
 	"fmt"
 	"math/rand"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/utils/memstore"
+	"terrariadle-backend/internal/jsonreader"
+	"terrariadle-backend/internal/models"
+	"terrariadle-backend/internal/store"
 )
 
 // ---------------------------------------------
@@ -35,28 +36,28 @@ func hasDuplicates(slice []string) bool {
 // ---------------------------------------------
 
 // Generates a pair of random weapons
-func randomDailyWeapons(rnd *rand.Rand, prevWeapon domain.Weapon) (domain.WeaponData, error) {
-	weapons, ok := memstore.WeaponData.Get()
+func randomDailyWeapons(rnd *rand.Rand, prevWeapon jsonreader.Weapon) (models.WeaponData, error) {
+	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return domain.WeaponData{}, fmt.Errorf("failed to get weapons from memstore")
+		return models.WeaponData{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 	if len(weapons) < 2 {
-		return domain.WeaponData{}, fmt.Errorf("not enough weapons to choose from: got %d", len(weapons))
+		return models.WeaponData{}, fmt.Errorf("not enough weapons to choose from: got %d", len(weapons))
 	}
 
 	shuffle(weapons, rnd)
 
-	return domain.WeaponData{CurrentWeapon: weapons[0], PreviousWeapon: prevWeapon}, nil
+	return models.WeaponData{CurrentWeapon: weapons[0], PreviousWeapon: prevWeapon}, nil
 }
 
 // Generates a set of categories with unique options
-func randomCategories(rnd *rand.Rand) ([]domain.Category, error) {
-	categories, ok := memstore.CategoryData.Get()
+func randomCategories(rnd *rand.Rand) ([]jsonreader.Category, error) {
+	categories, ok := store.CategoriesCache.Get()
 	if !ok {
-		return []domain.Category{}, fmt.Errorf("failed to get categories from memstore")
+		return []jsonreader.Category{}, fmt.Errorf("failed to get categories from memstore")
 	}
 	if len(categories) < 4 {
-		return []domain.Category{}, fmt.Errorf("need at least 4 categories, got %d", len(categories))
+		return []jsonreader.Category{}, fmt.Errorf("need at least 4 categories, got %d", len(categories))
 	}
 
 	shuffle(categories, rnd)
@@ -68,7 +69,7 @@ func randomCategories(rnd *rand.Rand) ([]domain.Category, error) {
 	for i := range selectedCategories {
 		opts := selectedCategories[i].Options
 		if len(opts) < 4 {
-			return []domain.Category{}, fmt.Errorf("categories don't have 4 options: %v", selectedCategories[i])
+			return []jsonreader.Category{}, fmt.Errorf("categories don't have 4 options: %v", selectedCategories[i])
 		}
 
 		shuffle(opts, rnd)
@@ -86,13 +87,13 @@ func randomCategories(rnd *rand.Rand) ([]domain.Category, error) {
 }
 
 // Gets random NPC data with unique names
-func randomNpcData(rnd *rand.Rand) (domain.NPCdata, error) {
-	npcs, ok := memstore.NpcData.Get()
+func randomNpcData(rnd *rand.Rand) (models.NPCdata, error) {
+	npcs, ok := store.NpcsCache.Get()
 	if !ok {
-		return domain.NPCdata{}, fmt.Errorf("failed to get npcs from memstore")
+		return models.NPCdata{}, fmt.Errorf("failed to get npcs from memstore")
 	}
 	if len(npcs) < 4 {
-		return domain.NPCdata{}, fmt.Errorf("need at least 4 NPCs, got %d", len(npcs))
+		return models.NPCdata{}, fmt.Errorf("need at least 4 NPCs, got %d", len(npcs))
 	}
 
 	shuffle(npcs, rnd)
@@ -101,14 +102,14 @@ func randomNpcData(rnd *rand.Rand) (domain.NPCdata, error) {
 
 	primaryNPC := npcs[0]
 	if len(primaryNPC.Quotes) == 0 {
-		return domain.NPCdata{}, fmt.Errorf("npc %q has no quotes", primaryNPC.NPC)
+		return models.NPCdata{}, fmt.Errorf("npc %q has no quotes", primaryNPC.NPC)
 	}
 	if len(primaryNPC.Names) == 0 {
-		return domain.NPCdata{}, fmt.Errorf("npc %q has no names", primaryNPC.NPC)
+		return models.NPCdata{}, fmt.Errorf("npc %q has no names", primaryNPC.NPC)
 	}
 
 	// NPC data that will be sent, ensures that names is a slice of strings
-	out := domain.NPCdata{
+	out := models.NPCdata{
 		NPC:     primaryNPC.NPC,
 		NPCPath: primaryNPC.NPCPath,
 		Quote:   pickStr(primaryNPC.Quotes),
@@ -120,7 +121,7 @@ func randomNpcData(rnd *rand.Rand) (domain.NPCdata, error) {
 	secondaryNPCs := npcs[1:4]
 	for i := range secondaryNPCs {
 		if len(secondaryNPCs[i].Names) == 0 {
-			return domain.NPCdata{}, fmt.Errorf("npc %q has no names", secondaryNPCs[i].NPC)
+			return models.NPCdata{}, fmt.Errorf("npc %q has no names", secondaryNPCs[i].NPC)
 		}
 		out.Names = append(out.Names, pickStr(secondaryNPCs[i].Names))
 	}
@@ -129,10 +130,10 @@ func randomNpcData(rnd *rand.Rand) (domain.NPCdata, error) {
 }
 
 // Gets a random enemy
-func randomEnemy(rnd *rand.Rand) (domain.Enemy, error) {
-	enemies, ok := memstore.HangmanData.Get()
+func randomEnemy(rnd *rand.Rand) (jsonreader.Enemy, error) {
+	enemies, ok := store.EnemiesCache.Get()
 	if !ok {
-		return domain.Enemy{}, fmt.Errorf("failed to get weapons from memstore")
+		return jsonreader.Enemy{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	shuffle(enemies, rnd)
@@ -140,8 +141,9 @@ func randomEnemy(rnd *rand.Rand) (domain.Enemy, error) {
 	return enemies[0], nil
 }
 
-func resetGuessCounts() domain.PlayerGuessCounts {
-	return domain.PlayerGuessCounts{
+// Resets the guess counts to 0
+func resetGuessCounts() models.PlayerGuessCounts {
+	return models.PlayerGuessCounts{
 		DailySlashCount:  0,
 		ConnectionsCount: 0,
 		GuessTheNpcCount: 0,

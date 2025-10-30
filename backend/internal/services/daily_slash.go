@@ -3,16 +3,22 @@ package services
 import (
 	"fmt"
 	"strings"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/utils/memstore"
+	"terrariadle-backend/internal/jsonreader"
+	"terrariadle-backend/internal/models"
+	"terrariadle-backend/internal/store"
 )
 
 type WeaponOutput struct {
-	PreviousWeaponName string `json:"previousWeaponName"`
-	Hint1              string `json:"hint1"`
-	Hint2              string `json:"hint2"`
-	Hint3              string `json:"hint3"`
+	PreviousWeaponData previousWeapon `json:"previousWeaponData"`
+	Hint1              string         `json:"hint1"`
+	Hint2              string         `json:"hint2"`
+	Hint3              string         `json:"hint3"`
+}
+
+type previousWeapon struct {
+	Name   string `json:"name"`
+	Path   string `json:"path"`
+	Rarity string `json:"rarity"`
 }
 
 type searchResult struct {
@@ -21,30 +27,34 @@ type searchResult struct {
 	Path     string `json:"path"`
 }
 
-func InitializeDailySlashGame(userId string) (WeaponOutput, []domain.Weapon, error) {
+// Initializes the daily slash game for a user, returning the puzzle data and guessed weapons
+func InitializeDailySlashGame(userId string) (WeaponOutput, []jsonreader.Weapon, error) {
 	// Gets daily game data and weapons from memstore
-	gameData, ok := memstore.GameData.Get()
+	gameData, ok := store.GameData.Get()
 	if !ok {
-		return WeaponOutput{}, []domain.Weapon{}, fmt.Errorf("failed to get data from memstore")
+		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
 	}
-	weapons, ok := memstore.WeaponData.Get()
+	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return WeaponOutput{}, []domain.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
+		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	puzzleData := gameData.DailySlash
 	weaponData := WeaponOutput{
-		PreviousWeaponName: puzzleData.PreviousWeapon.Name,
-		Hint1:              puzzleData.CurrentWeapon.ModeObtained,
-		Hint2:              puzzleData.CurrentWeapon.WeaponType,
-		Hint3:              puzzleData.CurrentWeapon.Info.ImagePath,
+		PreviousWeaponData: previousWeapon{
+			Name:   puzzleData.PreviousWeapon.Name,
+			Path:   puzzleData.PreviousWeapon.Info.ImagePath,
+			Rarity: puzzleData.PreviousWeapon.Info.Rarity,
+		},
+		Hint1: puzzleData.CurrentWeapon.ModeObtained,
+		Hint2: puzzleData.CurrentWeapon.WeaponType,
+		Hint3: puzzleData.CurrentWeapon.Info.ImagePath,
 	}
 
 	// Gets the user from the collection
-	col := db.GetCollection("terrariadle", "user_guesses")
-	user, err := getUser(col, userId)
+	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
-		return WeaponOutput{}, []domain.Weapon{}, fmt.Errorf("failed to get user in user guesses API")
+		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get user in user guesses API")
 	}
 
 	// Maps guessed weapons and returns puzzle data
@@ -55,7 +65,7 @@ func InitializeDailySlashGame(userId string) (WeaponOutput, []domain.Weapon, err
 				weaponSet[id] = true
 			}
 
-			var filtered []domain.Weapon
+			var filtered []jsonreader.Weapon
 			for _, w := range weapons {
 				if weaponSet[w.ID] {
 					filtered = append(filtered, w)
@@ -67,15 +77,16 @@ func InitializeDailySlashGame(userId string) (WeaponOutput, []domain.Weapon, err
 	}
 
 	// Errors if can't find user guess data
-	return WeaponOutput{}, []domain.Weapon{}, fmt.Errorf("error getting player position")
+	return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("error getting player position")
 }
 
+// Searches for weapons matching the query string
 func DailySlashSearch(query string) ([]searchResult, error) {
 	if query == "" {
 		return []searchResult{}, fmt.Errorf("query cannot be empty")
 	}
 
-	weapons, ok := memstore.WeaponData.Get()
+	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
 		return []searchResult{}, fmt.Errorf("error getting weapon data from memstore")
 	}
@@ -99,30 +110,30 @@ func DailySlashSearch(query string) ([]searchResult, error) {
 	return results, nil
 }
 
-func CheckDailySlashGuess(userId string, weaponId int) (bool, domain.Weapon, error) {
+// Checks a user's guess
+func CheckDailySlashGuess(userId string, weaponId int) (bool, jsonreader.Weapon, error) {
 	// Initial checks
 	if weaponId > 450 {
-		return false, domain.Weapon{}, fmt.Errorf("invalid weapon ID")
+		return false, jsonreader.Weapon{}, fmt.Errorf("invalid weapon ID")
 	}
 	if !isValidUUID(userId) {
-		return false, domain.Weapon{}, fmt.Errorf("invalid user ID")
+		return false, jsonreader.Weapon{}, fmt.Errorf("invalid user ID")
 	}
 
 	// Gets user from database
-	col := db.GetCollection("terrariadle", "user_guesses")
-	user, err := getUser(col, userId)
+	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get user in check API")
+		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get user in check API")
 	}
 
 	// Gets memstore data
-	gameData, ok := memstore.GameData.Get()
+	gameData, ok := store.GameData.Get()
 	if !ok {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get data from memstore")
+		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
 	}
-	weapons, ok := memstore.WeaponData.Get()
+	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return false, domain.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
+		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	// Checks guess
@@ -139,28 +150,28 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, domain.Weapon, err
 				user.Games[i].HasWon = true
 				gameData.GuessCounts.DailySlashCount += 1
 				user.Games[i].Position = gameData.GuessCounts.DailySlashCount
-				memstore.GameData.Set(gameData)
+				store.GameData.Set(gameData)
 			}
 			break
 		}
 	}
-	err = updateUser(col, user)
+	err = models.UpdateUserData(user)
 	if err != nil {
-		return false, domain.Weapon{}, err
+		return false, jsonreader.Weapon{}, err
 	}
 
 	guessedWeapon := weapons[weaponId-1]
 	return won, guessedWeapon, nil
 }
 
+// Gets the winning position and total players for daily slash
 func GetDailySlashWinningData(userId string) (int, int, error) {
-	gameData, ok := memstore.GameData.Get()
+	gameData, ok := store.GameData.Get()
 	if !ok {
 		return 0, 0, fmt.Errorf("failed to get data from memstore")
 	}
 
-	col := db.GetCollection("terrariadle", "user_guesses")
-	user, err := getUser(col, userId)
+	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
 		return 0, 0, fmt.Errorf("failed to get user in player position API")
 	}
