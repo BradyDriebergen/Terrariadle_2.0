@@ -5,37 +5,31 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/domain"
+	"terrariadle-backend/internal/models"
+	"terrariadle-backend/internal/store"
 	"terrariadle-backend/internal/utils"
-	"terrariadle-backend/internal/utils/memstore"
 	"time"
-
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
 )
 
-// StartMidnightReset blocks until ctx is canceled.
+// Starts the daily reset job, which randomizes the puzzle data at midnight everynight.
 // Call it from a goroutine in main().
 func StartResetJob() {
 	// For Boise time: loc, _ := time.LoadLocation("America/Boise")
 	loc := time.Now().Location()
 
-	col := db.GetCollection("terrariadle", "daily_data")
-
 	// Gets the game data to check if it's already updated
-	gameData, err := db.GetGameData(col, bson.M{"_id": 1})
+	gameData, err := models.GetGameData()
 	if err != nil {
 		fmt.Print(err)
-		reset(col, loc)
+		reset(loc)
 	} else {
 		// Initial reset for if the server crashes
 		t := time.Now().In(loc)
 		if t.After(gameData.NextResetTime) {
-			reset(col, loc)
+			reset(loc)
 		} else {
 			// Puts game data in memory if same day
-			memstore.GameData.Set(*gameData)
+			store.GameData.Set(*gameData)
 			fmt.Println("Game data successfully restored")
 		}
 	}
@@ -53,7 +47,7 @@ func StartResetJob() {
 			timer.Stop()
 			return
 		case <-timer.C:
-			reset(col, loc)
+			reset(loc)
 			// then loop to compute the *next* midnight again
 		}
 	}
@@ -62,16 +56,16 @@ func StartResetJob() {
 /* Dont store guess amounts on the backend. Instead, read the length of guesses
 and assign them to each guess_counts (in case the server crashes)*/
 
-func reset(col *mongo.Collection, loc *time.Location) {
+func reset(loc *time.Location) {
 	fmt.Println("Reseting daily game data at:", time.Now())
 
 	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
-	game, err := db.GetGameData(col, bson.M{"_id": 1})
+	game, err := models.GetGameData()
 	if err != nil {
 		log.Fatal("failed to get game data when resetting")
 	}
 
-	weapons, err := randomDailyWeapons(rnd, game.DailySlash.PreviousWeapon)
+	weapons, err := randomDailyWeapons(rnd, game.DailySlash.CurrentWeapon)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -93,7 +87,7 @@ func reset(col *mongo.Collection, loc *time.Location) {
 
 	guessCounts := resetGuessCounts()
 
-	gameData := domain.GameData{
+	gameData := models.GameData{
 		DailySlash:    weapons,
 		Connections:   categories,
 		GuessTheNpc:   npc,
@@ -103,10 +97,9 @@ func reset(col *mongo.Collection, loc *time.Location) {
 		NextResetTime: utils.NextMidnight(time.Now().In(loc)),
 	}
 
-	if err := db.UpsertRecord(col, bson.M{"_id": 1}, bson.M{"$set": gameData}); err != nil {
+	if err := models.UpsertGameData(gameData); err != nil {
 		log.Fatal(err)
 	}
 
-	memstore.GameData.Set(gameData)
-	fmt.Println("Game data stored in cache")
+	store.GameData.Set(gameData)
 }

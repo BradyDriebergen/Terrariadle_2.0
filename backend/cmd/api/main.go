@@ -5,15 +5,18 @@ import (
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/jobs"
 	"terrariadle-backend/internal/server"
-	"terrariadle-backend/internal/utils/memstore"
+	"terrariadle-backend/internal/store"
 )
 
 func main() {
+	// Connect to the database
 	db.Connect()
 	defer db.DisconnectDB()
 
-	memstore.InitializeDataFromJsonFiles()
+	// Initialize atomicstore
+	store.InitializeStoreFromJson()
 
+	// Sets up endpoints
 	h := server.NewMux()
 
 	// Starts the reset job

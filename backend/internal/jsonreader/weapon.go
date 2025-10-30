@@ -1,9 +1,8 @@
-package domain
+package jsonreader
 
-type WeaponData struct {
-	CurrentWeapon  Weapon `json:"currentWeapon"`
-	PreviousWeapon Weapon `json:"previousWeapon"`
-}
+import "fmt"
+
+// Weapon struct that gets pulled from JSON files
 
 type Weapon struct {
 	ID           int        `json:"id"`
@@ -22,4 +21,14 @@ type WeaponInfo struct {
 	Operation  string   `json:"operation"`
 	Material   string   `json:"material"`
 	Obtained   []string `json:"obtained"`
+}
+
+// Gets the weapons from a JSON and returns a slice
+func GetWeaponsFromJSON() ([]Weapon, error) {
+	weapons, err := loadJSONData[Weapon]("../data/weapons.json")
+	if err != nil {
+		return []Weapon{}, fmt.Errorf("error getting weapons from JSON file")
+	}
+
+	return weapons, nil
 }

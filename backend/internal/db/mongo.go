@@ -2,13 +2,10 @@ package db
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"log"
 	"os"
 	"time"
-
-	"terrariadle-backend/internal/domain"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -19,7 +16,7 @@ var Client *mongo.Client
 
 // Connect initializes a MongoDB client and stores it in db.Client
 func Connect() {
-	// paths := []string{".env", "../.env", "../../.env"}
+	// path value depends on what directory you run main.go in
 	err := godotenv.Load("../.env")
 	if err != nil {
 		wd, _ := os.Getwd()
@@ -67,45 +64,6 @@ func GetCollection(database, collection string) *mongo.Collection {
 	return Client.Database(database).Collection(collection)
 }
 
-func GetGuessRecord(collection *mongo.Collection, filter any) (*GuessDocument, error) {
-	if collection.Name() != "user_guesses" {
-		return &GuessDocument{}, fmt.Errorf("tried to get user from invalid collection: %s", collection.Name())
-	}
-
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	var user GuessDocument
-	res := collection.FindOne(ctx, filter)
-	err := res.Decode(&user)
-	if err != nil {
-		if errors.Is(err, mongo.ErrNoDocuments) {
-			return nil, mongo.ErrNoDocuments
-		}
-		return nil, fmt.Errorf("failed to find record %v", err)
-	}
-
-	return &user, nil
-}
-
-func GetGameData(collection *mongo.Collection, filter any) (*domain.GameData, error) {
-	if collection.Name() != "daily_data" {
-		return &domain.GameData{}, fmt.Errorf("tried to get game data from invalid collection: %s", collection.Name())
-	}
-
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	var data domain.GameData
-	res := collection.FindOne(ctx, filter)
-	err := res.Decode(&data)
-	if err != nil {
-		return nil, fmt.Errorf("failed to find record %v", err)
-	}
-
-	return &data, nil
-}
-
 // Inserts a record into a collection
 func InsertRecord(collection *mongo.Collection, data any) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -120,7 +78,7 @@ func InsertRecord(collection *mongo.Collection, data any) error {
 	return nil
 }
 
-// UpdateRecord updates a single record in a collection.
+// Updates a single record in a collection.
 func UpdateRecord(collection *mongo.Collection, filter, update any) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -134,6 +92,7 @@ func UpdateRecord(collection *mongo.Collection, filter, update any) error {
 	return nil
 }
 
+// Updates or creates a single record in a collection
 func UpsertRecord(collection *mongo.Collection, filter, update any) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
