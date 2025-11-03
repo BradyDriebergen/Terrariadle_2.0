@@ -1,13 +1,11 @@
-# Simple Makefile for Go backend + Svelte frontend
-
 build:
-	cd ./backend/cmd && go build -o server .
+	echo "Hello World!"
 
-run:
-	cd backend && go run .
+format:
+	cd frontend && npm run format && npm run lint -- --fix
 
-frontend:
-	cd frontend && npm run dev
+frontend-dev:
+	cd frontend && npm run dev -- --open
 
-frontend-build:
-	cd frontend && npm run build
+backend-dev:
+	cd backend/cmd && go run api/main.go

@@ -28,6 +28,23 @@ type Game struct {
 	Extra    map[string]any `bson:"extra,omitempty"`    // flexible field for game-specific data
 }
 
+// Little checklist for how this works:
+/*
+	Damage: 0 = lower, 1 = match, 2 = over
+	UseTime: 0 = slower, 1 = match, 2 = faster
+	Rarity: 0 = earlier, 1 = match, 2 = later
+	Obtained: 0 = no match, 1 = partial, 2 = exact
+*/
+type WeaponChecks struct {
+	WeaponType bool `bson:"weaponType"`
+	Damage     int  `bson:"damage"`
+	UseTime    int  `bson:"useTime"`
+	Rarity     int  `bson:"rarity"`
+	Operation  bool `bson:"operation"`
+	Material   bool `bson:"material"`
+	Obtained   int  `bson:"obtained"`
+}
+
 // Retrieves the user data
 func GetUserData(userId string) (*UserData, error) {
 	collection := db.GetCollection("terrariadle", "user_guesses")
@@ -61,7 +78,9 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 						Guesses:  []int{},
 						HasWon:   false,
 						Position: 0,
-						Extra:    map[string]any{},
+						Extra: map[string]any{
+							"WeaponChecks": []WeaponChecks{},
+						},
 					},
 					{
 						GameType: "Connections",

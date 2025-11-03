@@ -27,6 +27,31 @@ type searchResult struct {
 	Path     string `json:"path"`
 }
 
+var rarities = map[string]int{
+	"White":        0,
+	"Blue":         1,
+	"Green":        2,
+	"Orange":       3,
+	"Light Red":    4,
+	"Pink":         5,
+	"Light Purple": 6,
+	"Lime":         7,
+	"Yellow":       8,
+	"Cyan":         9,
+	"Red":          10,
+}
+
+var useTimes = map[string]int{
+	"Insanely Fast":  7,
+	"Very Fast":      6,
+	"Fast":           5,
+	"Average":        4,
+	"Slow":           3,
+	"Very Slow":      2,
+	"Extremely Slow": 1,
+	"Snail":          0,
+}
+
 // Initializes the daily slash game for a user, returning the puzzle data and guessed weapons
 func InitializeDailySlashGame(userId string) (WeaponOutput, []jsonreader.Weapon, error) {
 	// Gets daily game data and weapons from memstore
@@ -145,12 +170,19 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, jsonreader.Weapon,
 	// Updates user based on guess
 	for i := range user.Games {
 		if user.Games[i].GameType == "DailySlash" {
+			// Sets Guesses
 			user.Games[i].Guesses = append(user.Games[i].Guesses, weaponId)
+
+			// Update weapon checks for this guess
+			user.Games[i].Extra["WeaponChecks"] = checkGuess(weapons[weaponId-1], gameData.DailySlash.CurrentWeapon)
+
+			// Sets winning
 			if won {
 				user.Games[i].HasWon = true
 				gameData.GuessCounts.DailySlashCount += 1
 				user.Games[i].Position = gameData.GuessCounts.DailySlashCount
 				store.GameData.Set(gameData)
+
 			}
 			break
 		}
@@ -187,4 +219,74 @@ func GetDailySlashWinningData(userId string) (int, int, error) {
 	}
 
 	return 0, 0, fmt.Errorf("error getting player position")
+}
+
+func checkGuess(guess, answer jsonreader.Weapon) models.WeaponChecks {
+	damage := 1
+	if answer.Info.Damage > guess.Info.Damage {
+		damage = 2
+	} else if answer.Info.Damage < guess.Info.Damage {
+		damage = 0
+	}
+
+	useTime := 1
+	if useTimes[answer.Info.UseTime] > useTimes[guess.Info.UseTime] {
+		useTime = 2
+	} else if useTimes[answer.Info.UseTime] < useTimes[guess.Info.UseTime] {
+		useTime = 0
+	}
+
+	rarity := 1
+	if rarities[answer.Info.Rarity] < rarities[guess.Info.Rarity] {
+		rarity = 0
+	} else if rarities[answer.Info.Rarity] > rarities[guess.Info.Rarity] {
+		rarity = 2
+	}
+
+	obtained := guessObtained(guess.Info.Obtained, answer.Info.Obtained)
+
+	return models.WeaponChecks{
+		WeaponType: answer.WeaponType == guess.WeaponType,
+		Damage:     damage,
+		UseTime:    useTime,
+		Rarity:     rarity,
+		Operation:  answer.Info.Operation == guess.Info.Operation,
+		Material:   answer.Info.Material == guess.Info.Material,
+		Obtained:   obtained,
+	}
+}
+
+func guessObtained(g, w []string) int {
+	// Convert to maps for quick lookup
+	gMap := make(map[string]bool)
+	for _, val := range g {
+		gMap[val] = true
+	}
+	wMap := make(map[string]bool)
+	for _, val := range w {
+		wMap[val] = true
+	}
+
+	// Check if they are identical sets
+	if len(gMap) == len(wMap) {
+		same := true
+		for key := range gMap {
+			if !wMap[key] {
+				same = false
+				break
+			}
+		}
+		if same {
+			return 2
+		}
+	}
+
+	// Check for partial overlap
+	for key := range gMap {
+		if wMap[key] {
+			return 1
+		}
+	}
+
+	return 0
 }
