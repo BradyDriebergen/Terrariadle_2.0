@@ -5,7 +5,7 @@
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Abigails_Flower.png",
+      "image-path": "/Abigails_Flower.png",
       "damage-type": "Summon",
       "damage": 6,
       "use-time": "Very Slow",
@@ -23,7 +23,7 @@
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Adamantite_Glaive.png",
+      "image-path": "/Adamantite_Glaive.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Fast",
@@ -41,7 +41,7 @@
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Adamantite_Repeater.png",
+      "image-path": "/Adamantite_Repeater.png",
       "damage-type": "Ranged",
       "damage": 42,
       "use-time": "Very Fast",
@@ -59,7 +59,7 @@
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Adamantite_Sword.png",
+      "image-path": "/Adamantite_Sword.png",
       "damage-type": "Melee",
       "damage": 61,
       "use-time": "Fast",
@@ -77,7 +77,7 @@
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Aerial_Bane.png",
+      "image-path": "/Aerial_Bane.png",
       "damage-type": "Ranged",
       "damage": 39,
       "use-time": "Average",
@@ -95,7 +95,7 @@
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ale_Tosser.png",
+      "image-path": "/Ale_Tosser.png",
       "damage-type": "Throwing",
       "damage": 20,
       "use-time": "Very Slow",
@@ -113,7 +113,7 @@
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Amarok.png",
+      "image-path": "/Amarok.png",
       "damage-type": "Melee",
       "damage": 43,
       "use-time": "Fast",
@@ -131,7 +131,7 @@
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Amazon.png",
+      "image-path": "/Amazon.png",
       "damage-type": "Melee",
       "damage": 18,
       "use-time": "Fast",
@@ -149,7 +149,7 @@
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Amber_Staff.png",
+      "image-path": "/Amber_Staff.png",
       "damage-type": "Magic",
       "damage": 21,
       "use-time": "Average",
@@ -167,7 +167,7 @@
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Amethyst_Staff.png",
+      "image-path": "/Amethyst_Staff.png",
       "damage-type": "Magic",
       "damage": 15,
       "use-time": "Very Slow",
@@ -185,7 +185,7 @@
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Anchor.png",
+      "image-path": "/Anchor.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Very Fast",
@@ -203,7 +203,7 @@
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Aqua_Scepter.png",
+      "image-path": "/Aqua_Scepter.png",
       "damage-type": "Magic",
       "damage": 27,
       "use-time": "Very Fast",
@@ -221,7 +221,7 @@
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Arkhalis.png",
+      "image-path": "/Arkhalis.png",
       "damage-type": "Melee",
       "damage": 25,
       "use-time": "Fast",
@@ -239,7 +239,7 @@
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Artery.png",
+      "image-path": "/Artery.png",
       "damage-type": "Melee",
       "damage": 17,
       "use-time": "Fast",
@@ -252,12 +252,12 @@
     }
   },
   {
-    "id": 17,
+    "id": 15,
     "name": "Ball O' Hurt",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ball_O_Hurt.png",
+      "image-path": "/Ball_O_Hurt.png",
       "damage-type": "Melee",
       "damage": 30,
       "use-time": "Very Slow",
@@ -270,12 +270,12 @@
     }
   },
   {
-    "id": 18,
+    "id": 16,
     "name": "Ballista Cane",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ballista_Cane.png",
+      "image-path": "/Ballista_Cane.png",
       "damage-type": "Summon",
       "damage": 74,
       "use-time": "Average",
@@ -289,12 +289,12 @@
     }
   },
   {
-    "id": 19,
+    "id": 17,
     "name": "Ballista Rod",
     "weapon-type": "Sentry",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ballista_Rod.png",
+      "image-path": "/Ballista_Rod.png",
       "damage-type": "Summon",
       "damage": 30,
       "use-time": "Average",
@@ -308,12 +308,12 @@
     }
   },
   {
-    "id": 20,
+    "id": 18,
     "name": "Ballista Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ballista_Staff.png",
+      "image-path": "/Ballista_Staff.png",
       "damage-type": "Summon",
       "damage": 156,
       "use-time": "Average",
@@ -327,12 +327,12 @@
     }
   },
   {
-    "id": 21,
+    "id": 19,
     "name": "Bananarang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Bananarang.png",
+      "image-path": "/Bananarang.png",
       "damage-type": "Melee",
       "damage": 45,
       "use-time": "Very Fast",
@@ -345,12 +345,12 @@
     }
   },
   {
-    "id": 22,
+    "id": 20,
     "name": "Bat Bat",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bat_Bat.png",
+      "image-path": "/Bat_Bat.png",
       "damage-type": "Melee",
       "damage": 36,
       "use-time": "Very Slow",
@@ -363,12 +363,12 @@
     }
   },
   {
-    "id": 23,
+    "id": 21,
     "name": "Bat Scepter",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Bat_Scepter.png",
+      "image-path": "/Bat_Scepter.png",
       "damage-type": "Magic",
       "damage": 45,
       "use-time": "Very Fast",
@@ -381,12 +381,12 @@
     }
   },
   {
-    "id": 24,
+    "id": 22,
     "name": "Beam Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Beam_Sword.png",
+      "image-path": "/Beam_Sword.png",
       "damage-type": "Melee",
       "damage": 52,
       "use-time": "Very Fast",
@@ -399,12 +399,12 @@
     }
   },
   {
-    "id": 25,
+    "id": 23,
     "name": "Bee Gun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bee_Gun.png",
+      "image-path": "/Bee_Gun.png",
       "damage-type": "Magic",
       "damage": 9,
       "use-time": "Very Fast",
@@ -417,12 +417,12 @@
     }
   },
   {
-    "id": 26,
+    "id": 24,
     "name": "Bee Keeper",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bee_Keeper.png",
+      "image-path": "/Bee_Keeper.png",
       "damage-type": "Melee",
       "damage": 30,
       "use-time": "Very Fast",
@@ -435,12 +435,12 @@
     }
   },
   {
-    "id": 27,
+    "id": 25,
     "name": "Beenade",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Beenade.png",
+      "image-path": "/Beenade.png",
       "damage-type": "Throwing",
       "damage": 12,
       "use-time": "Very Fast",
@@ -453,12 +453,12 @@
     }
   },
   {
-    "id": 28,
+    "id": 26,
     "name": "Betsy's Wrath",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Betsys_Wrath.png",
+      "image-path": "/Betsys_Wrath.png",
       "damage-type": "Magic",
       "damage": 100,
       "use-time": "Very Fast",
@@ -471,12 +471,12 @@
     }
   },
   {
-    "id": 29,
+    "id": 27,
     "name": "Blade of Grass",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blade_of_Grass.png",
+      "image-path": "/Blade_of_Grass.png",
       "damage-type": "Melee",
       "damage": 18,
       "use-time": "Very Fast",
@@ -489,12 +489,12 @@
     }
   },
   {
-    "id": 30,
+    "id": 28,
     "name": "Blade Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Blade_Staff.png",
+      "image-path": "/Blade_Staff.png",
       "damage-type": "Summon",
       "damage": 6,
       "use-time": "Very Slow",
@@ -507,12 +507,12 @@
     }
   },
   {
-    "id": 31,
+    "id": 29,
     "name": "Bladed Glove",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bladed_Glove.png",
+      "image-path": "/Bladed_Glove.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Insanely Fast",
@@ -525,12 +525,12 @@
     }
   },
   {
-    "id": 32,
+    "id": 30,
     "name": "Bladetongue",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Bladetongue.png",
+      "image-path": "/Bladetongue.png",
       "damage-type": "Melee",
       "damage": 55,
       "use-time": "Average",
@@ -543,12 +543,12 @@
     }
   },
   {
-    "id": 33,
+    "id": 31,
     "name": "Blizzard Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Blizzard_Staff.png",
+      "image-path": "/Blizzard_Staff.png",
       "damage-type": "Magic",
       "damage": 58,
       "use-time": "Very Fast",
@@ -561,12 +561,12 @@
     }
   },
   {
-    "id": 34,
+    "id": 32,
     "name": "Blood Butcherer",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blood_Butcherer.png",
+      "image-path": "/Blood_Butcherer.png",
       "damage-type": "Melee",
       "damage": 22,
       "use-time": "Fast",
@@ -579,12 +579,12 @@
     }
   },
   {
-    "id": 36,
+    "id": 33,
     "name": "Blood Rain Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blood_Rain_Bow.png",
+      "image-path": "/Blood_Rain_Bow.png",
       "damage-type": "Ranged",
       "damage": 14,
       "use-time": "Very Fast",
@@ -597,12 +597,12 @@
     }
   },
   {
-    "id": 37,
+    "id": 34,
     "name": "Blood Thorn",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Blood_Thorn.png",
+      "image-path": "/Blood_Thorn.png",
       "damage-type": "Magic",
       "damage": 34,
       "use-time": "Slow",
@@ -615,12 +615,12 @@
     }
   },
   {
-    "id": 38,
+    "id": 35,
     "name": "Bloody Machete",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bloody_Machete.png",
+      "image-path": "/Bloody_Machete.png",
       "damage-type": "Melee",
       "damage": 20,
       "use-time": "Very Fast",
@@ -633,12 +633,12 @@
     }
   },
   {
-    "id": 39,
+    "id": 36,
     "name": "Blowgun",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blowgun.png",
+      "image-path": "/Blowgun.png",
       "damage-type": "Ranged",
       "damage": 27,
       "use-time": "Slow",
@@ -651,12 +651,12 @@
     }
   },
   {
-    "id": 40,
+    "id": 37,
     "name": "Blowpipe",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blowpipe.png",
+      "image-path": "/Blowpipe.png",
       "damage-type": "Ranged",
       "damage": 9,
       "use-time": "Fast",
@@ -669,12 +669,12 @@
     }
   },
   {
-    "id": 41,
+    "id": 38,
     "name": "Blue Moon",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Blue_Moon.png",
+      "image-path": "/Blue_Moon.png",
       "damage-type": "Melee",
       "damage": 54,
       "use-time": "Very Slow",
@@ -687,12 +687,12 @@
     }
   },
   {
-    "id": 42,
+    "id": 39,
     "name": "Phaseblade",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Phaseblade.png",
+      "image-path": "/Phaseblade.png",
       "damage-type": "Melee",
       "damage": 26,
       "use-time": "Very Fast",
@@ -705,12 +705,12 @@
     }
   },
   {
-    "id": 43,
+    "id": 40,
     "name": "Phasesaber",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Phasesaber.png",
+      "image-path": "/Phasesaber.png",
       "damage-type": "Melee",
       "damage": 48,
       "use-time": "Very Fast",
@@ -723,12 +723,12 @@
     }
   },
   {
-    "id": 44,
+    "id": 41,
     "name": "Bone",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bone.png",
+      "image-path": "/Bone.png",
       "damage-type": "Throwing",
       "damage": 20,
       "use-time": "Very Fast",
@@ -741,12 +741,12 @@
     }
   },
   {
-    "id": 45,
+    "id": 42,
     "name": "Bone Javelin",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bone_Javelin.png",
+      "image-path": "/Bone_Javelin.png",
       "damage-type": "Throwing",
       "damage": 20,
       "use-time": "Fast",
@@ -759,12 +759,12 @@
     }
   },
   {
-    "id": 46,
+    "id": 43,
     "name": "Bone Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bone_Sword.png",
+      "image-path": "/Bone_Sword.png",
       "damage-type": "Melee",
       "damage": 19,
       "use-time": "Fast",
@@ -777,12 +777,12 @@
     }
   },
   {
-    "id": 47,
+    "id": 44,
     "name": "Bone Throwing Knife",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Bone_Throwing_Knife.png",
+      "image-path": "/Bone_Throwing_Knife.png",
       "damage-type": "Throwing",
       "damage": 14,
       "use-time": "Very Fast",
@@ -795,12 +795,12 @@
     }
   },
   {
-    "id": 48,
+    "id": 45,
     "name": "Book of Skulls",
     "weapon-type": "Tomb",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Book_of_Skulls.png",
+      "image-path": "/Book_of_Skulls.png",
       "damage-type": "Magic",
       "damage": 29,
       "use-time": "Average",
@@ -813,12 +813,12 @@
     }
   },
   {
-    "id": 49,
+    "id": 46,
     "name": "Boomstick",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Boomstick.png",
+      "image-path": "/Boomstick.png",
       "damage-type": "Ranged",
       "damage": 14,
       "use-time": "Very Slow",
@@ -831,12 +831,12 @@
     }
   },
   {
-    "id": 53,
+    "id": 47,
     "name": "Brand of the Inferno",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Brand_of_the_Inferno.png",
+      "image-path": "/Brand_of_the_Inferno.png",
       "damage-type": "Melee",
       "damage": 95,
       "use-time": "Very Fast",
@@ -849,12 +849,12 @@
     }
   },
   {
-    "id": 54,
+    "id": 48,
     "name": "Breaker Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Breaker_Blade.png",
+      "image-path": "/Breaker_Blade.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Slow",
@@ -867,12 +867,12 @@
     }
   },
   {
-    "id": 55,
+    "id": 49,
     "name": "Breathing Reed",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Breathing_Reed.png",
+      "image-path": "/Breathing_Reed.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Average",
@@ -885,12 +885,12 @@
     }
   },
   {
-    "id": 56,
+    "id": 50,
     "name": "Bubble Gun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Bubble_Gun.png",
+      "image-path": "/Bubble_Gun.png",
       "damage-type": "Magic",
       "damage": 70,
       "use-time": "Very Fast",
@@ -903,12 +903,12 @@
     }
   },
   {
-    "id": 57,
+    "id": 51,
     "name": "Cactus Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Cactus_Sword.png",
+      "image-path": "/Cactus_Sword.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Average",
@@ -921,12 +921,12 @@
     }
   },
   {
-    "id": 58,
+    "id": 52,
     "name": "Candy Cane Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Candy_Cane_Sword.png",
+      "image-path": "/Candy_Cane_Sword.png",
       "damage-type": "Melee",
       "damage": 19,
       "use-time": "Average",
@@ -939,12 +939,12 @@
     }
   },
   {
-    "id": 59,
+    "id": 53,
     "name": "Candy Corn Rifle",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Candy_Corn_Rifle.png",
+      "image-path": "/Candy_Corn_Rifle.png",
       "damage-type": "Ranged",
       "damage": 44,
       "use-time": "Very Fast",
@@ -957,12 +957,12 @@
     }
   },
   {
-    "id": 60,
+    "id": 54,
     "name": "Cascade",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Cascade.png",
+      "image-path": "/Cascade.png",
       "damage-type": "Melee",
       "damage": 27,
       "use-time": "Fast",
@@ -975,12 +975,12 @@
     }
   },
   {
-    "id": 61,
+    "id": 55,
     "name": "Celebration",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Celebration.png",
+      "image-path": "/Celebration.png",
       "damage-type": "Ranged",
       "damage": 25,
       "use-time": "Average",
@@ -993,12 +993,12 @@
     }
   },
   {
-    "id": 62,
+    "id": 56,
     "name": "Celebration Mk2",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Celebration_Mk2.png",
+      "image-path": "/Celebration_Mk2.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Insanely Fast",
@@ -1011,12 +1011,12 @@
     }
   },
   {
-    "id": 63,
+    "id": 57,
     "name": "Chain Guillotines",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chain_Guillotines.png",
+      "image-path": "/Chain_Guillotines.png",
       "damage-type": "Melee",
       "damage": 59,
       "use-time": "Very Fast",
@@ -1029,12 +1029,12 @@
     }
   },
   {
-    "id": 64,
+    "id": 58,
     "name": "Chain Gun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chain_Gun.png",
+      "image-path": "/Chain_Gun.png",
       "damage-type": "Ranged",
       "damage": 31,
       "use-time": "Insanely Fast",
@@ -1047,12 +1047,12 @@
     }
   },
   {
-    "id": 65,
+    "id": 59,
     "name": "Chain Knife",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Chain_Knife.png",
+      "image-path": "/Chain_Knife.png",
       "damage-type": "Melee",
       "damage": 12,
       "use-time": "Very Fast",
@@ -1065,12 +1065,12 @@
     }
   },
   {
-    "id": 66,
+    "id": 60,
     "name": "Charged Blaster Cannon",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Charged_Blaster_Cannon.png",
+      "image-path": "/Charged_Blaster_Cannon.png",
       "damage-type": "Magic",
       "damage": 100,
       "use-time": "Very Fast",
@@ -1083,12 +1083,12 @@
     }
   },
   {
-    "id": 67,
+    "id": 61,
     "name": "Chik",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chik.png",
+      "image-path": "/Chik.png",
       "damage-type": "Melee",
       "damage": 39,
       "use-time": "Fast",
@@ -1101,12 +1101,12 @@
     }
   },
   {
-    "id": 68,
+    "id": 62,
     "name": "Chlorophyte Claymore",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chlorophyte_Claymore.png",
+      "image-path": "/Chlorophyte_Claymore.png",
       "damage-type": "Melee",
       "damage": 95,
       "use-time": "Average",
@@ -1119,12 +1119,12 @@
     }
   },
   {
-    "id": 69,
+    "id": 63,
     "name": "Chlorophyte Partisan",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chlorophyte_Partisan.png",
+      "image-path": "/Chlorophyte_Partisan.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Fast",
@@ -1137,12 +1137,12 @@
     }
   },
   {
-    "id": 70,
+    "id": 64,
     "name": "Chlorophyte Saber",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chlorophyte_Saber.png",
+      "image-path": "/Chlorophyte_Saber.png",
       "damage-type": "Melee",
       "damage": 57,
       "use-time": "Very Fast",
@@ -1155,12 +1155,12 @@
     }
   },
   {
-    "id": 71,
+    "id": 65,
     "name": "Chlorophyte Shotbow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Chlorophyte_Shotbow.png",
+      "image-path": "/Chlorophyte_Shotbow.png",
       "damage-type": "Ranged",
       "damage": 34,
       "use-time": "Very Fast",
@@ -1173,12 +1173,12 @@
     }
   },
   {
-    "id": 72,
+    "id": 66,
     "name": "Christmas Tree Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Christmas_Tree_Sword.png",
+      "image-path": "/Christmas_Tree_Sword.png",
       "damage-type": "Melee",
       "damage": 86,
       "use-time": "Fast",
@@ -1191,12 +1191,12 @@
     }
   },
   {
-    "id": 73,
+    "id": 67,
     "name": "Classy Cane",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Classy_Cane.png",
+      "image-path": "/Classy_Cane.png",
       "damage-type": "Melee",
       "damage": 16,
       "use-time": "Very Fast",
@@ -1209,12 +1209,12 @@
     }
   },
   {
-    "id": 74,
+    "id": 68,
     "name": "Clinger Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Clinger_Staff.png",
+      "image-path": "/Clinger_Staff.png",
       "damage-type": "Magic",
       "damage": 43,
       "use-time": "Fast",
@@ -1227,12 +1227,12 @@
     }
   },
   {
-    "id": 75,
+    "id": 69,
     "name": "Clockwork Assault Rifle",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Clockwork_Assault_Rifle.png",
+      "image-path": "/Clockwork_Assault_Rifle.png",
       "damage-type": "Ranged",
       "damage": 17,
       "use-time": "Very Fast",
@@ -1245,12 +1245,12 @@
     }
   },
   {
-    "id": 76,
+    "id": 70,
     "name": "Cobalt Naginata",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cobalt_Naginata.png",
+      "image-path": "/Cobalt_Naginata.png",
       "damage-type": "Melee",
       "damage": 44,
       "use-time": "Average",
@@ -1263,12 +1263,12 @@
     }
   },
   {
-    "id": 77,
+    "id": 71,
     "name": "Cobalt Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cobalt_Repeater.png",
+      "image-path": "/Cobalt_Repeater.png",
       "damage-type": "Ranged",
       "damage": 35,
       "use-time": "Fast",
@@ -1281,12 +1281,12 @@
     }
   },
   {
-    "id": 78,
+    "id": 72,
     "name": "Cobalt Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cobalt_Sword.png",
+      "image-path": "/Cobalt_Sword.png",
       "damage-type": "Melee",
       "damage": 40,
       "use-time": "Very Fast",
@@ -1299,12 +1299,12 @@
     }
   },
   {
-    "id": 79,
+    "id": 73,
     "name": "Code 1",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Code_1.png",
+      "image-path": "/Code_1.png",
       "damage-type": "Melee",
       "damage": 21,
       "use-time": "Fast",
@@ -1317,12 +1317,12 @@
     }
   },
   {
-    "id": 80,
+    "id": 74,
     "name": "Code 2",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Code_2.png",
+      "image-path": "/Code_2.png",
       "damage-type": "Melee",
       "damage": 54,
       "use-time": "Fast",
@@ -1335,12 +1335,12 @@
     }
   },
   {
-    "id": 81,
+    "id": 75,
     "name": "Coin Gun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Coin_Gun.png",
+      "image-path": "/Coin_Gun.png",
       "damage-type": "Ranged",
       "damage": 0,
       "use-time": "Insanely Fast",
@@ -1353,12 +1353,12 @@
     }
   },
   {
-    "id": 82,
+    "id": 76,
     "name": "Combat Wrench",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Combat_Wrench.png",
+      "image-path": "/Combat_Wrench.png",
       "damage-type": "Melee",
       "damage": 25,
       "use-time": "Very Fast",
@@ -1371,12 +1371,12 @@
     }
   },
   {
-    "id": 83,
+    "id": 77,
     "name": "Cool Whip",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cool_Whip.png",
+      "image-path": "/Cool_Whip.png",
       "damage-type": "Summon",
       "damage": 45,
       "use-time": "Average",
@@ -1389,12 +1389,12 @@
     }
   },
   {
-    "id": 84,
+    "id": 78,
     "name": "Copper Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Copper_Bow.png",
+      "image-path": "/Copper_Bow.png",
       "damage-type": "Ranged",
       "damage": 6,
       "use-time": "Average",
@@ -1407,12 +1407,12 @@
     }
   },
   {
-    "id": 85,
+    "id": 79,
     "name": "Copper Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Copper_Broadsword.png",
+      "image-path": "/Copper_Broadsword.png",
       "damage-type": "Melee",
       "damage": 9,
       "use-time": "Fast",
@@ -1425,12 +1425,12 @@
     }
   },
   {
-    "id": 86,
+    "id": 80,
     "name": "Copper Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Copper_Shortsword.png",
+      "image-path": "/Copper_Shortsword.png",
       "damage-type": "Melee",
       "damage": 5,
       "use-time": "Very Fast",
@@ -1443,12 +1443,12 @@
     }
   },
   {
-    "id": 87,
+    "id": 81,
     "name": "Crimson Rod",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Crimson_Rod.png",
+      "image-path": "/Crimson_Rod.png",
       "damage-type": "Magic",
       "damage": 12,
       "use-time": "Fast",
@@ -1461,12 +1461,12 @@
     }
   },
   {
-    "id": 88,
+    "id": 82,
     "name": "Crystal Serpent",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Crystal_Serpent.png",
+      "image-path": "/Crystal_Serpent.png",
       "damage-type": "Magic",
       "damage": 40,
       "use-time": "Average",
@@ -1479,12 +1479,12 @@
     }
   },
   {
-    "id": 89,
+    "id": 83,
     "name": "Crystal Storm",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Crystal_Storm.png",
+      "image-path": "/Crystal_Storm.png",
       "damage-type": "Magic",
       "damage": 32,
       "use-time": "Insanely Fast",
@@ -1497,12 +1497,12 @@
     }
   },
   {
-    "id": 90,
+    "id": 84,
     "name": "Crystal Vile Shard",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Crystal_Vile_Shard.png",
+      "image-path": "/Crystal_Vile_Shard.png",
       "damage-type": "Magic",
       "damage": 25,
       "use-time": "Slow",
@@ -1515,12 +1515,12 @@
     }
   },
   {
-    "id": 91,
+    "id": 85,
     "name": "Cursed Flames",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cursed_Flames.png",
+      "image-path": "/Cursed_Flames.png",
       "damage-type": "Magic",
       "damage": 55,
       "use-time": "Very Fast",
@@ -1533,12 +1533,12 @@
     }
   },
   {
-    "id": 92,
+    "id": 86,
     "name": "Cutlass",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Cutlass.png",
+      "image-path": "/Cutlass.png",
       "damage-type": "Melee",
       "damage": 53,
       "use-time": "Very Fast",
@@ -1551,12 +1551,12 @@
     }
   },
   {
-    "id": 93,
+    "id": 87,
     "name": "Daedalus Stormbow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Daedalus_Stormbow.png",
+      "image-path": "/Daedalus_Stormbow.png",
       "damage-type": "Ranged",
       "damage": 38,
       "use-time": "Very Fast",
@@ -1569,12 +1569,12 @@
     }
   },
   {
-    "id": 94,
+    "id": 88,
     "name": "Dao of Pow",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Dao_of_Pow.png",
+      "image-path": "/Dao_of_Pow.png",
       "damage-type": "Melee",
       "damage": 100,
       "use-time": "Very Slow",
@@ -1587,12 +1587,12 @@
     }
   },
   {
-    "id": 95,
+    "id": 89,
     "name": "Dark Harvest",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Dark_Harvest.png",
+      "image-path": "/Dark_Harvest.png",
       "damage-type": "Summon",
       "damage": 100,
       "use-time": "Average",
@@ -1605,12 +1605,12 @@
     }
   },
   {
-    "id": 96,
+    "id": 90,
     "name": "Dark Lance",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Dark_Lance.png",
+      "image-path": "/Dark_Lance.png",
       "damage-type": "Melee",
       "damage": 34,
       "use-time": "Fast",
@@ -1623,12 +1623,12 @@
     }
   },
   {
-    "id": 97,
+    "id": 91,
     "name": "Dart Pistol",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Dart_Pistol.png",
+      "image-path": "/Dart_Pistol.png",
       "damage-type": "Ranged",
       "damage": 28,
       "use-time": "Fast",
@@ -1641,12 +1641,12 @@
     }
   },
   {
-    "id": 98,
+    "id": 92,
     "name": "Dart Rifle",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Dart_Rifle.png",
+      "image-path": "/Dart_Rifle.png",
       "damage-type": "Ranged",
       "damage": 52,
       "use-time": "Very Slow",
@@ -1659,12 +1659,12 @@
     }
   },
   {
-    "id": 99,
+    "id": 93,
     "name": "Daybreak",
     "weapon-type": "Throwable",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Daybreak.png",
+      "image-path": "/Daybreak.png",
       "damage-type": "Melee",
       "damage": 150,
       "use-time": "Very Fast",
@@ -1677,12 +1677,12 @@
     }
   },
   {
-    "id": 100,
+    "id": 94,
     "name": "Deadly Sphere Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Deadly_Sphere_Staff.png",
+      "image-path": "/Deadly_Sphere_Staff.png",
       "damage-type": "Summon",
       "damage": 40,
       "use-time": "Very Slow",
@@ -1695,12 +1695,12 @@
     }
   },
   {
-    "id": 101,
+    "id": 95,
     "name": "Death Sickle",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Death_Sickle.png",
+      "image-path": "/Death_Sickle.png",
       "damage-type": "Melee",
       "damage": 57,
       "use-time": "Fast",
@@ -1713,12 +1713,12 @@
     }
   },
   {
-    "id": 102,
+    "id": 96,
     "name": "Demon Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Demon_Bow.png",
+      "image-path": "/Demon_Bow.png",
       "damage-type": "Ranged",
       "damage": 14,
       "use-time": "Fast",
@@ -1731,12 +1731,12 @@
     }
   },
   {
-    "id": 103,
+    "id": 97,
     "name": "Demon Scythe",
     "weapon-type": "Tomb",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Demon_Scythe.png",
+      "image-path": "/Demon_Scythe.png",
       "damage-type": "Magic",
       "damage": 35,
       "use-time": "Very Fast",
@@ -1749,12 +1749,12 @@
     }
   },
   {
-    "id": 104,
+    "id": 98,
     "name": "Desert Tiger Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Desert_Tiger_Staff.png",
+      "image-path": "/Desert_Tiger_Staff.png",
       "damage-type": "Summon",
       "damage": 41,
       "use-time": "Very Slow",
@@ -1767,12 +1767,12 @@
     }
   },
   {
-    "id": 105,
+    "id": 99,
     "name": "Diamond Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Diamond_Staff.png",
+      "image-path": "/Diamond_Staff.png",
       "damage-type": "Magic",
       "damage": 23,
       "use-time": "Average",
@@ -1785,12 +1785,12 @@
     }
   },
   {
-    "id": 107,
+    "id": 100,
     "name": "Drippler Crippler",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Drippler_Crippler.png",
+      "image-path": "/Drippler_Crippler.png",
       "damage-type": "Melee",
       "damage": 110,
       "use-time": "Very Slow",
@@ -1803,12 +1803,12 @@
     }
   },
   {
-    "id": 108,
+    "id": 101,
     "name": "Durendal",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Durendal.png",
+      "image-path": "/Durendal.png",
       "damage-type": "Summon",
       "damage": 55,
       "use-time": "Average",
@@ -1821,12 +1821,12 @@
     }
   },
   {
-    "id": 111,
+    "id": 102,
     "name": "Electrosphere Launcher",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Electrosphere_Launcher.png",
+      "image-path": "/Electrosphere_Launcher.png",
       "damage-type": "Ranged",
       "damage": 40,
       "use-time": "Very Fast",
@@ -1839,12 +1839,12 @@
     }
   },
   {
-    "id": 112,
+    "id": 103,
     "name": "Elf Melter",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Elf_Melter.png",
+      "image-path": "/Elf_Melter.png",
       "damage-type": "Ranged",
       "damage": 53,
       "use-time": "Average",
@@ -1857,12 +1857,12 @@
     }
   },
   {
-    "id": 113,
+    "id": 104,
     "name": "Emerald Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Emerald_Staff.png",
+      "image-path": "/Emerald_Staff.png",
       "damage-type": "Magic",
       "damage": 19,
       "use-time": "Slow",
@@ -1875,12 +1875,12 @@
     }
   },
   {
-    "id": 114,
+    "id": 105,
     "name": "Enchanted Boomerang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Enchanted_Boomerang.png",
+      "image-path": "/Enchanted_Boomerang.png",
       "damage-type": "Melee",
       "damage": 17,
       "use-time": "Very Fast",
@@ -1894,12 +1894,12 @@
     }
   },
   {
-    "id": 115,
+    "id": 106,
     "name": "Enchanted Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Enchanted_Sword.png",
+      "image-path": "/Enchanted_Sword.png",
       "damage-type": "Melee",
       "damage": 23,
       "use-time": "Fast",
@@ -1912,12 +1912,12 @@
     }
   },
   {
-    "id": 116,
+    "id": 107,
     "name": "Eventide",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Eventide.png",
+      "image-path": "/Eventide.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Average",
@@ -1930,12 +1930,12 @@
     }
   },
   {
-    "id": 117,
+    "id": 108,
     "name": "Excalibur",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Excalibur.png",
+      "image-path": "/Excalibur.png",
       "damage-type": "Melee",
       "damage": 72,
       "use-time": "Very Fast",
@@ -1948,12 +1948,12 @@
     }
   },
   {
-    "id": 118,
+    "id": 109,
     "name": "Exotic Scimitar",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Exotic_Scimitar.png",
+      "image-path": "/Exotic_Scimitar.png",
       "damage-type": "Melee",
       "damage": 20,
       "use-time": "Very Fast",
@@ -1966,12 +1966,12 @@
     }
   },
   {
-    "id": 119,
+    "id": 110,
     "name": "Explosive Trap Cane",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Explosive_Trap_Cane.png",
+      "image-path": "/Explosive_Trap_Cane.png",
       "damage-type": "Summon",
       "damage": 59,
       "use-time": "Average",
@@ -1985,12 +1985,12 @@
     }
   },
   {
-    "id": 120,
+    "id": 111,
     "name": "Explosive Trap Rod",
     "weapon-type": "Sentry",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Explosive_Trap_Rod.png",
+      "image-path": "/Explosive_Trap_Rod.png",
       "damage-type": "Summon",
       "damage": 24,
       "use-time": "Average",
@@ -2004,12 +2004,12 @@
     }
   },
   {
-    "id": 121,
+    "id": 112,
     "name": "Explosive Trap Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Explosive_Trap_Staff.png",
+      "image-path": "/Explosive_Trap_Staff.png",
       "damage-type": "Summon",
       "damage": 126,
       "use-time": "Average",
@@ -2023,12 +2023,12 @@
     }
   },
   {
-    "id": 122,
+    "id": 113,
     "name": "Falcon Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Falcon_Blade.png",
+      "image-path": "/Falcon_Blade.png",
       "damage-type": "Melee",
       "damage": 25,
       "use-time": "Very Fast",
@@ -2041,12 +2041,12 @@
     }
   },
   {
-    "id": 123,
+    "id": 114,
     "name": "Fetid Baghnakhs",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Fetid_Baghnakhs.png",
+      "image-path": "/Fetid_Baghnakhs.png",
       "damage-type": "Melee",
       "damage": 60,
       "use-time": "Insanely Fast",
@@ -2059,12 +2059,12 @@
     }
   },
   {
-    "id": 124,
+    "id": 115,
     "name": "Finch Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Finch_Staff.png",
+      "image-path": "/Finch_Staff.png",
       "damage-type": "Summon",
       "damage": 7,
       "use-time": "Very Slow",
@@ -2077,12 +2077,12 @@
     }
   },
   {
-    "id": 125,
+    "id": 116,
     "name": "Firecracker",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Firecracker.png",
+      "image-path": "/Firecracker.png",
       "damage-type": "Summon",
       "damage": 37,
       "use-time": "Average",
@@ -2095,12 +2095,12 @@
     }
   },
   {
-    "id": 126,
+    "id": 117,
     "name": "Flairon",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flairon.png",
+      "image-path": "/Flairon.png",
       "damage-type": "Melee",
       "damage": 66,
       "use-time": "Very Fast",
@@ -2113,12 +2113,12 @@
     }
   },
   {
-    "id": 127,
+    "id": 118,
     "name": "Flamarang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flamarang.png",
+      "image-path": "/Flamarang.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Very Fast",
@@ -2131,12 +2131,12 @@
     }
   },
   {
-    "id": 128,
+    "id": 119,
     "name": "Flameburst Cane",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flameburst_Cane.png",
+      "image-path": "/Flameburst_Cane.png",
       "damage-type": "Summon",
       "damage": 42,
       "use-time": "Average",
@@ -2150,12 +2150,12 @@
     }
   },
   {
-    "id": 129,
+    "id": 120,
     "name": "Flameburst Rod",
     "weapon-type": "Sentry",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flameburst_Rod.png",
+      "image-path": "/Flameburst_Rod.png",
       "damage-type": "Summon",
       "damage": 17,
       "use-time": "Average",
@@ -2169,12 +2169,12 @@
     }
   },
   {
-    "id": 130,
+    "id": 121,
     "name": "Flameburst Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flameburst_Staff.png",
+      "image-path": "/Flameburst_Staff.png",
       "damage-type": "Summon",
       "damage": 88,
       "use-time": "Average",
@@ -2188,12 +2188,12 @@
     }
   },
   {
-    "id": 131,
+    "id": 122,
     "name": "Flamelash",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flamelash.png",
+      "image-path": "/Flamelash.png",
       "damage-type": "Magic",
       "damage": 32,
       "use-time": "Average",
@@ -2206,12 +2206,12 @@
     }
   },
   {
-    "id": 132,
+    "id": 123,
     "name": "Flamethrower",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flamethrower.png",
+      "image-path": "/Flamethrower.png",
       "damage-type": "Ranged",
       "damage": 35,
       "use-time": "Average",
@@ -2224,12 +2224,12 @@
     }
   },
   {
-    "id": 133,
+    "id": 124,
     "name": "Flaming Mace",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flaming_Mace.png",
+      "image-path": "/Flaming_Mace.png",
       "damage-type": "Melee",
       "damage": 18,
       "use-time": "Very Slow",
@@ -2242,12 +2242,12 @@
     }
   },
   {
-    "id": 135,
+    "id": 125,
     "name": "Flintlock Pistol",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flintlock_Pistol.png",
+      "image-path": "/Flintlock_Pistol.png",
       "damage-type": "Ranged",
       "damage": 13,
       "use-time": "Very Fast",
@@ -2260,12 +2260,12 @@
     }
   },
   {
-    "id": 136,
+    "id": 126,
     "name": "Flinx Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flinx_Staff.png",
+      "image-path": "/Flinx_Staff.png",
       "damage-type": "Summon",
       "damage": 8,
       "use-time": "Very Slow",
@@ -2278,12 +2278,12 @@
     }
   },
   {
-    "id": 137,
+    "id": 127,
     "name": "Flower of Fire",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flower_of_Fire.png",
+      "image-path": "/Flower_of_Fire.png",
       "damage-type": "Magic",
       "damage": 48,
       "use-time": "Very Fast",
@@ -2296,12 +2296,12 @@
     }
   },
   {
-    "id": 138,
+    "id": 128,
     "name": "Flower of Frost",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flower_of_Frost.png",
+      "image-path": "/Flower_of_Frost.png",
       "damage-type": "Magic",
       "damage": 60,
       "use-time": "Very Fast",
@@ -2314,12 +2314,12 @@
     }
   },
   {
-    "id": 139,
+    "id": 129,
     "name": "Flower Pow",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flower_Pow.png",
+      "image-path": "/Flower_Pow.png",
       "damage-type": "Melee",
       "damage": 130,
       "use-time": "Very Slow",
@@ -2332,12 +2332,12 @@
     }
   },
   {
-    "id": 140,
+    "id": 130,
     "name": "Flying Dragon",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flying_Dragon.png",
+      "image-path": "/Flying_Dragon.png",
       "damage-type": "Melee",
       "damage": 180,
       "use-time": "Very Fast",
@@ -2350,12 +2350,12 @@
     }
   },
   {
-    "id": 141,
+    "id": 131,
     "name": "Flying Knife",
     "weapon-type": "Throwable",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Flying_Knife.png",
+      "image-path": "/Flying_Knife.png",
       "damage-type": "Melee",
       "damage": 40,
       "use-time": "Very Fast",
@@ -2368,12 +2368,12 @@
     }
   },
   {
-    "id": 142,
+    "id": 132,
     "name": "Flymeal",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Flymeal.png",
+      "image-path": "/Flymeal.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Very Fast",
@@ -2386,12 +2386,12 @@
     }
   },
   {
-    "id": 143,
+    "id": 133,
     "name": "Format:C",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Format:C.png",
+      "image-path": "/Format:C.png",
       "damage-type": "Melee",
       "damage": 39,
       "use-time": "Fast",
@@ -2404,12 +2404,12 @@
     }
   },
   {
-    "id": 144,
+    "id": 134,
     "name": "Frost Daggerfish",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Frost_Daggerfish.png",
+      "image-path": "/Frost_Daggerfish.png",
       "damage-type": "Throwing",
       "damage": 17,
       "use-time": "Very Fast",
@@ -2422,12 +2422,12 @@
     }
   },
   {
-    "id": 145,
+    "id": 135,
     "name": "Frost Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Frost_Staff.png",
+      "image-path": "/Frost_Staff.png",
       "damage-type": "Magic",
       "damage": 46,
       "use-time": "Very Fast",
@@ -2440,12 +2440,12 @@
     }
   },
   {
-    "id": 146,
+    "id": 136,
     "name": "Frostbrand",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Frostbrand.png",
+      "image-path": "/Frostbrand.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Fast",
@@ -2458,12 +2458,12 @@
     }
   },
   {
-    "id": 147,
+    "id": 137,
     "name": "Fruitcake Chakram",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Fruitcake_Chakram.png",
+      "image-path": "/Fruitcake_Chakram.png",
       "damage-type": "Melee",
       "damage": 19,
       "use-time": "Very Fast",
@@ -2476,12 +2476,12 @@
     }
   },
   {
-    "id": 148,
+    "id": 138,
     "name": "Gatligator",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Gatligator.png",
+      "image-path": "/Gatligator.png",
       "damage-type": "Ranged",
       "damage": 21,
       "use-time": "Insanely Fast",
@@ -2494,12 +2494,12 @@
     }
   },
   {
-    "id": 149,
+    "id": 139,
     "name": "Ghastly Glaive",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ghastly_Glaive.png",
+      "image-path": "/Ghastly_Glaive.png",
       "damage-type": "Melee",
       "damage": 45,
       "use-time": "Average",
@@ -2512,12 +2512,12 @@
     }
   },
   {
-    "id": 150,
+    "id": 140,
     "name": "Gladius",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Gladius.png",
+      "image-path": "/Gladius.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Fast",
@@ -2530,12 +2530,12 @@
     }
   },
   {
-    "id": 151,
+    "id": 141,
     "name": "Gold Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Gold_Bow.png",
+      "image-path": "/Gold_Bow.png",
       "damage-type": "Ranged",
       "damage": 11,
       "use-time": "Average",
@@ -2548,12 +2548,12 @@
     }
   },
   {
-    "id": 152,
+    "id": 142,
     "name": "Gold Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Gold_Broadsword.png",
+      "image-path": "/Gold_Broadsword.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Very Fast",
@@ -2566,12 +2566,12 @@
     }
   },
   {
-    "id": 153,
+    "id": 143,
     "name": "Gold Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Gold_Shortsword.png",
+      "image-path": "/Gold_Shortsword.png",
       "damage-type": "Melee",
       "damage": 12,
       "use-time": "Very Fast",
@@ -2584,12 +2584,12 @@
     }
   },
   {
-    "id": 154,
+    "id": 144,
     "name": "Golden Shower",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Golden_Shower.png",
+      "image-path": "/Golden_Shower.png",
       "damage-type": "Magic",
       "damage": 30,
       "use-time": "Very Fast",
@@ -2602,12 +2602,12 @@
     }
   },
   {
-    "id": 155,
+    "id": 145,
     "name": "Golem Fist",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Golem_Fist.png",
+      "image-path": "/Golem_Fist.png",
       "damage-type": "Melee",
       "damage": 90,
       "use-time": "Fast",
@@ -2620,12 +2620,12 @@
     }
   },
   {
-    "id": 156,
+    "id": 146,
     "name": "Gradient",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Gradient.png",
+      "image-path": "/Gradient.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Fast",
@@ -2638,12 +2638,12 @@
     }
   },
   {
-    "id": 157,
+    "id": 147,
     "name": "Gray Zapinator",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Gray_Zapinator.png",
+      "image-path": "/Gray_Zapinator.png",
       "damage-type": "Magic",
       "damage": 42,
       "use-time": "Very Slow",
@@ -2656,12 +2656,12 @@
     }
   },
   {
-    "id": 160,
+    "id": 148,
     "name": "Grenade",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Grenade.png",
+      "image-path": "/Grenade.png",
       "damage-type": "Throwing",
       "damage": 60,
       "use-time": "Very Slow",
@@ -2675,12 +2675,12 @@
     }
   },
   {
-    "id": 161,
+    "id": 149,
     "name": "Grenade Launcher",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Grenade_Launcher.png",
+      "image-path": "/Grenade_Launcher.png",
       "damage-type": "Ranged",
       "damage": 60,
       "use-time": "Very Fast",
@@ -2693,12 +2693,12 @@
     }
   },
   {
-    "id": 162,
+    "id": 150,
     "name": "Gungnir",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Gungnir.png",
+      "image-path": "/Gungnir.png",
       "damage-type": "Melee",
       "damage": 61,
       "use-time": "Fast",
@@ -2711,12 +2711,12 @@
     }
   },
   {
-    "id": 163,
+    "id": 151,
     "name": "Hallowed Jousting Lance",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Hallowed_Jousting_Lance.png",
+      "image-path": "/Hallowed_Jousting_Lance.png",
       "damage-type": "Melee",
       "damage": 90,
       "use-time": "Fast",
@@ -2729,12 +2729,12 @@
     }
   },
   {
-    "id": 164,
+    "id": 152,
     "name": "Hallowed Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Hallowed_Repeater.png",
+      "image-path": "/Hallowed_Repeater.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Very Fast",
@@ -2747,12 +2747,12 @@
     }
   },
   {
-    "id": 165,
+    "id": 153,
     "name": "Ham Bat",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ham_Bat.png",
+      "image-path": "/Ham_Bat.png",
       "damage-type": "Melee",
       "damage": 57,
       "use-time": "Very Fast",
@@ -2765,12 +2765,12 @@
     }
   },
   {
-    "id": 166,
+    "id": 154,
     "name": "Hammush",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Hammush.png",
+      "image-path": "/Hammush.png",
       "damage-type": "Melee",
       "damage": 26,
       "use-time": "Average",
@@ -2783,12 +2783,12 @@
     }
   },
   {
-    "id": 167,
+    "id": 155,
     "name": "Handgun",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Handgun.png",
+      "image-path": "/Handgun.png",
       "damage-type": "Ranged",
       "damage": 26,
       "use-time": "Very Fast",
@@ -2801,12 +2801,12 @@
     }
   },
   {
-    "id": 169,
+    "id": 156,
     "name": "Harpoon",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Harpoon.png",
+      "image-path": "/Harpoon.png",
       "damage-type": "Ranged",
       "damage": 25,
       "use-time": "Average",
@@ -2819,12 +2819,12 @@
     }
   },
   {
-    "id": 170,
+    "id": 157,
     "name": "Heat Ray",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Heat_Ray.png",
+      "image-path": "/Heat_Ray.png",
       "damage-type": "Magic",
       "damage": 90,
       "use-time": "Very Fast",
@@ -2837,12 +2837,12 @@
     }
   },
   {
-    "id": 171,
+    "id": 158,
     "name": "Hel-Fire",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Hel-Fire.png",
+      "image-path": "/Hel-Fire.png",
       "damage-type": "Melee",
       "damage": 41,
       "use-time": "Fast",
@@ -2855,12 +2855,12 @@
     }
   },
   {
-    "id": 172,
+    "id": 159,
     "name": "Hellwing Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Hellwing_Bow.png",
+      "image-path": "/Hellwing_Bow.png",
       "damage-type": "Ranged",
       "damage": 22,
       "use-time": "Very Fast",
@@ -2873,12 +2873,12 @@
     }
   },
   {
-    "id": 173,
+    "id": 160,
     "name": "Hive-Five",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Hive-Five.png",
+      "image-path": "/Hive-Five.png",
       "damage-type": "Melee",
       "damage": 24,
       "use-time": "Fast",
@@ -2891,12 +2891,12 @@
     }
   },
   {
-    "id": 174,
+    "id": 161,
     "name": "Hornet Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Hornet_Staff.png",
+      "image-path": "/Hornet_Staff.png",
       "damage-type": "Summon",
       "damage": 12,
       "use-time": "Fast",
@@ -2909,12 +2909,12 @@
     }
   },
   {
-    "id": 175,
+    "id": 162,
     "name": "Houndius Shootius",
     "weapon-type": "Sentry",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Houndius_Shootius.png",
+      "image-path": "/Houndius_Shootius.png",
       "damage-type": "Summon",
       "damage": 24,
       "use-time": "Average",
@@ -2927,12 +2927,12 @@
     }
   },
   {
-    "id": 176,
+    "id": 163,
     "name": "Ice Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ice_Blade.png",
+      "image-path": "/Ice_Blade.png",
       "damage-type": "Melee",
       "damage": 17,
       "use-time": "Very Fast",
@@ -2945,12 +2945,12 @@
     }
   },
   {
-    "id": 177,
+    "id": 164,
     "name": "Ice Boomerang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ice_Boomerang.png",
+      "image-path": "/Ice_Boomerang.png",
       "damage-type": "Melee",
       "damage": 21,
       "use-time": "Very Fast",
@@ -2963,12 +2963,12 @@
     }
   },
   {
-    "id": 178,
+    "id": 165,
     "name": "Ice Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ice_Bow.png",
+      "image-path": "/Ice_Bow.png",
       "damage-type": "Ranged",
       "damage": 39,
       "use-time": "Very Fast",
@@ -2981,12 +2981,12 @@
     }
   },
   {
-    "id": 179,
+    "id": 166,
     "name": "Ice Rod",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ice_Rod.png",
+      "image-path": "/Ice_Rod.png",
       "damage-type": "Magic",
       "damage": 28,
       "use-time": "Very Fast",
@@ -2999,12 +2999,12 @@
     }
   },
   {
-    "id": 180,
+    "id": 167,
     "name": "Ice Sickle",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Ice_Sickle.png",
+      "image-path": "/Ice_Sickle.png",
       "damage-type": "Melee",
       "damage": 50,
       "use-time": "Fast",
@@ -3017,12 +3017,12 @@
     }
   },
   {
-    "id": 181,
+    "id": 168,
     "name": "Imp Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Imp_Staff.png",
+      "image-path": "/Imp_Staff.png",
       "damage-type": "Summon",
       "damage": 17,
       "use-time": "Very Slow",
@@ -3035,12 +3035,12 @@
     }
   },
   {
-    "id": 182,
+    "id": 169,
     "name": "Inferno Fork",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Inferno_Fork.png",
+      "image-path": "/Inferno_Fork.png",
       "damage-type": "Magic",
       "damage": 70,
       "use-time": "Average",
@@ -3053,12 +3053,12 @@
     }
   },
   {
-    "id": 183,
+    "id": 170,
     "name": "Influx Waver",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Influx_Waver.png",
+      "image-path": "/Influx_Waver.png",
       "damage-type": "Melee",
       "damage": 100,
       "use-time": "Very Fast",
@@ -3071,12 +3071,12 @@
     }
   },
   {
-    "id": 184,
+    "id": 171,
     "name": "Iron Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Iron_Bow.png",
+      "image-path": "/Iron_Bow.png",
       "damage-type": "Ranged",
       "damage": 8,
       "use-time": "Average",
@@ -3089,12 +3089,12 @@
     }
   },
   {
-    "id": 185,
+    "id": 172,
     "name": "Iron Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Iron_Broadsword.png",
+      "image-path": "/Iron_Broadsword.png",
       "damage-type": "Melee",
       "damage": 12,
       "use-time": "Very Fast",
@@ -3107,12 +3107,12 @@
     }
   },
   {
-    "id": 186,
+    "id": 173,
     "name": "Iron Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Iron_Shortsword.png",
+      "image-path": "/Iron_Shortsword.png",
       "damage-type": "Melee",
       "damage": 8,
       "use-time": "Very Fast",
@@ -3125,12 +3125,12 @@
     }
   },
   {
-    "id": 187,
+    "id": 174,
     "name": "Jack 'O Lantern Launcher",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Jack_O_Lantern_Launcher.png",
+      "image-path": "/Jack_O_Lantern_Launcher.png",
       "damage-type": "Ranged",
       "damage": 65,
       "use-time": "Fast",
@@ -3143,12 +3143,12 @@
     }
   },
   {
-    "id": 188,
+    "id": 175,
     "name": "Javelin",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Javelin.png",
+      "image-path": "/Javelin.png",
       "damage-type": "Throwing",
       "damage": 17,
       "use-time": "Fast",
@@ -3161,12 +3161,12 @@
     }
   },
   {
-    "id": 189,
+    "id": 176,
     "name": "Jousting Lance",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Jousting_Lance.png",
+      "image-path": "/Jousting_Lance.png",
       "damage-type": "Melee",
       "damage": 60,
       "use-time": "Fast",
@@ -3179,12 +3179,12 @@
     }
   },
   {
-    "id": 190,
+    "id": 177,
     "name": "Kaleidoscope",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Kaleidoscope.png",
+      "image-path": "/Kaleidoscope.png",
       "damage-type": "Summon",
       "damage": 180,
       "use-time": "Average",
@@ -3197,12 +3197,12 @@
     }
   },
   {
-    "id": 191,
+    "id": 178,
     "name": "Katana",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Katana.png",
+      "image-path": "/Katana.png",
       "damage-type": "Melee",
       "damage": 18,
       "use-time": "Very Fast",
@@ -3215,12 +3215,12 @@
     }
   },
   {
-    "id": 192,
+    "id": 179,
     "name": "Keybrand",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Keybrand.png",
+      "image-path": "/Keybrand.png",
       "damage-type": "Melee",
       "damage": 105,
       "use-time": "Very Fast",
@@ -3233,12 +3233,12 @@
     }
   },
   {
-    "id": 193,
+    "id": 180,
     "name": "KO Cannon",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/KO_Cannon.png",
+      "image-path": "/KO_Cannon.png",
       "damage-type": "Melee",
       "damage": 40,
       "use-time": "Average",
@@ -3251,12 +3251,12 @@
     }
   },
   {
-    "id": 194,
+    "id": 181,
     "name": "Kraken",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Kraken.png",
+      "image-path": "/Kraken.png",
       "damage-type": "Melee",
       "damage": 95,
       "use-time": "Fast",
@@ -3269,12 +3269,12 @@
     }
   },
   {
-    "id": 195,
+    "id": 182,
     "name": "Laser Machinegun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Laser_Machinegun.png",
+      "image-path": "/Laser_Machinegun.png",
       "damage-type": "Magic",
       "damage": 60,
       "use-time": "Very Fast",
@@ -3287,12 +3287,12 @@
     }
   },
   {
-    "id": 196,
+    "id": 183,
     "name": "Laser Rifle",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Laser_Rifle.png",
+      "image-path": "/Laser_Rifle.png",
       "damage-type": "Magic",
       "damage": 29,
       "use-time": "Very Fast",
@@ -3305,12 +3305,12 @@
     }
   },
   {
-    "id": 197,
+    "id": 184,
     "name": "Last Prism",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Last_Prism.png",
+      "image-path": "/Last_Prism.png",
       "damage-type": "Magic",
       "damage": 100,
       "use-time": "Very Fast",
@@ -3323,12 +3323,12 @@
     }
   },
   {
-    "id": 198,
+    "id": 185,
     "name": "Lead Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Lead_Bow.png",
+      "image-path": "/Lead_Bow.png",
       "damage-type": "Ranged",
       "damage": 9,
       "use-time": "Average",
@@ -3341,12 +3341,12 @@
     }
   },
   {
-    "id": 199,
+    "id": 186,
     "name": "Lead Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Lead_Broadsword.png",
+      "image-path": "/Lead_Broadsword.png",
       "damage-type": "Melee",
       "damage": 13,
       "use-time": "Very Fast",
@@ -3359,12 +3359,12 @@
     }
   },
   {
-    "id": 200,
+    "id": 187,
     "name": "Lead Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Lead_Shortsword.png",
+      "image-path": "/Lead_Shortsword.png",
       "damage-type": "Melee",
       "damage": 9,
       "use-time": "Very Fast",
@@ -3377,12 +3377,12 @@
     }
   },
   {
-    "id": 201,
+    "id": 188,
     "name": "Leaf Blower",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Leaf_Blower.png",
+      "image-path": "/Leaf_Blower.png",
       "damage-type": "Magic",
       "damage": 48,
       "use-time": "Insanely Fast",
@@ -3395,12 +3395,12 @@
     }
   },
   {
-    "id": 202,
+    "id": 189,
     "name": "Leather Whip",
     "weapon-type": "Whip",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Leather_Whip.png",
+      "image-path": "/Leather_Whip.png",
       "damage-type": "Summon",
       "damage": 14,
       "use-time": "Average",
@@ -3413,12 +3413,12 @@
     }
   },
   {
-    "id": 203,
+    "id": 190,
     "name": "Life Drain",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Life_Drain.png",
+      "image-path": "/Life_Drain.png",
       "damage-type": "Magic",
       "damage": 35,
       "use-time": "Very Fast",
@@ -3431,12 +3431,12 @@
     }
   },
   {
-    "id": 204,
+    "id": 191,
     "name": "Light Disc",
     "weapon-type": "Boomerang",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Light_Disc.png",
+      "image-path": "/Light_Disc.png",
       "damage-type": "Melee",
       "damage": 60,
       "use-time": "Very Fast",
@@ -3449,12 +3449,12 @@
     }
   },
   {
-    "id": 205,
+    "id": 192,
     "name": "Light's Bane",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Lights_Bane.png",
+      "image-path": "/Lights_Bane.png",
       "damage-type": "Melee",
       "damage": 16,
       "use-time": "Very Fast",
@@ -3467,12 +3467,12 @@
     }
   },
   {
-    "id": 206,
+    "id": 193,
     "name": "Lightning Aura Cane",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Lightning_Aura_Cane.png",
+      "image-path": "/Lightning_Aura_Cane.png",
       "damage-type": "Summon",
       "damage": 11,
       "use-time": "Average",
@@ -3486,12 +3486,12 @@
     }
   },
   {
-    "id": 207,
+    "id": 194,
     "name": "Lightning Aura Rod",
     "weapon-type": "Sentry",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Lightning_Aura_Rod.png",
+      "image-path": "/Lightning_Aura_Rod.png",
       "damage-type": "Summon",
       "damage": 4,
       "use-time": "Average",
@@ -3505,12 +3505,12 @@
     }
   },
   {
-    "id": 208,
+    "id": 195,
     "name": "Lightning Aura Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Lightning_Aura_Staff.png",
+      "image-path": "/Lightning_Aura_Staff.png",
       "damage-type": "Summon",
       "damage": 34,
       "use-time": "Average",
@@ -3524,12 +3524,12 @@
     }
   },
   {
-    "id": 209,
+    "id": 196,
     "name": "Lunar Flare",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Lunar_Flare.png",
+      "image-path": "/Lunar_Flare.png",
       "damage-type": "Magic",
       "damage": 100,
       "use-time": "Very Fast",
@@ -3542,12 +3542,12 @@
     }
   },
   {
-    "id": 210,
+    "id": 197,
     "name": "Lunar Portal Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Lunar_Portal_Staff.png",
+      "image-path": "/Lunar_Portal_Staff.png",
       "damage-type": "Summon",
       "damage": 100,
       "use-time": "Average",
@@ -3560,12 +3560,12 @@
     }
   },
   {
-    "id": 211,
+    "id": 198,
     "name": "Mace",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Mace.png",
+      "image-path": "/Mace.png",
       "damage-type": "Melee",
       "damage": 18,
       "use-time": "Very Slow",
@@ -3578,12 +3578,12 @@
     }
   },
   {
-    "id": 212,
+    "id": 199,
     "name": "Magic Dagger",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Magic_Dagger.png",
+      "image-path": "/Magic_Dagger.png",
       "damage-type": "Magic",
       "damage": 35,
       "use-time": "Insanely Fast",
@@ -3596,12 +3596,12 @@
     }
   },
   {
-    "id": 213,
+    "id": 200,
     "name": "Magic Missile",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Magic_Missile.png",
+      "image-path": "/Magic_Missile.png",
       "damage-type": "Magic",
       "damage": 35,
       "use-time": "Fast",
@@ -3614,12 +3614,12 @@
     }
   },
   {
-    "id": 214,
+    "id": 201,
     "name": "Magical Harp",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Magical_Harp.png",
+      "image-path": "/Magical_Harp.png",
       "damage-type": "Magic",
       "damage": 42,
       "use-time": "Very Fast",
@@ -3632,12 +3632,12 @@
     }
   },
   {
-    "id": 215,
+    "id": 202,
     "name": "Magnet Sphere",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Magnet_Sphere.png",
+      "image-path": "/Magnet_Sphere.png",
       "damage-type": "Magic",
       "damage": 48,
       "use-time": "Very Fast",
@@ -3650,12 +3650,12 @@
     }
   },
   {
-    "id": 216,
+    "id": 203,
     "name": "Malaise",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Malaise.png",
+      "image-path": "/Malaise.png",
       "damage-type": "Melee",
       "damage": 16,
       "use-time": "Fast",
@@ -3668,12 +3668,12 @@
     }
   },
   {
-    "id": 217,
+    "id": 204,
     "name": "Mandible Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Mandible_Blade.png",
+      "image-path": "/Mandible_Blade.png",
       "damage-type": "Melee",
       "damage": 16,
       "use-time": "Very Fast",
@@ -3686,12 +3686,12 @@
     }
   },
   {
-    "id": 218,
+    "id": 205,
     "name": "Marrow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Marrow.png",
+      "image-path": "/Marrow.png",
       "damage-type": "Ranged",
       "damage": 53,
       "use-time": "Very Fast",
@@ -3704,12 +3704,12 @@
     }
   },
   {
-    "id": 219,
+    "id": 206,
     "name": "Medusa Head",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Medusa_Head.png",
+      "image-path": "/Medusa_Head.png",
       "damage-type": "Magic",
       "damage": 40,
       "use-time": "Very Fast",
@@ -3722,12 +3722,12 @@
     }
   },
   {
-    "id": 220,
+    "id": 207,
     "name": "Megashark",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Megashark.png",
+      "image-path": "/Megashark.png",
       "damage-type": "Ranged",
       "damage": 25,
       "use-time": "Insanely Fast",
@@ -3740,12 +3740,12 @@
     }
   },
   {
-    "id": 221,
+    "id": 208,
     "name": "Meowmere",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Meowmere.png",
+      "image-path": "/Meowmere.png",
       "damage-type": "Melee",
       "damage": 200,
       "use-time": "Very Fast",
@@ -3758,12 +3758,12 @@
     }
   },
   {
-    "id": 222,
+    "id": 209,
     "name": "Meteor Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Meteor_Staff.png",
+      "image-path": "/Meteor_Staff.png",
       "damage-type": "Magic",
       "damage": 50,
       "use-time": "Very Fast",
@@ -3776,12 +3776,12 @@
     }
   },
   {
-    "id": 223,
+    "id": 210,
     "name": "Minishark",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Minishark.png",
+      "image-path": "/Minishark.png",
       "damage-type": "Ranged",
       "damage": 6,
       "use-time": "Insanely Fast",
@@ -3794,12 +3794,12 @@
     }
   },
   {
-    "id": 224,
+    "id": 211,
     "name": "Molotov Cocktail",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Molotov_Cocktail.png",
+      "image-path": "/Molotov_Cocktail.png",
       "damage-type": "Throwing",
       "damage": 23,
       "use-time": "Very Slow",
@@ -3812,12 +3812,12 @@
     }
   },
   {
-    "id": 225,
+    "id": 212,
     "name": "Molten Fury",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Molten_Fury.png",
+      "image-path": "/Molten_Fury.png",
       "damage-type": "Ranged",
       "damage": 31,
       "use-time": "Fast",
@@ -3830,12 +3830,12 @@
     }
   },
   {
-    "id": 226,
+    "id": 213,
     "name": "Morning Star",
     "weapon-type": "Whip",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Morning_Star.png",
+      "image-path": "/Morning_Star.png",
       "damage-type": "Summon",
       "damage": 165,
       "use-time": "Slow",
@@ -3848,12 +3848,12 @@
     }
   },
   {
-    "id": 227,
+    "id": 214,
     "name": "Muramasa",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Muramasa.png",
+      "image-path": "/Muramasa.png",
       "damage-type": "Melee",
       "damage": 24,
       "use-time": "Very Fast",
@@ -3866,12 +3866,12 @@
     }
   },
   {
-    "id": 228,
+    "id": 215,
     "name": "Mushroom Spear",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Mushroom_Spear.png",
+      "image-path": "/Mushroom_Spear.png",
       "damage-type": "Melee",
       "damage": 60,
       "use-time": "Very Slow",
@@ -3884,12 +3884,12 @@
     }
   },
   {
-    "id": 229,
+    "id": 216,
     "name": "Musket",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Musket.png",
+      "image-path": "/Musket.png",
       "damage-type": "Ranged",
       "damage": 31,
       "use-time": "Slow",
@@ -3902,12 +3902,12 @@
     }
   },
   {
-    "id": 230,
+    "id": 217,
     "name": "Mythril Halberd",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Mythril_Halberd.png",
+      "image-path": "/Mythril_Halberd.png",
       "damage-type": "Melee",
       "damage": 45,
       "use-time": "Average",
@@ -3920,12 +3920,12 @@
     }
   },
   {
-    "id": 231,
+    "id": 218,
     "name": "Mythril Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Mythril_Repeater.png",
+      "image-path": "/Mythril_Repeater.png",
       "damage-type": "Ranged",
       "damage": 39,
       "use-time": "Very Fast",
@@ -3938,12 +3938,12 @@
     }
   },
   {
-    "id": 232,
+    "id": 219,
     "name": "Mythril Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Mythril_Sword.png",
+      "image-path": "/Mythril_Sword.png",
       "damage-type": "Melee",
       "damage": 50,
       "use-time": "Very Fast",
@@ -3956,12 +3956,12 @@
     }
   },
   {
-    "id": 233,
+    "id": 220,
     "name": "Nail Gun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nail_Gun.png",
+      "image-path": "/Nail_Gun.png",
       "damage-type": "Ranged",
       "damage": 85,
       "use-time": "Very Fast",
@@ -3974,12 +3974,12 @@
     }
   },
   {
-    "id": 234,
+    "id": 221,
     "name": "Nebula Arcanum",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nebula_Arcanum.png",
+      "image-path": "/Nebula_Arcanum.png",
       "damage-type": "Magic",
       "damage": 70,
       "use-time": "Average",
@@ -3992,12 +3992,12 @@
     }
   },
   {
-    "id": 235,
+    "id": 222,
     "name": "Nebula Blaze",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nebula_Blaze.png",
+      "image-path": "/Nebula_Blaze.png",
       "damage-type": "Magic",
       "damage": 130,
       "use-time": "Very Fast",
@@ -4010,12 +4010,12 @@
     }
   },
   {
-    "id": 236,
+    "id": 223,
     "name": "Nettle Burst",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nettle_Burst.png",
+      "image-path": "/Nettle_Burst.png",
       "damage-type": "Magic",
       "damage": 35,
       "use-time": "Fast",
@@ -4028,12 +4028,12 @@
     }
   },
   {
-    "id": 237,
+    "id": 224,
     "name": "Night's Edge",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Nights_Edge.png",
+      "image-path": "/Nights_Edge.png",
       "damage-type": "Melee",
       "damage": 40,
       "use-time": "Fast",
@@ -4046,12 +4046,12 @@
     }
   },
   {
-    "id": 238,
+    "id": 225,
     "name": "Nightglow",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nightglow.png",
+      "image-path": "/Nightglow.png",
       "damage-type": "Magic",
       "damage": 50,
       "use-time": "Very Slow",
@@ -4064,12 +4064,12 @@
     }
   },
   {
-    "id": 239,
+    "id": 226,
     "name": "Nimbus Rod",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Nimbus_Rod.png",
+      "image-path": "/Nimbus_Rod.png",
       "damage-type": "Magic",
       "damage": 30,
       "use-time": "Fast",
@@ -4082,12 +4082,12 @@
     }
   },
   {
-    "id": 240,
+    "id": 227,
     "name": "North Pole",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/North_Pole.png",
+      "image-path": "/North_Pole.png",
       "damage-type": "Melee",
       "damage": 80,
       "use-time": "Average",
@@ -4100,12 +4100,12 @@
     }
   },
   {
-    "id": 241,
+    "id": 228,
     "name": "Obsidian Swordfish",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Obsidian_Swordfish.png",
+      "image-path": "/Obsidian_Swordfish.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Very Fast",
@@ -4118,12 +4118,12 @@
     }
   },
   {
-    "id": 242,
+    "id": 229,
     "name": "Onyx Blaster",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Onyx_Blaster.png",
+      "image-path": "/Onyx_Blaster.png",
       "damage-type": "Ranged",
       "damage": 24,
       "use-time": "Extremely Slow",
@@ -4136,12 +4136,12 @@
     }
   },
   {
-    "id": 243,
+    "id": 230,
     "name": "Optic Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Optic_Staff.png",
+      "image-path": "/Optic_Staff.png",
       "damage-type": "Summon",
       "damage": 24,
       "use-time": "Very Slow",
@@ -4154,12 +4154,12 @@
     }
   },
   {
-    "id": 246,
+    "id": 231,
     "name": "Orange Zapinator",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Orange_Zapinator.png",
+      "image-path": "/Orange_Zapinator.png",
       "damage-type": "Magic",
       "damage": 100,
       "use-time": "Very Slow",
@@ -4172,12 +4172,12 @@
     }
   },
   {
-    "id": 247,
+    "id": 232,
     "name": "Orichalcum Halberd",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Orichalcum_Halberd.png",
+      "image-path": "/Orichalcum_Halberd.png",
       "damage-type": "Melee",
       "damage": 46,
       "use-time": "Fast",
@@ -4190,12 +4190,12 @@
     }
   },
   {
-    "id": 248,
+    "id": 233,
     "name": "Orichalcum Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Orichalcum_Repeater.png",
+      "image-path": "/Orichalcum_Repeater.png",
       "damage-type": "Ranged",
       "damage": 40,
       "use-time": "Very Fast",
@@ -4208,12 +4208,12 @@
     }
   },
   {
-    "id": 249,
+    "id": 234,
     "name": "Orichalcum Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Orichalcum_Sword.png",
+      "image-path": "/Orichalcum_Sword.png",
       "damage-type": "Melee",
       "damage": 59,
       "use-time": "Fast",
@@ -4226,12 +4226,12 @@
     }
   },
   {
-    "id": 250,
+    "id": 235,
     "name": "Paintball Gun",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Paintball_Gun.png",
+      "image-path": "/Paintball_Gun.png",
       "damage-type": "Ranged",
       "damage": 12,
       "use-time": "Fast",
@@ -4244,12 +4244,12 @@
     }
   },
   {
-    "id": 251,
+    "id": 236,
     "name": "Palladium Pike",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Palladium_Pike.png",
+      "image-path": "/Palladium_Pike.png",
       "damage-type": "Melee",
       "damage": 44,
       "use-time": "Average",
@@ -4262,12 +4262,12 @@
     }
   },
   {
-    "id": 252,
+    "id": 237,
     "name": "Palladium Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Palladium_Repeater.png",
+      "image-path": "/Palladium_Repeater.png",
       "damage-type": "Ranged",
       "damage": 37,
       "use-time": "Fast",
@@ -4280,12 +4280,12 @@
     }
   },
   {
-    "id": 253,
+    "id": 238,
     "name": "Palladium Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Palladium_Sword.png",
+      "image-path": "/Palladium_Sword.png",
       "damage-type": "Melee",
       "damage": 49,
       "use-time": "Fast",
@@ -4298,12 +4298,12 @@
     }
   },
   {
-    "id": 256,
+    "id": 239,
     "name": "Paper Airplane",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Paper_Airplane.png",
+      "image-path": "/Paper_Airplane.png",
       "damage-type": "Ranged",
       "damage": 4,
       "use-time": "Very Fast",
@@ -4316,12 +4316,12 @@
     }
   },
   {
-    "id": 259,
+    "id": 240,
     "name": "Pew-matic Horn",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Pew-matic_Horn.png",
+      "image-path": "/Pew-matic_Horn.png",
       "damage-type": "Ranged",
       "damage": 20,
       "use-time": "Very Fast",
@@ -4334,12 +4334,12 @@
     }
   },
   {
-    "id": 260,
+    "id": 241,
     "name": "Phantasm",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Phantasm.png",
+      "image-path": "/Phantasm.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Very Fast",
@@ -4352,12 +4352,12 @@
     }
   },
   {
-    "id": 261,
+    "id": 242,
     "name": "Phantom Phoenix",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Phantom_Phoenix.png",
+      "image-path": "/Phantom_Phoenix.png",
       "damage-type": "Ranged",
       "damage": 32,
       "use-time": "Very Fast",
@@ -4370,12 +4370,12 @@
     }
   },
   {
-    "id": 262,
+    "id": 243,
     "name": "Phoenix Blaster",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Phoenix_Blaster.png",
+      "image-path": "/Phoenix_Blaster.png",
       "damage-type": "Ranged",
       "damage": 30,
       "use-time": "Very Fast",
@@ -4388,12 +4388,12 @@
     }
   },
   {
-    "id": 263,
+    "id": 244,
     "name": "Piranha Gun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Piranha_Gun.png",
+      "image-path": "/Piranha_Gun.png",
       "damage-type": "Ranged",
       "damage": 38,
       "use-time": "Average",
@@ -4406,12 +4406,12 @@
     }
   },
   {
-    "id": 264,
+    "id": 245,
     "name": "Pirate Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Pirate_Staff.png",
+      "image-path": "/Pirate_Staff.png",
       "damage-type": "Summon",
       "damage": 40,
       "use-time": "Very Slow",
@@ -4424,12 +4424,12 @@
     }
   },
   {
-    "id": 265,
+    "id": 246,
     "name": "Platinum Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Platinum_Bow.png",
+      "image-path": "/Platinum_Bow.png",
       "damage-type": "Ranged",
       "damage": 13,
       "use-time": "Fast",
@@ -4442,12 +4442,12 @@
     }
   },
   {
-    "id": 266,
+    "id": 247,
     "name": "Platinum Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Platinum_Broadsword.png",
+      "image-path": "/Platinum_Broadsword.png",
       "damage-type": "Melee",
       "damage": 16,
       "use-time": "Very Fast",
@@ -4460,12 +4460,12 @@
     }
   },
   {
-    "id": 267,
+    "id": 248,
     "name": "Platinum Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Platinum_Shortsword.png",
+      "image-path": "/Platinum_Shortsword.png",
       "damage-type": "Melee",
       "damage": 13,
       "use-time": "Very Fast",
@@ -4478,12 +4478,12 @@
     }
   },
   {
-    "id": 268,
+    "id": 249,
     "name": "Poison Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Poison_Staff.png",
+      "image-path": "/Poison_Staff.png",
       "damage-type": "Magic",
       "damage": 43,
       "use-time": "Very Slow",
@@ -4496,12 +4496,12 @@
     }
   },
   {
-    "id": 269,
+    "id": 250,
     "name": "Poisoned Knife",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Poisoned_Knife.png",
+      "image-path": "/Poisoned_Knife.png",
       "damage-type": "Throwing",
       "damage": 14,
       "use-time": "Very Fast",
@@ -4514,12 +4514,12 @@
     }
   },
   {
-    "id": 270,
+    "id": 251,
     "name": "Possessed Hatchet",
     "weapon-type": "Boomerang",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Possessed_Hatchet.png",
+      "image-path": "/Possessed_Hatchet.png",
       "damage-type": "Melee",
       "damage": 80,
       "use-time": "Very Fast",
@@ -4532,12 +4532,12 @@
     }
   },
   {
-    "id": 271,
+    "id": 252,
     "name": "Proximity Mine Launcher",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Proximity_Mine_Launcher.png",
+      "image-path": "/Proximity_Mine_Launcher.png",
       "damage-type": "Ranged",
       "damage": 80,
       "use-time": "Extremely Slow",
@@ -4550,12 +4550,12 @@
     }
   },
   {
-    "id": 272,
+    "id": 253,
     "name": "Psycho Knife",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Psycho_Knife.png",
+      "image-path": "/Psycho_Knife.png",
       "damage-type": "Melee",
       "damage": 85,
       "use-time": "Insanely Fast",
@@ -4568,12 +4568,12 @@
     }
   },
   {
-    "id": 273,
+    "id": 254,
     "name": "Pulse Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Pulse_Bow.png",
+      "image-path": "/Pulse_Bow.png",
       "damage-type": "Ranged",
       "damage": 80,
       "use-time": "Very Fast",
@@ -4586,12 +4586,12 @@
     }
   },
   {
-    "id": 274,
+    "id": 255,
     "name": "Purple Clubberfish",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Purple_Clubberfish.png",
+      "image-path": "/Purple_Clubberfish.png",
       "damage-type": "Melee",
       "damage": 35,
       "use-time": "Slow",
@@ -4604,12 +4604,12 @@
     }
   },
   {
-    "id": 277,
+    "id": 256,
     "name": "Pygmy Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Pygmy_Staff.png",
+      "image-path": "/Pygmy_Staff.png",
       "damage-type": "Summon",
       "damage": 40,
       "use-time": "Average",
@@ -4622,12 +4622,12 @@
     }
   },
   {
-    "id": 278,
+    "id": 257,
     "name": "Quad-Barrel Shotgun",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Quad-Barrel_Shotgun.png",
+      "image-path": "/Quad-Barrel_Shotgun.png",
       "damage-type": "Ranged",
       "damage": 14,
       "use-time": "Extremely Slow",
@@ -4640,12 +4640,12 @@
     }
   },
   {
-    "id": 279,
+    "id": 258,
     "name": "Queen Spider Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Queen_Spider_Staff.png",
+      "image-path": "/Queen_Spider_Staff.png",
       "damage-type": "Summon",
       "damage": 26,
       "use-time": "Average",
@@ -4658,12 +4658,12 @@
     }
   },
   {
-    "id": 280,
+    "id": 259,
     "name": "Rainbow Crystal Staff",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Rainbow_Crystal_Staff.png",
+      "image-path": "/Rainbow_Crystal_Staff.png",
       "damage-type": "Summon",
       "damage": 130,
       "use-time": "Average",
@@ -4676,12 +4676,12 @@
     }
   },
   {
-    "id": 281,
+    "id": 260,
     "name": "Rainbow Gun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Rainbow_Gun.png",
+      "image-path": "/Rainbow_Gun.png",
       "damage-type": "Magic",
       "damage": 45,
       "use-time": "Very Slow",
@@ -4694,12 +4694,12 @@
     }
   },
   {
-    "id": 282,
+    "id": 261,
     "name": "Rainbow Rod",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Rainbow_Rod.png",
+      "image-path": "/Rainbow_Rod.png",
       "damage-type": "Magic",
       "damage": 50,
       "use-time": "Fast",
@@ -4712,12 +4712,12 @@
     }
   },
   {
-    "id": 283,
+    "id": 262,
     "name": "Rally",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Rally.png",
+      "image-path": "/Rally.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Fast",
@@ -4730,12 +4730,12 @@
     }
   },
   {
-    "id": 284,
+    "id": 263,
     "name": "Raven Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Raven_Staff.png",
+      "image-path": "/Raven_Staff.png",
       "damage-type": "Summon",
       "damage": 55,
       "use-time": "Average",
@@ -4748,12 +4748,12 @@
     }
   },
   {
-    "id": 285,
+    "id": 264,
     "name": "Razorblade Typhoon",
     "weapon-type": "Tomb",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Razorblade_Typhoon.png",
+      "image-path": "/Razorblade_Typhoon.png",
       "damage-type": "Magic",
       "damage": 85,
       "use-time": "Very Slow",
@@ -4766,12 +4766,12 @@
     }
   },
   {
-    "id": 286,
+    "id": 265,
     "name": "Razorpine",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Razorpine.png",
+      "image-path": "/Razorpine.png",
       "damage-type": "Magic",
       "damage": 48,
       "use-time": "Insanely Fast",
@@ -4784,12 +4784,12 @@
     }
   },
   {
-    "id": 290,
+    "id": 266,
     "name": "Red Ryder",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Red_Ryder.png",
+      "image-path": "/Red_Ryder.png",
       "damage-type": "Ranged",
       "damage": 20,
       "use-time": "Very Slow",
@@ -4802,12 +4802,12 @@
     }
   },
   {
-    "id": 291,
+    "id": 267,
     "name": "Red's Throw",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Reds_Throw.png",
+      "image-path": "/Reds_Throw.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Fast",
@@ -4820,12 +4820,12 @@
     }
   },
   {
-    "id": 292,
+    "id": 268,
     "name": "Resonance Scepter",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Resonance_Scepter.png",
+      "image-path": "/Resonance_Scepter.png",
       "damage-type": "Magic",
       "damage": 70,
       "use-time": "Fast",
@@ -4838,12 +4838,12 @@
     }
   },
   {
-    "id": 293,
+    "id": 269,
     "name": "Revolver",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Revolver.png",
+      "image-path": "/Revolver.png",
       "damage-type": "Ranged",
       "damage": 20,
       "use-time": "Fast",
@@ -4856,12 +4856,12 @@
     }
   },
   {
-    "id": 296,
+    "id": 270,
     "name": "Rocket Launcher",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Rocket_Launcher.png",
+      "image-path": "/Rocket_Launcher.png",
       "damage-type": "Ranged",
       "damage": 55,
       "use-time": "Average",
@@ -4874,12 +4874,12 @@
     }
   },
   {
-    "id": 297,
+    "id": 271,
     "name": "Rockfish",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Rockfish.png",
+      "image-path": "/Rockfish.png",
       "damage-type": "Melee",
       "damage": 24,
       "use-time": "Fast",
@@ -4892,12 +4892,12 @@
     }
   },
   {
-    "id": 298,
+    "id": 272,
     "name": "Rotten Egg",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Rotten_Egg.png",
+      "image-path": "/Rotten_Egg.png",
       "damage-type": "Throwing",
       "damage": 13,
       "use-time": "Very Fast",
@@ -4910,12 +4910,12 @@
     }
   },
   {
-    "id": 299,
+    "id": 273,
     "name": "Ruby Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ruby_Staff.png",
+      "image-path": "/Ruby_Staff.png",
       "damage-type": "Magic",
       "damage": 21,
       "use-time": "Average",
@@ -4928,12 +4928,12 @@
     }
   },
   {
-    "id": 300,
+    "id": 274,
     "name": "Ruler",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Ruler.png",
+      "image-path": "/Ruler.png",
       "damage-type": "Melee",
       "damage": 12,
       "use-time": "Very Fast",
@@ -4946,12 +4946,12 @@
     }
   },
   {
-    "id": 301,
+    "id": 275,
     "name": "S.D.M.G.",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/S.D.M.G..png",
+      "image-path": "/S.D.M.G..png",
       "damage-type": "Ranged",
       "damage": 85,
       "use-time": "Insanely Fast",
@@ -4964,12 +4964,12 @@
     }
   },
   {
-    "id": 302,
+    "id": 276,
     "name": "Sandgun",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Sandgun.png",
+      "image-path": "/Sandgun.png",
       "damage-type": "Ranged",
       "damage": 30,
       "use-time": "Very Fast",
@@ -4982,12 +4982,12 @@
     }
   },
   {
-    "id": 303,
+    "id": 277,
     "name": "Sanguine Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sanguine_Staff.png",
+      "image-path": "/Sanguine_Staff.png",
       "damage-type": "Summon",
       "damage": 35,
       "use-time": "Very Slow",
@@ -5000,12 +5000,12 @@
     }
   },
   {
-    "id": 304,
+    "id": 278,
     "name": "Sapphire Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Sapphire_Staff.png",
+      "image-path": "/Sapphire_Staff.png",
       "damage-type": "Magic",
       "damage": 18,
       "use-time": "Slow",
@@ -5018,12 +5018,12 @@
     }
   },
   {
-    "id": 305,
+    "id": 279,
     "name": "Scourge of the Corruptor",
     "weapon-type": "Throwable",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Scourge_of_the_Corruptor.png",
+      "image-path": "/Scourge_of_the_Corruptor.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Very Fast",
@@ -5036,12 +5036,12 @@
     }
   },
   {
-    "id": 306,
+    "id": 280,
     "name": "Seedler",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Seedler.png",
+      "image-path": "/Seedler.png",
       "damage-type": "Melee",
       "damage": 50,
       "use-time": "Fast",
@@ -5054,12 +5054,12 @@
     }
   },
   {
-    "id": 307,
+    "id": 281,
     "name": "Sergeant United Shield",
     "weapon-type": "Boomerang",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sergeant_United_Shield.png",
+      "image-path": "/Sergeant_United_Shield.png",
       "damage-type": "Melee",
       "damage": 92,
       "use-time": "Very Slow",
@@ -5072,12 +5072,12 @@
     }
   },
   {
-    "id": 310,
+    "id": 282,
     "name": "Shadow Jousting Lance",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shadow_Jousting_Lance.png",
+      "image-path": "/Shadow_Jousting_Lance.png",
       "damage-type": "Melee",
       "damage": 130,
       "use-time": "Fast",
@@ -5090,12 +5090,12 @@
     }
   },
   {
-    "id": 311,
+    "id": 283,
     "name": "Shadowbeam Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shadowbeam_Staff.png",
+      "image-path": "/Shadowbeam_Staff.png",
       "damage-type": "Magic",
       "damage": 80,
       "use-time": "Very Fast",
@@ -5108,12 +5108,12 @@
     }
   },
   {
-    "id": 312,
+    "id": 284,
     "name": "Shadowflame Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shadowflame_Bow.png",
+      "image-path": "/Shadowflame_Bow.png",
       "damage-type": "Ranged",
       "damage": 47,
       "use-time": "Very Fast",
@@ -5126,12 +5126,12 @@
     }
   },
   {
-    "id": 313,
+    "id": 285,
     "name": "Shadowflame Hex Doll",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shadowflame_Hex_Doll.png",
+      "image-path": "/Shadowflame_Hex_Doll.png",
       "damage-type": "Magic",
       "damage": 66,
       "use-time": "Fast",
@@ -5144,12 +5144,12 @@
     }
   },
   {
-    "id": 314,
+    "id": 286,
     "name": "Shadowflame Knife",
     "weapon-type": "Throwable",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shadowflame_Knife.png",
+      "image-path": "/Shadowflame_Knife.png",
       "damage-type": "Melee",
       "damage": 38,
       "use-time": "Very Fast",
@@ -5162,12 +5162,12 @@
     }
   },
   {
-    "id": 315,
+    "id": 287,
     "name": "Shotgun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Shotgun.png",
+      "image-path": "/Shotgun.png",
       "damage-type": "Ranged",
       "damage": 24,
       "use-time": "Very Slow",
@@ -5180,12 +5180,12 @@
     }
   },
   {
-    "id": 316,
+    "id": 288,
     "name": "Shroomerang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Shroomerang.png",
+      "image-path": "/Shroomerang.png",
       "damage-type": "Melee",
       "damage": 23,
       "use-time": "Very Fast",
@@ -5198,12 +5198,12 @@
     }
   },
   {
-    "id": 318,
+    "id": 289,
     "name": "Shuriken",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Shuriken.png",
+      "image-path": "/Shuriken.png",
       "damage-type": "Throwing",
       "damage": 10,
       "use-time": "Very Fast",
@@ -5217,12 +5217,12 @@
     }
   },
   {
-    "id": 319,
+    "id": 290,
     "name": "Sickle",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Sickle.png",
+      "image-path": "/Sickle.png",
       "damage-type": "Melee",
       "damage": 9,
       "use-time": "Fast",
@@ -5235,12 +5235,12 @@
     }
   },
   {
-    "id": 320,
+    "id": 291,
     "name": "Silver Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Silver_Bow.png",
+      "image-path": "/Silver_Bow.png",
       "damage-type": "Ranged",
       "damage": 9,
       "use-time": "Average",
@@ -5253,12 +5253,12 @@
     }
   },
   {
-    "id": 321,
+    "id": 292,
     "name": "Silver Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Silver_Broadsword.png",
+      "image-path": "/Silver_Broadsword.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Very Fast",
@@ -5271,12 +5271,12 @@
     }
   },
   {
-    "id": 322,
+    "id": 293,
     "name": "Silver Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Silver_Shortsword.png",
+      "image-path": "/Silver_Shortsword.png",
       "damage-type": "Melee",
       "damage": 9,
       "use-time": "Very Fast",
@@ -5289,12 +5289,12 @@
     }
   },
   {
-    "id": 323,
+    "id": 294,
     "name": "Sky Dragon's Fury",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sky_Dragons_Fury.png",
+      "image-path": "/Sky_Dragons_Fury.png",
       "damage-type": "Melee",
       "damage": 140,
       "use-time": "Average",
@@ -5307,12 +5307,12 @@
     }
   },
   {
-    "id": 324,
+    "id": 295,
     "name": "Sky Fracture",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sky_Fracture.png",
+      "image-path": "/Sky_Fracture.png",
       "damage-type": "Magic",
       "damage": 38,
       "use-time": "Very Fast",
@@ -5325,12 +5325,12 @@
     }
   },
   {
-    "id": 325,
+    "id": 296,
     "name": "Slap Hand",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Slap_Hand.png",
+      "image-path": "/Slap_Hand.png",
       "damage-type": "Melee",
       "damage": 55,
       "use-time": "Very Fast",
@@ -5343,12 +5343,12 @@
     }
   },
   {
-    "id": 326,
+    "id": 297,
     "name": "Sleepy Octopod",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sleepy_Octopod.png",
+      "image-path": "/Sleepy_Octopod.png",
       "damage-type": "Melee",
       "damage": 50,
       "use-time": "Average",
@@ -5361,12 +5361,12 @@
     }
   },
   {
-    "id": 327,
+    "id": 298,
     "name": "Slime Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Slime_Staff.png",
+      "image-path": "/Slime_Staff.png",
       "damage-type": "Summon",
       "damage": 8,
       "use-time": "Average",
@@ -5379,12 +5379,12 @@
     }
   },
   {
-    "id": 328,
+    "id": 299,
     "name": "Snapthorn",
     "weapon-type": "Whip",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Snapthorn.png",
+      "image-path": "/Snapthorn.png",
       "damage-type": "Summon",
       "damage": 18,
       "use-time": "Average",
@@ -5397,12 +5397,12 @@
     }
   },
   {
-    "id": 329,
+    "id": 300,
     "name": "Sniper Rifle",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Sniper_Rifle.png",
+      "image-path": "/Sniper_Rifle.png",
       "damage-type": "Ranged",
       "damage": 185,
       "use-time": "Very Slow",
@@ -5415,12 +5415,12 @@
     }
   },
   {
-    "id": 330,
+    "id": 301,
     "name": "Snowball",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Snowball.png",
+      "image-path": "/Snowball.png",
       "damage-type": "Throwing",
       "damage": 8,
       "use-time": "Very Fast",
@@ -5433,12 +5433,12 @@
     }
   },
   {
-    "id": 331,
+    "id": 302,
     "name": "Snowball Cannon",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Snowball_Cannon.png",
+      "image-path": "/Snowball_Cannon.png",
       "damage-type": "Ranged",
       "damage": 10,
       "use-time": "Very Fast",
@@ -5451,12 +5451,12 @@
     }
   },
   {
-    "id": 332,
+    "id": 303,
     "name": "Snowman Cannon",
     "weapon-type": "Launcher",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Snowman_Cannon.png",
+      "image-path": "/Snowman_Cannon.png",
       "damage-type": "Ranged",
       "damage": 67,
       "use-time": "Very Fast",
@@ -5469,12 +5469,12 @@
     }
   },
   {
-    "id": 333,
+    "id": 304,
     "name": "Solar Eruption",
     "weapon-type": "Flail",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Solar_Eruption.png",
+      "image-path": "/Solar_Eruption.png",
       "damage-type": "Melee",
       "damage": 105,
       "use-time": "Very Fast",
@@ -5487,12 +5487,12 @@
     }
   },
   {
-    "id": 334,
+    "id": 305,
     "name": "Space Gun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Space_Gun.png",
+      "image-path": "/Space_Gun.png",
       "damage-type": "Magic",
       "damage": 17,
       "use-time": "Very Fast",
@@ -5505,12 +5505,12 @@
     }
   },
   {
-    "id": 335,
+    "id": 306,
     "name": "Spear",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Spear.png",
+      "image-path": "/Spear.png",
       "damage-type": "Melee",
       "damage": 8,
       "use-time": "Slow",
@@ -5523,12 +5523,12 @@
     }
   },
   {
-    "id": 336,
+    "id": 307,
     "name": "Spectre Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Spectre_Staff.png",
+      "image-path": "/Spectre_Staff.png",
       "damage-type": "Magic",
       "damage": 65,
       "use-time": "Fast",
@@ -5541,12 +5541,12 @@
     }
   },
   {
-    "id": 337,
+    "id": 308,
     "name": "Spider Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Spider_Staff.png",
+      "image-path": "/Spider_Staff.png",
       "damage-type": "Summon",
       "damage": 26,
       "use-time": "Very Slow",
@@ -5559,12 +5559,12 @@
     }
   },
   {
-    "id": 338,
+    "id": 309,
     "name": "Spiky Ball",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Spiky_Ball.png",
+      "image-path": "/Spiky_Ball.png",
       "damage-type": "Throwing",
       "damage": 16,
       "use-time": "Very Fast",
@@ -5577,12 +5577,12 @@
     }
   },
   {
-    "id": 339,
+    "id": 310,
     "name": "Spinal Tap",
     "weapon-type": "Whip",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Spinal_Tap.png",
+      "image-path": "/Spinal_Tap.png",
       "damage-type": "Summon",
       "damage": 27,
       "use-time": "Average",
@@ -5595,12 +5595,12 @@
     }
   },
   {
-    "id": 340,
+    "id": 311,
     "name": "Spirit Flame",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Spirit_Flame.png",
+      "image-path": "/Spirit_Flame.png",
       "damage-type": "Magic",
       "damage": 85,
       "use-time": "Fast",
@@ -5613,12 +5613,12 @@
     }
   },
   {
-    "id": 341,
+    "id": 312,
     "name": "Staff of Earth",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Staff_of_Earth.png",
+      "image-path": "/Staff_of_Earth.png",
       "damage-type": "Magic",
       "damage": 125,
       "use-time": "Fast",
@@ -5631,12 +5631,12 @@
     }
   },
   {
-    "id": 343,
+    "id": 313,
     "name": "Staff of the Frost Hydra",
     "weapon-type": "Sentry",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Staff_of_the_Frost_Hydra.png",
+      "image-path": "/Staff_of_the_Frost_Hydra.png",
       "damage-type": "Summon",
       "damage": 100,
       "use-time": "Average",
@@ -5649,12 +5649,12 @@
     }
   },
   {
-    "id": 344,
+    "id": 314,
     "name": "Stake Launcher",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Stake_Launcher.png",
+      "image-path": "/Stake_Launcher.png",
       "damage-type": "Ranged",
       "damage": 75,
       "use-time": "Very Fast",
@@ -5667,12 +5667,12 @@
     }
   },
   {
-    "id": 345,
+    "id": 315,
     "name": "Star Anise",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Star_Anise.png",
+      "image-path": "/Star_Anise.png",
       "damage-type": "Throwing",
       "damage": 14,
       "use-time": "Very Fast",
@@ -5685,12 +5685,12 @@
     }
   },
   {
-    "id": 346,
+    "id": 316,
     "name": "Star Cannon",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Star_Cannon.png",
+      "image-path": "/Star_Cannon.png",
       "damage-type": "Ranged",
       "damage": 55,
       "use-time": "Very Fast",
@@ -5703,12 +5703,12 @@
     }
   },
   {
-    "id": 347,
+    "id": 317,
     "name": "Star Wrath",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Star_Wrath.png",
+      "image-path": "/Star_Wrath.png",
       "damage-type": "Melee",
       "damage": 170,
       "use-time": "Very Fast",
@@ -5721,12 +5721,12 @@
     }
   },
   {
-    "id": 348,
+    "id": 318,
     "name": "Stardust Cell Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Stardust_Cell_Staff.png",
+      "image-path": "/Stardust_Cell_Staff.png",
       "damage-type": "Summon",
       "damage": 60,
       "use-time": "Very Slow",
@@ -5739,12 +5739,12 @@
     }
   },
   {
-    "id": 349,
+    "id": 319,
     "name": "Stardust Dragon Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Stardust_Dragon_Staff.png",
+      "image-path": "/Stardust_Dragon_Staff.png",
       "damage-type": "Summon",
       "damage": 40,
       "use-time": "Very Slow",
@@ -5757,12 +5757,12 @@
     }
   },
   {
-    "id": 350,
+    "id": 320,
     "name": "Starfury",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Starfury.png",
+      "image-path": "/Starfury.png",
       "damage-type": "Melee",
       "damage": 25,
       "use-time": "Very Fast",
@@ -5775,12 +5775,12 @@
     }
   },
   {
-    "id": 351,
+    "id": 321,
     "name": "Starlight",
     "weapon-type": "Shortsword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Starlight.png",
+      "image-path": "/Starlight.png",
       "damage-type": "Melee",
       "damage": 80,
       "use-time": "Very Fast",
@@ -5793,12 +5793,12 @@
     }
   },
   {
-    "id": 352,
+    "id": 322,
     "name": "Stellar Tune",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Stellar_Tune.png",
+      "image-path": "/Stellar_Tune.png",
       "damage-type": "Magic",
       "damage": 85,
       "use-time": "Very Fast",
@@ -5811,12 +5811,12 @@
     }
   },
   {
-    "id": 354,
+    "id": 323,
     "name": "Storm Spear",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Storm_Spear.png",
+      "image-path": "/Storm_Spear.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Average",
@@ -5829,12 +5829,12 @@
     }
   },
   {
-    "id": 355,
+    "id": 324,
     "name": "Stylish Scissors",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Stylish_Scissors.png",
+      "image-path": "/Stylish_Scissors.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Very Fast",
@@ -5847,12 +5847,12 @@
     }
   },
   {
-    "id": 356,
+    "id": 325,
     "name": "Stynger",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Stynger.png",
+      "image-path": "/Stynger.png",
       "damage-type": "Ranged",
       "damage": 45,
       "use-time": "Fast",
@@ -5865,12 +5865,12 @@
     }
   },
   {
-    "id": 357,
+    "id": 326,
     "name": "Sunfury",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Sunfury.png",
+      "image-path": "/Sunfury.png",
       "damage-type": "Melee",
       "damage": 64,
       "use-time": "Very Slow",
@@ -5883,12 +5883,12 @@
     }
   },
   {
-    "id": 358,
+    "id": 327,
     "name": "Super Star Shooter",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Super_Star_Shooter.png",
+      "image-path": "/Super_Star_Shooter.png",
       "damage-type": "Ranged",
       "damage": 60,
       "use-time": "Very Fast",
@@ -5901,12 +5901,12 @@
     }
   },
   {
-    "id": 359,
+    "id": 328,
     "name": "Swordfish",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Swordfish.png",
+      "image-path": "/Swordfish.png",
       "damage-type": "Melee",
       "damage": 19,
       "use-time": "Very Fast",
@@ -5919,12 +5919,12 @@
     }
   },
   {
-    "id": 360,
+    "id": 329,
     "name": "Tactical Shotgun",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Tactical_Shotgun.png",
+      "image-path": "/Tactical_Shotgun.png",
       "damage-type": "Ranged",
       "damage": 29,
       "use-time": "Slow",
@@ -5937,12 +5937,12 @@
     }
   },
   {
-    "id": 361,
+    "id": 330,
     "name": "Tempest Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Tempest_Staff.png",
+      "image-path": "/Tempest_Staff.png",
       "damage-type": "Summon",
       "damage": 50,
       "use-time": "Very Slow",
@@ -5955,12 +5955,12 @@
     }
   },
   {
-    "id": 362,
+    "id": 331,
     "name": "Tendon Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tendon_Bow.png",
+      "image-path": "/Tendon_Bow.png",
       "damage-type": "Ranged",
       "damage": 19,
       "use-time": "Average",
@@ -5973,12 +5973,12 @@
     }
   },
   {
-    "id": 363,
+    "id": 332,
     "name": "Tentacle Spike",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tentacle_Spike.png",
+      "image-path": "/Tentacle_Spike.png",
       "damage-type": "Melee",
       "damage": 19,
       "use-time": "Fast",
@@ -5991,12 +5991,12 @@
     }
   },
   {
-    "id": 364,
+    "id": 333,
     "name": "Terra Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Terra_Blade.png",
+      "image-path": "/Terra_Blade.png",
       "damage-type": "Melee",
       "damage": 85,
       "use-time": "Very Fast",
@@ -6009,12 +6009,12 @@
     }
   },
   {
-    "id": 365,
+    "id": 334,
     "name": "Terragrim",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Terragrim.png",
+      "image-path": "/Terragrim.png",
       "damage-type": "Melee",
       "damage": 17,
       "use-time": "Fast",
@@ -6027,12 +6027,12 @@
     }
   },
   {
-    "id": 366,
+    "id": 335,
     "name": "Terraprisma",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Terraprisma.png",
+      "image-path": "/Terraprisma.png",
       "damage-type": "Summon",
       "damage": 90,
       "use-time": "Very Slow",
@@ -6045,12 +6045,12 @@
     }
   },
   {
-    "id": 367,
+    "id": 336,
     "name": "Terrarian",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Terrarian.png",
+      "image-path": "/Terrarian.png",
       "damage-type": "Melee",
       "damage": 190,
       "use-time": "Fast",
@@ -6063,12 +6063,12 @@
     }
   },
   {
-    "id": 368,
+    "id": 337,
     "name": "The Bee's Knees",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/The_Bees_Knees.png",
+      "image-path": "/The_Bees_Knees.png",
       "damage-type": "Ranged",
       "damage": 23,
       "use-time": "Fast",
@@ -6081,12 +6081,12 @@
     }
   },
   {
-    "id": 370,
+    "id": 338,
     "name": "The Eye of Cthulhu",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/The_Eye_of_Cthulhu.png",
+      "image-path": "/The_Eye_of_Cthulhu.png",
       "damage-type": "Melee",
       "damage": 115,
       "use-time": "Fast",
@@ -6099,12 +6099,12 @@
     }
   },
   {
-    "id": 371,
+    "id": 339,
     "name": "The Horseman's Blade",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/The_Horsemans_Blade.png",
+      "image-path": "/The_Horsemans_Blade.png",
       "damage-type": "Melee",
       "damage": 150,
       "use-time": "Average",
@@ -6117,12 +6117,12 @@
     }
   },
   {
-    "id": 372,
+    "id": 340,
     "name": "The Meatball",
     "weapon-type": "Flail",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/The_Meatball.png",
+      "image-path": "/The_Meatball.png",
       "damage-type": "Melee",
       "damage": 34,
       "use-time": "Very Slow",
@@ -6135,12 +6135,12 @@
     }
   },
   {
-    "id": 373,
+    "id": 341,
     "name": "The Rotted Fork",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/The_Rotted_Fork.png",
+      "image-path": "/The_Rotted_Fork.png",
       "damage-type": "Melee",
       "damage": 17,
       "use-time": "Slow",
@@ -6153,12 +6153,12 @@
     }
   },
   {
-    "id": 374,
+    "id": 342,
     "name": "The Undertaker",
     "weapon-type": "Gun",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/The_Undertaker.png",
+      "image-path": "/The_Undertaker.png",
       "damage-type": "Ranged",
       "damage": 19,
       "use-time": "Very Fast",
@@ -6171,12 +6171,12 @@
     }
   },
   {
-    "id": 375,
+    "id": 343,
     "name": "Thorn Chakram",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Thorn_Chakram.png",
+      "image-path": "/Thorn_Chakram.png",
       "damage-type": "Melee",
       "damage": 25,
       "use-time": "Very Fast",
@@ -6189,12 +6189,12 @@
     }
   },
   {
-    "id": 376,
+    "id": 344,
     "name": "Throwing Knife",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Throwing_Knife.png",
+      "image-path": "/Throwing_Knife.png",
       "damage-type": "Throwing",
       "damage": 12,
       "use-time": "Very Fast",
@@ -6208,12 +6208,12 @@
     }
   },
   {
-    "id": 377,
+    "id": 345,
     "name": "Thunder Zapper",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Thunder_Zapper.png",
+      "image-path": "/Thunder_Zapper.png",
       "damage-type": "Magic",
       "damage": 20,
       "use-time": "Very Fast",
@@ -6226,12 +6226,12 @@
     }
   },
   {
-    "id": 378,
+    "id": 346,
     "name": "Tin Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tin_Bow.png",
+      "image-path": "/Tin_Bow.png",
       "damage-type": "Ranged",
       "damage": 7,
       "use-time": "Average",
@@ -6244,12 +6244,12 @@
     }
   },
   {
-    "id": 379,
+    "id": 347,
     "name": "Tin Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tin_Broadsword.png",
+      "image-path": "/Tin_Broadsword.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Very Fast",
@@ -6262,12 +6262,12 @@
     }
   },
   {
-    "id": 380,
+    "id": 348,
     "name": "Tin Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tin_Shortsword.png",
+      "image-path": "/Tin_Shortsword.png",
       "damage-type": "Melee",
       "damage": 7,
       "use-time": "Very Fast",
@@ -6280,12 +6280,12 @@
     }
   },
   {
-    "id": 381,
+    "id": 349,
     "name": "Titanium Repeater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Titanium_Repeater.png",
+      "image-path": "/Titanium_Repeater.png",
       "damage-type": "Ranged",
       "damage": 43,
       "use-time": "Very Fast",
@@ -6298,12 +6298,12 @@
     }
   },
   {
-    "id": 382,
+    "id": 350,
     "name": "Titanium Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Titanium_Sword.png",
+      "image-path": "/Titanium_Sword.png",
       "damage-type": "Melee",
       "damage": 61,
       "use-time": "Very Fast",
@@ -6316,12 +6316,12 @@
     }
   },
   {
-    "id": 383,
+    "id": 351,
     "name": "Titanium Trident",
     "weapon-type": "Spear",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Titanium_Trident.png",
+      "image-path": "/Titanium_Trident.png",
       "damage-type": "Melee",
       "damage": 48,
       "use-time": "Fast",
@@ -6334,12 +6334,12 @@
     }
   },
   {
-    "id": 385,
+    "id": 352,
     "name": "Tome of Infinite Wisdom",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Tome_of_Infinite_Wisdom.png",
+      "image-path": "/Tome_of_Infinite_Wisdom.png",
       "damage-type": "Magic",
       "damage": 36,
       "use-time": "Fast",
@@ -6352,12 +6352,12 @@
     }
   },
   {
-    "id": 387,
+    "id": 353,
     "name": "Topaz Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Topaz_Staff.png",
+      "image-path": "/Topaz_Staff.png",
       "damage-type": "Magic",
       "damage": 16,
       "use-time": "Very Slow",
@@ -6370,12 +6370,12 @@
     }
   },
   {
-    "id": 388,
+    "id": 354,
     "name": "Toxic Flask",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Toxic_Flask.png",
+      "image-path": "/Toxic_Flask.png",
       "damage-type": "Magic",
       "damage": 52,
       "use-time": "Very Slow",
@@ -6388,12 +6388,12 @@
     }
   },
   {
-    "id": 389,
+    "id": 355,
     "name": "Toxikarp",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Toxikarp.png",
+      "image-path": "/Toxikarp.png",
       "damage-type": "Ranged",
       "damage": 43,
       "use-time": "Very Fast",
@@ -6406,12 +6406,12 @@
     }
   },
   {
-    "id": 390,
+    "id": 356,
     "name": "Tragic Umbrella",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tragic_Umbrella.png",
+      "image-path": "/Tragic_Umbrella.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Fast",
@@ -6424,12 +6424,12 @@
     }
   },
   {
-    "id": 391,
+    "id": 357,
     "name": "Trident",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Trident.png",
+      "image-path": "/Trident.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Slow",
@@ -6443,12 +6443,12 @@
     }
   },
   {
-    "id": 392,
+    "id": 358,
     "name": "Trimarang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Trimarang.png",
+      "image-path": "/Trimarang.png",
       "damage-type": "Melee",
       "damage": 21,
       "use-time": "Very Fast",
@@ -6461,12 +6461,12 @@
     }
   },
   {
-    "id": 393,
+    "id": 359,
     "name": "True Excalibur",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/True_Excalibur.png",
+      "image-path": "/True_Excalibur.png",
       "damage-type": "Melee",
       "damage": 72,
       "use-time": "Very Fast",
@@ -6479,12 +6479,12 @@
     }
   },
   {
-    "id": 394,
+    "id": 360,
     "name": "True Night's Edge",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/True_Nights_Edge.png",
+      "image-path": "/True_Nights_Edge.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Slow",
@@ -6497,12 +6497,12 @@
     }
   },
   {
-    "id": 395,
+    "id": 361,
     "name": "Tsunami",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Tsunami.png",
+      "image-path": "/Tsunami.png",
       "damage-type": "Ranged",
       "damage": 53,
       "use-time": "Fast",
@@ -6515,12 +6515,12 @@
     }
   },
   {
-    "id": 396,
+    "id": 362,
     "name": "Tungsten Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tungsten_Bow.png",
+      "image-path": "/Tungsten_Bow.png",
       "damage-type": "Ranged",
       "damage": 10,
       "use-time": "Average",
@@ -6533,12 +6533,12 @@
     }
   },
   {
-    "id": 397,
+    "id": 363,
     "name": "Tungsten Broadsword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tungsten_Broadsword.png",
+      "image-path": "/Tungsten_Broadsword.png",
       "damage-type": "Melee",
       "damage": 14,
       "use-time": "Very Fast",
@@ -6551,12 +6551,12 @@
     }
   },
   {
-    "id": 398,
+    "id": 364,
     "name": "Tungsten Shortsword",
     "weapon-type": "Shortsword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Tungsten_Shortsword.png",
+      "image-path": "/Tungsten_Shortsword.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Very Fast",
@@ -6569,12 +6569,12 @@
     }
   },
   {
-    "id": 399,
+    "id": 365,
     "name": "Umbrella",
     "weapon-type": "Spear",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Umbrella.png",
+      "image-path": "/Umbrella.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Fast",
@@ -6587,12 +6587,12 @@
     }
   },
   {
-    "id": 400,
+    "id": 366,
     "name": "Unholy Trident",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Unholy_Trident.png",
+      "image-path": "/Unholy_Trident.png",
       "damage-type": "Magic",
       "damage": 88,
       "use-time": "Very Fast",
@@ -6605,12 +6605,12 @@
     }
   },
   {
-    "id": 401,
+    "id": 367,
     "name": "Uzi",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Uzi.png",
+      "image-path": "/Uzi.png",
       "damage-type": "Ranged",
       "damage": 30,
       "use-time": "Very Fast",
@@ -6623,12 +6623,12 @@
     }
   },
   {
-    "id": 402,
+    "id": 368,
     "name": "Valkyrie Yoyo",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Valkyrie_Yoyo.png",
+      "image-path": "/Valkyrie_Yoyo.png",
       "damage-type": "Melee",
       "damage": 70,
       "use-time": "Fast",
@@ -6641,12 +6641,12 @@
     }
   },
   {
-    "id": 403,
+    "id": 369,
     "name": "Valor",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Valor.png",
+      "image-path": "/Valor.png",
       "damage-type": "Melee",
       "damage": 28,
       "use-time": "Fast",
@@ -6659,12 +6659,12 @@
     }
   },
   {
-    "id": 404,
+    "id": 370,
     "name": "Vampire Frog Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Vampire_Frog_Staff.png",
+      "image-path": "/Vampire_Frog_Staff.png",
       "damage-type": "Summon",
       "damage": 11,
       "use-time": "Very Slow",
@@ -6677,12 +6677,12 @@
     }
   },
   {
-    "id": 405,
+    "id": 371,
     "name": "Vampire Knives",
     "weapon-type": "Throwable",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Vampire_Knives.png",
+      "image-path": "/Vampire_Knives.png",
       "damage-type": "Melee",
       "damage": 29,
       "use-time": "Very Fast",
@@ -6695,12 +6695,12 @@
     }
   },
   {
-    "id": 406,
+    "id": 372,
     "name": "Venom Staff",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Venom_Staff.png",
+      "image-path": "/Venom_Staff.png",
       "damage-type": "Magic",
       "damage": 44,
       "use-time": "Average",
@@ -6713,12 +6713,12 @@
     }
   },
   {
-    "id": 407,
+    "id": 373,
     "name": "Venus Magnum",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Venus_Magnum.png",
+      "image-path": "/Venus_Magnum.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Very Fast",
@@ -6731,12 +6731,12 @@
     }
   },
   {
-    "id": 408,
+    "id": 374,
     "name": "Vilethorn",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Vilethorn.png",
+      "image-path": "/Vilethorn.png",
       "damage-type": "Magic",
       "damage": 10,
       "use-time": "Average",
@@ -6749,12 +6749,12 @@
     }
   },
   {
-    "id": 409,
+    "id": 375,
     "name": "Volcano",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Volcano.png",
+      "image-path": "/Volcano.png",
       "damage-type": "Melee",
       "damage": 40,
       "use-time": "Very Slow",
@@ -6767,12 +6767,12 @@
     }
   },
   {
-    "id": 410,
+    "id": 376,
     "name": "Vortex Beater",
     "weapon-type": "Bow",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Vortex_Beater.png",
+      "image-path": "/Vortex_Beater.png",
       "damage-type": "Ranged",
       "damage": 50,
       "use-time": "Very Fast",
@@ -6785,12 +6785,12 @@
     }
   },
   {
-    "id": 412,
+    "id": 377,
     "name": "Waffle's Iron",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Waffles_Iron.png",
+      "image-path": "/Waffles_Iron.png",
       "damage-type": "Melee",
       "damage": 50,
       "use-time": "Fast",
@@ -6803,12 +6803,12 @@
     }
   },
   {
-    "id": 413,
+    "id": 378,
     "name": "Wand of Frosting",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wand_of_Frosting.png",
+      "image-path": "/Wand_of_Frosting.png",
       "damage-type": "Magic",
       "damage": 15,
       "use-time": "Average",
@@ -6821,12 +6821,12 @@
     }
   },
   {
-    "id": 414,
+    "id": 379,
     "name": "Wand of Sparking",
     "weapon-type": "Staff/Wand",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wand_of_Sparking.png",
+      "image-path": "/Wand_of_Sparking.png",
       "damage-type": "Magic",
       "damage": 14,
       "use-time": "Average",
@@ -6839,12 +6839,12 @@
     }
   },
   {
-    "id": 415,
+    "id": 380,
     "name": "Wasp Gun",
     "weapon-type": "Magic Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Wasp_Gun.png",
+      "image-path": "/Wasp_Gun.png",
       "damage-type": "Magic",
       "damage": 31,
       "use-time": "Very Fast",
@@ -6857,12 +6857,12 @@
     }
   },
   {
-    "id": 416,
+    "id": 381,
     "name": "Water Bolt",
     "weapon-type": "Tomb",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Water_Bolt.png",
+      "image-path": "/Water_Bolt.png",
       "damage-type": "Magic",
       "damage": 19,
       "use-time": "Very Fast",
@@ -6875,12 +6875,12 @@
     }
   },
   {
-    "id": 417,
+    "id": 382,
     "name": "Weather Pain",
     "weapon-type": "Magic Trinket",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Weather_Pain.png",
+      "image-path": "/Weather_Pain.png",
       "damage-type": "Magic",
       "damage": 13,
       "use-time": "Very Slow",
@@ -6893,12 +6893,12 @@
     }
   },
   {
-    "id": 418,
+    "id": 383,
     "name": "White Paper Airplane",
     "weapon-type": "Throwable",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/White_Paper_Airplane.png",
+      "image-path": "/White_Paper_Airplane.png",
       "damage-type": "Ranged",
       "damage": 4,
       "use-time": "Very Fast",
@@ -6911,12 +6911,12 @@
     }
   },
   {
-    "id": 421,
+    "id": 384,
     "name": "Wooden Boomerang",
     "weapon-type": "Boomerang",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wooden_Boomerang.png",
+      "image-path": "/Wooden_Boomerang.png",
       "damage-type": "Melee",
       "damage": 10,
       "use-time": "Very Fast",
@@ -6930,12 +6930,12 @@
     }
   },
   {
-    "id": 422,
+    "id": 385,
     "name": "Wooden Bow",
     "weapon-type": "Bow",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wooden_Bow.png",
+      "image-path": "/Wooden_Bow.png",
       "damage-type": "Ranged",
       "damage": 4,
       "use-time": "Average",
@@ -6948,12 +6948,12 @@
     }
   },
   {
-    "id": 423,
+    "id": 386,
     "name": "Wooden Sword",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wooden_Sword.png",
+      "image-path": "/Wooden_Sword.png",
       "damage-type": "Melee",
       "damage": 7,
       "use-time": "Very Fast",
@@ -6966,12 +6966,12 @@
     }
   },
   {
-    "id": 424,
+    "id": 387,
     "name": "Wooden Yoyo",
     "weapon-type": "YoYo",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Wooden_Yoyo.png",
+      "image-path": "/Wooden_Yoyo.png",
       "damage-type": "Melee",
       "damage": 9,
       "use-time": "Fast",
@@ -6984,12 +6984,12 @@
     }
   },
   {
-    "id": 425,
+    "id": 388,
     "name": "Xeno Staff",
     "weapon-type": "Summoning Weapon",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Xeno_Staff.png",
+      "image-path": "/Xeno_Staff.png",
       "damage-type": "Summon",
       "damage": 36,
       "use-time": "Very Slow",
@@ -7002,12 +7002,12 @@
     }
   },
   {
-    "id": 426,
+    "id": 389,
     "name": "Xenopopper",
     "weapon-type": "Gun",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Xenopopper.png",
+      "image-path": "/Xenopopper.png",
       "damage-type": "Ranged",
       "damage": 45,
       "use-time": "Fast",
@@ -7020,12 +7020,12 @@
     }
   },
   {
-    "id": 427,
+    "id": 390,
     "name": "Yelets",
     "weapon-type": "YoYo",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Yelets.png",
+      "image-path": "/Yelets.png",
       "damage-type": "Melee",
       "damage": 60,
       "use-time": "Fast",
@@ -7038,12 +7038,12 @@
     }
   },
   {
-    "id": 431,
+    "id": 391,
     "name": "Zenith",
     "weapon-type": "Sword",
     "mode-obtained": "Hardmode",
     "info": {
-      "image-path": "./weapon_icons/Zenith.png",
+      "image-path": "/Zenith.png",
       "damage-type": "Melee",
       "damage": 190,
       "use-time": "Average",
@@ -7056,12 +7056,12 @@
     }
   },
   {
-    "id": 432,
+    "id": 392,
     "name": "Zombie Arm",
     "weapon-type": "Sword",
     "mode-obtained": "Pre-HardMode",
     "info": {
-      "image-path": "./weapon_icons/Zombie_Arm.png",
+      "image-path": "/Zombie_Arm.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Fast",
@@ -7074,12 +7074,12 @@
     }
   },
   {
-    "id": 433,
+    "id": 393,
     "name": "Paladin's Hammer",
     "weapon-type": "Boomerang",
     "mode-obtained": "HardMode",
     "info": {
-      "image-path": "./weapon_icons/Paladins_Hammer.png",
+      "image-path": "/Paladins_Hammer.png",
       "damage-type": "Melee",
       "damage": 15,
       "use-time": "Very Fast",
