@@ -6,3 +6,4 @@ Backend:
 - Add websocket for live player guess counts
 
 Frontend:
+- Remove scroll bar from dropdown on daily-slash
