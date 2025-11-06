@@ -80,6 +80,14 @@ If you have a lot of props, you can simplify it
 
 <PackageInfo {...pkg} />
 ```
+You can also pass handlers as props:
+```
+<Stepper 
+	increment={() => value += 1}
+	decrement={() => value -= 1}	
+/>
+```
+You can use the simplify way to pass in these values too.
 
 ---
 
@@ -156,3 +164,82 @@ export async function roll() {
 
 ---
 
+Event handlers can handle any event in the DOM, this can vary between onclick, onpointermove, and more. Here is an example of this:
+```
+<script>
+	let m = $state({ x: 0, y: 0 });
+
+	function onpointermove(event) {
+		m.x = event.clientX;
+		m.y = event.clientY;
+	}
+</script>
+
+<div {onpointermove}>
+	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
+</div>
+```
+You can also do inline calls:
+```
+<div onpointermove={(event) => {
+		m.x = event.clientX;
+		m.y = event.clientY;
+}}>
+	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
+</div>
+```
+
+---
+
+`bind:` extends on state where whenever the value of state is changed, it will propagate to the rest of the component
+```
+<script>
+	let name = $state('world');
+</script>
+
+<input bind:value={name} />
+
+<h1>Hello {name}!</h1>
+```
+bind is a simpler way of making an effect or derived updating the rest of the component. It can be used in almost all inputs. You can also use it for updating elements:
+```
+<select
+	bind:value={selected}
+	onchange={() => (answer = '')}
+>
+```
+
+---
+
+`multiple` is a way to generate a new type of checkbox. Useful for saving multiple values to an array and not having the bloat of a checkbox.
+```
+<select multiple bind:value={flavours}>
+{#each ['cookies and cream', 'mint choc chip', 'raspberry ripple'] as flavour}
+	<option>{flavour}</option>
+{/each}
+</select>
+```
+Not a lot of uses but good to know.
+
+---
+
+Classes can be easily changed by using ternary operators
+```
+<button
+	class="card {flipped ? 'flipped' : ''}"
+	onclick={() => flipped = !flipped}
+>
+<script>
+.card.flipped {
+	transform: rotateY(0);
+}
+</script
+```
+You can also do the same with this format
+```
+<button
+	class={["card", { flipped }]}
+	onclick={() => flipped = !flipped}
+>
+```
+Check out this cool animation you can do: https://svelte.dev/tutorial/svelte/classes
