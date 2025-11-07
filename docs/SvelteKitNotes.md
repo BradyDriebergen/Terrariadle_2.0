@@ -243,3 +243,116 @@ You can also do the same with this format
 >
 ```
 Check out this cool animation you can do: https://svelte.dev/tutorial/svelte/classes
+
+---
+
+`use:` creates a way to apply an "action" to a element.
+```
+<div use:myAction></div>
+```
+Here, `myAction` is a function (called an _action_) that runs when the element is created and can set up custom logic for it. Here is an example of what you can do with it
+```
+function myAction(node) {
+  // do something with the node
+  node.style.color = 'red';
+
+  return {
+    destroy() {
+      // optional cleanup
+      node.style.color = '';
+    }
+  };
+}
+```
+You can also do the same with parameters:
+```
+<script>
+	import tippy from 'tippy.js';
+
+	let content = $state('Hello!');
+
+	function tooltip(node, fn) {
+		$effect(() => {
+			const tooltip = tippy(node, fn());
+
+			return tooltip.destroy;
+		});
+	}
+</script>
+
+<input bind:value={content} />
+
+<button use:tooltip={() => ({ content })}>
+	Hover me
+</button>
+```
+
+---
+
+Transitions are very useful for smoothly introducing elements into the DOM. Here is an example of a `fade` transition:
+```
+<script>
+	import { fade } from 'svelte/transition';
+	
+	let visible = $state(true);
+</script>
+
+<label>
+	<input type="checkbox" bind:checked={visible} />
+	visible
+</label>
+
+{#if visible}
+	<p transition:fade>
+		Fades in and out
+	</p>
+{/if}
+```
+Here is an example of fly:
+```
+<script>
+	import { fly } from 'svelte/transition';
+
+	let visible = $state(true);
+</script>
+
+<label>
+	<input type="checkbox" bind:checked={visible} />
+	visible
+</label>
+
+{#if visible}
+	<p transition:fly={{ y: 200, duration: 2000 }}>
+		Fades in and out
+	</p>
+{/if}
+```
+Here is more examples of transitions: https://svelte.dev/docs/svelte/svelte-transition
+
+You can also use multiple transitions at once:
+```
+{#if visible}
+	<p in:fly={{ y: 200, duration: 2000 }} out:fade>
+		Flies in, fades out
+	</p>
+{/if}
+```
+If you really want to get creative, you can create your own transitions:
+```
+function spin(node, { duration }) {
+	return {
+		duration,
+		css: (t, u) => {
+			const eased = elasticOut(t);
+
+			return `
+				tranform: scale(${eased}) rotate(${eased * 1080}deg);
+				color: hsl(
+					${Math.trunc(t * 360)},
+					${Math.min(100, 1000 * u)}%,
+					${Math.min(50, 500 * u)}%
+				);`
+		}
+	};
+}
+```
