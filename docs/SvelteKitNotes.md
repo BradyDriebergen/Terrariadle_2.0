@@ -94,6 +94,29 @@ You can use the simplify way to pass in these values too.
 
 ---
 
+An alternative to props is `Context`. Context is a way for components to 'talk' to each other without passing around data as props. It uses a Key/Value system.
+```
+import { setContext } from 'svelte'
+
+setContext('canvas', { addItem })
+
+function addItem(fn) {
+	$effect(() => {
+		items.add(fn);
+		return () => items.delete(fn);
+	});
+}
+
+---
+
+import { getContext } from 'svelte';
+
+getContext('canvas').addItem(draw);
+```
+Contexts can include anything, including reactive `$state`. This becomes very useful when you don't want to have to pass elements through layers of components. Contexts can be called in any child of the tree.
+
+---
+
 `if` blocks can be used like the following:
 ```
 {#if <condition>}
@@ -439,6 +462,60 @@ You can also use multiple transitions at once:
 	</p>
 {/if}
 ```
+
+This in and out functionality also works with *defering* transitions. This means that transitions can happen between multiple elements.
+```
+<ul class="todos">
+	{#each todos as todo (todo.id)}
+		<li
+			class={{ done: todo.done }}
+			in:receive={{ key: todo.id }}
+			out:send={{ key: todo.id }}
+		>
+			<label>
+				<input type="checkbox" bind:checked={todo.done}/>
+				<span>{todo.description}</span>
+				<button onclick={() => remove(todo)} aria-label="Remove"></button>
+			</label>
+		</li>
+	{/each}
+</ul>
+
+---
+
+import { crossfade } from 'svelte/transition';
+import { quintOut } from 'svelte/easing';
+
+export const [send, receive] = crossfade({
+	duration: (d) => Math.sqrt(d * 200),
+
+	fallback(node, params) {
+		const style = getComputedStyle(node);
+		const transform = style.transform === 'none' ? '' : style.transform;
+
+		return {
+			duration: 600,
+			easing: quintOut,
+			css: (t) => `
+				transform: ${transform} scale(${t});
+				opacity: ${t}
+			`
+		};
+	}
+});
+```
+See, this works by creating a pair of transitions called `send` and `recieve`. When an element is sent, it looks for a corresponding element being received. When found, it generates a transition that transforms the elements to each others' positions.
+For a more in-depth explanation, go to this link: https://svelte.dev/tutorial/svelte/deferred-transitions
+You can also add animations to these transitions
+```
+<li
+	class={{ done: todo.done }}
+	in:receive={{ key: todo.id }}
+	out:send={{ key: todo.id }}
+	animate:flip= {{ duration: 200 }}
+>
+```
+
 If you really want to get creative, you can create your own transitions:
 ```
 function spin(node, { duration }) {
@@ -777,4 +854,175 @@ You can also bind component instances using the same format.
 ```
 This is useful when you have buttons on a parent component that you want to call functions in the child component. Very useful. See https://svelte.dev/tutorial/svelte/component-this for more details.
 
-Ended - Deferred transitions
+---
+
+Svelte has many different special elements that you can use for your projects.
+
+`svelte:window` adds an event listener to the window object, allowing you to do things like this
+```
+<script>
+	let key = $state();
+	let keyCode = $state();
+
+	function onkeydown(event) {
+		key = event.key;
+		keyCode = event.keyCode;
+	}
+</script>
+
+<svelte:window {onkeydown} />
+
+<div style="text-align: center">
+	{#if key}
+		<kbd>{key === ' ' ? 'Space' : key}</kbd>
+		<p>{keyCode}</p>
+	{:else}
+		<p>Focus this window and press any key</p>
+	{/if}
+</div>
+```
+
+You can also bind certain properties to it:
+```
+<script>
+	let y = $state(0);
+</script>
+
+<svelte:window bind:scrollY={y}/>
+
+<span>depth: {y}px</span>
+```
+
+Here is a list of all the properties you can bind to it:
+- `innerWidth`
+- `innerHeight`
+- `outerWidth`
+- `outerHeight`
+- `scrollX`
+- `scrollY`
+- `online`
+
+---
+
+The `svelte:document` allows you to listen for events that fire on `document`. This is useful for things like `selectionchange`, which doesn't fire on `window`.
+
+```
+<script>
+	let selection = $state('');
+
+	const onselectionchange = (e) => {
+		selection = document.getSelection().toString();
+	};
+</script>
+
+<svelte:document {onselectionchange}/>
+
+<h1>Select this text to fire events</h1>
+<p>Selection: {selection}</p>
+```
+*The above example displays the selected text, pretty cool trick.*
+
+---
+
+`svelte:body` is the same as the two above but listen to events on the `document.body` element.
+```
+<script>
+	import kitten from './kitten.png';
+
+	let hereKitty = $state(false);
+</script>
+
+<svelte:body 
+	onmouseenter={() => hereKitty = true}
+	onmouseleave={() => hereKitty = false}
+/>
+
+<img
+	class={{ curious: hereKitty }}
+	alt="Kitten wants to know what's going on"
+	src={kitten}
+/>
+```
+
+---
+
+`svelte:head` allows you to dynamically insert elements into the document's `<head>`. It's useful for things like `<title>` and `<meta>` tags.
+```
+<script>
+	const themes = ['margaritaville', 'retrowave', 'spaaaaace', 'halloween'];
+	let selected = $state(themes[0]);
+</script>
+
+<svelte:head>
+	<link rel="stylesheet" href="/tutorial/stylesheets/{selected}.css" />
+</svelte:head>
+
+<h1>Welcome to my site!</h1>
+```
+*tutorial/stylesheets is a good place for examples of CSS*
+
+https://svelte.dev/tutorial/svelte/svelte-head
+
+---
+
+`svelte:element` is useful in nicher situations. for example, rather than having a long `{#if...}` block:
+```
+{#if selected === 'h1'}
+	<h1>I'm a <code>&lt;h1&gt;</code> element</h1>
+{:else}
+	<p>TODO others</p>
+{/if}
+```
+You can instead have one `svelte:element`:
+```
+<svelte:element this={selected}>
+	I'm a <code>&lt;{selected}&gt;</code> element
+</svelte:element>
+```
+
+---
+
+`svelte:boundry` is a useful way of preventing errors from leaving your app. I've never thought about error handling in my frontend but it seems like a useful tool for if things break in a certain area.
+
+```
+<svelte:boundary onerror={(e) => console.error(e)}>
+	<FlakyComponent />
+
+	// Can be failed(error) or failed(error, reset)
+	{#snippet failed(error, reset)}
+		<p>Oops! {error.message}</p>
+		<button onclick={reset}>Reset</button>
+	{/snippet}
+</svelte:boundary>
+```
+
+This example is going to take some explaining. `<FlakyComponent />` contains a button that sets a value to null, breaking the component. `svelte:boundry` can catch this error and handle it accordingly. First, you can simply add a `#snippet` that catches this error and a `failed(error)` to have the error message. You can also add `reset` to the parameters to add the ability to reset the component. Lastly, you can add a `onerror` call, which is useful for sending information about the error to a reporting service, or adding UI outside of the error boundary itself.
+
+---
+
+While the `<script>` tag is used to run code when a component is initialized, sometimes, we need to run some code outside of the component. To do this, we need to declare a `<script module>` tag.
+```
+<script module>
+	let current;
+</script>
+```
+This acts kind of like a `protected` value in Java. Each component has access to this one variable. It's good for tracking multiple components that need to talk to each other.
+
+You can also export functions in the `<script module>`
+```
+<script module>
+	let current;
+
+	export function pauseAll() {
+		current?.pause();
+	}
+</script>
+
+---
+
+import AudioPlayer, { pauseAll } from './AudioPlayer.svelte';
+```
+
+---
+
+Confetti example: https://svelte.dev/tutorial/svelte/congratulations
