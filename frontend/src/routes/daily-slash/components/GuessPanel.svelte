@@ -212,7 +212,7 @@
         background: var(--color-button);
         position: absolute;
         width: 245px;
-        margin-left: 13px;
+        margin-left: 36px;
         max-height: 240px;
         overflow-y: auto;
         border-radius: 8px;
