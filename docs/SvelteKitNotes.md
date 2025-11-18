@@ -641,3 +641,307 @@ export async function DELETE({ params, cookies }) {
 	return new Response(null, { status: 204 });
 }
 ```
+
+---
+
+## `page`
+
+SvelteKit makes three readonly state objects available through the `$app/state` module.
+- `page`
+- `navigating`
+- `updated`
+
+The first one, `page`, provides information about the current page:
+- `url` — the URL of the current page
+- `params` — the current page’s parameters
+- `route` — an object with an `id` property representing the current route
+- `status` — the HTTP status code of the current page
+- `error` — the error object of the current page
+- `data` — the data for the current page, combining the return values of all `load` functions
+- `form` — the data returned from a form action
+
+*+layout.svelte*
+```
+<script>
+	import { page } from '$app/state';
+	
+	let { children } = $props();
+</script>
+
+<nav>
+	<a href="/" aria-current={page.url.pathname === '/'}>
+		home
+	</a>
+
+	<a href="/about" aria-current={page.url.pathname === '/about'}>
+		about
+	</a>
+</nav>
+
+{@render children()}
+```
+
+In the above example, `aria-current` is there for accessibility for screen readers. It uses the `page.url` to determine if it's true or false. 
+
+## `navigating`
+
+Just like `page`, navigating represents the current navigation. For more information on how to use `navigating`, visit https://svelte.dev/docs/kit/@sveltejs-kit#Navigation
+
+```
+<script>
+	import { page, navigating } from '$app/state';
+	let { children } = $props();
+</script>
+
+<nav>
+	<a href="/" aria-current={page.url.pathname === '/'}>
+		home
+	</a>
+
+	<a href="/about" aria-current={page.url.pathname === '/about'}>
+		about
+	</a>
+
+	{#if navigating.to}
+		navigating to {navigating.to.url.pathname}
+	{/if}
+</nav>
+
+{@render children()}
+```
+This is a good example of a loading message for navigating to a page that takes a bit to load. You can see a good replication of this here: https://svelte.dev/tutorial/kit/navigating-state
+
+## `updated`
+
+The `updated` state contains true or false depending on whether a new version of the app has been deployed since the page was first opened.
+
+```
+<script>
+	import { page, navigating, updated } from '$app/state';
+	let { children } = $props();
+</script>
+
+<nav>
+	<a href="/" aria-current={page.url.pathname === '/'}>
+		home
+	</a>
+
+	<a href="/about" aria-current={page.url.pathname === '/about'}>
+		about
+	</a>
+
+	{#if navigating.to}
+		navigating to {navigating.to.url.pathname}
+	{/if}
+</nav>
+
+{@render children()}
+
+{#if updated.current}
+	<div class="toast">
+		<p>
+			A new version of the app is available
+	
+			<button onclick={() => location.reload()}>
+				reload the page
+			</button>
+		</p>
+	</div>
+{/if}
+```
+*For this to work, your `svelte.config.js` must specify `kit.version.pollInterval`.*
+
+This is a really good example of what to do if your production build changes. Including it on `layout` also allows you to not have to make a ton of if else statements. I recommend including something like this in the current site.
+
+---
+
+## Errors
+
+There are two types of errors in SvelteKit, *expected* errors and *unexpected* errors. An expected error is thrown by the error helper from `@sveltejs/kit`.
+
+```
+import { error } from '@sveltejs/kit';
+
+export function load() {
+	error(420, 'Enhance your calm');
+}
+```
+
+And the other error is one thrown as a JavaScript error:
+
+```
+export function load() {
+	throw new Error('Kaboom!');
+}
+```
+
+The main difference between these two is that SvelteKit knows what to do with an expected error. Your telling SvelteKit ‘don’t worry, I know what I’m doing here’. Unexpected errors on the other hand are assumed to be bugs in the app. This is important to know for error handling.
+
+We can make custom pages for errors, by adding `+error.svelte` to the `/routes` directory.
+
+*+error.svelte*
+```
+<script lang="ts">
+	import { page } from '$app/state';
+	import { emojis } from './emojis.js';
+</script>
+
+<h1>{page.status} {page.error.message}</h1>
+<span style="font-size: 10em">
+	{emojis[page.status] ?? emojis[500]}
+</span>
+```
+This page shows up when a SvelteKit error is found. You don't need to declare it in your `+layout.svelte`, it will automatically navigate to this page.
+
+This solution is good for when you want to handle expected errors. However, this won't work if we encounter unexpected errors (errors that actually break the app). Thankfully, we can handle this by making a file `src/error.html`.
+
+*src/error.html*
+```
+<h1>Game over</h1>
+<p>Code %sveltekit.status%</p>
+<p>%sveltekit.error.message%</p>
+```
+This file can include the following:
+- `%sveltekit.status%` — the HTTP status code
+- `%sveltekit.error.message%` — the error message
+
+---
+
+## Redirects
+
+`redirect` is a useful tool for redirecting from one page to another. This is useful for things like forms submissions (success page), temporary redirects, and permanent redirects.
+
+*+page.server.js*
+```
+import { redirect } from '@sveltejs/kit';
+
+export function load() {
+	redirect(307, '/<route>')
+}
+```
+
+Below are the most common status codes:
+- `303` — for form actions, following a successful submission
+- `307` — for temporary redirects
+- `308` — for permanent redirects
+
+---
+
+## Hooks
+
+SvelteKit provides several _hooks_ — ways to intercept and override the framework’s default behavior. The most elementary hook is `handle`, which lives inside of `src/hooks.server.js`. Below is how a default `handle` looks:
+
+```
+export async function handle({ event, resolve }) {
+	return await resolve(event);
+}
+```
+
+Below is an example of how we can use tools like `event` and `transformPageChunk` to catch certain things before they're loaded.
+
+```
+export async function handle({ event, resolve }) {
+	if (event.url.pathname === '/ping') {
+		return new Response('pong');
+	}
+	
+	return await resolve(event, {
+		transformPageChunk: ({ html }) => html.replace(
+			'<body',
+			'<body style="color: hotpink"'
+		)
+	});
+}
+```
+
+The `handle` hook is global middleware. Every request—page loads, API calls, assets—passes through here first. The function receives:
+- `event`: information about the incoming request
+- `resolve`: a function that processes the request normally (rendering pages, calling endpoints, etc.)
+
+In the first check, it checks to see if the pathname is equal to `/ping`. If so, the server does **not** render the Svelte app, rather responding with `pong`. This is commonly used for:
+- uptime checks
+- load balancer health checks
+- confirming the server is alive
+
+For all other requests, `resolve(event)` tells SvelteKit to continue processing everything normally. However, the `transformPageChunk` modifies the HTML by replacing `<body` with `<body style="color: hotpink"`. 
+
+Hooks are an interesting topic. It's an interesting thing to consider when you want your app to do a certain thing, unless specified otherwise. This process is better for other tasks like analytics and authentication.
+
+---
+
+## `{ event }` object
+
+The `event` object passed into the `handle` is the same object that is passed into API routes in `+server.js` files, form actions in `+page.server.js` files, and `load` functions in `+page.server.js` and `+layout.server.js`. This event is an instance of a RequestEvent.
+
+It contains a number of useful properties, such as:
+- `cookies` — the cookies API
+- `fetch` — the standard Fetch API, with additional powers
+- `getClientAddress()` — a function to get the client’s IP address
+- `isDataRequest` — `true` if the browser is requesting data for a page during client-side navigation, `false` if a page/route is being requested directly
+- `locals` — a place to put arbitrary data
+- `params` — the route parameters
+- `request` — the Request object
+- `route` — an object with an `id` property representing the route that was matched
+- `setHeaders(...)` — a function for setting up HTTP headers on the response
+- `url` — a URL object representing the current request
+
+An example of one of these is `event.locals`. 
+
+*src/hooks.server.js*
+```
+export async function handle({ event, resolve }) {
+	event.locals.answer = 42;
+	
+	return await resolve(event);
+}
+```
+
+*+page.server.js*
+```
+export function load(event) {
+	return {
+		message: `the answer is ${event.locals.answer}`
+	};
+}
+```
+
+As you can see, we made a value in the `event` object and we're able to call it in subsequent `load` functions.
+
+---
+
+## `handleFetch`
+
+The `event` object has a `fetch` method that behaves like the standard fetch API but with superpowers. 
+- it can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers from the incoming request
+- it can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context)
+- internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call
+
+This behavior can be used with the `handleFetch` hook.
+
+*+page.server.js*
+```
+export async function load({ fetch }) {
+	const response = await fetch('/a');
+
+	return {
+		message: await response.text()
+	};
+}
+```
+
+*src/hooks.server.js*
+```
+export async function handleFetch({ event, request, fetch }) {
+	const url = new URL(request.url);
+	if (url.pathname === '/a') {
+		return await fetch('/b')
+	}
+	
+	return await fetch(request);
+}
+```
+
+What this code does is sends a request to `a/+server.js` and responds with `b/+server.js`. It overwrote the call before the page was rendered and replaced it with a new one.
+
+
+This is where I'll end it here, I left it on the https://svelte.dev/tutorial/kit/handleerror. When I want to get more into SvelteKit API handling, I'll come back to it. For now, I'll rely on SvelteKit for frontend only.
