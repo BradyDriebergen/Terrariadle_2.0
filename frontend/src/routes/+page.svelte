@@ -11,20 +11,20 @@
 	<br />
 
 	<ul>
-		<li aria-current={page.url.pathname === '/daily-slash' ? 'page' : undefined}>
-			<a href={resolve('/daily-slash')}>Daily Slash</a>
+		<li aria-current={page.url.pathname === '/daily-slash'}>
+			<a href="/daily-slash">Daily Slash</a>
 		</li>
-		<li aria-current={page.url.pathname === '/connections' ? 'page' : undefined}>
-			<a href={resolve('/connections')}>Connections</a>
+		<li aria-current={page.url.pathname === '/connections'}>
+			<a href="/connections">Connections</a>
 		</li>
-		<li aria-current={page.url.pathname === '/guess-the-npc' ? 'page' : undefined}>
-			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
+		<li aria-current={page.url.pathname === '/guess-the-npc'}>
+			<a href="/guess-the-npc">Guess The NPC</a>
 		</li>
-		<li aria-current={page.url.pathname === '/hangman' ? 'page' : undefined}>
-			<a href={resolve('/hangman')}>Hangman</a>
+		<li aria-current={page.url.pathname === '/hangman'}>
+			<a href="/hangman">Hangman</a>
 		</li>
-		<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-			<a href={resolve('/about')}>About</a>
+		<li aria-current={page.url.pathname === '/about'}>
+			<a href="/about">About</a>
 		</li>
 	</ul>
 </div>
