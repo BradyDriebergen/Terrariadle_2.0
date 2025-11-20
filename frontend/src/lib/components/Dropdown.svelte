@@ -1,9 +1,43 @@
 <script lang="ts">
     import myImage from '$lib/assets/Abigails_Flower.png';
-
-    const items: string[] = ['option a', 'option b', 'option c'];
+    let { selectItem, items } = $props();
 
     let input = $state('');
+    let filtered = $state([...items]);
+    let dropdownIndex = $state(-1);
+    let itemElements = $state<(HTMLButtonElement | null)[]>([]); // used for smooth scrolling
+
+    // Effect for when input changes
+    $effect(() => {
+        const query = input.toLowerCase();
+        filtered = items.filter((item: string) => item.toLowerCase().includes(query)).slice(0, 20);
+        dropdownIndex = -1
+    })
+
+    // Keep the selected item in view when dropdownIndex changes
+    $effect(() => {
+        if (dropdownIndex < 0) return;
+
+        const el = itemElements[dropdownIndex];
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+    });
+
+    function onKeyDown(event: KeyboardEvent) {
+        if (!input) return;
+        if (event.key === 'ArrowDown') {
+            dropdownIndex = Math.min(dropdownIndex + 1, filtered.length - 1);
+            event.preventDefault();
+        } else if (event.key === 'ArrowUp') {
+            dropdownIndex = Math.max(dropdownIndex - 1, 0);
+            event.preventDefault();
+        } else if (event.key === 'Enter' && dropdownIndex >= 0) {
+            selectItem(filtered[dropdownIndex]);
+            input = '';
+            event.preventDefault();
+        }
+    }
 </script>
 
 <div class="wrapper">
@@ -11,21 +45,26 @@
         type="text" 
         placeholder="Type any weapon to guess..." 
         bind:value={input}
-        onkeydown={e => {
-            if (e.key !== 'Enter') return;
-
-            console.log(e.currentTarget);
-        }}
+        onkeydown={onKeyDown}
     />
 
     {#if input}
-        <div class="dropdown" >
-            {#each items as item}
-                <button class="item" onclick={() => input = item}>
-                    <img src={myImage} alt={item}/>
-                    <span>{item}</span>
-                </button>
-            {/each}
+        <div class="dropdown">
+            {#if filtered.length !== 0}
+                {#each filtered as item, i}
+                    <button 
+                        class="item" 
+                        class:selected={i === dropdownIndex}
+                        bind:this={itemElements[i]}
+                        onclick={() => {selectItem(item); input = ''}}
+                    > 
+                        <img src={myImage} alt={item}/>
+                        <span>{item}</span>
+                    </button>
+                {/each}
+            {:else}
+                <span class="no-items">No results...</span>
+            {/if}
         </div>
     {/if}
 </div>
@@ -57,11 +96,19 @@
         left: 0;
         background: var(--color-button);
         max-height: 240px;
+
         overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none; 
+
         border-radius: 8px;
         z-index: 50;
         border: thin solid black;
     }
+    .dropdown::-webkit-scrollbar {
+        display: none;
+    }
+
     .item {
         display: flex;
         gap: 8px;
@@ -74,17 +121,25 @@
         width: 100%;
         border: none;
     }
-    .item:hover{
+    .item:hover,
+    .item.selected {
         background: var(--color-lightblue);
     }
     .item span {
         font-size: 14px;
     }
-
     .item img {
         width: 35px;
         height: 35px;
         object-fit: contain;
+    }
+
+    .no-items {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 6px;
     }
     
 </style>
