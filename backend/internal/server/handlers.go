@@ -19,6 +19,25 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
 }
 
+func GetSearchItems(w http.ResponseWriter, r *http.Request) {
+	mode := r.PathValue("mode")
+
+	switch mode {
+	case "daily-slash":
+		searchItems, err := services.GetDailySlashSearchItems()
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, searchItems)
+		return
+	default:
+		writeJSON(w, http.StatusNotFound, map[string]any{
+			"error": fmt.Sprintf("Gamemode %s not found for searching items", mode),
+		})
+		return
+	}
+}
+
 // Handler for getting the data for the user to start playing
 func InitializeGame(w http.ResponseWriter, r *http.Request) {
 	mode := r.PathValue("mode")
@@ -35,28 +54,6 @@ func InitializeGame(w http.ResponseWriter, r *http.Request) {
 	case "connections":
 	case "guess-the-npc":
 	case "hangman":
-	default:
-		writeJSON(w, http.StatusNotFound, map[string]any{
-			"error": fmt.Sprintf("Gamemode %s not found", mode),
-		})
-		return
-	}
-}
-
-// Handler for searching for items and returning a set ammount of options
-func Search(w http.ResponseWriter, r *http.Request) {
-	mode := r.PathValue("mode")
-	q := r.URL.Query().Get("q")
-
-	switch mode {
-	case "daily-slash":
-		data, err := services.DailySlashSearch(q)
-		if err != nil {
-			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
-		}
-		writeJSON(w, http.StatusOK, data)
-		return
-	case "guess-the-npc":
 	default:
 		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found", mode),

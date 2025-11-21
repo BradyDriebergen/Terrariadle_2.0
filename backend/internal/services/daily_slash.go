@@ -2,7 +2,6 @@ package services
 
 import (
 	"fmt"
-	"strings"
 	"terrariadle-backend/internal/jsonreader"
 	"terrariadle-backend/internal/models"
 	"terrariadle-backend/internal/store"
@@ -19,12 +18,6 @@ type previousWeapon struct {
 	Name   string `json:"name"`
 	Path   string `json:"path"`
 	Rarity string `json:"rarity"`
-}
-
-type searchResult struct {
-	WeaponId int    `json:"weaponId"`
-	Name     string `json:"name"`
-	Path     string `json:"path"`
 }
 
 var rarities = map[string]int{
@@ -50,6 +43,15 @@ var useTimes = map[string]int{
 	"Very Slow":      2,
 	"Extremely Slow": 1,
 	"Snail":          0,
+}
+
+func GetDailySlashSearchItems() ([]jsonreader.SearchWeaponResult, error) {
+	result, ok := store.SearchWeaponsCache.Get()
+	if !ok {
+		return []jsonreader.SearchWeaponResult{}, fmt.Errorf("failed to get search data for weapons")
+	}
+
+	return result, nil
 }
 
 // Initializes the daily slash game for a user, returning the puzzle data and guessed weapons
@@ -103,36 +105,6 @@ func InitializeDailySlashGame(userId string) (WeaponOutput, []jsonreader.Weapon,
 
 	// Errors if can't find user guess data
 	return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("error getting player position")
-}
-
-// Searches for weapons matching the query string
-func DailySlashSearch(query string) ([]searchResult, error) {
-	if query == "" {
-		return []searchResult{}, fmt.Errorf("query cannot be empty")
-	}
-
-	weapons, ok := store.WeaponsCache.Get()
-	if !ok {
-		return []searchResult{}, fmt.Errorf("error getting weapon data from memstore")
-	}
-
-	// Gets the first 20 results of search
-	query = strings.ToLower(query)
-	results := []searchResult{}
-	for _, w := range weapons {
-		if strings.Contains(strings.ToLower(w.Name), query) {
-			results = append(results, searchResult{
-				WeaponId: w.ID,
-				Name:     w.Name,
-				Path:     w.Info.ImagePath,
-			})
-		}
-		if len(results) >= 20 { // limit results
-			break
-		}
-	}
-
-	return results, nil
 }
 
 // Checks a user's guess

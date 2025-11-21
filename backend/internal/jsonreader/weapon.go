@@ -23,6 +23,12 @@ type WeaponInfo struct {
 	Obtained   []string `json:"obtained"`
 }
 
+type SearchWeaponResult struct {
+	WeaponId int    `json:"weaponId"`
+	Name     string `json:"name"`
+	Path     string `json:"path"`
+}
+
 // Gets the weapons from a JSON and returns a slice
 func GetWeaponsFromJSON() ([]Weapon, error) {
 	weapons, err := loadJSONData[Weapon]("../data/weapons.json")
