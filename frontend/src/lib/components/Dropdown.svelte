@@ -1,16 +1,16 @@
 <script lang="ts">
-    import myImage from '$lib/assets/Abigails_Flower.png';
-    let { selectItem, items } = $props();
+	import type { SimpleWeapon } from '$lib/types/dailySlash';
+    let { selectItem, weaponList } = $props();
 
     let input = $state('');
-    let filtered = $state([...items]);
+    let filtered = $state([...weaponList]);
     let dropdownIndex = $state(-1);
     let itemElements = $state<(HTMLButtonElement | null)[]>([]); // used for smooth scrolling
 
     // Effect for when input changes
     $effect(() => {
         const query = input.toLowerCase();
-        filtered = items.filter((item: string) => item.toLowerCase().includes(query)).slice(0, 20);
+        filtered = weaponList.filter((w: SimpleWeapon) => w.name.toLowerCase().includes(query)).slice(0, 20);
         dropdownIndex = -1
     })
 
@@ -33,7 +33,7 @@
             dropdownIndex = Math.max(dropdownIndex - 1, 0);
             event.preventDefault();
         } else if (event.key === 'Enter' && dropdownIndex >= 0) {
-            selectItem(filtered[dropdownIndex]);
+            selectItem(filtered[dropdownIndex].weaponId);
             input = '';
             event.preventDefault();
         }
@@ -51,15 +51,15 @@
     {#if input}
         <div class="dropdown">
             {#if filtered.length !== 0}
-                {#each filtered as item, i}
+                {#each filtered as weapon, i}
                     <button 
                         class="item" 
                         class:selected={i === dropdownIndex}
                         bind:this={itemElements[i]}
-                        onclick={() => {selectItem(item); input = ''}}
+                        onclick={() => {selectItem(weapon.weaponId); input = ''}}
                     > 
-                        <img src={myImage} alt={item}/>
-                        <span>{item}</span>
+                        <img src={`/weapons/${weapon.path}`} alt={weapon.path}/>
+                        <span>{weapon.name}</span>
                     </button>
                 {/each}
             {:else}
@@ -73,6 +73,7 @@
     .wrapper {
         position: relative;
         display: inline-block;
+        margin: 0;
     }
 
     input {

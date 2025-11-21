@@ -8,11 +8,12 @@ import (
 
 // Global stores
 var (
-	GameData        = atomicstore.New[models.GameData]()
-	WeaponsCache    = atomicstore.New[[]jsonreader.Weapon]()
-	CategoriesCache = atomicstore.New[[]jsonreader.Category]()
-	NpcsCache       = atomicstore.New[[]jsonreader.Npc]()
-	EnemiesCache    = atomicstore.New[[]jsonreader.Enemy]()
+	GameData           = atomicstore.New[models.GameData]()
+	WeaponsCache       = atomicstore.New[[]jsonreader.Weapon]()
+	SearchWeaponsCache = atomicstore.New[[]jsonreader.SearchWeaponResult]()
+	CategoriesCache    = atomicstore.New[[]jsonreader.Category]()
+	NpcsCache          = atomicstore.New[[]jsonreader.Npc]()
+	EnemiesCache       = atomicstore.New[[]jsonreader.Enemy]()
 )
 
 // Loads the files from json into memory for faster access
@@ -22,6 +23,16 @@ func InitializeStoreFromJson() error {
 		return err
 	}
 	WeaponsCache.Set(weapons)
+
+	searchWeaponOptions := []jsonreader.SearchWeaponResult{}
+	for _, w := range weapons {
+		searchWeaponOptions = append(searchWeaponOptions, jsonreader.SearchWeaponResult{
+			WeaponId: w.ID,
+			Name:     w.Name,
+			Path:     w.Info.ImagePath,
+		})
+	}
+	SearchWeaponsCache.Set(searchWeaponOptions)
 
 	categories, err := jsonreader.GetCategoriesFromJson()
 	if err != nil {

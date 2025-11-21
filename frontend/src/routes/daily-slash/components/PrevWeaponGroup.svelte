@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let previousWeapon;
+    let { previousWeapon } = $props();
 </script>
 
 <div>

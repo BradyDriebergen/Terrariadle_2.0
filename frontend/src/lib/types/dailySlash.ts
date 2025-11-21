@@ -10,3 +10,9 @@ export interface PreviousWeapon {
 	path: string;
 	rarity: string;
 }
+
+export interface SimpleWeapon {
+    weaponId: number 
+	name: string
+	path: string
+}
