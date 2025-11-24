@@ -6,9 +6,9 @@
 }
 
 :root {
-	--color-backgroundblue: #263863;
-	--color-button: #303f83;
-	--color-lightblue: #495eab;
+	--color-backgroundblue: rgba(38, 56, 99, 0.8);
+	--color-button: rgba(48, 63, 131, 0.9);
+	--color-lightblue: rgb(73, 94, 171);
 }
 
 * {

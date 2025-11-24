@@ -1,16 +1,15 @@
 <script lang="ts">
-    let { previousWeapon } = $props();
+	let { previousWeapon } = $props();
 </script>
 
 <div>
-    <p>5 people have guessed today's weapon</p>
-    <p>Yesterday's weapon was:</p>
+	<p>5 people have guessed today's weapon</p>
+	<p>Yesterday's weapon was:</p>
 
-    <!-- Previous weapon -->
+	<!-- Previous weapon -->
 
-    <p>Guess any weapon to begin.</p>
+	<p>Guess any weapon to begin.</p>
 </div>
 
 <style>
-
 </style>

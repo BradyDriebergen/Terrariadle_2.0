@@ -12,7 +12,7 @@ export interface PreviousWeapon {
 }
 
 export interface SimpleWeapon {
-    weaponId: number 
-	name: string
-	path: string
+	id: number;
+	name: string;
+	path: string;
 }

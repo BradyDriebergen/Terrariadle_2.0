@@ -1,16 +1,37 @@
 <script>
-	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import { Spring } from 'svelte/motion';
+
+	let size = new Spring(400);
+
+	$effect(() => {
+		if (page.url.pathname === '/') {
+			size.target = 400;
+		} else {
+			size.target = 200;
+		}
+	});
 </script>
 
 <header>
-	<a href={resolve('/')}>
-		<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
-	</a>
+	<div>
+		<a href="/">
+			<img 
+				class="game-logo" 
+				src="/logos/TerrariadleLogo.png" 
+				alt="Terrariadle" 
+				width={size.current}
+			/>
+		</a>
+	</div>
 </header>
 
 <style>
+	div {
+		margin: auto;
+	}
+
 	.game-logo {
-		width: 400px;
 		max-width: 80%;
 		height: auto;
 		transition: transform 0.2s ease;

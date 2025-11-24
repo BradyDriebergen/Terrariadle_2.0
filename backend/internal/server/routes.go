@@ -48,6 +48,8 @@ func NewMux() http.Handler {
 
 	mux.HandleFunc("GET /api/health", HealthHandler) // Checks backend health
 
+	mux.HandleFunc("GET /api/daily-slash/hint/{hintNum}", GetHint) // Get's hints for daily slash
+
 	mux.HandleFunc("GET /api/{mode}/search-items", GetSearchItems) // Gets items for searching
 
 	mux.HandleFunc("GET /api/{mode}/initialize-game/{userId}", InitializeGame) // Gets user guesses and puzzle data
