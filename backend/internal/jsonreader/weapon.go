@@ -24,7 +24,7 @@ type WeaponInfo struct {
 }
 
 type SearchWeaponResult struct {
-	WeaponId int    `json:"weaponId"`
+	WeaponId int    `json:"id"`
 	Name     string `json:"name"`
 	Path     string `json:"path"`
 }

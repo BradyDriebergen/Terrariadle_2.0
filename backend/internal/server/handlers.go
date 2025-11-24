@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 	"terrariadle-backend/internal/services"
 	"terrariadle-backend/internal/utils"
 )
@@ -17,6 +18,19 @@ type GuessRequest struct {
 // Handler for checking the health of the backend
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+}
+
+func GetHint(w http.ResponseWriter, r *http.Request) {
+	hintNum, err := strconv.Atoi(r.PathValue("hintNum"))
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+	}
+
+	searchItems, err := services.GetDailySlashHint(hintNum)
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+	}
+	writeJSON(w, http.StatusOK, searchItems)
 }
 
 func GetSearchItems(w http.ResponseWriter, r *http.Request) {

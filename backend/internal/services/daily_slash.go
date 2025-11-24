@@ -45,6 +45,25 @@ var useTimes = map[string]int{
 	"Snail":          0,
 }
 
+func GetDailySlashHint(hintNum int) (string, error) {
+	gameData, ok := store.GameData.Get()
+	if !ok {
+		return "", fmt.Errorf("failed to get data from memstore")
+	}
+
+	puzzleData := gameData.DailySlash
+	switch hintNum {
+	case 1:
+		return puzzleData.CurrentWeapon.ModeObtained, nil
+	case 2:
+		return puzzleData.CurrentWeapon.WeaponType, nil
+	case 3:
+		return puzzleData.CurrentWeapon.Info.ImagePath, nil
+	default:
+		return "", fmt.Errorf("requested hint doesn't exist")
+	}
+}
+
 func GetDailySlashSearchItems() ([]jsonreader.SearchWeaponResult, error) {
 	result, ok := store.SearchWeaponsCache.Get()
 	if !ok {
