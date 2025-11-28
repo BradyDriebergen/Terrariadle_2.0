@@ -7,13 +7,6 @@ import (
 	"terrariadle-backend/internal/store"
 )
 
-type WeaponOutput struct {
-	PreviousWeaponData previousWeapon `json:"previousWeaponData"`
-	Hint1              string         `json:"hint1"`
-	Hint2              string         `json:"hint2"`
-	Hint3              string         `json:"hint3"`
-}
-
 type previousWeapon struct {
 	Name   string `json:"name"`
 	Path   string `json:"path"`
@@ -74,33 +67,28 @@ func GetDailySlashSearchItems() ([]jsonreader.SearchWeaponResult, error) {
 }
 
 // Initializes the daily slash game for a user, returning the puzzle data and guessed weapons
-func InitializeDailySlashGame(userId string) (WeaponOutput, []jsonreader.Weapon, error) {
+func InitializeDailySlashGame(userId string) (previousWeapon, []jsonreader.Weapon, error) {
 	// Gets daily game data and weapons from memstore
 	gameData, ok := store.GameData.Get()
 	if !ok {
-		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
+		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
 	}
 	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
+		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	puzzleData := gameData.DailySlash
-	weaponData := WeaponOutput{
-		PreviousWeaponData: previousWeapon{
-			Name:   puzzleData.PreviousWeapon.Name,
-			Path:   puzzleData.PreviousWeapon.Info.ImagePath,
-			Rarity: puzzleData.PreviousWeapon.Info.Rarity,
-		},
-		Hint1: puzzleData.CurrentWeapon.ModeObtained,
-		Hint2: puzzleData.CurrentWeapon.WeaponType,
-		Hint3: puzzleData.CurrentWeapon.Info.ImagePath,
+	previousWeaponData := previousWeapon{
+		Name:   puzzleData.PreviousWeapon.Name,
+		Path:   puzzleData.PreviousWeapon.Info.ImagePath,
+		Rarity: puzzleData.PreviousWeapon.Info.Rarity,
 	}
 
 	// Gets the user from the collection
 	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
-		return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get user in user guesses API")
+		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get user in user guesses API")
 	}
 
 	// Maps guessed weapons and returns puzzle data
@@ -118,12 +106,12 @@ func InitializeDailySlashGame(userId string) (WeaponOutput, []jsonreader.Weapon,
 				}
 			}
 
-			return weaponData, filtered, nil
+			return previousWeaponData, filtered, nil
 		}
 	}
 
 	// Errors if can't find user guess data
-	return WeaponOutput{}, []jsonreader.Weapon{}, fmt.Errorf("error getting player position")
+	return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("error getting player position")
 }
 
 // Checks a user's guess

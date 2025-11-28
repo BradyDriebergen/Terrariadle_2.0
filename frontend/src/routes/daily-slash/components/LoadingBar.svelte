@@ -3,9 +3,6 @@
     import loadingBackground from '$lib/assets/LoadingBackground.png';
     import loadingBar1 from '$lib/assets/LoadingBar1.png';
     import loadingBar2 from '$lib/assets/LoadingBar2.png'
-    import { Tween } from 'svelte/motion';
-
-	const tween = new Tween(0);
 
     let { guesses } = $props();
 

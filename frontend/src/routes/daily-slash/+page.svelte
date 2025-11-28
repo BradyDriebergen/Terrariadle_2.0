@@ -7,11 +7,11 @@
 
 	setContext('weapons', data.weapons);
 
-  let guesses = $state(0);
+  	let guesses = $state(0);
 </script>
 
 <div>
   <button onclick={() => guesses++}>Increase Guesses</button>
 	<GuessPanel numberOfGuesses={guesses} />
-	<PrevWeaponGroup previousWeapon={null} />
+	<PrevWeaponGroup previousWeapon={data.previousWeapon} />
 </div>
