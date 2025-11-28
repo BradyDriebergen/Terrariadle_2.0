@@ -16,3 +16,22 @@ export interface SimpleWeapon {
 	name: string;
 	path: string;
 }
+
+export interface Weapon {
+  id: number;
+  name: string;
+  "weapon-type": string;
+  "mode-obtained": string;
+  info: WeaponInfo;
+}
+
+export interface WeaponInfo {
+  "image-path": string;
+  "damage-type": string;
+  damage: number;
+  "use-time": string;
+  rarity: string;
+  operation: string;
+  material: string;
+  obtained: string[];
+}

@@ -1,11 +1,10 @@
 <script lang="ts">
 	import Dropdown from '$lib/components/Dropdown.svelte';
     import hintLock from '$lib/assets/LockedHint.png';
-	import { getContext } from 'svelte';
 	import LoadingBar from './LoadingBar.svelte';
 
-	let { numberOfGuesses } = $props();
-	let weaponList = getContext('weapons');
+	let { guesses, submitGuess, weaponList } = $props();
+	let guessCount = $derived(guesses?.length ?? 0);
 
 	let hints = $state(['', '', '']);
     let showHints = $state([false, false, false])
@@ -26,36 +25,36 @@
 	<h2>Guess Today's Weapon</h2>
 
     <div class="loadingBar">
-        <LoadingBar guesses={numberOfGuesses} />
+        <LoadingBar guesses={guessCount} />
     </div>
 
 	<div class="hint-buttons">
 		<button
-			disabled={numberOfGuesses < 4}
+			disabled={guessCount < 4}
 			onclick={() => revealHint(1)}
 		>
-            {#if numberOfGuesses < 4} 
+            {#if guessCount < 4} 
                 <img class="lock" src={hintLock} alt="Locked hint"/> 
             {/if}
 			<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
 		</button>
 		<button
-			disabled={numberOfGuesses < 7}
+			disabled={guessCount < 7}
 			onclick={() => revealHint(2)}
 		>
-            {#if numberOfGuesses < 7} 
+            {#if guessCount < 7} 
                 <img class="lock" src={hintLock} alt="Locked hint"/> 
             {/if}
             <span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
 		</button>
 		<button
-			disabled={numberOfGuesses < 12}
+			disabled={guessCount < 12}
 			onclick={() => revealHint(3)}
 		>
 			{#if showHints[2]}
                 <img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
             {:else}
-                {#if numberOfGuesses < 12} 
+                {#if guessCount < 12} 
                     <img class="lock" src={hintLock} alt="Locked hint"/> 
                 {/if}
                 <span>Image Clue</span>
@@ -66,7 +65,7 @@
 	<div class="dropdown">
 		<Dropdown
 			selectItem={(weaponid: number) => {
-				console.log(weaponid);
+				submitGuess(weaponid);
 			}}
 			itemList={weaponList}
             itemName="weapon"
