@@ -59,11 +59,11 @@ func InitializeGame(w http.ResponseWriter, r *http.Request) {
 
 	switch mode {
 	case "daily-slash":
-		puzzleData, guesses, err := services.InitializeDailySlashGame(userId)
+		previousWeapon, guesses, err := services.InitializeDailySlashGame(userId)
 		if err != nil {
 			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
 		}
-		writeJSON(w, http.StatusOK, map[string]any{"puzzleData": puzzleData, "guesses": guesses})
+		writeJSON(w, http.StatusOK, map[string]any{"previousWeapon": previousWeapon, "guesses": guesses})
 		return
 	case "connections":
 	case "guess-the-npc":

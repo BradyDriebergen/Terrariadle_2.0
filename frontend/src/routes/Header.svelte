@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { Spring } from 'svelte/motion';
 
-	let size = new Spring(400);
+	let size = new Spring(page.url.pathname === '/' ? 400 : 200);
 
 	$effect(() => {
 		if (page.url.pathname === '/') {
