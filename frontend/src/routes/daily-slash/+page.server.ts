@@ -1,4 +1,4 @@
-import type { PreviousWeapon, SimpleWeapon } from '$lib/types/dailySlash.js';
+import type { PreviousWeapon, SimpleWeapon, Weapon } from '$lib/types/dailySlash.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, parent }) {
@@ -8,7 +8,7 @@ export async function load({ fetch, parent }) {
 	if (!weaponFetch) {
 		error(404, 'Unable to fetch weapons');
 	}
-	const weapons: SimpleWeapon[] = await weaponFetch.json();
+	let weapons: SimpleWeapon[] = await weaponFetch.json();
 
 	const initData = await fetch(`http://localhost:3000/api/daily-slash/initialize-game/${userId}`);
 	if (!weaponFetch) {
@@ -17,7 +17,10 @@ export async function load({ fetch, parent }) {
 	const initDataJson = await initData.json();
 
 	const previousWeapon = initDataJson.previousWeapon;
-	const guesses = initDataJson.guesses;
+	const guesses: Weapon[] = initDataJson.guesses ?? [];
+
+	const guessIds: number[] = guesses?.map(g => g.id) ?? [];
+	weapons = weapons.filter(w => !guessIds.includes(w.id));
 
 	return { weapons, previousWeapon, guesses };
 }
