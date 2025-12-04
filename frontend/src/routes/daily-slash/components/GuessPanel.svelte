@@ -3,7 +3,7 @@
     import hintLock from '$lib/assets/LockedHint.png';
 	import LoadingBar from './LoadingBar.svelte';
 
-	let { guesses, submitGuess, weaponList } = $props();
+	let { guesses, submitGuess, weaponList, won } = $props();
 	let guessCount = $derived(guesses?.length ?? 0);
 
 	let hints = $state(['', '', '']);
@@ -25,36 +25,36 @@
 	<h2>Guess Today's Weapon</h2>
 
     <div class="loadingBar">
-        <LoadingBar guesses={guessCount} />
+        <LoadingBar guesses={guessCount} won={won} />
     </div>
 
 	<div class="hint-buttons">
 		<button
-			disabled={guessCount < 4}
+			disabled={guessCount < 4 && !won}
 			onclick={() => revealHint(1)}
 		>
-            {#if guessCount < 4} 
+            {#if guessCount < 4 && !won} 
                 <img class="lock" src={hintLock} alt="Locked hint"/> 
             {/if}
 			<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
 		</button>
 		<button
-			disabled={guessCount < 7}
+			disabled={guessCount < 7 && !won}
 			onclick={() => revealHint(2)}
 		>
-            {#if guessCount < 7} 
+            {#if guessCount < 7 && !won} 
                 <img class="lock" src={hintLock} alt="Locked hint"/> 
             {/if}
             <span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
 		</button>
 		<button
-			disabled={guessCount < 12}
+			disabled={guessCount < 12 && !won}
 			onclick={() => revealHint(3)}
 		>
 			{#if showHints[2]}
                 <img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
             {:else}
-                {#if guessCount < 12} 
+                {#if guessCount < 12 && !won} 
                     <img class="lock" src={hintLock} alt="Locked hint"/> 
                 {/if}
                 <span>Image Clue</span>
@@ -62,15 +62,17 @@
 		</button>
 	</div>
 
-	<div class="dropdown">
-		<Dropdown
-			selectItem={(weaponid: number) => {
-				submitGuess(weaponid);
-			}}
-			itemList={weaponList}
-            itemName="weapon"
-		/>
-	</div>
+	{#if !won}
+		<div class="dropdown">
+			<Dropdown
+				selectItem={(weaponid: number) => {
+					submitGuess(weaponid);
+				}}
+				itemList={weaponList}
+				itemName="weapon"
+			/>
+		</div>
+	{/if}
 </div>
 
 <style>

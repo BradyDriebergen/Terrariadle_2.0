@@ -21,6 +21,6 @@ func TimeUntilNextMidnightFromNow() time.Duration {
 }
 
 // Used for testing, get's the next ten seconds
-// func nextTenSeconds(t time.Time) time.Time {
-// 	return t.Truncate(10 * time.Second).Add(10 * time.Second)
-// }
+func NextShortTime(t time.Time) time.Time {
+	return t.Truncate(10 * time.Second).Add(10 * 60 * time.Second)
+}

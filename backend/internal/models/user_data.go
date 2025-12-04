@@ -14,18 +14,21 @@ import (
 
 // UserData represents the MongoDB document structure
 type UserData struct {
-	ID     primitive.ObjectID `bson:"_id,omitempty"`
-	UserID string             `bson:"userId,omitempty"`
-	Games  []Game             `bson:"games"`
+	ID         primitive.ObjectID `bson:"_id,omitempty"`
+	UserID     string             `bson:"userId,omitempty"`
+	DailySlash DailySlashGame     `bson:"dailySlash,omitempty"`
 }
 
 // Game represents one game entry inside GuessDocument
 type Game struct {
-	GameType string         `bson:"gameType"`           // required in Mongoose
-	Guesses  []int          `bson:"guesses,omitempty"`  // default: []
-	HasWon   bool           `bson:"hasWon,omitempty"`   // default: false
-	Position int            `bson:"position,omitempty"` // default: -1
-	Extra    map[string]any `bson:"extra,omitempty"`    // flexible field for game-specific data
+	Guesses  []int `bson:"guesses,omitempty"`  // default: []
+	HasWon   bool  `bson:"hasWon,omitempty"`   // default: false
+	Position int   `bson:"position,omitempty"` // default: -1
+}
+
+type DailySlashGame struct {
+	Game   Game           `bson:"game"`
+	Checks []WeaponChecks `bson:"checks"`
 }
 
 // Little checklist for how this works:
@@ -36,7 +39,7 @@ type Game struct {
 	Obtained: 0 = no match, 1 = partial, 2 = exact
 */
 type WeaponChecks struct {
-	WeaponType bool `bson:"weaponType"`
+	DamageType bool `bson:"damageType"`
 	Damage     int  `bson:"damage"`
 	UseTime    int  `bson:"useTime"`
 	Rarity     int  `bson:"rarity"`
@@ -72,41 +75,14 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			newUser := UserData{
 				UserID: userId,
-				Games: []Game{
-					{
-						GameType: "DailySlash",
+				DailySlash: DailySlashGame{
+					Game: Game{
 						Guesses:  []int{},
 						HasWon:   false,
 						Position: 0,
-						Extra: map[string]any{
-							"WeaponChecks": []WeaponChecks{},
-						},
 					},
-					{
-						GameType: "Connections",
-						Guesses:  []int{},
-						HasWon:   false,
-						Position: 0,
-						Extra: map[string]any{
-							"NameGuess": "",
-						},
-					},
-					{
-						GameType: "GuessTheNpc",
-						Guesses:  []int{},
-						HasWon:   false,
-						Position: 0,
-						Extra: map[string]any{
-							"Attempts": 4,
-						},
-					},
-					{
-						GameType: "Hangman",
-						Guesses:  []int{},
-						HasWon:   false,
-						Position: 0,
-						Extra:    map[string]any{},
-					}},
+					Checks: []WeaponChecks{},
+				},
 			}
 			return &newUser, nil
 		}
@@ -120,5 +96,11 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 func UpdateUserData(user *UserData) error {
 	collection := db.GetCollection("terrariadle", "user_guesses")
 	err := db.UpsertRecord(collection, bson.M{"userId": user.UserID}, bson.M{"$set": user})
+	return err
+}
+
+func DeleteUserData() error {
+	collection := db.GetCollection("terrariadle", "user_guesses")
+	err := db.DropCollection(collection)
 	return err
 }

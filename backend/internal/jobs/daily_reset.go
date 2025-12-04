@@ -39,7 +39,8 @@ func StartResetJob() {
 
 	for {
 		now := time.Now().In(loc)
-		next := utils.NextMidnight(now)
+		// next := utils.NextMidnight(now)
+		next := utils.NextShortTime(now)
 		timer := time.NewTimer(time.Until(next))
 
 		select {
@@ -48,6 +49,7 @@ func StartResetJob() {
 			return
 		case <-timer.C:
 			reset(loc)
+			fmt.Println("Weapons reset on:", time.Now().In(loc))
 			// then loop to compute the *next* midnight again
 		}
 	}
@@ -58,6 +60,11 @@ and assign them to each guess_counts (in case the server crashes)*/
 
 func reset(loc *time.Location) {
 	fmt.Println("Reseting daily game data at:", time.Now())
+
+	err := models.DeleteUserData()
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
 	game, err := models.GetGameData()

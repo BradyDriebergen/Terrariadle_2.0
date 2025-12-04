@@ -64,6 +64,19 @@ func GetCollection(database, collection string) *mongo.Collection {
 	return Client.Database(database).Collection(collection)
 }
 
+// DropCollection drops the provided collection.
+func DropCollection(collection *mongo.Collection) error {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	if err := collection.Drop(ctx); err != nil {
+		return fmt.Errorf("failed to drop collection %s.%s: %v", collection.Database().Name(), collection.Name(), err)
+	}
+
+	fmt.Printf("Dropped collection %s.%s\n", collection.Database().Name(), collection.Name())
+	return nil
+}
+
 // Inserts a record into a collection
 func InsertRecord(collection *mongo.Collection, data any) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

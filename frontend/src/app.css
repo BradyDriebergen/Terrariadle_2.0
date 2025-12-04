@@ -21,6 +21,11 @@
 	color: white;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
 	background-image: url('/backgrounds/forest-background.png');
 	background-size: cover;
