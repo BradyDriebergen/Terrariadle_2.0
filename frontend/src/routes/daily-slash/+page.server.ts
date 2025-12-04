@@ -18,9 +18,11 @@ export async function load({ fetch, parent }) {
 
 	const previousWeapon = initDataJson.previousWeapon;
 	const guesses: Weapon[] = initDataJson.guesses ?? [];
+	const checks = initDataJson.checks;
+	const won = initDataJson.won;
 
 	const guessIds: number[] = guesses?.map(g => g.id) ?? [];
 	weapons = weapons.filter(w => !guessIds.includes(w.id));
 
-	return { weapons, previousWeapon, guesses };
+	return { weapons, previousWeapon, guesses, checks, won };
 }

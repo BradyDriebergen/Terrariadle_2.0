@@ -27,7 +27,10 @@
 
 	function onKeyDown(event: KeyboardEvent) {
 		if (!input) return;
-		if (event.key === 'ArrowDown') {
+		if (event.key === 'Tab') {
+			dropdownIndex++;
+			event.preventDefault();
+		} else if (event.key === 'ArrowDown') {
 			dropdownIndex = Math.min(dropdownIndex + 1, filtered.length - 1);
 			event.preventDefault();
 		} else if (event.key === 'ArrowUp') {

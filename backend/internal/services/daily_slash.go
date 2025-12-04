@@ -67,15 +67,15 @@ func GetDailySlashSearchItems() ([]jsonreader.SearchWeaponResult, error) {
 }
 
 // Initializes the daily slash game for a user, returning the puzzle data and guessed weapons
-func InitializeDailySlashGame(userId string) (previousWeapon, []jsonreader.Weapon, error) {
+func InitializeDailySlashGame(userId string) (previousWeapon, []jsonreader.Weapon, []models.WeaponChecks, bool, error) {
 	// Gets daily game data and weapons from memstore
 	gameData, ok := store.GameData.Get()
 	if !ok {
-		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
+		return previousWeapon{}, []jsonreader.Weapon{}, []models.WeaponChecks{}, false, fmt.Errorf("failed to get data from memstore")
 	}
 	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
+		return previousWeapon{}, []jsonreader.Weapon{}, []models.WeaponChecks{}, false, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	puzzleData := gameData.DailySlash
@@ -88,56 +88,59 @@ func InitializeDailySlashGame(userId string) (previousWeapon, []jsonreader.Weapo
 	// Gets the user from the collection
 	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
-		return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("failed to get user in user guesses API")
+		return previousWeapon{}, []jsonreader.Weapon{}, []models.WeaponChecks{}, false, fmt.Errorf("failed to get user in user guesses API")
 	}
 
 	// Maps guessed weapons and returns puzzle data
-	for i := range user.Games {
-		if user.Games[i].GameType == "DailySlash" {
-			weaponSet := make(map[int]bool)
-			for _, id := range user.Games[i].Guesses {
-				weaponSet[id] = true
-			}
+	weaponByID := make(map[int]jsonreader.Weapon)
+	for _, w := range weapons {
+		weaponByID[w.ID] = w
+	}
 
-			var filtered []jsonreader.Weapon
-			for _, w := range weapons {
-				if weaponSet[w.ID] {
-					filtered = append(filtered, w)
-				}
-			}
-
-			return previousWeaponData, filtered, nil
+	var filtered []jsonreader.Weapon
+	for _, id := range user.DailySlash.Game.Guesses {
+		if w, ok := weaponByID[id]; ok {
+			filtered = append(filtered, w)
 		}
 	}
 
-	// Errors if can't find user guess data
-	return previousWeapon{}, []jsonreader.Weapon{}, fmt.Errorf("error getting player position")
+	return previousWeaponData, filtered, user.DailySlash.Checks, user.DailySlash.Game.HasWon, nil
 }
 
 // Checks a user's guess
-func CheckDailySlashGuess(userId string, weaponId int) (bool, jsonreader.Weapon, error) {
+func CheckDailySlashGuess(userId string, weaponId int) (bool, jsonreader.Weapon, models.WeaponChecks, error) {
 	// Initial checks
-	if weaponId > 450 {
-		return false, jsonreader.Weapon{}, fmt.Errorf("invalid weapon ID")
-	}
 	if !isValidUUID(userId) {
-		return false, jsonreader.Weapon{}, fmt.Errorf("invalid user ID")
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, fmt.Errorf("invalid user ID")
 	}
 
 	// Gets user from database
 	user, err := models.GetOrCreateUser(userId)
 	if err != nil {
-		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get user in check API")
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, fmt.Errorf("failed to get user in check API")
 	}
 
 	// Gets memstore data
 	gameData, ok := store.GameData.Get()
 	if !ok {
-		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get data from memstore")
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, fmt.Errorf("failed to get data from memstore")
 	}
 	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
-		return false, jsonreader.Weapon{}, fmt.Errorf("failed to get weapons from memstore")
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, fmt.Errorf("failed to get weapons from memstore")
+	}
+
+	guessedWeapon := jsonreader.Weapon{}
+	found := false
+	for _, w := range weapons {
+		if w.ID == weaponId {
+			guessedWeapon = w
+			found = true
+			break
+		}
+	}
+	if !found {
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, fmt.Errorf("weapon with id %d not found", weaponId)
 	}
 
 	// Checks guess
@@ -147,32 +150,27 @@ func CheckDailySlashGuess(userId string, weaponId int) (bool, jsonreader.Weapon,
 	}
 
 	// Updates user based on guess
-	for i := range user.Games {
-		if user.Games[i].GameType == "DailySlash" {
-			// Sets Guesses
-			user.Games[i].Guesses = append(user.Games[i].Guesses, weaponId)
+	user.DailySlash.Game.Guesses = append([]int{weaponId}, user.DailySlash.Game.Guesses...)
 
-			// Update weapon checks for this guess
-			user.Games[i].Extra["WeaponChecks"] = checkGuess(weapons[weaponId-1], gameData.DailySlash.CurrentWeapon)
+	// Update weapon checks for this guess
+	checkResults := checkGuess(guessedWeapon, gameData.DailySlash.CurrentWeapon)
+	user.DailySlash.Checks = append([]models.WeaponChecks{checkResults}, user.DailySlash.Checks...)
 
-			// Sets winning
-			if won {
-				user.Games[i].HasWon = true
-				gameData.GuessCounts.DailySlashCount += 1
-				user.Games[i].Position = gameData.GuessCounts.DailySlashCount
-				store.GameData.Set(gameData)
+	// Sets winning
+	if won {
+		user.DailySlash.Game.HasWon = true
+		gameData.GuessCounts.DailySlashCount += 1
+		user.DailySlash.Game.Position = gameData.GuessCounts.DailySlashCount
+		store.GameData.Set(gameData)
 
-			}
-			break
-		}
 	}
+
 	err = models.UpdateUserData(user)
 	if err != nil {
-		return false, jsonreader.Weapon{}, err
+		return false, jsonreader.Weapon{}, models.WeaponChecks{}, err
 	}
 
-	guessedWeapon := weapons[weaponId-1]
-	return won, guessedWeapon, nil
+	return won, guessedWeapon, checkResults, nil
 }
 
 // Gets the winning position and total players for daily slash
@@ -188,16 +186,11 @@ func GetDailySlashWinningData(userId string) (int, int, error) {
 	}
 
 	// Gets winning position and player count
-	for i := range user.Games {
-		if user.Games[i].GameType == "DailySlash" {
-			if len(user.Games[i].Guesses) > 0 {
-				return user.Games[i].Position, gameData.GuessCounts.DailySlashCount, nil
-			}
-			return 0, 0, fmt.Errorf("player doesn't exist")
-		}
+	if len(user.DailySlash.Game.Guesses) > 0 {
+		return user.DailySlash.Game.Position, gameData.GuessCounts.DailySlashCount, nil
 	}
 
-	return 0, 0, fmt.Errorf("error getting player position")
+	return 0, 0, fmt.Errorf("player doesn't exist")
 }
 
 func checkGuess(guess, answer jsonreader.Weapon) models.WeaponChecks {
@@ -225,7 +218,7 @@ func checkGuess(guess, answer jsonreader.Weapon) models.WeaponChecks {
 	obtained := guessObtained(guess.Info.Obtained, answer.Info.Obtained)
 
 	return models.WeaponChecks{
-		WeaponType: answer.WeaponType == guess.WeaponType,
+		DamageType: answer.Info.DamageType == guess.Info.DamageType,
 		Damage:     damage,
 		UseTime:    useTime,
 		Rarity:     rarity,
