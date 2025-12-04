@@ -2,6 +2,7 @@
 	import GuessList from './components/GuessList.svelte';
 	import GuessPanel from './components/GuessPanel.svelte';
 	import PrevWeaponGroup from './components/PrevWeaponGroup.svelte';
+	import WinningPanel from './components/WinningPanel.svelte';
 
 	let { data } = $props();
 
@@ -38,7 +39,7 @@
 	/>
 
 	{#if won}
-		<p>You won!</p>
+		<WinningPanel weapon={guesses[0]} userId={data.userId}/>
 	{/if}
 
 	{#if guesses.length < 1}

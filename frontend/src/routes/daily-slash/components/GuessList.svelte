@@ -3,9 +3,6 @@
 	import { fly } from "svelte/transition";
     let { guesses, checks } = $props();
 
-    $inspect(checks);
-    $inspect(guesses);
-
     const guessCorrect = 'background-color: rgb(61, 212, 41);';
     const guessPartial =  'background-color: yellow;';
     const guessWrong = 'background-color: red;';

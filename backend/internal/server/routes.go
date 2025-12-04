@@ -53,10 +53,10 @@ func NewMux() http.Handler {
 	mux.HandleFunc("GET /api/{mode}/search-items", GetSearchItems)             // Gets items for searching
 	mux.HandleFunc("GET /api/{mode}/initialize-game/{userId}", InitializeGame) // Gets user guesses and puzzle data
 
-	mux.HandleFunc("POST /api/{mode}/check-guess", CheckGuess)             // Checks user guess
-	mux.HandleFunc("GET /api/{mode}/winning-data/{userId}", HealthHandler) // Gets users position and total players guessed
+	mux.HandleFunc("POST /api/{mode}/check-guess", CheckGuess)              // Checks user guess
+	mux.HandleFunc("GET /api/{mode}/winning-data/{userId}", GetWinningData) // Gets users position and total players guessed
 
-	mux.HandleFunc("GET /api/remaining-time", HealthHandler) // Gets the remaining time in the day
+	mux.HandleFunc("GET /api/remaining-time", GetRemainingTime) // Gets the remaining time in the day
 
 	return withCORS(mux)
 }
