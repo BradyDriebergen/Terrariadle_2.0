@@ -133,7 +133,11 @@ func GetWinningData(w http.ResponseWriter, r *http.Request) {
 
 // Handler for getting the remaining time in the day in seconds
 func GetRemainingTime(w http.ResponseWriter, r *http.Request) {
-	writeJSON(w, http.StatusOK, int64(utils.TimeUntilNextMidnightFromNow().Seconds()))
+	data := map[string]int64{
+		"remaining": int64(utils.TimeUntilNextMidnightFromNow().Seconds()),
+	}
+
+	writeJSON(w, http.StatusOK, data)
 }
 
 // Helper method for writing a response
