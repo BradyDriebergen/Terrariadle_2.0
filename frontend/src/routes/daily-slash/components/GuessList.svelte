@@ -1,5 +1,6 @@
 <script lang="ts">
     import { colors, type Rarity } from "$lib/types/dailySlash";
+	import { flip } from "svelte/animate";
 	import { fly } from "svelte/transition";
     let { guesses, checks } = $props();
 
@@ -21,7 +22,7 @@
     }
 </script>
 
-<div in:fly={{ x: 800, duration: 1000 }}>
+<div in:fly={{ x: 800, duration: 1000 }} >
     <div class="header">
         <span title="Image of Weapon">Weapon</span>
         <span title="Melee, Ranged, Magic, Summon, Throwing">Damage Type</span>
@@ -33,7 +34,7 @@
         <span title="Crafting, Chest, Buy, Drop, Fishing, Background Object">Obtained</span>
     </div>
     {#each guesses as guess, i (guess.id)}
-        <div class="row">
+        <div class="row" animate:flip>
             <div in:fly={{ x: 800, duration: 2000 }}>
                 <img src={`/weapons/${guess.info['image-path']}`} alt={`${guess.name} image`}/>
             </div>
