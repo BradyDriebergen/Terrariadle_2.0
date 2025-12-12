@@ -2,7 +2,7 @@
 	import Dropdown from '$lib/components/Dropdown.svelte';
     import hintLock from '$lib/assets/LockedHint.png';
 	import LoadingBar from './LoadingBar.svelte';
-	import { slide } from 'svelte/transition';
+	import { scale, slide } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 
 	let { guesses, submitGuess, weaponList, won } = $props();
@@ -37,7 +37,7 @@
 			onclick={() => revealHint(1)}
 		>
             {#if guessCount < 4 && !won} 
-                <img class="lock" src={hintLock} alt="Locked hint"/> 
+                <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
             {/if}
 			<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
 		</button>
@@ -46,7 +46,7 @@
 			onclick={() => revealHint(2)}
 		>
             {#if guessCount < 7 && !won} 
-                <img class="lock" src={hintLock} alt="Locked hint"/> 
+                <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
             {/if}
             <span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
 		</button>
@@ -58,7 +58,7 @@
                 <img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
             {:else}
                 {#if guessCount < 12 && !won} 
-                    <img class="lock" src={hintLock} alt="Locked hint"/> 
+                    <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
                 {/if}
                 <span>Image Clue</span>
             {/if}
