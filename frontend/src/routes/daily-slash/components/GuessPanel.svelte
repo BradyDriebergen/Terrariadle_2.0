@@ -2,12 +2,14 @@
 	import Dropdown from '$lib/components/Dropdown.svelte';
     import hintLock from '$lib/assets/LockedHint.png';
 	import LoadingBar from './LoadingBar.svelte';
+	import { slide } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
 
 	let { guesses, submitGuess, weaponList, won } = $props();
 	let guessCount = $derived(guesses?.length ?? 0);
 
 	let hints = $state(['', '', '']);
-    let showHints = $state([false, false, false])
+    let showHints = $state([false, false, false]);
 
     async function revealHint(num: number) {
         if (hints[num - 1]) {
@@ -21,12 +23,13 @@
     }
 </script>
 
-<div class="guess-panel">
+{#if !won}
+<div class="guess-panel" out:slide={{ duration: 700, easing: cubicInOut }}>
 	<h2>Guess Today's Weapon</h2>
 
-    <div class="loadingBar">
-        <LoadingBar guesses={guessCount} won={won} />
-    </div>
+	<div class="loadingBar" class:won={won}>
+		<LoadingBar guesses={guessCount} won={won} />
+	</div>
 
 	<div class="hint-buttons">
 		<button
@@ -62,18 +65,19 @@
 		</button>
 	</div>
 
-	{#if !won}
-		<div class="dropdown">
-			<Dropdown
-				selectItem={(weaponid: number) => {
-					submitGuess(weaponid);
-				}}
-				itemList={weaponList}
-				itemName="weapon"
-			/>
-		</div>
-	{/if}
+	<div class="dropdown" class:won={won}>
+		<Dropdown
+			selectItem={(weaponid: number) => {
+				submitGuess(weaponid);
+			}}
+			itemList={weaponList}
+			itemName="weapon"
+		/>
+	</div>
 </div>
+{:else}
+	<span class="color-cycle">Daily Slash Results</span>
+{/if}
 
 <style>
 	.guess-panel {
@@ -146,5 +150,21 @@
 	.dropdown {
 		margin-top: 15px;
 		margin-bottom: 5px;
+	}
+
+	.color-cycle {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 22px;
+		animation: colors 6s linear infinite;
+	}
+
+	@keyframes colors {
+		0%   { color: rgb(255, 0, 0); }
+		20%  { color: rgb(255, 166, 0); }
+		40%  { color: rgb(255, 255, 0); }
+		60%  { color: rgb(0, 255, 0); }
+		80%  { color: rgb(0, 162, 255); }
+		100% { color: rgb(255, 0, 0); }
 	}
 </style>

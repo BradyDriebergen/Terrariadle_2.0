@@ -1,6 +1,9 @@
 <script lang="ts">
     import { backgrounds, borders, colors, type Rarity } from "$lib/types/dailySlash";
+	import { ConvertPositionToString } from "$lib/utils/posToString";
+	import { typewriter } from "$lib/utils/transitions";
 	import { onMount } from "svelte";
+	import { scale } from "svelte/transition";
     let { weapon, userId } = $props();
 
     let pos = $state(0);
@@ -20,16 +23,16 @@
     })
 
     $effect(() => {
-    if (time <= 0) return;
+        if (time <= 0) return;
 
-    const id = setInterval(() => {
-        if (time <= 1) {
-            time = 0;
-            clearInterval(id);
-        } else {
-            time -= 1;
-        }
-    }, 1000);
+        const id = setInterval(() => {
+            if (time <= 1) {
+                time = 0;
+                clearInterval(id);
+            } else {
+                time -= 1;
+            }
+        }, 1000);
 
         return () => {
             clearInterval(id);
@@ -54,13 +57,19 @@
     style="
         border-image-source: {borders[weapon.info.rarity as Rarity]}; 
         background: {backgrounds[weapon.info.rarity as Rarity]}"
+    in:scale
 >
     <h1>You Got It!</h1>
-    <p>You were the {pos}th person to guess today's weapon!</p>
+    {#if pos !== 0}
+        <p transition:typewriter={{ speed: 1 }}>You were the {ConvertPositionToString(pos)} person to guess today's weapon!</p>
+    {:else}
+        <br />
+    {/if}
     <img 
 		style="border-color: {colors[weapon.info.rarity as Rarity]}" 
 		src={`/weapons/${weapon.info['image-path']}`} 
 		alt='Previous weapon'
+        in:scale
 	/>
     <h3 class="weapon-name" style="color: {colors[weapon.info.rarity as Rarity]}">{weapon.name}</h3>
     <p>{count} people guessed todays weapon</p>
@@ -83,7 +92,7 @@
         align-items: center;
         text-align: center;
         padding: 0 20px;
-        width: fit-content;
+        width: 260px;
         margin: 15px auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }

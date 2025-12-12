@@ -1,4 +1,4 @@
-import type { PreviousWeapon, SimpleWeapon, Weapon } from '$lib/types/dailySlash.js';
+import type { SimpleWeapon, Weapon } from '$lib/types/dailySlash.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, parent }) {

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Confetti from '$lib/components/Confetti.svelte';
 	import GuessList from './components/GuessList.svelte';
 	import GuessPanel from './components/GuessPanel.svelte';
 	import PrevWeaponGroup from './components/PrevWeaponGroup.svelte';
@@ -47,4 +48,6 @@
 	{:else}
 		<GuessList guesses={guesses} checks={checks}/>
 	{/if}
+
+	<Confetti won={won} />
 </div>
