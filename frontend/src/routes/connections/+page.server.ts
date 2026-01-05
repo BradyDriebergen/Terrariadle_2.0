@@ -9,9 +9,9 @@ export async function load({ fetch, parent }) {
 	}
 	const initDataJson = await initData.json();
 
-    const attempts = initDataJson.attempts;
-    const options = initDataJson.options;
-    const guesses = initDataJson.guesses;
+	const attempts = initDataJson.attempts;
+	const options = initDataJson.options;
+	const guesses = initDataJson.guesses;
 	const finished = initDataJson.finished;
 
 	return { attempts, options, guesses, finished };

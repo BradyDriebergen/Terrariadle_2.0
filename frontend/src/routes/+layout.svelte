@@ -11,10 +11,10 @@
 		if (navigating.to) {
 			title = getTitle(navigating.to.url.pathname);
 		}
-	})
+	});
 
 	function getTitle(path: string): string {
-		switch(path) {
+		switch (path) {
 			case '/daily-slash':
 				return '| Daily Slash';
 			case '/connections':

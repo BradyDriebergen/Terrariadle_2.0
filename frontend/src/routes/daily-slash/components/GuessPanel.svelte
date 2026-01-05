@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Dropdown from '$lib/components/Dropdown.svelte';
-    import hintLock from '$lib/assets/LockedHint.png';
+	import hintLock from '$lib/assets/LockedHint.png';
 	import LoadingBar from './LoadingBar.svelte';
 	import { scale, slide } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -9,72 +9,63 @@
 	let guessCount = $derived(guesses?.length ?? 0);
 
 	let hints = $state(['', '', '']);
-    let showHints = $state([false, false, false]);
+	let showHints = $state([false, false, false]);
 
-    async function revealHint(num: number) {
-        if (hints[num - 1]) {
-            showHints[num - 1] = !showHints[num - 1];
-            return;
-        }
+	async function revealHint(num: number) {
+		if (hints[num - 1]) {
+			showHints[num - 1] = !showHints[num - 1];
+			return;
+		}
 
-        const res = await fetch(`http://localhost:3000/api/daily-slash/hint/${num}`);
-        hints[num - 1] = await res.json();
-        showHints[num - 1] = true;
-    }
+		const res = await fetch(`http://localhost:3000/api/daily-slash/hint/${num}`);
+		hints[num - 1] = await res.json();
+		showHints[num - 1] = true;
+	}
 </script>
 
 {#if !won}
-<div class="guess-panel" out:slide={{ duration: 700, easing: cubicInOut }}>
-	<h2>Guess Today's Weapon</h2>
+	<div class="guess-panel" out:slide={{ duration: 700, easing: cubicInOut }}>
+		<h2>Guess Today's Weapon</h2>
 
-	<div class="loadingBar" class:won={won}>
-		<LoadingBar guesses={guessCount} won={won} />
-	</div>
+		<div class="loadingBar" class:won>
+			<LoadingBar guesses={guessCount} {won} />
+		</div>
 
-	<div class="hint-buttons">
-		<button
-			disabled={guessCount < 4 && !won}
-			onclick={() => revealHint(1)}
-		>
-            {#if guessCount < 4 && !won} 
-                <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
-            {/if}
-			<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
-		</button>
-		<button
-			disabled={guessCount < 7 && !won}
-			onclick={() => revealHint(2)}
-		>
-            {#if guessCount < 7 && !won} 
-                <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
-            {/if}
-            <span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
-		</button>
-		<button
-			disabled={guessCount < 12 && !won}
-			onclick={() => revealHint(3)}
-		>
-			{#if showHints[2]}
-                <img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
-            {:else}
-                {#if guessCount < 12 && !won} 
-                    <img class="lock" out:scale={{duration: 1000}} src={hintLock} alt="Locked hint"/> 
-                {/if}
-                <span>Image Clue</span>
-            {/if}
-		</button>
-	</div>
+		<div class="hint-buttons">
+			<button disabled={guessCount < 4 && !won} onclick={() => revealHint(1)}>
+				{#if guessCount < 4 && !won}
+					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+				{/if}
+				<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
+			</button>
+			<button disabled={guessCount < 7 && !won} onclick={() => revealHint(2)}>
+				{#if guessCount < 7 && !won}
+					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+				{/if}
+				<span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
+			</button>
+			<button disabled={guessCount < 12 && !won} onclick={() => revealHint(3)}>
+				{#if showHints[2]}
+					<img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
+				{:else}
+					{#if guessCount < 12 && !won}
+						<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+					{/if}
+					<span>Image Clue</span>
+				{/if}
+			</button>
+		</div>
 
-	<div class="dropdown">
-		<Dropdown
-			selectItem={(weaponid: number) => {
-				submitGuess(weaponid);
-			}}
-			itemList={weaponList}
-			itemName="weapon"
-		/>
+		<div class="dropdown">
+			<Dropdown
+				selectItem={(weaponid: number) => {
+					submitGuess(weaponid);
+				}}
+				itemList={weaponList}
+				itemName="weapon"
+			/>
+		</div>
 	</div>
-</div>
 {:else}
 	<span class="color-cycle">Daily Slash Results</span>
 {/if}
@@ -113,7 +104,7 @@
 
 	.hint-buttons button {
 		background-color: var(--color-button);
-        position: relative;
+		position: relative;
 		width: 100px;
 		height: 100px;
 		font-size: 16px;
@@ -123,29 +114,29 @@
 		border: thin solid black;
 		transition: background-color 0.2s ease;
 	}
-    .hint-buttons button .lock {
-        position: absolute;
-        top: 9px;
-        left: 24px;
-        width: 50px;
-        opacity: 50%;
-    }
-    .hint-buttons button .hint-3 {
-        width: 45px;
+	.hint-buttons button .lock {
+		position: absolute;
+		top: 9px;
+		left: 24px;
+		width: 50px;
+		opacity: 50%;
+	}
+	.hint-buttons button .hint-3 {
+		width: 45px;
 		height: 45px;
 		object-fit: contain;
-        filter: blur(4px);
-    }
+		filter: blur(4px);
+	}
 
 	.hint-buttons button:not(:disabled):hover {
-        cursor: pointer;
+		cursor: pointer;
 		background-color: var(--color-lightblue);
 	}
 
-    .loadingBar {
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
+	.loadingBar {
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
 
 	.dropdown {
 		margin-top: 15px;
@@ -160,11 +151,23 @@
 	}
 
 	@keyframes colors {
-		0%   { color: rgb(255, 0, 0); }
-		20%  { color: rgb(255, 166, 0); }
-		40%  { color: rgb(255, 255, 0); }
-		60%  { color: rgb(0, 255, 0); }
-		80%  { color: rgb(0, 162, 255); }
-		100% { color: rgb(255, 0, 0); }
+		0% {
+			color: rgb(255, 0, 0);
+		}
+		20% {
+			color: rgb(255, 166, 0);
+		}
+		40% {
+			color: rgb(255, 255, 0);
+		}
+		60% {
+			color: rgb(0, 255, 0);
+		}
+		80% {
+			color: rgb(0, 162, 255);
+		}
+		100% {
+			color: rgb(255, 0, 0);
+		}
 	}
 </style>

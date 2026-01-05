@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { colors, type Rarity } from "$lib/types/dailySlash";
+	import { colors, type Rarity } from '$lib/types/dailySlash';
 
 	let { previousWeapon } = $props();
 </script>
@@ -8,10 +8,10 @@
 	<p>5 people have guessed today's weapon</p>
 	<p>Yesterday's weapon was:</p>
 
-	<img 
-		style="border-color: {colors[previousWeapon.rarity as Rarity]}" 
-		src={`/weapons/${previousWeapon.path}`} 
-		alt='Previous weapon'
+	<img
+		style="border-color: {colors[previousWeapon.rarity as Rarity]}"
+		src={`/weapons/${previousWeapon.path}`}
+		alt="Previous weapon"
 	/>
 	<p style="color: {colors[previousWeapon.rarity as Rarity]}">{previousWeapon.name}</p>
 

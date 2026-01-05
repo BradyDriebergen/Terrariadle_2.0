@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 </script>
 
 <div>
@@ -11,19 +12,19 @@
 
 	<ul>
 		<li aria-current={page.url.pathname === '/daily-slash'}>
-			<a href="/daily-slash">Daily Slash</a>
+			<a href={resolve('/daily-slash')}>Daily Slash</a>
 		</li>
 		<li aria-current={page.url.pathname === '/connections'}>
-			<a href="/connections">Connections</a>
+			<a href={resolve('/connections')}>Connections</a>
 		</li>
 		<li aria-current={page.url.pathname === '/guess-the-npc'}>
-			<a href="/guess-the-npc">Guess The NPC</a>
+			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
 		</li>
 		<li aria-current={page.url.pathname === '/hangman'}>
-			<a href="/hangman">Hangman</a>
+			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
 		<li aria-current={page.url.pathname === '/about'}>
-			<a href="/about">About</a>
+			<a href={resolve('/about')}>About</a>
 		</li>
 	</ul>
 </div>

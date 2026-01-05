@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 	import { Spring } from 'svelte/motion';
 
 	let size = new Spring(page.url.pathname === '/' ? 400 : 200);
@@ -15,11 +16,11 @@
 
 <header>
 	<div>
-		<a href="/">
-			<img 
-				class="game-logo" 
-				src="/logos/TerrariadleLogo.png" 
-				alt="Terrariadle" 
+		<a href={resolve('/')}>
+			<img
+				class="game-logo"
+				src="/logos/TerrariadleLogo.png"
+				alt="Terrariadle"
 				width={size.current}
 			/>
 		</a>
