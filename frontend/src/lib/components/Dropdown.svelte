@@ -10,7 +10,7 @@
 	$effect(() => {
 		const query = input.toLowerCase();
 		filtered = itemList
-			.filter((item: { name: string; }) => item.name.toLowerCase().includes(query))
+			.filter((item: { name: string }) => item.name.toLowerCase().includes(query))
 			.slice(0, 20);
 		dropdownIndex = -1;
 	});
@@ -55,7 +55,7 @@
 	{#if input}
 		<div class="dropdown">
 			{#if filtered.length !== 0}
-				{#each filtered as item, i}
+				{#each filtered as item, i (item.id)}
 					<button
 						class="item"
 						class:selected={i === dropdownIndex}

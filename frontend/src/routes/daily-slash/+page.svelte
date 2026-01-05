@@ -7,7 +7,7 @@
 
 	let { data } = $props();
 
-  	let guesses = $state(data.guesses);
+	let guesses = $state(data.guesses);
 	let checks = $state(data.checks);
 	let weapons = $state(data.weapons);
 	let won = $state(data.won);
@@ -18,36 +18,31 @@
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ userId: data.userId, guess: weaponid })
 		})
-		.then(r => r.json())
-		.then(data => {
-			guesses.unshift(data.guess);
-			checks.unshift(data.check);
-			won = data.won;
+			.then((r) => r.json())
+			.then((data) => {
+				guesses.unshift(data.guess);
+				checks.unshift(data.check);
+				won = data.won;
 
-			weapons = weapons.filter(w => w.id !== weaponid);
-		});
+				weapons = weapons.filter((w) => w.id !== weaponid);
+			});
 	}
 </script>
 
 <svelte:document style:overflow-y="hidden" />
 
 <div>
-	<GuessPanel 
-		guesses={guesses}
-		submitGuess={submitGuess}
-		weaponList={weapons} 
-		won={won}
-	/>
+	<GuessPanel {guesses} {submitGuess} weaponList={weapons} {won} />
 
 	{#if won}
-		<WinningPanel weapon={guesses[0]} userId={data.userId}/>
+		<WinningPanel weapon={guesses[0]} userId={data.userId} />
 	{/if}
 
 	{#if guesses.length < 1}
 		<PrevWeaponGroup previousWeapon={data.previousWeapon} />
 	{:else}
-		<GuessList guesses={guesses} checks={checks}/>
+		<GuessList {guesses} {checks} />
 	{/if}
 
-	<Confetti won={won} />
+	<Confetti {won} />
 </div>
