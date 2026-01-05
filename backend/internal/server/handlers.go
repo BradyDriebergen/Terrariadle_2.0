@@ -50,7 +50,12 @@ func GetSearchItems(w http.ResponseWriter, r *http.Request) {
 		}
 		writeJSON(w, http.StatusOK, searchItems)
 		return
-	case "hangman":
+	case "guess-the-npc":
+		searchItems, err := services.GetNpcSearchItems()
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, searchItems)
 		return
 	default:
 		writeJSON(w, http.StatusNotFound, map[string]any{
@@ -81,6 +86,12 @@ func InitializeGame(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{"attempts": attempts, "options": options, "guesses": guesses, "finished": won})
 		return
 	case "guess-the-npc":
+		quote, guesses, won, err := services.InitializeNpcGame(userId)
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, map[string]any{"quote": quote, "guesses": guesses, "won": won})
+		return
 	case "hangman":
 	default:
 		writeJSON(w, http.StatusNotFound, map[string]any{

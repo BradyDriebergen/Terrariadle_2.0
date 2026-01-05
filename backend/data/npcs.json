@@ -1,7 +1,8 @@
 [
   {
+    "id": 1,
     "npc": "Guide",
-    "npc-path": "npcs/Guide.png",
+    "npc-path": "/Guide.png",
     "quotes": [
       "They say there is a person who will tell you how to survive in this land... oh wait. That's me.",
       "Greetings, <name of player>. Is there something I can help you with?",
@@ -54,8 +55,9 @@
     ]
   },
   {
+    "id": 2,
     "npc": "Merchant",
-    "npc-path": "npcs/Merchant.png",
+    "npc-path": "/Merchant.png",
     "quotes": [
       "Sword beats paper! Get one today.",
       "You want apples? You want carrots? You want pineapples? We got torches.",
@@ -100,8 +102,9 @@
     ]
   },
   {
+    "id": 3,
     "npc": "Nurse",
-    "npc-path": "npcs/Nurse.png",
+    "npc-path": "/Nurse.png",
     "quotes": [
       "Turn your head and cough.",
       "That's not the biggest I've ever seen... Yes, I've seen bigger wounds for sure.",
@@ -147,8 +150,9 @@
     ]
   },
   {
+    "id": 4,
     "npc": "Demolitionist",
-    "npc-path": "npcs/Demolitionist.png",
+    "npc-path": "/Demolitionist.png",
     "quotes": [
       "Explosives are da' bomb these days.  Buy some now!",
       "It's a good day to die!",
@@ -190,8 +194,9 @@
     ]
   },
   {
+    "id": 5,
     "npc": "Dye Trader",
-    "npc-path": "npcs/Dye_Trader.png",
+    "npc-path": "/Dye_Trader.png",
     "quotes": [
       "I bring you the richest colors in exchange for your riches!",
       "My dear, what you're wearing is much too drab. You absolutely must take a lesson in dyeing your tired attire!",
@@ -225,8 +230,9 @@
     ]
   },
   {
+    "id": 6,
     "npc": "Angler",
-    "npc-path": "npcs/Angler.png",
+    "npc-path": "/Angler.png",
     "quotes": [
       "Thanks, I guess, for saving me or whatever. You'd be a great helper minion!",
       "Wha? Who might you be? I totally wasn't just drowning or anything!",
@@ -269,8 +275,9 @@
     ]
   },
   {
+    "id": 7,
     "npc": "Zoologist",
-    "npc-path": "npcs/Zoologist.png",
+    "npc-path": "/Zoologist.png",
     "quotes": [
       "I collected critters like you once, then I took a cursed fox bite to the knee!",
       "I may not know, like, a whole lot...but I can talk your head off about nature and critters and animals and wildlife and...",
@@ -310,8 +317,9 @@
     ]
   },
   {
+    "id": 8,
     "npc": "Dryad",
-    "npc-path": "npcs/Dryad.png",
+    "npc-path": "/Dryad.png",
     "quotes": [
       "Be safe; Terraria needs you!",
       "The sands of time are flowing. And well, you are not aging very gracefully.",
@@ -351,8 +359,9 @@
     ]
   },
   {
+    "id": 9,
     "npc": "Painter",
-    "npc-path": "npcs/Painter.png",
+    "npc-path": "/Painter.png",
     "quotes": [
       "I know the difference between turquoise and blue-green. But I won't tell you.",
       "Try swirly pink and purple, it works, I swear!",
@@ -388,8 +397,9 @@
     ]
   },
   {
+    "id": 10,
     "npc": "Golfer",
-    "npc-path": "npcs/Golfer.png",
+    "npc-path": "/Golfer.png",
     "quotes": [
       "I'm not the type to scream and thrash around just because my ball lands in the water. I stay calm, and collected, and focus on the next shot.",
       "An early bird catches the worm, but an early hole catches the birdie.",
@@ -412,8 +422,9 @@
     ]
   },
   {
+    "id": 11,
     "npc": "Arms Dealer",
-    "npc-path": "npcs/Arms_Dealer.png",
+    "npc-path": "/Arms_Dealer.png",
     "quotes": [
       "Hey, this ain't a movie, pal. Ammo is extra.",
       "Keep your hands off my gun, buddy!",
@@ -456,8 +467,9 @@
     ]
   },
   {
+    "id": 12,
     "npc": "Tavernkeep",
-    "npc-path": "npcs/Tavernkeep.png",
+    "npc-path": "/Tavernkeep.png",
     "quotes": [
       "I've got the cure for what ails ya! Get it? Ale? No?",
       "They say you're strong, well, I know strong. Let's see if you measure up.",
@@ -492,8 +504,9 @@
     ]
   },
   {
+    "id": 13,
     "npc": "Stylist",
-    "npc-path": "npcs/Stylist.png",
+    "npc-path": "/Stylist.png",
     "quotes": [
       "Check my fresh.",
       "Just a little off the top?  That's no fun...",
@@ -533,8 +546,9 @@
     ]
   },
   {
+    "id": 14,
     "npc": "Goblin Tinkerer",
-    "npc-path": "npcs/Goblin_Tinkerer.png",
+    "npc-path": "/Goblin_Tinkerer.png",
     "quotes": [
       "Hey...what's <name of Mechanic> up to? Have you...have you talked to her, by chance?",
       "I tried to visit <name of Stylist> one time. She just looked at me and said 'nope.'",
@@ -578,8 +592,9 @@
     ]
   },
   {
+    "id": 15,
     "npc": "Witch Doctor",
-    "npc-path": "npcs/Witch_Doctor.png",
+    "npc-path": "/Witch_Doctor.png",
     "quotes": [
       "Choose wisely, <name of player>, my commodities are volatile and my dark arts, mysterious.",
       "The heart of magic is nature. The nature of hearts is magic.",
@@ -604,8 +619,9 @@
     ]
   },
   {
+    "id": 16,
     "npc": "Clothier",
-    "npc-path": "npcs/Clothier.png",
+    "npc-path": "/Clothier.png",
     "quotes": [
       "Thanks again for freeing me from my curse. Felt like something jumped up and bit me.",
       "Mama always said I would make a great tailor.",
@@ -647,8 +663,9 @@
     ]
   },
   {
+    "id": 17,
     "npc": "Mechanic",
-    "npc-path": "npcs/Mechanic.png",
+    "npc-path": "/Mechanic.png",
     "quotes": [
       "Always buy more wire than you need!",
       "Did you make sure your device was plugged in?",
@@ -690,8 +707,9 @@
     ]
   },
   {
+    "id": 18,
     "npc": "Party Girl",
-    "npc-path": "npcs/Party_Girl.png",
+    "npc-path": "/Party_Girl.png",
     "quotes": [
       "We have to talk. It's... it's about parties.",
       "I can't decide what I like more: parties, or after-parties.",
@@ -728,8 +746,9 @@
     ]
   },
   {
+    "id": 19,
     "npc": "Wizard",
-    "npc-path": "npcs/Wizard.png",
+    "npc-path": "/Wizard.png",
     "quotes": [
       "Want me to pull a coin from behind your ear? No? Ok.",
       "Do you want some magic candy? No? Ok.",
@@ -769,8 +788,9 @@
     ]
   },
   {
+    "id": 20,
     "npc": "Tax Collector",
-    "npc-path": "npcs/Tax_Collector.png",
+    "npc-path": "/Tax_Collector.png",
     "quotes": [
       "...two barrels of molasses, plus -- Oh, nevermind that, you're here. Here's your money.",
       "What does a man have to do to be left alone in this place? Go bugger someone less busy!",
@@ -807,8 +827,9 @@
     ]
   },
   {
+    "id": 21,
     "npc": "Truffle",
-    "npc-path": "npcs/Truffle.png",
+    "npc-path": "/Truffle.png",
     "quotes": [
       "As if living underground wasn't bad enough, jerks like you come in while I'm sleeping and steal my children.",
       "Everytime I see the color blue, it makes me depressed and lazy.",
@@ -837,8 +858,9 @@
     ]
   },
   {
+    "id": 22,
     "npc": "Pirate",
-    "npc-path": "npcs/Pirate.png",
+    "npc-path": "/Pirate.png",
     "quotes": [
       "Stay off me booty, ya scallywag!",
       "I'm no landlubber, but it's better to have lubbed and lost than never to have lubbed at all.",
@@ -866,8 +888,9 @@
     ]
   },
   {
+    "id": 23,
     "npc": "Steampunker",
-    "npc-path": "npcs/Steampunker.png",
+    "npc-path": "/Steampunker.png",
     "quotes": [
       "Oy, whatchu got in you jiminy fluffer?",
       "Should I become an air pirate? I've considered becoming an air pirate.",
@@ -905,8 +928,9 @@
     ]
   },
   {
+    "id": 24,
     "npc": "Cyborg",
-    "npc-path": "npcs/Cyborg.png",
+    "npc-path": "/Cyborg.png",
     "quotes": [
       "And then Unit 492-8 said, 'Who do you think I am, Unit 472-6?' HA. HA. HA.",
       "My expedition efficiency was critically reduced when a projectile impacted my locomotive actuator.",
@@ -947,8 +971,9 @@
     ]
   },
   {
+    "id": 25,
     "npc": "Princess",
-    "npc-path": "npcs/Princess.png",
+    "npc-path": "/Princess.png",
     "quotes": [
       "Goblins are so cute! They are short, and have those little pointy ears, and they come in different colors!",
       "Like my dress? Gee, thanks! Just sewed it.",
@@ -988,8 +1013,9 @@
     ]
   },
   {
+    "id": 26,
     "npc": "Traveling Merchant",
-    "npc-path": "npcs/Traveling_Merchant.png",
+    "npc-path": "/Traveling_Merchant.png",
     "quotes": [
       "I sell wares from places that might not even exist!",
       "A thrift shop?  No, I am only selling the highest quality items on the market.",
@@ -1018,8 +1044,9 @@
     ]
   },
   {
+    "id": 27,
     "npc": "Skeleton Merchant",
-    "npc-path": "npcs/Skeleton_Merchant.png",
+    "npc-path": "/Skeleton_Merchant.png",
     "quotes": [
       "Got any spare bones for sale? I'm looking to replace my broken hip... again.",
       "Excellent! Someone's finally come by to take some of these maggots off my hands.",

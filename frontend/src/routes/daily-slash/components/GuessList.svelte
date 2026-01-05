@@ -39,13 +39,13 @@
 	</div>
 	{#each guesses as guess, i (guess.id)}
 		<div class="row" animate:flip>
-			<div in:fly={{ x: 800, duration: 2000 }}>
+			<div in:fly={{ x: 560, duration: 2000 }}>
 				<img src={`/weapons/${guess.info['image-path']}`} alt={`${guess.name} image`} />
 			</div>
 
 			<span
 				style={checks[i].DamageType ? guessCorrect : guessWrong}
-				in:fly={{ x: 700, duration: 2000 }}
+				in:fly={{ x: 480, duration: 2000 }}
 			>
 				{guess.info['damage-type']}
 			</span>
@@ -56,7 +56,7 @@
 				class:arrow-up={checks[i].Damage === 2}
 				class:arrow-down={checks[i].Damage === 0}
 				style={checks[i].Damage === 1 ? guessCorrect : guessWrong}
-				in:fly={{ x: 600, duration: 2000 }}
+				in:fly={{ x: 400, duration: 2000 }}
 			>
 				{guess.info.damage}
 			</span>
@@ -67,7 +67,7 @@
 				class:arrow-up={checks[i].UseTime === 2}
 				class:arrow-down={checks[i].UseTime === 0}
 				style={checks[i].UseTime === 1 ? guessCorrect : guessWrong}
-				in:fly={{ x: 500, duration: 2000 }}
+				in:fly={{ x: 320, duration: 2000 }}
 			>
 				{guess.info['use-time']}
 			</span>
@@ -79,27 +79,27 @@
 				class:arrow-down={checks[i].Rarity === 0}
 				style={(checks[i].Rarity === 1 ? guessCorrect : guessWrong) +
 					getRarityColor(guess.info.rarity as string)}
-				in:fly={{ x: 400, duration: 2000 }}
+				in:fly={{ x: 240, duration: 2000 }}
 			>
 				{guess.info.rarity}
 			</span>
 
 			<span
 				style={checks[i].Operation ? guessCorrect : guessWrong}
-				in:fly={{ x: 300, duration: 2000 }}
+				in:fly={{ x: 160, duration: 2000 }}
 			>
 				{guess.info.operation}
 			</span>
 			<span
 				style={checks[i].Material ? guessCorrect : guessWrong}
-				in:fly={{ x: 200, duration: 2000 }}
+				in:fly={{ x: 80, duration: 2000 }}
 			>
 				{guess.info.material}
 			</span>
 
 			<div
 				style="flex-direction: column; {checkedObtained(checks[i].Obtained)}"
-				in:fly={{ x: 100, duration: 2000 }}
+				in:fly={{ x: 0, duration: 2000 }}
 			>
 				{#each guess.info.obtained as item}
 					<span>{item}</span>
