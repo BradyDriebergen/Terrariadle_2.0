@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "category": "'____ Blade'",
     "options": [
       "Terra",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "id": 2,
     "category": "'Terra ____'",
     "options": [
       "Blade",
@@ -25,6 +27,7 @@
     ]
   },
   {
+    "id": 3,
     "category": "Weapons Used To Craft Zenith",
     "options": [
       "Copper Shortsword",
@@ -40,6 +43,7 @@
     ]
   },
   {
+    "id": 4,
     "category": "Summoned Minions",
     "options": [
       "Abigail",
@@ -66,6 +70,7 @@
     ]
   },
   {
+    "id": 5,
     "category": "Sentry Weapons",
     "options": [
       "Houndius Shootius",
@@ -80,6 +85,7 @@
     ]
   },
   {
+    "id": 6,
     "category": "Magic Guns",
     "options": [
       "Bee Gun",
@@ -96,6 +102,7 @@
     ]
   },
   {
+    "id": 7,
     "category": "Unimplemented/Removed Weapons",
     "options": [
       "First Fractal",
@@ -107,6 +114,7 @@
     ]
   },
   {
+    "id": 8,
     "category": "Buyable Weapons",
     "options": [
       "Shuriken",
@@ -128,6 +136,7 @@
     ]
   },
   {
+    "id": 9,
     "category": "Buyable Accessories",
     "options": [
       "Rocket Boots",
@@ -140,6 +149,7 @@
     ]
   },
   {
+    "id": 10,
     "category": "Boomerangs",
     "options": [
       "Bananarang",
@@ -155,6 +165,7 @@
     ]
   },
   {
+    "id": 11,
     "category": "Whips",
     "options": [
       "Dark Harvest",
@@ -167,6 +178,7 @@
     ]
   },
   {
+    "id": 12,
     "category": "Weapon Modifiers",
     "options": [
       "Keen",
@@ -186,6 +198,7 @@
     ]
   },
   {
+    "id": 13,
     "category": "Shields",
     "options": [
       "Cobalt",
@@ -199,6 +212,7 @@
     ]
   },
   {
+    "id": 14,
     "category": "Accessories in the Anhk Charm",
     "options": [
       "Pocket Mirror",
@@ -214,6 +228,7 @@
     ]
   },
   {
+    "id": 15,
     "category": "Accessories in the Terraspark Boots",
     "options": [
       "Hermes Boots",
@@ -228,6 +243,7 @@
     ]
   },
   {
+    "id": 16,
     "category": "Accessories in the Cell Phone",
     "options": [
       "Magic Mirror",
@@ -246,6 +262,7 @@
     ]
   },
   {
+    "id": 17,
     "category": "Wings",
     "options": [
       "Fledgling",
@@ -265,6 +282,7 @@
     ]
   },
   {
+    "id": 18,
     "category": "Accessory Modifiers",
     "options": [
       "Hard",
@@ -289,6 +307,7 @@
     ]
   },
   {
+    "id": 19,
     "category": "Fishing Accessories",
     "options": [
       "High Test Fishing Line",
@@ -299,6 +318,7 @@
     ]
   },
   {
+    "id": 20,
     "category": "Boots",
     "options": [
       "Hermes",
@@ -318,6 +338,7 @@
     ]
   },
   {
+    "id": 21,
     "category": "Gloves",
     "options": [
       "Mechanical",
@@ -330,6 +351,7 @@
     ]
   },
   {
+    "id": 22,
     "category": "Hats",
     "options": [
       "Fez",
@@ -344,6 +366,7 @@
     ]
   },
   {
+    "id": 23,
     "category": "Capes and Cloaks",
     "options": [
       "Crimson",
@@ -358,6 +381,7 @@
     ]
   },
   {
+    "id": 24,
     "category": "Tool Types",
     "options": [
       "Chainsaw",
@@ -378,10 +402,12 @@
     ]
   },
   {
+    "id": 25,
     "category": "Nonconventional Tools",
     "options": ["The Axe", "Sawtooth Shark", "Reaver Shark", "Rockfish"]
   },
   {
+    "id": 26,
     "category": "Bomb Types",
     "options": [
       "Bouncy",
@@ -395,6 +421,7 @@
     ]
   },
   {
+    "id": 27,
     "category": "Wiring Components",
     "options": [
       "Pressure Plate",
@@ -409,6 +436,7 @@
     ]
   },
   {
+    "id": 28,
     "category": "Tools That Drop From Enemies",
     "options": [
       "Bone Pickaxe",
@@ -421,6 +449,7 @@
     ]
   },
   {
+    "id": 29,
     "category": "Hooks",
     "options": [
       "Slime",
@@ -434,8 +463,8 @@
       "Thorn"
     ]
   },
-
   {
+    "id": 30,
     "category": "____ Rod",
     "options": [
       "Rainbow",
@@ -448,6 +477,7 @@
     ]
   },
   {
+    "id": 31,
     "category": "Special Fishing Rewards",
     "options": [
       "Fuzzy Carrot",
@@ -462,6 +492,7 @@
     ]
   },
   {
+    "id": 32,
     "category": "Fishing Poles",
     "options": [
       "Reinforced",
@@ -475,6 +506,7 @@
     ]
   },
   {
+    "id": 33,
     "category": "Rare Fish",
     "options": [
       "Golden Carp",
@@ -486,6 +518,7 @@
     ]
   },
   {
+    "id": 34,
     "category": "Quest Fish",
     "options": [
       "Amanita Fungifin",
@@ -502,6 +535,7 @@
     ]
   },
   {
+    "id": 35,
     "category": "Types of Crates",
     "options": [
       "Wooden",
@@ -517,6 +551,7 @@
     ]
   },
   {
+    "id": 36,
     "category": "Items Put Into an Extractinator",
     "options": [
       "Silt",
@@ -528,6 +563,7 @@
     ]
   },
   {
+    "id": 37,
     "category": "Crafting Stations",
     "options": [
       "Work Bench",
@@ -548,6 +584,7 @@
     ]
   },
   {
+    "id": 38,
     "category": "Items The Merchant Sells",
     "options": [
       "Piggy Bank",
@@ -561,6 +598,7 @@
     ]
   },
   {
+    "id": 39,
     "category": "Items The Demolitionist Sells",
     "options": [
       "Grenade",
@@ -573,6 +611,7 @@
     ]
   },
   {
+    "id": 40,
     "category": "Items The Zoologist Sells",
     "options": [
       "Squirrel Hook",
@@ -589,6 +628,7 @@
     ]
   },
   {
+    "id": 41,
     "category": "Items The Dryad Sells",
     "options": [
       "Purification Powder",
@@ -601,6 +641,7 @@
     ]
   },
   {
+    "id": 42,
     "category": "Items the Arms Dealer Sells",
     "options": [
       "Musket Ball",
@@ -611,6 +652,7 @@
     ]
   },
   {
+    "id": 43,
     "category": "Items The Witch Doctor Sells",
     "options": [
       "Imbuing Station",
@@ -621,6 +663,7 @@
     ]
   },
   {
+    "id": 44,
     "category": "Items The Party Girl Sells",
     "options": [
       "Confetti",
@@ -634,6 +677,7 @@
     ]
   },
   {
+    "id": 45,
     "category": "Items The Wizard Sells",
     "options": [
       "Crystal Ball",
@@ -646,6 +690,7 @@
     ]
   },
   {
+    "id": 46,
     "category": "Items The Pirate Sells",
     "options": [
       "Cannon",
@@ -657,6 +702,7 @@
     ]
   },
   {
+    "id": 47,
     "category": "Items The Steampunker Sells",
     "options": [
       "Clentaminator",
@@ -669,6 +715,7 @@
     ]
   },
   {
+    "id": 48,
     "category": "Items The Cyborg Sells",
     "options": [
       "Rockets",
@@ -681,6 +728,7 @@
     ]
   },
   {
+    "id": 49,
     "category": "Items The Traveling Merchant Sells",
     "options": [
       "Chalice",
@@ -698,10 +746,12 @@
     ]
   },
   {
+    "id": 50,
     "category": "Types of Souls",
     "options": ["Flight", "Light", "Night", "Might", "Sight", "Fright"]
   },
   {
+    "id": 51,
     "category": "Minecarts",
     "options": [
       "Mecanical",
@@ -717,10 +767,12 @@
     ]
   },
   {
+    "id": 52,
     "category": "Statues",
     "options": ["King", "Queen", "Heart", "Star", "Gloom", "Angel", "Armor"]
   },
   {
+    "id": 53,
     "category": "Dye Materials",
     "options": [
       "Red Husk",
@@ -739,10 +791,12 @@
     ]
   },
   {
+    "id": 54,
     "category": "Types of Tombstones",
     "options": ["Grave Marker", "Cross", "Headstone", "Obelisk", "GraveStone"]
   },
   {
+    "id": 55,
     "category": "Types of Traps",
     "options": [
       "Dart",
@@ -758,6 +812,7 @@
     ]
   },
   {
+    "id": 56,
     "category": "Light Sources",
     "options": [
       "Torch",
@@ -771,6 +826,7 @@
     ]
   },
   {
+    "id": 57,
     "category": "Woods",
     "options": [
       "Rich Mahogany",
@@ -785,6 +841,7 @@
     ]
   },
   {
+    "id": 58,
     "category": "Gold Chest Loot",
     "options": [
       "Band of Regeneration",
@@ -799,6 +856,7 @@
     ]
   },
   {
+    "id": 59,
     "category": "Wood Chest Loot",
     "options": [
       "Spear",
@@ -813,6 +871,7 @@
     ]
   },
   {
+    "id": 60,
     "category": "Ivy Chest Loot",
     "options": [
       "Feral Claws",
@@ -824,6 +883,7 @@
     ]
   },
   {
+    "id": 61,
     "category": "Water Chest Loot",
     "options": [
       "Breathing Reed",
@@ -837,6 +897,7 @@
     ]
   },
   {
+    "id": 62,
     "category": "Frozen Chest Loot",
     "options": [
       "Ice Boomerang",
@@ -849,6 +910,7 @@
     ]
   },
   {
+    "id": 63,
     "category": "Sandstone Chest Loot",
     "options": [
       "Storm Spear",
@@ -860,6 +922,7 @@
     ]
   },
   {
+    "id": 64,
     "category": "Shadow Chest Loot",
     "options": [
       "Sunfury",
@@ -873,6 +936,7 @@
     ]
   },
   {
+    "id": 65,
     "category": "Background Object Loot",
     "options": [
       "Enchanted Sword",
@@ -890,6 +954,7 @@
     ]
   },
   {
+    "id": 66,
     "category": "Present Drops",
     "options": [
       "Coal",
@@ -906,6 +971,7 @@
     ]
   },
   {
+    "id": 67,
     "category": "Hardmode Dungeon Drops",
     "options": [
       "Keybrand",
@@ -925,6 +991,7 @@
     ]
   },
   {
+    "id": 68,
     "category": "Enemy Casters",
     "options": [
       "Dark Caster",
@@ -939,6 +1006,7 @@
     ]
   },
   {
+    "id": 69,
     "category": "Flying Enemies",
     "options": [
       "Antlion Swarmer",
@@ -958,6 +1026,7 @@
     ]
   },
   {
+    "id": 70,
     "category": "Event Bosses",
     "options": [
       "Dark Mage",
@@ -973,6 +1042,7 @@
     ]
   },
   {
+    "id": 71,
     "category": "Rare Creatures",
     "options": [
       "Tim",
@@ -990,6 +1060,7 @@
     ]
   },
   {
+    "id": 72,
     "category": "Swimming Enemies",
     "options": [
       "Angler Fish",
@@ -1003,6 +1074,7 @@
     ]
   },
   {
+    "id": 73,
     "category": "Types of Zombies",
     "options": [
       "Pincushion",
@@ -1017,10 +1089,12 @@
     ]
   },
   {
+    "id": 74,
     "category": "Types of Goblins in Goblin Army",
     "options": ["Peon", "Sorcerer", "Thief", "Warrior", "Archer", "Summoner"]
   },
   {
+    "id": 75,
     "category": "Sandstorm Enemies",
     "options": [
       "Dune Splicer",
@@ -1033,6 +1107,7 @@
     ]
   },
   {
+    "id": 76,
     "category": "Blood Moon Enemies",
     "options": [
       "Blood Zombie",
@@ -1046,6 +1121,7 @@
     ]
   },
   {
+    "id": 77,
     "category": "Old One's Army Enemies",
     "options": [
       "Goblin",
@@ -1061,6 +1137,7 @@
     ]
   },
   {
+    "id": 78,
     "category": "Solar Eclipse Enemies",
     "options": [
       "Eyezor",
@@ -1077,6 +1154,7 @@
     ]
   },
   {
+    "id": 79,
     "category": "Pirate Invasion Enemies",
     "options": [
       "Parrot",
@@ -1088,6 +1166,7 @@
     ]
   },
   {
+    "id": 80,
     "category": "Pumpkin Moon Enemies",
     "options": [
       "Scarecrow",
@@ -1099,6 +1178,7 @@
     ]
   },
   {
+    "id": 81,
     "category": "Frost Moon Enemies",
     "options": [
       "Present Mimic",
@@ -1111,6 +1191,7 @@
     ]
   },
   {
+    "id": 82,
     "category": "Martian Madness Enemies",
     "options": [
       "Scutlix",
@@ -1125,6 +1206,7 @@
     ]
   },
   {
+    "id": 83,
     "category": "Solar Pillar Enemies",
     "options": [
       "Corite",
@@ -1136,10 +1218,12 @@
     ]
   },
   {
+    "id": 84,
     "category": "Vortex Pillar Enemies",
     "options": ["Alien Hornet", "Alien Queen", "Storm Diver", "Vortexian"]
   },
   {
+    "id": 85,
     "category": "Nebula Pillar Enemies",
     "options": [
       "Brain Suckler",
@@ -1149,6 +1233,7 @@
     ]
   },
   {
+    "id": 86,
     "category": "Stardust Pillar Enemies",
     "options": [
       "Flow Invader",
@@ -1159,6 +1244,7 @@
     ]
   },
   {
+    "id": 87,
     "category": "Servants of Bosses",
     "options": [
       "Servant of Cthulhu",
@@ -1175,6 +1261,7 @@
     ]
   },
   {
+    "id": 88,
     "category": "Snow Biome Enemies",
     "options": [
       "Frozen Zombie",
@@ -1188,6 +1275,7 @@
     ]
   },
   {
+    "id": 89,
     "category": "Jungle Biome Enemies",
     "options": [
       "Snatcher",
@@ -1199,6 +1287,7 @@
     ]
   },
   {
+    "id": 90,
     "category": "Enemies with Worm AI",
     "options": [
       "Digger",
@@ -1214,6 +1303,7 @@
     ]
   },
   {
+    "id": 91,
     "category": "Types of Slimes",
     "options": [
       "Green",
@@ -1235,10 +1325,12 @@
     ]
   },
   {
+    "id": 92,
     "category": "Types of Bats",
     "options": ["Cave", "Spore", "Hell", "Giant", "Illuminant", "Lava"]
   },
   {
+    "id": 93,
     "category": "Types of Skeletons",
     "options": [
       "Headache",
@@ -1256,6 +1348,7 @@
     ]
   },
   {
+    "id": 94,
     "category": "Forest Critters",
     "options": [
       "Bunny",
@@ -1272,6 +1365,7 @@
     ]
   },
   {
+    "id": 95,
     "category": "Jungle Critters",
     "options": [
       "Macaw",
@@ -1284,6 +1378,7 @@
     ]
   },
   {
+    "id": 96,
     "category": "Ocean Critters",
     "options": [
       "Crab",
@@ -1296,6 +1391,7 @@
     ]
   },
   {
+    "id": 97,
     "category": "Types of Butterflys",
     "options": [
       "Julia",
@@ -1309,6 +1405,7 @@
     ]
   },
   {
+    "id": 98,
     "category": "Critters That Can Be Gold",
     "options": [
       "Bird",
@@ -1327,10 +1424,12 @@
     ]
   },
   {
+    "id": 99,
     "category": "Restoration Potion Ingredients",
     "options": ["Bottle", "Mushroom", "Glowing Mushroom", "Pink Slime"]
   },
   {
+    "id": 100,
     "category": "Super Mana Potion Ingredients",
     "options": [
       "Greater Mana Potion",
@@ -1340,22 +1439,27 @@
     ]
   },
   {
+    "id": 101,
     "category": "Biome Sight Potion Ingredients",
     "options": ["Fireblossom", "Blinkroot", "Moonglow", "Grass Seeds"]
   },
   {
+    "id": 102,
     "category": "Crate Potion Ingredients",
     "options": ["Amber", "Moonglow", "Shiverthorn", "Waterleaf"]
   },
   {
+    "id": 103,
     "category": "Gravitation Potion Ingredients",
     "options": ["Fireblossom", "Deathweed", "Blinkroot", "Feather"]
   },
   {
+    "id": 104,
     "category": "Lifeforce Potion Ingredients",
     "options": ["Prismite", "Moonglow", "Shiverthorn", "Waterleaf"]
   },
   {
+    "id": 105,
     "category": "'Well Fed' Foods",
     "options": [
       "Cooked Marshmallow",
@@ -1369,6 +1473,7 @@
     ]
   },
   {
+    "id": 106,
     "category": "'Plenty Satisfied' Foods",
     "options": [
       "Escargot",
@@ -1380,6 +1485,7 @@
     ]
   },
   {
+    "id": 107,
     "category": "'Exquisitely Stuffed' Foods",
     "options": [
       "Golden Delight",
@@ -1391,6 +1497,7 @@
     ]
   },
   {
+    "id": 108,
     "category": "Types of Health Potions",
     "options": [
       "Lesser",
@@ -1402,6 +1509,7 @@
     ]
   },
   {
+    "id": 109,
     "category": "Conditions Where Plants Bloom",
     "options": [
       "Random",
@@ -1414,6 +1522,7 @@
     ]
   },
   {
+    "id": 110,
     "category": "Bosses From Royalty",
     "options": [
       "King Slime",
@@ -1426,6 +1535,7 @@
     ]
   },
   {
+    "id": 111,
     "category": "Eye of Cthulhu Drops",
     "options": [
       "Demonite Ore",
@@ -1437,6 +1547,7 @@
     ]
   },
   {
+    "id": 112,
     "category": "Deerclops Drops",
     "options": [
       "Eye Bone",
@@ -1449,6 +1560,7 @@
     ]
   },
   {
+    "id": 113,
     "category": "Wall of Flesh Drops",
     "options": [
       "Pwnhammer",
@@ -1463,6 +1575,7 @@
     ]
   },
   {
+    "id": 114,
     "category": "Queen Slime Drops",
     "options": [
       "Sparkle Slime Balloon",
@@ -1473,6 +1586,7 @@
     ]
   },
   {
+    "id": 115,
     "category": "Plantera Drops",
     "options": [
       "Temple Key",
@@ -1490,6 +1604,7 @@
     ]
   },
   {
+    "id": 116,
     "category": "Golem Drops",
     "options": [
       "Stynger",
@@ -1503,10 +1618,12 @@
     ]
   },
   {
+    "id": 117,
     "category": "Celestial Shell Materials",
     "options": ["Moon Charm", "Neptune's Shell", "Moon Stone", "Sun Stone"]
   },
   {
+    "id": 118,
     "category": "Duke Fisheron Drops",
     "options": [
       "Bubble Gun",
@@ -1518,6 +1635,7 @@
     ]
   },
   {
+    "id": 119,
     "category": "Empress of Light Drops",
     "options": [
       "Nightglow",
@@ -1532,6 +1650,7 @@
     ]
   },
   {
+    "id": 120,
     "category": "Moon Lord Drops",
     "options": [
       "Portal Gun",
@@ -1549,6 +1668,7 @@
     ]
   },
   {
+    "id": 121,
     "category": "Dark Mage Drops",
     "options": [
       "Squire Shield",
@@ -1559,6 +1679,7 @@
     ]
   },
   {
+    "id": 122,
     "category": "Ogre Drops",
     "options": [
       "Huntress Buckler",
@@ -1572,6 +1693,7 @@
     ]
   },
   {
+    "id": 123,
     "category": "Betsy Drops",
     "options": [
       "Aerial Bane",
@@ -1582,6 +1704,7 @@
     ]
   },
   {
+    "id": 124,
     "category": "Flying Dutchman Drops",
     "options": [
       "Coin Gun",
@@ -1594,6 +1717,7 @@
     ]
   },
   {
+    "id": 125,
     "category": "Mourning Wood Drops",
     "options": [
       "Spooky Wood",
@@ -1604,6 +1728,7 @@
     ]
   },
   {
+    "id": 126,
     "category": "Pumpking Drops",
     "options": [
       "The Horseman's Blade",
@@ -1617,6 +1742,7 @@
     ]
   },
   {
+    "id": 127,
     "category": "Everscream Drops",
     "options": [
       "Festive Wings",
@@ -1626,6 +1752,7 @@
     ]
   },
   {
+    "id": 128,
     "category": "Ice Queen Drops",
     "options": [
       "Blizzard Staff",
@@ -1635,6 +1762,7 @@
     ]
   },
   {
+    "id": 129,
     "category": "Martian Saucer Drops",
     "options": [
       "Xenopopper",
@@ -1648,6 +1776,7 @@
     ]
   },
   {
+    "id": 130,
     "category": "NPC Death Drops",
     "options": [
       "Green Cap",
@@ -1664,10 +1793,12 @@
     ]
   },
   {
+    "id": 131,
     "category": "Items Used to Damage NPCs",
     "options": ["Lava", "Rotten Egg", "Flymeal", "Trap", "Boulder"]
   },
   {
+    "id": 132,
     "category": "Types of Town Slimes",
     "options": [
       "Nerdy",
@@ -1681,6 +1812,7 @@
     ]
   },
   {
+    "id": 133,
     "category": "Blood Moon Drops",
     "options": [
       "KO Cannon",
@@ -1698,6 +1830,7 @@
     ]
   },
   {
+    "id": 134,
     "category": "Goblin Army Drops",
     "options": [
       "Harpoon",
@@ -1708,6 +1841,7 @@
     ]
   },
   {
+    "id": 135,
     "category": "Solar Eclipse Drops",
     "options": [
       "Eye Spring",
@@ -1726,6 +1860,7 @@
     ]
   },
   {
+    "id": 136,
     "category": "Pirate Invasion Drops",
     "options": [
       "Sailor Set",
@@ -1742,10 +1877,12 @@
     ]
   },
   {
+    "id": 137,
     "category": "Types of Fragments",
     "options": ["Solar", "Nebula", "Stardust", "Vortex"]
   },
   {
+    "id": 138,
     "category": "Forest Biome Features",
     "options": [
       "Daybloom",
@@ -1759,6 +1896,7 @@
     ]
   },
   {
+    "id": 139,
     "category": "Snow Biome Features",
     "options": [
       "Snow",
@@ -1771,6 +1909,7 @@
     ]
   },
   {
+    "id": 140,
     "category": "Desert Biome Features",
     "options": [
       "Sand",
@@ -1783,6 +1922,7 @@
     ]
   },
   {
+    "id": 141,
     "category": "Corruption Biome Features",
     "options": [
       "Evil",
@@ -1796,6 +1936,7 @@
     ]
   },
   {
+    "id": 142,
     "category": "Crimson Biome Features",
     "options": [
       "Fleshy",
@@ -1808,6 +1949,7 @@
     ]
   },
   {
+    "id": 143,
     "category": "Jungle Biome Features",
     "options": [
       "Vines",
@@ -1820,6 +1962,7 @@
     ]
   },
   {
+    "id": 144,
     "category": "Underground Biome Features",
     "options": [
       "Stone",
@@ -1835,6 +1978,7 @@
     ]
   },
   {
+    "id": 145,
     "category": "Dungeon Biome Features",
     "options": [
       "Bricks",
@@ -1846,10 +1990,12 @@
     ]
   },
   {
+    "id": 146,
     "category": "Ocean Biome Features",
     "options": ["Sea", "Palm Tree", "Seashell", "Sand", "Underwater Critters"]
   },
   {
+    "id": 147,
     "category": "Hallow Biome Features",
     "options": [
       "Colorful",
@@ -1861,6 +2007,7 @@
     ]
   },
   {
+    "id": 148,
     "category": "Underworld Biome Features",
     "options": [
       "Hot",
@@ -1874,6 +2021,7 @@
     ]
   },
   {
+    "id": 149,
     "category": "Mini Biomes",
     "options": [
       "Aether",
@@ -1888,6 +2036,7 @@
     ]
   },
   {
+    "id": 150,
     "category": "Graveyard Items",
     "options": [
       "Quad-Barrel Shotgun",
@@ -1899,10 +2048,12 @@
     ]
   },
   {
+    "id": 151,
     "category": "Needed For Valid Housing",
     "options": ["Chair", "Table", "Walls", "Light"]
   },
   {
+    "id": 152,
     "category": "Pets",
     "options": [
       "Baby Eater",
@@ -1924,6 +2075,7 @@
     ]
   },
   {
+    "id": 153,
     "category": "Master Mode Pets",
     "options": [
       "Alien Skater",
@@ -1950,6 +2102,7 @@
     ]
   },
   {
+    "id": 154,
     "category": "Mounts",
     "options": [
       "Turtle",
@@ -1969,6 +2122,7 @@
     ]
   },
   {
+    "id": 155,
     "category": "Developer Usernames",
     "options": [
       "Red",
@@ -1985,10 +2139,12 @@
     ]
   },
   {
+    "id": 156,
     "category": "Types of Coin",
     "options": ["Copper", "Silver", "Gold", "Platinum"]
   },
   {
+    "id": 157,
     "category": "Achievements",
     "options": [
       "Timber!!",
@@ -2109,6 +2265,7 @@
     ]
   },
   {
+    "id": 158,
     "category": "Secret World Seeds",
     "options": [
       "Drunk World",
@@ -2124,6 +2281,7 @@
     ]
   },
   {
+    "id": 159,
     "category": "Debuffs",
     "options": [
       "Poisoned",
@@ -2154,6 +2312,7 @@
     ]
   },
   {
+    "id": 160,
     "category": "Buffs",
     "options": [
       "Archery",
@@ -2189,6 +2348,7 @@
     ]
   },
   {
+    "id": 161,
     "category": "Moon Phases",
     "options": [
       "Full",
@@ -2202,6 +2362,7 @@
     ]
   },
   {
+    "id": 162,
     "category": "Things That Increase Luck",
     "options": [
       "Ladybugs",
@@ -2215,6 +2376,7 @@
     ]
   },
   {
+    "id": 163,
     "category": "Placeable Items That Grant Buffs",
     "options": [
       "Ammo Box",
@@ -2232,6 +2394,7 @@
     ]
   },
   {
+    "id": 164,
     "category": "Items That Emit Light When Held",
     "options": [
       "Torch",

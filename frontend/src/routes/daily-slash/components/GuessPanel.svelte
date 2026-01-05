@@ -65,7 +65,7 @@
 		</button>
 	</div>
 
-	<div class="dropdown" class:won={won}>
+	<div class="dropdown">
 		<Dropdown
 			selectItem={(weaponid: number) => {
 				submitGuess(weaponid);

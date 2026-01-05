@@ -19,18 +19,6 @@ func shuffle[T any](list []T, rnd *rand.Rand) {
 	})
 }
 
-// Checks for duplicates in a list
-func hasDuplicates(slice []string) bool {
-	seen := make(map[string]bool)
-	for _, v := range slice {
-		if seen[v] {
-			return true // found a duplicate
-		}
-		seen[v] = true
-	}
-	return false
-}
-
 // ---------------------------------------------
 // Get random guess data methods
 // ---------------------------------------------
@@ -76,11 +64,6 @@ func randomCategories(rnd *rand.Rand) ([]jsonreader.Category, error) {
 
 		selectedCategories[i].Options = opts[:4]
 		allOptions = append(allOptions, opts[:4]...)
-	}
-
-	// If there are duplicate options, re-run the method
-	if hasDuplicates(allOptions) {
-		selectedCategories, _ = randomCategories(rnd)
 	}
 
 	return selectedCategories, nil

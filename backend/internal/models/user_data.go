@@ -14,20 +14,21 @@ import (
 
 // UserData represents the MongoDB document structure
 type UserData struct {
-	ID         primitive.ObjectID `bson:"_id,omitempty"`
-	UserID     string             `bson:"userId,omitempty"`
-	DailySlash DailySlashGame     `bson:"dailySlash,omitempty"`
+	ID          primitive.ObjectID `bson:"_id,omitempty"`
+	UserID      string             `bson:"userId,omitempty"`
+	DailySlash  dailySlashGame     `bson:"dailySlash,omitempty"`
+	Connections connectionGame     `bson:"connections,omitempty"`
 }
 
 // Game represents one game entry inside GuessDocument
-type Game struct {
+type game struct {
 	Guesses  []int `bson:"guesses,omitempty"`  // default: []
 	HasWon   bool  `bson:"hasWon,omitempty"`   // default: false
 	Position int   `bson:"position,omitempty"` // default: -1
 }
 
-type DailySlashGame struct {
-	Game   Game           `bson:"game"`
+type dailySlashGame struct {
+	Game   game           `bson:"game"`
 	Checks []WeaponChecks `bson:"checks"`
 }
 
@@ -46,6 +47,11 @@ type WeaponChecks struct {
 	Operation  bool `bson:"operation"`
 	Material   bool `bson:"material"`
 	Obtained   int  `bson:"obtained"`
+}
+
+type connectionGame struct {
+	Game     game `bson:"game"`
+	Attempts int  `bson:"attempts"`
 }
 
 // Retrieves the user data
@@ -73,15 +79,21 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 	user, err := GetUserData(userId)
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
+			emptyGame := game{
+				Guesses:  []int{},
+				HasWon:   false,
+				Position: 0,
+			}
+
 			newUser := UserData{
 				UserID: userId,
-				DailySlash: DailySlashGame{
-					Game: Game{
-						Guesses:  []int{},
-						HasWon:   false,
-						Position: 0,
-					},
+				DailySlash: dailySlashGame{
+					Game:   emptyGame,
 					Checks: []WeaponChecks{},
+				},
+				Connections: connectionGame{
+					Game:     emptyGame,
+					Attempts: 4,
 				},
 			}
 			return &newUser, nil
