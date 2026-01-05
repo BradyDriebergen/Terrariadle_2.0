@@ -13,6 +13,7 @@ var (
 	SearchWeaponsCache = atomicstore.New[[]jsonreader.SearchWeaponResult]()
 	CategoriesCache    = atomicstore.New[[]jsonreader.Category]()
 	NpcsCache          = atomicstore.New[[]jsonreader.Npc]()
+	SearchNpcCache     = atomicstore.New[[]jsonreader.SearchNpcResult]()
 	EnemiesCache       = atomicstore.New[[]jsonreader.Enemy]()
 )
 
@@ -45,6 +46,16 @@ func InitializeStoreFromJson() error {
 		return err
 	}
 	NpcsCache.Set(npcs)
+
+	searchNpcOptions := []jsonreader.SearchNpcResult{}
+	for _, n := range npcs {
+		searchNpcOptions = append(searchNpcOptions, jsonreader.SearchNpcResult{
+			NpcId: n.ID,
+			Name:  n.NPC,
+			Path:  n.NPCPath,
+		})
+	}
+	SearchNpcCache.Set(searchNpcOptions)
 
 	enemies, err := jsonreader.GetEnemiesFromJson()
 	if err != nil {

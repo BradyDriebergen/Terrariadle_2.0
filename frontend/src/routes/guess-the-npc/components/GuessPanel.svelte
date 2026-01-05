@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Dropdown from '$lib/components/Dropdown.svelte';
 
-	const npcList = ['Guide', 'Painter', 'Arms Dealer', 'Dryad', 'Nurse'];
-
-	let won = $state(false);
+	let { npcList, quote, won } = $props();
 
 	function submitGuess(npcId: number) {
 		console.log(npcId);
@@ -14,10 +12,7 @@
 	<h2>Guess the NPC</h2>
 	<p>Which NPC says this quote?</p>
 	<div class="quote-box">
-		<p>
-			"Do you know where the mall is and where can I buy some pants? I'm in some desperate need for
-			some pants to the point where I'll kill someone over it."
-		</p>
+		<p>{quote}</p>
 
 		<div class="quote-options">
 			<span>Shop</span>

@@ -18,6 +18,7 @@ type UserData struct {
 	UserID      string             `bson:"userId,omitempty"`
 	DailySlash  dailySlashGame     `bson:"dailySlash,omitempty"`
 	Connections connectionGame     `bson:"connections,omitempty"`
+	GuessTheNPC guessTheNpcGame    `bson:"guessTheNpc,omitempty"`
 }
 
 // Game represents one game entry inside GuessDocument
@@ -50,6 +51,11 @@ type WeaponChecks struct {
 }
 
 type connectionGame struct {
+	Game     game `bson:"game"`
+	Attempts int  `bson:"attempts"`
+}
+
+type guessTheNpcGame struct {
 	Game     game `bson:"game"`
 	Attempts int  `bson:"attempts"`
 }
