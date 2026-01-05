@@ -9,10 +9,16 @@ import (
 	"terrariadle-backend/internal/utils"
 )
 
-// Used for check-guess post body
-type GuessRequest struct {
+// Used for check-guess post body daily slash
+type DailySlashCheckRequest struct {
 	UserID string `json:"userId"`
 	Guess  int    `json:"guess"`
+}
+
+// Used for check-guess post body connections
+type ConnectionsCheckRequest struct {
+	UserID string   `json:"userId"`
+	Guess  []string `json:"guess"`
 }
 
 // Handler for checking the health of the backend
@@ -44,6 +50,8 @@ func GetSearchItems(w http.ResponseWriter, r *http.Request) {
 		}
 		writeJSON(w, http.StatusOK, searchItems)
 		return
+	case "hangman":
+		return
 	default:
 		writeJSON(w, http.StatusNotFound, map[string]any{
 			"error": fmt.Sprintf("Gamemode %s not found for searching items", mode),
@@ -66,6 +74,12 @@ func InitializeGame(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{"previousWeapon": previousWeapon, "guesses": guesses, "checks": checks, "won": won})
 		return
 	case "connections":
+		attempts, options, guesses, won, err := services.InitializeConnectionsGame(userId)
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, map[string]any{"attempts": attempts, "options": options, "guesses": guesses, "finished": won})
+		return
 	case "guess-the-npc":
 	case "hangman":
 	default:
@@ -80,16 +94,16 @@ func InitializeGame(w http.ResponseWriter, r *http.Request) {
 func CheckGuess(w http.ResponseWriter, r *http.Request) {
 	mode := r.PathValue("mode")
 
-	// Decodes request body into json
-	var req GuessRequest
-	err := json.NewDecoder(r.Body).Decode(&req)
-	if err != nil {
-		http.Error(w, "Invalid JSON", http.StatusBadRequest)
-		return
-	}
-
 	switch mode {
 	case "daily-slash":
+		// Decodes request body into json
+		var req DailySlashCheckRequest
+		err := json.NewDecoder(r.Body).Decode(&req)
+		if err != nil {
+			http.Error(w, "Invalid JSON", http.StatusBadRequest)
+			return
+		}
+
 		won, guess, check, err := services.CheckDailySlashGuess(req.UserID, req.Guess)
 		if err != nil {
 			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
@@ -97,6 +111,20 @@ func CheckGuess(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{"won": won, "guess": guess, "check": check})
 		return
 	case "connections":
+		// Decodes request body into json
+		var req ConnectionsCheckRequest
+		err := json.NewDecoder(r.Body).Decode(&req)
+		if err != nil {
+			http.Error(w, "Invalid JSON", http.StatusBadRequest)
+			return
+		}
+
+		guess, oneAway, won, err := services.CheckConnectionsGuess(req.UserID, req.Guess)
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, map[string]any{"guess": guess, "oneAway": oneAway, "finished": won})
+		return
 	case "guess-the-npc":
 	case "hangman":
 	default:
@@ -121,6 +149,12 @@ func GetWinningData(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{"pos": pos, "count": count})
 		return
 	case "connections":
+		pos, count, err := services.GetConnectionsWinningData(userId)
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, map[string]any{"pos": pos, "count": count})
+		return
 	case "guess-the-npc":
 	case "hangman":
 	default:

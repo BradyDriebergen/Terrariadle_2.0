@@ -9,6 +9,10 @@
 	--color-backgroundblue: rgba(38, 56, 99, 0.8);
 	--color-button: rgba(48, 63, 131, 0.9);
 	--color-lightblue: rgb(73, 94, 171);
+
+	--color-green: rgb(61, 212, 41);
+	--color-red: red;
+	--color-yellow: yellow;
 }
 
 * {

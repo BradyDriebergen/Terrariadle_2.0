@@ -1,4 +1,5 @@
 <script lang="ts">
+	import RemainingTime from "$lib/components/RemainingTime.svelte";
     import { backgrounds, borders, colors, type Rarity } from "$lib/types/dailySlash";
 	import { ConvertPositionToString } from "$lib/utils/posToString";
 	import { typewriter } from "$lib/utils/transitions";
@@ -8,47 +9,13 @@
 
     let pos = $state(0);
     let count = $state(0);
-    let time = $state(0);
 
     onMount(async () => {
         const winningData = await fetch(`http://localhost:3000/api/daily-slash/winning-data/${userId}`);
         const winningDataJson = await winningData.json();
 
-        const timeData = await fetch(`http://localhost:3000/api/remaining-time`);
-        const timeDataJson = await timeData.json();
-
-        time = timeDataJson.remaining;
         pos = winningDataJson.pos;
         count = winningDataJson.count;
-    })
-
-    $effect(() => {
-        if (time <= 0) return;
-
-        const id = setInterval(() => {
-            if (time <= 1) {
-                time = 0;
-                clearInterval(id);
-            } else {
-                time -= 1;
-            }
-        }, 1000);
-
-        return () => {
-            clearInterval(id);
-        };
-    });
-
-    let remainingTime = $derived.by(() => {
-        if (time <= 0) return 'Refresh Now!';
-
-        const hours = Math.floor(time / 3600);
-        const minutes = Math.floor((time % 3600) / 60);
-        const seconds = time % 60;
-
-        const pad = (n: number) => n.toString().padStart(2, "0");
-
-        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
     })
 </script>
 
@@ -73,7 +40,7 @@
 	/>
     <h3 class="weapon-name" style="color: {colors[weapon.info.rarity as Rarity]}">{weapon.name}</h3>
     <p>{count} people guessed todays weapon</p>
-    <p>Next game starts in: {remainingTime}</p>
+    <RemainingTime />
 </div>
 
 <style>

@@ -11,8 +11,8 @@ export async function load({ fetch, parent }) {
 	let weapons: SimpleWeapon[] = await weaponFetch.json();
 
 	const initData = await fetch(`http://localhost:3000/api/daily-slash/initialize-game/${userId}`);
-	if (!weaponFetch) {
-		error(404, 'Unable to fetch weapons');
+	if (!initData) {
+		error(404, 'Unable to fetch initializing data');
 	}
 	const initDataJson = await initData.json();
 

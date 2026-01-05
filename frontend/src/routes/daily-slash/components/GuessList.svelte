@@ -4,9 +4,9 @@
 	import { fly } from "svelte/transition";
     let { guesses, checks } = $props();
 
-    const guessCorrect = 'background-color: rgb(61, 212, 41);';
-    const guessPartial =  'background-color: yellow;';
-    const guessWrong = 'background-color: red;';
+    const guessCorrect = 'background-color: var(--color-green);';
+    const guessPartial =  'background-color: var(--color-yellow);';
+    const guessWrong = 'background-color: var(--color-red);';
 
     function checkedObtained(value: number): string {
         if (value === 2) {
