@@ -1,16 +1,20 @@
 <script lang="ts">
 	import Dropdown from '$lib/components/Dropdown.svelte';
+	import { cubicInOut } from 'svelte/easing';
+	import { slide } from 'svelte/transition';
 
-	let { npcList, quote, won } = $props();
-
-	function submitGuess(npcId: number) {
-		console.log(npcId);
-	}
+	let { submitGuess, npcList, quote, won } = $props();
 </script>
 
-<div class="container">
-	<h2>Guess the NPC</h2>
-	<p>Which NPC says this quote?</p>
+{#if won}
+	<span class="color-cycle">Guess The NPC Results</span>
+{/if}
+
+<div class="container" style="margin-top: {won ? 15 : 40}px;">
+	{#if !won}
+		<h2 out:slide={{ duration: 700, easing: cubicInOut }}>Guess the NPC</h2>
+		<p out:slide={{ duration: 700, easing: cubicInOut }}>Which NPC says this quote?</p>
+	{/if}
 	<div class="quote-box">
 		<p>{quote}</p>
 
@@ -21,15 +25,17 @@
 		</div>
 	</div>
 
-	<div class="dropdown">
-		<Dropdown
-			selectItem={(npcId: number) => {
-				submitGuess(npcId);
-			}}
-			itemList={npcList}
-			itemName="npc"
-		/>
-	</div>
+	{#if !won}
+		<div class="dropdown" out:slide={{ duration: 700, easing: cubicInOut }}>
+			<Dropdown
+				selectItem={(npcId: number) => {
+					submitGuess(npcId);
+				}}
+				itemList={npcList}
+				itemName="npc"
+			/>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -38,7 +44,6 @@
 		width: fit-content;
 		text-align: center;
 		margin: auto;
-		margin-top: 40px;
 		padding: 15px;
 
 		border-radius: 15px;
@@ -86,5 +91,31 @@
 
 	.dropdown {
 		margin-top: 20px;
+	}
+
+	.color-cycle {
+		font-size: 22px;
+		animation: colors 6s linear infinite;
+	}
+
+	@keyframes colors {
+		0% {
+			color: rgb(255, 0, 0);
+		}
+		20% {
+			color: rgb(255, 166, 0);
+		}
+		40% {
+			color: rgb(255, 255, 0);
+		}
+		60% {
+			color: rgb(0, 255, 0);
+		}
+		80% {
+			color: rgb(0, 162, 255);
+		}
+		100% {
+			color: rgb(255, 0, 0);
+		}
 	}
 </style>

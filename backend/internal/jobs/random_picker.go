@@ -93,6 +93,7 @@ func randomNpcData(rnd *rand.Rand) (models.NPCdata, error) {
 
 	// NPC data that will be sent, ensures that names is a slice of strings
 	out := models.NPCdata{
+		ID:      primaryNPC.ID,
 		NPC:     primaryNPC.NPC,
 		NPCPath: primaryNPC.NPCPath,
 		Quote:   pickStr(primaryNPC.Quotes),
