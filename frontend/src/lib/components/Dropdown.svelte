@@ -36,7 +36,7 @@
 		} else if (event.key === 'ArrowUp') {
 			dropdownIndex = Math.max(dropdownIndex - 1, 0);
 			event.preventDefault();
-		} else if (event.key === 'Enter' && dropdownIndex >= 0) {
+		} else if (event.key === 'Enter' && dropdownIndex >= 0 && filtered.length !== 0) {
 			selectItem(filtered[dropdownIndex].id);
 			input = '';
 			event.preventDefault();

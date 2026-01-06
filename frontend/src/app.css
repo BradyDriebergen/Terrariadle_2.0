@@ -25,11 +25,6 @@
 	color: white;
 }
 
-html,
-body {
-	width: 100%;
-}
-
 body {
 	background-image: url('/backgrounds/forest-background.png');
 	background-size: cover;

@@ -10,13 +10,13 @@ import (
 )
 
 // Used for check-guess post body daily slash
-type DailySlashCheckRequest struct {
+type RequestBodyIdGuess struct {
 	UserID string `json:"userId"`
 	Guess  int    `json:"guess"`
 }
 
 // Used for check-guess post body connections
-type ConnectionsCheckRequest struct {
+type RequestBodyStringGuess struct {
 	UserID string   `json:"userId"`
 	Guess  []string `json:"guess"`
 }
@@ -108,7 +108,7 @@ func CheckGuess(w http.ResponseWriter, r *http.Request) {
 	switch mode {
 	case "daily-slash":
 		// Decodes request body into json
-		var req DailySlashCheckRequest
+		var req RequestBodyIdGuess
 		err := json.NewDecoder(r.Body).Decode(&req)
 		if err != nil {
 			http.Error(w, "Invalid JSON", http.StatusBadRequest)
@@ -123,7 +123,7 @@ func CheckGuess(w http.ResponseWriter, r *http.Request) {
 		return
 	case "connections":
 		// Decodes request body into json
-		var req ConnectionsCheckRequest
+		var req RequestBodyStringGuess
 		err := json.NewDecoder(r.Body).Decode(&req)
 		if err != nil {
 			http.Error(w, "Invalid JSON", http.StatusBadRequest)
@@ -137,6 +137,20 @@ func CheckGuess(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{"guess": guess, "oneAway": oneAway, "finished": won})
 		return
 	case "guess-the-npc":
+		// Decodes request body into json
+		var req RequestBodyIdGuess
+		err := json.NewDecoder(r.Body).Decode(&req)
+		if err != nil {
+			http.Error(w, "Invalid JSON", http.StatusBadRequest)
+			return
+		}
+
+		won, guess, err := services.CheckNpcGuess(req.UserID, req.Guess)
+		if err != nil {
+			writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		}
+		writeJSON(w, http.StatusOK, map[string]any{"guess": guess, "won": won})
+		return
 	case "hangman":
 	default:
 		writeJSON(w, http.StatusNotFound, map[string]any{
