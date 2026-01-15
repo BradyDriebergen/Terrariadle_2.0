@@ -1,9 +1,8 @@
 Backend:
-- Add drop method in daily_reset.go that drops all the data from the user guess collection
+
 - create a config package (pulls enviroment variables)
 - Create Makefile to help with deployment
-- Add CORS and Https to my backend for production
+
 - Add websocket for live player guess counts
 
 Frontend:
-- Remove scroll bar from dropdown on daily-slash

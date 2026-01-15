@@ -46,17 +46,37 @@ func withCORS(next http.Handler) http.Handler {
 func NewMux() http.Handler {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("GET /api/health", HealthHandler) // Checks backend health
-
-	mux.HandleFunc("GET /api/daily-slash/hint/{hintNum}", GetHint) // Get's hints for daily slash
-
-	mux.HandleFunc("GET /api/{mode}/search-items", GetSearchItems)             // Gets items for searching
-	mux.HandleFunc("GET /api/{mode}/initialize-game/{userId}", InitializeGame) // Gets user guesses and puzzle data
-
-	mux.HandleFunc("POST /api/{mode}/check-guess", CheckGuess)              // Checks user guess
-	mux.HandleFunc("GET /api/{mode}/winning-data/{userId}", GetWinningData) // Gets users position and total players guessed
-
-	mux.HandleFunc("GET /api/remaining-time", GetRemainingTime) // Gets the remaining time in the day
+	registerCommonRoutes(mux)
+	registerDailySlashRoutes(mux)
+	registerConnectionsRoutes(mux)
+	registerGuessTheNpcRoutes(mux)
+	// registerHangmanRoutes(mux) ...
 
 	return withCORS(mux)
+}
+
+func registerCommonRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/health", healthHandler)
+	mux.HandleFunc("GET /api/remaining-time", getRemainingTime)
+}
+
+func registerDailySlashRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/daily-slash/initialize-game/{userId}", getDailySlashInitData)
+	mux.HandleFunc("GET /api/daily-slash/search-items", getDailySlashSearchItems)
+	mux.HandleFunc("GET /api/daily-slash/hint/{hintNum}", getDailySlashHint)
+	mux.HandleFunc("POST /api/daily-slash/check-guess", postDailySlashGuess)
+	mux.HandleFunc("GET /api/daily-slash/winning-data/{userId}", getDailySlashWinningData)
+}
+
+func registerConnectionsRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/connections/initialize-game/{userId}", getConnectionInitData)
+	mux.HandleFunc("POST /api/connections/check-guess", postConnectionsGuess)
+	mux.HandleFunc("GET /api/connections/winning-data/{userId}", getConnectionsWinningData)
+}
+
+func registerGuessTheNpcRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/guess-the-npc/search-items", getNpcSearchItems)
+	mux.HandleFunc("GET /api/guess-the-npc/initialize-game/{userId}", getNpcInitGame)
+	mux.HandleFunc("POST /api/guess-the-npc/check-guess", postNpcGuess)
+	mux.HandleFunc("GET /api/guess-the-npc/winning-data/{userId}", getNpcWinningData)
 }
