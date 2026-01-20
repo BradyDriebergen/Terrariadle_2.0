@@ -6,3 +6,8 @@ Backend:
 - Add websocket for live player guess counts
 
 Frontend:
+
+
+- Make it so images can't be selected on the frontend
+- Go through and make sure that format/transitions/colors are all good
+- Go through each component/page and make sure that typescript is commented and types are added
