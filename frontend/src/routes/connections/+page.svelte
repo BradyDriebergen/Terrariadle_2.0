@@ -9,14 +9,24 @@
 
 	let { data } = $props();
 
-	let options: string[] = $state(data.options);
+	type Option = {
+		id: string;
+		label: string;
+	};
+
+	let options = $state<Option[]>(
+		data.options.map((label: string) => ({
+			id: crypto.randomUUID(),
+			label
+		}))
+	);
 	let attempts: number = $state(data.attempts);
 	let finished: boolean = $derived(data.finished);
 
 	let transitioning: boolean = $state(false);
 
-	let tempGuesses: string[] = $state([]);
-	let selectedStrings: string[] = $state([]);
+	let tempGuesses: Option[] = $state([]);
+	let selectedOptions: Option[] = $state([]);
 
 	let answerCategories: string[] = $state(updateAnswerCategories(data.guesses));
 	let answerOptions: Record<string, string[]> = $state(updateAnswerOptions(data.guesses));
@@ -42,11 +52,11 @@
 	}
 
 	// Adds selected category to string
-	function selectCategory(cat: string) {
-		if (selectedStrings.includes(cat)) {
-			selectedStrings = selectedStrings.filter((s) => s !== cat);
+	function selectCategory(opt: Option) {
+		if (selectedOptions.includes(opt)) {
+			selectedOptions = selectedOptions.filter((s) => s !== opt);
 		} else {
-			selectedStrings.push(cat);
+			selectedOptions.push(opt);
 		}
 	}
 
@@ -100,10 +110,14 @@
 	}
 
 	async function submitGuess() {
+		const guesses = options
+			.filter(option => selectedOptions.includes(option))
+			.map(option => option.label);
+
 		fetch('http://localhost:3000/api/connections/check-guess', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: selectedStrings })
+			body: JSON.stringify({ userId: data.userId, guess: guesses })
 		})
 			.then((r) => r.json())
 			.then(async (res) => {
@@ -111,8 +125,8 @@
 					tempAnswerCategory = res.guess.category;
 					tempAnswerOptions = res.guess.options;
 
-					options = options.filter((s: string) => !selectedStrings.includes(s));
-					tempGuesses.push(...selectedStrings);
+					options = options.filter((s: Option) => !selectedOptions.includes(s));
+					tempGuesses.push(...selectedOptions);
 				} else {
 					if (res.oneAway) {
 						toggleOneAway();
@@ -134,7 +148,7 @@
 					answerOptions = updateAnswerOptions(dataJson.guesses);
 				}
 
-				selectedStrings = [];
+				selectedOptions = [];
 			});
 	}
 </script>
@@ -167,23 +181,23 @@
 		</div>
 	{/each}
 
-	{#each tempGuesses as category (category)}
-		<button class="category" in:receive={{ key: category }}>
-			<span>{category}</span>
+	{#each tempGuesses as category (category.id)}
+		<button class="category" in:receive={{ key: category.label }}>
+			<span>{category.label}</span>
 		</button>
 	{/each}
 
-	{#each options as category (category)}
+	{#each options as category (category.id)}
 		<button
 			type="button"
 			class="category"
-			class:Selected={selectedStrings.includes(category)}
-			style:transform={selectedStrings.includes(category)
+			class:Selected={selectedOptions.includes(category)}
+			style:transform={selectedOptions.includes(category)
 				? `translateX(${x.current}px)`
 				: undefined}
 			onclick={() => selectCategory(category)}
-			disabled={selectedStrings.length === 4 && !selectedStrings.includes(category)}
-			out:send={{ key: category }}
+			disabled={selectedOptions.length === 4 && !selectedOptions.includes(category)}
+			out:send={{ key: category.label }}
 			animate:flip={{ duration: 220, easing: (t) => t }}
 			onoutroend={() => {
 				updateAnswerPanes();
@@ -194,7 +208,7 @@
 				transitioning = true;
 			}}
 		>
-			<span>{category}</span>
+			<span>{category.label}</span>
 		</button>
 	{/each}
 </div>
@@ -213,8 +227,8 @@
 	{#if !finished}
 		<div class="game-buttons">
 			<button onclick={shuffle}>Shuffle</button>
-			<button onclick={() => (selectedStrings = [])}>Deselect All</button>
-			<button onclick={submitGuess} disabled={selectedStrings.length !== 4}>Check Connection</button
+			<button onclick={() => (selectedOptions = [])}>Deselect All</button>
+			<button onclick={submitGuess} disabled={selectedOptions.length !== 4}>Check Connection</button
 			>
 		</div>
 	{/if}
