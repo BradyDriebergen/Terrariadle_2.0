@@ -62,9 +62,9 @@
         <h2 class="bonus-title">Bonus Round!</h2>
         <p>Out of the following names, what name can the {npc.name} have?</p>
         {#if guessedName && correctName === guessedName}
-            <h2 in:scale={{ duration: 700 }} class="winning-card">Nailed It!</h2>
+            <h2 in:scale={{ duration: 600 }} class="winning-card">Nailed It!</h2>
         {:else if guessedName && correctName !== guessedName}
-            <h2 in:scale={{ duration: 700 }}>Better Luck Next Time</h2>
+            <h2 in:scale={{ duration: 600 }}>Better Luck Next Time</h2>
         {/if}
         <div class="bonus-options">
             {#each names as name}
