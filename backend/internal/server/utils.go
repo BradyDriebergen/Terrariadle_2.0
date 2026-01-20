@@ -29,9 +29,3 @@ func shuffle[T any](list []T) {
 		list[i], list[j] = list[j], list[i]
 	})
 }
-
-// Used for check-guess post body guess the npc
-type NpcGuessRequestBody struct {
-	UserID string `json:"userId"`
-	Guess  int    `json:"guess"`
-}

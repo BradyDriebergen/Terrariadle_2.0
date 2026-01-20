@@ -56,8 +56,8 @@ type connectionGame struct {
 }
 
 type guessTheNpcGame struct {
-	Game     game `bson:"game"`
-	Attempts int  `bson:"attempts"`
+	Game        game   `bson:"game"`
+	GuessedName string `bson:"guessedName"`
 }
 
 // Retrieves the user data

@@ -94,9 +94,14 @@ func searchableNpcs() ([]jsonreader.SearchNpcResult, error) {
 	return result, nil
 }
 
+type npcGuessReqBody struct {
+	UserID string `json:"userId"`
+	Guess  int    `json:"guess"`
+}
+
 // Checks Guess The NPC guess and updates the database
 func postNpcGuess(w http.ResponseWriter, r *http.Request) {
-	var req NpcGuessRequestBody
+	var req npcGuessReqBody
 	err := json.NewDecoder(r.Body).Decode(&req)
 	if err != nil {
 		http.Error(w, "Invalid JSON", http.StatusBadRequest)
@@ -171,7 +176,129 @@ func checkNpcGuess(userId string, npcId int) (bool, jsonreader.SearchNpcResult, 
 	return won, guessedNpc, nil
 }
 
+type npcWinData struct {
+	Position    int
+	Count       int
+	Names       []string
+	GuessedName string
+	CorrectName string
+}
+
 // Gets the position and players guessed numbers
 func getNpcWinningData(w http.ResponseWriter, r *http.Request) {
+	userId := r.PathValue("userId")
 
+	winData, err := npcWinningData(userId)
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		return
+	}
+
+	writeJSON(w, http.StatusOK, map[string]any{
+		"pos":         winData.Position,
+		"count":       winData.Count,
+		"names":       winData.Names,
+		"guessedName": winData.GuessedName,
+		"correctName": winData.CorrectName,
+	})
+}
+
+func npcWinningData(userId string) (npcWinData, error) {
+	returnData := npcWinData{
+		Position:    0,
+		Count:       0,
+		Names:       []string{},
+		GuessedName: "",
+		CorrectName: "",
+	}
+
+	// Initial pull from database and cache
+	gameData, ok := store.GameData.Get()
+	if !ok {
+		return returnData, fmt.Errorf("failed to get game data")
+	}
+	user, err := models.GetOrCreateUser(userId)
+	if err != nil {
+		return returnData, fmt.Errorf("failed to get user information")
+	}
+
+	// Gets winning position and player count
+	if user.GuessTheNPC.Game.HasWon {
+		returnData.Position = user.GuessTheNPC.Game.Position
+		returnData.Count = gameData.GuessCounts.GuessTheNpcCount
+
+		returnData.Names = make([]string, len(gameData.GuessTheNpc.Names))
+		copy(returnData.Names, gameData.GuessTheNpc.Names)
+
+		shuffle(returnData.Names)
+
+		if user.GuessTheNPC.GuessedName != "" {
+			returnData.GuessedName = user.GuessTheNPC.GuessedName
+			returnData.CorrectName = gameData.GuessTheNpc.Names[0]
+		}
+
+		return returnData, nil
+	}
+
+	return returnData, fmt.Errorf("player doesn't exist")
+}
+
+type npcNameGuessReqBody struct {
+	UserID string `json:"userId"`
+	Guess  string `json:"guess"`
+}
+
+func postNpcNameCheck(w http.ResponseWriter, r *http.Request) {
+	var req npcNameGuessReqBody
+	err := json.NewDecoder(r.Body).Decode(&req)
+	if err != nil {
+		http.Error(w, "Invalid JSON", http.StatusBadRequest)
+		return
+	}
+
+	if !isValidUUID(req.UserID) {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": "Invalid user ID"})
+	}
+
+	guessedName, correct, err := checkNpcNameGuess(req.UserID, req.Guess)
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		return
+	}
+
+	writeJSON(w, http.StatusOK, map[string]any{
+		"guessedName": guessedName,
+		"correctName": correct,
+	})
+}
+
+func checkNpcNameGuess(userId, npcName string) (string, string, error) {
+	// Initial pulls from database and cache
+	gameData, ok := store.GameData.Get()
+	if !ok {
+		return "", "", fmt.Errorf("failed to get game data")
+	}
+	user, err := models.GetOrCreateUser(userId)
+	if err != nil {
+		return "", "", fmt.Errorf("failed to get user information")
+	}
+
+	isValidName := false
+	for _, v := range gameData.GuessTheNpc.Names {
+		if v == npcName {
+			isValidName = true
+		}
+	}
+	if !isValidName {
+		return "", "", fmt.Errorf("name guessed is not a valid name")
+	}
+
+	user.GuessTheNPC.GuessedName = npcName
+
+	err = models.UpdateUserData(user)
+	if err != nil {
+		return "", "", err
+	}
+
+	return user.GuessTheNPC.GuessedName, gameData.GuessTheNpc.Names[0], nil
 }

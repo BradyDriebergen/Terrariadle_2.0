@@ -142,32 +142,4 @@
 		margin-top: 15px;
 		margin-bottom: 5px;
 	}
-
-	.color-cycle {
-		display: inline-block;
-		margin-top: 20px;
-		font-size: 22px;
-		animation: colors 6s linear infinite;
-	}
-
-	@keyframes colors {
-		0% {
-			color: rgb(255, 0, 0);
-		}
-		20% {
-			color: rgb(255, 166, 0);
-		}
-		40% {
-			color: rgb(255, 255, 0);
-		}
-		60% {
-			color: rgb(0, 255, 0);
-		}
-		80% {
-			color: rgb(0, 162, 255);
-		}
-		100% {
-			color: rgb(255, 0, 0);
-		}
-	}
 </style>
