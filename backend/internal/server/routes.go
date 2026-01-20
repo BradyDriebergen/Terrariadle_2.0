@@ -79,4 +79,5 @@ func registerGuessTheNpcRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /api/guess-the-npc/initialize-game/{userId}", getNpcInitGame)
 	mux.HandleFunc("POST /api/guess-the-npc/check-guess", postNpcGuess)
 	mux.HandleFunc("GET /api/guess-the-npc/winning-data/{userId}", getNpcWinningData)
+	mux.HandleFunc("POST /api/guess-the-npc/check-name-guess", postNpcNameCheck)
 }

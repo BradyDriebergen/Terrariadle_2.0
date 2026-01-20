@@ -35,10 +35,8 @@
 
 {#if won}
 	<WinningComponent
-		count={1}
-		pos={1}
 		npc={guesses[0]}
-		names={["Bob", "Steve", "Sally", "Ben"]}
+		userId={data.userId}
 	/>
 {/if}
 

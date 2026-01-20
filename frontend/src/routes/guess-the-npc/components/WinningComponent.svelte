@@ -2,9 +2,40 @@
 	import RemainingTime from "$lib/components/RemainingTime.svelte";
 	import { ConvertPositionToString } from "$lib/utils/posToString";
 	import { typewriter } from "$lib/utils/transitions";
+	import { onMount } from "svelte";
 	import { scale } from "svelte/transition";
 
-    let { count, pos, npc, names } = $props();
+    let { npc, userId } = $props();
+
+    let pos = $state(0);
+    let count = $state(0);
+    let names: string[] = $state([]);
+    let guessedName = $state("");
+    let correctName = $state("");
+
+    onMount(async () => {
+		const winningData = await fetch(`http://localhost:3000/api/guess-the-npc/winning-data/${userId}`);
+		const winningDataJson = await winningData.json();
+
+		pos = winningDataJson.pos;
+		count = winningDataJson.count;
+        names = winningDataJson.names;
+        guessedName = winningDataJson.guessedName;
+        correctName = winningDataJson.correctName;
+	});
+
+    async function guessName(name: string) {
+		fetch('http://localhost:3000/api/guess-the-npc/check-name-guess', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ userId: userId, guess: name })
+		})
+			.then((r) => r.json())
+			.then((data) => {
+				guessedName = data.guessedName;
+                correctName = data.correctName;
+			});
+	}
 </script>
 
 <div class="winning-container" in:scale>
@@ -30,9 +61,22 @@
     <div class="bonus-container">
         <h2 class="bonus-title">Bonus Round!</h2>
         <p>Out of the following names, what name can the {npc.name} have?</p>
+        {#if guessedName && correctName === guessedName}
+            <h2 in:scale={{ duration: 700 }} class="winning-card">Nailed It!</h2>
+        {:else if guessedName && correctName !== guessedName}
+            <h2 in:scale={{ duration: 700 }}>Better Luck Next Time</h2>
+        {/if}
         <div class="bonus-options">
             {#each names as name}
-                <button class="bonus-button">{name}</button>
+                <button 
+                    class="bonus-button" 
+                    onclick={() => guessName(name)} 
+                    disabled={!!guessedName}
+                    class:Success={correctName === name}
+                    class:Fail={guessedName === name && correctName !== guessedName}
+                >
+                    {name}
+                </button>
             {/each}
         </div>
     </div>
@@ -134,8 +178,24 @@
 		transition: background-color 0.2s ease;
     }
 
-    .bonus-button:hover {
+    .bonus-button:not(:disabled):hover {
         cursor: pointer;
 		background-color: var(--color-lightblue);
+    }
+
+    .bonus-button:disabled {
+        cursor: not-allowed;
+    }
+
+    .bonus-button.Success {
+        background-color: var(--color-green);
+    }
+
+    .bonus-button.Fail {
+        background-color: var(--color-red);
+    }
+
+    .winning-card {
+        color: yellow;
     }
 </style>
