@@ -2,15 +2,13 @@
 
   let { onKeyPressed, letters } = $props();
 
-  let selectedLetters = $state<string[]>([...letters]);
+  let selectedLetters: string[] = $state([]);
 
   const rows: string[][] = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
     ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
   ];
-
-  const enemy = "SKELETON";
 
   function handleLetterClick(letter: string) {
     if (!selectedLetters.includes(letter)) {
@@ -25,7 +23,7 @@
             {#each row as letter (letter)}
                 <button
                     class="keyboard-key"
-                    class:correct={enemy.includes(letter)}
+                    class:correct={letters.includes(letter)}
                     disabled={selectedLetters.includes(letter)}
                     onclick={() => {
                         handleLetterClick(letter);
