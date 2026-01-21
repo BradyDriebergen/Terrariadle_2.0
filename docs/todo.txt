@@ -11,3 +11,6 @@ Frontend:
 - Make it so images can't be selected on the frontend
 - Go through and make sure that format/transitions/colors are all good
 - Go through each component/page and make sure that typescript is commented and types are added
+- Update static folder to have good image names
+
+- Add audio volume slider to hangman saved as a cookie
