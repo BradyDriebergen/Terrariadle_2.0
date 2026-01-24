@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Guide from './components/Guide.svelte';
 	import Keyboard from './components/Keyboard.svelte';
+	import WinningComponent from './components/WinningComponent.svelte';
 
     let { data } = $props();
 
@@ -11,12 +12,19 @@
 	let audio = $state<HTMLAudioElement>();
 
 	const correctEnemy = "ETHERIAN JAVELIN THROWER"
+	// const correctEnemy = "BLUE SLIME"
 	let guessedLetters: string[] = $state([])
 	let enemy = $derived.by(() => {
 		return correctEnemy.split('').map(letter => {
 			if (letter === ' ') return ' ';
 			return guessedLetters.includes(letter) ? letter : '_';
 		});
+	});
+
+	// Split into words for better wrapping
+	let enemyWords = $derived.by(() => {
+		const enemyString = enemy.join('');
+		return enemyString.split(' ').map(word => word.split(''));
 	});
 
     function onKeyPressed(letter: string) {
@@ -58,13 +66,15 @@
 
 <Guide {failedGuesses}/>
 
+<WinningComponent />
+
 <div class="phrase-container">
-	{#each enemy as letter}
-		{#if letter === " "}
-			<div style="width: 10px"></div>
-		{:else}
-			<span>{letter}</span>
-		{/if}
+	{#each enemyWords as word}
+		<div class="word">
+			{#each word as letter}
+				<span>{letter}</span>
+			{/each}
+		</div>
 	{/each}
 </div>
 
@@ -121,13 +131,22 @@
 	.phrase-container {
 		background-color: var(--color-backgroundblue);
 		display: flex;
-		gap: 8px;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
 		padding: 20px 25px;
 		margin: auto;
 		margin-bottom: 20px;
 		width: fit-content;
+
 		border-radius: 15px;
 		border: 2px solid black;
 		font-size: 25px;
+	}
+
+	.word {
+		display: flex;
+		gap: 5px;
+		white-space: nowrap;
 	}
 </style>

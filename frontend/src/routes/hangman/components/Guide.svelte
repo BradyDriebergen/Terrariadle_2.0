@@ -63,7 +63,7 @@
             x={[-1, 1]}
             size={30}
             amount={10}
-            duration={1500}
+            duration={2000}
             noGravity
             colorArray={[
                 'url(/hangman/Guide/Flesh1.png)',
@@ -91,9 +91,9 @@
     }
 
     .guide-burst {
-		position: fixed;
-		top: 300px;
-		left: 50%;
+		position: absolute;
+		margin-top: 45px;
+        margin-left: 48%;
 		width: 200px;
 		height: 200px;
 		pointer-events: none;
