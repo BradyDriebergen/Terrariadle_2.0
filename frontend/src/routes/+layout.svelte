@@ -47,4 +47,7 @@
 </div>
 
 <style>
+	main {
+		padding: 20px;
+	}
 </style>
