@@ -14,3 +14,15 @@ Frontend:
 - Update static folder to have good image names
 
 - Add audio volume slider to hangman saved as a cookie
+
+
+
+Infrastructure:
+Backend - Go
+Frontend - Sveltekit
+Database - Mongodb
+
+Database cloud - Atlas Database
+Github actions - automated jobs and testing
+GitHub container registry - image storage
+Oracle Cloud - Hosting website
