@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"strings"
 	"terrariadle-backend/internal/models"
 	"terrariadle-backend/internal/store"
 	"terrariadle-backend/internal/utils"
@@ -91,6 +92,7 @@ func reset(loc *time.Location) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	enemy.Name = strings.ToUpper(enemy.Name)
 
 	guessCounts := resetGuessCounts()
 

@@ -19,6 +19,7 @@ type UserData struct {
 	DailySlash  dailySlashGame     `bson:"dailySlash,omitempty"`
 	Connections connectionGame     `bson:"connections,omitempty"`
 	GuessTheNPC guessTheNpcGame    `bson:"guessTheNpc,omitempty"`
+	Hangman     hangmanGame        `bson:"hangman,omitempty"`
 }
 
 // Game represents one game entry inside GuessDocument
@@ -58,6 +59,11 @@ type connectionGame struct {
 type guessTheNpcGame struct {
 	Game        game   `bson:"game"`
 	GuessedName string `bson:"guessedName"`
+}
+
+type hangmanGame struct {
+	Game     game `bson:"game"`
+	Attempts int  `bson:"attempts"`
 }
 
 // Retrieves the user data
@@ -100,6 +106,14 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 				Connections: connectionGame{
 					Game:     emptyGame,
 					Attempts: 4,
+				},
+				GuessTheNPC: guessTheNpcGame{
+					Game:        emptyGame,
+					GuessedName: "",
+				},
+				Hangman: hangmanGame{
+					Game:     emptyGame,
+					Attempts: 6,
 				},
 			}
 			return &newUser, nil

@@ -2,11 +2,11 @@
 	import Confetti from "svelte-confetti";
 	import { scale } from "svelte/transition";
 
-    let { failedGuesses } = $props();
+    let { attempts } = $props();
 </script>
 
 <div class="container">
-{#if failedGuesses < 6}
+{#if attempts > 0}
     <div style="padding-top: 40px;">
         <img
             src="/hangman/TerrariaNoose.png"
@@ -18,42 +18,42 @@
             src="/hangman/Guide/Right_Arm.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 1 ? '100%' : '30%'};"
+            style:opacity={attempts <= 5 ? 1 : 0.3}
         />
 
         <img
             src="/hangman/Guide/Torso.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 2 ? '100%' : '30%'};"
+            style:opacity={attempts <= 4 ? 1 : 0.3}
         />
 
         <img
             src="/hangman/Guide/Left_Arm.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 3 ? '100%' : '30%'};"
+            style:opacity={attempts <= 3 ? 1 : 0.3}
         />
 
         <img
             src="/hangman/Guide/Right_Leg.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 4 ? '100%' : '30%'};"
+            style:opacity={attempts <= 2 ? 1 : 0.3}
         />
 
         <img
             src="/hangman/Guide/Left_Leg.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 5 ? '100%' : '30%'};"
+            style:opacity={attempts <= 1 ? 1 : 0.3}
         />
 
         <img
             src="/hangman/Guide/Head.png"
             alt=""
             class="guide-part"
-            style="opacity: {failedGuesses >= 6 ? '100%' : '30%'}"
+            style:opacity={attempts <= 0 ? 1 : 0.3}
         />
     </div>
 {:else}
@@ -76,10 +76,11 @@
     <img class="wof" src="/hangman/Wall_of_Flesh.gif" alt="Wall of Flesh" in:scale/>
 {/if}
 </div>
+<p>Wrong guesses: {6 - attempts} / 6</p>
 
 <style>
     .container {
-        height: 220px;
+        height: 190px;
     }
 
     .guide-part {
@@ -101,6 +102,5 @@
 
     .wof {
         height: 180px;
-        padding-top: 20px;
     }
 </style>
