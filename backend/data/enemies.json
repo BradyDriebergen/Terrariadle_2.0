@@ -1,1394 +1,1394 @@
 [
   {
     "name": "Angry Bones",
-    "image_path": "/enemy_images/Angry Bones.png"
+    "image_path": "/Angry Bones.png"
   },
   {
     "name": "Anomura Fungus",
-    "image_path": "/enemy_images/Anomura Fungus.png"
+    "image_path": "/Anomura Fungus.png"
   },
   {
     "name": "Antlion",
-    "image_path": "/enemy_images/Antlion.png"
+    "image_path": "/Antlion.png"
   },
   {
     "name": "Antlion Charger",
-    "image_path": "/enemy_images/Antlion Charger.png"
+    "image_path": "/Antlion Charger.png"
   },
   {
     "name": "Antlion Larva",
-    "image_path": "/enemy_images/Antlion Larva.png"
+    "image_path": "/Antlion Larva.png"
   },
   {
     "name": "Antlion Swarmer",
-    "image_path": "/enemy_images/Antlion Swarmer.png"
+    "image_path": "/Antlion Swarmer.png"
   },
   {
     "name": "Baby Slime",
-    "image_path": "/enemy_images/Baby Slime.png"
+    "image_path": "/Baby Slime.png"
   },
   {
     "name": "Bee",
-    "image_path": "/enemy_images/Bee.png"
+    "image_path": "/Bee.png"
   },
   {
     "name": "Black Slime",
-    "image_path": "/enemy_images/Black Slime.png"
+    "image_path": "/Black Slime.png"
   },
   {
     "name": "Blazing Wheel",
-    "image_path": "/enemy_images/Blazing Wheel.png"
+    "image_path": "/Blazing Wheel.png"
   },
   {
     "name": "Blood Crawler",
-    "image_path": "/enemy_images/Blood Crawler.png"
+    "image_path": "/Blood Crawler.png"
   },
   {
     "name": "Blue Jellyfish",
-    "image_path": "/enemy_images/Blue Jellyfish.png"
+    "image_path": "/Blue Jellyfish.png"
   },
   {
     "name": "Blue Slime",
-    "image_path": "/enemy_images/Blue Slime.png"
+    "image_path": "/Blue Slime.png"
   },
   {
     "name": "Bone Serpent",
-    "image_path": "/enemy_images/Bone Serpent.png"
+    "image_path": "/Bone Serpent.png"
   },
   {
     "name": "Cave Bat",
-    "image_path": "/enemy_images/Cave Bat.png"
+    "image_path": "/Cave Bat.png"
   },
   {
     "name": "Cochineal Beetle",
-    "image_path": "/enemy_images/Cochineal Beetle.png"
+    "image_path": "/Cochineal Beetle.png"
   },
   {
     "name": "Crab",
-    "image_path": "/enemy_images/Crab.png"
+    "image_path": "/Crab.png"
   },
   {
     "name": "Crawdad",
-    "image_path": "/enemy_images/Crawdad.png"
+    "image_path": "/Crawdad.png"
   },
   {
     "name": "Crimera",
-    "image_path": "/enemy_images/Crimera.png"
+    "image_path": "/Crimera.png"
   },
   {
     "name": "Cursed Skull",
-    "image_path": "/enemy_images/Cursed Skull.png"
+    "image_path": "/Cursed Skull.png"
   },
   {
     "name": "Cyan Beetle",
-    "image_path": "/enemy_images/Cyan Beetle.png"
+    "image_path": "/Cyan Beetle.png"
   },
   {
     "name": "Dark Caster",
-    "image_path": "/enemy_images/Dark Caster.png"
+    "image_path": "/Dark Caster.png"
   },
   {
     "name": "Demon",
-    "image_path": "/enemy_images/Demon.png"
+    "image_path": "/Demon.png"
   },
   {
     "name": "Demon Eye",
-    "image_path": "/enemy_images/Demon Eye.png"
+    "image_path": "/Demon Eye.png"
   },
   {
     "name": "Devourer",
-    "image_path": "/enemy_images/Devourer.png"
+    "image_path": "/Devourer.png"
   },
   {
     "name": "Doctor Bones",
-    "image_path": "/enemy_images/Doctor Bones.png"
+    "image_path": "/Doctor Bones.png"
   },
   {
     "name": "Dungeon Guardian",
-    "image_path": "/enemy_images/Dungeon Guardian.png"
+    "image_path": "/Dungeon Guardian.png"
   },
   {
     "name": "Dungeon Slime",
-    "image_path": "/enemy_images/Dungeon Slime.png"
+    "image_path": "/Dungeon Slime.png"
   },
   {
     "name": "Eater of Souls",
-    "image_path": "/enemy_images/Eater of Souls.png"
+    "image_path": "/Eater of Souls.png"
   },
   {
     "name": "Face Monster",
-    "image_path": "/enemy_images/Face Monster.png"
+    "image_path": "/Face Monster.png"
   },
   {
     "name": "Fire Imp",
-    "image_path": "/enemy_images/Fire Imp.png"
+    "image_path": "/Fire Imp.png"
   },
   {
     "name": "Frozen Zombie",
-    "image_path": "/enemy_images/Frozen Zombie.png"
+    "image_path": "/Frozen Zombie.png"
   },
   {
     "name": "Fungi Bulb",
-    "image_path": "/enemy_images/Fungi Bulb.png"
+    "image_path": "/Fungi Bulb.png"
   },
   {
     "name": "Ghost",
-    "image_path": "/enemy_images/Ghost.png"
+    "image_path": "/Ghost.png"
   },
   {
     "name": "Giant Antlion Charger",
-    "image_path": "/enemy_images/Giant Antlion Charger.png"
+    "image_path": "/Giant Antlion Charger.png"
   },
   {
     "name": "Giant Antlion Swarmer",
-    "image_path": "/enemy_images/Giant Antlion Swarmer.png"
+    "image_path": "/Giant Antlion Swarmer.png"
   },
   {
     "name": "Giant Shelly",
-    "image_path": "/enemy_images/Giant Shelly.png"
+    "image_path": "/Giant Shelly.png"
   },
   {
     "name": "Giant Worm",
-    "image_path": "/enemy_images/Giant Worm.png"
+    "image_path": "/Giant Worm.png"
   },
   {
     "name": "Gnome",
-    "image_path": "/enemy_images/Gnome.png"
+    "image_path": "/Gnome.png"
   },
   {
     "name": "Goblin Scout",
-    "image_path": "/enemy_images/Goblin Scout.png"
+    "image_path": "/Goblin Scout.png"
   },
   {
     "name": "Granite Elemental",
-    "image_path": "/enemy_images/Granite Elemental.png"
+    "image_path": "/Granite Elemental.png"
   },
   {
     "name": "Granite Golem",
-    "image_path": "/enemy_images/Granite Golem.png"
+    "image_path": "/Granite Golem.png"
   },
   {
     "name": "Green Slime",
-    "image_path": "/enemy_images/Green Slime.png"
+    "image_path": "/Green Slime.png"
   },
   {
     "name": "Harpy",
-    "image_path": "/enemy_images/Harpy.png"
+    "image_path": "/Harpy.png"
   },
   {
     "name": "Hellbat",
-    "image_path": "/enemy_images/Hellbat.png"
+    "image_path": "/Hellbat.png"
   },
   {
     "name": "Hoplite",
-    "image_path": "/enemy_images/Hoplite.png"
+    "image_path": "/Hoplite.png"
   },
   {
     "name": "Hornet",
-    "image_path": "/enemy_images/Hornet.png"
+    "image_path": "/Hornet.png"
   },
   {
     "name": "Ice Bat",
-    "image_path": "/enemy_images/Ice Bat.png"
+    "image_path": "/Ice Bat.png"
   },
   {
     "name": "Ice Slime",
-    "image_path": "/enemy_images/Ice Slime.png"
+    "image_path": "/Ice Slime.png"
   },
   {
     "name": "Jungle Bat",
-    "image_path": "/enemy_images/Jungle Bat.png"
+    "image_path": "/Jungle Bat.png"
   },
   {
     "name": "Jungle Slime",
-    "image_path": "/enemy_images/Jungle Slime.png"
+    "image_path": "/Jungle Slime.png"
   },
   {
     "name": "Lac Beetle",
-    "image_path": "/enemy_images/Lac Beetle.png"
+    "image_path": "/Lac Beetle.png"
   },
   {
     "name": "Lava Slime",
-    "image_path": "/enemy_images/Lava Slime.png"
+    "image_path": "/Lava Slime.png"
   },
   {
     "name": "Maggot Zombie",
-    "image_path": "/enemy_images/Maggot Zombie.png"
+    "image_path": "/Maggot Zombie.png"
   },
   {
     "name": "Man Eater",
-    "image_path": "/enemy_images/Man Eater.png"
+    "image_path": "/Man Eater.png"
   },
   {
     "name": "Meteor Head",
-    "image_path": "/enemy_images/Meteor Head.png"
+    "image_path": "/Meteor Head.png"
   },
   {
     "name": "Mother Slime",
-    "image_path": "/enemy_images/Mother Slime.png"
+    "image_path": "/Mother Slime.png"
   },
   {
     "name": "Mushi Ladybug",
-    "image_path": "/enemy_images/Mushi Ladybug.png"
+    "image_path": "/Mushi Ladybug.png"
   },
   {
     "name": "Nymph",
-    "image_path": "/enemy_images/Nymph.png"
+    "image_path": "/Nymph.png"
   },
   {
     "name": "Pinky",
-    "image_path": "/enemy_images/Pinky.png"
+    "image_path": "/Pinky.png"
   },
   {
     "name": "Pink Jellyfish",
-    "image_path": "/enemy_images/Pink Jellyfish.png"
+    "image_path": "/Pink Jellyfish.png"
   },
   {
     "name": "Piranha",
-    "image_path": "/enemy_images/Piranha.png"
+    "image_path": "/Piranha.png"
   },
   {
     "name": "Purple Slime",
-    "image_path": "/enemy_images/Purple Slime.png"
+    "image_path": "/Purple Slime.png"
   },
   {
     "name": "Raven",
-    "image_path": "/enemy_images/Raven.png"
+    "image_path": "/Raven.png"
   },
   {
     "name": "Red Slime",
-    "image_path": "/enemy_images/Red Slime.png"
+    "image_path": "/Red Slime.png"
   },
   {
     "name": "Salamander",
-    "image_path": "/enemy_images/Salamander.png"
+    "image_path": "/Salamander.png"
   },
   {
     "name": "Sand Slime",
-    "image_path": "/enemy_images/Sand Slime.png"
+    "image_path": "/Sand Slime.png"
   },
   {
     "name": "Sea Snail",
-    "image_path": "/enemy_images/Sea Snail.png"
+    "image_path": "/Sea Snail.png"
   },
   {
     "name": "Shark",
-    "image_path": "/enemy_images/Shark.png"
+    "image_path": "/Shark.png"
   },
   {
     "name": "Skeleton",
-    "image_path": "/enemy_images/Skeleton.png"
+    "image_path": "/Skeleton.png"
   },
   {
     "name": "Snatcher",
-    "image_path": "/enemy_images/Snatcher.png"
+    "image_path": "/Snatcher.png"
   },
   {
     "name": "Snow Flinx",
-    "image_path": "/enemy_images/Snow Flinx.png"
+    "image_path": "/Snow Flinx.png"
   },
   {
     "name": "Spike Ball",
-    "image_path": "/enemy_images/Spike Ball.png"
+    "image_path": "/Spike Ball.png"
   },
   {
     "name": "Spiked Ice Slime",
-    "image_path": "/enemy_images/Spiked Ice Slime.png"
+    "image_path": "/Spiked Ice Slime.png"
   },
   {
     "name": "Spiked Jungle Slime",
-    "image_path": "/enemy_images/Spiked Jungle Slime.png"
+    "image_path": "/Spiked Jungle Slime.png"
   },
   {
     "name": "Spore Bat",
-    "image_path": "/enemy_images/Spore Bat.png"
+    "image_path": "/Spore Bat.png"
   },
   {
     "name": "Spore Skeleton",
-    "image_path": "/enemy_images/Spore Skeleton.png"
+    "image_path": "/Spore Skeleton.png"
   },
   {
     "name": "Spore Zombie",
-    "image_path": "/enemy_images/Spore Zombie.png"
+    "image_path": "/Spore Zombie.png"
   },
   {
     "name": "Squid",
-    "image_path": "/enemy_images/Squid.png"
+    "image_path": "/Squid.png"
   },
   {
     "name": "Tim",
-    "image_path": "/enemy_images/Tim.png"
+    "image_path": "/Tim.png"
   },
   {
     "name": "Tomb Crawler",
-    "image_path": "/enemy_images/Tomb Crawler.png"
+    "image_path": "/Tomb Crawler.png"
   },
   {
     "name": "Undead Miner",
-    "image_path": "/enemy_images/Undead Miner.png"
+    "image_path": "/Undead Miner.png"
   },
   {
     "name": "Undead Viking",
-    "image_path": "/enemy_images/Undead Viking.png"
+    "image_path": "/Undead Viking.png"
   },
   {
     "name": "Voodoo Demon",
-    "image_path": "/enemy_images/Voodoo Demon.png"
+    "image_path": "/Voodoo Demon.png"
   },
   {
     "name": "Vulture",
-    "image_path": "/enemy_images/Vulture.png"
+    "image_path": "/Vulture.png"
   },
   {
     "name": "Wall Creeper",
-    "image_path": "/enemy_images/Wall Creeper.png"
+    "image_path": "/Wall Creeper.png"
   },
   {
     "name": "Yellow Slime",
-    "image_path": "/enemy_images/Yellow Slime.png"
+    "image_path": "/Yellow Slime.png"
   },
   {
     "name": "Zombie",
-    "image_path": "/enemy_images/Zombie.png"
+    "image_path": "/Zombie.png"
   },
   {
     "name": "Angler Fish",
-    "image_path": "/enemy_images/Angler Fish.png"
+    "image_path": "/Angler Fish.png"
   },
   {
     "name": "Angry Trapper",
-    "image_path": "/enemy_images/Angry Trapper.png"
+    "image_path": "/Angry Trapper.png"
   },
   {
     "name": "Arapaima",
-    "image_path": "/enemy_images/Arapaima.png"
+    "image_path": "/Arapaima.png"
   },
   {
     "name": "Armored Skeleton",
-    "image_path": "/enemy_images/Armored Skeleton.png"
+    "image_path": "/Armored Skeleton.png"
   },
   {
     "name": "Armored Viking",
-    "image_path": "/enemy_images/Armored Viking.png"
+    "image_path": "/Armored Viking.png"
   },
   {
     "name": "Basilisk",
-    "image_path": "/enemy_images/Basilisk.png"
+    "image_path": "/Basilisk.png"
   },
   {
     "name": "Black Recluse",
-    "image_path": "/enemy_images/Black Recluse.png"
+    "image_path": "/Black Recluse.png"
   },
   {
     "name": "Blood Feeder",
-    "image_path": "/enemy_images/Blood Feeder.png"
+    "image_path": "/Blood Feeder.png"
   },
   {
     "name": "Blood Jelly",
-    "image_path": "/enemy_images/Blood Jelly.png"
+    "image_path": "/Blood Jelly.png"
   },
   {
     "name": "Blood Mummy",
-    "image_path": "/enemy_images/Blood Mummy.png"
+    "image_path": "/Blood Mummy.png"
   },
   {
     "name": "Blue Cultist Archer",
-    "image_path": "/enemy_images/Blue Cultist Archer.png"
+    "image_path": "/Blue Cultist Archer.png"
   },
   {
     "name": "Blue Armored Bones",
-    "image_path": "/enemy_images/Blue Armored Bones.png"
+    "image_path": "/Blue Armored Bones.png"
   },
   {
     "name": "Bone Lee",
-    "image_path": "/enemy_images/Bone Lee.png"
+    "image_path": "/Bone Lee.png"
   },
   {
     "name": "Chaos Elemental",
-    "image_path": "/enemy_images/Chaos Elemental.png"
+    "image_path": "/Chaos Elemental.png"
   },
   {
     "name": "Clinger",
-    "image_path": "/enemy_images/Clinger.png"
+    "image_path": "/Clinger.png"
   },
   {
     "name": "Corrupt Mimic",
-    "image_path": "/enemy_images/Corrupt Mimic.png"
+    "image_path": "/Corrupt Mimic.png"
   },
   {
     "name": "Corrupt Slime",
-    "image_path": "/enemy_images/Corrupt Slime.png"
+    "image_path": "/Corrupt Slime.png"
   },
   {
     "name": "Corruptor",
-    "image_path": "/enemy_images/Corruptor.png"
+    "image_path": "/Corruptor.png"
   },
   {
     "name": "Crimslime",
-    "image_path": "/enemy_images/Crimslime.png"
+    "image_path": "/Crimslime.png"
   },
   {
     "name": "Crimson Axe",
-    "image_path": "/enemy_images/Crimson Axe.png"
+    "image_path": "/Crimson Axe.png"
   },
   {
     "name": "Crimson Mimic",
-    "image_path": "/enemy_images/Crimson Mimic.png"
+    "image_path": "/Crimson Mimic.png"
   },
   {
     "name": "Cursed Hammer",
-    "image_path": "/enemy_images/Cursed Hammer.png"
+    "image_path": "/Cursed Hammer.png"
   },
   {
     "name": "Dark Mummy",
-    "image_path": "/enemy_images/Dark Mummy.png"
+    "image_path": "/Dark Mummy.png"
   },
   {
     "name": "Derpling",
-    "image_path": "/enemy_images/Derpling.png"
+    "image_path": "/Derpling.png"
   },
   {
     "name": "Desert Spirit",
-    "image_path": "/enemy_images/Desert Spirit.png"
+    "image_path": "/Desert Spirit.png"
   },
   {
     "name": "Diabolist",
-    "image_path": "/enemy_images/Diabolist.png"
+    "image_path": "/Diabolist.png"
   },
   {
     "name": "Digger",
-    "image_path": "/enemy_images/Digger.png"
+    "image_path": "/Digger.png"
   },
   {
     "name": "Dreamer Ghoul",
-    "image_path": "/enemy_images/Dreamer Ghoul.png"
+    "image_path": "/Dreamer Ghoul.png"
   },
   {
     "name": "Dune Splicer",
-    "image_path": "/enemy_images/Dune Splicer.png"
+    "image_path": "/Dune Splicer.png"
   },
   {
     "name": "Dungeon Spirit",
-    "image_path": "/enemy_images/Dungeon Spirit.png"
+    "image_path": "/Dungeon Spirit.png"
   },
   {
     "name": "Enchanted Sword",
-    "image_path": "/enemy_images/Enchanted Sword _NPC_.png"
+    "image_path": "/Enchanted Sword _NPC_.png"
   },
   {
     "name": "Floaty Gross",
-    "image_path": "/enemy_images/Floaty Gross.png"
+    "image_path": "/Floaty Gross.png"
   },
   {
     "name": "Flying Snake",
-    "image_path": "/enemy_images/Flying Snake.png"
+    "image_path": "/Flying Snake.png"
   },
   {
     "name": "Fungo Fish",
-    "image_path": "/enemy_images/Fungo Fish.png"
+    "image_path": "/Fungo Fish.png"
   },
   {
     "name": "Gastropod",
-    "image_path": "/enemy_images/Gastropod.png"
+    "image_path": "/Gastropod.png"
   },
   {
     "name": "Ghoul",
-    "image_path": "/enemy_images/Ghoul.png"
+    "image_path": "/Ghoul.png"
   },
   {
     "name": "Giant Bat",
-    "image_path": "/enemy_images/Giant Bat.png"
+    "image_path": "/Giant Bat.png"
   },
   {
     "name": "Giant Cursed Skull",
-    "image_path": "/enemy_images/Giant Cursed Skull.png"
+    "image_path": "/Giant Cursed Skull.png"
   },
   {
     "name": "Giant Flying Fox",
-    "image_path": "/enemy_images/Giant Flying Fox.png"
+    "image_path": "/Giant Flying Fox.png"
   },
   {
     "name": "Giant Fungi Bulb",
-    "image_path": "/enemy_images/Giant Fungi Bulb.png"
+    "image_path": "/Giant Fungi Bulb.png"
   },
   {
     "name": "Giant Tortoise",
-    "image_path": "/enemy_images/Giant Tortoise.png"
+    "image_path": "/Giant Tortoise.png"
   },
   {
     "name": "Green Jellyfish",
-    "image_path": "/enemy_images/Green Jellyfish.png"
+    "image_path": "/Green Jellyfish.png"
   },
   {
     "name": "Hallowed Mimic",
-    "image_path": "/enemy_images/Hallowed Mimic.png"
+    "image_path": "/Hallowed Mimic.png"
   },
   {
     "name": "Hell Armored Bones",
-    "image_path": "/enemy_images/Hell Armored Bones.png"
+    "image_path": "/Hell Armored Bones.png"
   },
   {
     "name": "Herpling",
-    "image_path": "/enemy_images/Herpling.png"
+    "image_path": "/Herpling.png"
   },
   {
     "name": "Hoppin' Jack",
-    "image_path": "/enemy_images/Hoppin_ Jack.png"
+    "image_path": "/Hoppin_ Jack.png"
   },
   {
     "name": "Ice Elemental",
-    "image_path": "/enemy_images/Ice Elemental.png"
+    "image_path": "/Ice Elemental.png"
   },
   {
     "name": "Ice Mimic",
-    "image_path": "/enemy_images/Ice Mimic.png"
+    "image_path": "/Ice Mimic.png"
   },
   {
     "name": "Ice Tortoise",
-    "image_path": "/enemy_images/Ice Tortoise.png"
+    "image_path": "/Ice Tortoise.png"
   },
   {
     "name": "Ichor Sticker",
-    "image_path": "/enemy_images/Ichor Sticker.png"
+    "image_path": "/Ichor Sticker.png"
   },
   {
     "name": "Icy Merman",
-    "image_path": "/enemy_images/Icy Merman.png"
+    "image_path": "/Icy Merman.png"
   },
   {
     "name": "Illuminant Bat",
-    "image_path": "/enemy_images/Illuminant Bat.png"
+    "image_path": "/Illuminant Bat.png"
   },
   {
     "name": "Illuminant Slime",
-    "image_path": "/enemy_images/Illuminant Slime.png"
+    "image_path": "/Illuminant Slime.png"
   },
   {
     "name": "Jungle Creeper",
-    "image_path": "/enemy_images/Jungle Creeper.png"
+    "image_path": "/Jungle Creeper.png"
   },
   {
     "name": "Lamia",
-    "image_path": "/enemy_images/Lamia.png"
+    "image_path": "/Lamia.png"
   },
   {
     "name": "Lava Bat",
-    "image_path": "/enemy_images/Lava Bat.png"
+    "image_path": "/Lava Bat.png"
   },
   {
     "name": "Light Mummy",
-    "image_path": "/enemy_images/Light Mummy.png"
+    "image_path": "/Light Mummy.png"
   },
   {
     "name": "Lihzahrd",
-    "image_path": "/enemy_images/Lihzahrd.png"
+    "image_path": "/Lihzahrd.png"
   },
   {
     "name": "Lunatic Devote",
-    "image_path": "/enemy_images/Lunatic Devote.png"
+    "image_path": "/Lunatic Devote.png"
   },
   {
     "name": "Martian Probe",
-    "image_path": "/enemy_images/Martian Probe.png"
+    "image_path": "/Martian Probe.png"
   },
   {
     "name": "Medusa",
-    "image_path": "/enemy_images/Medusa.png"
+    "image_path": "/Medusa.png"
   },
   {
     "name": "Mimic",
-    "image_path": "/enemy_images/Mimic.png"
+    "image_path": "/Mimic.png"
   },
   {
     "name": "Moss Hornet",
-    "image_path": "/enemy_images/Moss Hornet.png"
+    "image_path": "/Moss Hornet.png"
   },
   {
     "name": "Moth",
-    "image_path": "/enemy_images/Moth.png"
+    "image_path": "/Moth.png"
   },
   {
     "name": "Mummy",
-    "image_path": "/enemy_images/Mummy.png"
+    "image_path": "/Mummy.png"
   },
   {
     "name": "Necromancer",
-    "image_path": "/enemy_images/Necromancer.png"
+    "image_path": "/Necromancer.png"
   },
   {
     "name": "Paladin",
-    "image_path": "/enemy_images/Paladin.png"
+    "image_path": "/Paladin.png"
   },
   {
     "name": "Pigron",
-    "image_path": "/enemy_images/Pigron.png"
+    "image_path": "/Pigron.png"
   },
   {
     "name": "Pixie",
-    "image_path": "/enemy_images/Pixie.png"
+    "image_path": "/Pixie.png"
   },
   {
     "name": "Possessed Armor",
-    "image_path": "/enemy_images/Possessed Armor.png"
+    "image_path": "/Possessed Armor.png"
   },
   {
     "name": "Ragged Caster",
-    "image_path": "/enemy_images/Ragged Caster.png"
+    "image_path": "/Ragged Caster.png"
   },
   {
     "name": "Red Devil",
-    "image_path": "/enemy_images/Red Devil.png"
+    "image_path": "/Red Devil.png"
   },
   {
     "name": "Rock Golem",
-    "image_path": "/enemy_images/Rock Golem.png"
+    "image_path": "/Rock Golem.png"
   },
   {
     "name": "Rune Wizard",
-    "image_path": "/enemy_images/Rune Wizard.png"
+    "image_path": "/Rune Wizard.png"
   },
   {
     "name": "Rusty Armored Bones",
-    "image_path": "/enemy_images/Rusty Armored Bones.png"
+    "image_path": "/Rusty Armored Bones.png"
   },
   {
     "name": "Sand Poacher",
-    "image_path": "/enemy_images/Sand Poacher.png"
+    "image_path": "/Sand Poacher.png"
   },
   {
     "name": "Skeleton Archer",
-    "image_path": "/enemy_images/Skeleton Archer.png"
+    "image_path": "/Skeleton Archer.png"
   },
   {
     "name": "Skeleton Commando",
-    "image_path": "/enemy_images/Skeleton Commando.png"
+    "image_path": "/Skeleton Commando.png"
   },
   {
     "name": "Skeleton Sniper",
-    "image_path": "/enemy_images/Skeleton Sniper.png"
+    "image_path": "/Skeleton Sniper.png"
   },
   {
     "name": "Slimeling",
-    "image_path": "/enemy_images/Slimeling.png"
+    "image_path": "/Slimeling.png"
   },
   {
     "name": "Slimer",
-    "image_path": "/enemy_images/Slimer.png"
+    "image_path": "/Slimer.png"
   },
   {
     "name": "Tactical Skeleton",
-    "image_path": "/enemy_images/Tactical Skeleton.png"
+    "image_path": "/Tactical Skeleton.png"
   },
   {
     "name": "Tainted Ghoul",
-    "image_path": "/enemy_images/Tainted Ghoul.png"
+    "image_path": "/Tainted Ghoul.png"
   },
   {
     "name": "Tortured Soul",
-    "image_path": "/enemy_images/Tortured Soul.png"
+    "image_path": "/Tortured Soul.png"
   },
   {
     "name": "Toxic Sludge",
-    "image_path": "/enemy_images/Toxic Sludge.png"
+    "image_path": "/Toxic Sludge.png"
   },
   {
     "name": "Unicorn",
-    "image_path": "/enemy_images/Unicorn.png"
+    "image_path": "/Unicorn.png"
   },
   {
     "name": "Vile Ghoul",
-    "image_path": "/enemy_images/Vile Ghoul.png"
+    "image_path": "/Vile Ghoul.png"
   },
   {
     "name": "Wandering Eye",
-    "image_path": "/enemy_images/Wandering Eye.png"
+    "image_path": "/Wandering Eye.png"
   },
   {
     "name": "Werewolf",
-    "image_path": "/enemy_images/Werewolf.png"
+    "image_path": "/Werewolf.png"
   },
   {
     "name": "Wolf",
-    "image_path": "/enemy_images/Wolf.png"
+    "image_path": "/Wolf.png"
   },
   {
     "name": "World Feeder",
-    "image_path": "/enemy_images/World Feeder.png"
+    "image_path": "/World Feeder.png"
   },
   {
     "name": "Wraith",
-    "image_path": "/enemy_images/Wraith.png"
+    "image_path": "/Wraith.png"
   },
   {
     "name": "Wyvern",
-    "image_path": "/enemy_images/Wyvern.png"
+    "image_path": "/Wyvern.png"
   },
   {
     "name": "Blood Eel",
-    "image_path": "/enemy_images/Blood Eel.png"
+    "image_path": "/Blood Eel.png"
   },
   {
     "name": "Blood Squid",
-    "image_path": "/enemy_images/Blood Squid.png"
+    "image_path": "/Blood Squid.png"
   },
   {
     "name": "Blood Zombie",
-    "image_path": "/enemy_images/Blood Zombie.png"
+    "image_path": "/Blood Zombie.png"
   },
   {
     "name": "Chattering Teeth Bomb",
-    "image_path": "/enemy_images/Chattering Teeth Bomb.png"
+    "image_path": "/Chattering Teeth Bomb.png"
   },
   {
     "name": "Clown",
-    "image_path": "/enemy_images/Clown.png"
+    "image_path": "/Clown.png"
   },
   {
     "name": "Corrupt Bunny",
-    "image_path": "/enemy_images/Corrupt Bunny.png"
+    "image_path": "/Corrupt Bunny.png"
   },
   {
     "name": "Corrupt Goldfish",
-    "image_path": "/enemy_images/Corrupt Goldfish.png"
+    "image_path": "/Corrupt Goldfish.png"
   },
   {
     "name": "Corrupt Penguin",
-    "image_path": "/enemy_images/Corrupt Penguin.png"
+    "image_path": "/Corrupt Penguin.png"
   },
   {
     "name": "Dreadnautilus",
-    "image_path": "/enemy_images/Dreadnautilus.png"
+    "image_path": "/Dreadnautilus.png"
   },
   {
     "name": "Drippler",
-    "image_path": "/enemy_images/Drippler.png"
+    "image_path": "/Drippler.png"
   },
   {
     "name": "Hemogoblin Shark",
-    "image_path": "/enemy_images/Hemogoblin Shark.png"
+    "image_path": "/Hemogoblin Shark.png"
   },
   {
     "name": "The Groom",
-    "image_path": "/enemy_images/The Groom.png"
+    "image_path": "/The Groom.png"
   },
   {
     "name": "The Bride",
-    "image_path": "/enemy_images/The Bride.png"
+    "image_path": "/The Bride.png"
   },
   {
     "name": "Vicious Bunny",
-    "image_path": "/enemy_images/Vicious Bunny.png"
+    "image_path": "/Vicious Bunny.png"
   },
   {
     "name": "Vicious Goldfish",
-    "image_path": "/enemy_images/Vicious Goldfish.png"
+    "image_path": "/Vicious Goldfish.png"
   },
   {
     "name": "Vicious Penguin",
-    "image_path": "/enemy_images/Vicious Penguin.png"
+    "image_path": "/Vicious Penguin.png"
   },
   {
     "name": "Wandering Eye Fish",
-    "image_path": "/enemy_images/Wandering Eye Fish.png"
+    "image_path": "/Wandering Eye Fish.png"
   },
   {
     "name": "Zombie Merman",
-    "image_path": "/enemy_images/Zombie Merman.png"
+    "image_path": "/Zombie Merman.png"
   },
   {
     "name": "Angry Dandelion",
-    "image_path": "/enemy_images/Angry Dandelion.png"
+    "image_path": "/Angry Dandelion.png"
   },
   {
     "name": "Angry Nimbus",
-    "image_path": "/enemy_images/Angry Nimbus.png"
+    "image_path": "/Angry Nimbus.png"
   },
   {
     "name": "Flying Fish",
-    "image_path": "/enemy_images/Flying Fish.png"
+    "image_path": "/Flying Fish.png"
   },
   {
     "name": "Ice Golem",
-    "image_path": "/enemy_images/Ice Golem.png"
+    "image_path": "/Ice Golem.png"
   },
   {
     "name": "Rainbow Slime",
-    "image_path": "/enemy_images/Rainbow Slime.png"
+    "image_path": "/Rainbow Slime.png"
   },
   {
     "name": "Raincoat Zombie",
-    "image_path": "/enemy_images/Raincoat Zombie.png"
+    "image_path": "/Raincoat Zombie.png"
   },
   {
     "name": "Umbrella Slime",
-    "image_path": "/enemy_images/Umbrella Slime.png"
+    "image_path": "/Umbrella Slime.png"
   },
   {
     "name": "Angry Tumbler",
-    "image_path": "/enemy_images/Angry Tumbler.png"
+    "image_path": "/Angry Tumbler.png"
   },
   {
     "name": "Bone Biter",
-    "image_path": "/enemy_images/Bone Biter.png"
+    "image_path": "/Bone Biter.png"
   },
   {
     "name": "Crystal Thresher",
-    "image_path": "/enemy_images/Crystal Thresher.png"
+    "image_path": "/Crystal Thresher.png"
   },
   {
     "name": "Flesh Reaver",
-    "image_path": "/enemy_images/Flesh Reaver.png"
+    "image_path": "/Flesh Reaver.png"
   },
   {
     "name": "Sand Elemental",
-    "image_path": "/enemy_images/Sand Elemental.png"
+    "image_path": "/Sand Elemental.png"
   },
   {
     "name": "Sand Shark",
-    "image_path": "/enemy_images/Sand Shark.png"
+    "image_path": "/Sand Shark.png"
   },
   {
     "name": "Goblin Archer",
-    "image_path": "/enemy_images/Goblin Archer.png"
+    "image_path": "/Goblin Archer.png"
   },
   {
     "name": "Goblin Peon",
-    "image_path": "/enemy_images/Goblin Peon.png"
+    "image_path": "/Goblin Peon.png"
   },
   {
     "name": "Goblin Sorcerer",
-    "image_path": "/enemy_images/Goblin Sorcerer.png"
+    "image_path": "/Goblin Sorcerer.png"
   },
   {
     "name": "Goblin Summoner",
-    "image_path": "/enemy_images/Goblin Summoner.png"
+    "image_path": "/Goblin Summoner.png"
   },
   {
     "name": "Goblin Thief",
-    "image_path": "/enemy_images/Goblin Thief.png"
+    "image_path": "/Goblin Thief.png"
   },
   {
     "name": "Goblin Warrior",
-    "image_path": "/enemy_images/Goblin Warrior.png"
+    "image_path": "/Goblin Warrior.png"
   },
   {
     "name": "Shadowflame Apparition",
-    "image_path": "/enemy_images/Shadowflame Apparition.png"
+    "image_path": "/Shadowflame Apparition.png"
   },
   {
     "name": "Drakin",
-    "image_path": "/enemy_images/Drakin.png"
+    "image_path": "/Drakin.png"
   },
   {
     "name": "Etherian Javelin Thrower",
-    "image_path": "/enemy_images/Etherian Javelin Thrower.png"
+    "image_path": "/Etherian Javelin Thrower.png"
   },
   {
     "name": "Etherian Goblin",
-    "image_path": "/enemy_images/Etherian Goblin.png"
+    "image_path": "/Etherian Goblin.png"
   },
   {
     "name": "Etherian Goblin Bomber",
-    "image_path": "/enemy_images/Etherian Goblin Bomber.png"
+    "image_path": "/Etherian Goblin Bomber.png"
   },
   {
     "name": "Etherian Lightning Bug",
-    "image_path": "/enemy_images/Etherian Lightning Bug.png"
+    "image_path": "/Etherian Lightning Bug.png"
   },
   {
     "name": "Etherian Wyvern",
-    "image_path": "/enemy_images/Etherian Wyvern.png"
+    "image_path": "/Etherian Wyvern.png"
   },
   {
     "name": "Kobold",
-    "image_path": "/enemy_images/Kobold.png"
+    "image_path": "/Kobold.png"
   },
   {
     "name": "Kobold Glider",
-    "image_path": "/enemy_images/Kobold Glider.png"
+    "image_path": "/Kobold Glider.png"
   },
   {
     "name": "Wither Beast",
-    "image_path": "/enemy_images/Wither Beast.png"
+    "image_path": "/Wither Beast.png"
   },
   {
     "name": "Mister Stabby",
-    "image_path": "/enemy_images/Mister Stabby.png"
+    "image_path": "/Mister Stabby.png"
   },
   {
     "name": "Snow Balla",
-    "image_path": "/enemy_images/Snow Balla.png"
+    "image_path": "/Snow Balla.png"
   },
   {
     "name": "Snowman Gangsta",
-    "image_path": "/enemy_images/Snowman Gangsta.png"
+    "image_path": "/Snowman Gangsta.png"
   },
   {
     "name": "Parrot",
-    "image_path": "/enemy_images/Parrot.png"
+    "image_path": "/Parrot.png"
   },
   {
     "name": "Pirate Captain",
-    "image_path": "/enemy_images/Pirate Captain.png"
+    "image_path": "/Pirate Captain.png"
   },
   {
     "name": "Pirate Corsair",
-    "image_path": "/enemy_images/Pirate Corsair.png"
+    "image_path": "/Pirate Corsair.png"
   },
   {
     "name": "Pirate Crossbower",
-    "image_path": "/enemy_images/Pirate Crossbower.png"
+    "image_path": "/Pirate Crossbower.png"
   },
   {
     "name": "Pirate Deadeye",
-    "image_path": "/enemy_images/Pirate Deadeye.png"
+    "image_path": "/Pirate Deadeye.png"
   },
   {
     "name": "Pirate Deckhand",
-    "image_path": "/enemy_images/Pirate Deckhand.png"
+    "image_path": "/Pirate Deckhand.png"
   },
   {
     "name": "Pirate's Curse",
-    "image_path": "/enemy_images/Pirate_s Curse.png"
+    "image_path": "/Pirate_s Curse.png"
   },
   {
     "name": "Baby Mothron",
-    "image_path": "/enemy_images/Baby Mothron.png"
+    "image_path": "/Baby Mothron.png"
   },
   {
     "name": "Butcher",
-    "image_path": "/enemy_images/Butcher.png"
+    "image_path": "/Butcher.png"
   },
   {
     "name": "Creature from the Deep",
-    "image_path": "/enemy_images/Creature from the Deep.png"
+    "image_path": "/Creature from the Deep.png"
   },
   {
     "name": "Deadly Sphere",
-    "image_path": "/enemy_images/Deadly Sphere.png"
+    "image_path": "/Deadly Sphere.png"
   },
   {
     "name": "Dr. Man Fly",
-    "image_path": "/enemy_images/Dr. Man Fly.png"
+    "image_path": "/Dr. Man Fly.png"
   },
   {
     "name": "Eyezor",
-    "image_path": "/enemy_images/Eyezor.png"
+    "image_path": "/Eyezor.png"
   },
   {
     "name": "Frankenstein",
-    "image_path": "/enemy_images/Frankenstein.png"
+    "image_path": "/Frankenstein.png"
   },
   {
     "name": "Fritz",
-    "image_path": "/enemy_images/Fritz.png"
+    "image_path": "/Fritz.png"
   },
   {
     "name": "Mothron",
-    "image_path": "/enemy_images/Mothron.png"
+    "image_path": "/Mothron.png"
   },
   {
     "name": "Mothron Egg",
-    "image_path": "/enemy_images/Mothron Egg.png"
+    "image_path": "/Mothron Egg.png"
   },
   {
     "name": "Nailhead",
-    "image_path": "/enemy_images/Nailhead.png"
+    "image_path": "/Nailhead.png"
   },
   {
     "name": "Psycho",
-    "image_path": "/enemy_images/Psycho.png"
+    "image_path": "/Psycho.png"
   },
   {
     "name": "Reaper",
-    "image_path": "/enemy_images/Reaper.png"
+    "image_path": "/Reaper.png"
   },
   {
     "name": "Swamp Thing",
-    "image_path": "/enemy_images/Swamp Thing.png"
+    "image_path": "/Swamp Thing.png"
   },
   {
     "name": "The Possessed",
-    "image_path": "/enemy_images/The Possessed.png"
+    "image_path": "/The Possessed.png"
   },
   {
     "name": "Vampire",
-    "image_path": "/enemy_images/Vampire.png"
+    "image_path": "/Vampire.png"
   },
   {
     "name": "Brain Scrambler",
-    "image_path": "/enemy_images/Brain Scrambler.png"
+    "image_path": "/Brain Scrambler.png"
   },
   {
     "name": "Gigazapper",
-    "image_path": "/enemy_images/Gigazapper.png"
+    "image_path": "/Gigazapper.png"
   },
   {
     "name": "Gray Grunt",
-    "image_path": "/enemy_images/Gray Grunt.png"
+    "image_path": "/Gray Grunt.png"
   },
   {
     "name": "Martian Drone",
-    "image_path": "/enemy_images/Martian Drone.png"
+    "image_path": "/Martian Drone.png"
   },
   {
     "name": "Martian Engineer",
-    "image_path": "/enemy_images/Martian Engineer.png"
+    "image_path": "/Martian Engineer.png"
   },
   {
     "name": "Martian Officer",
-    "image_path": "/enemy_images/Martian Officer.png"
+    "image_path": "/Martian Officer.png"
   },
   {
     "name": "Martian Walker",
-    "image_path": "/enemy_images/Martian Walker.png"
+    "image_path": "/Martian Walker.png"
   },
   {
     "name": "Ray Gunner",
-    "image_path": "/enemy_images/Ray Gunner.png"
+    "image_path": "/Ray Gunner.png"
   },
   {
     "name": "Scutlix",
-    "image_path": "/enemy_images/Scutlix.png"
+    "image_path": "/Scutlix.png"
   },
   {
     "name": "Scutlix Gunner",
-    "image_path": "/enemy_images/Scutlix Gunner.png"
+    "image_path": "/Scutlix Gunner.png"
   },
   {
     "name": "Tesla Turret",
-    "image_path": "/enemy_images/Tesla Turret.png"
+    "image_path": "/Tesla Turret.png"
   },
   {
     "name": "Headless Horseman",
-    "image_path": "/enemy_images/Headless Horseman.png"
+    "image_path": "/Headless Horseman.png"
   },
   {
     "name": "Hellhound",
-    "image_path": "/enemy_images/Hellhound.png"
+    "image_path": "/Hellhound.png"
   },
   {
     "name": "Poltergeist",
-    "image_path": "/enemy_images/Poltergeist.png"
+    "image_path": "/Poltergeist.png"
   },
   {
     "name": "Scarecrow",
-    "image_path": "/enemy_images/Scarecrow.png"
+    "image_path": "/Scarecrow.png"
   },
   {
     "name": "Splinterling",
-    "image_path": "/enemy_images/Splinterling.png"
+    "image_path": "/Splinterling.png"
   },
   {
     "name": "Elf Archer",
-    "image_path": "/enemy_images/Elf Archer.png"
+    "image_path": "/Elf Archer.png"
   },
   {
     "name": "Elf Copter",
-    "image_path": "/enemy_images/Elf Copter.png"
+    "image_path": "/Elf Copter.png"
   },
   {
     "name": "Flocko",
-    "image_path": "/enemy_images/Flocko.png"
+    "image_path": "/Flocko.png"
   },
   {
     "name": "Gingerbread Man",
-    "image_path": "/enemy_images/Gingerbread Man.png"
+    "image_path": "/Gingerbread Man.png"
   },
   {
     "name": "Krampus",
-    "image_path": "/enemy_images/Krampus.png"
+    "image_path": "/Krampus.png"
   },
   {
     "name": "Nutcracker",
-    "image_path": "/enemy_images/Nutcracker.png"
+    "image_path": "/Nutcracker.png"
   },
   {
     "name": "Present Mimic",
-    "image_path": "/enemy_images/Present Mimic.png"
+    "image_path": "/Present Mimic.png"
   },
   {
     "name": "Yeti",
-    "image_path": "/enemy_images/Yeti.png"
+    "image_path": "/Yeti.png"
   },
   {
     "name": "Zombie Elf",
-    "image_path": "/enemy_images/Zombie Elf.png"
+    "image_path": "/Zombie Elf.png"
   },
   {
     "name": "Brain Suckler",
-    "image_path": "/enemy_images/Brain Suckler.png"
+    "image_path": "/Brain Suckler.png"
   },
   {
     "name": "Evolution Beast",
-    "image_path": "/enemy_images/Evolution Beast.png"
+    "image_path": "/Evolution Beast.png"
   },
   {
     "name": "Nebula Floater",
-    "image_path": "/enemy_images/Nebula Floater.png"
+    "image_path": "/Nebula Floater.png"
   },
   {
     "name": "Predictor",
-    "image_path": "/enemy_images/Predictor.png"
+    "image_path": "/Predictor.png"
   },
   {
     "name": "Corite",
-    "image_path": "/enemy_images/Corite.png"
+    "image_path": "/Corite.png"
   },
   {
     "name": "Crawltipede",
-    "image_path": "/enemy_images/Crawltipede.png"
+    "image_path": "/Crawltipede.png"
   },
   {
     "name": "Drakomire",
-    "image_path": "/enemy_images/Drakomire.png"
+    "image_path": "/Drakomire.png"
   },
   {
     "name": "Drakomire Rider",
-    "image_path": "/enemy_images/Drakomire Rider.png"
+    "image_path": "/Drakomire Rider.png"
   },
   {
     "name": "Drakanian",
-    "image_path": "/enemy_images/Drakanian.png"
+    "image_path": "/Drakanian.png"
   },
   {
     "name": "Selenian",
-    "image_path": "/enemy_images/Selenian.png"
+    "image_path": "/Selenian.png"
   },
   {
     "name": "Sroller",
-    "image_path": "/enemy_images/Sroller.png"
+    "image_path": "/Sroller.png"
   },
   {
     "name": "Flow Invader",
-    "image_path": "/enemy_images/Flow Invader.png"
+    "image_path": "/Flow Invader.png"
   },
   {
     "name": "Milkyway Weaver",
-    "image_path": "/enemy_images/Milkyway Weaver.png"
+    "image_path": "/Milkyway Weaver.png"
   },
   {
     "name": "Stargazer",
-    "image_path": "/enemy_images/Stargazer.png"
+    "image_path": "/Stargazer.png"
   },
   {
     "name": "Star Cell",
-    "image_path": "/enemy_images/Star Cell.png"
+    "image_path": "/Star Cell.png"
   },
   {
     "name": "Twinkle",
-    "image_path": "/enemy_images/Twinkle.png"
+    "image_path": "/Twinkle.png"
   },
   {
     "name": "Twinkle Popper",
-    "image_path": "/enemy_images/Twinkle Popper.png"
+    "image_path": "/Twinkle Popper.png"
   },
   {
     "name": "Alien Hornet",
-    "image_path": "/enemy_images/Alien Hornet.png"
+    "image_path": "/Alien Hornet.png"
   },
   {
     "name": "Alien Larva",
-    "image_path": "/enemy_images/Alien Larva.png"
+    "image_path": "/Alien Larva.png"
   },
   {
     "name": "Alien Queen",
-    "image_path": "/enemy_images/Alien Queen.png"
+    "image_path": "/Alien Queen.png"
   },
   {
     "name": "Storm Diver",
-    "image_path": "/enemy_images/Storm Diver.png"
+    "image_path": "/Storm Diver.png"
   },
   {
     "name": "Vortexian",
-    "image_path": "/enemy_images/Vortexian.png"
+    "image_path": "/Vortexian.png"
   },
   {
     "name": "Brain of Cthulhu",
-    "image_path": "/enemy_images/Brain of Cthulhu.png"
+    "image_path": "/Brain of Cthulhu.png"
   },
   {
     "name": "Deerclops",
-    "image_path": "/enemy_images/Deerclops.png"
+    "image_path": "/Deerclops.png"
   },
   {
     "name": "Duke Fishron",
-    "image_path": "/enemy_images/Duke Fishron.png"
+    "image_path": "/Duke Fishron.png"
   },
   {
     "name": "Eater of Worlds",
-    "image_path": "/enemy_images/Eater of Worlds.png"
+    "image_path": "/Eater of Worlds.png"
   },
   {
     "name": "Empress of Light",
-    "image_path": "/enemy_images/Empress of Light.png"
+    "image_path": "/Empress of Light.png"
   },
   {
     "name": "Eye of Cthulhu",
-    "image_path": "/enemy_images/Eye of Cthulhu.png"
+    "image_path": "/Eye of Cthulhu.png"
   },
   {
     "name": "Golem",
-    "image_path": "/enemy_images/Golem.png"
+    "image_path": "/Golem.png"
   },
   {
     "name": "King Slime",
-    "image_path": "/enemy_images/King Slime.png"
+    "image_path": "/King Slime.png"
   },
   {
     "name": "Lunatic Cultist",
-    "image_path": "/enemy_images/Lunatic Cultist.png"
+    "image_path": "/Lunatic Cultist.png"
   },
   {
     "name": "Moon Lord",
-    "image_path": "/enemy_images/Moon Lord.png"
+    "image_path": "/Moon Lord.png"
   },
   {
     "name": "Plantera",
-    "image_path": "/enemy_images/Plantera.png"
+    "image_path": "/Plantera.png"
   },
   {
     "name": "Queen Bee",
-    "image_path": "/enemy_images/Queen Bee.png"
+    "image_path": "/Queen Bee.png"
   },
   {
     "name": "Queen Slime",
-    "image_path": "/enemy_images/Queen Slime.png"
+    "image_path": "/Queen Slime.png"
   },
   {
     "name": "Skeletron",
-    "image_path": "/enemy_images/Skeletron.png"
+    "image_path": "/Skeletron.png"
   },
   {
     "name": "Skeletron Prime",
-    "image_path": "/enemy_images/Skeletron Prime.png"
+    "image_path": "/Skeletron Prime.png"
   },
   {
     "name": "The Destroyer",
-    "image_path": "/enemy_images/The Destroyer.png"
+    "image_path": "/The Destroyer.png"
   },
   {
     "name": "The Twins",
-    "image_path": "/enemy_images/The Twins.png"
+    "image_path": "/The Twins.png"
   },
   {
     "name": "Wall of Flesh",
-    "image_path": "/enemy_images/Wall of Flesh.png"
+    "image_path": "/Wall of Flesh.png"
   },
   {
     "name": "Dark Mage",
-    "image_path": "/enemy_images/Dark Mage.png"
+    "image_path": "/Dark Mage.png"
   },
   {
     "name": "Ogre",
-    "image_path": "/enemy_images/Ogre.png"
+    "image_path": "/Ogre.png"
   },
   {
     "name": "Betsy",
-    "image_path": "/enemy_images/Betsy.png"
+    "image_path": "/Betsy.png"
   },
   {
     "name": "Flying Dutchman",
-    "image_path": "/enemy_images/Flying Dutchman.png"
+    "image_path": "/Flying Dutchman.png"
   },
   {
     "name": "Mourning Wood",
-    "image_path": "/enemy_images/Mourning Wood.png"
+    "image_path": "/Mourning Wood.png"
   },
   {
     "name": "Pumpking",
-    "image_path": "/enemy_images/Pumpking.png"
+    "image_path": "/Pumpking.png"
   },
   {
     "name": "Everscream",
-    "image_path": "/enemy_images/Everscream.png"
+    "image_path": "/Everscream.png"
   },
   {
     "name": "Ice Queen",
-    "image_path": "/enemy_images/Ice Queen.png"
+    "image_path": "/Ice Queen.png"
   },
   {
     "name": "Santa-NK1",
-    "image_path": "/enemy_images/Santa-NK1.png"
+    "image_path": "/Santa-NK1.png"
   },
   {
     "name": "Martian Saucer",
-    "image_path": "/enemy_images/Martian Saucer.png"
+    "image_path": "/Martian Saucer.png"
   },
   {
     "name": "Ancient Cultist",
-    "image_path": "/enemy_images/Ancient Cultist.png"
+    "image_path": "/Ancient Cultist.png"
   },
   {
     "name": "Ancient Doom",
-    "image_path": "/enemy_images/Ancient Doom.png"
+    "image_path": "/Ancient Doom.png"
   },
   {
     "name": "Ancient Vision",
-    "image_path": "/enemy_images/Ancient Vision.png"
+    "image_path": "/Ancient Vision.png"
   },
   {
     "name": "Bouncy Slime",
-    "image_path": "/enemy_images/Bouncy Slime.png"
+    "image_path": "/Bouncy Slime.png"
   },
   {
     "name": "Creeper",
-    "image_path": "/enemy_images/Creeper.png"
+    "image_path": "/Creeper.png"
   },
   {
     "name": "Crystal Slime",
-    "image_path": "/enemy_images/Crystal Slime.png"
+    "image_path": "/Crystal Slime.png"
   },
   {
     "name": "Heavenly Slime",
-    "image_path": "/enemy_images/Heavenly Slime.png"
+    "image_path": "/Heavenly Slime.png"
   },
   {
     "name": "Leech",
-    "image_path": "/enemy_images/Leech.png"
+    "image_path": "/Leech.png"
   },
   {
     "name": "Old One's Skeleton",
-    "image_path": "/enemy_images/Old One_s Skeleton.png"
+    "image_path": "/Old One_s Skeleton.png"
   },
   {
     "name": "Phantasm Dragon",
-    "image_path": "/enemy_images/Phantasm Dragon.png"
+    "image_path": "/Phantasm Dragon.png"
   },
   {
     "name": "Plantera's Tentacle",
-    "image_path": "/enemy_images/Plantera_s Tentacle.png"
+    "image_path": "/Plantera_s Tentacle.png"
   },
   {
     "name": "Probe",
-    "image_path": "/enemy_images/Probe.png"
+    "image_path": "/Probe.png"
   },
   {
     "name": "Servant of Cthulhu",
-    "image_path": "/enemy_images/Servant of Cthulhu.png"
+    "image_path": "/Servant of Cthulhu.png"
   },
   {
     "name": "Spiked Slime",
-    "image_path": "/enemy_images/Spiked Slime.png"
+    "image_path": "/Spiked Slime.png"
   },
   {
     "name": "Sharkron",
-    "image_path": "/enemy_images/Sharkron.png"
+    "image_path": "/Sharkron.png"
   },
   {
     "name": "The Hungry",
-    "image_path": "/enemy_images/The Hungry.png"
+    "image_path": "/The Hungry.png"
   },
   {
     "name": "True Eye of Cthulhu",
-    "image_path": "/enemy_images/True Eye of Cthulhu.png"
+    "image_path": "/True Eye of Cthulhu.png"
   },
   {
     "name": "Golden Slime",
-    "image_path": "/enemy_images/Golden Slime.png"
+    "image_path": "/Golden Slime.png"
   },
   {
     "name": "Jungle Mimic",
-    "image_path": "/enemy_images/Jungle Mimic.png"
+    "image_path": "/Jungle Mimic.png"
   }
 ]

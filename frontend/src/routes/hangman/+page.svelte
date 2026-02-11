@@ -1,25 +1,19 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
 	import Guide from './components/Guide.svelte';
 	import Keyboard from './components/Keyboard.svelte';
 	import WinningComponent from './components/WinningComponent.svelte';
+	import { cubicInOut } from 'svelte/easing';
 
     let { data } = $props();
 
-    let failedGuesses: number = $state(0);
-    let finished: boolean = $state(false);
+    let attempts: number = $state(data.attempts);
+    let finished: boolean = $state(data.finished);
+	let guessedLetters: string[] = $state(data.guessedLetters)
+	let enemy: string[] = $state(data.phrase);
 
 	// Audio to play after guess
 	let audio = $state<HTMLAudioElement>();
-
-	const correctEnemy = "ETHERIAN JAVELIN THROWER"
-	// const correctEnemy = "BLUE SLIME"
-	let guessedLetters: string[] = $state([])
-	let enemy = $derived.by(() => {
-		return correctEnemy.split('').map(letter => {
-			if (letter === ' ') return ' ';
-			return guessedLetters.includes(letter) ? letter : '_';
-		});
-	});
 
 	// Split into words for better wrapping
 	let enemyWords = $derived.by(() => {
@@ -27,20 +21,32 @@
 		return enemyString.split(' ').map(word => word.split(''));
 	});
 
-    function onKeyPressed(letter: string) {
-        guessedLetters.push(letter);
+    async function onKeyPressed(letter: string) {
+		fetch('http://localhost:3000/api/hangman/check-guess', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ userId: data.userId, guess: letter })
+		})
+			.then((r) => r.json())
+			.then((data) => {
+				enemy = data.newPhrase;
+				if (!guessedLetters.includes(letter)) {
+					guessedLetters.push(letter);
+				}
 
-		if (!correctEnemy.split('').includes(letter)) {
-			failedGuesses++;
-		}
+				finished = data.finished;
 
-		if (failedGuesses >= 6) {
-			audio?.play();
-		}
+				if (!data.correct) {
+					attempts--;
+					if (attempts <= 0) {
+						audio?.play();
+					}
+				}
+			});
     }
 
 	// Effect for updating the background with fade
-	let failed: boolean = $derived(failedGuesses >= 6);
+	let failed: boolean = $derived(attempts <= 0);
 	$effect(() => {
 		if (failed) {
 			document.body.style.setProperty(
@@ -58,15 +64,21 @@
 
 {#if !finished}
     <!-- out:slide={{ duration: 700, easing: cubicInOut }} -->
-	<div class="title-box">
+	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
 		<h2>Hangman</h2>
 		<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 	</div>
+{:else}
+	<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? "15px" : "-20px"}">
+		<span class="color-cycle">Hangman Results</span>
+	</div>
 {/if}
 
-<Guide {failedGuesses}/>
+<Guide {attempts} />
 
-<WinningComponent />
+{#if finished}
+	<WinningComponent {attempts} userId={data.userId}/>
+{/if}
 
 <div class="phrase-container">
 	{#each enemyWords as word}
@@ -77,8 +89,9 @@
 		</div>
 	{/each}
 </div>
-
-<Keyboard {onKeyPressed} letters={enemy} />
+{#if !finished}
+<Keyboard {onKeyPressed} enemyLetters={enemy} {guessedLetters} />
+{/if}
 
 <!-- Audio that only plays after final guess is made -->
 <audio bind:this={audio} src={'/hangman/GuideDeath.mp3'}></audio>
@@ -135,8 +148,7 @@
 		justify-content: center;
 		gap: 20px;
 		padding: 20px 25px;
-		margin: auto;
-		margin-bottom: 20px;
+		margin: 20px auto;
 		width: fit-content;
 
 		border-radius: 15px;

@@ -1,34 +1,27 @@
 <script lang="ts">
+	import { cubicInOut } from "svelte/easing";
+	import { slide } from "svelte/transition";
 
-  let { onKeyPressed, letters } = $props();
 
-  let selectedLetters: string[] = $state([]);
+  let { onKeyPressed, enemyLetters, guessedLetters } = $props();
 
   const rows: string[][] = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
     ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
   ];
-
-  function handleLetterClick(letter: string) {
-    if (!selectedLetters.includes(letter)) {
-      selectedLetters.push(letter);
-    }
-  }
 </script>
 
-<div class="keyboard">
+<div class="keyboard" out:slide={{ duration: 700, easing: cubicInOut }}>
     {#each rows as row, rowIndex (rowIndex)}
         <div class="keyboard-row">
             {#each row as letter (letter)}
                 <button
                     class="keyboard-key"
-                    class:correct={letters.includes(letter)}
-                    disabled={selectedLetters.includes(letter)}
-                    onclick={() => {
-                        handleLetterClick(letter);
-                        onKeyPressed(letter);
-                    }}
+                    class:correct={enemyLetters.includes(letter)}
+                    class:incorrect={!enemyLetters.includes(letter)}
+                    disabled={guessedLetters.includes(letter)}
+                    onclick={() => onKeyPressed(letter)}
                 >
                     {letter}
                 </button>
@@ -70,11 +63,14 @@
     }
 
     .keyboard-key:disabled {
-        background: var(--color-red);
         cursor: not-allowed;
     }
 
     .keyboard-key:disabled.correct {
         background: var(--color-green);
+    }
+
+    .keyboard-key:disabled.incorrect {
+        background: var(--color-red);
     }
 </style>

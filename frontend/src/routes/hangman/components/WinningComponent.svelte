@@ -1,16 +1,37 @@
 <script lang="ts">
+	import Confetti from "$lib/components/Confetti.svelte";
 	import RemainingTime from "$lib/components/RemainingTime.svelte";
+	import { ConvertPositionToString } from "$lib/utils/posToString";
+	import { typewriter } from "$lib/utils/transitions";
+	import { onMount } from "svelte";
+	import { scale } from "svelte/transition";
 
-    let name = $state("Duke Fishron");
-    let count = $state(5);
-    let attempts = $state(1);
+    let { attempts, userId } = $props();
+
+    let name = $state("");
+    let path = $state("")
+    let count = $state(0);
+    let pos = $state(0);
+
+    onMount(async () => {
+		const winningData = await fetch(`http://localhost:3000/api/hangman/winning-data/${userId}`);
+		const winningDataJson = await winningData.json();
+
+		pos = winningDataJson.pos;
+		count = winningDataJson.count;
+        name = winningDataJson.name;
+        path = winningDataJson.path;
+	});
 </script>
 
 <div 
     class="container" 
     class:fail={attempts == 0}
     class:success={attempts > 0}
+    in:scale
 >
+    <Confetti won={attempts > 0} />
+
     {#if attempts == 6}
         <h2 class="title">Outstanding!</h2>
         <span class="subtitle">You guessed the enemy perfectly!</span>
@@ -27,9 +48,16 @@
     <h1>{name}</h1>
 
     <div class="enemy-image">
-        <img src="/enemies/Duke Fishron.png" alt=""/>
+        <img src={"/enemies" + path} alt=""/>
     </div>
 
+    {#if pos !== 0}
+		<p transition:typewriter={{ speed: 1 }}>
+			You were the {ConvertPositionToString(pos)} person to guess today's enemy!
+		</p>
+	{:else}
+		<br />
+	{/if}
     <p>{count} people guessed todays enemy</p>
     <RemainingTime />
 </div>
