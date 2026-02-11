@@ -50,7 +50,7 @@ func NewMux() http.Handler {
 	registerDailySlashRoutes(mux)
 	registerConnectionsRoutes(mux)
 	registerGuessTheNpcRoutes(mux)
-	// registerHangmanRoutes(mux) ...
+	registerHangmanRoutes(mux)
 
 	return withCORS(mux)
 }
@@ -80,4 +80,10 @@ func registerGuessTheNpcRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /api/guess-the-npc/check-guess", postNpcGuess)
 	mux.HandleFunc("GET /api/guess-the-npc/winning-data/{userId}", getNpcWinningData)
 	mux.HandleFunc("POST /api/guess-the-npc/check-name-guess", postNpcNameCheck)
+}
+
+func registerHangmanRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/hangman/initialize-game/{userId}", getHangmanInitGame)
+	mux.HandleFunc("POST /api/hangman/check-guess", postHangmanGuess)
+	mux.HandleFunc("GET /api/hangman/winning-data/{userId}", getHangmanWinningData)
 }
