@@ -24,7 +24,7 @@
 			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
 		<li aria-current={page.url.pathname === '/about'}>
-			<a href={resolve('/about')}>About</a>
+			<a href={resolve('/wordaria')}>Wordaria</a>
 		</li>
 	</ul>
 </div>
