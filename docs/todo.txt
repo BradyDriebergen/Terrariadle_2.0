@@ -14,7 +14,7 @@ Frontend:
 - Update static folder to have good image names
 
 - Add audio volume slider to hangman saved as a cookie
-
+- Add custom cursor that looks like Terraria's cursor
 
 
 Infrastructure:
