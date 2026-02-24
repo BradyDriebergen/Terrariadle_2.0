@@ -3462,38 +3462,38 @@
     },
     {
         "id": 347,
-        "answer": "NEONCARP",
-        "clue": "Catchable fish",
+        "answer": "CRIMERA",
+        "clue": "Flying crimson enemy",
         "chunks": [
-            "NEON",
-            "CARP"
+            "CRI",
+            "MERA"
         ],
         "chunkCount": 2
     },
     {
         "id": 348,
-        "answer": "FIERCE",
-        "clue": "Item modifier",
+        "answer": "HEART",
+        "clue": "Heals for 20 health",
         "chunks": [
-            "FIER",
-            "CE"
+            "HE",
+            "ART"
         ],
         "chunkCount": 2
     },
     {
         "id": 349,
-        "answer": "PINKOGRE",
-        "clue": "Hostile creature",
+        "answer": "SAND",
+        "clue": "Block found in desert or ocean",
         "chunks": [
-            "PINK",
-            "OGRE"
+            "SA",
+            "ND"
         ],
         "chunkCount": 2
     },
     {
         "id": 350,
         "answer": "MASSIVE",
-        "clue": "Item modifier",
+        "clue": "Modifier increasing size",
         "chunks": [
             "MASS",
             "IVE"
@@ -3503,7 +3503,7 @@
     {
         "id": 351,
         "answer": "CLOTHIER",
-        "clue": "Friendly npc",
+        "clue": "Cursed old man",
         "chunks": [
             "CLOT",
             "HIER"
@@ -3512,38 +3512,38 @@
     },
     {
         "id": 352,
-        "answer": "FLESHANT",
-        "clue": "Hostile creature",
+        "answer": "OLDMAN",
+        "clue": "Cursed guardian of the dungeon",
         "chunks": [
-            "FLES",
-            "HANT"
+            "OLDM",
+            "AN"
         ],
         "chunkCount": 2
     },
     {
         "id": 353,
-        "answer": "WOLFDUCK",
-        "clue": "Hostile creature",
+        "answer": "BOUND",
+        "clue": "When NPCs need freeing",
         "chunks": [
-            "WOLF",
-            "DUCK"
+            "BOU",
+            "ND"
         ],
         "chunkCount": 2
     },
     {
         "id": 354,
-        "answer": "BEEBAT",
-        "clue": "Common enemy",
+        "answer": "BONEKEY",
+        "clue": "Summons baby skeletron head",
         "chunks": [
-            "BEEB",
-            "AT"
+            "BON",
+            "EKEY"
         ],
         "chunkCount": 2
     },
     {
         "id": 355,
         "answer": "SILENCED",
-        "clue": "Harmful debuff",
+        "clue": "Retricts use of mana items",
         "chunks": [
             "SILE",
             "NCED"
@@ -3552,28 +3552,28 @@
     },
     {
         "id": 356,
-        "answer": "BLUECRAB",
-        "clue": "Common enemy",
+        "answer": "BONE",
+        "clue": "Drop from dungeon skeletons",
         "chunks": [
-            "BLUE",
-            "CRAB"
+            "BO",
+            "NE"
         ],
         "chunkCount": 2
     },
     {
         "id": 357,
-        "answer": "EELFISH",
-        "clue": "Catchable fish",
+        "answer": "BOOK",
+        "clue": "Decoration item in the dungeon",
         "chunks": [
-            "EELF",
-            "ISH"
+            "BO",
+            "OK"
         ],
         "chunkCount": 2
     },
     {
         "id": 358,
         "answer": "WELLFED",
-        "clue": "Beneficial buff",
+        "clue": "Minor improvements to all stats",
         "chunks": [
             "WELL",
             "FED"
@@ -3582,28 +3582,28 @@
     },
     {
         "id": 359,
-        "answer": "BLACKBEE",
-        "clue": "Hostile creature",
+        "answer": "BRICK",
+        "clue": "Type of dungeon block",
         "chunks": [
-            "BLAC",
-            "KBEE"
+            "BR",
+            "ICK"
         ],
         "chunkCount": 2
     },
     {
         "id": 360,
-        "answer": "VAMPORC",
-        "clue": "Hostile creature",
+        "answer": "BATTLE",
+        "clue": "Increases enemy spawn rate",
         "chunks": [
-            "VAMP",
-            "ORC"
+            "BAT",
+            "TLE"
         ],
         "chunkCount": 2
     },
     {
         "id": 361,
         "answer": "CYBORG",
-        "clue": "Friendly npc",
+        "clue": "Robotic NPC",
         "chunks": [
             "CYBO",
             "RG"
@@ -3612,28 +3612,28 @@
     },
     {
         "id": 362,
-        "answer": "PRISCARP",
-        "clue": "Catchable fish",
+        "answer": "BUILDER",
+        "clue": "Buff that increases placement speed",
         "chunks": [
-            "PRIS",
-            "CARP"
+            "BUI",
+            "LDER"
         ],
         "chunkCount": 2
     },
     {
         "id": 363,
-        "answer": "BLOODANT",
-        "clue": "Hostile creature",
+        "answer": "FISHING",
+        "clue": "Buff increasing fishing power",
         "chunks": [
-            "BLOO",
-            "DANT"
+            "FIS",
+            "HING"
         ],
         "chunkCount": 2
     },
     {
         "id": 364,
         "answer": "RAPID",
-        "clue": "Item modifier",
+        "clue": "modifier increasing fire-rate",
         "chunks": [
             "RAP",
             "ID"
@@ -3642,58 +3642,58 @@
     },
     {
         "id": 365,
-        "answer": "GOLDFROG",
-        "clue": "Hostile creature",
+        "answer": "GILLS",
+        "clue": "Buff allowing underwater breathing",
         "chunks": [
-            "GOLD",
-            "FROG"
+            "GIL",
+            "LS"
         ],
         "chunkCount": 2
     },
     {
         "id": 366,
-        "answer": "SKYCOD",
-        "clue": "Catchable fish",
+        "answer": "SHINE",
+        "clue": "Buff causing the player to glow",
         "chunks": [
-            "SKYC",
-            "OD"
+            "SH",
+            "INE"
         ],
         "chunkCount": 2
     },
     {
         "id": 367,
-        "answer": "CATCARP",
-        "clue": "Catchable fish",
+        "answer": "SONAR",
+        "clue": "Reveals the catch while fishing",
         "chunks": [
-            "CATC",
-            "ARP"
+            "SO",
+            "NAR"
         ],
         "chunkCount": 2
     },
     {
         "id": 368,
-        "answer": "TUNAEEL",
-        "clue": "Catchable fish",
+        "answer": "TIPSY",
+        "clue": "Result of drinking ale",
         "chunks": [
-            "TUNA",
-            "EEL"
+            "TI",
+            "PSY"
         ],
         "chunkCount": 2
     },
     {
         "id": 369,
-        "answer": "PINKCRAB",
-        "clue": "Common enemy",
+        "answer": "TITAN",
+        "clue": "Buff that increases knockback",
         "chunks": [
-            "PINK",
-            "CRAB"
+            "TIT",
+            "AN"
         ],
         "chunkCount": 2
     },
     {
         "id": 370,
         "answer": "VITAMINS",
-        "clue": "Helpful accessory",
+        "clue": "Grants immunity to weakness",
         "chunks": [
             "VITA",
             "MINS"
@@ -3702,58 +3702,58 @@
     },
     {
         "id": 371,
-        "answer": "DARKFROG",
-        "clue": "Hostile creature",
+        "answer": "WARMTH",
+        "clue": "Reduces damage from cold enemies",
         "chunks": [
-            "DARK",
-            "FROG"
+            "WAR",
+            "MTH"
         ],
         "chunkCount": 2
     },
     {
         "id": 372,
-        "answer": "BLACKORC",
-        "clue": "Hostile creature",
+        "answer": "NANITES",
+        "clue": "Buff that causes confusion on hit",
         "chunks": [
-            "BLAC",
-            "KORC"
+            "NANI",
+            "TES"
         ],
         "chunkCount": 2
     },
     {
         "id": 373,
-        "answer": "GOLDANT",
-        "clue": "Hostile creature",
+        "answer": "PANIC",
+        "clue": "Speed buff gained from getting hit",
         "chunks": [
-            "GOLD",
-            "ANT"
+            "PAN",
+            "IC"
         ],
         "chunkCount": 2
     },
     {
         "id": 374,
-        "answer": "REDBAT",
-        "clue": "Common enemy",
+        "answer": "HAPPY",
+        "clue": "Buff gained from sunflowers",
         "chunks": [
-            "REDB",
-            "AT"
+            "HAP",
+            "PY"
         ],
         "chunkCount": 2
     },
     {
         "id": 375,
-        "answer": "WHITEIMP",
-        "clue": "Hostile creature",
+        "answer": "MOUNT",
+        "clue": "Rideable creature",
         "chunks": [
-            "WHIT",
-            "EIMP"
+            "MOU",
+            "NT"
         ],
         "chunkCount": 2
     },
     {
         "id": 376,
         "answer": "SHODDY",
-        "clue": "Item modifier",
+        "clue": "Modifier decreasing damage",
         "chunks": [
             "SHOD",
             "DY"
@@ -3762,28 +3762,28 @@
     },
     {
         "id": 377,
-        "answer": "SPECBASS",
-        "clue": "Catchable fish",
+        "answer": "HORSE",
+        "clue": "Mount sold by the Zoologist",
         "chunks": [
-            "SPEC",
-            "BASS"
+            "HOR",
+            "SE"
         ],
         "chunkCount": 2
     },
     {
         "id": 378,
-        "answer": "BEEWINGS",
-        "clue": "Allows flight",
+        "answer": "OOZED",
+        "clue": "Slowness debuff from ogre",
         "chunks": [
-            "BEEW",
-            "INGS"
+            "OO",
+            "ZED"
         ],
         "chunkCount": 2
     },
     {
         "id": 379,
-        "answer": "TINSWORD",
-        "clue": "Melee weapon",
+        "answer": "STINKY",
+        "clue": "Debuff causing NPCS to run away",
         "chunks": [
             "TINS",
             "WORD"
@@ -3792,118 +3792,118 @@
     },
     {
         "id": 380,
-        "answer": "MOSSBEE",
-        "clue": "Hostile creature",
+        "answer": "PECKISH",
+        "clue": "Hunger buff on Constant seed",
         "chunks": [
-            "MOSS",
-            "BEE"
+            "PECK",
+            "ISH"
         ],
         "chunkCount": 2
     },
     {
         "id": 381,
-        "answer": "BONECRAB",
-        "clue": "Hostile creature",
+        "answer": "MIDAS",
+        "clue": "Debuff causing more coins to drop",
         "chunks": [
-            "BONE",
-            "CRAB"
+            "MI",
+            "DAS"
         ],
         "chunkCount": 2
     },
     {
         "id": 382,
-        "answer": "HELLOGRE",
-        "clue": "Hostile creature",
+        "answer": "STUNNED",
+        "clue": "Debuff completely stopping enemies",
         "chunks": [
-            "HELL",
-            "OGRE"
+            "STU",
+            "NNED"
         ],
         "chunkCount": 2
     },
     {
         "id": 383,
-        "answer": "BUNNYEEL",
-        "clue": "Catchable fish",
+        "answer": "CELLED",
+        "clue": "DoT debuff caused by the star cell",
         "chunks": [
-            "BUNN",
-            "YEEL"
+            "CEL",
+            "LED"
         ],
         "chunkCount": 2
     },
     {
         "id": 384,
-        "answer": "MECHFROG",
-        "clue": "Hostile creature",
+        "answer": "QUEST",
+        "clue": "What the Angler gives you",
         "chunks": [
-            "MECH",
-            "FROG"
+            "QU",
+            "EST"
         ],
         "chunkCount": 2
     },
     {
         "id": 385,
-        "answer": "SWAMPBAT",
-        "clue": "Hostile creature",
+        "answer": "JULIA",
+        "clue": "Type of butterfly",
         "chunks": [
-            "SWAM",
-            "PBAT"
+            "JU",
+            "LIA"
         ],
         "chunkCount": 2
     },
     {
         "id": 386,
-        "answer": "BLUEWORM",
-        "clue": "Hostile creature",
+        "answer": "SULPHUR",
+        "clue": "Type of butterfly",
         "chunks": [
-            "BLUE",
-            "WORM"
+            "SULP",
+            "HUR"
         ],
         "chunkCount": 2
     },
     {
         "id": 387,
-        "answer": "MECHEYE",
-        "clue": "Hostile creature",
+        "answer": "ULYSSES",
+        "clue": "Type of butterfly",
         "chunks": [
-            "MECH",
-            "EYE"
+            "ULY",
+            "SSES"
         ],
         "chunkCount": 2
     },
     {
         "id": 388,
-        "answer": "WOLFEYE",
-        "clue": "Hostile creature",
+        "answer": "FIREFLY",
+        "clue": "Glowing, nighttime critter",
         "chunks": [
-            "WOLF",
-            "EYE"
+            "FIR",
+            "EFLY"
         ],
         "chunkCount": 2
     },
     {
         "id": 389,
-        "answer": "BONEORC",
-        "clue": "Hostile creature",
+        "answer": "LAVAFLY",
+        "clue": "Underworld flying critter",
         "chunks": [
-            "BONE",
-            "ORC"
+            "LAV",
+            "AFLY"
         ],
         "chunkCount": 2
     },
     {
         "id": 390,
-        "answer": "BLUEDUCK",
-        "clue": "Hostile creature",
+        "answer": "MAGGOT",
+        "clue": "Graveyard critter",
         "chunks": [
-            "BLUE",
-            "DUCK"
+            "MAG",
+            "GOT"
         ],
         "chunkCount": 2
     },
     {
         "id": 391,
         "answer": "NAZAR",
-        "clue": "Helpful accessory",
+        "clue": "Grants immunity to cursed",
         "chunks": [
             "NAZ",
             "AR"
@@ -3912,18 +3912,18 @@
     },
     {
         "id": 392,
-        "answer": "SWAMPBEE",
-        "clue": "Hostile creature",
+        "answer": "HONEYFIN",
+        "clue": "Fish that heals 120 health",
         "chunks": [
-            "SWAM",
-            "PBEE"
+            "HONE",
+            "YFIN"
         ],
         "chunkCount": 2
     },
     {
         "id": 393,
         "answer": "PRISMITE",
-        "clue": "Catchable critter",
+        "clue": "Fish used in lifeforce potions",
         "chunks": [
             "PRIS",
             "MITE"
@@ -3932,38 +3932,38 @@
     },
     {
         "id": 394,
-        "answer": "DEMONIMP",
-        "clue": "Hostile creature",
+        "answer": "SALMON",
+        "clue": "Fish caught in very deep water",
         "chunks": [
-            "DEMO",
-            "NIMP"
+            "SAL",
+            "MON"
         ],
         "chunkCount": 2
     },
     {
         "id": 395,
-        "answer": "SHARKBAT",
-        "clue": "Common enemy",
+        "answer": "BATFISH",
+        "clue": "Quest fish caught underground",
         "chunks": [
-            "SHAR",
-            "KBAT"
+            "BATF",
+            "ISH"
         ],
         "chunkCount": 2
     },
     {
         "id": 396,
-        "answer": "ICEDUCK",
-        "clue": "Hostile creature",
+        "answer": "CATFISH",
+        "clue": "Quest fish caught in the jungle",
         "chunks": [
-            "ICED",
-            "UCK"
+            "CATF",
+            "ISH"
         ],
         "chunkCount": 2
     },
     {
         "id": 397,
         "answer": "LUCKY",
-        "clue": "Item modifier",
+        "clue": "Buff that grants luck",
         "chunks": [
             "LUC",
             "KY"
@@ -3972,18 +3972,18 @@
     },
     {
         "id": 398,
-        "answer": "BUNNYCOD",
-        "clue": "Catchable fish",
+        "answer": "FISHRON",
+        "clue": "Quest fish caught in the ice biome",
         "chunks": [
-            "BUNN",
-            "YCOD"
+            "FIS",
+            "HRON"
         ],
         "chunkCount": 2
     },
     {
         "id": 399,
         "answer": "COBALT",
-        "clue": "Crafting metal",
+        "clue": "Hardmode crafting metal",
         "chunks": [
             "COBA",
             "LT"
@@ -3992,78 +3992,78 @@
     },
     {
         "id": 400,
-        "answer": "WHITEBEE",
-        "clue": "Hostile creature",
+        "answer": "MUDFISH",
+        "clue": "Quest fish caught in the jungle",
         "chunks": [
-            "WHIT",
-            "EBEE"
+            "MUDF",
+            "ISH"
         ],
         "chunkCount": 2
     },
     {
         "id": 401,
-        "answer": "NEONCOD",
-        "clue": "Catchable fish",
+        "answer": "TOXIKARP",
+        "clue": "Ranged weapon gained from fishing",
         "chunks": [
-            "NEON",
-            "COD"
+            "TOXI",
+            "KARP"
         ],
         "chunkCount": 2
     },
     {
         "id": 402,
-        "answer": "GIANTORC",
-        "clue": "Hostile creature",
+        "answer": "OYSTER",
+        "clue": "Fished item that grants pearls",
         "chunks": [
-            "GIAN",
-            "TORC"
+            "OYS",
+            "TER"
         ],
         "chunkCount": 2
     },
     {
         "id": 403,
-        "answer": "LUMINITE",
-        "clue": "Crafting metal",
+        "answer": "AZURE",
+        "clue": "Hardmode sky crate",
         "chunks": [
-            "LUMI",
-            "NITE"
+            "AZ",
+            "URE"
         ],
         "chunkCount": 2
     },
     {
         "id": 404,
-        "answer": "ICECRAB",
-        "clue": "Common enemy",
+        "answer": "BRAMBLE",
+        "clue": "Jungle hardmode crate",
         "chunks": [
-            "ICEC",
-            "RAB"
+            "BRAM",
+            "BLE"
         ],
         "chunkCount": 2
     },
     {
         "id": 405,
-        "answer": "CRABFISH",
-        "clue": "Common enemy",
+        "answer": "DEFILED",
+        "clue": "Corruption hardmode crate",
         "chunks": [
-            "CRAB",
-            "FISH"
+            "DEFI",
+            "LED"
         ],
         "chunkCount": 2
     },
     {
         "id": 406,
-        "answer": "GOLDBAT",
-        "clue": "Hostile creature",
+        "answer": "HEMATIC",
+        "clue": "Crimson hardmode crate",
         "chunks": [
-            "GOLD",
-            "BAT"
+            "HEM",
+            "ATIC"
         ],
         "chunkCount": 2
     },
     {
         "id": 407,
-        "answer": "CATMASK",
-        "clue": "Headgear hat",
+        "answer": "DIVINE",
+        "clue": "Hallow hardmode crate",
         "chunks": [
             "CATM",
             "ASK"
@@ -4072,28 +4072,28 @@
     },
     {
         "id": 408,
-        "answer": "MOSSORC",
-        "clue": "Hostile creature",
+        "answer": "FROZEN",
+        "clue": "Ice biome pre-hardmode crate",
         "chunks": [
-            "MOSS",
-            "ORC"
+            "FRO",
+            "ZEN"
         ],
         "chunkCount": 2
     },
     {
         "id": 409,
-        "answer": "TOXICBEE",
-        "clue": "Hostile creature",
+        "answer": "MIRAGE",
+        "clue": "Oasis hardmode crate",
         "chunks": [
-            "TOXI",
-            "CBEE"
+            "MIR",
+            "AGE"
         ],
         "chunkCount": 2
     },
     {
         "id": 410,
         "answer": "GODLY",
-        "clue": "Item modifier",
+        "clue": "\"The holiest of modifiers\"",
         "chunks": [
             "GOD",
             "LY"
@@ -4102,58 +4102,58 @@
     },
     {
         "id": 411,
-        "answer": "IRONAXE",
-        "clue": "Chopping tool",
+        "answer": "SEASIDE",
+        "clue": "Ocean hardmode crate",
         "chunks": [
-            "IRON",
-            "AXE"
+            "SEAS",
+            "IDE"
         ],
         "chunkCount": 2
     },
     {
         "id": 412,
-        "answer": "SMALLBEE",
-        "clue": "Hostile creature",
+        "answer": "OLDSHOE",
+        "clue": "Fishing junk",
         "chunks": [
-            "SMAL",
-            "LBEE"
+            "OLDS",
+            "HOE"
         ],
         "chunkCount": 2
     },
     {
         "id": 413,
-        "answer": "CRABBAT",
-        "clue": "Common enemy",
+        "answer": "SEAWEED",
+        "clue": "Fishing junk",
         "chunks": [
-            "CRAB",
-            "BAT"
+            "SEAW",
+            "EED"
         ],
         "chunkCount": 2
     },
     {
         "id": 414,
-        "answer": "WHITEANT",
-        "clue": "Hostile creature",
+        "answer": "TINCAN",
+        "clue": "Fishing junk",
         "chunks": [
-            "WHIT",
-            "EANT"
+            "TINC",
+            "AN"
         ],
         "chunkCount": 2
     },
     {
         "id": 415,
-        "answer": "DOGTROUT",
-        "clue": "Catchable fish",
+        "answer": "MERMAN",
+        "clue": "Blood moon ocean enemy",
         "chunks": [
-            "DOGT",
-            "ROUT"
+            "MER",
+            "MAN"
         ],
         "chunkCount": 2
     },
     {
         "id": 416,
         "answer": "FROG",
-        "clue": "Catchable critter",
+        "clue": "Jungle critter",
         "chunks": [
             "FR",
             "OG"
@@ -4162,18 +4162,18 @@
     },
     {
         "id": 417,
-        "answer": "NEONFISH",
-        "clue": "Catchable fish",
+        "answer": "SASHIMI",
+        "clue": "Food that's crafted from fish",
         "chunks": [
-            "NEON",
-            "FISH"
+            "SASH",
+            "IMI"
         ],
         "chunkCount": 2
     },
     {
         "id": 418,
         "answer": "ANGLER",
-        "clue": "Friendly npc",
+        "clue": "NPC that never dies, just leaves",
         "chunks": [
             "ANGL",
             "ER"
@@ -4182,18 +4182,18 @@
     },
     {
         "id": 419,
-        "answer": "SWAMPANT",
-        "clue": "Hostile creature",
+        "answer": "GOLF",
+        "clue": "Minigame introduced in 1.4.0.1",
         "chunks": [
-            "SWAM",
-            "PANT"
+            "GO",
+            "LF"
         ],
         "chunkCount": 2
     },
     {
         "id": 420,
         "answer": "INFERNO",
-        "clue": "Beneficial buff",
+        "clue": "\"Ring of FIRE!\"",
         "chunks": [
             "INFE",
             "RNO"
@@ -4202,28 +4202,28 @@
     },
     {
         "id": 421,
-        "answer": "PRISCRAB",
-        "clue": "Catchable fish",
+        "answer": "FULL",
+        "clue": "Type of moon phase",
         "chunks": [
-            "PRIS",
-            "CRAB"
+            "FU",
+            "LL"
         ],
         "chunkCount": 2
     },
     {
         "id": 422,
-        "answer": "ICEGHOST",
-        "clue": "Common enemy",
+        "answer": "PRESENT",
+        "clue": "Item dropped durring december",
         "chunks": [
-            "ICEG",
-            "HOST"
+            "PRES",
+            "ENT"
         ],
         "chunkCount": 2
     },
     {
         "id": 423,
         "answer": "MYTHICAL",
-        "clue": "Item modifier",
+        "clue": "Best mage modifier",
         "chunks": [
             "MYTH",
             "ICAL"
@@ -4232,48 +4232,48 @@
     },
     {
         "id": 424,
-        "answer": "SPOREBEE",
-        "clue": "Hostile creature",
+        "answer": "STAR",
+        "clue": "Grants 100 mana",
         "chunks": [
-            "SPOR",
-            "EBEE"
+            "ST",
+            "AR"
         ],
         "chunkCount": 2
     },
     {
         "id": 425,
-        "answer": "CAVEANT",
-        "clue": "Hostile creature",
+        "answer": "AGGRO",
+        "clue": "Stat determining enemy aggression",
         "chunks": [
-            "CAVE",
-            "ANT"
+            "AG",
+            "GRO"
         ],
         "chunkCount": 2
     },
     {
         "id": 426,
-        "answer": "VAMPFISH",
-        "clue": "Hostile creature",
+        "answer": "BREATH",
+        "clue": "Stat represented by bubbles",
         "chunks": [
-            "VAMP",
-            "FISH"
+            "BRE",
+            "ATH"
         ],
         "chunkCount": 2
     },
     {
         "id": 427,
-        "answer": "STARBELT",
-        "clue": "Wearable accessory",
+        "answer": "DEFENSE",
+        "clue": "Stat protecting you from damage",
         "chunks": [
-            "STAR",
-            "BELT"
+            "DEF",
+            "ENSE"
         ],
         "chunkCount": 2
     },
     {
         "id": 428,
         "answer": "AGILE",
-        "clue": "Item modifier",
+        "clue": "Modifier increasing speed",
         "chunks": [
             "AGI",
             "LE"
@@ -4282,88 +4282,88 @@
     },
     {
         "id": 429,
-        "answer": "SKELEBEE",
-        "clue": "Hostile creature",
+        "answer": "HEALTH",
+        "clue": "Stat with a maximum of 600 points",
         "chunks": [
-            "SKEL",
-            "EBEE"
+            "HEA",
+            "LTH"
         ],
         "chunkCount": 2
     },
     {
         "id": 430,
-        "answer": "GOLDEEL",
-        "clue": "Catchable fish",
+        "answer": "LUCK",
+        "clue": "Stat that improves randomness",
         "chunks": [
-            "GOLD",
-            "EEL"
+            "LU",
+            "CK"
         ],
         "chunkCount": 2
     },
     {
         "id": 431,
-        "answer": "STINKCOD",
-        "clue": "Catchable fish",
+        "answer": "WHITE",
+        "clue": "Rarity of common items",
         "chunks": [
-            "STIN",
-            "KCOD"
+            "WH",
+            "ITE"
         ],
         "chunkCount": 2
     },
     {
         "id": 432,
-        "answer": "GIANTBAT",
-        "clue": "Common enemy",
+        "answer": "RARITY",
+        "clue": "Property assigned to all items",
         "chunks": [
-            "GIAN",
-            "TBAT"
+            "RAR",
+            "ITY"
         ],
         "chunkCount": 2
     },
     {
         "id": 433,
-        "answer": "LAVABELT",
-        "clue": "Wearable accessory",
+        "answer": "SPAWN",
+        "clue": "Where the player appears after dying",
         "chunks": [
-            "LAVA",
-            "BELT"
+            "SPA",
+            "WN"
         ],
         "chunkCount": 2
     },
     {
         "id": 434,
-        "answer": "REDDEMON",
-        "clue": "Common enemy",
+        "answer": "CONSOLE",
+        "clue": "Platform to play Terraria on",
         "chunks": [
-            "REDD",
-            "EMON"
+            "CON",
+            "SOLE"
         ],
         "chunkCount": 2
     },
     {
         "id": 435,
-        "answer": "DARKIMP",
-        "clue": "Hostile creature",
+        "answer": "MOBILE",
+        "clue": "Platform to play Terraria on",
         "chunks": [
-            "DARK",
-            "IMP"
+            "MOB",
+            "ILE"
         ],
         "chunkCount": 2
     },
     {
         "id": 436,
-        "answer": "WOLFIMP",
-        "clue": "Hostile creature",
+        "answer": "HOUSE",
+        "clue": "Where NPCs live",
         "chunks": [
-            "WOLF",
-            "IMP"
+            "HOU",
+            "SE"
         ],
         "chunkCount": 2
     },
     {
         "id": 437,
         "answer": "SLAPHAND",
-        "clue": "Powerful weapon",
+        "clue": "Weapon with insane knockback",
         "chunks": [
             "SLAP",
             "HAND"
@@ -4372,18 +4372,18 @@
     },
     {
         "id": 438,
-        "answer": "REDSNAIL",
-        "clue": "Hostile creature",
+        "answer": "DEPTH",
+        "clue": "Name of the y axis in a world",
         "chunks": [
-            "REDS",
-            "NAIL"
+            "DEP",
+            "TH"
         ],
         "chunkCount": 2
     },
     {
         "id": 439,
         "answer": "DARKNESS",
-        "clue": "Harmful debuff",
+        "clue": "Decreases light vision",
         "chunks": [
             "DARK",
             "NESS"
@@ -4392,18 +4392,18 @@
     },
     {
         "id": 440,
-        "answer": "REDSLIME",
-        "clue": "Common enemy",
+        "answer": "GRASS",
+        "clue": "Can spawn worms when broke",
         "chunks": [
-            "REDS",
-            "LIME"
+            "GRA",
+            "SS"
         ],
         "chunkCount": 2
     },
     {
         "id": 441,
         "answer": "CHAINGUN",
-        "clue": "Powerful weapon",
+        "clue": "Santa's minigun",
         "chunks": [
             "CHAI",
             "NGUN"
@@ -4412,88 +4412,88 @@
     },
     {
         "id": 442,
-        "answer": "BEESHARK",
-        "clue": "Common enemy",
+        "answer": "MINIONS",
+        "clue": "Summoners main source of damage",
         "chunks": [
-            "BEES",
-            "HARK"
+            "MIN",
+            "IONS"
         ],
         "chunkCount": 2
     },
     {
         "id": 443,
-        "answer": "SPIKYEYE",
-        "clue": "Hostile creature",
+        "answer": "EXPERT",
+        "clue": "Difficulty granting exclusive items",
         "chunks": [
-            "SPIK",
-            "YEYE"
+            "EX",
+            "PERT"
         ],
         "chunkCount": 2
     },
     {
         "id": 444,
-        "answer": "HELLEYE",
-        "clue": "Hostile creature",
+        "answer": "CRIMSON",
+        "clue": "Evil biome",
         "chunks": [
-            "HELL",
-            "EYE"
+            "CRI",
+            "MSON"
         ],
         "chunkCount": 2
     },
     {
         "id": 445,
-        "answer": "SMALLORC",
-        "clue": "Hostile creature",
+        "answer": "ARMOR",
+        "clue": "Sets that grant stats and defense",
         "chunks": [
-            "SMAL",
-            "LORC"
+            "AR",
+            "MOR"
         ],
         "chunkCount": 2
     },
     {
         "id": 446,
-        "answer": "TUNACARP",
-        "clue": "Catchable fish",
+        "answer": "EVENTS",
+        "clue": "Occurances where themed enemies spawn",
         "chunks": [
-            "TUNA",
-            "CARP"
+            "EVE",
+            "NTS"
         ],
         "chunkCount": 2
     },
     {
         "id": 447,
-        "answer": "WOLFORC",
-        "clue": "Hostile creature",
+        "answer": "AETHER",
+        "clue": "Where the shimmer is found",
         "chunks": [
-            "WOLF",
-            "ORC"
+            "AET",
+            "HER"
         ],
         "chunkCount": 2
     },
     {
         "id": 448,
-        "answer": "BONEBASS",
-        "clue": "Catchable fish",
+        "answer": "TOWN",
+        "clue": "Mini-biome where 3+ NPCs live",
         "chunks": [
-            "BONE",
-            "BASS"
+            "TO",
+            "WN"
         ],
         "chunkCount": 2
     },
     {
         "id": 449,
-        "answer": "STINKEEL",
-        "clue": "Catchable fish",
+        "answer": "MOSAIC",
+        "clue": "Biome with random blocks and gold coins",
         "chunks": [
-            "STIN",
-            "KEEL"
+            "MOS",
+            "AIC"
         ],
         "chunkCount": 2
     },
     {
         "id": 450,
         "answer": "SPACEGUN",
-        "clue": "Powerful weapon",
+        "clue": "Mage weapon, not need mana with armor",
         "chunks": [
             "SPAC",
             "EGUN"
@@ -4502,18 +4502,18 @@
     },
     {
         "id": 451,
-        "answer": "JETWINGS",
-        "clue": "Allows flight",
+        "answer": "PYRAMID",
+        "clue": "Mini-biome poking out of the desert",
         "chunks": [
-            "JETW",
-            "INGS"
+            "PYR",
+            "AMID"
         ],
         "chunkCount": 2
     },
     {
         "id": 452,
         "answer": "MECHANIC",
-        "clue": "Friendly npc",
+        "clue": "Found bound in the dungeon",
         "chunks": [
             "MECH",
             "ANIC"
@@ -4522,61 +4522,61 @@
     },
     {
         "id": 453,
-        "answer": "NEONEEL",
-        "clue": "Catchable fish",
+        "answer": "LASER",
+        "clue": "Shot by most magic guns",
         "chunks": [
-            "NEON",
-            "EEL"
+            "LAS",
+            "ER"
         ],
         "chunkCount": 2
     },
     {
         "id": 454,
-        "answer": "HELLIMP",
-        "clue": "Hostile creature",
+        "answer": "MOWED",
+        "clue": "Grass that won't grow tall grass",
         "chunks": [
-            "HELL",
-            "IMP"
+            "MOW",
+            "ED"
         ],
         "chunkCount": 2
     },
     {
         "id": 455,
-        "answer": "DARKCRAB",
-        "clue": "Common enemy",
+        "answer": "MOSS",
+        "clue": "Grass for stone blocks",
         "chunks": [
-            "DARK",
-            "CRAB"
+            "MO",
+            "SS"
         ],
         "chunkCount": 2
     },
     {
         "id": 456,
-        "answer": "BLACKEYE",
-        "clue": "Hostile creature",
+        "answer": "KRYPTON",
+        "clue": "Glowing green moss",
         "chunks": [
-            "BLAC",
-            "KEYE"
+            "KRYP",
+            "TON"
         ],
         "chunkCount": 2
     },
     {
         "id": 457,
-        "answer": "SKYEEL",
-        "clue": "Catchable fish",
+        "answer": "XENON",
+        "clue": "Glowing blue moss",
         "chunks": [
-            "SKYE",
-            "EL"
+            "ZE",
+            "NON"
         ],
         "chunkCount": 2
     },
     {
         "id": 458,
-        "answer": "LAVAFROG",
-        "clue": "Hostile creature",
+        "answer": "ARGON",
+        "clue": "Glowing pink moss",
         "chunks": [
-            "LAVA",
-            "FROG"
+            "AR",
+            "GON"
         ],
         "chunkCount": 2
     },
@@ -4592,78 +4592,78 @@
     },
     {
         "id": 460,
-        "answer": "MEOWMERE",
-        "clue": "Powerful weapon",
+        "answer": "NEON",
+        "clue": "Glowing purple moss",
         "chunks": [
-            "MEOW",
-            "MERE"
+            "NE",
+            "ON"
         ],
         "chunkCount": 2
     },
     {
         "id": 461,
-        "answer": "MANARING",
-        "clue": "Wearable accessory",
+        "answer": "HELIUM",
+        "clue": "Glowing rainbow moss",
         "chunks": [
-            "MANA",
-            "RING"
+            "HEL",
+            "IUM"
         ],
         "chunkCount": 2
     },
     {
         "id": 462,
-        "answer": "SPIKYANT",
-        "clue": "Hostile creature",
+        "answer": "BULB",
+        "clue": "Pink plant that summons Plantera",
         "chunks": [
-            "SPIK",
-            "YANT"
+            "BU",
+            "LB"
         ],
         "chunkCount": 2
     },
     {
         "id": 463,
-        "answer": "GREENBEE",
-        "clue": "Hostile creature",
+        "answer": "PUMPKIN",
+        "clue": "Plant grown durring October",
         "chunks": [
-            "GREE",
-            "NBEE"
+            "PUMP",
+            "KIN"
         ],
         "chunkCount": 2
     },
     {
         "id": 464,
-        "answer": "OILED",
-        "clue": "Harmful debuff",
+        "answer": "SEEDS",
+        "clue": "The start of any good garden",
         "chunks": [
-            "OIL",
-            "ED"
+            "SEE",
+            "DS"
         ],
         "chunkCount": 2
     },
     {
         "id": 465,
-        "answer": "SPOREIMP",
-        "clue": "Hostile creature",
+        "answer": "ALTARS",
+        "clue": "Breaking these grants hardmode ores",
         "chunks": [
-            "SPOR",
-            "EIMP"
+            "ALT",
+            "ARS"
         ],
         "chunkCount": 2
     },
     {
         "id": 466,
-        "answer": "PRISPIKE",
-        "clue": "Catchable fish",
+        "answer": "ACID",
+        "clue": "Animated green dye",
         "chunks": [
-            "PRIS",
-            "PIKE"
+            "AC",
+            "ID"
         ],
         "chunkCount": 2
     },
     {
         "id": 467,
-        "answer": "BONEBAT",
-        "clue": "Hostile creature",
+        "answer": "GRIM",
+        "clue": "'Smokey' red dye",
         "chunks": [
             "BONE",
             "BAT"
@@ -4673,7 +4673,7 @@
     {
         "id": 468,
         "answer": "BLEEDING",
-        "clue": "Harmful debuff",
+        "clue": "No health regeneration",
         "chunks": [
             "BLEE",
             "DING"
@@ -4683,7 +4683,7 @@
     {
         "id": 469,
         "answer": "SEEDLER",
-        "clue": "Powerful weapon",
+        "clue": "Zenith sword component",
         "chunks": [
             "SEED",
             "LER"
@@ -4693,7 +4693,7 @@
     {
         "id": 470,
         "answer": "HEAVY",
-        "clue": "Item modifier",
+        "clue": "Modifier decreasing speed",
         "chunks": [
             "HEA",
             "VY"
@@ -4702,18 +4702,18 @@
     },
     {
         "id": 471,
-        "answer": "BLUEBIRD",
-        "clue": "Hostile creature",
+        "answer": "HADES",
+        "clue": "'Steamy' light blue dye",
         "chunks": [
-            "BLUE",
-            "BIRD"
+            "HAD",
+            "ES"
         ],
         "chunkCount": 2
     },
     {
         "id": 472,
         "answer": "BEZOAR",
-        "clue": "Helpful accessory",
+        "clue": "Grants immunity to poisoned",
         "chunks": [
             "BEZO",
             "AR"
@@ -4723,7 +4723,7 @@
     {
         "id": 473,
         "answer": "CASCADE",
-        "clue": "Powerful weapon",
+        "clue": "Pre-hardmode underworld yoyo",
         "chunks": [
             "CASC",
             "ADE"
@@ -4733,7 +4733,7 @@
     {
         "id": 474,
         "answer": "HONEY",
-        "clue": "Liquid in world",
+        "clue": "Viscous liquid",
         "chunks": [
             "HON",
             "EY"
@@ -4742,68 +4742,68 @@
     },
     {
         "id": 475,
-        "answer": "BLUEOGRE",
-        "clue": "Hostile creature",
+        "answer": "MIRAGE",
+        "clue": "Wavy effect dye",
         "chunks": [
-            "BLUE",
-            "OGRE"
+            "MIR",
+            "AGE"
         ],
         "chunkCount": 2
     },
     {
         "id": 476,
-        "answer": "MOSSBAT",
-        "clue": "Hostile creature",
+        "answer": "VOID",
+        "clue": "Dark, shaking dye",
         "chunks": [
-            "MOSS",
-            "BAT"
+            "VO",
+            "ID"
         ],
         "chunkCount": 2
     },
     {
         "id": 477,
-        "answer": "LAVAFISH",
-        "clue": "Common enemy",
+        "answer": "TEAM",
+        "clue": "PvP grouping mechanic",
         "chunks": [
-            "LAVA",
-            "FISH"
+            "TE",
+            "AM"
         ],
         "chunkCount": 2
     },
     {
         "id": 478,
-        "answer": "BLUEBEE",
-        "clue": "Hostile creature",
+        "answer": "COBWHIP",
+        "clue": "Whip that summons spiders",
         "chunks": [
-            "BLUE",
-            "BEE"
+            "COBW",
+            "HIP"
         ],
         "chunkCount": 2
     },
     {
         "id": 479,
-        "answer": "DOGCOD",
-        "clue": "Catchable fish",
+        "answer": "PINE",
+        "clue": "Christmas wood",
         "chunks": [
-            "DOGC",
-            "OD"
+            "PI",
+            "NE"
         ],
         "chunkCount": 2
     },
     {
         "id": 480,
-        "answer": "SUPERIOR",
-        "clue": "Item modifier",
+        "answer": "OFFICE",
+        "clue": "Furniture set used by Jim and Dwight",
         "chunks": [
-            "SUPE",
-            "RIOR"
+            "OFF",
+            "ICE"
         ],
         "chunkCount": 2
     },
     {
         "id": 481,
         "answer": "WILD",
-        "clue": "Item modifier",
+        "clue": "Modifer slightly increasing melee speed",
         "chunks": [
             "WI",
             "LD"
@@ -4812,28 +4812,28 @@
     },
     {
         "id": 482,
-        "answer": "REDOGRE",
-        "clue": "Hostile creature",
+        "answer": "GRANITE",
+        "clue": "Dark blue stone",
         "chunks": [
-            "REDO",
-            "GRE"
+            "GRA",
+            "NITE"
         ],
         "chunkCount": 2
     },
     {
         "id": 483,
-        "answer": "SMALLIMP",
-        "clue": "Hostile creature",
+        "answer": "MARBLE",
+        "clue": "Smooth, white stone",
         "chunks": [
-            "SMAL",
-            "LIMP"
+            "MAR",
+            "BLE"
         ],
         "chunkCount": 2
     },
     {
         "id": 484,
         "answer": "RAGE",
-        "clue": "Beneficial buff",
+        "clue": "Buff increasing critical strike chance",
         "chunks": [
             "RA",
             "GE"
@@ -4842,68 +4842,68 @@
     },
     {
         "id": 485,
-        "answer": "CAVEEYE",
-        "clue": "Hostile creature",
+        "answer": "CLOUD",
+        "clue": "No fall damage if landed on",
         "chunks": [
-            "CAVE",
-            "EYE"
+            "CLO",
+            "UD"
         ],
         "chunkCount": 2
     },
     {
         "id": 486,
-        "answer": "TUNAFISH",
-        "clue": "Catchable fish",
+        "answer": "REEF",
+        "clue": "Coral themed furniture",
         "chunks": [
-            "TUNA",
-            "FISH"
+            "RE",
+            "EF"
         ],
         "chunkCount": 2
     },
     {
         "id": 487,
-        "answer": "MOSSFROG",
-        "clue": "Hostile creature",
+        "answer": "SKYWARE",
+        "clue": "Sky themed furniture",
         "chunks": [
-            "MOSS",
-            "FROG"
+            "SKY",
+            "WARE"
         ],
         "chunkCount": 2
     },
     {
         "id": 488,
-        "answer": "PINKFROG",
-        "clue": "Hostile creature",
+        "answer": "LESION",
+        "clue": "Corruption themed furniture",
         "chunks": [
-            "PINK",
-            "FROG"
+            "LES",
+            "ION"
         ],
         "chunkCount": 2
     },
     {
         "id": 489,
-        "answer": "FEZHAT",
-        "clue": "Headgear hat",
+        "answer": "FLESH",
+        "clue": "Crimson themed furniture",
         "chunks": [
-            "FEZH",
-            "AT"
+            "FLE",
+            "SH"
         ],
         "chunkCount": 2
     },
     {
         "id": 490,
-        "answer": "SPIKYORC",
-        "clue": "Hostile creature",
+        "answer": "GOTHIC",
+        "clue": "Cobweb, stone, and bone furniture",
         "chunks": [
-            "SPIK",
-            "YORC"
+            "GOT",
+            "HIC"
         ],
         "chunkCount": 2
     },
     {
         "id": 491,
         "answer": "WORM",
-        "clue": "Catchable critter",
+        "clue": "Classic fishing bait",
         "chunks": [
             "WO",
             "RM"
@@ -4912,18 +4912,18 @@
     },
     {
         "id": 492,
-        "answer": "WOLFBAT",
-        "clue": "Hostile creature",
+        "answer": "EASTER",
+        "clue": "A bunny's favorite furniture",
         "chunks": [
-            "WOLF",
-            "BAT"
+            "EAS",
+            "TER"
         ],
         "chunkCount": 2
     },
     {
         "id": 493,
-        "answer": "BONEOGRE",
-        "clue": "Hostile creature",
+        "answer": "CHALICE",
+        "clue": "Fancy cup sold by traveling merchant",
         "chunks": [
             "BONE",
             "OGRE"
@@ -4932,78 +4932,78 @@
     },
     {
         "id": 494,
-        "answer": "CAVECRAB",
-        "clue": "Hostile creature",
+        "answer": "KIMONO",
+        "clue": "Vanity sold by traveling merchant",
         "chunks": [
-            "CAVE",
-            "CRAB"
+            "KI",
+            "MONO"
         ],
         "chunkCount": 2
     },
     {
         "id": 495,
-        "answer": "PINKIMP",
-        "clue": "Hostile creature",
+        "answer": "JETPACK",
+        "clue": "Purchaceable wings",
         "chunks": [
-            "PINK",
-            "IMP"
+            "JETP",
+            "ACK"
         ],
         "chunkCount": 2
     },
     {
         "id": 496,
-        "answer": "DOGKELP",
-        "clue": "Catchable fish",
+        "answer": "SAIL",
+        "clue": "Wall sold by the Pirate",
         "chunks": [
-            "DOGK",
-            "ELP"
+            "SA",
+            "IL"
         ],
         "chunkCount": 2
     },
     {
         "id": 497,
-        "answer": "BEECRAB",
-        "clue": "Common enemy",
+        "answer": "KWAD",
+        "clue": "Brand of Cyborg's racing drone",
         "chunks": [
-            "BEEC",
-            "RAB"
+            "KW",
+            "AD"
         ],
         "chunkCount": 2
     },
     {
         "id": 498,
-        "answer": "IRONSKIN",
-        "clue": "Beneficial buff",
+        "answer": "TIKI",
+        "clue": "Endgame summoner armor",
         "chunks": [
-            "IRON",
-            "SKIN"
+            "TI",
+            "KI"
         ],
         "chunkCount": 2
     },
     {
         "id": 499,
-        "answer": "DARKFISH",
-        "clue": "Common enemy",
+        "answer": "PYGMY",
+        "clue": "Tiki summoner minion",
         "chunks": [
-            "DARK",
-            "FISH"
+            "PY",
+            "GMY"
         ],
         "chunkCount": 2
     },
     {
         "id": 500,
-        "answer": "VAMPWORM",
-        "clue": "Hostile creature",
+        "answer": "BUBBLE",
+        "clue": "Block that holds liquids, not players",
         "chunks": [
-            "VAMP",
-            "WORM"
+            "BUB",
+            "BLE"
         ],
         "chunkCount": 2
     },
     {
         "id": 501,
-        "answer": "PINKFISH",
-        "clue": "Common enemy",
+        "answer": "RACINGDRONE",
+        "clue": "",
         "chunks": [
             "PI",
             "NK",
@@ -5506,7 +5506,7 @@
     },
     {
         "id": 543,
-        "answer": "FROSTTROUT",
+        "answer": "",
         "clue": "Catchable fish",
         "chunks": [
             "FROS",
@@ -13991,11 +13991,11 @@
     },
     {
         "id": 1300,
-        "answer": "FLESHOGRE",
-        "clue": "Hostile creature",
+        "answer": "DUSKWARE",
+        "clue": "Moon themed furniture",
         "chunks": [
-            "FLES",
-            "HOG",
+            "DUS",
+            "KWA",
             "RE"
         ],
         "chunkCount": 3
