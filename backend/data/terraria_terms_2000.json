@@ -1183,7 +1183,7 @@
     {
         "id": 119,
         "answer": "MUSKET",
-        "clue": "Found in a shadow orb",
+        "clue": "\"As the founding fathers intended\"",
         "chunks": [
             "MUS",
             "KET"
@@ -8150,140 +8150,140 @@
     },
     {
         "id": 769,
-        "answer": "FLESHSNAIL",
-        "clue": "Hostile creature",
+        "answer": "BLADETONGUE",
+        "clue": "Sword obtained by fishing",
         "chunks": [
-            "FLES",
-            "HSNA",
-            "IL"
+            "BLAD",
+            "ETO",
+            "NGUE"
         ],
         "chunkCount": 3
     },
     {
         "id": 770,
-        "answer": "CORRUPTTROUT",
-        "clue": "Catchable fish",
+        "answer": "DEATHSICKLE",
+        "clue": "One of two scythes in the game",
         "chunks": [
-            "CORR",
-            "UPTT",
-            "ROUT"
+            "DEAT",
+            "HSIC",
+            "KLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 771,
-        "answer": "SORCERERRING",
-        "clue": "Wearable accessory",
+        "answer": "PSYCOKNIFE",
+        "clue": "Grants stealth when standing still",
         "chunks": [
-            "SORC",
-            "ERER",
-            "RING"
+            "PHS",
+            "YCOK",
+            "NIFE"
         ],
         "chunkCount": 3
     },
     {
         "id": 772,
-        "answer": "MUMMYCRAB",
-        "clue": "Common enemy",
+        "answer": "KEYBRAND",
+        "clue": "The Kingdom Key",
         "chunks": [
-            "MUMM",
-            "YCR",
-            "AB"
+            "KE",
+            "YBR",
+            "AND"
         ],
         "chunkCount": 3
     },
     {
         "id": 773,
-        "answer": "STINKCRAB",
-        "clue": "Catchable fish",
+        "answer": "TERRABLADE",
+        "clue": "Forged from the finest blades of light and darkness",
         "chunks": [
-            "STIN",
-            "KCR",
-            "AB"
+            "TERR",
+            "ABL",
+            "ADE"
         ],
         "chunkCount": 3
     },
     {
         "id": 774,
-        "answer": "PINKSPIDER",
-        "clue": "Hostile creature",
+        "answer": "MEOWMERE",
+        "clue": "Nyan cat",
         "chunks": [
-            "PINK",
-            "SPID",
-            "ER"
+            "MEO",
+            "WM",
+            "ERE"
         ],
         "chunkCount": 3
     },
     {
         "id": 775,
-        "answer": "ATLANTICPIKE",
-        "clue": "Catchable fish",
+        "answer": "MALAISE",
+        "clue": "Corruption yoyo",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "PIKE"
+            "MAL",
+            "AI",
+            "SE"
         ],
         "chunkCount": 3
     },
     {
         "id": 776,
-        "answer": "CORRUPTSNAIL",
-        "clue": "Hostile creature",
+        "answer": "AMAZON",
+        "clue": "Mahogany yoyo",
         "chunks": [
-            "CORR",
-            "UPTS",
-            "NAIL"
+            "AM",
+            "AZ",
+            "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 777,
-        "answer": "SKELEWRAITH",
-        "clue": "Hostile creature",
+        "answer": "HIVEFIVE",
+        "clue": "\"Why is this yoyo so sticky\"",
         "chunks": [
-            "SKEL",
-            "EWRA",
-            "ITH"
+            "HI",
+            "VEF",
+            "IVE"
         ],
         "chunkCount": 3
     },
     {
         "id": 778,
-        "answer": "BLOODIMP",
-        "clue": "Hostile creature",
+        "answer": "REDSTHROW",
+        "clue": "Developer's yoyo",
         "chunks": [
-            "BLOO",
-            "DI",
-            "MP"
+            "RED",
+            "STH",
+            "ROW"
         ],
         "chunkCount": 3
     },
     {
         "id": 779,
-        "answer": "BLUEWYVERN",
-        "clue": "Common enemy",
+        "answer": "TERRARIAN",
+        "clue": "Only yoyo that fires projectiles",
         "chunks": [
-            "BLUE",
-            "WYVE",
-            "RN"
+            "TER",
+            "RAR",
+            "IAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 780,
-        "answer": "CRIMSONGHOST",
-        "clue": "Hostile creature",
+        "answer": "ONEDROP",
+        "clue": "Yoyo company collabing with Terraria",
         "chunks": [
-            "CRIM",
-            "SONG",
-            "HOST"
+            "ON",
+            "ED",
+            "ROP"
         ],
         "chunkCount": 3
     },
     {
         "id": 781,
         "answer": "PUMPKINMOON",
-        "clue": "World event",
+        "clue": "Halloween themed event",
         "chunks": [
             "PUMP",
             "KINM",
@@ -8293,195 +8293,195 @@
     },
     {
         "id": 782,
-        "answer": "SWAMPDRAGON",
-        "clue": "Hostile creature",
+        "answer": "SLIMESPEAR",
+        "clue": "Only craftable pre-hardmode spear",
         "chunks": [
-            "SWAM",
-            "PDRA",
-            "GON"
+            "SLI",
+            "MES",
+            "PEAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 783,
-        "answer": "WARRIORBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "STORMSPEAR",
+        "clue": "Pre-hardmode spear that shoots projectiles",
         "chunks": [
-            "WARR",
-            "IORB",
-            "OOTS"
+            "STO",
+            "RMSP",
+            "EAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 784,
-        "answer": "WHITESPIDER",
-        "clue": "Hostile creature",
+        "answer": "SWORDFISH",
+        "clue": "Spear aquired from fishing",
         "chunks": [
-            "WHIT",
-            "ESPI",
-            "DER"
+            "SWO",
+            "RDF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 785,
-        "answer": "CATMINNOW",
-        "clue": "Catchable fish",
+        "answer": "DARKLANCE",
+        "clue": "The Night's Edge of spears",
         "chunks": [
-            "CATM",
-            "INN",
-            "OW"
+            "DA",
+            "RKL",
+            "ANCE"
         ],
         "chunkCount": 3
     },
     {
         "id": 786,
-        "answer": "SILVERBAT",
-        "clue": "Hostile creature",
+        "answer": "NAGINATA",
+        "clue": "Type of spear",
         "chunks": [
-            "SILV",
-            "ERB",
-            "AT"
+            "NAG",
+            "INA",
+            "TA"
         ],
         "chunkCount": 3
     },
     {
         "id": 787,
-        "answer": "GIANTPIRATE",
-        "clue": "Common enemy",
+        "answer": "HALBERD",
+        "clue": "Type of spear",
         "chunks": [
-            "GIAN",
-            "TPIR",
-            "ATE"
+            "HA",
+            "LB",
+            "ERD"
         ],
         "chunkCount": 3
     },
     {
         "id": 788,
-        "answer": "FROSTPIRATE",
-        "clue": "Common enemy",
+        "answer": "GLAIVE",
+        "clue": "Type of spear",
         "chunks": [
-            "FROS",
-            "TPIR",
-            "ATE"
+            "GL",
+            "AI",
+            "VE"
         ],
         "chunkCount": 3
     },
     {
         "id": 789,
-        "answer": "BEEZOMBIE",
-        "clue": "Common enemy",
+        "answer": "GUNGNIR",
+        "clue": "The spear of Odin",
         "chunks": [
-            "BEEZ",
-            "OMB",
-            "IE"
+            "GUN",
+            "GN",
+            "IR"
         ],
         "chunkCount": 3
     },
     {
         "id": 790,
-        "answer": "SMALLGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "PARTISAN",
+        "clue": "Type of spear",
         "chunks": [
-            "SMAL",
-            "LGOB",
-            "LIN"
+            "PAR",
+            "TI",
+            "SAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 791,
-        "answer": "IRONGREAVES",
-        "clue": "Armor legpiece",
+        "answer": "NORTHPOLE",
+        "clue": "Reference to Santa's home location",
         "chunks": [
-            "IRON",
-            "GREA",
-            "VES"
+            "NOR",
+            "THP",
+            "OLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 792,
-        "answer": "TUNATROUT",
-        "clue": "Catchable fish",
+        "answer": "SHROOMERANG",
+        "clue": "Dropped from spore bats",
         "chunks": [
-            "TUNA",
-            "TRO",
-            "UT"
+            "SHRO",
+            "OMER",
+            "ANG"
         ],
         "chunkCount": 3
     },
     {
         "id": 793,
-        "answer": "SWAMPHORNET",
-        "clue": "Hostile creature",
+        "answer": "CHAKRAM",
+        "clue": "Type of boomerang",
         "chunks": [
-            "SWAM",
-            "PHOR",
-            "NET"
+            "CHA",
+            "KR",
+            "AM"
         ],
         "chunkCount": 3
     },
     {
         "id": 794,
-        "answer": "VENOMSLIME",
-        "clue": "Hostile creature",
+        "answer": "TRIMARANG",
+        "clue": "Three are better than one",
         "chunks": [
-            "VENO",
-            "MSLI",
-            "ME"
+            "TRI",
+            "MAR",
+            "ANG"
         ],
         "chunkCount": 3
     },
     {
         "id": 795,
-        "answer": "WOLFDEMON",
-        "clue": "Hostile creature",
+        "answer": "FLYINGKNIFE",
+        "clue": "Mind-controled bommerang",
         "chunks": [
-            "WOLF",
-            "DEM",
-            "ON"
+            "FLY",
+            "INGK",
+            "NIFE"
         ],
         "chunkCount": 3
     },
     {
         "id": 796,
-        "answer": "SPECTREARMOR",
-        "clue": "Armor set",
+        "answer": "LIGHTDISC",
+        "clue": "Greetings, programs!",
         "chunks": [
-            "SPEC",
-            "TREA",
-            "RMOR"
+            "LIG",
+            "HTD",
+            "ISC"
         ],
         "chunkCount": 3
     },
     {
         "id": 797,
-        "answer": "BLOODBIRD",
-        "clue": "Hostile creature",
+        "answer": "BALLOHURT",
+        "clue": "Corruption mace",
         "chunks": [
-            "BLOO",
-            "DBI",
-            "RD"
+            "BAL",
+            "LOH",
+            "URT"
         ],
         "chunkCount": 3
     },
     {
         "id": 798,
-        "answer": "SKELEFISH",
-        "clue": "Hostile creature",
+        "answer": "THEMEATBALL",
+        "clue": "Chrimson mace",
         "chunks": [
-            "SKEL",
-            "EFI",
-            "SH"
+            "THEM",
+            "EATB",
+            "ALL"
         ],
         "chunkCount": 3
     },
     {
         "id": 799,
-        "answer": "ICEWORM",
-        "clue": "Hostile creature",
+        "answer": "BLUEMOON",
+        "clue": "Has a special synergy with the Sunfury",
         "chunks": [
             "ICE",
             "WO",
@@ -8491,85 +8491,85 @@
     },
     {
         "id": 800,
-        "answer": "WEREWOLFFISH",
-        "clue": "Common enemy",
+        "answer": "SUNFURY",
+        "clue": "Has a special synergy with the Blue Moon",
         "chunks": [
-            "WERE",
-            "WOLF",
-            "FISH"
+            "SU",
+            "NFU",
+            "RY"
         ],
         "chunkCount": 3
     },
     {
         "id": 801,
-        "answer": "PINKWRAITH",
-        "clue": "Common enemy",
+        "answer": "CHAINKNIFE",
+        "clue": "\"GET OVER HERE!\"",
         "chunks": [
-            "PINK",
-            "WRAI",
-            "TH"
+            "CHA",
+            "INK",
+            "NIFE"
         ],
         "chunkCount": 3
     },
     {
         "id": 802,
-        "answer": "GOLDCATFISH",
-        "clue": "Catchable fish",
+        "answer": "DAOOFPOW",
+        "clue": "Yin and yang",
         "chunks": [
-            "GOLD",
-            "CATF",
-            "ISH"
+            "DAO",
+            "OFP",
+            "OW"
         ],
         "chunkCount": 3
     },
     {
         "id": 803,
-        "answer": "RABIDJELLY",
-        "clue": "Hostile creature",
+        "answer": "KOCANNON",
+        "clue": "Knockout gun",
         "chunks": [
-            "RABI",
-            "DJEL",
-            "LY"
+            "KOC",
+            "AN",
+            "NON"
         ],
         "chunkCount": 3
     },
     {
         "id": 804,
-        "answer": "GOLDHORNET",
-        "clue": "Hostile creature",
+        "answer": "GOLEMFIST",
+        "clue": "KO cannon upgrade",
         "chunks": [
-            "GOLD",
-            "HORN",
-            "ET"
+            "GOL",
+            "EMF",
+            "IST"
         ],
         "chunkCount": 3
     },
     {
         "id": 805,
-        "answer": "LAVAGLOVE",
-        "clue": "Wearable accessory",
+        "answer": "TERRAGRIM",
+        "clue": "Enchanted sword shrine drop",
         "chunks": [
-            "LAVA",
-            "GLO",
-            "VE"
+            "TER",
+            "RAG",
+            "RIM"
         ],
         "chunkCount": 3
     },
     {
         "id": 806,
-        "answer": "SWAMPBIRD",
-        "clue": "Hostile creature",
+        "answer": "ALETOSSER",
+        "clue": "69% chance to save ammo",
         "chunks": [
-            "SWAM",
-            "PBI",
-            "RD"
+            "ALE",
+            "TOS",
+            "SER"
         ],
         "chunkCount": 3
     },
     {
         "id": 807,
         "answer": "NIMBLE",
-        "clue": "Item modifier",
+        "clue": "Modifier increasing speed",
         "chunks": [
             "NI",
             "MB",
@@ -8579,85 +8579,85 @@
     },
     {
         "id": 808,
-        "answer": "STINKMINNOW",
-        "clue": "Catchable fish",
+        "answer": "STARLIGHT",
+        "clue": "Rainbow epee",
         "chunks": [
-            "STIN",
-            "KMIN",
-            "NOW"
+            "ST",
+            "ARL",
+            "IGHT"
         ],
         "chunkCount": 3
     },
     {
         "id": 809,
-        "answer": "LAVASALMON",
-        "clue": "Catchable fish",
+        "answer": "DAYBREAK",
+        "clue": "Rend your foes asunder",
         "chunks": [
-            "LAVA",
-            "SALM",
-            "ON"
+            "DA",
+            "YBR",
+            "EAK"
         ],
         "chunkCount": 3
     },
     {
         "id": 810,
-        "answer": "MIRRORSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "BLOODRAIN",
+        "clue": "Bow aquired from blood moons",
         "chunks": [
-            "MIRR",
-            "ORSH",
-            "RIMP"
+            "BLO",
+            "ODR",
+            "AIN"
         ],
         "chunkCount": 3
     },
     {
         "id": 811,
-        "answer": "SILVERSNAIL",
-        "clue": "Hostile creature",
+        "answer": "HELLWING",
+        "clue": "Bow that shoots flaming bats",
         "chunks": [
-            "SILV",
-            "ERSN",
-            "AIL"
+            "HEL",
+            "LW",
+            "ING"
         ],
         "chunkCount": 3
     },
     {
         "id": 812,
-        "answer": "GOBLINEYE",
-        "clue": "Hostile creature",
+        "answer": "REPEATER",
+        "clue": "Type of bow",
         "chunks": [
-            "GOBL",
-            "INE",
-            "YE"
+            "REP",
+            "EAT",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 813,
-        "answer": "MECHGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "SHOTBOW",
+        "clue": "Type of bow",
         "chunks": [
-            "MECH",
-            "GOBL",
-            "IN"
+            "SH",
+            "OT",
+            "BOW"
         ],
         "chunkCount": 3
     },
     {
         "id": 814,
-        "answer": "SHADOWHORNET",
-        "clue": "Hostile creature",
+        "answer": "PULSEBOW",
+        "clue": "Bow sold by the traveling merchant",
         "chunks": [
-            "SHAD",
-            "OWHO",
-            "RNET"
+            "PUL",
+            "SEB",
+            "OW"
         ],
         "chunkCount": 3
     },
     {
         "id": 815,
         "answer": "VIKINGHELMET",
-        "clue": "Headgear hat",
+        "clue": "Armor dropped by undead vikings",
         "chunks": [
             "VIKI",
             "NGHE",
@@ -8667,151 +8667,151 @@
     },
     {
         "id": 816,
-        "answer": "MOSSGHOST",
-        "clue": "Hostile creature",
+        "answer": "EVENTIDE",
+        "clue": "Shoots twilight lances",
         "chunks": [
-            "MOSS",
-            "GHO",
-            "ST"
+            "EVE",
+            "NTI",
+            "DE"
         ],
         "chunkCount": 3
     },
     {
         "id": 817,
-        "answer": "BLUEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "REDRYDER",
+        "clue": "\"Youll shoot your eye out\"",
         "chunks": [
-            "BLUE",
-            "DRAG",
-            "ON"
+            "RED",
+            "RYD",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 818,
-        "answer": "SPIKYPIRATE",
-        "clue": "Hostile creature",
+        "answer": "REVOLVER",
+        "clue": "\"Colt 1873 single action army six shooter\"",
         "chunks": [
-            "SPIK",
-            "YPIR",
-            "ATE"
+            "REV",
+            "OL",
+            "VER"
         ],
         "chunkCount": 3
     },
     {
         "id": 819,
-        "answer": "SPIKYZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "MINISHARK",
+        "clue": "Has it's own steam trading card",
         "chunks": [
-            "SPIK",
-            "YZOM",
-            "BIE"
+            "MIN",
+            "ISH",
+            "ARK"
         ],
         "chunkCount": 3
     },
     {
         "id": 820,
-        "answer": "BLACKCULTIST",
-        "clue": "Hostile creature",
+        "answer": "BOOMSTICK",
+        "clue": "\"See this? This, is my ...!\"",
         "chunks": [
-            "BLAC",
-            "KCUL",
-            "TIST"
+            "BOO",
+            "MST",
+            "ICK"
         ],
         "chunkCount": 3
     },
     {
         "id": 821,
-        "answer": "SWAMPPIRATE",
-        "clue": "Hostile creature",
+        "answer": "HANDGUN",
+        "clue": "Dungeon chest gun",
         "chunks": [
-            "SWAM",
-            "PPIR",
-            "ATE"
+            "HAN",
+            "DG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 822,
-        "answer": "MANAEMBLEM",
-        "clue": "Wearable accessory",
+        "answer": "GATLIGATOR",
+        "clue": "Another gun based off an animal",
         "chunks": [
-            "MANA",
-            "EMBL",
-            "EM"
+            "GAT",
+            "LIG",
+            "ATOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 823,
-        "answer": "SMALLDEMON",
-        "clue": "Hostile creature",
+        "answer": "SHOTGUN",
+        "clue": "Hardmode gun sold by Arms Dealer",
         "chunks": [
-            "SMAL",
-            "LDEM",
-            "ON"
+            "SH",
+            "OTG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 824,
-        "answer": "ATLANTICEEL",
-        "clue": "Catchable fish",
+        "answer": "SNIPERRIFLE",
+        "clue": "360 no scope!",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "EEL"
+            "SNI",
+            "PERR",
+            "IFLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 825,
-        "answer": "FISHSLIME",
-        "clue": "Common enemy",
+        "answer": "CELEBRATION",
+        "clue": "Used to be dropped by the Moon Lord",
         "chunks": [
-            "FISH",
-            "SLI",
-            "ME"
+            "CEL",
+            "EBRA",
+            "TION"
         ],
         "chunkCount": 3
     },
     {
         "id": 826,
-        "answer": "MARTIANIMP",
-        "clue": "Hostile creature",
+        "answer": "GRENADE",
+        "clue": "\"Fire in the hole!\"",
         "chunks": [
-            "MART",
-            "IANI",
-            "MP"
+            "GR",
+            "EN",
+            "ADE"
         ],
         "chunkCount": 3
     },
     {
         "id": 827,
         "answer": "LIFEFORCE",
-        "clue": "Beneficial buff",
+        "clue": "Increases max life by 20%",
         "chunks": [
-            "LIFE",
-            "FOR",
-            "CE"
+            "LIF",
+            "EFO",
+            "RCE"
         ],
         "chunkCount": 3
     },
     {
         "id": 828,
-        "answer": "DESERTORC",
-        "clue": "Hostile creature",
+        "answer": "STICKY",
+        "clue": "Type of bomb or glowstick",
         "chunks": [
-            "DESE",
-            "RTO",
-            "RC"
+            "ST",
+            "IC",
+            "KY"
         ],
         "chunkCount": 3
     },
     {
         "id": 829,
         "answer": "WITCHDOCTOR",
-        "clue": "Friendly npc",
+        "clue": "\"Which doctor am I?\"",
         "chunks": [
             "WITC",
             "HDOC",
@@ -8821,133 +8821,133 @@
     },
     {
         "id": 830,
-        "answer": "GIANTEYE",
-        "clue": "Hostile creature",
+        "answer": "BOUNCY",
+        "clue": "Type of bomb or glowstick",
         "chunks": [
-            "GIAN",
-            "TE",
-            "YE"
+            "BO",
+            "UN",
+            "CY"
         ],
         "chunkCount": 3
     },
     {
         "id": 831,
-        "answer": "ARMOREDKELP",
-        "clue": "Catchable fish",
+        "answer": "SHURIKEN",
+        "clue": "Early game throwing weapon",
         "chunks": [
-            "ARMO",
-            "REDK",
-            "ELP"
+            "SHU",
+            "RI",
+            "KEN"
         ],
         "chunkCount": 3
     },
     {
         "id": 832,
-        "answer": "WOLFGHOST",
-        "clue": "Hostile creature",
+        "answer": "SNOWBALL",
+        "clue": "Weapon crafted from snow",
         "chunks": [
-            "WOLF",
-            "GHO",
-            "ST"
+            "SNO",
+            "WB",
+            "ALL"
         ],
         "chunkCount": 3
     },
     {
         "id": 833,
-        "answer": "SPIKYGHOST",
-        "clue": "Hostile creature",
+        "answer": "SPIKYBALL",
+        "clue": "Throwing weapon dropped by goblins",
         "chunks": [
             "SPIK",
-            "YGHO",
-            "ST"
+            "YBA",
+            "LL"
         ],
         "chunkCount": 3
     },
     {
         "id": 834,
-        "answer": "STINKSALMON",
-        "clue": "Catchable fish",
+        "answer": "ROTTENEGG",
+        "clue": "Weapon that can hurt NPCs",
         "chunks": [
-            "STIN",
-            "KSAL",
-            "MON"
+            "ROT",
+            "TENE",
+            "GG"
         ],
         "chunkCount": 3
     },
     {
         "id": 835,
-        "answer": "BLOODSLIME",
-        "clue": "Common enemy",
+        "answer": "STARANISE",
+        "clue": "Christmas throwing weapon",
         "chunks": [
-            "BLOO",
-            "DSLI",
-            "ME"
+            "STA",
+            "RAN",
+            "ISE"
         ],
         "chunkCount": 3
     },
     {
         "id": 836,
-        "answer": "IRONHELMET",
-        "clue": "Armor headpiece",
+        "answer": "BONEJAVELIN",
+        "clue": "Throwing weapon that sticks onto enemies",
         "chunks": [
-            "IRON",
-            "HELM",
-            "ET"
+            "BON",
+            "EJAV",
+            "ELIN"
         ],
         "chunkCount": 3
     },
     {
         "id": 837,
-        "answer": "LAVAEEL",
-        "clue": "Catchable fish",
+        "answer": "BLOWPIPE",
+        "clue": "Uses seeds as ammo",
         "chunks": [
-            "LAV",
-            "AE",
-            "EL"
+            "BLO",
+            "WP",
+            "IPE"
         ],
         "chunkCount": 3
     },
     {
         "id": 838,
-        "answer": "HORNETSLIME",
-        "clue": "Common enemy",
+        "answer": "SANDGUN",
+        "clue": "Only weapon crafted at a furnace",
         "chunks": [
-            "HORN",
-            "ETSL",
-            "IME"
+            "SA",
+            "NDG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 839,
-        "answer": "SPOREORC",
-        "clue": "Hostile creature",
+        "answer": "STARCANNON",
+        "clue": "Uses stars for ammo",
         "chunks": [
-            "SPOR",
-            "EO",
-            "RC"
+            "STA",
+            "RCAN",
+            "NON"
         ],
         "chunkCount": 3
     },
     {
         "id": 840,
-        "answer": "CRIMSONDUCK",
-        "clue": "Hostile creature",
+        "answer": "BLOWGUN",
+        "clue": "Blowpipe's hardmode variant",
         "chunks": [
-            "CRIM",
-            "SOND",
-            "UCK"
+            "BLO",
+            "WG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 841,
         "answer": "LASTPRISM",
-        "clue": "Powerful weapon",
+        "clue": "Fires a lifeform disintegration rainbow",
         "chunks": [
-            "LAST",
-            "PRI",
-            "SM"
+            "LAS",
+            "TPR",
+            "ISM"
         ],
         "chunkCount": 3
     },
@@ -12462,7 +12462,7 @@
     },
     {
         "id": 1161,
-        "answer": "TERRABLADE",
+        "answer": "",
         "clue": "Powerful weapon",
         "chunks": [
             "TERR",
@@ -14288,7 +14288,7 @@
     },
     {
         "id": 1327,
-        "answer": "HELLWINGBOW",
+        "answer": "",
         "clue": "Powerful weapon",
         "chunks": [
             "HELL",
