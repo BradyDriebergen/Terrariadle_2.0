@@ -7342,44 +7342,44 @@
     },
     {
         "id": 696,
-        "answer": "SKELETONZOMBIE",
-        "clue": "Common enemy",
+        "answer": "JACKHAMMER",
+        "clue": "Chlorophyte hammer",
         "chunks": [
-            "SKEL",
-            "ETON",
-            "ZOMB",
-            "IE"
+            "JAC",
+            "KHA",
+            "MM",
+            "ER"
         ],
         "chunkCount": 4
     },
     {
         "id": 697,
-        "answer": "FISHHORNET",
-        "clue": "Common enemy",
+        "answer": "AXEOFREGROWTH",
+        "clue": "Plants sapplings when used",
         "chunks": [
-            "FISH",
-            "HO",
-            "RN",
-            "ET"
+            "AXEO",
+            "FREG",
+            "ROW",
+            "TH"
         ],
         "chunkCount": 4
     },
     {
         "id": 698,
-        "answer": "COPPERGREAVES",
-        "clue": "Armor legpiece",
+        "answer": "DEATHBRINGER",
+        "clue": "Chrimson pickaxe",
         "chunks": [
-            "COPP",
-            "ERGR",
-            "EAV",
-            "ES"
+            "DE",
+            "ATH",
+            "BRIN",
+            "GER"
         ],
         "chunkCount": 4
     },
     {
         "id": 699,
         "answer": "BLOODZOMBIE",
-        "clue": "Common enemy",
+        "clue": "Blood moon enemy",
         "chunks": [
             "BLOO",
             "DZO",
@@ -7390,141 +7390,141 @@
     },
     {
         "id": 700,
-        "answer": "JUNGLEHORNET",
-        "clue": "Common enemy",
+        "answer": "SAWTOOTHSHARK",
+        "clue": "Pre-hardmode chainsaw",
         "chunks": [
-            "JUNG",
-            "LEHO",
-            "RN",
-            "ET"
+            "SA",
+            "WTOO",
+            "THS",
+            "HARK"
         ],
         "chunkCount": 4
     },
     {
         "id": 701,
-        "answer": "PURPLEMUMMY",
-        "clue": "Common enemy",
+        "answer": "TUNGSTEN",
+        "clue": "Crafting metal",
         "chunks": [
-            "PURP",
-            "LEMU",
-            "MMY"
+            "TU",
+            "NGS",
+            "TEN"
         ],
         "chunkCount": 3
     },
     {
         "id": 702,
-        "answer": "SWAMPORC",
-        "clue": "Hostile creature",
+        "answer": "NIGHTMARE",
+        "clue": "Corruption pickaxe",
         "chunks": [
-            "SWAM",
-            "PO",
-            "RC"
+            "NIG",
+            "HTM",
+            "ARE"
         ],
         "chunkCount": 3
     },
     {
         "id": 703,
-        "answer": "OBSIDIANRING",
-        "clue": "Wearable accessory",
+        "answer": "MOLTEN",
+        "clue": "Hellstone pickaxe",
         "chunks": [
-            "OBSI",
-            "DIAN",
-            "RING"
+            "MO",
+            "LT",
+            "EN"
         ],
         "chunkCount": 3
     },
     {
         "id": 704,
-        "answer": "GOBLINDUCK",
-        "clue": "Hostile creature",
+        "answer": "CANDYCANE",
+        "clue": "Christmas pickaxe",
         "chunks": [
-            "GOBL",
-            "INDU",
-            "CK"
+            "CAN",
+            "DYC",
+            "ANE"
         ],
         "chunkCount": 3
     },
     {
         "id": 705,
-        "answer": "DESERTGOBLIN",
-        "clue": "Common enemy",
+        "answer": "ORICHALCUM",
+        "clue": "Hardmode crafting metal",
         "chunks": [
-            "DESE",
-            "RTGO",
-            "BLIN"
+            "ORI",
+            "CHAL",
+            "CUM"
         ],
         "chunkCount": 3
     },
     {
         "id": 706,
-        "answer": "BLOODYKELP",
-        "clue": "Catchable fish",
+        "answer": "PICKAXE",
+        "clue": "Used to break blocks",
         "chunks": [
-            "BLOO",
-            "DYKE",
-            "LP"
+            "PIC",
+            "KA",
+            "XE"
         ],
         "chunkCount": 3
     },
     {
         "id": 707,
-        "answer": "WYVERNGHOST",
-        "clue": "Common enemy",
+        "answer": "HAMAXE",
+        "clue": "Can break trees and walls",
         "chunks": [
-            "WYVE",
-            "RNGH",
-            "OST"
+            "HA",
+            "MA",
+            "XE"
         ],
         "chunkCount": 3
     },
     {
         "id": 708,
-        "answer": "FISHSHARK",
-        "clue": "Common enemy",
+        "answer": "AXEARANG",
+        "clue": "Boomerang that chops trees",
         "chunks": [
-            "FISH",
-            "SHA",
-            "RK"
+            "AX",
+            "EAR",
+            "ANG"
         ],
         "chunkCount": 3
     },
     {
         "id": 709,
-        "answer": "FIERCESNAIL",
-        "clue": "Hostile creature",
+        "answer": "WARAXE",
+        "clue": "Chopping tool",
         "chunks": [
-            "FIER",
-            "CESN",
-            "AIL"
+            "WA",
+            "RA",
+            "XE"
         ],
         "chunkCount": 3
     },
     {
         "id": 710,
-        "answer": "SLIMEFISH",
-        "clue": "Common enemy",
+        "answer": "CHAINSAW",
+        "clue": "Chopping tool",
         "chunks": [
-            "SLIM",
-            "EFI",
-            "SH"
+            "CHA",
+            "INS",
+            "AW"
         ],
         "chunkCount": 3
     },
     {
         "id": 711,
-        "answer": "SHADOWSLIME",
-        "clue": "Hostile creature",
+        "answer": "THEAXE",
+        "clue": "Tribute to Dimebag Darrell",
         "chunks": [
-            "SHAD",
-            "OWSL",
-            "IME"
+            "TH",
+            "EA",
+            "XE"
         ],
         "chunkCount": 3
     },
     {
         "id": 712,
         "answer": "TRUFFLE",
-        "clue": "Friendly npc",
+        "clue": "Edible NPC",
         "chunks": [
             "TRU",
             "FF",
@@ -7534,210 +7534,210 @@
     },
     {
         "id": 713,
-        "answer": "GIANTFISH",
-        "clue": "Common enemy",
+        "answer": "THEBREAKER",
+        "clue": "Corruption hammer",
         "chunks": [
-            "GIAN",
-            "TFI",
-            "SH"
+            "TH",
+            "EBRE",
+            "AKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 714,
-        "answer": "PIRATEFISH",
-        "clue": "Common enemy",
+        "answer": "FLESHGRINDER",
+        "clue": "Crimson hammer",
         "chunks": [
-            "PIRA",
-            "TEFI",
-            "SH"
+            "FLES",
+            "HGRI",
+            "NDER"
         ],
         "chunkCount": 3
     },
     {
         "id": 715,
-        "answer": "ARMOREDGHOST",
-        "clue": "Common enemy",
+        "answer": "ROCKFISH",
+        "clue": "Hammer you fish for",
         "chunks": [
-            "ARMO",
-            "REDG",
-            "HOST"
+            "ROC",
+            "KF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 716,
-        "answer": "WOLFSLIME",
-        "clue": "Hostile creature",
+        "answer": "MAHOGANY",
+        "clue": "Jungle wood",
         "chunks": [
-            "WOLF",
-            "SLI",
-            "ME"
+            "MA",
+            "HOG",
+            "ANY"
         ],
         "chunkCount": 3
     },
     {
         "id": 717,
-        "answer": "BLOODDRAGON",
-        "clue": "Hostile creature",
+        "answer": "HAEMORRHAXE",
+        "clue": "Blood moon hamaxe",
         "chunks": [
-            "BLOO",
-            "DDRA",
-            "GON"
+            "HAE",
+            "MORR",
+            "HAXE"
         ],
         "chunkCount": 3
     },
     {
         "id": 718,
-        "answer": "BONEZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "WRENCH",
+        "clue": "Used to place wire",
         "chunks": [
-            "BONE",
-            "ZOMB",
-            "IE"
+            "WR",
+            "EN",
+            "CH"
         ],
         "chunkCount": 3
     },
     {
         "id": 719,
-        "answer": "SUMMONERRING",
-        "clue": "Wearable accessory",
+        "answer": "CUTTER",
+        "clue": "Used to break wire",
         "chunks": [
-            "SUMM",
-            "ONER",
-            "RING"
+            "CU",
+            "TT",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 720,
-        "answer": "COPPERHAMMER",
-        "clue": "Smashing tool",
+        "answer": "SCRAPER",
+        "clue": "Used to remove paint",
         "chunks": [
-            "COPP",
-            "ERHA",
-            "MMER"
+            "SCR",
+            "AP",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 721,
-        "answer": "CURSEDHORNET",
-        "clue": "Common enemy",
+        "answer": "SPECTRE",
+        "clue": "Pre-moonlord mage set",
         "chunks": [
-            "CURS",
-            "EDHO",
-            "RNET"
+            "SP",
+            "ECT",
+            "RE"
         ],
         "chunkCount": 3
     },
     {
         "id": 722,
-        "answer": "HORNETWYVERN",
-        "clue": "Common enemy",
+        "answer": "WEBSLINGER",
+        "clue": "Spiderman",
         "chunks": [
-            "HORN",
-            "ETWY",
-            "VERN"
+            "WEBS",
+            "LIN",
+            "GER"
         ],
         "chunkCount": 3
     },
     {
         "id": 723,
-        "answer": "HONEYPIKE",
-        "clue": "Catchable fish",
+        "answer": "IVYWHIP",
+        "clue": "One of the first hooks",
         "chunks": [
-            "HONE",
-            "YPI",
-            "KE"
+            "IV",
+            "YW",
+            "HIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 724,
-        "answer": "RUBYSTAFF",
-        "clue": "Gem magic staff",
+        "answer": "AMETHYST",
+        "clue": "Purple gem",
         "chunks": [
-            "RUBY",
-            "STA",
-            "FF"
+            "AME",
+            "THY",
+            "ST"
         ],
         "chunkCount": 3
     },
     {
         "id": 725,
         "answer": "BONEWINGS",
-        "clue": "Allows flight",
+        "clue": "Wings obtained from armored bones",
         "chunks": [
-            "BONE",
-            "WIN",
+            "BON",
+            "EWIN",
             "GS"
         ],
         "chunkCount": 3
     },
     {
         "id": 726,
-        "answer": "CRIMSONMUMMY",
-        "clue": "Hostile creature",
+        "answer": "SAPPHIRE",
+        "clue": "Blue gem",
         "chunks": [
-            "CRIM",
-            "SONM",
-            "UMMY"
+            "SAP",
+            "PH",
+            "IRE"
         ],
         "chunkCount": 3
     },
     {
         "id": 727,
-        "answer": "SHARKPIRATE",
-        "clue": "Common enemy",
+        "answer": "EMERALD",
+        "clue": "Green gem",
         "chunks": [
-            "SHAR",
-            "KPIR",
-            "ATE"
+            "EM",
+            "ERA",
+            "LD"
         ],
         "chunkCount": 3
     },
     {
         "id": 728,
-        "answer": "ICEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "DIAMOND",
+        "clue": "White gem",
         "chunks": [
-            "ICED",
-            "RAG",
-            "ON"
+            "DIA",
+            "MO",
+            "ND"
         ],
         "chunkCount": 3
     },
     {
         "id": 729,
-        "answer": "ICESPIDER",
-        "clue": "Hostile creature",
+        "answer": "ANTIGRAVITY",
+        "clue": "Hook allowing movement",
         "chunks": [
-            "ICES",
-            "PID",
-            "ER"
+            "ANTI",
+            "GRAV",
+            "ITY"
         ],
         "chunkCount": 3
     },
     {
         "id": 730,
-        "answer": "FROSTDUCK",
-        "clue": "Hostile creature",
+        "answer": "DISSONANCE",
+        "clue": "Hook that teleports player",
         "chunks": [
-            "FROS",
-            "TDU",
-            "CK"
+            "DIS",
+            "SON",
+            "ANCE"
         ],
         "chunkCount": 3
     },
     {
         "id": 731,
-        "answer": "NINJACHARM",
-        "clue": "Wearable accessory",
+        "answer": "NINJAGEAR",
+        "clue": "Shinobi accessory",
         "chunks": [
-            "NINJ",
-            "ACHA",
-            "RM"
+            "NIN",
+            "JAG",
+            "EAR"
         ],
         "chunkCount": 3
     },
