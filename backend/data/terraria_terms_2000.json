@@ -8953,52 +8953,52 @@
     },
     {
         "id": 842,
-        "answer": "BUNNYKELP",
-        "clue": "Catchable fish",
+        "answer": "DARTPISTOL",
+        "clue": "Chrimson mimic range weapon",
         "chunks": [
-            "BUNN",
-            "YKE",
-            "LP"
+            "DAR",
+            "TPI",
+            "STOL"
         ],
         "chunkCount": 3
     },
     {
         "id": 843,
-        "answer": "RABIDPIRATE",
-        "clue": "Hostile creature",
+        "answer": "DARTRIFLE",
+        "clue": "Corruption mimic range weapon",
         "chunks": [
-            "RABI",
-            "DPIR",
-            "ATE"
+            "DA",
+            "RTR",
+            "IFLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 844,
-        "answer": "DEMONDEMON",
-        "clue": "Hostile creature",
+        "answer": "COINGUN",
+        "clue": "Only weapon with 0 base damage",
         "chunks": [
-            "DEMO",
-            "NDEM",
-            "ON"
+            "CO",
+            "ING",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 845,
-        "answer": "NEONSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "FLAMETHROWER",
+        "clue": "Uses gel for ammo",
         "chunks": [
-            "NEON",
-            "SNAP",
-            "PER"
+            "FLAM",
+            "ETHR",
+            "OWER"
         ],
         "chunkCount": 3
     },
     {
         "id": 846,
-        "answer": "MECHANICSROD",
-        "clue": "Fishing related",
+        "answer": "PIRANHAGUN",
+        "clue": "",
         "chunks": [
             "MECH",
             "ANIC",
