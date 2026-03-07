@@ -9250,283 +9250,283 @@
     },
     {
         "id": 869,
-        "answer": "CORRUPTANT",
-        "clue": "Hostile creature",
+        "answer": "WATERBOLT",
+        "clue": "First tome in the game",
         "chunks": [
-            "CORR",
-            "UPTA",
-            "NT"
+            "WAT",
+            "ERB",
+            "OLT"
         ],
         "chunkCount": 3
     },
     {
         "id": 870,
-        "answer": "JUNGLEWYVERN",
-        "clue": "Common enemy",
+        "answer": "LUNARFLARE",
+        "clue": "Post Moon Lord tome",
         "chunks": [
-            "JUNG",
-            "LEWY",
-            "VERN"
+            "LUN",
+            "ARF",
+            "LARE"
         ],
         "chunkCount": 3
     },
     {
         "id": 871,
-        "answer": "GOLDSKELETON",
-        "clue": "Hostile creature",
+        "answer": "CHRIMSONROD",
+        "clue": "Summons a blood rain cloud",
         "chunks": [
-            "GOLD",
-            "SKEL",
-            "ETON"
+            "CHRI",
+            "MSO",
+            "NROD"
         ],
         "chunkCount": 3
     },
     {
         "id": 872,
-        "answer": "CAVESNAIL",
-        "clue": "Hostile creature",
+        "answer": "KILLINGDECK",
+        "clue": "A Dead Man's Hand for your opponents",
         "chunks": [
-            "CAVE",
-            "SNA",
-            "IL"
+            "KIL",
+            "LING",
+            "DECK"
         ],
         "chunkCount": 3
     },
     {
         "id": 873,
-        "answer": "BLOODJELLY",
-        "clue": "Hostile creature",
+        "answer": "NIMBUSROD",
+        "clue": "Summons a rain cloud",
         "chunks": [
-            "BLOO",
-            "DJEL",
-            "LY"
+            "NIMB",
+            "USR",
+            "OD"
         ],
         "chunkCount": 3
     },
     {
         "id": 874,
-        "answer": "SWAMPSLIME",
-        "clue": "Hostile creature",
+        "answer": "SPIRITFLAME",
+        "clue": "Summons homing purple flames",
         "chunks": [
-            "SWAM",
-            "PSLI",
-            "ME"
+            "SPIR",
+            "ITFL",
+            "AME"
         ],
         "chunkCount": 3
     },
     {
         "id": 875,
-        "answer": "BLOODSHARK",
-        "clue": "Common enemy",
+        "answer": "BLOODTHORN",
+        "clue": "Blood moon magic weapon",
         "chunks": [
             "BLOO",
-            "DSHA",
-            "RK"
+            "DTH",
+            "ORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 876,
-        "answer": "GOLDCULTIST",
-        "clue": "Hostile creature",
+        "answer": "TOXICFLASK",
+        "clue": "Thrown and explodes into a toxic cloud",
         "chunks": [
-            "GOLD",
-            "CULT",
-            "IST"
+            "TOX",
+            "ICF",
+            "LASK"
         ],
         "chunkCount": 3
     },
     {
         "id": 877,
-        "answer": "FROSTMUMMY",
-        "clue": "Common enemy",
+        "answer": "NIGHTGLOW",
+        "clue": "Mimics the Empress of Light's prismatic bolts",
         "chunks": [
-            "FROS",
-            "TMUM",
-            "MY"
+            "NIG",
+            "HTB",
+            "OLT"
         ],
         "chunkCount": 3
     },
     {
         "id": 878,
-        "answer": "DOGCARP",
-        "clue": "Catchable fish",
+        "answer": "STELLARTUNE",
+        "clue": "These chords are out of this world",
         "chunks": [
-            "DOG",
-            "CA",
-            "RP"
+            "STEL",
+            "LART",
+            "UNE"
         ],
         "chunkCount": 3
     },
     {
         "id": 879,
-        "answer": "ICEPIRATE",
-        "clue": "Common enemy",
+        "answer": "CATTIVA",
+        "clue": "Little buddy that mines and fights for you",
         "chunks": [
-            "ICEP",
-            "IRA",
-            "TE"
+            "CA",
+            "TTI",
+            "VA"
         ],
         "chunkCount": 3
     },
     {
         "id": 880,
-        "answer": "OASISBASS",
-        "clue": "Catchable fish",
+        "answer": "FOXPARKS",
+        "clue": "Also doubles as a flame thrower",
         "chunks": [
-            "OASI",
-            "SBA",
-            "SS"
+            "FO",
+            "XPA",
+            "RKS"
         ],
         "chunkCount": 3
     },
     {
         "id": 881,
-        "answer": "BONESNAPPER",
-        "clue": "Catchable fish",
+        "answer": "ABIGAIL",
+        "clue": "Friendly ghost",
         "chunks": [
-            "BONE",
-            "SNAP",
-            "PER"
+            "AB",
+            "IGA",
+            "IL"
         ],
         "chunkCount": 3
     },
     {
         "id": 882,
-        "answer": "JUNGLESHARK",
-        "clue": "Common enemy",
+        "answer": "BLADESTAFF",
+        "clue": "Summons enchanted daggers",
         "chunks": [
-            "JUNG",
-            "LESH",
-            "ARK"
+            "BLA",
+            "DEST",
+            "AFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 883,
-        "answer": "GREENWYVERN",
-        "clue": "Common enemy",
+        "answer": "OPTICSTAFF",
+        "clue": "Summons mini twins to fight for you",
         "chunks": [
-            "GREE",
-            "NWYV",
-            "ERN"
+            "OPT",
+            "ICS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 884,
-        "answer": "HONEYGLOVE",
-        "clue": "Wearable accessory",
+        "answer": "XENOSTAFF",
+        "clue": "Summons mini UFOs to fight for you",
         "chunks": [
-            "HONE",
-            "YGLO",
-            "VE"
+            "XE",
+            "NOS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 885,
-        "answer": "FISHZOMBIE",
-        "clue": "Common enemy",
+        "answer": "BALLISTA",
+        "clue": "Crossbow sentry",
         "chunks": [
-            "FISH",
-            "ZOMB",
-            "IE"
+            "BA",
+            "LLI",
+            "STA"
         ],
         "chunkCount": 3
     },
     {
         "id": 886,
-        "answer": "JUNGLESALMON",
-        "clue": "Catchable fish",
+        "answer": "FLAMEBURST",
+        "clue": "Fireball sentry",
         "chunks": [
-            "JUNG",
-            "LESA",
-            "LMON"
+            "FLA",
+            "MEBU",
+            "RST"
         ],
         "chunkCount": 3
     },
     {
         "id": 887,
-        "answer": "LAVABOOTS",
-        "clue": "Wearable accessory",
+        "answer": "SLIMEWHIP",
+        "clue": "Whip that ignites enemies",
         "chunks": [
-            "LAVA",
-            "BOO",
-            "TS"
+            "SLI",
+            "MEW",
+            "HIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 888,
-        "answer": "CORRUPTIMP",
-        "clue": "Hostile creature",
+        "answer": "LEATHERWHIP",
+        "clue": "Only buyable whip",
         "chunks": [
-            "CORR",
-            "UPTI",
-            "MP"
+            "LEAT",
+            "HERW",
+            "HIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 889,
-        "answer": "SILVERDUCK",
-        "clue": "Hostile creature",
+        "answer": "SOULSCOURGE",
+        "clue": "Lash with the remnants of evil incarnate'",
         "chunks": [
-            "SILV",
-            "ERDU",
-            "CK"
+            "SOU",
+            "LSCO",
+            "URGE"
         ],
         "chunkCount": 3
     },
     {
         "id": 890,
-        "answer": "WIZARDHAT",
-        "clue": "Headgear hat",
+        "answer": "VASCULASH",
+        "clue": "Arteries, veins, and sinew!",
         "chunks": [
-            "WIZA",
-            "RDH",
-            "AT"
+            "VAS",
+            "CUL",
+            "ASH"
         ],
         "chunkCount": 3
     },
     {
         "id": 891,
-        "answer": "LAVAMUMMY",
-        "clue": "Common enemy",
+        "answer": "STARCRASH",
+        "clue": "Whip that summons meteorites",
         "chunks": [
-            "LAVA",
-            "MUM",
-            "MY"
+            "STA",
+            "RCR",
+            "ASH"
         ],
         "chunkCount": 3
     },
     {
         "id": 892,
-        "answer": "LAVAGOBLIN",
-        "clue": "Common enemy",
+        "answer": "SNAPTHORN",
+        "clue": "Not to be confused with the thorn hook",
         "chunks": [
-            "LAVA",
-            "GOBL",
-            "IN"
+            "SNA",
+            "PTH",
+            "ORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 893,
-        "answer": "SLIMEGOBLIN",
-        "clue": "Common enemy",
+        "answer": "SPINALTAP",
+        "clue": "Best pre-hardmode whip",
         "chunks": [
-            "SLIM",
-            "EGOB",
-            "LIN"
+            "SPI",
+            "NAL",
+            "TAP"
         ],
         "chunkCount": 3
     },
     {
         "id": 894,
         "answer": "MURAMASA",
-        "clue": "Powerful weapon",
+        "clue": "Nights edge component",
         "chunks": [
             "MURA",
             "MA",
@@ -9536,85 +9536,85 @@
     },
     {
         "id": 895,
-        "answer": "CORRUPTJELLY",
-        "clue": "Hostile creature",
+        "answer": "FIRECRACKER",
+        "clue": "Whip causing a small explosion on hit",
         "chunks": [
-            "CORR",
-            "UPTJ",
-            "ELLY"
+            "FIR",
+            "ECRA",
+            "CKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 896,
-        "answer": "BLACKFROG",
-        "clue": "Hostile creature",
+        "answer": "COOLWHIP",
+        "clue": "\"Let me have some of that\"",
         "chunks": [
-            "BLAC",
-            "KFR",
-            "OG"
+            "COO",
+            "LW",
+            "HIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 897,
-        "answer": "CATSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "DURENDAL",
+        "clue": "Wielded by paladin Roland of Charlemagne court",
         "chunks": [
-            "CATS",
-            "HRI",
-            "MP"
+            "DU",
+            "REN",
+            "DAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 898,
-        "answer": "METEORARMOR",
-        "clue": "Armor set",
+        "answer": "DARKHARVEST",
+        "clue": "Gives 'Harvest Time' buff",
         "chunks": [
-            "METE",
-            "ORAR",
-            "MOR"
+            "DAR",
+            "KHAR",
+            "VEST"
         ],
         "chunkCount": 3
     },
     {
         "id": 899,
-        "answer": "TOXICGHOST",
-        "clue": "Hostile creature",
+        "answer": "MORNINGSTAR",
+        "clue": "Based on the vampire killer whip",
         "chunks": [
-            "TOXI",
-            "CGHO",
-            "ST"
+            "MORN",
+            "INGS",
+            "TAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 900,
-        "answer": "BLACKSPIDER",
-        "clue": "Hostile creature",
+        "answer": "ELECTRICEEL",
+        "clue": "Like trying to hold an eel",
         "chunks": [
-            "BLAC",
-            "KSPI",
-            "DER"
+            "ELE",
+            "CTRI",
+            "CEEL"
         ],
         "chunkCount": 3
     },
     {
         "id": 901,
-        "answer": "BUNNYCARP",
-        "clue": "Catchable fish",
+        "answer": "POSSESSION",
+        "clue": "8 whips in one!",
         "chunks": [
-            "BUNN",
-            "YCA",
-            "RP"
+            "POS",
+            "SESS",
+            "ION"
         ],
         "chunkCount": 3
     },
     {
         "id": 902,
         "answer": "MEGASHARK",
-        "clue": "Powerful weapon",
+        "clue": "Upgraded mini shark",
         "chunks": [
             "MEGA",
             "SHA",
@@ -9624,30 +9624,30 @@
     },
     {
         "id": 903,
-        "answer": "SHARKBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "LANDMINE",
+        "clue": "Placable, explosive trap",
         "chunks": [
-            "SHAR",
-            "KBOO",
-            "TS"
+            "LA",
+            "NDM",
+            "INE"
         ],
         "chunkCount": 3
     },
     {
         "id": 904,
-        "answer": "MARTIANGHOST",
-        "clue": "Hostile creature",
+        "answer": "SCARAB",
+        "clue": "Bomb that blows up in a straight line",
         "chunks": [
-            "MART",
-            "IANG",
-            "HOST"
+            "SC",
+            "AR",
+            "AB"
         ],
         "chunkCount": 3
     },
     {
         "id": 905,
         "answer": "BANANARANG",
-        "clue": "Powerful weapon",
+        "clue": "Monkeys favorite weapon",
         "chunks": [
             "BANA",
             "NARA",
@@ -9657,45 +9657,45 @@
     },
     {
         "id": 906,
-        "answer": "BONESHRIMP",
-        "clue": "Catchable fish",
+        "answer": "DYNAMITE",
+        "clue": "\"We gon light it up, like its ...\"",
         "chunks": [
-            "BONE",
-            "SHRI",
-            "MP"
+            "DYN",
+            "AM",
+            "ITE"
         ],
         "chunkCount": 3
     },
     {
         "id": 907,
-        "answer": "CRYSTALCRAB",
-        "clue": "Catchable fish",
+        "answer": "POWERBOMB",
+        "clue": "Non-pickaxe item that can break hardmode ores",
         "chunks": [
-            "CRYS",
-            "TALC",
-            "RAB"
+            "POW",
+            "ERB",
+            "OMB"
         ],
         "chunkCount": 3
     },
     {
         "id": 908,
-        "answer": "MIRRORCARP",
-        "clue": "Catchable fish",
+        "answer": "BOMBFISH",
+        "clue": "Explosive sea creature",
         "chunks": [
-            "MIRR",
-            "ORCA",
-            "RP"
+            "BOM",
+            "BFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 909,
-        "answer": "CORRUPTBIRD",
-        "clue": "Hostile creature",
+        "answer": "DRYBOMB",
+        "clue": "Removes an area of liquid",
         "chunks": [
-            "CORR",
-            "UPTB",
-            "IRD"
+            "DR",
+            "YB",
+            "OMB"
         ],
         "chunkCount": 3
     },
