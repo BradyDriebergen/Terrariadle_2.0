@@ -8998,29 +8998,29 @@
     {
         "id": 846,
         "answer": "PIRANHAGUN",
-        "clue": "",
+        "clue": "\"Oh yes! Fires live piranhas!\"",
         "chunks": [
-            "MECH",
-            "ANIC",
-            "SROD"
+            "PIRA",
+            "NHAG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 847,
-        "answer": "SPECCATFISH",
-        "clue": "Catchable fish",
+        "answer": "ELFMELTER",
+        "clue": "Christmas themed flame thrower",
         "chunks": [
-            "SPEC",
-            "CATF",
-            "ISH"
+            "EL",
+            "FMEL",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 848,
-        "answer": "STINKSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "VILETHORN",
+        "clue": "Summons a vile thorn",
         "chunks": [
             "STIN",
             "KSNA",
@@ -9030,30 +9030,30 @@
     },
     {
         "id": 849,
-        "answer": "SHADOWCRAB",
-        "clue": "Hostile creature",
+        "answer": "MAGICMISSILE",
+        "clue": "Casts a controllable missile",
         "chunks": [
-            "SHAD",
-            "OWCR",
-            "AB"
+            "MAGI",
+            "CMIS",
+            "SILE"
         ],
         "chunkCount": 3
     },
     {
         "id": 850,
-        "answer": "NINJACLOAK",
-        "clue": "Wearable accessory",
+        "answer": "AQUASCEPTER",
+        "clue": "Magic powered pressure washer",
         "chunks": [
-            "NINJ",
-            "ACLO",
-            "AK"
+            "AQU",
+            "ASCE",
+            "PTER"
         ],
         "chunkCount": 3
     },
     {
         "id": 851,
         "answer": "SKELETRON",
-        "clue": "Major boss",
+        "clue": "Their head defends the dungeon",
         "chunks": [
             "SKEL",
             "ETR",
@@ -9063,140 +9063,140 @@
     },
     {
         "id": 852,
-        "answer": "HORNETDEMON",
-        "clue": "Common enemy",
+        "answer": "FLAMELASH",
+        "clue": "Upgrade from the Magic Missile",
         "chunks": [
-            "HORN",
-            "ETDE",
-            "MON"
+            "FLA",
+            "MEL",
+            "ASH"
         ],
         "chunkCount": 3
     },
     {
         "id": 853,
-        "answer": "FLESHJELLY",
-        "clue": "Hostile creature",
+        "answer": "SKYFRACTURE",
+        "clue": "Fires a burst of magical swords",
         "chunks": [
-            "FLES",
-            "HJEL",
-            "LY"
+            "SKY",
+            "FRAC",
+            "TURE"
         ],
         "chunkCount": 3
     },
     {
         "id": 854,
-        "answer": "FIERCEGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "FROSTSTAFF",
+        "clue": "Hardmode, gem staff type weapon",
         "chunks": [
-            "FIER",
-            "CEGO",
-            "BLIN"
+            "FRO",
+            "STS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 855,
-        "answer": "STINKPIKE",
-        "clue": "Catchable fish",
+        "answer": "LIFEDRAIN",
+        "clue": "Weapon that grants life regen",
         "chunks": [
-            "STIN",
-            "KPI",
-            "KE"
+            "LIF",
+            "ED",
+            "RAIN"
         ],
         "chunkCount": 3
     },
     {
         "id": 856,
-        "answer": "ARMOREDSHARK",
-        "clue": "Common enemy",
+        "answer": "RAINBOWROD",
+        "clue": "Casts a controllable rainbow",
         "chunks": [
-            "ARMO",
-            "REDS",
-            "HARK"
+            "RAI",
+            "NBO",
+            "WROD"
         ],
         "chunkCount": 3
     },
     {
         "id": 857,
-        "answer": "GLOWINGSNAIL",
-        "clue": "Catchable critter",
+        "answer": "VENOMSTAFF",
+        "clue": "Upgraded poison staff",
         "chunks": [
-            "GLOW",
-            "INGS",
-            "NAIL"
+            "VEN",
+            "OMST",
+            "AFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 858,
-        "answer": "BLOODYTROUT",
-        "clue": "Catchable fish",
+        "answer": "BATSCEPTER",
+        "clue": "Bee gun, but with bats",
         "chunks": [
-            "BLOO",
-            "DYTR",
-            "OUT"
+            "BAT",
+            "SCEP",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 859,
-        "answer": "PIRATESPIDER",
-        "clue": "Hostile creature",
+        "answer": "RAZORPINE",
+        "clue": "Shoots razor sharp pine needles",
         "chunks": [
-            "PIRA",
-            "TESP",
-            "IDER"
+            "RAZ",
+            "ORP",
+            "INE"
         ],
         "chunkCount": 3
     },
     {
         "id": 860,
-        "answer": "WOLFGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "BETSYSWRATH",
+        "clue": "Splashes defense reducing miasma!",
         "chunks": [
-            "WOLF",
-            "GOBL",
-            "IN"
+            "BETS",
+            "YSW",
+            "RATH"
         ],
         "chunkCount": 3
     },
     {
         "id": 861,
-        "answer": "SHARKWYVERN",
-        "clue": "Common enemy",
+        "answer": "ZAPINATOR",
+        "clue": "It might be broken",
         "chunks": [
-            "SHAR",
-            "KWYV",
-            "ERN"
+            "ZA",
+            "PINA",
+            "TOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 862,
-        "answer": "SHADOWCARP",
-        "clue": "Catchable fish",
+        "answer": "LASERRIFLE",
+        "clue": "Upgrade from the Space Gun",
         "chunks": [
-            "SHAD",
-            "OWCA",
-            "RP"
+            "LASE",
+            "RR",
+            "IFLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 863,
-        "answer": "RABIDBIRD",
-        "clue": "Hostile creature",
+        "answer": "WASPGUN",
+        "clue": "Bee gun, but better",
         "chunks": [
-            "RABI",
-            "DBI",
-            "RD"
+            "WAS",
+            "PG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 864,
         "answer": "FROSTLEGION",
-        "clue": "World event",
+        "clue": "Gangsta snowmen event",
         "chunks": [
             "FROS",
             "TLEG",
@@ -9206,45 +9206,45 @@
     },
     {
         "id": 865,
-        "answer": "BLACKWYVERN",
-        "clue": "Common enemy",
+        "answer": "LEAFBLOWER",
+        "clue": "Lawn care weapon",
         "chunks": [
-            "BLAC",
-            "KWYV",
-            "ERN"
+            "LEA",
+            "FBLO",
+            "WER"
         ],
         "chunkCount": 3
     },
     {
         "id": 866,
-        "answer": "GREENSNAIL",
-        "clue": "Hostile creature",
+        "answer": "RAINBOWGUN",
+        "clue": "\"TASTE THE RAINBOW MOTHER F***\"",
         "chunks": [
-            "GREE",
-            "NSNA",
-            "IL"
+            "RAI",
+            "NBOW",
+            "GUN"
         ],
         "chunkCount": 3
     },
     {
         "id": 867,
-        "answer": "CRIMSONFROG",
-        "clue": "Hostile creature",
+        "answer": "HEATRAY",
+        "clue": "Shoots a scorching ray of heat 'Oolaa!!'",
         "chunks": [
-            "CRIM",
-            "SONF",
-            "ROG"
+            "HE",
+            "ATR",
+            "AY"
         ],
         "chunkCount": 3
     },
     {
         "id": 868,
-        "answer": "BLACKCRAB",
-        "clue": "Common enemy",
+        "answer": "BUBBLEGUN",
+        "clue": "Shoots homing bubbles",
         "chunks": [
-            "BLAC",
-            "KCR",
-            "AB"
+            "BUB",
+            "BLEG",
+            "UN"
         ],
         "chunkCount": 3
     },
