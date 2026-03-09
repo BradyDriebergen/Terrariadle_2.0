@@ -9701,140 +9701,140 @@
     },
     {
         "id": 910,
-        "answer": "BUNNYTROUT",
-        "clue": "Catchable fish",
+        "answer": "HOLYWATER",
+        "clue": "Weapon that spreads hallow",
         "chunks": [
-            "BUNN",
-            "YTRO",
-            "UT"
+            "HO",
+            "LYWA",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 911,
-        "answer": "SPIKYOGRE",
-        "clue": "Hostile creature",
+        "answer": "UNHOLYWATER",
+        "clue": "Weapon that spreads corruption",
         "chunks": [
-            "SPIK",
-            "YOG",
-            "RE"
+            "UNH",
+            "OLYW",
+            "ATER"
         ],
         "chunkCount": 3
     },
     {
         "id": 912,
-        "answer": "HELLPIRATE",
-        "clue": "Hostile creature",
+        "answer": "BLOODWATER",
+        "clue": "Weapon that spreads crimson",
         "chunks": [
-            "HELL",
-            "PIRA",
-            "TE"
+            "BLOO",
+            "DWA",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 913,
-        "answer": "BLUEPIRATE",
-        "clue": "Common enemy",
+        "answer": "PRETTYMIRROR",
+        "clue": "Throwing weapon that decreases luck",
         "chunks": [
-            "BLUE",
-            "PIRA",
-            "TE"
+            "PRET",
+            "TYMI",
+            "RROR"
         ],
         "chunkCount": 3
     },
     {
         "id": 914,
-        "answer": "STARGLOVE",
-        "clue": "Wearable accessory",
+        "answer": "MUDBALL",
+        "clue": "Jungle snowball, so to speak",
         "chunks": [
-            "STAR",
-            "GLO",
-            "VE"
+            "MU",
+            "DBA",
+            "LL"
         ],
         "chunkCount": 3
     },
     {
         "id": 915,
-        "answer": "ATLANTICFISH",
-        "clue": "Catchable fish",
+        "answer": "MUSKETBALL",
+        "clue": "Default ammo for guns",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "FISH"
+            "MUS",
+            "KETB",
+            "ALL"
         ],
         "chunkCount": 3
     },
     {
         "id": 916,
-        "answer": "PIRATEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "METEORSHOT",
+        "clue": "Bouncy bullet",
         "chunks": [
-            "PIRA",
-            "TEDR",
-            "AGON"
+            "METE",
+            "ORS",
+            "HOT"
         ],
         "chunkCount": 3
     },
     {
         "id": 917,
-        "answer": "JUNGLEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "NANOBULLET",
+        "clue": "Ammo that causes confusion",
         "chunks": [
-            "JUNG",
-            "LEDR",
-            "AGON"
+            "NAN",
+            "OBUL",
+            "LET"
         ],
         "chunkCount": 3
     },
     {
         "id": 918,
-        "answer": "SPIKYBEE",
-        "clue": "Hostile creature",
+        "answer": "HOLYARROW",
+        "clue": "Ammo that rains stars from above",
         "chunks": [
-            "SPIK",
-            "YB",
-            "EE"
+            "HO",
+            "LYAR",
+            "ROW"
         ],
         "chunkCount": 3
     },
     {
         "id": 919,
-        "answer": "FLESHSLIME",
-        "clue": "Hostile creature",
+        "answer": "FOSSIL",
+        "clue": "Ranger armor set aquired from the extratinator",
         "chunks": [
-            "FLES",
-            "HSLI",
-            "ME"
+            "FO",
+            "SS",
+            "IL"
         ],
         "chunkCount": 3
     },
     {
         "id": 920,
-        "answer": "WOLFMUMMY",
-        "clue": "Hostile creature",
+        "answer": "OBSIDIAN",
+        "clue": "Best pre-hardmode summoner armor set",
         "chunks": [
-            "WOLF",
-            "MUM",
-            "MY"
+            "OBS",
+            "ID",
+            "IAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 921,
-        "answer": "SONARPOTION",
-        "clue": "Fishing related",
+        "answer": "GLADIATOR",
+        "clue": "Armor set dropped by hoplites",
         "chunks": [
-            "SONA",
-            "RPOT",
-            "ION"
+            "GLA",
+            "DIA",
+            "TOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 922,
         "answer": "DEMONIC",
-        "clue": "Item modifier",
+        "clue": "Best universal modifier",
         "chunks": [
             "DEM",
             "ON",
@@ -9844,63 +9844,63 @@
     },
     {
         "id": 923,
-        "answer": "SHINEPOTION",
-        "clue": "Drinkable potion",
+        "answer": "METEOR",
+        "clue": "Space gun armor set",
         "chunks": [
-            "SHIN",
-            "EPOT",
-            "ION"
+            "ME",
+            "TE",
+            "OR"
         ],
         "chunkCount": 3
     },
     {
         "id": 924,
-        "answer": "WYVERNSHARK",
-        "clue": "Common enemy",
+        "answer": "METEORITE",
+        "clue": "Out of this world mini-biome",
         "chunks": [
-            "WYVE",
-            "RNSH",
-            "ARK"
+            "MET",
+            "EOR",
+            "ITE"
         ],
         "chunkCount": 3
     },
     {
         "id": 925,
-        "answer": "SHADOWSPIDER",
-        "clue": "Hostile creature",
+        "answer": "SHADOW",
+        "clue": "Corruption armor set",
         "chunks": [
-            "SHAD",
-            "OWSP",
-            "IDER"
+            "SH",
+            "AD",
+            "OW"
         ],
         "chunkCount": 3
     },
     {
         "id": 926,
-        "answer": "GOLDWRAITH",
-        "clue": "Hostile creature",
+        "answer": "PROSPECTOR",
+        "clue": "Hardmode mining set",
         "chunks": [
-            "GOLD",
-            "WRAI",
-            "TH"
+            "PRO",
+            "SPE",
+            "CTOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 927,
-        "answer": "SILVERHELMET",
-        "clue": "Armor headpiece",
+        "answer": "CAPTAIN",
+        "clue": "Hardmode fishing set",
         "chunks": [
-            "SILV",
-            "ERHE",
-            "LMET"
+            "CA",
+            "PTA",
+            "IN"
         ],
         "chunkCount": 3
     },
     {
         "id": 928,
-        "answer": "SHADOWOGRE",
-        "clue": "Hostile creature",
+        "answer": "FORBIDDEN",
+        "clue": "Armor set aquired from sand elementals",
         "chunks": [
             "SHAD",
             "OWOG",
@@ -9910,338 +9910,338 @@
     },
     {
         "id": 929,
-        "answer": "TURTLEWINGS",
-        "clue": "Allows flight",
+        "answer": "SQUIRE",
+        "clue": "Old one's army event armor set",
         "chunks": [
-            "TURT",
-            "LEWI",
-            "NGS"
+            "SQ",
+            "UI",
+            "RE"
         ],
         "chunkCount": 3
     },
     {
         "id": 930,
-        "answer": "STINKKELP",
-        "clue": "Catchable fish",
+        "answer": "HUNTRESS",
+        "clue": "Old one's army event armor set",
         "chunks": [
-            "STIN",
-            "KKE",
-            "LP"
+            "HUN",
+            "TRE",
+            "SS"
         ],
         "chunkCount": 3
     },
     {
         "id": 931,
-        "answer": "HELLSLIME",
-        "clue": "Hostile creature",
+        "answer": "APPRENTICE",
+        "clue": "Old one's army event armor set",
         "chunks": [
-            "HELL",
-            "SLI",
-            "ME"
+            "APP",
+            "RENT",
+            "ICE"
         ],
         "chunkCount": 3
     },
     {
         "id": 932,
-        "answer": "BLACKWRAITH",
-        "clue": "Common enemy",
+        "answer": "HALLOWED",
+        "clue": "Armor set that grants a dodge",
         "chunks": [
-            "BLAC",
-            "KWRA",
-            "ITH"
+            "HA",
+            "LLO",
+            "WED"
         ],
         "chunkCount": 3
     },
     {
         "id": 933,
-        "answer": "MANABOOTS",
-        "clue": "Wearable accessory",
+        "answer": "BEETLE",
+        "clue": "Post-Golem armor set",
         "chunks": [
-            "MANA",
-            "BOO",
-            "TS"
+            "BE",
+            "ET",
+            "LE"
         ],
         "chunkCount": 3
     },
     {
         "id": 934,
-        "answer": "HALLOWEDFROG",
-        "clue": "Hostile creature",
+        "answer": "SHROOMITE",
+        "clue": "Armor set that makes you invisible",
         "chunks": [
-            "HALL",
-            "OWED",
-            "FROG"
+            "SHR",
+            "OOM",
+            "ITE"
         ],
         "chunkCount": 3
     },
     {
         "id": 935,
-        "answer": "LEADSWORD",
-        "clue": "Melee weapon",
+        "answer": "REDRIDING",
+        "clue": "Old one's army event armor set",
         "chunks": [
-            "LEAD",
-            "SWO",
-            "RD"
+            "RE",
+            "DRI",
+            "DING"
         ],
         "chunkCount": 3
     },
     {
         "id": 936,
-        "answer": "BLOODSNAIL",
-        "clue": "Hostile creature",
+        "answer": "DARKARTIST",
+        "clue": "Old one's army event armor set",
         "chunks": [
-            "BLOO",
-            "DSNA",
-            "IL"
+            "DAR",
+            "KART",
+            "IST"
         ],
         "chunkCount": 3
     },
     {
         "id": 937,
-        "answer": "BLUESKELETON",
-        "clue": "Common enemy",
+        "answer": "SOLARFLARE",
+        "clue": "Endgame melee armor set",
         "chunks": [
-            "BLUE",
-            "SKEL",
-            "ETON"
+            "SOL",
+            "ARF",
+            "LARE"
         ],
         "chunkCount": 3
     },
     {
         "id": 938,
-        "answer": "CALMPOTION",
-        "clue": "Drinkable potion",
+        "answer": "MAGICHAT",
+        "clue": "Mage hat sold by the traveling merchant",
         "chunks": [
-            "CALM",
-            "POTI",
-            "ON"
+            "MAG",
+            "ICH",
+            "AT"
         ],
         "chunkCount": 3
     },
     {
         "id": 939,
-        "answer": "CAVESKELETON",
-        "clue": "Hostile creature",
+        "answer": "WIZARDHAT",
+        "clue": "Mage hat dropped by Tim",
         "chunks": [
-            "CAVE",
-            "SKEL",
-            "ETON"
+            "WIZ",
+            "ARDH",
+            "AT"
         ],
         "chunkCount": 3
     },
     {
         "id": 940,
-        "answer": "BEEWRAITH",
-        "clue": "Common enemy",
+        "answer": "MYSTICROBE",
+        "clue": "Mage armor sold by the traveling merchant",
         "chunks": [
-            "BEEW",
-            "RAI",
-            "TH"
+            "MYS",
+            "TICR",
+            "OBE"
         ],
         "chunkCount": 3
     },
     {
         "id": 941,
-        "answer": "DARKMUMMY",
-        "clue": "Common enemy",
+        "answer": "GOGGLES",
+        "clue": "Armor made from lenses",
         "chunks": [
-            "DARK",
-            "MUM",
-            "MY"
+            "GO",
+            "GG",
+            "LES"
         ],
         "chunkCount": 3
     },
     {
         "id": 942,
-        "answer": "GOLDSNAIL",
-        "clue": "Hostile creature",
+        "answer": "GREENCAP",
+        "clue": "Vanity dropped by the Guide",
         "chunks": [
-            "GOLD",
-            "SNA",
-            "IL"
+            "GRE",
+            "ENC",
+            "AP"
         ],
         "chunkCount": 3
     },
     {
         "id": 943,
-        "answer": "GOLDHAMMER",
-        "clue": "Smashing tool",
+        "answer": "DYEVAT",
+        "clue": "Crafting station",
         "chunks": [
-            "GOLD",
-            "HAMM",
-            "ER"
+            "DY",
+            "EV",
+            "AT"
         ],
         "chunkCount": 3
     },
     {
         "id": 944,
-        "answer": "FROSTRING",
-        "clue": "Wearable accessory",
+        "answer": "CRYSTALBALL",
+        "clue": "Used to predict your future",
         "chunks": [
-            "FROS",
-            "TRI",
-            "NG"
+            "CRY",
+            "STAL",
+            "BALL"
         ],
         "chunkCount": 3
     },
     {
         "id": 945,
-        "answer": "GRAVPOTION",
-        "clue": "Drinkable potion",
+        "answer": "AUTOHAMMER",
+        "clue": "Crafting station used to craft mini nukes",
         "chunks": [
-            "GRAV",
-            "POTI",
-            "ON"
+            "AUT",
+            "OHA",
+            "MMER"
         ],
         "chunkCount": 3
     },
     {
         "id": 946,
-        "answer": "JUNGLEBEE",
-        "clue": "Hostile creature",
+        "answer": "GLASSKILN",
+        "clue": "Crafting station for glass",
         "chunks": [
-            "JUNG",
-            "LEB",
-            "EE"
+            "GLA",
+            "SSK",
+            "ILN"
         ],
         "chunkCount": 3
     },
     {
         "id": 947,
-        "answer": "CURSEDORC",
-        "clue": "Hostile creature",
+        "answer": "LIVINGLOOM",
+        "clue": "Crafting station for living wood",
         "chunks": [
-            "CURS",
-            "EDO",
-            "RC"
+            "LIV",
+            "ING",
+            "LOOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 948,
-        "answer": "CRIMSONJELLY",
-        "clue": "Hostile creature",
+        "answer": "ICEMACHINE",
+        "clue": "Crafting station for ice",
         "chunks": [
-            "CRIM",
-            "SONJ",
-            "ELLY"
+            "ICEM",
+            "ACH",
+            "INE"
         ],
         "chunkCount": 3
     },
     {
         "id": 949,
-        "answer": "GOBLINSHARK",
-        "clue": "Common enemy",
+        "answer": "CANDELABRA",
+        "clue": "Placable light firniture",
         "chunks": [
-            "GOBL",
-            "INSH",
-            "ARK"
+            "CAN",
+            "DELA",
+            "BRA"
         ],
         "chunkCount": 3
     },
     {
         "id": 950,
-        "answer": "SKELEPIRATE",
-        "clue": "Hostile creature",
+        "answer": "CHANDELIER",
+        "clue": "Hanging light fixture",
         "chunks": [
-            "SKEL",
-            "EPIR",
-            "ATE"
+            "CHAN",
+            "DEL",
+            "IER"
         ],
         "chunkCount": 3
     },
     {
         "id": 951,
-        "answer": "GREENSHARK",
-        "clue": "Common enemy",
+        "answer": "DRESSER",
+        "clue": "Used to change the player's clothing",
         "chunks": [
-            "GREE",
-            "NSHA",
-            "RK"
+            "DR",
+            "ESS",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 952,
-        "answer": "SHADOWZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "PIGGYBANK",
+        "clue": "Equivalent to an ender chest",
         "chunks": [
-            "SHAD",
-            "OWZO",
-            "MBIE"
+            "PIG",
+            "GYB",
+            "ANK"
         ],
         "chunkCount": 3
     },
     {
         "id": 953,
-        "answer": "LAVASKELETON",
-        "clue": "Common enemy",
+        "answer": "VOIDVAULT",
+        "clue": "Storage used to extend your inventory",
         "chunks": [
-            "LAVA",
-            "SKEL",
-            "ETON"
+            "VOI",
+            "DVA",
+            "ULT"
         ],
         "chunkCount": 3
     },
     {
         "id": 954,
-        "answer": "PIRATEORC",
-        "clue": "Hostile creature",
+        "answer": "TOMBSTONE",
+        "clue": "Dropped when a player dies",
         "chunks": [
-            "PIRA",
-            "TEO",
-            "RC"
+            "TOM",
+            "BS",
+            "TONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 955,
-        "answer": "SPOREGHOST",
-        "clue": "Hostile creature",
+        "answer": "GRAVEMARKER",
+        "clue": "Type of tombstone",
         "chunks": [
-            "SPOR",
-            "EGHO",
-            "ST"
+            "GRAV",
+            "EMA",
+            "RKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 956,
-        "answer": "HONEYRING",
-        "clue": "Wearable accessory",
+        "answer": "HEADSTONE",
+        "clue": "Type of tombstone",
         "chunks": [
-            "HONE",
-            "YRI",
-            "NG"
+            "HEA",
+            "DST",
+            "ONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 957,
-        "answer": "NINJARING",
-        "clue": "Wearable accessory",
+        "answer": "GRAVESTONE",
+        "clue": "Type of tombstone",
         "chunks": [
-            "NINJ",
-            "ARI",
-            "NG"
+            "GRA",
+            "VES",
+            "TONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 958,
-        "answer": "SHADOWDRAGON",
-        "clue": "Hostile creature",
+        "answer": "OBELISK",
+        "clue": "Type of tombstone",
         "chunks": [
-            "SHAD",
-            "OWDR",
-            "AGON"
+            "OB",
+            "EL",
+            "ISK"
         ],
         "chunkCount": 3
     },
     {
         "id": 959,
-        "answer": "FLESHSPIDER",
-        "clue": "Hostile creature",
+        "answer": "MANNEQUIN",
+        "clue": "",
         "chunks": [
             "FLES",
             "HSPI",
