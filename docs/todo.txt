@@ -27,8 +27,11 @@ Github actions - automated jobs and testing
 GitHub container registry - image storage
 Oracle Cloud - Hosting website
 
+REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
+- turn list into unique items and check if there is more than one solution per problem.
 
-Finished at man, item 959
+
+Finished at Vanity accessories, item 1055
 
 Skipping 501 - 700, will update after 3 chunk words
 
@@ -41,6 +44,9 @@ First fractal
 Diving helmet
 Moon lords legs
 Imbuing station (All crafting stations)
+Target Dummy
+Celestial Shell
+Endgame wings
 
 
 Potential categories:
