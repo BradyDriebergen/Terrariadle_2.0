@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at Vanity accessories, item 1055
+Finished at Summons (Buffs), item 1107
 
 Skipping 501 - 700, will update after 3 chunk words
 

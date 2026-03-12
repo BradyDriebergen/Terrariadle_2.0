@@ -11307,30 +11307,30 @@
     },
     {
         "id": 1056,
-        "answer": "PIRATEFROG",
-        "clue": "Hostile creature",
+        "answer": "JUNGLEROSE",
+        "clue": "Randomly grown jungle vanity item",
         "chunks": [
-            "PIRA",
-            "TEFR",
-            "OG"
+            "JUN",
+            "GLER",
+            "OSE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1057,
-        "answer": "ARMOREDEEL",
-        "clue": "Catchable fish",
+        "answer": "WINTERCAPE",
+        "clue": "Wearable cape",
         "chunks": [
-            "ARMO",
-            "REDE",
-            "EL"
+            "WINT",
+            "ERC",
+            "APE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1058,
         "answer": "DETONATOR",
-        "clue": "Useful tool",
+        "clue": "Often found near large veins of ores",
         "chunks": [
             "DETO",
             "NAT",
@@ -11340,19 +11340,19 @@
     },
     {
         "id": 1059,
-        "answer": "BLACKBIRD",
-        "clue": "Hostile creature",
+        "answer": "REDCAPE",
+        "clue": "Wearable cape",
         "chunks": [
-            "BLAC",
-            "KBI",
-            "RD"
+            "RE",
+            "DCA",
+            "PE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1060,
         "answer": "ELECTRIFIED",
-        "clue": "Harmful debuff",
+        "clue": "Debuff caused by martian enemies",
         "chunks": [
             "ELEC",
             "TRIF",
@@ -11362,100 +11362,100 @@
     },
     {
         "id": 1061,
-        "answer": "FIERCESPIDER",
-        "clue": "Hostile creature",
+        "answer": "MYSTERIOUS",
+        "clue": "Type of cape",
         "chunks": [
-            "FIER",
-            "CESP",
-            "IDER"
+            "MYS",
+            "TER",
+            "IOUS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1062,
-        "answer": "SPOREWRAITH",
-        "clue": "Hostile creature",
+        "answer": "PRINCECAPE",
+        "clue": "Wearable cape",
         "chunks": [
-            "SPOR",
-            "EWRA",
-            "ITH"
+            "PRI",
+            "NCEC",
+            "APE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1063,
-        "answer": "SMALLSHARK",
-        "clue": "Hostile creature",
+        "answer": "CATCHIME",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "SMAL",
-            "LSHA",
-            "RK"
+            "CAT",
+            "CH",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1064,
-        "answer": "HONEYSCARF",
-        "clue": "Wearable accessory",
+        "answer": "COWBELL",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "HONE",
-            "YSCA",
-            "RF"
+            "CO",
+            "WB",
+            "ELL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1065,
-        "answer": "TOXICOGRE",
-        "clue": "Hostile creature",
+        "answer": "CROWSBEAK",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "TOXI",
-            "COG",
-            "RE"
+            "CRO",
+            "WSB",
+            "EAK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1066,
-        "answer": "SPECTREWINGS",
-        "clue": "Allows flight",
+        "answer": "DOGCOLLAR",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "SPEC",
-            "TREW",
-            "INGS"
+            "DOG",
+            "COLL",
+            "AR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1067,
-        "answer": "BLENDOMATIC",
-        "clue": "Crafting station",
+        "answer": "FAIRYCHOKER",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "BLEN",
-            "DOMA",
-            "TIC"
+            "FAIR",
+            "YCH",
+            "OKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1068,
-        "answer": "CRIMSONARMOR",
-        "clue": "Armor set",
+        "answer": "GOATSTUFT",
+        "clue": "Changes player's hurt sound",
         "chunks": [
-            "CRIM",
-            "SONA",
-            "RMOR"
+            "GOA",
+            "TST",
+            "UFT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1069,
-        "answer": "INVISPOTION",
-        "clue": "Drinkable potion",
+        "answer": "MUSICBOX",
+        "clue": "Used to play other biome's songs",
         "chunks": [
-            "INVI",
-            "SPOT",
-            "ION"
+            "MU",
+            "SICB",
+            "OX"
         ],
         "chunkCount": 3
     },
@@ -11472,140 +11472,140 @@
     },
     {
         "id": 1071,
-        "answer": "SPELLTOME",
-        "clue": "Type of magic weapons",
+        "answer": "HIVEPACK",
+        "clue": "Enhances friendly bees",
         "chunks": [
-            "SPE",
-            "LLT",
-            "OME"
+            "HI",
+            "VEP",
+            "ACK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1072,
-        "answer": "SWIFTPOTION",
-        "clue": "Drinkable potion",
+        "answer": "BONEGLOVE",
+        "clue": "Fires a crossbone while attacking",
         "chunks": [
-            "SWIF",
-            "TPOT",
-            "ION"
+            "BON",
+            "EGL",
+            "OVE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1073,
-        "answer": "HONEYSALMON",
-        "clue": "Catchable fish",
+        "answer": "BONEHELM",
+        "clue": "Summons shadow hands",
         "chunks": [
-            "HONE",
-            "YSAL",
-            "MON"
+            "BO",
+            "NEHE",
+            "LM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1074,
-        "answer": "PURPLECRAB",
-        "clue": "Common enemy",
+        "answer": "SPORESAC",
+        "clue": "Spawns floating spores on walls",
         "chunks": [
-            "PURP",
-            "LECR",
-            "AB"
+            "SP",
+            "ORE",
+            "SAC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1075,
-        "answer": "COBALTARMOR",
-        "clue": "Armor set",
+        "answer": "MUSHROOM",
+        "clue": "Restores 15 health",
         "chunks": [
-            "COBA",
-            "LTAR",
-            "MOR"
+            "MUS",
+            "HRO",
+            "OM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1076,
-        "answer": "ACTUATIONROD",
-        "clue": "Useful tool",
+        "answer": "LESSER",
+        "clue": "Weakest healing potion",
         "chunks": [
-            "ACTU",
-            "ATIO",
-            "NROD"
+            "LE",
+            "SS",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1077,
-        "answer": "VENOMZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "GREATER",
+        "clue": "Healing potion restoring 150 health",
         "chunks": [
-            "VENO",
-            "MZOM",
-            "BIE"
+            "GRE",
+            "AT",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1078,
-        "answer": "TOXICDRAGON",
-        "clue": "Hostile creature",
+        "answer": "JUNGLEJUICE",
+        "clue": "Healing potion made from life fruits",
         "chunks": [
-            "TOXI",
-            "CDRA",
-            "GON"
+            "JUNG",
+            "LEJU",
+            "ICE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1079,
-        "answer": "FROSTKELP",
-        "clue": "Catchable fish",
+        "answer": "MANAPOTION",
+        "clue": "Restores 100 mana",
         "chunks": [
-            "FROS",
-            "TKE",
-            "LP"
+            "MAN",
+            "APO",
+            "TION"
         ],
         "chunkCount": 3
     },
     {
         "id": 1080,
-        "answer": "BLOODOGRE",
-        "clue": "Hostile creature",
+        "answer": "RESTORATION",
+        "clue": "Healing potion restoring 90 health",
         "chunks": [
-            "BLOO",
-            "DOG",
-            "RE"
+            "RES",
+            "TOR",
+            "ATION"
         ],
         "chunkCount": 3
     },
     {
         "id": 1081,
-        "answer": "FROSTSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "EGGNOG",
+        "clue": "Healing potion obtained from presents",
         "chunks": [
-            "FROS",
-            "TSNA",
-            "PPER"
+            "EG",
+            "GN",
+            "OG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1082,
-        "answer": "TOXICPIRATE",
-        "clue": "Hostile creature",
+        "answer": "STRANGEBREW",
+        "clue": "Heals between 70 - 120 health",
         "chunks": [
-            "TOXI",
-            "CPIR",
-            "ATE"
+            "STRA",
+            "NGEB",
+            "REW"
         ],
         "chunkCount": 3
     },
     {
         "id": 1083,
-        "answer": "LAVACATFISH",
-        "clue": "Catchable fish",
+        "answer": "ARCHERY",
+        "clue": "Buff that increases bow stats",
         "chunks": [
             "LAVA",
             "CATF",
@@ -11615,206 +11615,206 @@
     },
     {
         "id": 1084,
-        "answer": "MININGPOTION",
-        "clue": "Drinkable potion",
+        "answer": "WORMHOLE",
+        "clue": "Potion that teleports you to others",
         "chunks": [
-            "MINI",
-            "NGPO",
-            "TION"
+            "WOR",
+            "MH",
+            "OLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1085,
-        "answer": "LAVADRAGON",
-        "clue": "Hostile creature",
+        "answer": "REDPOTION",
+        "clue": "Only for those who are worthy",
         "chunks": [
-            "LAVA",
-            "DRAG",
+            "REDP",
+            "PTI",
             "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1086,
-        "answer": "ARMOREDOGRE",
-        "clue": "Hostile creature",
+        "answer": "BIOMESIGHT",
+        "clue": "Highlights evil biome blocks",
         "chunks": [
-            "ARMO",
-            "REDO",
-            "GRE"
+            "BIO",
+            "MES",
+            "IGHT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1087,
-        "answer": "SLIMEHORNET",
-        "clue": "Common enemy",
+        "answer": "DANGERSENSE",
+        "clue": "Highlights traps",
         "chunks": [
-            "SLIM",
-            "EHOR",
-            "NET"
+            "DAN",
+            "GERS",
+            "ENSE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1088,
-        "answer": "MECHPIRATE",
-        "clue": "Hostile creature",
+        "answer": "FEATHERFALL",
+        "clue": "Allows slow falling",
         "chunks": [
-            "MECH",
-            "PIRA",
-            "TE"
+            "FEAT",
+            "HER",
+            "FALL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1089,
-        "answer": "EELBASS",
-        "clue": "Catchable fish",
+        "answer": "GRAVITATION",
+        "clue": "Allows the player to invert gravity",
         "chunks": [
-            "EEL",
-            "BA",
-            "SS"
+            "GRA",
+            "VITA",
+            "TION"
         ],
         "chunkCount": 3
     },
     {
         "id": 1090,
-        "answer": "MANACHARM",
-        "clue": "Wearable accessory",
+        "answer": "INVISIBILITY",
+        "clue": "Attacking will remove this buff",
         "chunks": [
-            "MANA",
-            "CHA",
-            "RM"
+            "INVI",
+            "SIBI",
+            "LITY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1091,
-        "answer": "MOSSZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "IRONSKIN",
+        "clue": "Buff granting 8 defense",
         "chunks": [
-            "MOSS",
-            "ZOMB",
-            "IE"
+            "IR",
+            "ONSK",
+            "IN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1092,
-        "answer": "TOXICGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "SPELUNKER",
+        "clue": "Highlights ores and treasures",
         "chunks": [
-            "TOXI",
-            "CGOB",
-            "LIN"
+            "SPL",
+            "ELU",
+            "NKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1093,
-        "answer": "SKELEGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "SUMMONING",
+        "clue": "Buff increasing max minions",
         "chunks": [
-            "SKEL",
-            "EGOB",
-            "LIN"
+            "SUM",
+            "MONI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1094,
-        "answer": "VENOMWRAITH",
-        "clue": "Hostile creature",
+        "answer": "ANICEBUFF",
+        "clue": "Buff gained from the Cool Whip",
         "chunks": [
-            "VENO",
-            "MWRA",
-            "ITH"
+            "ANI",
+            "CEBU",
+            "FF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1095,
-        "answer": "BLOODCULTIST",
-        "clue": "Hostile creature",
+        "answer": "BEETLEMIGHT",
+        "clue": "Buff gained from beetle armor",
         "chunks": [
-            "BLOO",
-            "DCUL",
-            "TIST"
+            "BEET",
+            "LEMI",
+            "GHT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1096,
-        "answer": "RABIDOGRE",
-        "clue": "Hostile creature",
+        "answer": "HARVESTTIME",
+        "clue": "Buff gained from Dark Harvest",
         "chunks": [
-            "RABI",
-            "DOG",
-            "RE"
+            "HAR",
+            "VEST",
+            "TIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1097,
-        "answer": "FISHDEMON",
-        "clue": "Common enemy",
+        "answer": "HIGHSPIRITS",
+        "clue": "Buff gained from flying kites",
         "chunks": [
-            "FISH",
-            "DEM",
-            "ON"
+            "HIG",
+            "HSPI",
+            "RITS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1098,
-        "answer": "BONEDEMON",
-        "clue": "Hostile creature",
+        "answer": "ICEBARRIER",
+        "clue": "Buff gained from the Frozen Turtle Shell",
         "chunks": [
-            "BONE",
-            "DEM",
-            "ON"
+            "ICE",
+            "BAR",
+            "RIER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1099,
-        "answer": "SMALLPIRATE",
-        "clue": "Hostile creature",
+        "answer": "JUNGLESFURY",
+        "clue": "Buff gained from the Snapthorn",
         "chunks": [
-            "SMAL",
-            "LPIR",
-            "ATE"
+            "JUNG",
+            "LES",
+            "FURY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1100,
-        "answer": "CRYSTALBASS",
-        "clue": "Catchable fish",
+        "answer": "LEAFCRYSTAL",
+        "clue": "Buff gained from Chlorophyte armor",
         "chunks": [
-            "CRYS",
-            "TALB",
-            "ASS"
+            "LEA",
+            "FCRY",
+            "STAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1101,
-        "answer": "JUNGLEMUMMY",
-        "clue": "Common enemy",
+        "answer": "MERFOLK",
+        "clue": "Buff gained from Neptune's Shell",
         "chunks": [
-            "JUNG",
-            "LEMU",
-            "MMY"
+            "ME",
+            "RFO",
+            "LK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1102,
-        "answer": "TOXICWYVERN",
-        "clue": "Hostile creature",
+        "answer": "SOLARBLAZE",
+        "clue": "Buff gained from Solar armor",
         "chunks": [
             "TOXI",
             "CWYV",
@@ -11824,67 +11824,67 @@
     },
     {
         "id": 1103,
-        "answer": "LAVAGHOST",
-        "clue": "Common enemy",
+        "answer": "WEREWOLF",
+        "clue": "Buff gained from the Moon Charm",
         "chunks": [
-            "LAVA",
-            "GHO",
-            "ST"
+            "WER",
+            "EW",
+            "OLF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1104,
-        "answer": "PINKWYVERN",
-        "clue": "Common enemy",
+        "answer": "CLAIRVOYANCE",
+        "clue": "Buff gained from the crystal ball",
         "chunks": [
-            "PINK",
-            "WYVE",
-            "RN"
+            "CLAI",
+            "RVOY",
+            "ANCE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1105,
-        "answer": "SMALLGHOST",
-        "clue": "Hostile creature",
+        "answer": "STRATEGIST",
+        "clue": "Buff gained from the war table",
         "chunks": [
-            "SMAL",
-            "LGHO",
-            "ST"
+            "STR",
+            "ATE",
+            "GIST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1106,
-        "answer": "FROSTCHARM",
-        "clue": "Wearable accessory",
+        "answer": "SUGARRUSH",
+        "clue": "Buff gained from the slice of cake",
         "chunks": [
-            "FROS",
-            "TCHA",
-            "RM"
+            "SUG",
+            "ARR",
+            "USH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1107,
-        "answer": "TUNGSTENAXE",
-        "clue": "Chopping tool",
+        "answer": "COZYFIRE",
+        "clue": "Buff gained from campfires",
         "chunks": [
-            "TUNG",
-            "STEN",
-            "AXE"
+            "CO",
+            "ZYF",
+            "IRE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1108,
-        "answer": "SPORESHARK",
-        "clue": "Hostile creature",
+        "answer": "PEACECANDLE",
+        "clue": "Placeable that reduces spawn rates",
         "chunks": [
-            "SPOR",
-            "ESHA",
-            "RK"
+            "PEA",
+            "CECA",
+            "NDLE"
         ],
         "chunkCount": 3
     },
