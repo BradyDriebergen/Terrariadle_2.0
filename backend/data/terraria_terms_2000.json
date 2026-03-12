@@ -9361,7 +9361,7 @@
     {
         "id": 879,
         "answer": "CATTIVA",
-        "clue": "Little buddy that mines and fights for you",
+        "clue": "Cat that mines and fights for you",
         "chunks": [
             "CA",
             "TTI",
@@ -11890,96 +11890,96 @@
     },
     {
         "id": 1109,
-        "answer": "GREENJELLY",
-        "clue": "Hostile creature",
+        "answer": "BABYFINCH",
+        "clue": "Minion summoned from the finch staff",
         "chunks": [
-            "GREE",
-            "NJEL",
-            "LY"
+            "BAB",
+            "YFI",
+            "NCH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1110,
-        "answer": "SKYCATFISH",
-        "clue": "Catchable fish",
+        "answer": "BABYSLIME",
+        "clue": "Minion summoned from the slime staff",
         "chunks": [
-            "SKYC",
-            "ATFI",
-            "SH"
+            "BAB",
+            "YSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1111,
-        "answer": "NEONTROUT",
-        "clue": "Catchable fish",
+        "answer": "DEADLYSPHERE",
+        "clue": "Minion that cycles between 3 forms",
         "chunks": [
-            "NEON",
-            "TRO",
-            "UT"
+            "DEAD",
+            "LYSP",
+            "HERE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1112,
-        "answer": "GOBLINARMY",
-        "clue": "World event",
+        "answer": "DESERTTIGER",
+        "clue": "Minion aquired from the dungeon",
         "chunks": [
-            "GOBL",
-            "INAR",
-            "MY"
+            "DES",
+            "ERTT",
+            "IGER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1113,
-        "answer": "PRISCATFISH",
-        "clue": "Catchable fish",
+        "answer": "MUSHROOMBOI",
+        "clue": "Mushroom minion",
         "chunks": [
-            "PRIS",
-            "CATF",
-            "ISH"
+            "MUS",
+            "HROO",
+            "MBOI"
         ],
         "chunkCount": 3
     },
     {
         "id": 1114,
-        "answer": "IRONARMOR",
-        "clue": "Armor set",
+        "answer": "SANGUINEBAT",
+        "clue": "Minion summoned from the Sanguine Staff",
         "chunks": [
-            "IRON",
-            "ARM",
-            "OR"
+            "SANG",
+            "UIN",
+            "EBAT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1115,
-        "answer": "MOSSSLIME",
-        "clue": "Hostile creature",
+        "answer": "SHARKNADO",
+        "clue": "Minion summoned from the Tempest Staff",
         "chunks": [
-            "MOSS",
-            "SLI",
-            "ME"
+            "SH",
+            "ARKN",
+            "ADO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1116,
-        "answer": "FIERCEZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "STARDUSTCELL",
+        "clue": "Cellular minion",
         "chunks": [
-            "FIER",
-            "CEZO",
-            "MBIE"
+            "STAR",
+            "DUST",
+            "CELL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1117,
         "answer": "LAVAWADERS",
-        "clue": "Helpful accessory",
+        "clue": "Terraspark boots component",
         "chunks": [
             "LAVA",
             "WADE",
@@ -11989,41 +11989,41 @@
     },
     {
         "id": 1118,
-        "answer": "DARKHORNET",
-        "clue": "Common enemy",
+        "answer": "TERRAPRISMA",
+        "clue": "Hardest summon weapon to aquire",
         "chunks": [
-            "DARK",
-            "HORN",
-            "ET"
+            "TER",
+            "RAPR",
+            "ISMA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1119,
-        "answer": "OASISSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "VAMPIREFROG",
+        "clue": "Minion aquired from the blood moon",
         "chunks": [
-            "OASI",
-            "SSHR",
-            "IMP"
+            "VAMP",
+            "IREF",
+            "ROG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1120,
-        "answer": "GOBLINFISH",
-        "clue": "Common enemy",
+        "answer": "BASILISK",
+        "clue": "Hardmode underground desert enemy",
         "chunks": [
-            "GOBL",
-            "INFI",
-            "SH"
+            "BAS",
+            "ILI",
+            "SK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1121,
         "answer": "SQUIRESHIELD",
-        "clue": "Helpful accessory",
+        "clue": "Old one's army event accessory",
         "chunks": [
             "SQUI",
             "RESH",
@@ -12033,63 +12033,63 @@
     },
     {
         "id": 1122,
-        "answer": "SPORECRAB",
-        "clue": "Hostile creature",
+        "answer": "ROLLERSKATES",
+        "clue": "Mount that matches placement speed",
         "chunks": [
-            "SPOR",
-            "ECR",
-            "AB"
+            "ROLL",
+            "ERSK",
+            "ATES"
         ],
         "chunkCount": 3
     },
     {
         "id": 1123,
-        "answer": "SKYBASS",
-        "clue": "Catchable fish",
+        "answer": "CHILLET",
+        "clue": "Blue Palworld mount",
         "chunks": [
-            "SKY",
-            "BA",
-            "SS"
+            "CHI",
+            "LL",
+            "ET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1124,
-        "answer": "BONESALMON",
-        "clue": "Catchable fish",
+        "answer": "CHILLETIGNIS",
+        "clue": "Pink Palworld mount",
         "chunks": [
-            "BONE",
-            "SALM",
-            "ON"
+            "CHIL",
+            "LETI",
+            "GNIS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1125,
-        "answer": "CURSEDSNAIL",
-        "clue": "Hostile creature",
+        "answer": "CUTEFISHERON",
+        "clue": "Mount summoned by the Shrimpy Truffle",
         "chunks": [
-            "CURS",
-            "EDSN",
-            "AIL"
+            "CUTE",
+            "FISH",
+            "ERON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1126,
-        "answer": "JUNGLEANT",
-        "clue": "Hostile creature",
+        "answer": "DARKHORSE",
+        "clue": "Mount summoned by the Black Saddle",
         "chunks": [
-            "JUNG",
-            "LEA",
-            "NT"
+            "DAR",
+            "KHO",
+            "RSE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1127,
         "answer": "SHINYSTONE",
-        "clue": "Helpful accessory",
+        "clue": "Increases regen when standing still",
         "chunks": [
             "SHIN",
             "YSTO",
@@ -12099,63 +12099,63 @@
     },
     {
         "id": 1128,
-        "answer": "SWAMPFROG",
-        "clue": "Hostile creature",
+        "answer": "DRILLMOUNT",
+        "clue": "Fasted tool for mining",
         "chunks": [
-            "SWAM",
-            "PFR",
-            "OG"
+            "DRI",
+            "LLM",
+            "OUNT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1129,
-        "answer": "STINKBASS",
-        "clue": "Catchable fish",
+        "answer": "FARTKART",
+        "clue": "Toilet themed minecart",
         "chunks": [
-            "STIN",
-            "KBA",
-            "SS"
+            "FA",
+            "RTK",
+            "ART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1130,
-        "answer": "MARTIANCRAB",
-        "clue": "Hostile creature",
+        "answer": "FLAMINGO",
+        "clue": "Mount you'd find on front lawns",
         "chunks": [
-            "MART",
-            "IANC",
-            "RAB"
+            "FLA",
+            "MIN",
+            "GO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1131,
-        "answer": "WARRIORSCARF",
-        "clue": "Wearable accessory",
+        "answer": "GOLFCART",
+        "clue": "Appropriate mount for the fairway",
         "chunks": [
-            "WARR",
-            "IORS",
-            "CARF"
+            "GOL",
+            "FC",
+            "ART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1132,
-        "answer": "WYVERNHORNET",
-        "clue": "Common enemy",
+        "answer": "MINECART",
+        "clue": "Used to traverse rails",
         "chunks": [
-            "WYVE",
-            "RNHO",
-            "RNET"
+            "MI",
+            "NECA",
+            "RT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1133,
         "answer": "MYTHRILDRILL",
-        "clue": "Useful tool",
+        "clue": "Used for mining Adamantite/Titanium",
         "chunks": [
             "MYTH",
             "RILD",
@@ -12165,19 +12165,19 @@
     },
     {
         "id": 1134,
-        "answer": "SILVERHORNET",
-        "clue": "Hostile creature",
+        "answer": "PAINTEDHORSE",
+        "clue": "Mount summoned by the Dusty Saddle",
         "chunks": [
-            "SILV",
-            "ERHO",
-            "RNET"
+            "PAIN",
+            "TEDH",
+            "ORSE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1135,
         "answer": "PALLADIUM",
-        "clue": "Crafting metal",
+        "clue": "Hardmode crafting metal",
         "chunks": [
             "PALL",
             "ADI",
@@ -12187,41 +12187,41 @@
     },
     {
         "id": 1136,
-        "answer": "FISHWRAITH",
-        "clue": "Common enemy",
+        "answer": "PIRATESHIP",
+        "clue": "Mount summoned by The Black Spot",
         "chunks": [
-            "FISH",
-            "WRAI",
-            "TH"
+            "PIR",
+            "ATES",
+            "HIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1137,
-        "answer": "FROSTWRAITH",
-        "clue": "Common enemy",
+        "answer": "POGOSTICK",
+        "clue": "Mount that can do tricks mid-air",
         "chunks": [
-            "FROS",
-            "TWRA",
-            "ITH"
+            "POG",
+            "OS",
+            "TICK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1138,
-        "answer": "BLOODDUCK",
-        "clue": "Hostile creature",
+        "answer": "RUDOLPH",
+        "clue": "Christmas themed mount",
         "chunks": [
-            "BLOO",
-            "DDU",
-            "CK"
+            "RU",
+            "DOL",
+            "PH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1139,
-        "answer": "GOLDORC",
-        "clue": "Hostile creature",
+        "answer": "SANTANK",
+        "clue": "Mount summoned by the Toy Tank",
         "chunks": [
             "GOL",
             "DO",
@@ -12231,52 +12231,52 @@
     },
     {
         "id": 1140,
-        "answer": "BOOMERANG",
-        "clue": "Type of melee weapon",
+        "answer": "SCUTLIX",
+        "clue": "Mount summoned by the Brain Scrambler",
         "chunks": [
-            "BOO",
-            "MERA",
-            "NG"
+            "SCU",
+            "TL",
+            "IX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1141,
-        "answer": "FROSTCLOAK",
-        "clue": "Wearable accessory",
+        "answer": "WINGEDSLIME",
+        "clue": "Mount summoned by the Gelatinous Pillion",
         "chunks": [
-            "FROS",
-            "TCLO",
-            "AK"
+            "WIN",
+            "GED",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1142,
-        "answer": "TOXICMUMMY",
-        "clue": "Hostile creature",
+        "answer": "WHICHSBROOM",
+        "clue": "Mount dropped by Mourning Woods",
         "chunks": [
-            "TOXI",
-            "CMUM",
-            "MY"
+            "WHIC",
+            "HSB",
+            "ROOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1143,
-        "answer": "BLACKZOMBIE",
-        "clue": "Common enemy",
+        "answer": "ANCIENTHORN",
+        "clue": "Summons the Basilisk mount",
         "chunks": [
-            "BLAC",
-            "KZOM",
-            "BIE"
+            "ANC",
+            "IENT",
+            "HORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1144,
         "answer": "HEARTREACH",
-        "clue": "Beneficial buff",
+        "clue": "Buff increasing heart pickup range",
         "chunks": [
             "HEAR",
             "TREA",
@@ -12286,217 +12286,217 @@
     },
     {
         "id": 1145,
-        "answer": "BEEGOBLIN",
-        "clue": "Common enemy",
+        "answer": "FUZZYCARROT",
+        "clue": "Angler quest reward",
         "chunks": [
-            "BEEG",
-            "OBL",
-            "IN"
+            "FUZ",
+            "ZYCA",
+            "RROT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1146,
-        "answer": "DESERTSHARK",
-        "clue": "Common enemy",
+        "answer": "GOATSKULL",
+        "clue": "Summons the Goat mount",
         "chunks": [
-            "DESE",
-            "RTSH",
-            "ARK"
+            "GOAT",
+            "SK",
+            "ULL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1147,
-        "answer": "PIRATESNAIL",
-        "clue": "Hostile creature",
+        "answer": "SCALYTRUFFLE",
+        "clue": "Summons the Pigron mount",
         "chunks": [
-            "PIRA",
-            "TESN",
-            "AIL"
+            "SCAL",
+            "YTRU",
+            "FFLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1148,
-        "answer": "SWAMPDUCK",
-        "clue": "Hostile creature",
+        "answer": "THEBLACKSPOT",
+        "clue": "Summons a ridable pirate ship",
         "chunks": [
-            "SWAM",
-            "PDU",
-            "CK"
+            "THEB",
+            "LACK",
+            "SPOT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1149,
-        "answer": "MECHSHARK",
-        "clue": "Hostile creature",
+        "answer": "TOYTANK",
+        "clue": "Mount dropped from Santa-NK1",
         "chunks": [
-            "MECH",
-            "SHA",
-            "RK"
+            "TO",
+            "YT",
+            "ANK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1150,
-        "answer": "BALLISTAROD",
-        "clue": "Powerful weapon",
+        "answer": "SLIMYSADDLE",
+        "clue": "Mount dropped from King Slime",
         "chunks": [
-            "BALL",
-            "ISTA",
-            "ROD"
+            "SLIM",
+            "YSAD",
+            "DLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1151,
-        "answer": "GOBLINDEMON",
-        "clue": "Common enemy",
+        "answer": "HEXXEDBRANCH",
+        "clue": "Mount dropped by Mourning Woods",
         "chunks": [
-            "GOBL",
-            "INDE",
-            "MON"
+            "HEXX",
+            "EDBR",
+            "ANCH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1152,
-        "answer": "WOODARMOR",
-        "clue": "Armor set",
+        "answer": "HARDYSADDLE",
+        "clue": "Angler quest reward",
         "chunks": [
-            "WOOD",
-            "ARM",
-            "OR"
+            "HAR",
+            "DYSA",
+            "DDLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1153,
-        "answer": "MUMMYZOMBIE",
-        "clue": "Common enemy",
+        "answer": "FREEZEBOMB",
+        "clue": "Explosive that freezes water",
         "chunks": [
-            "MUMM",
-            "YZOM",
-            "BIE"
+            "FRE",
+            "EZEB",
+            "OMB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1154,
-        "answer": "ATLANTICKELP",
-        "clue": "Catchable fish",
+        "answer": "DIRTBOMB",
+        "clue": "Explosive that creates dirt",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "KELP"
+            "DI",
+            "RTB",
+            "OMB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1155,
-        "answer": "GOBLINSPIDER",
-        "clue": "Hostile creature",
+        "answer": "HONEYBOMB",
+        "clue": "Explosive honey",
         "chunks": [
-            "GOBL",
-            "INSP",
-            "IDER"
+            "HON",
+            "EYBO",
+            "MB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1156,
-        "answer": "PIRATEEYE",
-        "clue": "Hostile creature",
+        "answer": "LAVABOMB",
+        "clue": "Explosive lava",
         "chunks": [
-            "PIRA",
-            "TEE",
-            "YE"
+            "LAV",
+            "ABO",
+            "MB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1157,
-        "answer": "CATEEL",
-        "clue": "Catchable fish",
+        "answer": "WETBOMB",
+        "clue": "Explosive water",
         "chunks": [
-            "CA",
-            "TE",
-            "EL"
+            "WE",
+            "TB",
+            "OMB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1158,
-        "answer": "MARTIANORC",
-        "clue": "Hostile creature",
+        "answer": "VILEPOWDER",
+        "clue": "Consumable that spreads corruption",
         "chunks": [
-            "MART",
-            "IANO",
-            "RC"
+            "VIL",
+            "EPOW",
+            "DER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1159,
-        "answer": "JUNGLECRAB",
-        "clue": "Common enemy",
+        "answer": "GLOWSTICK",
+        "clue": "Underwater light source",
         "chunks": [
-            "JUNG",
-            "LECR",
-            "AB"
+            "GLO",
+            "WSTI",
+            "CK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1160,
-        "answer": "WHITEWORM",
-        "clue": "Hostile creature",
+        "answer": "CHUMBUCKET",
+        "clue": "Increases fishing power when thrown",
         "chunks": [
-            "WHIT",
-            "EWO",
-            "RM"
+            "CHU",
+            "MBUC",
+            "KET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1161,
-        "answer": "",
-        "clue": "Powerful weapon",
+        "answer": "FERTILIZER",
+        "clue": "Causes saplings to grow into trees",
         "chunks": [
-            "TERR",
-            "ABLA",
-            "DE"
+            "FERT",
+            "ILI",
+            "ZER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1162,
-        "answer": "CAVEWRAITH",
-        "clue": "Hostile creature",
+        "answer": "LIFECRYSTAL",
+        "clue": "Increases max life by 20",
         "chunks": [
-            "CAVE",
-            "WRAI",
-            "TH"
+            "LIF",
+            "ECRY",
+            "STAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1163,
-        "answer": "TOXICZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "MANACRYSTAL",
+        "clue": "Increases max mana by 20",
         "chunks": [
-            "TOXI",
-            "CZOM",
-            "BIE"
+            "MAN",
+            "ACRY",
+            "STAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1164,
         "answer": "FROSTBURN",
-        "clue": "Harmful debuff",
+        "clue": "Blue flame debuff",
         "chunks": [
             "FROS",
             "TBU",
@@ -12506,129 +12506,129 @@
     },
     {
         "id": 1165,
-        "answer": "FROSTWYVERN",
-        "clue": "Common enemy",
+        "answer": "ARTISANLOAF",
+        "clue": "Increases range of crafting stations",
         "chunks": [
-            "FROS",
-            "TWYV",
-            "ERN"
+            "ARTI",
+            "SANL",
+            "OAF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1166,
-        "answer": "HALLOWEDOGRE",
-        "clue": "Hostile creature",
+        "answer": "VITALCRYSTAL",
+        "clue": "Permanently increases health regeneration",
         "chunks": [
-            "HALL",
-            "OWED",
-            "OGRE"
+            "VITA",
+            "LCRY",
+            "STAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1167,
-        "answer": "LEADHAMMER",
-        "clue": "Smashing tool",
+        "answer": "AMBROSIA",
+        "clue": "Aquired from shimmering a fruit",
         "chunks": [
-            "LEAD",
-            "HAMM",
-            "ER"
+            "AMB",
+            "RO",
+            "SIA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1168,
-        "answer": "JUNGLEFISH",
-        "clue": "Common enemy",
+        "answer": "GUMMYWORM",
+        "clue": "Permanently increases fishing power",
         "chunks": [
-            "JUNG",
-            "LEFI",
-            "SH"
+            "GUM",
+            "MYW",
+            "ORM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1169,
-        "answer": "FLESHBIRD",
-        "clue": "Hostile creature",
+        "answer": "GALAXYPEARL",
+        "clue": "Permanently increases luck",
         "chunks": [
-            "FLES",
-            "HBI",
-            "RD"
+            "GALA",
+            "XYP",
+            "EARL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1170,
-        "answer": "CRIMSONEYE",
-        "clue": "Hostile creature",
+        "answer": "DEMONHEART",
+        "clue": "Increases total accessory slots",
         "chunks": [
-            "CRIM",
-            "SONE",
-            "YE"
+            "DEMO",
+            "NH",
+            "EART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1171,
-        "answer": "MARTIANJELLY",
-        "clue": "Hostile creature",
+        "answer": "LIFEFRUIT",
+        "clue": "Increases max life by 5",
         "chunks": [
-            "MART",
-            "IANJ",
-            "ELLY"
+            "LIF",
+            "EFR",
+            "UIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1172,
-        "answer": "JUNGLEORC",
-        "clue": "Hostile creature",
+        "answer": "AEGISFRUIT",
+        "clue": "Permanently increases defense",
         "chunks": [
-            "JUNG",
-            "LEO",
-            "RC"
+            "AEG",
+            "ISF",
+            "RUIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1173,
-        "answer": "MECHDEMON",
-        "clue": "Hostile creature",
+        "answer": "SLIMECROWN",
+        "clue": "Summons the King Slime",
         "chunks": [
-            "MECH",
-            "DEM",
-            "ON"
+            "SLI",
+            "MEC",
+            "ROWN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1174,
-        "answer": "VENOMFROG",
-        "clue": "Hostile creature",
+        "answer": "WORMFOOD",
+        "clue": "Summons the Eater of Worlds",
         "chunks": [
-            "VENO",
-            "MFR",
-            "OG"
+            "WOR",
+            "MFO",
+            "OD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1175,
-        "answer": "GIANTHORNET",
-        "clue": "Common enemy",
+        "answer": "BLOODYSPINE",
+        "clue": "Summons the Brain of Cthulhu",
         "chunks": [
-            "GIAN",
-            "THOR",
-            "NET"
+            "BLOO",
+            "DYS",
+            "PINE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1176,
         "answer": "TACKLEBOX",
-        "clue": "Fishing related",
+        "clue": "Decreases chance of bait consumption",
         "chunks": [
             "TACK",
             "LEB",
@@ -12638,52 +12638,52 @@
     },
     {
         "id": 1177,
-        "answer": "SWAMPWRAITH",
-        "clue": "Hostile creature",
+        "answer": "ABEEMINATION",
+        "clue": "Summons the Queen Bee",
         "chunks": [
-            "SWAM",
-            "PWRA",
-            "ITH"
+            "ABEE",
+            "MINA",
+            "TION"
         ],
         "chunkCount": 3
     },
     {
         "id": 1178,
-        "answer": "BLUESPIDER",
-        "clue": "Hostile creature",
+        "answer": "DEERTHING",
+        "clue": "Summons Deerclops",
         "chunks": [
-            "BLUE",
-            "SPID",
-            "ER"
+            "DEE",
+            "ERTH",
+            "ING"
         ],
         "chunkCount": 3
     },
     {
         "id": 1179,
         "answer": "MOSSHORNET",
-        "clue": "Hostile creature",
+        "clue": "Hardmode underground jungle enemy",
         "chunks": [
-            "MOSS",
-            "HORN",
-            "ET"
+            "MOS",
+            "SHO",
+            "RNET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1180,
-        "answer": "PURPLESHARK",
-        "clue": "Common enemy",
+        "answer": "OCRAMSRAZOR",
+        "clue": "Summons Mechdusa",
         "chunks": [
-            "PURP",
-            "LESH",
-            "ARK"
+            "OCRA",
+            "MSRA",
+            "ZOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1181,
         "answer": "WATERWALKING",
-        "clue": "Beneficial buff",
+        "clue": "Buff allowing you to run on liquids",
         "chunks": [
             "WATE",
             "RWAL",
@@ -12693,45 +12693,45 @@
     },
     {
         "id": 1182,
-        "answer": "SILVERCRAB",
-        "clue": "Hostile creature",
+        "answer": "BLOODYTEAR",
+        "clue": "Summons the Blood Moon",
         "chunks": [
-            "SILV",
-            "ERCR",
-            "AB"
+            "BLO",
+            "ODYT",
+            "EAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1183,
-        "answer": "MOSSWRAITH",
-        "clue": "Hostile creature",
+        "answer": "SNOWGLOBE",
+        "clue": "Summons the Frost Legion",
         "chunks": [
-            "MOSS",
-            "WRAI",
-            "TH"
+            "SNO",
+            "WGL",
+            "OBE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1184,
-        "answer": "BUNNYSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "PIRATEMAP",
+        "clue": "Summons a Pirate Invasion",
         "chunks": [
-            "BUNN",
-            "YSHR",
-            "IMP"
+            "PIRA",
+            "TEM",
+            "AP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1185,
-        "answer": "SKELEZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "SOLARTABLET",
+        "clue": "Summons a Solar Eclipse",
         "chunks": [
-            "SKEL",
-            "EZOM",
-            "BIE"
+            "SOL",
+            "ARTA",
+            "BLET"
         ],
         "chunkCount": 3
     },
@@ -17347,11 +17347,11 @@
     {
         "id": 1605,
         "answer": "LAVASHARK",
-        "clue": "Common enemy",
+        "clue": "Mount summoned by the superheated blood",
         "chunks": [
-            "LAVA",
-            "SHA",
-            "RK"
+            "LAV",
+            "ASH",
+            "ARK"
         ],
         "chunkCount": 3
     },
