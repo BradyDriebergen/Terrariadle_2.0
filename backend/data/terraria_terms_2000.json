@@ -913,7 +913,7 @@
     {
         "id": 92,
         "answer": "ARTERY",
-        "clue": "Chrimson yoyo",
+        "clue": "Crimson yoyo",
         "chunks": [
             "ART",
             "ERY"
@@ -7367,7 +7367,7 @@
     {
         "id": 698,
         "answer": "DEATHBRINGER",
-        "clue": "Chrimson pickaxe",
+        "clue": "Crimson pickaxe",
         "chunks": [
             "DE",
             "ATH",
@@ -8470,7 +8470,7 @@
     {
         "id": 798,
         "answer": "THEMEATBALL",
-        "clue": "Chrimson mace",
+        "clue": "Crimson mace",
         "chunks": [
             "THEM",
             "EATB",
@@ -8954,7 +8954,7 @@
     {
         "id": 842,
         "answer": "DARTPISTOL",
-        "clue": "Chrimson mimic range weapon",
+        "clue": "Crimson mimic range weapon",
         "chunks": [
             "DAR",
             "TPI",
@@ -9272,7 +9272,7 @@
     },
     {
         "id": 871,
-        "answer": "CHRIMSONROD",
+        "answer": "CRIMSONROD",
         "clue": "Summons a blood rain cloud",
         "chunks": [
             "CHRI",
@@ -13617,52 +13617,52 @@
     },
     {
         "id": 1266,
-        "answer": "PIRATEHORNET",
-        "clue": "Common enemy",
+        "answer": "CENAXE",
+        "clue": "Pet that assists with chopping trees",
         "chunks": [
-            "PIRA",
-            "TEHO",
-            "RNET"
+            "CE",
+            "NA",
+            "XE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1267,
-        "answer": "GIANTDUCK",
-        "clue": "Hostile creature",
+        "answer": "CHESTER",
+        "clue": "Pet that acts like a mobile piggy bank",
         "chunks": [
-            "GIAN",
-            "TDU",
-            "CK"
+            "CH",
+            "EST",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1268,
-        "answer": "DRAGONWINGS",
-        "clue": "Allows flight",
+        "answer": "FENNECFOX",
+        "clue": "Pet summoned by the Exotic Chew Toy",
         "chunks": [
-            "DRAG",
-            "ONWI",
-            "NGS"
+            "FENN",
+            "ECF",
+            "OX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1269,
-        "answer": "GOBLINJELLY",
-        "clue": "Hostile creature",
+        "answer": "GLOMMER",
+        "clue": "Pet dropped by derplings",
         "chunks": [
-            "GOBL",
-            "INJE",
-            "LLY"
+            "GLO",
+            "MM",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1270,
         "answer": "GOLDENWORM",
-        "clue": "Fishing related",
+        "clue": "Shimmers into the Gummy Worm",
         "chunks": [
             "GOLD",
             "ENWO",
@@ -13672,19 +13672,19 @@
     },
     {
         "id": 1271,
-        "answer": "CRABDEMON",
-        "clue": "Common enemy",
+        "answer": "HOARDAGRON",
+        "clue": "Pet summoned by the Dragon Egg",
         "chunks": [
-            "CRAB",
-            "DEM",
-            "ON"
+            "HOAR",
+            "DRA",
+            "GON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1272,
         "answer": "TAXCOLLECTOR",
-        "clue": "Friendly npc",
+        "clue": "Scrooge-looking NPC",
         "chunks": [
             "TAXC",
             "OLLE",
@@ -13694,140 +13694,140 @@
     },
     {
         "id": 1273,
-        "answer": "GOBLINHORNET",
-        "clue": "Common enemy",
+        "answer": "LILHARPY",
+        "clue": "Pet summoned by the Birdie Rattle",
         "chunks": [
-            "GOBL",
-            "INHO",
-            "RNET"
+            "LI",
+            "LHA",
+            "RPY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1274,
-        "answer": "STARCHARM",
-        "clue": "Wearable accessory",
+        "answer": "LIZARD",
+        "clue": "Pet summoned by Lizard Egg",
         "chunks": [
-            "STAR",
-            "CHA",
-            "RM"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1275,
-        "answer": "SMALLFROG",
-        "clue": "Hostile creature",
-        "chunks": [
-            "SMAL",
-            "LFR",
-            "OG"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1276,
-        "answer": "ATLANTICCRAB",
-        "clue": "Catchable fish",
-        "chunks": [
-            "ATLA",
-            "NTIC",
-            "CRAB"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1277,
-        "answer": "MECHBEE",
-        "clue": "Hostile creature",
-        "chunks": [
-            "MEC",
-            "HB",
-            "EE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1278,
-        "answer": "JUNGLEBIRD",
-        "clue": "Hostile creature",
-        "chunks": [
-            "JUNG",
-            "LEBI",
+            "LI",
+            "ZA",
             "RD"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1279,
-        "answer": "VAMPSLIME",
-        "clue": "Hostile creature",
+        "id": 1275,
+        "answer": "PLANTERO",
+        "clue": "Pet summoned by the Mud Bud",
         "chunks": [
-            "VAMP",
-            "SLI",
-            "ME"
+            "PLA",
+            "NTE",
+            "RO"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1276,
+        "answer": "SAPLING",
+        "clue": "Pet dropped by Plantera",
+        "chunks": [
+            "SA",
+            "PL",
+            "ING"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1277,
+        "answer": "SHARKPUP",
+        "clue": "Pet summoned by the Shark Bait",
+        "chunks": [
+            "SH",
+            "ARKP",
+            "UP"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1278,
+        "answer": "SQUASHLING",
+        "clue": "Pet crafted from pumpkins",
+        "chunks": [
+            "SQU",
+            "ASH",
+            "LING"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1279,
+        "answer": "SUGARGLIDER",
+        "clue": "Pet dropped from trees",
+        "chunks": [
+            "SUGA",
+            "RGL",
+            "IDER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1280,
-        "answer": "CRIMSONSNAIL",
-        "clue": "Hostile creature",
+        "answer": "SWARMBITER",
+        "clue": "Pet sold by the Zoologist",
         "chunks": [
-            "CRIM",
-            "SONS",
-            "NAIL"
+            "SWA",
+            "RMB",
+            "ITER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1281,
-        "answer": "JUNGLEWORM",
-        "clue": "Hostile creature",
+        "answer": "TIKISPIRIT",
+        "clue": "Pet sold by the Witch Doctor",
         "chunks": [
-            "JUNG",
-            "LEWO",
-            "RM"
+            "TIK",
+            "ISPI",
+            "RIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1282,
-        "answer": "BONEMINNOW",
-        "clue": "Catchable fish",
+        "answer": "VOLTBUNNY",
+        "clue": "Pet sold by the Zoologist",
         "chunks": [
-            "BONE",
-            "MINN",
-            "OW"
+            "VOL",
+            "TBU",
+            "NNY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1283,
-        "answer": "FROSTCULTIST",
-        "clue": "Hostile creature",
+        "answer": "ZEPHYRFISH",
+        "clue": "Pet aquired from fishing",
         "chunks": [
-            "FROS",
-            "TCUL",
-            "TIST"
+            "ZEP",
+            "HYRF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1284,
-        "answer": "VORTEXWINGS",
-        "clue": "Allows flight",
+        "answer": "EATERSBONE",
+        "clue": "Summons the Baby Eater pet",
         "chunks": [
-            "VORT",
-            "EXWI",
-            "NGS"
+            "EAT",
+            "ERS",
+            "BONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1285,
         "answer": "CACTUSARMOR",
-        "clue": "Armor set",
+        "clue": "Armor that grants thorns",
         "chunks": [
             "CACT",
             "USAR",
@@ -13838,7 +13838,7 @@
     {
         "id": 1286,
         "answer": "SLIMERAIN",
-        "clue": "World event",
+        "clue": "Natural event that summons King Slime",
         "chunks": [
             "SLIM",
             "ERA",
@@ -13848,19 +13848,19 @@
     },
     {
         "id": 1287,
-        "answer": "CRIMSONOGRE",
-        "clue": "Hostile creature",
+        "answer": "BONERATTLE",
+        "clue": "Summons the Baby Face Monster pet",
         "chunks": [
-            "CRIM",
-            "SONO",
-            "GRE"
+            "BON",
+            "ERAT",
+            "TLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1288,
-        "answer": "GOBLINFROG",
-        "clue": "Hostile creature",
+        "answer": "NECTAR",
+        "clue": "Summons the Baby Hornet Pet",
         "chunks": [
             "GOBL",
             "INFR",
@@ -13870,96 +13870,96 @@
     },
     {
         "id": 1289,
-        "answer": "GOBLINWYVERN",
-        "clue": "Common enemy",
+        "answer": "BAMBOOLEAF",
+        "clue": "Summons the Baby Red Panda pet",
         "chunks": [
-            "GOBL",
-            "INWY",
-            "VERN"
+            "BAM",
+            "BOOL",
+            "EAF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1290,
-        "answer": "TOXICDEMON",
-        "clue": "Hostile creature",
+        "answer": "UNLUCKYYARN",
+        "clue": "Summons the Black Cat pet",
         "chunks": [
-            "TOXI",
-            "CDEM",
-            "ON"
+            "UNLU",
+            "CKYY",
+            "ARN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1291,
-        "answer": "VENOMWYVERN",
-        "clue": "Hostile creature",
+        "answer": "CARROT",
+        "clue": "Collector's Edition pet-summoning item",
         "chunks": [
-            "VENO",
-            "MWYV",
-            "ERN"
+            "CA",
+            "RR",
+            "OT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1292,
-        "answer": "FROSTCRAB",
-        "clue": "Common enemy",
+        "answer": "GLOWTULIP",
+        "clue": "Pet-summoning item found as a plant",
         "chunks": [
-            "FROS",
-            "TCR",
-            "AB"
+            "GLO",
+            "WTU",
+            "LIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1293,
-        "answer": "CORRUPTOGRE",
-        "clue": "Hostile creature",
+        "answer": "FAECORN",
+        "clue": "Rarely drops from hitting trees",
         "chunks": [
-            "CORR",
-            "UPTO",
-            "GRE"
+            "FA",
+            "EC",
+            "ORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1294,
-        "answer": "OASISSALMON",
-        "clue": "Catchable fish",
+        "answer": "EYEBONE",
+        "clue": "Summons the Chester pet",
         "chunks": [
-            "OASI",
-            "SSAL",
-            "MON"
+            "EY",
+            "EB",
+            "ONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1295,
-        "answer": "PIRATEOGRE",
-        "clue": "Hostile creature",
+        "answer": "EYESPRING",
+        "clue": "Summons the Eyeball Spring pet",
         "chunks": [
-            "PIRA",
-            "TEOG",
-            "RE"
+            "EYE",
+            "SPR",
+            "ING"
         ],
         "chunkCount": 3
     },
     {
         "id": 1296,
-        "answer": "ICEZOMBIE",
-        "clue": "Common enemy",
+        "answer": "DRAGONEGG",
+        "clue": "Summons the Hoardagron pet",
         "chunks": [
-            "ICEZ",
-            "OMB",
-            "IE"
+            "DRAG",
+            "ONE",
+            "GG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1297,
         "answer": "LAVACHARM",
-        "clue": "Wearable accessory",
+        "clue": "Accessory providing immunity to lava",
         "chunks": [
             "LAVA",
             "CHA",
@@ -13969,23 +13969,23 @@
     },
     {
         "id": 1298,
-        "answer": "CRIMSONFISH",
-        "clue": "Hostile creature",
+        "answer": "STARDROP",
+        "clue": "Recieved by purifying a Jola Cola",
         "chunks": [
-            "CRIM",
-            "SONF",
-            "ISH"
+            "STA",
+            "RDR",
+            "OP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1299,
-        "answer": "ARMOREDFISH",
-        "clue": "Common enemy",
+        "answer": "BIRDIERATTLE",
+        "clue": "Summons the Lil' Harpy pet",
         "chunks": [
-            "ARMO",
-            "REDF",
-            "ISH"
+            "BIRD",
+            "IERA",
+            "TTLE"
         ],
         "chunkCount": 3
     },
@@ -14002,8 +14002,8 @@
     },
     {
         "id": 1301,
-        "answer": "WOLFDRAGON",
-        "clue": "Hostile creature",
+        "answer": "LIZARDEGG",
+        "clue": "Summons the Lizard pet",
         "chunks": [
             "WOLF",
             "DRAG",
@@ -14013,107 +14013,107 @@
     },
     {
         "id": 1302,
-        "answer": "SILVERGHOST",
-        "clue": "Hostile creature",
+        "answer": "MONSTERMEAT",
+        "clue": "Summons the Pig Man pet",
         "chunks": [
-            "SILV",
-            "ERGH",
-            "OST"
+            "MONS",
+            "TER",
+            "MEAT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1303,
-        "answer": "SMALLZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "MUDBUD",
+        "clue": "Summons the Plantero pet",
         "chunks": [
-            "SMAL",
-            "LZOM",
-            "BIE"
+            "MU",
+            "DB",
+            "UD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1304,
-        "answer": "CURSEDDRAGON",
-        "clue": "Hostile creature",
+        "answer": "GATOEGG",
+        "clue": "Summons the Propeller Gato pet",
         "chunks": [
-            "CURS",
-            "EDDR",
-            "AGON"
+            "GA",
+            "TOE",
+            "GG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1305,
-        "answer": "SHADOWBASS",
-        "clue": "Catchable fish",
+        "answer": "DOGWISTLE",
+        "clue": "Summons the Puppy pet",
         "chunks": [
-            "SHAD",
-            "OWBA",
-            "SS"
+            "DO",
+            "GWIS",
+            "TLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1306,
-        "answer": "DEMONFISH",
-        "clue": "Common enemy",
+        "answer": "PUFFERSHRIMP",
+        "clue": "Summons the Pufferfish pet",
         "chunks": [
-            "DEMO",
-            "NFI",
-            "SH"
+            "PUFF",
+            "ERSH",
+            "RIMP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1307,
-        "answer": "SMALLDRAGON",
-        "clue": "Hostile creature",
+        "answer": "SPIDEREGG",
+        "clue": "Summons the Spider pet",
         "chunks": [
-            "SMAL",
-            "LDRA",
-            "GON"
+            "SPID",
+            "ER",
+            "EGG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1308,
-        "answer": "FISHGOBLIN",
-        "clue": "Common enemy",
+        "answer": "SHARKBAIT",
+        "clue": "Summons the Shark Pup pet",
         "chunks": [
-            "FISH",
-            "GOBL",
-            "IN"
+            "SH",
+            "ARKB",
+            "AIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1309,
-        "answer": "FLESHWORM",
-        "clue": "Hostile creature",
+        "answer": "TIKITOTEM",
+        "clue": "Summons the Tiki Spirit pet",
         "chunks": [
-            "FLES",
-            "HWO",
-            "RM"
+            "TIKI",
+            "TOT",
+            "EM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1310,
-        "answer": "RABIDHORNET",
-        "clue": "Hostile creature",
+        "answer": "ALIENSKATER",
+        "clue": "Pet summoned by the Cosmic Skateboard",
         "chunks": [
-            "RABI",
-            "DHOR",
-            "NET"
+            "ALIE",
+            "NSKA",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1311,
         "answer": "INFLUXWAVER",
-        "clue": "Powerful weapon",
+        "clue": "Zenith sword component",
         "chunks": [
             "INFL",
             "UXWA",
@@ -14123,74 +14123,74 @@
     },
     {
         "id": 1312,
-        "answer": "SPIKYFISH",
-        "clue": "Hostile creature",
+        "answer": "BABYOGRE",
+        "clue": "Pet dropped by the Ogre",
         "chunks": [
-            "SPIK",
-            "YFI",
-            "SH"
+            "BAB",
+            "YO",
+            "GRE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1313,
-        "answer": "FROSTDRAGON",
-        "clue": "Hostile creature",
+        "answer": "HONEYBEE",
+        "clue": "Pet dropped by the Queen Bee",
         "chunks": [
-            "FROS",
-            "TDRA",
-            "GON"
+            "HON",
+            "EYB",
+            "EE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1314,
-        "answer": "MECHSKELETON",
-        "clue": "Hostile creature",
+        "answer": "ICEQUEEN",
+        "clue": "Frost moon boss",
         "chunks": [
-            "MECH",
-            "SKEL",
-            "ETON"
+            "IC",
+            "EQU",
+            "EEN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1315,
-        "answer": "SKELEORC",
-        "clue": "Hostile creature",
+        "answer": "ITSYBETSY",
+        "clue": "Pet dropped by Betsy",
         "chunks": [
-            "SKEL",
-            "EO",
-            "RC"
+            "IT",
+            "SYBE",
+            "TSY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1316,
-        "answer": "HALLOWEDWORM",
-        "clue": "Hostile creature",
+        "answer": "MINIPRIME",
+        "clue": "Pet dropped by Skeletron Prime",
         "chunks": [
-            "HALL",
-            "OWED",
-            "WORM"
+            "MI",
+            "NIP",
+            "RIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1317,
-        "answer": "REDSPIDER",
-        "clue": "Hostile creature",
+        "answer": "MOONLING",
+        "clue": "Pet dropped by the Moon Lord",
         "chunks": [
-            "REDS",
-            "PID",
-            "ER"
+            "MO",
+            "ONLI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1318,
-        "answer": "VAMPWYVERN",
-        "clue": "Hostile creature",
+        "answer": "SKELETRONJR",
+        "clue": "Pet dropped by Skeletron",
         "chunks": [
             "VAMP",
             "WYVE",
@@ -14200,52 +14200,52 @@
     },
     {
         "id": 1319,
-        "answer": "MIRRORMINNOW",
-        "clue": "Catchable fish",
+        "answer": "REZANDSPAZ",
+        "clue": "Pet dropped by the Twins",
         "chunks": [
-            "MIRR",
-            "ORMI",
-            "NNOW"
+            "REZA",
+            "NDS",
+            "PAZ"
         ],
         "chunkCount": 3
     },
     {
         "id": 1320,
-        "answer": "BUNNYSALMON",
-        "clue": "Catchable fish",
+        "answer": "SLIMEPRINCE",
+        "clue": "Pet dropped by the King Slime",
         "chunks": [
-            "BUNN",
-            "YSAL",
-            "MON"
+            "SLIM",
+            "EPR",
+            "INCE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1321,
-        "answer": "SILVERHAMMER",
-        "clue": "Smashing tool",
+        "answer": "SLIMEROYALS",
+        "clue": "Master mode item not dropped by a boss",
         "chunks": [
-            "SILV",
-            "ERHA",
-            "MMER"
+            "SLIM",
+            "EROY",
+            "ALS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1322,
-        "answer": "HALLOWEDDUCK",
-        "clue": "Hostile creature",
+        "answer": "SPIDERBRAIN",
+        "clue": "Pet dropped by Brain of Cthulhu",
         "chunks": [
-            "HALL",
-            "OWED",
-            "DUCK"
+            "SPI",
+            "DERB",
+            "RAIN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1323,
-        "answer": "HORNETFISH",
-        "clue": "Common enemy",
+        "answer": "TINYFISHRON",
+        "clue": "Pet dropped by Duke Fishron",
         "chunks": [
             "HORN",
             "ETFI",
@@ -14255,30 +14255,30 @@
     },
     {
         "id": 1324,
-        "answer": "ARMOREDMUMMY",
-        "clue": "Common enemy",
+        "answer": "OGRESCLUB",
+        "clue": "Summons the Baby Ogre pet",
         "chunks": [
-            "ARMO",
-            "REDM",
-            "UMMY"
+            "OGR",
+            "ESC",
+            "LUB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1325,
-        "answer": "DARKSPIDER",
-        "clue": "Hostile creature",
+        "answer": "SHRUBSTAR",
+        "clue": "Summons the Everscream Sapling pet",
         "chunks": [
-            "DARK",
-            "SPID",
-            "ER"
+            "SHR",
+            "UBS",
+            "TAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1326,
-        "answer": "HELLSKELETON",
-        "clue": "Hostile creature",
+        "answer": "FROZENCROWN",
+        "clue": "Summons the Ice Queen pet",
         "chunks": [
             "HELL",
             "SKEL",
@@ -14288,74 +14288,74 @@
     },
     {
         "id": 1327,
-        "answer": "",
-        "clue": "Powerful weapon",
+        "answer": "BETSYSEGG",
+        "clue": "Summons the Itsy Betsy pet",
         "chunks": [
-            "HELL",
-            "WING",
-            "BOW"
+            "BET",
+            "SYS",
+            "EGG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1328,
-        "answer": "GOBLINZOMBIE",
-        "clue": "Common enemy",
+        "answer": "ROBOTICSKULL",
+        "clue": "Summons the Mini Prime pet",
         "chunks": [
-            "GOBL",
-            "INZO",
-            "MBIE"
+            "ROBO",
+            "TICS",
+            "KULL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1329,
-        "answer": "BLACKHORNET",
-        "clue": "Common enemy",
+        "answer": "SHADOWORB",
+        "clue": "Drops weapons when broken",
         "chunks": [
-            "BLAC",
-            "KHOR",
-            "NET"
+            "SHA",
+            "DOWO",
+            "RB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1330,
-        "answer": "BLOODYSALMON",
-        "clue": "Catchable fish",
+        "answer": "CHRIMSONHEART",
+        "clue": "Drops weapons when broken",
         "chunks": [
-            "BLOO",
-            "DYSA",
-            "LMON"
+            "CRIM",
+            "SONH",
+            "EART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1331,
-        "answer": "MOSSCULTIST",
-        "clue": "Hostile creature",
+        "answer": "MAGICLANTERN",
+        "clue": "Pet that exposes nearby treasures",
         "chunks": [
-            "MOSS",
-            "CULT",
-            "IST"
+            "MAGI",
+            "CLAN",
+            "TERN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1332,
-        "answer": "OASISCARP",
-        "clue": "Catchable fish",
+        "answer": "FLICKERWICK",
+        "clue": "Light pet dropped by Ogres",
         "chunks": [
-            "OASI",
-            "SCA",
-            "RP"
+            "FLIC",
+            "KERW",
+            "ICK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1333,
         "answer": "MOONLORD",
-        "clue": "Major boss",
+        "clue": "Boss resembling Cuthulu",
         "chunks": [
             "MOON",
             "LO",
@@ -14365,12 +14365,12 @@
     },
     {
         "id": 1334,
-        "answer": "GIANTCULTIST",
-        "clue": "Hostile creature",
+        "answer": "FAIRYBELL",
+        "clue": "Summons the Fairy pet",
         "chunks": [
-            "GIAN",
-            "TCUL",
-            "TIST"
+            "FAI",
+            "RYB",
+            "ELL"
         ],
         "chunkCount": 3
     },
