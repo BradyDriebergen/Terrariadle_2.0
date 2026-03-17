@@ -14376,162 +14376,162 @@
     },
     {
         "id": 1335,
-        "answer": "BLOODGOBLIN",
-        "clue": "Common enemy",
+        "answer": "TOYGOLEM",
+        "clue": "Pet dropped by the Golem",
         "chunks": [
-            "BLOO",
-            "DGOB",
-            "LIN"
+            "TOYG",
+            "OL",
+            "EM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1336,
-        "answer": "MECHWYVERN",
-        "clue": "Hostile creature",
+        "answer": "VELOCIRAPTOR",
+        "clue": "Dinosoar mount",
         "chunks": [
-            "MECH",
-            "WYVE",
-            "RN"
+            "VELO",
+            "CIRA",
+            "PTOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1337,
-        "answer": "CRABHORNET",
-        "clue": "Common enemy",
+        "answer": "BLESSEDAPPLE",
+        "clue": "Summons a ridable unicorn",
         "chunks": [
-            "CRAB",
-            "HORN",
-            "ET"
+            "BLES",
+            "SEDA",
+            "PPLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1338,
-        "answer": "MECHZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "REDSWINGS",
+        "clue": "Wings dropped from treasure bags",
         "chunks": [
-            "MECH",
-            "ZOMB",
-            "IE"
+            "RE",
+            "DSWI",
+            "NGS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1339,
-        "answer": "FROSTJELLY",
-        "clue": "Hostile creature",
+        "answer": "MANDIBLE",
+        "clue": "Dropped from Antlions",
         "chunks": [
-            "FROS",
-            "TJEL",
-            "LY"
+            "MAN",
+            "DIB",
+            "LE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1340,
-        "answer": "BLOODYCOD",
-        "clue": "Catchable fish",
+        "answer": "BEEWAX",
+        "clue": "Used to craft the bee armor",
         "chunks": [
-            "BLOO",
-            "DYC",
-            "OD"
+            "BE",
+            "EW",
+            "AX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1341,
-        "answer": "HELLWYVERN",
-        "clue": "Hostile creature",
+        "answer": "BEETLEHUSK",
+        "clue": "Used to upgrade the turtle armor",
         "chunks": [
-            "HELL",
-            "WYVE",
-            "RN"
+            "BEE",
+            "TLEH",
+            "USK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1342,
-        "answer": "GREENBIRD",
-        "clue": "Hostile creature",
+        "answer": "BLACKLENS",
+        "clue": "Used to craft sunglasses",
         "chunks": [
-            "GREE",
-            "NBI",
-            "RD"
+            "BL",
+            "ACKL",
+            "ENS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1343,
-        "answer": "PURPLEBAT",
-        "clue": "Common enemy",
+        "answer": "BLINKROOT",
+        "clue": "Herb that glows when bloomed",
         "chunks": [
-            "PURP",
-            "LEB",
-            "AT"
+            "BLI",
+            "NKR",
+            "OOT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1344,
-        "answer": "JUNGLEPIRATE",
-        "clue": "Common enemy",
+        "answer": "BONEFEATHER",
+        "clue": "Used to craft bone wings",
         "chunks": [
-            "JUNG",
-            "LEPI",
-            "RATE"
+            "BON",
+            "EFEA",
+            "THER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1345,
-        "answer": "CRIMSONSHARK",
-        "clue": "Hostile creature",
+        "answer": "BROKENHERO",
+        "clue": "Sword you can't swing",
         "chunks": [
-            "CRIM",
-            "SONS",
-            "HARK"
+            "BROK",
+            "ENHE",
+            "RO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1346,
-        "answer": "LAVASCARF",
-        "clue": "Wearable accessory",
+        "answer": "CURSEDFLAME",
+        "clue": "Corruption counterpart to Ichor",
         "chunks": [
-            "LAVA",
-            "SCA",
-            "RF"
+            "CUR",
+            "SEDF",
+            "LAME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1347,
-        "answer": "JUNGLEDUCK",
-        "clue": "Hostile creature",
+        "answer": "CYANHUSK",
+        "clue": "Dropped from underground beetles",
         "chunks": [
-            "JUNG",
-            "LEDU",
-            "CK"
+            "CYA",
+            "NHU",
+            "SK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1348,
-        "answer": "EELSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "REDHUSK",
+        "clue": "Dropped from underground beetles",
         "chunks": [
-            "EELS",
-            "HRI",
-            "MP"
+            "RE",
+            "DH",
+            "USK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1349,
-        "answer": "CURSEDWYVERN",
-        "clue": "Common enemy",
+        "answer": "DARKSHARD",
+        "clue": "Dropped from dark mummies",
         "chunks": [
             "CURS",
             "EDWY",
@@ -14541,19 +14541,19 @@
     },
     {
         "id": 1350,
-        "answer": "SHADOWWRAITH",
-        "clue": "Hostile creature",
+        "answer": "DAYBLOOM",
+        "clue": "Herb that blooms during the day",
         "chunks": [
-            "SHAD",
-            "OWWR",
-            "AITH"
+            "DA",
+            "YBL",
+            "OOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1351,
-        "answer": "DARKZOMBIE",
-        "clue": "Common enemy",
+        "answer": "DEATHWEED",
+        "clue": "Herb that blooms during a Blood Moon",
         "chunks": [
             "DARK",
             "ZOMB",
@@ -14563,151 +14563,151 @@
     },
     {
         "id": 1352,
-        "answer": "SWAMPSPIDER",
-        "clue": "Hostile creature",
+        "answer": "ECTOPLASM",
+        "clue": "Used to make spectre bars",
         "chunks": [
-            "SWAM",
-            "PSPI",
-            "DER"
+            "ECT",
+            "OPL",
+            "ASM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1353,
-        "answer": "DARKWRAITH",
-        "clue": "Common enemy",
+        "answer": "EMPTYBULLET",
+        "clue": "Used to craft hardmode bullets",
         "chunks": [
-            "DARK",
-            "WRAI",
-            "TH"
+            "EMPT",
+            "YBUL",
+            "LET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1354,
-        "answer": "REDGHOST",
-        "clue": "Common enemy",
+        "answer": "FIREFEATHER",
+        "clue": "Used to craft flame wings",
         "chunks": [
-            "REDG",
-            "HO",
-            "ST"
+            "FIR",
+            "EFEA",
+            "THER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1355,
-        "answer": "REDHORNET",
-        "clue": "Common enemy",
+        "answer": "FIREBLOSSOM",
+        "clue": "Herb that blooms durring sunset",
         "chunks": [
-            "REDH",
-            "ORN",
-            "ET"
+            "FIR",
+            "EBLO",
+            "SSOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1356,
-        "answer": "CURSEDMUMMY",
-        "clue": "Common enemy",
+        "answer": "FROSTCORE",
+        "clue": "Dropped from Ice Golems",
         "chunks": [
-            "CURS",
-            "EDMU",
-            "MMY"
+            "FRO",
+            "STC",
+            "ORE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1357,
-        "answer": "CURSEDWORM",
-        "clue": "Hostile creature",
+        "answer": "GOLDDUST",
+        "clue": "Used to make gold bullets",
         "chunks": [
-            "CURS",
-            "EDWO",
-            "RM"
+            "GO",
+            "LDD",
+            "UST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1358,
-        "answer": "MARTIANBEE",
-        "clue": "Hostile creature",
+        "answer": "ICEFEATHER",
+        "clue": "Used to craft ice wings",
         "chunks": [
-            "MART",
-            "IANB",
-            "EE"
+            "ICE",
+            "FEA",
+            "THER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1359,
-        "answer": "ATLANTICBASS",
-        "clue": "Catchable fish",
+        "answer": "LEATHER",
+        "clue": "Archaeologist's set crafting component",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "BASS"
+            "LEA",
+            "TH",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1360,
-        "answer": "VENOMSNAIL",
-        "clue": "Hostile creature",
+        "answer": "LIGHTSHARD",
+        "clue": "Dropped from Light Mummies",
         "chunks": [
-            "VENO",
-            "MSNA",
-            "IL"
+            "LIG",
+            "HTS",
+            "HARD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1361,
-        "answer": "BLACKPIRATE",
-        "clue": "Common enemy",
+        "answer": "MOONGLOW",
+        "clue": "Herb that glows when bloomed",
         "chunks": [
-            "BLAC",
-            "KPIR",
-            "ATE"
+            "MOO",
+            "NG",
+            "LOW"
         ],
         "chunkCount": 3
     },
     {
         "id": 1362,
-        "answer": "JUNGLEARMOR",
-        "clue": "Armor set",
+        "answer": "PINKGEL",
+        "clue": "Used to make things bouncy",
         "chunks": [
-            "JUNG",
-            "LEAR",
-            "MOR"
+            "PIN",
+            "KG",
+            "EL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1363,
-        "answer": "PIRATEANT",
-        "clue": "Hostile creature",
+        "answer": "PINKPEARL",
+        "clue": "Shimmers into the galatic pearl",
         "chunks": [
-            "PIRA",
-            "TEA",
-            "NT"
+            "PI",
+            "NKP",
+            "EARL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1364,
-        "answer": "VAMPCULTIST",
-        "clue": "Hostile creature",
+        "answer": "PIXIEDUST",
+        "clue": "Used to create greater healing potions",
         "chunks": [
-            "VAMP",
-            "CULT",
-            "IST"
+            "PIX",
+            "IED",
+            "UST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1365,
         "answer": "TSUNAMI",
-        "clue": "Powerful weapon",
+        "clue": "Duke Fishron drop",
         "chunks": [
             "TSU",
             "NA",
@@ -14717,52 +14717,52 @@
     },
     {
         "id": 1366,
-        "answer": "PIRATEWYVERN",
-        "clue": "Common enemy",
+        "answer": "ROTTENCHUNK",
+        "clue": "Eater of Souls drop",
         "chunks": [
-            "PIRA",
-            "TEWY",
-            "VERN"
+            "ROTT",
+            "ENCH",
+            "UNK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1367,
-        "answer": "SHADOWORC",
-        "clue": "Hostile creature",
+        "answer": "SHARKFIN",
+        "clue": "Used to craft the Megashark",
         "chunks": [
-            "SHAD",
-            "OWO",
-            "RC"
+            "SHA",
+            "RKF",
+            "IN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1368,
-        "answer": "GREENFROG",
-        "clue": "Hostile creature",
+        "answer": "SHIVERTHORN",
+        "clue": "Herb that blooms randomly",
         "chunks": [
-            "GREE",
-            "NFR",
-            "OG"
+            "SHIV",
+            "ERTH",
+            "ORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1369,
-        "answer": "MOSSMUMMY",
-        "clue": "Hostile creature",
+        "answer": "SPELLTOME",
+        "clue": "Used to craft hardmode tomes",
         "chunks": [
-            "MOSS",
-            "MUM",
-            "MY"
+            "SPE",
+            "LLT",
+            "OME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1370,
         "answer": "COOKINGPOT",
-        "clue": "Crafting station",
+        "clue": "Used to craft tasty delicacies",
         "chunks": [
             "COOK",
             "INGP",
