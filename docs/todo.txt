@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at ice biome, item 1490
+Finished at underground corruption-floaty gross, item 1575
 
 Skipping 501 - 700, will update after 3 chunk words
 

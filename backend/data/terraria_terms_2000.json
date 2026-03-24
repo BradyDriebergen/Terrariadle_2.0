@@ -503,7 +503,7 @@
     {
         "id": 51,
         "answer": "SHRIMP",
-        "clue": "Small fish caught in the ocean",
+        "clue": "'Fish' caught in the ocean",
         "chunks": [
             "SHR",
             "IMP"
@@ -3033,7 +3033,7 @@
     {
         "id": 304,
         "answer": "GHOUL",
-        "clue": "Underground desert enemy",
+        "clue": "Underground Desert enemy",
         "chunks": [
             "BLUE",
             "EYE"
@@ -12012,7 +12012,7 @@
     {
         "id": 1120,
         "answer": "BASILISK",
-        "clue": "Hardmode underground desert enemy",
+        "clue": "Hardmode underground Desert enemy",
         "chunks": [
             "BAS",
             "ILI",
@@ -14838,11 +14838,11 @@
     },
     {
         "id": 1377,
-        "answer": "VERTIBRA",
+        "answer": "VERTEBRA",
         "clue": "Rotten chunk counterpart",
         "chunks": [
             "VER",
-            "TI",
+            "TE",
             "BRA"
         ],
         "chunkCount": 3
@@ -16081,118 +16081,118 @@
     },
     {
         "id": 1490,
-        "answer": "ICESKELETON",
-        "clue": "Common enemy",
+        "answer": "ICEBAT",
+        "clue": "Underground flying Ice Biome enemy",
         "chunks": [
-            "ICES",
-            "KELE",
-            "TON"
+            "IC",
+            "EB",
+            "AT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1491,
-        "answer": "DEMONOGRE",
-        "clue": "Hostile creature",
+        "answer": "SNOWSLIME",
+        "clue": "Ice Biome slime",
         "chunks": [
-            "DEMO",
-            "NOG",
-            "RE"
+            "SNO",
+            "WSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1492,
-        "answer": "SPIKYWORM",
-        "clue": "Hostile creature",
+        "answer": "SLUSHSLIME",
+        "clue": "Ice Biome slime",
         "chunks": [
-            "SPIK",
-            "YWO",
-            "RM"
+            "SLUS",
+            "HSLI",
+            "ME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1493,
-        "answer": "BLOODGHOST",
-        "clue": "Common enemy",
+        "answer": "ICETORTOISE",
+        "clue": "Enemy that drops the Frozen Shell",
         "chunks": [
-            "BLOO",
-            "DGHO",
-            "ST"
+            "ICET",
+            "ORTO",
+            "ISE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1494,
-        "answer": "JUNGLEMINNOW",
-        "clue": "Catchable fish",
+        "answer": "ICYMERMAN",
+        "clue": "Hardmode Ice Biome enemy",
         "chunks": [
-            "JUNG",
-            "LEMI",
-            "NNOW"
+            "IC",
+            "YMER",
+            "MAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1495,
-        "answer": "SWAMPGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "MILKSHAKE",
+        "clue": "Food dropped by Ice Tortoises",
         "chunks": [
-            "SWAM",
-            "PGOB",
-            "LIN"
+            "MIL",
+            "KSH",
+            "AKE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1496,
-        "answer": "MOSSWYVERN",
-        "clue": "Hostile creature",
+        "answer": "FLINXFUR",
+        "clue": "Used to make the Deer Thing",
         "chunks": [
-            "MOSS",
-            "WYVE",
-            "RN"
+            "FLI",
+            "NXF",
+            "UR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1497,
-        "answer": "JUNGLECARP",
-        "clue": "Catchable fish",
+        "answer": "ICEBOW",
+        "clue": "Bow dropped by Ice Mimics",
         "chunks": [
-            "JUNG",
-            "LECA",
-            "RP"
+            "IC",
+            "EB",
+            "OW"
         ],
         "chunkCount": 3
     },
     {
         "id": 1498,
-        "answer": "FIERCEJELLY",
-        "clue": "Hostile creature",
+        "answer": "FISHRON",
+        "clue": "Quest fish caught in the ice biome",
         "chunks": [
-            "FIER",
-            "CEJE",
-            "LLY"
+            "FIS",
+            "HR",
+            "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1499,
-        "answer": "DARKDEMON",
-        "clue": "Common enemy",
+        "answer": "VULTURE",
+        "clue": "Surface Desert enemy",
         "chunks": [
-            "DARK",
-            "DEM",
-            "ON"
+            "VU",
+            "LT",
+            "URE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1500,
         "answer": "SOLARECLIPSE",
-        "clue": "World event",
+        "clue": "Daytime event",
         "chunks": [
             "SOLA",
             "RECL",
@@ -16203,7 +16203,7 @@
     {
         "id": 1501,
         "answer": "CHARMOFMYTHS",
-        "clue": "Helpful accessory",
+        "clue": "Reduces cooldown of healing potions",
         "chunks": [
             "CHAR",
             "MOFM",
@@ -16213,140 +16213,140 @@
     },
     {
         "id": 1502,
-        "answer": "SKYSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "ANTLION",
+        "clue": "Stationary Desert enemy",
         "chunks": [
-            "SKYS",
-            "HRI",
-            "MP"
+            "AN",
+            "TLI",
+            "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1503,
-        "answer": "SKELEGHOST",
-        "clue": "Hostile creature",
+        "answer": "LIGHTMUMMY",
+        "clue": "Hallow Desert enemy",
         "chunks": [
-            "SKEL",
-            "EGHO",
-            "ST"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1504,
-        "answer": "CRIMSONIMP",
-        "clue": "Hostile creature",
-        "chunks": [
-            "CRIM",
-            "SONI",
-            "MP"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1505,
-        "answer": "MUMMYSHARK",
-        "clue": "Common enemy",
-        "chunks": [
-            "MUMM",
-            "YSHA",
-            "RK"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1506,
-        "answer": "HELLSPIDER",
-        "clue": "Hostile creature",
-        "chunks": [
-            "HELL",
-            "SPID",
-            "ER"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1507,
-        "answer": "BUNNYBASS",
-        "clue": "Catchable fish",
-        "chunks": [
-            "BUNN",
-            "YBA",
-            "SS"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1508,
-        "answer": "SILVERBOW",
-        "clue": "Ranged weapon",
-        "chunks": [
-            "SILV",
-            "ERB",
-            "OW"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1509,
-        "answer": "GOBLINOGRE",
-        "clue": "Hostile creature",
-        "chunks": [
-            "GOBL",
-            "INOG",
-            "RE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1510,
-        "answer": "FROSTSHIELD",
-        "clue": "Wearable accessory",
-        "chunks": [
-            "FROS",
-            "TSHI",
-            "ELD"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1511,
-        "answer": "GIANTMUMMY",
-        "clue": "Common enemy",
-        "chunks": [
-            "GIAN",
+            "LIGH",
             "TMUM",
             "MY"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1512,
-        "answer": "SPIKYMUMMY",
-        "clue": "Hostile creature",
+        "id": 1504,
+        "answer": "BANANASPLIT",
+        "clue": "Food dropped by Antlions",
         "chunks": [
-            "SPIK",
-            "YMUM",
-            "MY"
+            "BAN",
+            "ANAS",
+            "PLIT"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1505,
+        "answer": "CHARGER",
+        "clue": "Type of Antlion that runs",
+        "chunks": [
+            "CHA",
+            "RG",
+            "ER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1506,
+        "answer": "SWARMER",
+        "clue": "Type of Antlion that flies",
+        "chunks": [
+            "SW",
+            "AR",
+            "MER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1507,
+        "answer": "SANDSLIME",
+        "clue": "Desert slime",
+        "chunks": [
+            "SAN",
+            "DS",
+            "LIME"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1508,
+        "answer": "TOMBCRAWLER",
+        "clue": "Pre-hardmode Desert worm enemy",
+        "chunks": [
+            "TOM",
+            "BCRA",
+            "WLER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1509,
+        "answer": "SANDPOACHER",
+        "clue": "Underground Desert enemy",
+        "chunks": [
+            "SAN",
+            "DPOA",
+            "CHER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1510,
+        "answer": "LIGHTLAMIA",
+        "clue": "Underground Hallowed Desert enemy",
+        "chunks": [
+            "LIG",
+            "HTLA",
+            "MIA"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1511,
+        "answer": "DARKLAMIA",
+        "clue": "Underground Evil Desert enemy",
+        "chunks": [
+            "DAR",
+            "KLA",
+            "MIA"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1512,
+        "answer": "DUNESPLICER",
+        "clue": "Hardmode Desert worm enemy",
+        "chunks": [
+            "DUN",
+            "ESPL",
+            "ICER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1513,
-        "answer": "GREENDUCK",
-        "clue": "Hostile creature",
+        "answer": "VILEGHOUL",
+        "clue": "Underground Evil Desert enemy",
         "chunks": [
-            "GREE",
-            "NDU",
-            "CK"
+            "VIL",
+            "EGH",
+            "OUL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1514,
         "answer": "LETHARGIC",
-        "clue": "Item modifier",
+        "clue": "Ranged modifier decreasing speed",
         "chunks": [
             "LETH",
             "ARG",
@@ -16356,184 +16356,184 @@
     },
     {
         "id": 1515,
-        "answer": "MUMMYSLIME",
-        "clue": "Common enemy",
+        "answer": "TAINTEDGHOUL",
+        "clue": "Underground Evil Desert enemy",
         "chunks": [
-            "MUMM",
-            "YSLI",
-            "ME"
+            "TAIN",
+            "TEDG",
+            "HOUL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1516,
-        "answer": "MECHMUMMY",
-        "clue": "Hostile creature",
+        "answer": "DESERTSPIRIT",
+        "clue": "Desert enemy resembling a Genie",
         "chunks": [
-            "MECH",
-            "MUM",
-            "MY"
+            "DESE",
+            "RTSP",
+            "IRIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1517,
-        "answer": "SPOREMUMMY",
-        "clue": "Hostile creature",
+        "answer": "FRIEDEGG",
+        "clue": "Food dropped by Sand Poachers",
         "chunks": [
-            "SPOR",
-            "EMUM",
-            "MY"
+            "FRI",
+            "EDE",
+            "GG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1518,
-        "answer": "CORRUPTEEL",
-        "clue": "Catchable fish",
+        "answer": "SEASNAIL",
+        "clue": "Ocean enemy that drops Purple Mucus",
         "chunks": [
-            "CORR",
-            "UPTE",
-            "EL"
+            "SE",
+            "ASN",
+            "AIL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1519,
-        "answer": "TUNAMINNOW",
-        "clue": "Catchable fish",
+        "answer": "SHRIMPPOBOY",
+        "clue": "Food dropped by Sharks and Orcas",
         "chunks": [
-            "TUNA",
-            "MINN",
-            "OW"
+            "SHRI",
+            "MPPO",
+            "BOY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1520,
-        "answer": "SILVEROGRE",
-        "clue": "Hostile creature",
+        "answer": "DIVINGHELMET",
+        "clue": "Extends underwater breathing accessory",
         "chunks": [
-            "SILV",
-            "EROG",
-            "RE"
+            "DIVI",
+            "NGHE",
+            "LMET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1521,
-        "answer": "JUNGLEZOMBIE",
-        "clue": "Common enemy",
+        "answer": "TEMPESTSTAFF",
+        "clue": "Summons mini Sharknados",
         "chunks": [
-            "JUNG",
-            "LEZO",
-            "MBIE"
+            "TEMP",
+            "ESTS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1522,
-        "answer": "GIANTGOBLIN",
-        "clue": "Common enemy",
+        "answer": "COCONUT",
+        "clue": "Food dropped from palm trees",
         "chunks": [
-            "GIAN",
-            "TGOB",
-            "LIN"
+            "COC",
+            "ON",
+            "UT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1523,
-        "answer": "ARMOREDIMP",
-        "clue": "Hostile creature",
+        "answer": "BANANA",
+        "clue": "Fruit dropped by palm trees",
         "chunks": [
-            "ARMO",
-            "REDI",
-            "MP"
+            "BA",
+            "NA",
+            "NA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1524,
-        "answer": "SPIKYFROG",
-        "clue": "Hostile creature",
+        "answer": "REDSNAPPER",
+        "clue": "Fish caught in the ocean",
         "chunks": [
-            "SPIK",
-            "YFR",
-            "OG"
+            "REDS",
+            "NAP",
+            "PER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1525,
         "answer": "HELLFORGE",
-        "clue": "Crafting station",
+        "clue": "Used to craft Hellstone bars",
         "chunks": [
-            "HELL",
-            "FOR",
+            "HEL",
+            "LFOR",
             "GE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1526,
-        "answer": "SWAMPOGRE",
-        "clue": "Hostile creature",
+        "answer": "CLOWNFISH",
+        "clue": "Ocean quest fish",
         "chunks": [
-            "SWAM",
-            "POG",
-            "RE"
+            "CLO",
+            "WNF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1527,
-        "answer": "PINKSNAIL",
-        "clue": "Hostile creature",
+        "answer": "HONEYSLIME",
+        "clue": "Jungle slime",
         "chunks": [
-            "PINK",
-            "SNA",
-            "IL"
+            "HON",
+            "EYSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1528,
-        "answer": "SILVERANT",
-        "clue": "Hostile creature",
+        "answer": "HERBSLIME",
+        "clue": "Jungle slime",
         "chunks": [
-            "SILV",
-            "ERA",
-            "NT"
+            "HE",
+            "RBS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1529,
-        "answer": "DEMONSLIME",
-        "clue": "Common enemy",
+        "answer": "SNATCHER",
+        "clue": "Jungle plant enemy",
         "chunks": [
-            "DEMO",
-            "NSLI",
-            "ME"
+            "SNA",
+            "TC",
+            "HER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1530,
-        "answer": "HONEYCARP",
-        "clue": "Catchable fish",
+        "answer": "DOCTORBONES",
+        "clue": "Rare zombie variant",
         "chunks": [
-            "HONE",
-            "YCA",
-            "RP"
+            "DOCT",
+            "ORB",
+            "ONES"
         ],
         "chunkCount": 3
     },
     {
         "id": 1531,
         "answer": "EYEOFCTHULHU",
-        "clue": "Major boss",
+        "clue": "First boss that's fought",
         "chunks": [
             "EYEO",
             "FCTH",
@@ -16543,107 +16543,107 @@
     },
     {
         "id": 1532,
-        "answer": "BLUEWRAITH",
-        "clue": "Common enemy",
+        "answer": "DERPLING",
+        "clue": "Hardmode Jungle enemy",
         "chunks": [
-            "BLUE",
-            "WRAI",
-            "TH"
+            "DER",
+            "PLI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1533,
-        "answer": "SLIMEGHOST",
-        "clue": "Common enemy",
+        "answer": "ARAPAIMA",
+        "clue": "Hardmode Jungle water enemy",
         "chunks": [
-            "SLIM",
-            "EGHO",
-            "ST"
+            "ARA",
+            "PAI",
+            "MA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1534,
-        "answer": "FISHWYVERN",
-        "clue": "Common enemy",
+        "answer": "ANGRYTRAPPER",
+        "clue": "Jungle plant enemy",
         "chunks": [
-            "FISH",
-            "WYVE",
-            "RN"
+            "ANGR",
+            "YTRA",
+            "PPER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1535,
-        "answer": "TUNASNAPPER",
-        "clue": "Catchable fish",
+        "answer": "PINEAPPLE",
+        "clue": "Fruit dropped by mahogany trees",
         "chunks": [
-            "TUNA",
-            "SNAP",
-            "PER"
+            "PIN",
+            "EAP",
+            "PLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1536,
-        "answer": "MOSSSHARK",
-        "clue": "Hostile creature",
+        "answer": "DOUBLECOD",
+        "clue": "Fish caught in the Jungle",
         "chunks": [
-            "MOSS",
-            "SHA",
-            "RK"
+            "DOU",
+            "BLEC",
+            "OD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1537,
         "answer": "MINISHARK",
-        "clue": "Powerful weapon",
+        "clue": "Weapon on a Steam card",
         "chunks": [
-            "MINI",
-            "SHA",
+            "MIN",
+            "ISHA",
             "RK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1538,
-        "answer": "FLESHPIRATE",
-        "clue": "Hostile creature",
+        "answer": "NEONTETRA",
+        "clue": "Fish caught in the Jungle",
         "chunks": [
-            "FLES",
-            "HPIR",
-            "ATE"
+            "NEO",
+            "NTE",
+            "TRA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1539,
-        "answer": "CURSEDWRAITH",
-        "clue": "Common enemy",
+        "answer": "DERPFISH",
+        "clue": "Quest fish caught in the Jungle",
         "chunks": [
-            "CURS",
-            "EDWR",
-            "AITH"
+            "DER",
+            "PFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1540,
-        "answer": "SILVERSPIDER",
-        "clue": "Hostile creature",
+        "answer": "MANEATER",
+        "clue": "Jungle plant enemy",
         "chunks": [
-            "SILV",
-            "ERSP",
-            "IDER"
+            "MA",
+            "NEA",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1541,
         "answer": "SPOREZOMBIE",
-        "clue": "Hostile creature",
+        "clue": "Glowing Mushroom Biome enemy",
         "chunks": [
             "SPOR",
             "EZOM",
@@ -16653,85 +16653,85 @@
     },
     {
         "id": 1542,
-        "answer": "DESERTDRAGON",
-        "clue": "Hostile creature",
+        "answer": "HIVESLIME",
+        "clue": "Jungle slime",
         "chunks": [
-            "DESE",
-            "RTDR",
-            "AGON"
+            "HIV",
+            "ESL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1543,
-        "answer": "SILVERWORM",
-        "clue": "Hostile creature",
+        "answer": "HIVEWAND",
+        "clue": "Allows placement of hive blocks",
         "chunks": [
-            "SILV",
-            "ERWO",
-            "RM"
+            "HI",
+            "VEW",
+            "AND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1544,
-        "answer": "GOLDSPIDER",
-        "clue": "Hostile creature",
+        "answer": "NETTLEBURST",
+        "clue": "Upgrade to the Vilethorn",
         "chunks": [
-            "GOLD",
-            "SPID",
-            "ER"
+            "NETT",
+            "LEBU",
+            "RST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1545,
-        "answer": "SKELESNAIL",
-        "clue": "Hostile creature",
+        "answer": "FLOWERPOW",
+        "clue": "Flail dropped from Plantera",
         "chunks": [
-            "SKEL",
-            "ESNA",
-            "IL"
+            "FLO",
+            "WER",
+            "POW"
         ],
         "chunkCount": 3
     },
     {
         "id": 1546,
-        "answer": "VENOMANT",
-        "clue": "Hostile creature",
+        "answer": "THORNHOOK",
+        "clue": "Hook dropped by Plantera",
         "chunks": [
-            "VENO",
-            "MA",
-            "NT"
+            "THO",
+            "RNHO",
+            "OK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1547,
-        "answer": "LAVAWYVERN",
-        "clue": "Common enemy",
+        "answer": "LIHZAHRD",
+        "clue": "Enemy found in the Jungle Temple",
         "chunks": [
-            "LAVA",
-            "WYVE",
-            "RN"
+            "LIH",
+            "ZAH",
+            "RD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1548,
-        "answer": "SWAMPCULTIST",
-        "clue": "Hostile creature",
+        "answer": "FLYINGSNAKE",
+        "clue": "Enemy found in the Jungle Temple",
         "chunks": [
-            "SWAM",
-            "PCUL",
-            "TIST"
+            "FLY",
+            "INGS",
+            "NAKE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1549,
         "answer": "SHARPENED",
-        "clue": "Beneficial buff",
+        "clue": "Buff gained by the Sharpening Station",
         "chunks": [
             "SHAR",
             "PEN",
@@ -16741,140 +16741,140 @@
     },
     {
         "id": 1550,
-        "answer": "CORRUPTFISH",
-        "clue": "Hostile creature",
+        "answer": "FUNGIBULB",
+        "clue": "Glowing Mushroom Biome plant enemy",
         "chunks": [
-            "CORR",
-            "UPTF",
-            "ISH"
+            "FUN",
+            "GIB",
+            "ULB"
         ],
         "chunkCount": 3
     },
     {
         "id": 1551,
-        "answer": "BONESKELETON",
-        "clue": "Hostile creature",
+        "answer": "SPOREBAT",
+        "clue": "Glowing Mushroom Biome enemy",
         "chunks": [
-            "BONE",
-            "SKEL",
-            "ETON"
+            "SP",
+            "ORE",
+            "BET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1552,
-        "answer": "MANAREGEN",
-        "clue": "Beneficial buff",
+        "answer": "FUNGOFISH",
+        "clue": "Glowing Mushroom Biome enemy",
         "chunks": [
-            "MANA",
-            "REG",
-            "EN"
+            "FUNG",
+            "OFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1553,
-        "answer": "FLESHCULTIST",
-        "clue": "Hostile creature",
+        "answer": "DEVOURER",
+        "clue": "Corruption worm enemy",
         "chunks": [
-            "FLES",
-            "HCUL",
-            "TIST"
+            "DEV",
+            "OU",
+            "RER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1554,
-        "answer": "BLOODYCARP",
-        "clue": "Catchable fish",
+        "answer": "CORRUPTOR",
+        "clue": "Flying hardmode corruption enemy",
         "chunks": [
-            "BLOO",
-            "DYCA",
-            "RP"
+            "COR",
+            "RU",
+            "PTOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1555,
-        "answer": "DESERTMUMMY",
-        "clue": "Common enemy",
+        "answer": "SLIMELING",
+        "clue": "Dropped from Corrupt Slimes",
         "chunks": [
-            "DESE",
-            "RTMU",
-            "MMY"
+            "SLIM",
+            "ELI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1556,
-        "answer": "HONEYEMBLEM",
-        "clue": "Wearable accessory",
+        "answer": "WORLDFEEDER",
+        "clue": "Hardmode corruption worm enemy",
         "chunks": [
-            "HONE",
-            "YEMB",
-            "LEM"
+            "WORL",
+            "DEAT",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1557,
-        "answer": "PIRATECRAB",
-        "clue": "Common enemy",
+        "answer": "CURSEDFISH",
+        "clue": "Corruption quest fish",
         "chunks": [
-            "PIRA",
-            "TECR",
-            "AB"
+            "CURS",
+            "EDF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1558,
-        "answer": "FLESHDRAGON",
-        "clue": "Hostile creature",
+        "answer": "BLACKCURRANT",
+        "clue": "Fruit dropped by ebonwood trees",
         "chunks": [
-            "FLES",
-            "HDRA",
-            "GON"
+            "BLAC",
+            "KCUR",
+            "RANT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1559,
-        "answer": "FROSTSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "ELDERBERRY",
+        "clue": "Fruit dropped by ebonwood trees",
         "chunks": [
-            "FROS",
-            "TSHR",
-            "IMP"
+            "ELDE",
+            "RBE",
+            "RRY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1560,
-        "answer": "SMALLSPIDER",
-        "clue": "Hostile creature",
+        "answer": "EATEROFSOULS",
+        "clue": "Flying Corruption enemy",
         "chunks": [
-            "SMAL",
-            "LSPI",
-            "DER"
+            "EATE",
+            "ROFS",
+            "OULS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1561,
-        "answer": "VENOMJELLY",
-        "clue": "Hostile creature",
+        "answer": "CLINGER",
+        "clue": "Hardmode Underground Corruption enemy",
         "chunks": [
-            "VENO",
-            "MJEL",
-            "LY"
+            "CLI",
+            "NG",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1562,
         "answer": "LADYBUG",
-        "clue": "Catchable critter",
+        "clue": "Critter that grants luck",
         "chunks": [
             "LAD",
             "YB",
@@ -16884,30 +16884,30 @@
     },
     {
         "id": 1563,
-        "answer": "SPIKYCULTIST",
-        "clue": "Hostile creature",
+        "answer": "WORMHOOK",
+        "clue": "Hook dropped from Corrupt Mimics",
         "chunks": [
-            "SPIK",
-            "YCUL",
-            "TIST"
+            "WO",
+            "RMH",
+            "OOK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1564,
-        "answer": "WARRIORCLOAK",
-        "clue": "Wearable accessory",
+        "answer": "BLOODCRAWLER",
+        "clue": "Crimson spider enemy",
         "chunks": [
-            "WARR",
-            "IORC",
-            "LOAK"
+            "BLOO",
+            "DCRA",
+            "WLER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1565,
         "answer": "GOLDENBUGNET",
-        "clue": "Useful tool",
+        "clue": "Catches critters and breaks grass",
         "chunks": [
             "GOLD",
             "ENBU",
@@ -16917,30 +16917,30 @@
     },
     {
         "id": 1566,
-        "answer": "VORTEXDRILL",
-        "clue": "Useful tool",
+        "answer": "FACEMONSTER",
+        "clue": "Crimson surface enemy",
         "chunks": [
-            "VORT",
-            "EXDR",
-            "ILL"
+            "FAC",
+            "EMON",
+            "STER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1567,
-        "answer": "CURSEDBIRD",
-        "clue": "Hostile creature",
+        "answer": "HERPLING",
+        "clue": "Hardmode Crimson enemy",
         "chunks": [
-            "CURS",
-            "EDBI",
-            "RD"
+            "HER",
+            "PLI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1568,
         "answer": "NEBULABLAZE",
-        "clue": "Powerful weapon",
+        "clue": "Orion's belt in the palm of your hand",
         "chunks": [
             "NEBU",
             "LABL",
@@ -16950,78 +16950,78 @@
     },
     {
         "id": 1569,
-        "answer": "BEEHORNET",
-        "clue": "Common enemy",
+        "answer": "CRIMSLIME",
+        "clue": "Crimson slime",
         "chunks": [
-            "BEEH",
-            "ORN",
-            "ET"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1570,
-        "answer": "MANASHIELD",
-        "clue": "Wearable accessory",
-        "chunks": [
-            "MANA",
-            "SHIE",
-            "LD"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1571,
-        "answer": "SMALLCRAB",
-        "clue": "Hostile creature",
-        "chunks": [
-            "SMAL",
-            "LCR",
-            "AB"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1572,
-        "answer": "FIERCEDRAGON",
-        "clue": "Hostile creature",
-        "chunks": [
-            "FIER",
-            "CEDR",
-            "AGON"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1573,
-        "answer": "DOGPIKE",
-        "clue": "Catchable fish",
-        "chunks": [
-            "DOG",
-            "PI",
-            "KE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1574,
-        "answer": "MECHSLIME",
-        "clue": "Hostile creature",
-        "chunks": [
-            "MECH",
-            "SLI",
+            "CRI",
+            "MSLI",
             "ME"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1575,
-        "answer": "BLOODYBASS",
-        "clue": "Catchable fish",
+        "id": 1570,
+        "answer": "BLOODJELLY",
+        "clue": "Crimson underwater enemy",
+        "chunks": [
+            "BLO",
+            "ODJ",
+            "ELLY"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1571,
+        "answer": "BLOODFEEDER",
+        "clue": "Crimson underwater enemy",
         "chunks": [
             "BLOO",
-            "DYBA",
-            "SS"
+            "DFE",
+            "EDER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1572,
+        "answer": "ICHORFISH",
+        "clue": "Crimson quest fish",
+        "chunks": [
+            "ICH",
+            "ORFI",
+            "SH"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1573,
+        "answer": "BLOODORANGE",
+        "clue": "Fruit dropped by shadewood trees",
+        "chunks": [
+            "BLO",
+            "ODOR",
+            "ANGE"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1574,
+        "answer": "CRIMSONAXE",
+        "clue": "Flying weapon enemy",
+        "chunks": [
+            "CRI",
+            "MSO",
+            "NAXE"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1575,
+        "answer": "FLOATYGROSS",
+        "clue": "Flying Crimson enemy",
+        "chunks": [
+            "FLO",
+            "ATYG",
+            "ROSS"
         ],
         "chunkCount": 3
     },
