@@ -17027,129 +17027,129 @@
     },
     {
         "id": 1576,
-        "answer": "WHITECULTIST",
-        "clue": "Hostile creature",
+        "answer": "TENDONHOOK",
+        "clue": "Hook dropped by Crimson Mimics",
         "chunks": [
-            "WHIT",
-            "ECUL",
-            "TIST"
+            "TEND",
+            "ONH",
+            "OOK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1577,
-        "answer": "TOXICJELLY",
-        "clue": "Hostile creature",
+        "answer": "GASTROPOD",
+        "clue": "Nighttime Hallow enemy",
         "chunks": [
-            "TOXI",
-            "CJEL",
-            "LY"
+            "GAS",
+            "TRO",
+            "POD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1578,
-        "answer": "MOSSDRAGON",
-        "clue": "Hostile creature",
+        "answer": "DRAGONFRUIT",
+        "clue": "Fruit dropped from pearlwood trees",
         "chunks": [
-            "MOSS",
             "DRAG",
-            "ON"
+            "ONFR",
+            "UIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1579,
-        "answer": "BLUEDEMON",
-        "clue": "Common enemy",
+        "answer": "STARFRUIT",
+        "clue": "Fruit dropped from pearlwood trees",
         "chunks": [
-            "BLUE",
-            "DEM",
-            "ON"
+            "STA",
+            "RF",
+            "RUIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1580,
-        "answer": "DARKDRAGON",
-        "clue": "Hostile creature",
+        "answer": "PIXIEFISH",
+        "clue": "Hallow quest fish",
         "chunks": [
-            "DARK",
-            "DRAG",
-            "ON"
+            "PIXI",
+            "EF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1581,
-        "answer": "WOLFSPIDER",
-        "clue": "Hostile creature",
+        "answer": "UNICORNFISH",
+        "clue": "Hallow quest fish",
         "chunks": [
-            "WOLF",
-            "SPID",
-            "ER"
+            "UNIC",
+            "ORNF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1582,
-        "answer": "VENOMBEE",
-        "clue": "Hostile creature",
+        "answer": "APPLEPIE",
+        "clue": "Food dropped by Illuminant enemies",
         "chunks": [
-            "VENO",
-            "MB",
-            "EE"
+            "APP",
+            "LEP",
+            "IE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1583,
-        "answer": "TUNASHRIMP",
-        "clue": "Catchable fish",
+        "answer": "CHAOSFISH",
+        "clue": "Fish used in teleportation potions",
         "chunks": [
-            "TUNA",
-            "SHRI",
-            "MP"
+            "CHA",
+            "OSFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1584,
-        "answer": "GOBLINGHOST",
-        "clue": "Common enemy",
+        "answer": "MIRAGEFISH",
+        "clue": "Hallow quest fish",
         "chunks": [
-            "GOBL",
-            "INGH",
-            "OST"
+            "MIR",
+            "AGEF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1585,
-        "answer": "SHADOWKELP",
-        "clue": "Catchable fish",
+        "answer": "ANGRYBONES",
+        "clue": "Enemy found in the Dungeon",
         "chunks": [
-            "SHAD",
-            "OWKE",
-            "LP"
+            "ANG",
+            "RYB",
+            "ONES"
         ],
         "chunkCount": 3
     },
     {
         "id": 1586,
-        "answer": "PIRATEDUCK",
-        "clue": "Hostile creature",
+        "answer": "DARKCASTER",
+        "clue": "Enemy found in the Dungeon",
         "chunks": [
-            "PIRA",
-            "TEDU",
-            "CK"
+            "DAR",
+            "KCAS",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1587,
-        "answer": "CAVEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "CURSEDSKULL",
+        "clue": "Enemy found in the Dungeon",
         "chunks": [
             "CAVE",
             "DRAG",
@@ -17159,177 +17159,177 @@
     },
     {
         "id": 1588,
-        "answer": "SPOREFROG",
-        "clue": "Hostile creature",
+        "answer": "SPIKEBALL",
+        "clue": "Invincible dungeon enemy",
         "chunks": [
-            "SPOR",
-            "EFR",
-            "OG"
+            "SPIK",
+            "EBA",
+            "LL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1589,
-        "answer": "PIRATEMUMMY",
-        "clue": "Common enemy",
+        "answer": "BLAZINGWHEEL",
+        "clue": "Invincible dungeon enemy",
         "chunks": [
-            "PIRA",
-            "TEMU",
-            "MMY"
+            "BLAZ",
+            "INGW",
+            "HEEL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1590,
-        "answer": "PINKGOBLIN",
-        "clue": "Common enemy",
+        "answer": "PALADIN",
+        "clue": "Post-Plantera Dungeon enemy",
         "chunks": [
-            "PINK",
-            "GOBL",
+            "PA",
+            "LAD",
             "IN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1591,
-        "answer": "TOXICWRAITH",
-        "clue": "Hostile creature",
+        "answer": "DIABOLIST",
+        "clue": "Post-Plantera Dungeon enemy",
         "chunks": [
-            "TOXI",
-            "CWRA",
-            "ITH"
+            "DIAB",
+            "OL",
+            "IST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1592,
-        "answer": "SILVERZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "BONELEE",
+        "clue": "Post-Plantera Dungeon enemy",
         "chunks": [
-            "SILV",
-            "ERZO",
-            "MBIE"
+            "BO",
+            "NEL",
+            "EE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1593,
-        "answer": "BONEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "BONEWELDER",
+        "clue": "Crafting station for bones",
         "chunks": [
             "BONE",
-            "DRAG",
-            "ON"
+            "WEL",
+            "DER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1594,
-        "answer": "FROSTBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "CREAMSODA",
+        "clue": "Food dropped by Cursed Skulls",
         "chunks": [
-            "FROS",
-            "TBOO",
-            "TS"
+            "CR",
+            "EAMS",
+            "ODA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1595,
-        "answer": "HALLOWEDANT",
-        "clue": "Hostile creature",
+        "answer": "SWATHELMET",
+        "clue": "Tactical Skeleton vanity item drop",
         "chunks": [
-            "HALL",
-            "OWED",
-            "ANT"
+            "SWA",
+            "THE",
+            "LMET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1596,
-        "answer": "ATLANTICCARP",
-        "clue": "Catchable fish",
+        "answer": "BBQRIBS",
+        "clue": "Food dropped by dungeon enemies",
         "chunks": [
-            "ATLA",
-            "NTIC",
-            "CARP"
+            "BB",
+            "QR",
+            "IBS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1597,
-        "answer": "SKELEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "BUNNYFISH",
+        "clue": "Forest quest fish",
         "chunks": [
-            "SKEL",
-            "EDRA",
-            "GON"
+            "BUN",
+            "NYF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1598,
-        "answer": "JUNGLEPIKE",
-        "clue": "Catchable fish",
+        "answer": "DIRTFISH",
+        "clue": "Forest quest fish",
         "chunks": [
-            "JUNG",
-            "LEPI",
-            "KE"
+            "DIR",
+            "TFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1599,
-        "answer": "SHADOWDEMON",
-        "clue": "Hostile creature",
+        "answer": "HARPYFISH",
+        "clue": "Sky quest fish",
         "chunks": [
-            "SHAD",
-            "OWDE",
-            "MON"
+            "HAR",
+            "PYF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1600,
-        "answer": "FLAMEWINGS",
-        "clue": "Allows flight",
+        "answer": "SCARABFISH",
+        "clue": "Desert quest fish",
         "chunks": [
-            "FLAM",
-            "EWIN",
-            "GS"
+            "SCAR",
+            "ABFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1601,
-        "answer": "GOLDSHARK",
-        "clue": "Hostile creature",
+        "answer": "SLIMEFISH",
+        "clue": "Forest quest fish",
         "chunks": [
-            "GOLD",
-            "SHA",
-            "RK"
+            "SLI",
+            "MEF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1602,
-        "answer": "PIRATEBAT",
-        "clue": "Common enemy",
+        "answer": "SCORPIOFISH",
+        "clue": "Desert quest fish",
         "chunks": [
-            "PIRA",
-            "TEB",
-            "AT"
+            "SCOR",
+            "PIOF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1603,
-        "answer": "CRIMSONBAT",
-        "clue": "Hostile creature",
+        "answer": "ZOMBIEFISH",
+        "clue": "Forest quest fish",
         "chunks": [
-            "CRIM",
-            "SONB",
-            "AT"
+            "ZOMB",
+            "IEFI",
+            "SH"
         ],
         "chunkCount": 3
     },
