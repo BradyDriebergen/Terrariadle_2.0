@@ -17335,12 +17335,12 @@
     },
     {
         "id": 1604,
-        "answer": "SPIKYWRAITH",
-        "clue": "Hostile creature",
+        "answer": "LAVALAMP",
+        "clue": "Light bought from the Party Girl",
         "chunks": [
-            "SPIK",
-            "YWRA",
-            "ITH"
+            "LAV",
+            "ALA",
+            "MP"
         ],
         "chunkCount": 3
     },
@@ -17357,106 +17357,106 @@
     },
     {
         "id": 1606,
-        "answer": "GOLDSALMON",
-        "clue": "Catchable fish",
+        "answer": "PLASMALAMP",
+        "clue": "Light bought from the Party Girl",
         "chunks": [
-            "GOLD",
-            "SALM",
-            "ON"
+            "PLA",
+            "SMAL",
+            "AMP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1607,
-        "answer": "WYVERNMUMMY",
-        "clue": "Common enemy",
+        "answer": "CANDYCORN",
+        "clue": "Pumpkin Moon weapon ammunition",
         "chunks": [
-            "WYVE",
-            "RNMU",
-            "MMY"
+            "CAN",
+            "DYC",
+            "ORN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1608,
         "answer": "WORKBENCH",
-        "clue": "Crafting station",
+        "clue": "Equivalent to a crafting table",
         "chunks": [
-            "WORK",
-            "BEN",
+            "WOR",
+            "KBEN",
             "CH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1609,
-        "answer": "SKYCRAB",
-        "clue": "Catchable fish",
+        "answer": "THEGROOM",
+        "clue": "Counterpart to The Bride",
         "chunks": [
-            "SKY",
-            "CR",
-            "AB"
+            "TH",
+            "EGR",
+            "OOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1610,
-        "answer": "PLATINUMAXE",
-        "clue": "Chopping tool",
+        "answer": "THEBRIDE",
+        "clue": "Counterpart to The Groom",
         "chunks": [
-            "PLAT",
-            "INUM",
-            "AXE"
+            "THE",
+            "BRI",
+            "DE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1611,
-        "answer": "BLOODWYVERN",
-        "clue": "Common enemy",
+        "answer": "DRIPPLER",
+        "clue": "Flying Blood Moon enemy",
         "chunks": [
-            "BLOO",
-            "DWYV",
-            "ERN"
+            "DR",
+            "IPP",
+            "LER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1612,
-        "answer": "DOGMINNOW",
-        "clue": "Catchable fish",
+        "answer": "ZOMBIEMERMAN",
+        "clue": "Enemy fished for during Blood Moon",
         "chunks": [
-            "DOGM",
-            "INN",
-            "OW"
+            "ZOMB",
+            "IEME",
+            "RMAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1613,
         "answer": "ARMSDEALER",
-        "clue": "Friendly npc",
+        "clue": "NPC who likes the nurse",
         "chunks": [
-            "ARMS",
-            "DEAL",
-            "ER"
+            "ARM",
+            "SDE",
+            "ALER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1614,
-        "answer": "PIRATEGHOST",
-        "clue": "Common enemy",
+        "answer": "BLOODSQUID",
+        "clue": "Enemy fished for during Blood Moon",
         "chunks": [
-            "PIRA",
-            "TEGH",
-            "OST"
+            "BLO",
+            "ODSQ",
+            "UID"
         ],
         "chunkCount": 3
     },
     {
         "id": 1615,
-        "answer": "SILVERAXE",
+        "answer": "",
         "clue": "Chopping tool",
         "chunks": [
             "SILV",

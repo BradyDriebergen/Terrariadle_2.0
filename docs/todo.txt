@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at Angler, item 1603
+Finished at Blood moon, item 1614
 
 Skipping 501 - 700, will update after 3 chunk words
 
