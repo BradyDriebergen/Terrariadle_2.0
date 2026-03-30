@@ -4925,8 +4925,8 @@
         "answer": "CHALICE",
         "clue": "Fancy cup sold by traveling merchant",
         "chunks": [
-            "BONE",
-            "OGRE"
+            "CHA",
+            "LICE"
         ],
         "chunkCount": 2
     },
@@ -9866,12 +9866,12 @@
     },
     {
         "id": 925,
-        "answer": "SHADOW",
-        "clue": "Corruption armor set",
+        "answer": "PINWHEEL",
+        "clue": "Merchant sells this during windy days",
         "chunks": [
-            "SH",
-            "AD",
-            "OW"
+            "PI",
+            "NWH",
+            "EEL"
         ],
         "chunkCount": 3
     },
@@ -9902,9 +9902,9 @@
         "answer": "FORBIDDEN",
         "clue": "Armor set aquired from sand elementals",
         "chunks": [
-            "SHAD",
-            "OWOG",
-            "RE"
+            "FOR",
+            "BID",
+            "DEN"
         ],
         "chunkCount": 3
     },
@@ -11968,7 +11968,7 @@
     {
         "id": 1116,
         "answer": "STARDUSTCELL",
-        "clue": "Cellular minion",
+        "clue": "Minion that looks like a Star Cell",
         "chunks": [
             "STAR",
             "DUST",
@@ -17456,63 +17456,63 @@
     },
     {
         "id": 1615,
-        "answer": "",
-        "clue": "Chopping tool",
+        "answer": "BLOODEEL",
+        "clue": "Enemy fished for during Blood Moon",
         "chunks": [
-            "SILV",
-            "ERA",
-            "XE"
+            "BL",
+            "OO",
+            "DEEL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1616,
-        "answer": "VENOMBAT",
-        "clue": "Hostile creature",
+        "answer": "HEMOGOBLIN",
+        "clue": "Type of walking shark",
         "chunks": [
-            "VENO",
-            "MB",
-            "AT"
+            "HEM",
+            "OGO",
+            "BLIN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1617,
-        "answer": "DESERTBEE",
-        "clue": "Hostile creature",
+        "answer": "MONEYTROUGH",
+        "clue": "Summons a flying piggy bank",
         "chunks": [
-            "DESE",
-            "RTB",
-            "EE"
+            "MONE",
+            "YTR",
+            "OUGH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1618,
-        "answer": "FIERCEDUCK",
-        "clue": "Hostile creature",
+        "answer": "CHUMCASTER",
+        "clue": "Blood Moon fishing pole",
         "chunks": [
-            "FIER",
-            "CEDU",
-            "CK"
+            "CHU",
+            "MCAS",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1619,
-        "answer": "DESERTANT",
-        "clue": "Hostile creature",
+        "answer": "GOBLINPEON",
+        "clue": "Goblin Army enemy",
         "chunks": [
-            "DESE",
-            "RTA",
-            "NT"
+            "GOB",
+            "LINP",
+            "EON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1620,
         "answer": "SOLIDIFIER",
-        "clue": "Crafting station",
+        "clue": "Used to craft with gel",
         "chunks": [
             "SOLI",
             "DIFI",
@@ -17522,74 +17522,74 @@
     },
     {
         "id": 1621,
-        "answer": "SPOREFISH",
-        "clue": "Hostile creature",
+        "answer": "GOBLINTHIEF",
+        "clue": "Goblin Army enemy",
         "chunks": [
-            "SPOR",
-            "EFI",
-            "SH"
+            "GOBL",
+            "INTH",
+            "IEF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1622,
-        "answer": "FROSTEMBLEM",
-        "clue": "Wearable accessory",
+        "answer": "GOBLINARCHER",
+        "clue": "Goblin Army enemy",
         "chunks": [
-            "FROS",
-            "TEMB",
-            "LEM"
+            "GOBL",
+            "INAR",
+            "CHER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1623,
-        "answer": "JUNGLEEYE",
-        "clue": "Hostile creature",
+        "answer": "GOBLINARMY",
+        "clue": "First invasion event",
         "chunks": [
-            "JUNG",
-            "LEE",
-            "YE"
+            "GOB",
+            "LINA",
+            "RMY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1624,
-        "answer": "FLESHDUCK",
-        "clue": "Hostile creature",
+        "answer": "ETHERIAN",
+        "clue": "Old One's Army enemy prefix",
         "chunks": [
-            "FLES",
-            "HDU",
-            "CK"
+            "ETH",
+            "ER",
+            "IAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1625,
-        "answer": "JUNGLEDEMON",
-        "clue": "Common enemy",
+        "answer": "BOMBER",
+        "clue": "Type of Etherian goblin",
         "chunks": [
-            "JUNG",
-            "LEDE",
-            "MON"
+            "BO",
+            "MB",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1626,
-        "answer": "DESERTWYVERN",
-        "clue": "Common enemy",
+        "answer": "DARKMAGE",
+        "clue": "Old One's Army mini-boss",
         "chunks": [
-            "DESE",
-            "RTWY",
-            "VERN"
+            "DAR",
+            "KMA",
+            "GE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1627,
         "answer": "MOLTENARMOR",
-        "clue": "Armor set",
+        "clue": "Best pre-hardmode melee set",
         "chunks": [
             "MOLT",
             "ENAR",
@@ -17600,7 +17600,7 @@
     {
         "id": 1628,
         "answer": "REAVERSHARK",
-        "clue": "Useful tool",
+        "clue": "Pickaxe you fish for",
         "chunks": [
             "REAV",
             "ERSH",
@@ -17611,7 +17611,7 @@
     {
         "id": 1629,
         "answer": "TRUFFLEWORM",
-        "clue": "Catchable critter",
+        "clue": "Summons Duke Fishron",
         "chunks": [
             "TRUF",
             "FLEW",
@@ -17621,129 +17621,129 @@
     },
     {
         "id": 1630,
-        "answer": "BESTIARYGIRL",
-        "clue": "Friendly npc",
+        "answer": "KOBOLD",
+        "clue": "Type of Etherian goblin",
         "chunks": [
-            "BEST",
-            "IARY",
-            "GIRL"
+            "KO",
+            "BO",
+            "LD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1631,
-        "answer": "FROSTSPIDER",
-        "clue": "Hostile creature",
+        "answer": "DRAKIN",
+        "clue": "Old One's Army enemy",
         "chunks": [
-            "FROS",
-            "TSPI",
-            "DER"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1632,
-        "answer": "HELLSHARK",
-        "clue": "Hostile creature",
-        "chunks": [
-            "HELL",
-            "SHA",
-            "RK"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1633,
-        "answer": "WEREWOLFCRAB",
-        "clue": "Common enemy",
-        "chunks": [
-            "WERE",
-            "WOLF",
-            "CRAB"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1634,
-        "answer": "CRIMSONPIKE",
-        "clue": "Catchable fish",
-        "chunks": [
-            "CRIM",
-            "SONP",
-            "IKE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1635,
-        "answer": "FIERCEMUMMY",
-        "clue": "Hostile creature",
-        "chunks": [
-            "FIER",
-            "CEMU",
-            "MMY"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1636,
-        "answer": "GREENZOMBIE",
-        "clue": "Common enemy",
-        "chunks": [
-            "GREE",
-            "NZOM",
-            "BIE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1637,
-        "answer": "SLIMEWYVERN",
-        "clue": "Common enemy",
-        "chunks": [
-            "SLIM",
-            "EWYV",
-            "ERN"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1638,
-        "answer": "BLUECULTIST",
-        "clue": "Hostile creature",
-        "chunks": [
-            "BLUE",
-            "CULT",
-            "IST"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1639,
-        "answer": "REDGOBLIN",
-        "clue": "Common enemy",
-        "chunks": [
-            "REDG",
-            "OBL",
+            "DR",
+            "AK",
             "IN"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1640,
-        "answer": "MARTIANFISH",
-        "clue": "Hostile creature",
+        "id": 1632,
+        "answer": "KOBOLDGLIDER",
+        "clue": "Old One's Army enemy",
         "chunks": [
-            "MART",
-            "IANF",
+            "KOBO",
+            "LDGL",
+            "IDER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1633,
+        "answer": "WITHERBEAST",
+        "clue": "Old One's Army enemy",
+        "chunks": [
+            "WITH",
+            "ERB",
+            "EAST"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1634,
+        "answer": "CREEPEREGG",
+        "clue": "Summons the Flickerwick pet",
+        "chunks": [
+            "CREE",
+            "PER",
+            "EGG"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1635,
+        "answer": "FLYINGFISH",
+        "clue": "Rain enemy",
+        "chunks": [
+            "FLY",
+            "INGF",
             "ISH"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1636,
+        "answer": "RAINCOAT",
+        "clue": "Zombie that spawns in the rain",
+        "chunks": [
+            "RAI",
+            "NC",
+            "OAT"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1637,
+        "answer": "ANGRYNIMBUS",
+        "clue": "Hardmode rain enemy",
+        "chunks": [
+            "ANG",
+            "RYNI",
+            "MBUS"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1638,
+        "answer": "RAINSONG",
+        "clue": "Instrament dropped from Flying Fish",
+        "chunks": [
+            "RAI",
+            "NSO",
+            "NG"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1639,
+        "answer": "ANGRYTUMBLER",
+        "clue": "Sandstorm enemy",
+        "chunks": [
+            "ANGR",
+            "YTUM",
+            "BLER"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1640,
+        "answer": "SANDSHARK",
+        "clue": "Sandstorm enemy",
+        "chunks": [
+            "SAN",
+            "DSH",
+            "ARK"
         ],
         "chunkCount": 3
     },
     {
         "id": 1641,
         "answer": "WORMSCARF",
-        "clue": "Helpful accessory",
+        "clue": "Expert mode EoW accessory",
         "chunks": [
             "WORM",
             "SCA",
@@ -17753,52 +17753,52 @@
     },
     {
         "id": 1642,
-        "answer": "FROSTGLOVE",
-        "clue": "Wearable accessory",
+        "answer": "BONEBITER",
+        "clue": "Corruption Sandstorm enemy",
         "chunks": [
-            "FROS",
-            "TGLO",
-            "VE"
+            "BON",
+            "EBI",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1643,
-        "answer": "BUNNYHOOD",
-        "clue": "Headgear hat",
+        "answer": "FLESHREAVER",
+        "clue": "Crimson Sandstorm enemy",
         "chunks": [
-            "BUNN",
-            "YHO",
-            "OD"
+            "FLE",
+            "SHRE",
+            "AVER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1644,
-        "answer": "BLACKOGRE",
-        "clue": "Hostile creature",
+        "answer": "TORCHGOD",
+        "clue": "Boss you cannot hit",
         "chunks": [
-            "BLAC",
-            "KOG",
-            "RE"
+            "TORC",
+            "HG",
+            "OD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1645,
-        "answer": "WYVERNWRAITH",
-        "clue": "Common enemy",
+        "answer": "WINDYBALOON",
+        "clue": "Attached to slimes on a windy day",
         "chunks": [
-            "WYVE",
-            "RNWR",
-            "AITH"
+            "WIN",
+            "DYBA",
+            "LOON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1646,
         "answer": "MERCHANT",
-        "clue": "Friendly npc",
+        "clue": "NPC that throws throwing knifes",
         "chunks": [
             "MERC",
             "HA",
@@ -17809,7 +17809,7 @@
     {
         "id": 1647,
         "answer": "SHADOWARMOR",
-        "clue": "Armor set",
+        "clue": "Corruption armor set",
         "chunks": [
             "SHAD",
             "OWAR",
@@ -17820,7 +17820,7 @@
     {
         "id": 1648,
         "answer": "MYTHRILARMOR",
-        "clue": "Armor set",
+        "clue": "Hardmode metal armor set",
         "chunks": [
             "MYTH",
             "RILA",
@@ -17830,41 +17830,41 @@
     },
     {
         "id": 1649,
-        "answer": "SILVERSHARK",
-        "clue": "Hostile creature",
+        "answer": "WINDYDAY",
+        "clue": "Weather event",
         "chunks": [
-            "SILV",
-            "ERSH",
-            "ARK"
+            "WIN",
+            "DYD",
+            "AY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1650,
-        "answer": "BLUEGHOST",
-        "clue": "Common enemy",
+        "answer": "SANDSTORM",
+        "clue": "Desert event",
         "chunks": [
-            "BLUE",
-            "GHO",
-            "ST"
+            "SA",
+            "NDST",
+            "ORM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1651,
-        "answer": "BLUEZOMBIE",
-        "clue": "Common enemy",
+        "answer": "LUNAREVENT",
+        "clue": "Event with four different pillars",
         "chunks": [
-            "BLUE",
-            "ZOMB",
-            "IE"
+            "LUN",
+            "AREV",
+            "ENT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1652,
         "answer": "HONEYCOMB",
-        "clue": "Helpful accessory",
+        "clue": "Releases bees when hurt accessory",
         "chunks": [
             "HONE",
             "YCO",
@@ -17874,30 +17874,30 @@
     },
     {
         "id": 1653,
-        "answer": "TINCHAINMAIL",
-        "clue": "Armor chestpiece",
+        "answer": "MISTERSTABBY",
+        "clue": "Frost Legion enemy",
         "chunks": [
-            "TINC",
-            "HAIN",
-            "MAIL"
+            "MIST",
+            "ERST",
+            "ABBY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1654,
-        "answer": "TUNGSTENBOW",
-        "clue": "Powerful weapon",
+        "answer": "SNOWBALLA",
+        "clue": "Frost Legion enemy",
         "chunks": [
-            "TUNG",
-            "STEN",
-            "BOW"
+            "SN",
+            "OWB",
+            "ALLA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1655,
         "answer": "MAGICPOWER",
-        "clue": "Beneficial buff",
+        "clue": "Magic damage buff",
         "chunks": [
             "MAGI",
             "CPOW",
@@ -17907,121 +17907,121 @@
     },
     {
         "id": 1656,
-        "answer": "JUNGLESNAIL",
-        "clue": "Hostile creature",
+        "answer": "FLOCKO",
+        "clue": "Flying Frost Moon enemy",
         "chunks": [
-            "JUNG",
-            "LESN",
-            "AIL"
+            "FL",
+            "OC",
+            "KO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1657,
-        "answer": "WARRIORGLOVE",
-        "clue": "Wearable accessory",
+        "answer": "ZOMBIEELF",
+        "clue": "Frost Moon enemy",
         "chunks": [
-            "WARR",
-            "IORG",
-            "LOVE"
+            "ZOM",
+            "BI",
+            "EELF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1658,
-        "answer": "CRIMSONBASS",
-        "clue": "Catchable fish",
+        "answer": "ELFARCHER",
+        "clue": "Frost Moon enemy",
         "chunks": [
-            "CRIM",
-            "SONB",
-            "ASS"
+            "EL",
+            "FAR",
+            "CHER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1659,
-        "answer": "CURSEDPIRATE",
-        "clue": "Common enemy",
+        "answer": "NUTCRACKER",
+        "clue": "Frost Moon enemy",
         "chunks": [
-            "CURS",
-            "EDPI",
-            "RATE"
+            "NUT",
+            "CRAC",
+            "KER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1660,
-        "answer": "FIERCESHARK",
-        "clue": "Hostile creature",
+        "answer": "ELFCOPTER",
+        "clue": "Flying Frost Moon enemy",
         "chunks": [
-            "FIER",
-            "CESH",
-            "ARK"
+            "ELF",
+            "COP",
+            "TER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1661,
-        "answer": "LAVAGAUNTLET",
-        "clue": "Wearable accessory",
+        "answer": "KRAMPUS",
+        "clue": "Frost Moon enemy",
         "chunks": [
-            "LAVA",
-            "GAUN",
-            "TLET"
+            "KR",
+            "AM",
+            "PUS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1662,
-        "answer": "ARMOREDBASS",
-        "clue": "Catchable fish",
+        "answer": "EVERSCREAM",
+        "clue": "Frost Moon boss",
         "chunks": [
-            "ARMO",
-            "REDB",
-            "ASS"
+            "EVE",
+            "RSC",
+            "REAM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1663,
-        "answer": "MOSSOGRE",
-        "clue": "Hostile creature",
+        "answer": "SANTANK1",
+        "clue": "Frost Moon boss",
         "chunks": [
-            "MOSS",
-            "OG",
-            "RE"
+            "SAN",
+            "TA",
+            "NK1"
         ],
         "chunkCount": 3
     },
     {
         "id": 1664,
-        "answer": "ARMOREDWORM",
-        "clue": "Hostile creature",
+        "answer": "SELENIAN",
+        "clue": "Solar enemy that blocks projectiles",
         "chunks": [
-            "ARMO",
-            "REDW",
-            "ORM"
+            "SEL",
+            "ENI",
+            "AN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1665,
-        "answer": "ICEGOBLIN",
-        "clue": "Common enemy",
+        "answer": "DRAKANIAN",
+        "clue": "Rides the Drakomire",
         "chunks": [
-            "ICEG",
-            "OBL",
-            "IN"
+            "DRA",
+            "KAN",
+            "IAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1666,
-        "answer": "REDPIRATE",
-        "clue": "Common enemy",
+        "answer": "CORITE",
+        "clue": "Solar enemy that acts like a meteor",
         "chunks": [
-            "REDP",
-            "IRA",
+            "CO",
+            "RI",
             "TE"
         ],
         "chunkCount": 3
@@ -18029,7 +18029,7 @@
     {
         "id": 1667,
         "answer": "RECALLPOTION",
-        "clue": "Drinkable potion",
+        "clue": "Subsitute to the Magic Mirror",
         "chunks": [
             "RECA",
             "LLPO",
@@ -18039,118 +18039,118 @@
     },
     {
         "id": 1668,
-        "answer": "BLUESHARK",
-        "clue": "Common enemy",
+        "answer": "SROLLER",
+        "clue": "Solar enemy that spins like Sonic",
         "chunks": [
-            "BLUE",
-            "SHA",
-            "RK"
+            "SRO",
+            "LL",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1669,
-        "answer": "VAMPSNAIL",
-        "clue": "Hostile creature",
+        "answer": "CRAWLTIPEDE",
+        "clue": "Targets you only when your in air",
         "chunks": [
-            "VAMP",
-            "SNA",
-            "IL"
+            "CRA",
+            "WLTI",
+            "PEDE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1670,
-        "answer": "SMALLWORM",
-        "clue": "Hostile creature",
+        "answer": "DRAKOMIRE",
+        "clue": "A Drakanian rides one of these",
         "chunks": [
-            "SMAL",
-            "LWO",
-            "RM"
+            "DRA",
+            "KOM",
+            "IRE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1671,
-        "answer": "BLUESNAIL",
-        "clue": "Hostile creature",
+        "answer": "SOLARPILLAR",
+        "clue": "Melee-themed pillar",
         "chunks": [
-            "BLUE",
-            "SNA",
-            "IL"
+            "SOLA",
+            "RPIL",
+            "LAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1672,
-        "answer": "SHARKCHARM",
-        "clue": "Wearable accessory",
+        "answer": "STORMDIVER",
+        "clue": "Vortex enemy with a shotgun",
         "chunks": [
-            "SHAR",
-            "KCHA",
-            "RM"
+            "STO",
+            "RMDI",
+            "VER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1673,
-        "answer": "HELLMUMMY",
-        "clue": "Hostile creature",
+        "answer": "ALIENLARVA",
+        "clue": "Spawns from Alien Queens",
         "chunks": [
-            "HELL",
-            "MUM",
-            "MY"
+            "ALI",
+            "ENL",
+            "ARVA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1674,
-        "answer": "RANGERBELT",
-        "clue": "Wearable accessory",
+        "answer": "ALIENHORNET",
+        "clue": "Grows from Alien Larva",
         "chunks": [
-            "RANG",
-            "ERBE",
-            "LT"
+            "ALI",
+            "ENHO",
+            "RNET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1675,
-        "answer": "GILLSPOTION",
-        "clue": "Drinkable potion",
+        "answer": "ALIENQUEEN",
+        "clue": "Grows from Alien Hornets",
         "chunks": [
-            "GILL",
-            "SPOT",
-            "ION"
+            "AL",
+            "IENQ",
+            "UEEN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1676,
-        "answer": "FISHSKELETON",
-        "clue": "Common enemy",
+        "answer": "VORTEXIAN",
+        "clue": "Vortex enemy that spawns lightning",
         "chunks": [
-            "FISH",
-            "SKEL",
-            "ETON"
+            "VOR",
+            "TEX",
+            "IAN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1677,
-        "answer": "LAVABEE",
-        "clue": "Hostile creature",
+        "answer": "VORTEXPILLAR",
+        "clue": "Ranger-themed pillar",
         "chunks": [
-            "LAV",
-            "AB",
-            "EE"
+            "VORT",
+            "EXPI",
+            "LLAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1678,
         "answer": "FROZENWINGS",
-        "clue": "Allows flight",
+        "clue": "Crafted from a Ice Feather",
         "chunks": [
             "FROZ",
             "ENWI",
@@ -18160,128 +18160,128 @@
     },
     {
         "id": 1679,
-        "answer": "CATSALMON",
-        "clue": "Catchable fish",
+        "answer": "PREDICTOR",
+        "clue": "Nebula enemy that shoots Piercers",
         "chunks": [
-            "CATS",
-            "ALM",
-            "ON"
+            "PRE",
+            "DIC",
+            "TOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1680,
-        "answer": "SPECSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "BRAINSUCKLER",
+        "clue": "Nebula enemy that sticks to the player",
         "chunks": [
-            "SPEC",
-            "SNAP",
-            "PER"
+            "BRAI",
+            "NSUC",
+            "KLER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1681,
-        "answer": "COPPERSWORD",
-        "clue": "Melee weapon",
+        "answer": "NEBULAPILLAR",
+        "clue": "Mage-themed pillar",
         "chunks": [
-            "COPP",
-            "ERSW",
-            "ORD"
+            "NEBU",
+            "LAPI",
+            "LLAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1682,
-        "answer": "GOLDSLIME",
-        "clue": "Hostile creature",
+        "answer": "GOLDENSLIME",
+        "clue": "Celebration Mk 10 seed slime",
         "chunks": [
             "GOLD",
-            "SLI",
-            "ME"
+            "ENSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1683,
-        "answer": "PINKHORNET",
-        "clue": "Common enemy",
+        "answer": "STARCELL",
+        "clue": "Stardust enemy that divides on death",
         "chunks": [
-            "PINK",
-            "HORN",
-            "ET"
+            "STA",
+            "RCE",
+            "LL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1684,
         "answer": "DEERCLOPS",
-        "clue": "Major boss",
+        "clue": "Snow Biome boss",
         "chunks": [
-            "DEER",
-            "CLO",
+            "DEE",
+            "RCLO",
             "PS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1685,
-        "answer": "WHITECRAB",
-        "clue": "Common enemy",
+        "answer": "FLOWINVADER",
+        "clue": "Stardust enemy that shoots on death",
         "chunks": [
-            "WHIT",
-            "ECR",
-            "AB"
+            "FLO",
+            "WINV",
+            "ADER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1686,
-        "answer": "LAVAOGRE",
-        "clue": "Hostile creature",
+        "answer": "TWINKLE",
+        "clue": "Summoned from Twinkle Poppers",
         "chunks": [
-            "LAVA",
-            "OG",
-            "RE"
+            "TWI",
+            "NK",
+            "LE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1687,
-        "answer": "SPOREOGRE",
-        "clue": "Hostile creature",
+        "answer": "STARGAZER",
+        "clue": "Stardust enemy that shoots lasers",
         "chunks": [
-            "SPOR",
-            "EOG",
-            "RE"
+            "STA",
+            "RGA",
+            "ZER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1688,
-        "answer": "BONEPIRATE",
-        "clue": "Hostile creature",
+        "answer": "FRAGMENT",
+        "clue": "Post-Lunatic Cultist crafting material",
         "chunks": [
-            "BONE",
-            "PIRA",
-            "TE"
+            "FRA",
+            "GM",
+            "ENT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1689,
-        "answer": "PIRATEBIRD",
-        "clue": "Hostile creature",
+        "answer": "LUMINITE",
+        "clue": "Post-Moon Lord metal",
         "chunks": [
-            "PIRA",
-            "TEBI",
-            "RD"
+            "LUM",
+            "INI",
+            "TE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1690,
-        "answer": "DEMONHORNET",
+        "answer": "",
         "clue": "Common enemy",
         "chunks": [
             "DEMO",

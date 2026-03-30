@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at Blood moon, item 1614
+Finished at Martian Madness, item 1690
 
 Skipping 501 - 700, will update after 3 chunk words
 
@@ -46,6 +46,16 @@ Imbuing station (All crafting stations)
 Target Dummy
 Celestial Shell
 Endgame wings
+
+Betsy
+Ogre
+PARTY
+SNOWMAN GANGSTA
+YETI
+EVOLUTION BEAST
+NEBULA FLOATER
+TWINKLE POPPER
+MILKYWAY WEAVER
 
 
 Potential categories:
