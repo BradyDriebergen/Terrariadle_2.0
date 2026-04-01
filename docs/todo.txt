@@ -51,11 +51,21 @@ Betsy
 Ogre
 PARTY
 SNOWMAN GANGSTA
-YETI
+SABER (Type of chlorophyte sword)
+FRITZ
+Town Slimes
+TRUE (Prefix for broken hero sword weapons)
+DRONE (MARTIAN)
+martian saucer
+brain scrambler
 EVOLUTION BEAST
 NEBULA FLOATER
 TWINKLE POPPER
 MILKYWAY WEAVER
+FLYING DUTCHMAN
+BARREL LAUNCHER
+MOURNING WOOD
+MARTIAN MADNESS
 
 
 Potential categories:
