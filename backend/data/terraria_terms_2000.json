@@ -2792,11 +2792,11 @@
     },
     {
         "id": 280,
-        "answer": "FLINX",
-        "clue": "Underground, furry, ice enemy",
+        "answer": "PARTY",
+        "clue": "Event that causes NPDs to wear hats",
         "chunks": [
-            "FLI",
-            "NX"
+            "PA",
+            "RTY"
         ],
         "chunkCount": 2
     },
@@ -2922,18 +2922,18 @@
     },
     {
         "id": 293,
-        "answer": "SUNFURY",
-        "clue": "Shadow chest mace",
+        "answer": "BETSY",
+        "clue": "Old One's Army's boss",
         "chunks": [
-            "SUNF",
-            "URY"
+            "BET",
+            "SY"
         ],
         "chunkCount": 2
     },
     {
         "id": 294,
         "answer": "FEATHER",
-        "clue": "Used to craft most wings",
+        "clue": "Dropped from Harpys",
         "chunks": [
             "FEA",
             "THER"
@@ -14321,7 +14321,7 @@
     },
     {
         "id": 1330,
-        "answer": "CHRIMSONHEART",
+        "answer": "CRIMSONHEART",
         "clue": "Drops weapons when broken",
         "chunks": [
             "CRIM",
@@ -14905,7 +14905,7 @@
     {
         "id": 1383,
         "answer": "ANTLIONEGGS",
-        "clue": "Spawns Larva when broken",
+        "clue": "Spawns Antlion Larva when broken",
         "chunks": [
             "ANTL",
             "IONE",
@@ -17193,7 +17193,7 @@
     {
         "id": 1591,
         "answer": "DIABOLIST",
-        "clue": "Post-Plantera Dungeon enemy",
+        "clue": "Post-Plantera Dungeon sorcerer enemy",
         "chunks": [
             "DIAB",
             "OL",
@@ -19469,19 +19469,19 @@
     },
     {
         "id": 1798,
-        "answer": "",
-        "clue": "Hostile creature",
+        "answer": "FORMATC",
+        "clue": "Buyable hardmode yoyo",
         "chunks": [
-            "HALL",
-            "OWED",
-            "ORC"
+            "FOR",
+            "MA",
+            "TC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1799,
         "answer": "OLDONESARMY",
-        "clue": "World event",
+        "clue": "Crossover event with Dungeon Defenders 2",
         "chunks": [
             "OLDO",
             "NESA",
@@ -19491,206 +19491,206 @@
     },
     {
         "id": 1800,
-        "answer": "CRABGOBLIN",
-        "clue": "Common enemy",
+        "answer": "GRADIENT",
+        "clue": "Buyable hardmode yoyo",
         "chunks": [
-            "CRAB",
-            "GOBL",
-            "IN"
+            "GRA",
+            "DI",
+            "ENT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1801,
-        "answer": "SHARKAMULET",
-        "clue": "Wearable accessory",
+        "answer": "BOOMERANG",
+        "clue": "Type of melee weapon",
         "chunks": [
-            "SHAR",
-            "KAMU",
-            "LET"
+            "BOO",
+            "MER",
+            "ANG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1802,
-        "answer": "WOLFCULTIST",
-        "clue": "Hostile creature",
+        "answer": "THORNCHAKRAM",
+        "clue": "Boomerang that inflicts poison",
         "chunks": [
-            "WOLF",
-            "CULT",
-            "IST"
+            "THOR",
+            "NCHA",
+            "KRAM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1803,
-        "answer": "NINJAEMBLEM",
-        "clue": "Wearable accessory",
+        "answer": "FLAMARANG",
+        "clue": "Hellstone boomerang",
         "chunks": [
-            "NINJ",
-            "AEMB",
-            "LEM"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1804,
-        "answer": "SMALLFISH",
-        "clue": "Hostile creature",
-        "chunks": [
-            "SMAL",
-            "LFI",
-            "SH"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1805,
-        "answer": "LAVARING",
-        "clue": "Wearable accessory",
-        "chunks": [
-            "LAVA",
-            "RI",
+            "FLA",
+            "MARA",
             "NG"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1806,
-        "answer": "DESERTZOMBIE",
-        "clue": "Common enemy",
+        "id": 1804,
+        "answer": "FLAMINGMACE",
+        "clue": "Upgrade for the Mace",
         "chunks": [
-            "DESE",
-            "RTZO",
-            "MBIE"
+            "FLAM",
+            "INGM",
+            "ACE"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1805,
+        "answer": "DEMONBOW",
+        "clue": "Demonite bow",
+        "chunks": [
+            "DEM",
+            "ONB",
+            "OW"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1806,
+        "answer": "TENDONBOW",
+        "clue": "Crimtane bow",
+        "chunks": [
+            "TEN",
+            "DON",
+            "BOW"
         ],
         "chunkCount": 3
     },
     {
         "id": 1807,
-        "answer": "RANGERBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "SPECTRESTAFF",
+        "clue": "Hardmode Dungeon magic weapon",
         "chunks": [
-            "RANG",
-            "ERBO",
-            "OTS"
+            "SPEC",
+            "TRES",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1808,
-        "answer": "CRIMSONWORM",
-        "clue": "Hostile creature",
+        "answer": "METEORSTAFF",
+        "clue": "Magic weapon that rains meteors",
         "chunks": [
-            "CRIM",
-            "SONW",
-            "ORM"
+            "METE",
+            "ORST",
+            "AFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1809,
-        "answer": "RANGERSHIELD",
-        "clue": "Wearable accessory",
+        "answer": "POISONSTAFF",
+        "clue": "Weapon dropped by Black Recluses",
         "chunks": [
-            "RANG",
-            "ERSH",
-            "IELD"
+            "POIS",
+            "ONS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1810,
-        "answer": "GOLDHELMET",
-        "clue": "Armor headpiece",
+        "answer": "STAFFOFEARTH",
+        "clue": "Hardmode wand that fires boulders",
         "chunks": [
-            "GOLD",
-            "HELM",
-            "ET"
+            "STAF",
+            "FOFE",
+            "ARTH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1811,
-        "answer": "VAMPJELLY",
-        "clue": "Hostile creature",
+        "answer": "BOOKOFSKULLS",
+        "clue": "Weapon dropped by Skeletron",
         "chunks": [
-            "VAMP",
-            "JEL",
-            "LY"
+            "BOOK",
+            "OFSK",
+            "ULLS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1812,
-        "answer": "FIERCEWORM",
-        "clue": "Hostile creature",
+        "answer": "CURSEDFLAMES",
+        "clue": "Craftable Corruption tome",
         "chunks": [
-            "FIER",
-            "CEWO",
-            "RM"
+            "CURS",
+            "EDFL",
+            "AMES"
         ],
         "chunkCount": 3
     },
     {
         "id": 1813,
-        "answer": "WYVERNZOMBIE",
-        "clue": "Common enemy",
+        "answer": "GOLDENSHOWER",
+        "clue": "Craftable Crimson tome",
         "chunks": [
-            "WYVE",
-            "RNZO",
-            "MBIE"
+            "GOLD",
+            "ENSH",
+            "OWER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1814,
-        "answer": "MARTIANBIRD",
-        "clue": "Hostile creature",
+        "answer": "CRYSTALSTORM",
+        "clue": "Craftable Hallow tome",
         "chunks": [
-            "MART",
-            "IANB",
-            "IRD"
+            "CRYS",
+            "TALS",
+            "TORM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1815,
-        "answer": "SKYSALMON",
-        "clue": "Catchable fish",
+        "answer": "MAGNETSPHERE",
+        "clue": "Hardmode Dungeon magic weapon",
         "chunks": [
-            "SKYS",
-            "ALM",
-            "ON"
+            "MAGN",
+            "ETSP",
+            "HERE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1816,
-        "answer": "SKELESLIME",
-        "clue": "Hostile creature",
+        "answer": "CLINGERSTAFF",
+        "clue": "Summons a wall of cursed flames",
         "chunks": [
-            "SKEL",
-            "ESLI",
-            "ME"
+            "CLIN",
+            "GERS",
+            "TAFF"
         ],
         "chunkCount": 3
     },
     {
         "id": 1817,
-        "answer": "SHADOWBAT",
-        "clue": "Hostile creature",
+        "answer": "MEDUSAHEAD",
+        "clue": "Weapon dropped by Medusas",
         "chunks": [
-            "SHAD",
-            "OWB",
-            "AT"
+            "MEDU",
+            "SAH",
+            "EAD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1818,
         "answer": "VORTEXARMOR",
-        "clue": "Armor set",
+        "clue": "Endgame ranger armor set",
         "chunks": [
             "VORT",
             "EXAR",
@@ -19700,19 +19700,19 @@
     },
     {
         "id": 1819,
-        "answer": "ARMOREDSNAIL",
-        "clue": "Hostile creature",
+        "answer": "MAGICALHARP",
+        "clue": "Musical magic weapon",
         "chunks": [
-            "ARMO",
-            "REDS",
-            "NAIL"
+            "MAGI",
+            "CALH",
+            "ARP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1820,
         "answer": "QUEENSLIME",
-        "clue": "Major boss",
+        "clue": "Hallow boss",
         "chunks": [
             "QUEE",
             "NSLI",
@@ -19722,140 +19722,140 @@
     },
     {
         "id": 1821,
-        "answer": "GOBLINBIRD",
-        "clue": "Hostile creature",
+        "answer": "FIRSTFRACTAL",
+        "clue": "Removed endgame melee weapon",
         "chunks": [
-            "GOBL",
-            "INBI",
-            "RD"
+            "FIRS",
+            "TFRA",
+            "CTAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1822,
-        "answer": "GOLDGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "SOULSCYTHE",
+        "clue": "Removed weapon based on Soul Eater",
         "chunks": [
-            "GOLD",
-            "GOBL",
-            "IN"
+            "SOU",
+            "LSCY",
+            "THE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1823,
-        "answer": "VAMPIRESHARK",
-        "clue": "Common enemy",
+        "answer": "ANTLIONLARVA",
+        "clue": "Spawns when Antlion Eggs are destroyed",
         "chunks": [
-            "VAMP",
-            "IRES",
-            "HARK"
+            "ANTL",
+            "IONL",
+            "ARVA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1824,
-        "answer": "GIANTCRAB",
-        "clue": "Common enemy",
+        "answer": "BALLOONSLIME",
+        "clue": "Slime that spawns during parties",
         "chunks": [
-            "GIAN",
-            "TCR",
-            "AB"
+            "BALL",
+            "OONS",
+            "LIIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1825,
-        "answer": "MUMMYWYVERN",
-        "clue": "Common enemy",
+        "answer": "CYANBEETLE",
+        "clue": "Underground Ice Biome enemy",
         "chunks": [
-            "MUMM",
-            "YWYV",
-            "ERN"
+            "CYA",
+            "NBEE",
+            "TLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1826,
-        "answer": "ICECULTIST",
-        "clue": "Hostile creature",
+        "answer": "FOSSILSLIME",
+        "clue": "Slime found in skyblock deserts",
         "chunks": [
-            "ICEC",
-            "ULTI",
-            "ST"
+            "FOSS",
+            "ILSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1827,
-        "answer": "SPIKYDRAGON",
-        "clue": "Hostile creature",
+        "answer": "FROZENZOMBIE",
+        "clue": "Surface Snow Biome enemy",
         "chunks": [
-            "SPIK",
-            "YDRA",
-            "GON"
+            "FROZ",
+            "ENZO",
+            "MBIE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1828,
-        "answer": "THORNSPOTION",
-        "clue": "Drinkable potion",
+        "answer": "GRANITEGOLEM",
+        "clue": "Granite Cave enemy",
         "chunks": [
-            "THOR",
-            "NSPO",
-            "TION"
+            "GRAN",
+            "ITEG",
+            "OLEM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1829,
-        "answer": "WHITEZOMBIE",
-        "clue": "Common enemy",
+        "answer": "GRANITESLIME",
+        "clue": "Slime that spawns in Granite Caves",
         "chunks": [
-            "WHIT",
-            "EZOM",
-            "BIE"
+            "GRAN",
+            "ITES",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1830,
-        "answer": "AMETHYSTHOOK",
-        "clue": "Gem grapple hook",
+        "answer": "HEARTSLIME",
+        "clue": "Slime found in skyblock caverns",
         "chunks": [
-            "AMET",
-            "HYST",
-            "HOOK"
+            "HEA",
+            "RTS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1831,
-        "answer": "NEONSALMON",
-        "clue": "Catchable fish",
+        "answer": "HOPLITE",
+        "clue": "Marble Cave enemy",
         "chunks": [
-            "NEON",
-            "SALM",
-            "ON"
+            "HO",
+            "PLI",
+            "TE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1832,
-        "answer": "VENOMCULTIST",
-        "clue": "Hostile creature",
+        "answer": "METEORHEAD",
+        "clue": "Enemy that spawns around Meteors",
         "chunks": [
-            "VENO",
-            "MCUL",
-            "TIST"
+            "MET",
+            "EORH",
+            "EAD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1833,
         "answer": "XENOPOPPER",
-        "clue": "Powerful weapon",
+        "clue": "Martian Madness ranger weapon",
         "chunks": [
             "XENO",
             "POPP",
@@ -19865,74 +19865,74 @@
     },
     {
         "id": 1834,
-        "answer": "DESERTDUCK",
-        "clue": "Hostile creature",
+        "answer": "MOSSZOMBIE",
+        "clue": "Graveyard zombie",
         "chunks": [
-            "DESE",
-            "RTDU",
-            "CK"
+            "MOS",
+            "SZO",
+            "MBIE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1835,
-        "answer": "GIANTDEMON",
-        "clue": "Common enemy",
+        "answer": "SNOWFLINX",
+        "clue": "Underground Ice Biome enemy",
         "chunks": [
-            "GIAN",
-            "TDEM",
-            "ON"
+            "SNO",
+            "WFL",
+            "INX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1836,
         "answer": "ONYXBLASTER",
-        "clue": "Powerful weapon",
+        "clue": "Upgrade for the Shotgun",
         "chunks": [
-            "ONYX",
-            "BLAS",
-            "TER"
+            "ONY",
+            "XBLA",
+            "STER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1837,
-        "answer": "BLOODYMINNOW",
-        "clue": "Catchable fish",
+        "answer": "SHIMMERSLIME",
+        "clue": "Slime that spawns in the Aether",
         "chunks": [
-            "BLOO",
-            "DYMI",
-            "NNOW"
+            "SHIM",
+            "MERS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1838,
-        "answer": "BONEWYVERN",
-        "clue": "Hostile creature",
+        "answer": "UNDEADMINER",
+        "clue": "Cavern Skeleton enemy",
         "chunks": [
-            "BONE",
-            "WYVE",
-            "RN"
+            "UNDE",
+            "ADM",
+            "INER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1839,
-        "answer": "GIANTBIRD",
-        "clue": "Hostile creature",
+        "answer": "VOODOODEMON",
+        "clue": "Underworld enemy",
         "chunks": [
-            "GIAN",
-            "TBI",
-            "RD"
+            "VOOD",
+            "OODE",
+            "MON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1840,
         "answer": "MURDEROUS",
-        "clue": "Item modifier",
+        "clue": "Common weapon modifier",
         "chunks": [
             "MURD",
             "ERO",
@@ -19942,151 +19942,151 @@
     },
     {
         "id": 1841,
-        "answer": "LAVACULTIST",
-        "clue": "Hostile creature",
+        "answer": "WALLCREEPER",
+        "clue": "Enemy found in Spider Nests",
         "chunks": [
-            "LAVA",
-            "CULT",
-            "IST"
+            "WAL",
+            "LCRE",
+            "EPER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1842,
-        "answer": "BONEKELP",
-        "clue": "Catchable fish",
+        "answer": "BLACKRECLUSE",
+        "clue": "Enemy found in Spider Nests",
         "chunks": [
-            "BONE",
-            "KE",
-            "LP"
+            "BLAC",
+            "KREC",
+            "LUSE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1843,
-        "answer": "DESERTGHOST",
-        "clue": "Common enemy",
+        "answer": "CORRUPTMIMIC",
+        "clue": "Evil Biome Mimic",
         "chunks": [
-            "DESE",
-            "RTGH",
-            "OST"
+            "CORR",
+            "UPTM",
+            "IMIC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1844,
-        "answer": "STARBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "CORRUPTSLIME",
+        "clue": "Slime found in the Corruption",
         "chunks": [
-            "STAR",
-            "BOO",
-            "TS"
+            "CORR",
+            "UPTS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1845,
-        "answer": "RABIDCRAB",
-        "clue": "Hostile creature",
+        "answer": "CRIMSONMIMIC",
+        "clue": "Evil Biome Mimic",
         "chunks": [
-            "RABI",
-            "DCR",
-            "AB"
+            "CRIM",
+            "SONM",
+            "IMIC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1846,
-        "answer": "ICEMUMMY",
-        "clue": "Common enemy",
+        "answer": "CURSEDHAMMER",
+        "clue": "Flying underground Corruption enemy",
         "chunks": [
-            "ICEM",
-            "UM",
-            "MY"
+            "CURS",
+            "EDHA",
+            "MMER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1847,
-        "answer": "FIERCEPIRATE",
-        "clue": "Hostile creature",
+        "answer": "DREAMERGHOUL",
+        "clue": "Underground Hallowed Desert enemy",
         "chunks": [
-            "FIER",
-            "CEPI",
-            "RATE"
+            "DREA",
+            "MERG",
+            "HOUL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1848,
-        "answer": "JUNGLEBAT",
-        "clue": "Common enemy",
+        "answer": "ICEMIMIC",
+        "clue": "Mimic found in Ice Biomes",
         "chunks": [
-            "JUNG",
-            "LEB",
-            "AT"
+            "IC",
+            "EMIM",
+            "IC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1849,
-        "answer": "CRYSTALPIKE",
-        "clue": "Catchable fish",
+        "answer": "ICHORSTICKER",
+        "clue": "Underground Crimson enemy",
         "chunks": [
-            "CRYS",
-            "TALP",
-            "IKE"
+            "ICHO",
+            "RSTI",
+            "CKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1850,
-        "answer": "HUNTERPOTION",
-        "clue": "Drinkable potion",
+        "answer": "MARTIANPROBE",
+        "clue": "Martian Madness event initiator",
         "chunks": [
-            "HUNT",
-            "ERPO",
-            "TION"
+            "MART",
+            "IANP",
+            "ROBE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1851,
-        "answer": "PIRATEPIRATE",
-        "clue": "Hostile creature",
+        "answer": "NECROMANCER",
+        "clue": "Post-Plantera Dungeon sorcerer enemy",
         "chunks": [
-            "PIRA",
-            "TEPI",
-            "RATE"
+            "NECR",
+            "OMAN",
+            "CER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1852,
-        "answer": "CATSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "RAGGEDCASTER",
+        "clue": "Post-Plantera Dungeon sorcerer enemy",
         "chunks": [
-            "CATS",
-            "NAPP",
-            "ER"
+            "RAGG",
+            "EDCA",
+            "STER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1853,
-        "answer": "EELEEL",
-        "clue": "Catchable fish",
+        "answer": "SNIPER",
+        "clue": "Post-Plantera Dungeon ranged enemy",
         "chunks": [
-            "EE",
-            "LE",
-            "EL"
+            "SN",
+            "IP",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1854,
         "answer": "VIOLENT",
-        "clue": "Item modifier",
+        "clue": "Melee speed accessory modifier",
         "chunks": [
             "VIO",
             "LE",
@@ -20097,7 +20097,7 @@
     {
         "id": 1855,
         "answer": "ENDURANCE",
-        "clue": "Beneficial buff",
+        "clue": "Buff that boosts damage resistance",
         "chunks": [
             "ENDU",
             "RAN",
@@ -20107,30 +20107,30 @@
     },
     {
         "id": 1856,
-        "answer": "DEMONCULTIST",
-        "clue": "Hostile creature",
+        "answer": "COMMANDO",
+        "clue": "Post-Plantera Dungeon ranged enemy",
         "chunks": [
-            "DEMO",
-            "NCUL",
-            "TIST"
+            "COM",
+            "MA",
+            "NDO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1857,
-        "answer": "GIANTFROG",
-        "clue": "Hostile creature",
+        "answer": "TACTICAL",
+        "clue": "Post-Plantera Dungeon ranged enemy",
         "chunks": [
-            "GIAN",
-            "TFR",
-            "OG"
+            "TA",
+            "CTI",
+            "CAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1858,
         "answer": "MOLTENFURY",
-        "clue": "Powerful weapon",
+        "clue": "Hellstone bow",
         "chunks": [
             "MOLT",
             "ENFU",
@@ -20140,19 +20140,19 @@
     },
     {
         "id": 1859,
-        "answer": "BLUEHORNET",
-        "clue": "Common enemy",
+        "answer": "RAINBOWSLIME",
+        "clue": "Multi-colored slime",
         "chunks": [
-            "BLUE",
-            "HORN",
-            "ET"
+            "RAIN",
+            "BOWS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1860,
         "answer": "MANACLOAK",
-        "clue": "Wearable accessory",
+        "clue": "Causes mana stars to rain down on hit",
         "chunks": [
             "MANA",
             "CLO",
@@ -20162,7 +20162,7 @@
     },
     {
         "id": 1861,
-        "answer": "DEMONSNAIL",
+        "answer": "",
         "clue": "Hostile creature",
         "chunks": [
             "DEMO",

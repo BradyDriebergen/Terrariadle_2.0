@@ -31,9 +31,18 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at Martian Madness, item 1690
+Finished at enemies - bosses, item 1861
 
 Skipping 501 - 700, will update after 3 chunk words
+
+NOTES ABOUT NAMING CONVENTIONS:
+
+- All Terraria items/biomes/enemies will be capitalized
+- All modifiers will have the following format:
+    - <What it Boosts> <type of modifier> modifier
+    - Ex. "Melee speed accessory modifier"
+- No complex clues, clues should relate to the game
+- Keep clues relatively small
 
 
 Remember to add:
@@ -47,9 +56,7 @@ Target Dummy
 Celestial Shell
 Endgame wings
 
-Betsy
 Ogre
-PARTY
 SNOWMAN GANGSTA
 SABER (Type of chlorophyte sword)
 FRITZ
