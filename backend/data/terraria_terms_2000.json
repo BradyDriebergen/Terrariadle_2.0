@@ -20162,107 +20162,107 @@
     },
     {
         "id": 1861,
-        "answer": "",
-        "clue": "Hostile creature",
+        "answer": "JUNGLEMIMIC",
+        "clue": "Celebration Mk 10 seed Jungle enemy",
         "chunks": [
-            "DEMO",
-            "NSNA",
-            "IL"
+            "JUN",
+            "GLEM",
+            "IMIC"
         ],
         "chunkCount": 3
     },
     {
         "id": 1862,
-        "answer": "ARMOREDDEMON",
-        "clue": "Common enemy",
+        "answer": "MECHDUSA",
+        "clue": "For the worthy seed boss",
         "chunks": [
-            "ARMO",
-            "REDD",
-            "EMON"
+            "MEC",
+            "HD",
+            "USA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1863,
-        "answer": "TOXICHORNET",
-        "clue": "Hostile creature",
+        "answer": "ANCIENTDOOM",
+        "clue": "Lunatic Cultist projectile NPC",
         "chunks": [
-            "TOXI",
-            "CHOR",
-            "NET"
+            "ANCI",
+            "ENTD",
+            "OOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1864,
-        "answer": "SKELECRAB",
-        "clue": "Hostile creature",
+        "answer": "BOUNCYSLIME",
+        "clue": "Queen Slime servant",
         "chunks": [
-            "SKEL",
-            "ECR",
-            "AB"
+            "BOUN",
+            "CYSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1865,
-        "answer": "TOXICWORM",
-        "clue": "Hostile creature",
+        "answer": "CREEPER",
+        "clue": "Brain of Cthulu servant",
         "chunks": [
-            "TOXI",
-            "CWO",
-            "RM"
+            "CRE",
+            "EP",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1866,
-        "answer": "MIRRORCRAB",
-        "clue": "Catchable fish",
+        "answer": "CRYSTALSLIME",
+        "clue": "Queen Slime servant",
         "chunks": [
-            "MIRR",
-            "ORCR",
-            "AB"
+            "CRYS",
+            "TALS",
+            "LIME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1867,
-        "answer": "FLESHWRAITH",
-        "clue": "Hostile creature",
+        "answer": "SHARKRON",
+        "clue": "Duke Fishron servant",
         "chunks": [
-            "FLES",
-            "HWRA",
-            "ITH"
+            "SHA",
+            "RKR",
+            "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1868,
-        "answer": "MARTIANBAT",
-        "clue": "Hostile creature",
+        "answer": "SPIKEDSLIME",
+        "clue": "King Slime servant",
         "chunks": [
-            "MART",
-            "IANB",
-            "AT"
+            "SPIK",
+            "EDSL",
+            "IME"
         ],
         "chunkCount": 3
     },
     {
         "id": 1869,
-        "answer": "WHITEHORNET",
-        "clue": "Common enemy",
+        "answer": "HUNGRY",
+        "clue": "Wall of Flesh servant",
         "chunks": [
-            "WHIT",
-            "EHOR",
-            "NET"
+            "HU",
+            "NG",
+            "RY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1870,
         "answer": "SOLARWINGS",
-        "clue": "Allows flight",
+        "clue": "Post-Moon Lord wings",
         "chunks": [
             "SOLA",
             "RWIN",
@@ -20272,41 +20272,41 @@
     },
     {
         "id": 1871,
-        "answer": "CORRUPTCOD",
-        "clue": "Catchable fish",
+        "answer": "DYNASTY",
+        "clue": "Traveling Merchant wood",
         "chunks": [
-            "CORR",
-            "UPTC",
-            "OD"
+            "DY",
+            "NAS",
+            "TY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1872,
-        "answer": "CRIMSONANT",
-        "clue": "Hostile creature",
+        "answer": "UNDERGROUND",
+        "clue": "Biome between Cavern and Surface",
         "chunks": [
-            "CRIM",
-            "SONA",
-            "NT"
+            "UND",
+            "ERGR",
+            "OUND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1873,
-        "answer": "DARKPIRATE",
-        "clue": "Common enemy",
+        "answer": "UNDERWORLD",
+        "clue": "Deepest biome in a world",
         "chunks": [
-            "DARK",
-            "PIRA",
-            "TE"
+            "UNDE",
+            "RWOR",
+            "LD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1874,
         "answer": "SANTACLAUS",
-        "clue": "Friendly npc",
+        "clue": "Seasonal NPC",
         "chunks": [
             "SANT",
             "ACLA",
@@ -20316,63 +20316,63 @@
     },
     {
         "id": 1875,
-        "answer": "DARKSNAIL",
-        "clue": "Hostile creature",
+        "answer": "DYETRADER",
+        "clue": "NPC that trades Strange Plants",
         "chunks": [
-            "DARK",
-            "SNA",
-            "IL"
+            "DY",
+            "ETRA",
+            "DER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1876,
-        "answer": "CORRUPTCRAB",
-        "clue": "Hostile creature",
+        "answer": "PAINTER",
+        "clue": "Picasso NPC",
         "chunks": [
-            "CORR",
-            "UPTC",
-            "RAB"
+            "PA",
+            "INT",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1877,
-        "answer": "VENOMOGRE",
-        "clue": "Hostile creature",
+        "answer": "PRINCESS",
+        "clue": "Royal NPC",
         "chunks": [
-            "VENO",
-            "MOG",
-            "RE"
+            "PRI",
+            "NCE",
+            "SS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1878,
-        "answer": "HORNETCRAB",
-        "clue": "Common enemy",
+        "answer": "SNOWARMOR",
+        "clue": "Armor dropped by Frozen Zombies",
         "chunks": [
-            "HORN",
-            "ETCR",
-            "AB"
+            "SNO",
+            "WAR",
+            "MOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1879,
-        "answer": "DEMONFROG",
-        "clue": "Hostile creature",
+        "answer": "EBONSTONE",
+        "clue": "Corruption stone",
         "chunks": [
-            "DEMO",
-            "NFR",
-            "OG"
+            "EBO",
+            "NST",
+            "ONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1880,
         "answer": "AERIALBANE",
-        "clue": "Powerful weapon",
+        "clue": "Bow dropped from Betsy",
         "chunks": [
             "AERI",
             "ALBA",
@@ -20382,195 +20382,195 @@
     },
     {
         "id": 1881,
-        "answer": "SPOREJELLY",
-        "clue": "Hostile creature",
+        "answer": "CRIMSTONE",
+        "clue": "Crimson stone",
         "chunks": [
-            "SPOR",
-            "EJEL",
-            "LY"
+            "CR",
+            "IMS",
+            "TONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1882,
-        "answer": "",
-        "clue": "Catchable fish",
+        "answer": "PEARLSTONE",
+        "clue": "Hallow Stone",
         "chunks": [
-            "FROS",
-            "TMIN",
-            "NOW"
+            "PEA",
+            "RLST",
+            "ONE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1883,
-        "answer": "MARTIANSHARK",
-        "clue": "Hostile creature",
+        "answer": "EBONSAND",
+        "clue": "Corruption sand",
         "chunks": [
-            "MART",
-            "IANS",
-            "HARK"
+            "EB",
+            "ONS",
+            "AND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1884,
-        "answer": "WOLFJELLY",
-        "clue": "Hostile creature",
+        "answer": "CRIMSAND",
+        "clue": "Crimson sand",
         "chunks": [
-            "WOLF",
-            "JEL",
-            "LY"
+            "CRI",
+            "MSA",
+            "ND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1885,
-        "answer": "FROSTHORNET",
-        "clue": "Common enemy",
+        "answer": "PEARLSAND",
+        "clue": "Hallow sand",
         "chunks": [
-            "FROS",
-            "THOR",
-            "NET"
+            "PEAR",
+            "LSA",
+            "ND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1886,
-        "answer": "CRIMSONKELP",
-        "clue": "Catchable fish",
+        "answer": "THINICE",
+        "clue": "Block that breaks when landed on",
         "chunks": [
-            "CRIM",
-            "SONK",
-            "ELP"
+            "TH",
+            "INI",
+            "CE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1887,
-        "answer": "FLESHWYVERN",
-        "clue": "Hostile creature",
+        "answer": "RAINCLOUD",
+        "clue": "Block where rain appears under it",
         "chunks": [
-            "FLES",
-            "HWYV",
-            "ERN"
+            "RAI",
+            "NCLO",
+            "UD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1888,
-        "answer": "SILVERDRAGON",
-        "clue": "Hostile creature",
+        "answer": "SUNPLATE",
+        "clue": "Block for Floating Island houses",
         "chunks": [
-            "SILV",
-            "ERDR",
-            "AGON"
+            "SU",
+            "NPL",
+            "ATE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1889,
-        "answer": "STINKTROUT",
-        "clue": "Catchable fish",
+        "answer": "STARCLOUD",
+        "clue": "Block that shoots stars at night",
         "chunks": [
-            "STIN",
-            "KTRO",
-            "UT"
+            "STA",
+            "RCL",
+            "OUD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1890,
-        "answer": "VENOMORC",
-        "clue": "Hostile creature",
+        "answer": "DAMSELFISH",
+        "clue": "Fish used for Calm Potions",
         "chunks": [
-            "VENO",
-            "MO",
-            "RC"
+            "DAMS",
+            "ELF",
+            "ISH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1891,
-        "answer": "CRYSTALKELP",
-        "clue": "Catchable fish",
+        "answer": "WOODENSPIKE",
+        "clue": "Type of Lihzahrd trap",
         "chunks": [
-            "CRYS",
-            "TALK",
-            "ELP"
+            "WOO",
+            "DENS",
+            "PIKE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1892,
-        "answer": "PURPLEGHOST",
-        "clue": "Common enemy",
+        "answer": "CRACKED",
+        "clue": "Weak type of Dungeon brick",
         "chunks": [
-            "PURP",
-            "LEGH",
-            "OST"
+            "CR",
+            "AC",
+            "KED"
         ],
         "chunkCount": 3
     },
     {
         "id": 1893,
-        "answer": "LAVACLOAK",
-        "clue": "Wearable accessory",
+        "answer": "FEYWOOD",
+        "clue": "Block crafted with wood and mushrooms",
         "chunks": [
-            "LAVA",
-            "CLO",
-            "AK"
+            "FE",
+            "YWO",
+            "OD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1894,
-        "answer": "ARMOREDCRAB",
-        "clue": "Common enemy",
+        "answer": "AQUARIUM",
+        "clue": "Furniture built with glass and a Sink",
         "chunks": [
-            "ARMO",
-            "REDC",
-            "RAB"
+            "AQU",
+            "ARI",
+            "UM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1895,
-        "answer": "CURSEDBAT",
-        "clue": "Common enemy",
+        "answer": "TIMBER",
+        "clue": "Achievement for cutting down a tree",
         "chunks": [
-            "CURS",
-            "EDB",
-            "AT"
+            "TI",
+            "MB",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1896,
-        "answer": "NINJABOOTS",
-        "clue": "Wearable accessory",
+        "answer": "NOHOBO",
+        "clue": "Achievement for building a house",
         "chunks": [
-            "NINJ",
-            "ABOO",
-            "TS"
+            "NO",
+            "HO",
+            "BO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1897,
-        "answer": "GOBLINSNAIL",
-        "clue": "Hostile creature",
+        "answer": "OOOSHINY",
+        "clue": "Achievement for getting ore",
         "chunks": [
-            "GOBL",
-            "INSN",
-            "AIL"
+            "OOO",
+            "SHI",
+            "NY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1898,
         "answer": "FIREGAUNTLET",
-        "clue": "Helpful accessory",
+        "clue": "Strongest melee glove accessory",
         "chunks": [
             "FIRE",
             "GAUN",
@@ -20580,74 +20580,74 @@
     },
     {
         "id": 1899,
-        "answer": "VAMPPIRATE",
-        "clue": "Hostile creature",
+        "answer": "FLOUNDER",
+        "clue": "Fish caught in the Oasis",
         "chunks": [
-            "VAMP",
-            "PIRA",
-            "TE"
+            "FLO",
+            "UND",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1900,
-        "answer": "HORNETSHARK",
-        "clue": "Common enemy",
+        "answer": "GOLDENCARP",
+        "clue": "Fish used for a Golden Delight",
         "chunks": [
-            "HORN",
-            "ETSH",
-            "ARK"
+            "GOL",
+            "DENC",
+            "ARP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1901,
-        "answer": "SPIKYSLIME",
-        "clue": "Hostile creature",
+        "answer": "HEMOPIRANHA",
+        "clue": "Fish used in Rage Potions",
         "chunks": [
-            "SPIK",
-            "YSLI",
-            "ME"
+            "HEMO",
+            "PIRA",
+            "NHA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1902,
-        "answer": "NINJAAMULET",
-        "clue": "Wearable accessory",
+        "answer": "ROCKLOBSTER",
+        "clue": "Fish caught in the Desert",
         "chunks": [
-            "NINJ",
-            "AAMU",
-            "LET"
+            "ROC",
+            "KLOB",
+            "STER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1903,
-        "answer": "SKELEHORNET",
-        "clue": "Hostile creature",
+        "answer": "STINKFISH",
+        "clue": "Fish used for Stink Potions",
         "chunks": [
-            "SKEL",
-            "EHOR",
-            "NET"
+            "STI",
+            "NKFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1904,
-        "answer": "TOXICBIRD",
-        "clue": "Hostile creature",
+        "answer": "JOJACOLA",
+        "clue": "Stardew Valley colab drink",
         "chunks": [
-            "TOXI",
-            "CBI",
-            "RD"
+            "JOJ",
+            "ACO",
+            "LA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1905,
         "answer": "STARWRATH",
-        "clue": "Powerful weapon",
+        "clue": "Zenith sword component",
         "chunks": [
             "STAR",
             "WRA",
@@ -20657,52 +20657,52 @@
     },
     {
         "id": 1906,
-        "answer": "GIANTDRAGON",
-        "clue": "Hostile creature",
+        "answer": "HEARTBREAKER",
+        "clue": "Achievement for breaking a heart crystal",
         "chunks": [
-            "GIAN",
-            "TDRA",
-            "GON"
+            "HEAR",
+            "TBRE",
+            "AKER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1907,
-        "answer": "SLIMESHARK",
-        "clue": "Common enemy",
+        "answer": "HEAVYMETAL",
+        "clue": "Achievement for obtaining an anvil",
         "chunks": [
-            "SLIM",
-            "ESHA",
-            "RK"
+            "HEAV",
+            "YME",
+            "TAL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1908,
-        "answer": "ICEFROG",
-        "clue": "Hostile creature",
+        "answer": "IAMLOOT",
+        "clue": "Achievement for making a mana crystal",
         "chunks": [
-            "ICE",
-            "FR",
-            "OG"
+            "IAM",
+            "LO",
+            "OT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1909,
-        "answer": "MIRRORKELP",
-        "clue": "Catchable fish",
+        "answer": "EYEONYOU",
+        "clue": "Achievement for defeating Eye of Cthulu",
         "chunks": [
-            "MIRR",
-            "ORKE",
-            "LP"
+            "EYE",
+            "ON",
+            "YOU"
         ],
         "chunkCount": 3
     },
     {
         "id": 1910,
         "answer": "OBSIDIANROSE",
-        "clue": "Helpful accessory",
+        "clue": "Lava damage reducing accessory",
         "chunks": [
             "OBSI",
             "DIAN",
@@ -20712,96 +20712,96 @@
     },
     {
         "id": 1911,
-        "answer": "FLESHFROG",
-        "clue": "Hostile creature",
+        "answer": "WORMFODDER",
+        "clue": "Achievement for defeating the EoW",
         "chunks": [
-            "FLES",
-            "HFR",
-            "OG"
+            "WORM",
+            "FOD",
+            "DER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1912,
-        "answer": "LAVASHIELD",
-        "clue": "Wearable accessory",
+        "answer": "MASTERMIND",
+        "clue": "Achievement for defeating BoC",
         "chunks": [
-            "LAVA",
-            "SHIE",
-            "LD"
+            "MAS",
+            "TERM",
+            "IND"
         ],
         "chunkCount": 3
     },
     {
         "id": 1913,
-        "answer": "GIANTWRAITH",
-        "clue": "Common enemy",
+        "answer": "DUNGEONHEIST",
+        "clue": "Achievement for opening a locked chest",
         "chunks": [
-            "GIAN",
-            "TWRA",
-            "ITH"
+            "DUNG",
+            "EONH",
+            "EIST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1914,
-        "answer": "SMALLSNAIL",
-        "clue": "Hostile creature",
+        "answer": "STILLHUNGRY",
+        "clue": "Achievement for defeating WoF",
         "chunks": [
-            "SMAL",
-            "LSNA",
-            "IL"
+            "STIL",
+            "LHUN",
+            "GRY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1915,
-        "answer": "CORRUPTSLIME",
-        "clue": "Hostile creature",
+        "answer": "ITSHARD",
+        "clue": "Achievement for entering hardmode",
         "chunks": [
-            "CORR",
-            "UPTS",
-            "LIME"
+            "IT",
+            "SHA",
+            "RD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1916,
-        "answer": "BONEGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "BEGONEEVIL",
+        "clue": "Achievement for breaking a demon altar",
         "chunks": [
-            "BONE",
-            "GOBL",
-            "IN"
+            "BEGO",
+            "NEE",
+            "VIL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1917,
-        "answer": "BONECULTIST",
-        "clue": "Hostile creature",
+        "answer": "EXTRASHINY",
+        "clue": "Achievement for mining hardmode ore",
         "chunks": [
-            "BONE",
-            "CULT",
-            "IST"
+            "EXT",
+            "RAS",
+            "HINY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1918,
-        "answer": "SHADOWSALMON",
-        "clue": "Catchable fish",
+        "answer": "DRAXATTAX",
+        "clue": "Achievement for crafting a Drax",
         "chunks": [
-            "SHAD",
-            "OWSA",
-            "LMON"
+            "DRA",
+            "XATT",
+            "AX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1919,
         "answer": "LASERDRILL",
-        "clue": "Powerful weapon",
+        "clue": "Pickaxe with the longest range",
         "chunks": [
             "LASE",
             "RDRI",
@@ -20811,23 +20811,23 @@
     },
     {
         "id": 1920,
-        "answer": "NEONMINNOW",
-        "clue": "Catchable fish",
+        "answer": "GETALIFE",
+        "clue": "Achievement for using a Life Fruit",
         "chunks": [
-            "NEON",
-            "MINN",
-            "OW"
+            "GET",
+            "AL",
+            "IFE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1921,
-        "answer": "NEONCATFISH",
-        "clue": "Catchable fish",
+        "answer": "INVENTORY",
+        "clue": "Where the player's items are stored",
         "chunks": [
-            "NEON",
-            "CATF",
-            "ISH"
+            "INV",
+            "ENT",
+            "ORY"
         ],
         "chunkCount": 3
     },

@@ -57,6 +57,11 @@ Celestial Shell
 Endgame wings
 
 Ogre
+LEECH
+CALM
+CLAY
+WOOD
+HOIK (Famous bug that phases players through walls)
 SNOWMAN GANGSTA
 SABER (Type of chlorophyte sword)
 FRITZ
