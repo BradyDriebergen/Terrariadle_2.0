@@ -11,14 +11,13 @@
     },
     {
         "id": 2,
-        "answer": "CAVEBAT",
-        "clue": "Flying underground enemy",
+        "answer": "OGRE",
+        "clue": "Old One's Army mini-boss",
         "chunks": [
-            "CA",
-            "VEB",
-            "AT"
+            "OG",
+            "RE"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 3,
@@ -62,11 +61,11 @@
     },
     {
         "id": 7,
-        "answer": "BROKEN",
-        "clue": "\"You should get that fixed\"",
+        "answer": "ANGRY",
+        "clue": "Damage accessory modifier",
         "chunks": [
-            "BROK",
-            "EN"
+            "AN",
+            "GRY"
         ],
         "chunkCount": 2
     },
@@ -242,11 +241,11 @@
     },
     {
         "id": 25,
-        "answer": "BONEFISH",
-        "clue": "Cavern quest fish",
+        "answer": "BRISK",
+        "clue": "Movement speed accessory modifier",
         "chunks": [
-            "BONE",
-            "FISH"
+            "BR",
+            "ISK"
         ],
         "chunkCount": 2
     },
@@ -402,11 +401,11 @@
     },
     {
         "id": 41,
-        "answer": "VAMPIRE",
-        "clue": "Both a flying and walking enemy",
+        "answer": "HASTY",
+        "clue": "Movement speed accessory modifier",
         "chunks": [
-            "VAMP",
-            "IRE"
+            "HAS",
+            "TY"
         ],
         "chunkCount": 2
     },
@@ -512,11 +511,11 @@
     },
     {
         "id": 52,
-        "answer": "DAMAGED",
-        "clue": "Damage reducing modifier",
+        "answer": "RASH",
+        "clue": "Melee speed accessory modifier",
         "chunks": [
-            "DAMA",
-            "GED"
+            "RA",
+            "SH"
         ],
         "chunkCount": 2
     },
@@ -582,11 +581,11 @@
     },
     {
         "id": 59,
-        "answer": "STARDUST",
-        "clue": "Galatic material for summoners",
+        "answer": "LEECH",
+        "clue": "Wall of Flesh servant",
         "chunks": [
-            "STAR",
-            "DUST"
+            "LEE",
+            "CH"
         ],
         "chunkCount": 2
     },
@@ -662,11 +661,11 @@
     },
     {
         "id": 67,
-        "answer": "MENACING",
-        "clue": "Highest damage modifier",
+        "answer": "CALM",
+        "clue": "Buff that reduces enemy spawn rates",
         "chunks": [
-            "MENA",
-            "CING"
+            "CA",
+            "LM"
         ],
         "chunkCount": 2
     },
@@ -692,11 +691,11 @@
     },
     {
         "id": 70,
-        "answer": "NIGHTOWL",
-        "clue": "Increases night vision",
+        "answer": "CLAY",
+        "clue": "Block used for pots and plates",
         "chunks": [
-            "NIGH",
-            "TOWL"
+            "CL",
+            "AY"
         ],
         "chunkCount": 2
     },
@@ -822,28 +821,28 @@
     },
     {
         "id": 83,
-        "answer": "PLANTERA",
-        "clue": "Living dragonflower bulb",
+        "answer": "WOOD",
+        "clue": "Block that grows on the surface",
         "chunks": [
-            "PLAN",
-            "TERA"
+            "WO",
+            "OD"
         ],
         "chunkCount": 2
     },
     {
         "id": 84,
-        "answer": "SQUIRREL",
-        "clue": "Critter that can fall from trees",
+        "answer": "HOIK",
+        "clue": "Bug that phases players through blocks",
         "chunks": [
-            "SQUI",
-            "RREL"
+            "HO",
+            "IK"
         ],
         "chunkCount": 2
     },
     {
         "id": 85,
         "answer": "FLIGHT",
-        "clue": "Souls that enable flight",
+        "clue": "Souls dropped from wyverns",
         "chunks": [
             "FLI",
             "GHT"
@@ -952,11 +951,11 @@
     },
     {
         "id": 96,
-        "answer": "PLATINUM",
-        "clue": "Highest value coin",
+        "answer": "SABER",
+        "clue": "Type of chlorophyte sword",
         "chunks": [
-            "PLAT",
-            "INUM"
+            "SAB",
+            "ER"
         ],
         "chunkCount": 2
     },
@@ -982,11 +981,11 @@
     },
     {
         "id": 99,
-        "answer": "NAILGUN",
-        "clue": "Gun with unique ammo",
+        "answer": "FRITZ",
+        "clue": "Solar Eclipse common enemy",
         "chunks": [
-            "NAI",
-            "LGUN"
+            "FRI",
+            "TZ"
         ],
         "chunkCount": 2
     },
@@ -1092,11 +1091,11 @@
     },
     {
         "id": 110,
-        "answer": "TRIDENT",
-        "clue": "Symbol of liquidity, fecundity, and drinkability",
+        "answer": "TRUE",
+        "clue": "Prefix for broken hero sword weapons",
         "chunks": [
-            "TRID",
-            "ENT"
+            "TR",
+            "UE"
         ],
         "chunkCount": 2
     },
@@ -1192,11 +1191,11 @@
     },
     {
         "id": 120,
-        "answer": "STYNGER",
-        "clue": "Shoots explosive bolts",
+        "answer": "DRONE",
+        "clue": "Flying Martian Madness enemy",
         "chunks": [
-            "STY",
-            "NGER"
+            "DRO",
+            "NE"
         ],
         "chunkCount": 2
     },
@@ -1222,11 +1221,11 @@
     },
     {
         "id": 123,
-        "answer": "HARPOON",
-        "clue": "A ranger's flail",
+        "answer": "NERDY",
+        "clue": "Town slime dropped from King Slime",
         "chunks": [
-            "HARP",
-            "OON"
+            "NER",
+            "DY"
         ],
         "chunkCount": 2
     },
@@ -1642,11 +1641,11 @@
     },
     {
         "id": 165,
-        "answer": "DAYBREAK",
-        "clue": "Solar spear",
+        "answer": "SURLY",
+        "clue": "Town slime fished for during Blood Moon",
         "chunks": [
-            "DAYB",
-            "REAK"
+            "SUR",
+            "LY"
         ],
         "chunkCount": 2
     },
@@ -1702,11 +1701,11 @@
     },
     {
         "id": 171,
-        "answer": "ARKHALIS",
-        "clue": "Found from sword shrines",
+        "answer": "ELDER",
+        "clue": "Town slime trapped in a chest",
         "chunks": [
-            "ARKH",
-            "ALIS"
+            "EL",
+            "DER"
         ],
         "chunkCount": 2
     },
@@ -1742,11 +1741,11 @@
     },
     {
         "id": 175,
-        "answer": "SCORPION",
-        "clue": "Desert critter",
+        "answer": "COOL",
+        "clue": "Town slime joining in on a party",
         "chunks": [
-            "SCOR",
-            "PION"
+            "CO",
+            "OL"
         ],
         "chunkCount": 2
     },
@@ -2022,11 +2021,11 @@
     },
     {
         "id": 203,
-        "answer": "UNICORN",
-        "clue": "Majestic hallow enemy",
+        "answer": "DIVA",
+        "clue": "Town slime coming from the Shimmer",
         "chunks": [
-            "UNI",
-            "CORN"
+            "DI",
+            "VA"
         ],
         "chunkCount": 2
     },
@@ -2132,11 +2131,11 @@
     },
     {
         "id": 214,
-        "answer": "THETWINS",
-        "clue": "The Eye of Cuthulu x2",
+        "answer": "NPCS",
+        "clue": "Friendly vendors that move in",
         "chunks": [
-            "THET",
-            "WINS"
+            "NP",
+            "CS"
         ],
         "chunkCount": 2
     },
@@ -5351,7 +5350,7 @@
     {
         "id": 530,
         "answer": "PLATINUMSWORD",
-        "clue": "Melee weapon",
+        "clue": "Component in the Flymeal",
         "chunks": [
             "PLAT",
             "INUM",
@@ -18832,7 +18831,7 @@
     {
         "id": 1740,
         "answer": "CLUMSY",
-        "clue": "Town Slime appearing from a balloon",
+        "clue": "Town Slime flying from a balloon",
         "chunks": [
             "CL",
             "UM",
@@ -21207,338 +21206,338 @@
     },
     {
         "id": 1956,
-        "answer": "CRIMSONCOD",
-        "clue": "Catchable fish",
+        "answer": "ARMORED",
+        "clue": "Defense accessory modifier",
         "chunks": [
-            "CRIM",
-            "SONC",
-            "OD"
+            "ARM",
+            "OR",
+            "ED"
         ],
         "chunkCount": 3
     },
     {
         "id": 1957,
-        "answer": "SLIMECRAB",
-        "clue": "Common enemy",
+        "answer": "FLEETING",
+        "clue": "Movement speed accessory modifier",
         "chunks": [
-            "SLIM",
-            "ECR",
-            "AB"
+            "FLE",
+            "ET",
+            "ING"
         ],
         "chunkCount": 3
     },
     {
         "id": 1958,
-        "answer": "ICEFISH",
-        "clue": "Common enemy",
+        "answer": "FORCEFUL",
+        "clue": "Knockback weapon modifier",
         "chunks": [
-            "ICE",
-            "FI",
-            "SH"
+            "FOR",
+            "CEF",
+            "UL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1959,
-        "answer": "MOSSJELLY",
-        "clue": "Hostile creature",
+        "answer": "STRONG",
+        "clue": "Knockback weapon modifier",
         "chunks": [
-            "MOSS",
-            "JEL",
-            "LY"
+            "ST",
+            "RO",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1960,
-        "answer": "FIERCEWYVERN",
-        "clue": "Hostile creature",
+        "answer": "RUTHLESS",
+        "clue": "Damage weapon modifier",
         "chunks": [
-            "FIER",
-            "CEWY",
-            "VERN"
+            "RU",
+            "THL",
+            "ESS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1961,
-        "answer": "SHARKEMBLEM",
-        "clue": "Wearable accessory",
+        "answer": "CAVEBAT",
+        "clue": "Flying underground enemy",
         "chunks": [
-            "SHAR",
-            "KEMB",
-            "LEM"
+            "CA",
+            "VEB",
+            "AT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1962,
-        "answer": "MANAGAUNTLET",
-        "clue": "Wearable accessory",
+        "answer": "BROKEN",
+        "clue": "Worst weapon modifier",
         "chunks": [
-            "MANA",
-            "GAUN",
-            "TLET"
+            "BR",
+            "OK",
+            "EN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1963,
-        "answer": "HONEYCRAB",
-        "clue": "Catchable fish",
+        "answer": "BONEFISH",
+        "clue": "Quest fish caught in the Cavern",
         "chunks": [
-            "HONE",
-            "YCR",
-            "AB"
+            "BON",
+            "EFI",
+            "SH"
         ],
         "chunkCount": 3
     },
     {
         "id": 1964,
-        "answer": "STINKCATFISH",
-        "clue": "Catchable fish",
+        "answer": "VAMPIRE",
+        "clue": "Solar Eclipse flying enemy",
         "chunks": [
-            "STIN",
-            "KCAT",
-            "FISH"
+            "VA",
+            "MPI",
+            "RE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1965,
-        "answer": "FIERCEBIRD",
-        "clue": "Hostile creature",
+        "answer": "DAMAGED",
+        "clue": "Damage decreasing weapon modifier",
         "chunks": [
-            "FIER",
-            "CEBI",
-            "RD"
+            "DAM",
+            "AG",
+            "ED"
         ],
         "chunkCount": 3
     },
     {
         "id": 1966,
-        "answer": "CRATEPOTION",
-        "clue": "Fishing related",
+        "answer": "STARDUST",
+        "clue": "Galatic material for summoners",
         "chunks": [
-            "CRAT",
-            "EPOT",
-            "ION"
+            "ST",
+            "ARD",
+            "UST"
         ],
         "chunkCount": 3
     },
     {
         "id": 1967,
-        "answer": "HONEYMINNOW",
-        "clue": "Catchable fish",
+        "answer": "MENACING",
+        "clue": "Damage increasing accessory modifier",
         "chunks": [
-            "HONE",
-            "YMIN",
-            "NOW"
+            "MEN",
+            "ACI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1968,
-        "answer": "BLACKJELLY",
-        "clue": "Hostile creature",
+        "answer": "NIGHTOWL",
+        "clue": "Buff that increases night vision",
         "chunks": [
-            "BLAC",
-            "KJEL",
-            "LY"
+            "NIG",
+            "HTO",
+            "WL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1969,
-        "answer": "FIERCESLIME",
-        "clue": "Hostile creature",
+        "answer": "PLANTERA",
+        "clue": "Boss based on a groove metal band",
         "chunks": [
-            "FIER",
-            "CESL",
-            "IME"
+            "PLA",
+            "NTE",
+            "RA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1970,
-        "answer": "SHARKCLOAK",
-        "clue": "Wearable accessory",
+        "answer": "SQUIRREL",
+        "clue": "Forest critter",
         "chunks": [
-            "SHAR",
-            "KCLO",
-            "AK"
+            "SQU",
+            "IR",
+            "REL"
         ],
         "chunkCount": 3
     },
     {
         "id": 1971,
-        "answer": "HALLOWEDEYE",
-        "clue": "Hostile creature",
+        "answer": "PLATINUM",
+        "clue": "Highest value coin",
         "chunks": [
-            "HALL",
-            "OWED",
-            "EYE"
+            "PL",
+            "ATIN",
+            "UM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1972,
-        "answer": "DESERTCRAB",
-        "clue": "Common enemy",
+        "answer": "NAILGUN",
+        "clue": "Weapon dropped from Nailheads",
         "chunks": [
-            "DESE",
-            "RTCR",
-            "AB"
+            "NA",
+            "ILG",
+            "UN"
         ],
         "chunkCount": 3
     },
     {
         "id": 1973,
-        "answer": "SWAMPWORM",
-        "clue": "Hostile creature",
+        "answer": "TRIDENT",
+        "clue": "Weapon that increases speed in water",
         "chunks": [
-            "SWAM",
-            "PWO",
-            "RM"
+            "TR",
+            "IDE",
+            "NT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1974,
-        "answer": "VAMPIREMUMMY",
-        "clue": "Common enemy",
+        "answer": "STYNGER",
+        "clue": "Ranged weapon dropped from Golem",
         "chunks": [
-            "VAMP",
-            "IREM",
-            "UMMY"
+            "STY",
+            "NG",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1975,
-        "answer": "SKELEFROG",
-        "clue": "Hostile creature",
+        "answer": "HARPOON",
+        "clue": "Ranged weapon dropped from Goblins",
         "chunks": [
-            "SKEL",
-            "EFR",
-            "OG"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1976,
-        "answer": "CURSEDBEE",
-        "clue": "Hostile creature",
-        "chunks": [
-            "CURS",
-            "EDB",
-            "EE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1977,
-        "answer": "DEMONWORM",
-        "clue": "Hostile creature",
-        "chunks": [
-            "DEMO",
-            "NWO",
-            "RM"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1978,
-        "answer": "RABIDWORM",
-        "clue": "Hostile creature",
-        "chunks": [
-            "RABI",
-            "DWO",
-            "RM"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1979,
-        "answer": "DESERTBIRD",
-        "clue": "Hostile creature",
-        "chunks": [
-            "DESE",
-            "RTBI",
-            "RD"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1980,
-        "answer": "WARRIORBELT",
-        "clue": "Wearable accessory",
-        "chunks": [
-            "WARR",
-            "IORB",
-            "ELT"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1981,
-        "answer": "SHADOWGHOST",
-        "clue": "Hostile creature",
-        "chunks": [
-            "SHAD",
-            "OWGH",
-            "OST"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1982,
-        "answer": "DARKSKELETON",
-        "clue": "Common enemy",
-        "chunks": [
-            "DARK",
-            "SKEL",
-            "ETON"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1983,
-        "answer": "VENOMDEMON",
-        "clue": "Hostile creature",
-        "chunks": [
-            "VENO",
-            "MDEM",
+            "HA",
+            "RPO",
             "ON"
         ],
         "chunkCount": 3
     },
     {
-        "id": 1984,
-        "answer": "SHADOWSHRIMP",
-        "clue": "Catchable fish",
+        "id": 1976,
+        "answer": "ARKHALIS",
+        "clue": "Melee weapon dropped from treasure bags",
         "chunks": [
-            "SHAD",
-            "OWSH",
-            "RIMP"
+            "ARK",
+            "HA",
+            "LIS"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1977,
+        "answer": "SCORPION",
+        "clue": "Desert critter",
+        "chunks": [
+            "SCO",
+            "RPI",
+            "ON"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1978,
+        "answer": "UNICORN",
+        "clue": "Surface Hallow enemy",
+        "chunks": [
+            "UN",
+            "IC",
+            "ORN"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1979,
+        "answer": "THETWINS",
+        "clue": "One of the mechanical bosses",
+        "chunks": [
+            "TH",
+            "ETW",
+            "INS"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1980,
+        "answer": "MINIMAP",
+        "clue": "Shows a map preview on the UI",
+        "chunks": [
+            "MIN",
+            "IM",
+            "AP"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1981,
+        "answer": "SQUIREARMOR",
+        "clue": "Old One's Army armor set",
+        "chunks": [
+            "SQUI",
+            "REAR",
+            "MOR"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1982,
+        "answer": "MONKSARMOR",
+        "clue": "Old One's Army armor set",
+        "chunks": [
+            "MON",
+            "KSA",
+            "RMOR"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1983,
+        "answer": "TIKIARMOR",
+        "clue": "Armor sold by the Witch Doctor",
+        "chunks": [
+            "TIK",
+            "IARM",
+            "OR"
+        ],
+        "chunkCount": 3
+    },
+    {
+        "id": 1984,
+        "answer": "SPECTREARMOR",
+        "clue": "Mage set that heals allies",
+        "chunks": [
+            "SPEC",
+            "TREA",
+            "RMOR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1985,
-        "answer": "VENOMDUCK",
-        "clue": "Hostile creature",
+        "answer": "EMPTYBUCKET",
+        "clue": "Armor that can hold liquids",
         "chunks": [
-            "VENO",
-            "MDU",
-            "CK"
+            "EMPT",
+            "YBUC",
+            "KET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1986,
         "answer": "SPIDERARMOR",
-        "clue": "Armor set",
+        "clue": "Early hardmode summoner armor",
         "chunks": [
             "SPID",
             "ERAR",
@@ -21548,19 +21547,19 @@
     },
     {
         "id": 1987,
-        "answer": "ARMOREDSLIME",
-        "clue": "Common enemy",
+        "answer": "JESTERS",
+        "clue": "Arrow that can peirce infinitly",
         "chunks": [
-            "ARMO",
-            "REDS",
-            "LIME"
+            "JES",
+            "TE",
+            "RS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1988,
         "answer": "STONED",
-        "clue": "Harmful debuff",
+        "clue": "Debuff caused by Medusas",
         "chunks": [
             "ST",
             "ON",
@@ -21570,63 +21569,63 @@
     },
     {
         "id": 1989,
-        "answer": "WARRIORRING",
-        "clue": "Wearable accessory",
+        "answer": "FLAMING",
+        "clue": "Arrow crafted from torches",
         "chunks": [
-            "WARR",
-            "IORR",
-            "ING"
+            "FL",
+            "AMI",
+            "NG"
         ],
         "chunkCount": 3
     },
     {
         "id": 1990,
-        "answer": "SHARKMUMMY",
-        "clue": "Common enemy",
+        "answer": "UNHOLY",
+        "clue": "Pre-hardmode evil biome arrow",
         "chunks": [
-            "SHAR",
-            "KMUM",
-            "MY"
+            "UN",
+            "HO",
+            "LY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1991,
-        "answer": "WOLFZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "ACIDVENOM",
+        "clue": "Hardmode debuff caused by spiders",
         "chunks": [
-            "WOLF",
-            "ZOMB",
-            "IE"
+            "ACI",
+            "DVE",
+            "NOM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1992,
-        "answer": "FISHMUMMY",
-        "clue": "Common enemy",
+        "answer": "HIGHVELOCITY",
+        "clue": "Bullet crafted from cogs",
         "chunks": [
-            "FISH",
-            "MUM",
-            "MY"
+            "HIGH",
+            "VELO",
+            "CITY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1993,
-        "answer": "PURPLEFISH",
-        "clue": "Common enemy",
+        "answer": "EXPLODING",
+        "clue": "Bullet crafted from explosive powder",
         "chunks": [
-            "PURP",
-            "LEFI",
-            "SH"
+            "EXPL",
+            "OD",
+            "ING"
         ],
         "chunkCount": 3
     },
     {
         "id": 1994,
         "answer": "HARPYWINGS",
-        "clue": "Allows flight",
+        "clue": "Early hardmode wings",
         "chunks": [
             "HARP",
             "YWIN",
@@ -21637,7 +21636,7 @@
     {
         "id": 1995,
         "answer": "MININGHELMET",
-        "clue": "Headgear hat",
+        "clue": "Helmet that provides a light source",
         "chunks": [
             "MINI",
             "NGHE",
@@ -21647,56 +21646,56 @@
     },
     {
         "id": 1996,
-        "answer": "SKELETONBAT",
-        "clue": "Common enemy",
+        "answer": "POISONDART",
+        "clue": "Ammo crafted from stingers",
         "chunks": [
-            "SKEL",
-            "ETON",
-            "BAT"
+            "POI",
+            "SOND",
+            "ART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1997,
-        "answer": "OASISTROUT",
-        "clue": "Catchable fish",
+        "answer": "CURSEDDART",
+        "clue": "Ammo that rains cursed fire",
         "chunks": [
-            "OASI",
-            "STRO",
-            "UT"
+            "CUR",
+            "SEDD",
+            "ART"
         ],
         "chunkCount": 3
     },
     {
         "id": 1998,
-        "answer": "WOLFWYVERN",
-        "clue": "Hostile creature",
+        "answer": "ICHORDART",
+        "clue": "Ammo that splits apart midair",
         "chunks": [
-            "WOLF",
-            "WYVE",
-            "RN"
+            "ICH",
+            "ORDA",
+            "RT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1999,
-        "answer": "FROSTBASS",
-        "clue": "Catchable fish",
+        "answer": "CRYSTALDART",
+        "clue": "Ammo that ricochets off of enemies",
         "chunks": [
-            "FROS",
-            "TBA",
-            "SS"
+            "CRYS",
+            "TALD",
+            "ART"
         ],
         "chunkCount": 3
     },
     {
         "id": 2000,
-        "answer": "FIERCEOGRE",
-        "clue": "Hostile creature",
+        "answer": "DEBUFF",
+        "clue": "Temporary, negative status effects",
         "chunks": [
-            "FIER",
-            "CEOG",
-            "RE"
+            "DE",
+            "BU",
+            "FF"
         ],
         "chunkCount": 3
     }

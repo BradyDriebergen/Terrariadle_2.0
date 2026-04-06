@@ -58,18 +58,10 @@ Target Dummy
 Celestial Shell
 Endgame wings
 
-Ogre
-LEECH
-CALM
-CLAY
-WOOD
-HOIK (Famous bug that phases players through walls)
+
+
 SNOWMAN GANGSTA
-SABER (Type of chlorophyte sword)
-FRITZ
 Town Slimes
-TRUE (Prefix for broken hero sword weapons)
-DRONE (MARTIAN)
 martian saucer
 brain scrambler
 EVOLUTION BEAST
