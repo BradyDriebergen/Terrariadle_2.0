@@ -4422,11 +4422,11 @@
     },
     {
         "id": 443,
-        "answer": "EXPERT",
-        "clue": "Difficulty granting exclusive items",
+        "answer": "LEECH",
+        "clue": "Wall of Flesh servant",
         "chunks": [
-            "EX",
-            "PERT"
+            "LEE",
+            "CH"
         ],
         "chunkCount": 2
     },
@@ -20833,41 +20833,41 @@
     },
     {
         "id": 1922,
-        "answer": "VENOMSHARK",
-        "clue": "Hostile creature",
+        "answer": "TERRARIA",
+        "clue": "Greatest game ever made",
         "chunks": [
-            "VENO",
-            "MSHA",
-            "RK"
+            "TER",
+            "RAR",
+            "IA"
         ],
         "chunkCount": 3
     },
     {
         "id": 1923,
-        "answer": "SHARKWRAITH",
-        "clue": "Common enemy",
+        "answer": "MODIFIER",
+        "clue": "Changes a weapon's or accessory's stats",
         "chunks": [
-            "SHAR",
-            "KWRA",
-            "ITH"
+            "MOD",
+            "IF",
+            "IER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1924,
-        "answer": "SHARKGHOST",
-        "clue": "Common enemy",
+        "answer": "INVASION",
+        "clue": "Temporary, themed world events",
         "chunks": [
-            "SHAR",
-            "KGHO",
-            "ST"
+            "INV",
+            "ASI",
+            "ON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1925,
-        "answer": "JUNGLEGHOST",
-        "clue": "Common enemy",
+        "answer": "JOURNEY",
+        "clue": "Equivalent to creative mode",
         "chunks": [
             "JUNG",
             "LEGH",
@@ -20877,19 +20877,19 @@
     },
     {
         "id": 1926,
-        "answer": "GOBLINORC",
-        "clue": "Hostile creature",
+        "answer": "MASTERMODE",
+        "clue": "Hardest world difficulty",
         "chunks": [
-            "GOBL",
-            "INO",
-            "RC"
+            "MAS",
+            "TERM",
+            "ODE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1927,
         "answer": "BLINDFOLD",
-        "clue": "Helpful accessory",
+        "clue": "Grants immunity to Darkness accessory",
         "chunks": [
             "BLIN",
             "DFO",
@@ -20899,23 +20899,23 @@
     },
     {
         "id": 1928,
-        "answer": "CRABPIRATE",
-        "clue": "Common enemy",
+        "answer": "EXPERTMODE",
+        "clue": "World difficulty adding treasure bags",
         "chunks": [
-            "CRAB",
-            "PIRA",
-            "TE"
+            "EXPE",
+            "RTM",
+            "ODE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1929,
-        "answer": "MIRRORTROUT",
-        "clue": "Catchable fish",
+        "answer": "CLASSICMODE",
+        "clue": "Regular world difficulty",
         "chunks": [
-            "MIRR",
-            "ORTR",
-            "OUT"
+            "CLAS",
+            "ICMO",
+            "DE"
         ],
         "chunkCount": 3
     },
@@ -20932,30 +20932,30 @@
     },
     {
         "id": 1931,
-        "answer": "SHARKGOBLIN",
-        "clue": "Common enemy",
+        "answer": "ACCESSORY",
+        "clue": "Equipable item providing stat boosts",
         "chunks": [
-            "SHAR",
-            "KGOB",
-            "LIN"
+            "ACC",
+            "ESS",
+            "ORY"
         ],
         "chunkCount": 3
     },
     {
         "id": 1932,
-        "answer": "DOGSALMON",
-        "clue": "Catchable fish",
+        "answer": "CRITICALHIT",
+        "clue": "Stat for doubling damage",
         "chunks": [
-            "DOGS",
-            "ALM",
-            "ON"
+            "CRIT",
+            "ICAL",
+            "HIT"
         ],
         "chunkCount": 3
     },
     {
         "id": 1933,
-        "answer": "PINKSHARK",
-        "clue": "Common enemy",
+        "answer": "KNOCKBACK",
+        "clue": "Stat determining entinty repelled",
         "chunks": [
             "PINK",
             "SHA",
@@ -20965,243 +20965,243 @@
     },
     {
         "id": 1934,
-        "answer": "STARAMULET",
-        "clue": "Wearable accessory",
+        "answer": "BLIZZARD",
+        "clue": "Rain event in the Snow Biome",
         "chunks": [
-            "STAR",
-            "AMUL",
-            "ET"
+            "BLI",
+            "ZZ",
+            "ARD"
         ],
         "chunkCount": 3
     },
     {
         "id": 1935,
-        "answer": "BLUEFISH",
-        "clue": "Common enemy",
+        "answer": "FARTINAJAR",
+        "clue": "Stinky Cloud in a Bottle",
         "chunks": [
-            "BLUE",
-            "FI",
-            "SH"
+            "FAR",
+            "TINA",
+            "JAR"
         ],
         "chunkCount": 3
     },
     {
         "id": 1936,
-        "answer": "SKELEWORM",
-        "clue": "Hostile creature",
+        "answer": "FLYINGCARPET",
+        "clue": "Accessory that allows floating in air",
         "chunks": [
-            "SKEL",
-            "EWO",
-            "RM"
+            "FLYI",
+            "NGCA",
+            "RPET"
         ],
         "chunkCount": 3
     },
     {
         "id": 1937,
-        "answer": "SPOREWYVERN",
-        "clue": "Hostile creature",
+        "answer": "FROGFLIPPER",
+        "clue": "Frog Leg + Flipper",
         "chunks": [
-            "SPOR",
-            "EWYV",
-            "ERN"
+            "FRO",
+            "GFLI",
+            "PPER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1938,
-        "answer": "ARMOREDDUCK",
-        "clue": "Hostile creature",
+        "answer": "HONEYBALLOON",
+        "clue": "Red Balloon + Honey Comb",
         "chunks": [
-            "ARMO",
-            "REDD",
-            "UCK"
+            "HONE",
+            "YBAL",
+            "LOON"
         ],
         "chunkCount": 3
     },
     {
         "id": 1939,
-        "answer": "CRIMSONDEMON",
-        "clue": "Hostile creature",
+        "answer": "MOLTENCHARM",
+        "clue": "Lava Charm + Obsidian Skull",
         "chunks": [
-            "CRIM",
-            "SOND",
-            "EMON"
+            "MOLT",
+            "ENC",
+            "HARM"
         ],
         "chunkCount": 3
     },
     {
         "id": 1940,
-        "answer": "SHARKSLIME",
-        "clue": "Common enemy",
+        "answer": "SPECTREBOOTS",
+        "clue": "Hermes Boots + Rocket Boots",
         "chunks": [
-            "SHAR",
-            "KSLI",
-            "ME"
+            "SPEC",
+            "TREB",
+            "OOTS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1941,
-        "answer": "NINJASCARF",
-        "clue": "Wearable accessory",
+        "answer": "SPECTREWINGS",
+        "clue": "Wings built with Spectre bars",
         "chunks": [
-            "NINJ",
-            "ASCA",
-            "RF"
+            "SPEC",
+            "TREW",
+            "INGS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1942,
-        "answer": "SWAMPDEMON",
-        "clue": "Hostile creature",
+        "answer": "BEETLEWINGS",
+        "clue": "Wings made with Beetle Husks",
         "chunks": [
-            "SWAM",
-            "PDEM",
-            "ON"
+            "BEET",
+            "LEWI",
+            "NGS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1943,
-        "answer": "HONEYCLOAK",
-        "clue": "Wearable accessory",
+        "answer": "SPOOKYWINGS",
+        "clue": "Wings made from Mourning Woods",
         "chunks": [
-            "HONE",
-            "YCLO",
-            "AK"
+            "SPOO",
+            "KYWI",
+            "NGS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1944,
-        "answer": "CURSEDANT",
-        "clue": "Hostile creature",
+        "answer": "NEBULAMANTLE",
+        "clue": "Post-Moon Lord wings",
         "chunks": [
-            "CURS",
-            "EDA",
-            "NT"
+            "NEBU",
+            "LAMA",
+            "NTLE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1945,
-        "answer": "HELLJELLY",
-        "clue": "Hostile creature",
+        "answer": "WEATHERRADIO",
+        "clue": "Accessory that displays the weather",
         "chunks": [
-            "HELL",
-            "JEL",
-            "LY"
+            "WEAT",
+            "HERR",
+            "ADIO"
         ],
         "chunkCount": 3
     },
     {
         "id": 1946,
-        "answer": "SHARKFISH",
-        "clue": "Common enemy",
+        "answer": "ARCANEFLOWER",
+        "clue": "Mana Flower + Putrid Scent",
         "chunks": [
-            "SHAR",
-            "KFI",
-            "SH"
+            "ARCA",
+            "NEFL",
+            "OWER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1947,
-        "answer": "SKELEWYVERN",
-        "clue": "Hostile creature",
+        "answer": "MAGICCUFFS",
+        "clue": "Band of Starpower + Shackle",
         "chunks": [
-            "SKEL",
-            "EWYV",
-            "ERN"
+            "MA",
+            "GICC",
+            "UFFS"
         ],
         "chunkCount": 3
     },
     {
         "id": 1948,
-        "answer": "CURSEDSPIDER",
-        "clue": "Hostile creature",
+        "answer": "MAGNETFLOWER",
+        "clue": "Mana Flower + Celestial Magnet",
         "chunks": [
-            "CURS",
-            "EDSP",
-            "IDER"
+            "MAGN",
+            "ETFL",
+            "OWER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1949,
-        "answer": "OASISFISH",
-        "clue": "Catchable fish",
+        "answer": "AVENGER",
+        "clue": "Base damage emblem",
         "chunks": [
-            "OASI",
-            "SFI",
-            "SH"
+            "AVE",
+            "NG",
+            "ER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1950,
-        "answer": "FROSTDEMON",
-        "clue": "Common enemy",
+        "answer": "POWERGLOVE",
+        "clue": "Titan Glove + Feral Claws",
         "chunks": [
-            "FROS",
-            "TDEM",
-            "ON"
+            "POWE",
+            "RGL",
+            "OVE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1951,
-        "answer": "SLIMEPIRATE",
-        "clue": "Common enemy",
+        "answer": "RECONSCOPE",
+        "clue": "Sniper Scope + Putrid Scent",
         "chunks": [
-            "SLIM",
-            "EPIR",
-            "ATE"
+            "REC",
+            "CONS",
+            "COPE"
         ],
         "chunkCount": 3
     },
     {
         "id": 1952,
-        "answer": "BONESHARK",
-        "clue": "Hostile creature",
+        "answer": "TOOLBOX",
+        "clue": "Construction accessory from presents",
         "chunks": [
-            "BONE",
-            "SHA",
-            "RK"
+            "TOO",
+            "LB",
+            "OX"
         ],
         "chunkCount": 3
     },
     {
         "id": 1953,
-        "answer": "GIANTWYVERN",
-        "clue": "Common enemy",
+        "answer": "PAINTSPRAYER",
+        "clue": "Accessory that paints placed objects",
         "chunks": [
-            "GIAN",
-            "TWYV",
-            "ERN"
+            "PAIN",
+            "TSPR",
+            "AYER"
         ],
         "chunkCount": 3
     },
     {
         "id": 1954,
-        "answer": "",
-        "clue": "Helpful accessory",
+        "answer": "EXTENDOGRIP",
+        "clue": "Architect Gizmo Pack component",
         "chunks": [
-            "RANG",
-            "EREM",
-            "BLEM"
+            "EXTE",
+            "NDOG",
+            "RIP"
         ],
         "chunkCount": 3
     },
     {
         "id": 1955,
-        "answer": "FIERCEEYE",
-        "clue": "Hostile creature",
+        "answer": "GRAVITYGLOBE",
+        "clue": "Accessory that reverses gravity",
         "chunks": [
-            "FIER",
-            "CEE",
-            "YE"
+            "GRAV",
+            "ITYG",
+            "LOBE"
         ],
         "chunkCount": 3
     },

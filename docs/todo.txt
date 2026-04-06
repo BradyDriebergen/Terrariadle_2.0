@@ -43,6 +43,8 @@ NOTES ABOUT NAMING CONVENTIONS:
     - Ex. "Melee speed accessory modifier"
 - No complex clues, clues should relate to the game
 - Keep clues relatively small
+- If there is no obvious description for an accessory,
+list the ingredients seperated by '+'
 
 
 Remember to add:
@@ -78,6 +80,7 @@ FLYING DUTCHMAN
 BARREL LAUNCHER
 MOURNING WOOD
 MARTIAN MADNESS
+VORTEX BOOSTER
 
 
 Potential categories:
