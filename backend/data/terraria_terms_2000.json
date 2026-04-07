@@ -3092,7 +3092,7 @@
     {
         "id": 310,
         "answer": "FLINT",
-        "clue": "Deadcells melee weapon",
+        "clue": "Dead Cells melee weapon collab",
         "chunks": [
             "FL",
             "INT"
@@ -5001,32 +5001,32 @@
     },
     {
         "id": 501,
-        "answer": "RACINGDRONE",
-        "clue": "",
+        "answer": "DIGGINGCLAW",
+        "clue": "Shroomite pickaxe type",
         "chunks": [
-            "PI",
-            "NK",
-            "FI",
-            "SH"
+            "DIG",
+            "GIN",
+            "GC",
+            "LAW"
         ],
         "chunkCount": 4
     },
     {
         "id": 502,
-        "answer": "HORNETGOBLIN",
-        "clue": "Common enemy",
+        "answer": "TOWNSLIMES",
+        "clue": "Town pets found around the world",
         "chunks": [
-            "HORN",
-            "ETGO",
-            "BL",
-            "IN"
+            "TO",
+            "WNS",
+            "LI",
+            "MES"
         ],
         "chunkCount": 4
     },
     {
         "id": 503,
         "answer": "FROSTMOON",
-        "clue": "World event",
+        "clue": "Christmas-themed hardmode event",
         "chunks": [
             "FRO",
             "ST",
@@ -5037,92 +5037,92 @@
     },
     {
         "id": 504,
-        "answer": "BEEWYVERN",
-        "clue": "Common enemy",
+        "answer": "TRAGICUMBRELLA",
+        "clue": "Weapon bought from a graveyard",
         "chunks": [
-            "BEE",
-            "WY",
-            "VE",
-            "RN"
+            "TRAG",
+            "ICUM",
+            "BRE",
+            "LLA"
         ],
         "chunkCount": 4
     },
     {
         "id": 505,
-        "answer": "BLOODHORNET",
-        "clue": "Common enemy",
+        "answer": "STYLISHSCISSORS",
+        "clue": "Weapon dropped from the Stylist",
         "chunks": [
-            "BLOO",
-            "DHO",
-            "RN",
-            "ET"
+            "STYL",
+            "ISHS",
+            "CISS",
+            "ORS"
         ],
         "chunkCount": 4
     },
     {
         "id": 506,
-        "answer": "WEREWOLFSLIME",
-        "clue": "Common enemy",
+        "answer": "MANDIBLEBLADE",
+        "clue": "Weapon dropped from Antlions",
         "chunks": [
-            "WERE",
-            "WOLF",
-            "SLI",
-            "ME"
+            "MAN",
+            "DIB",
+            "LEBL",
+            "ADE"
         ],
         "chunkCount": 4
     },
     {
         "id": 507,
-        "answer": "SUMMONERBOOTS",
-        "clue": "Wearable accessory",
+        "answer": "BREATHINGREED",
+        "clue": "Weapon that allows underwater breathing",
         "chunks": [
-            "SUMM",
-            "ONER",
-            "BOO",
-            "TS"
+            "BREA",
+            "THIN",
+            "GRE",
+            "ED"
         ],
         "chunkCount": 4
     },
     {
         "id": 508,
-        "answer": "NINJABELT",
-        "clue": "Wearable accessory",
+        "answer": "TENTACLESPIKE",
+        "clue": "Sticks spikes into enemies on hit",
         "chunks": [
-            "NIN",
-            "JA",
-            "BE",
-            "LT"
+            "TENT",
+            "ACL",
+            "ESP",
+            "IKE"
         ],
         "chunkCount": 4
     },
     {
         "id": 509,
-        "answer": "CURSEDDUCK",
-        "clue": "Hostile creature",
+        "answer": "BLOODBUTCHERER",
+        "clue": "Night's Edge component",
         "chunks": [
-            "CURS",
-            "ED",
-            "DU",
-            "CK"
+            "BLO",
+            "ODBU",
+            "TCH",
+            "ERER"
         ],
         "chunkCount": 4
     },
     {
         "id": 510,
-        "answer": "VENOMFISH",
-        "clue": "Hostile creature",
+        "answer": "EXOTICSCIMITAR",
+        "clue": "Dye Trader drop",
         "chunks": [
-            "VEN",
-            "OM",
-            "FI",
-            "SH"
+            "EXOT",
+            "ICSC",
+            "IMIT",
+            "AR"
         ],
         "chunkCount": 4
     },
     {
         "id": 511,
         "answer": "CELESTIALCUFFS",
-        "clue": "Helpful accessory",
+        "clue": "Celestial Magnet + Magic Cuffs",
         "chunks": [
             "CELE",
             "STIA",
@@ -5133,56 +5133,56 @@
     },
     {
         "id": 512,
-        "answer": "LAVAAMULET",
-        "clue": "Wearable accessory",
+        "answer": "ENCHANTEDSWORD",
+        "clue": "Weapon found in underground shrines",
         "chunks": [
-            "LAVA",
-            "AM",
-            "UL",
-            "ET"
+            "ENCH",
+            "ANTE",
+            "DSW",
+            "ORD"
         ],
         "chunkCount": 4
     },
     {
         "id": 513,
-        "answer": "PRISMINNOW",
-        "clue": "Catchable fish",
+        "answer": "FETIDBAGHNAKHS",
+        "clue": "Crimson Mimic melee drop",
         "chunks": [
-            "PRIS",
-            "MI",
-            "NN",
-            "OW"
+            "FE",
+            "TIDB",
+            "AGHN",
+            "AKHS"
         ],
         "chunkCount": 4
     },
     {
         "id": 514,
-        "answer": "MECHCULTIST",
-        "clue": "Hostile creature",
+        "answer": "TRUEEXCALIBER",
+        "clue": "Terrablade component",
         "chunks": [
-            "MECH",
-            "CUL",
-            "TI",
-            "ST"
+            "TRU",
+            "EE",
+            "XCAL",
+            "IBER"
         ],
         "chunkCount": 4
     },
     {
         "id": 515,
-        "answer": "EELCATFISH",
-        "clue": "Catchable fish",
+        "answer": "HORSEMANSBLADE",
+        "clue": "Zenith sword component",
         "chunks": [
-            "EELC",
-            "AT",
-            "FI",
-            "SH"
+            "HOR",
+            "SEMA",
+            "NSB",
+            "LADE"
         ],
         "chunkCount": 4
     },
     {
         "id": 516,
         "answer": "CHLOROPHYTE",
-        "clue": "Crafting metal",
+        "clue": "Hardmode ore that grows underground",
         "chunks": [
             "CHLO",
             "ROP",
@@ -5193,47 +5193,47 @@
     },
     {
         "id": 517,
-        "answer": "MARTIANSPIDER",
-        "clue": "Hostile creature",
+        "answer": "SNOWMANGANGSTA",
+        "clue": "Frost Legion enemy",
         "chunks": [
-            "MART",
-            "IANS",
-            "PID",
-            "ER"
+            "SNO",
+            "WMAN",
+            "GAN",
+            "GSTA"
         ],
         "chunkCount": 4
     },
     {
         "id": 518,
-        "answer": "SMALLDUCK",
-        "clue": "Hostile creature",
+        "answer": "MARTIANSAUCER",
+        "clue": "Martian Madness mini-boss",
         "chunks": [
-            "SMA",
-            "LL",
-            "DU",
-            "CK"
+            "MART",
+            "IANS",
+            "AU",
+            "CER"
         ],
         "chunkCount": 4
     },
     {
         "id": 519,
-        "answer": "DEMONWRAITH",
-        "clue": "Common enemy",
+        "answer": "BRAINSCRAMBLER",
+        "clue": "Martian Madness enemy",
         "chunks": [
-            "DEMO",
-            "NWR",
-            "AI",
-            "TH"
+            "BR",
+            "AINS",
+            "CRAM",
+            "BLER"
         ],
         "chunkCount": 4
     },
     {
         "id": 520,
         "answer": "DEMONWINGS",
-        "clue": "Allows flight",
+        "clue": "Wings made from souls of night",
         "chunks": [
-            "DEMO",
-            "NW",
+            "DEM",
+            "ONW",
             "IN",
             "GS"
         ],
@@ -5241,109 +5241,109 @@
     },
     {
         "id": 521,
-        "answer": "GIANTZOMBIE",
-        "clue": "Common enemy",
+        "answer": "EVOLUTION BEAST",
+        "clue": "Nebula enemy that shoots homing spheres",
         "chunks": [
-            "GIAN",
-            "TZO",
-            "MB",
-            "IE"
+            "EVO",
+            "LUTI",
+            "ONB",
+            "EAST"
         ],
         "chunkCount": 4
     },
     {
         "id": 522,
-        "answer": "CORRUPTSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "NEBULAFLOATER",
+        "clue": "Nebula enemy that teleports around",
         "chunks": [
-            "CORR",
-            "UPTS",
-            "NAPP",
-            "ER"
+            "NE",
+            "BULA",
+            "FLO",
+            "ATER"
         ],
         "chunkCount": 4
     },
     {
         "id": 523,
-        "answer": "TOXICSNAIL",
-        "clue": "Hostile creature",
+        "answer": "TWINKLEPOPPER",
+        "clue": "Stardust enemy that spawns Twinkles",
         "chunks": [
-            "TOXI",
-            "CS",
-            "NA",
-            "IL"
+            "TWIN",
+            "KL",
+            "EPOP",
+            "PER"
         ],
         "chunkCount": 4
     },
     {
         "id": 524,
-        "answer": "GIANTJELLY",
-        "clue": "Hostile creature",
+        "answer": "MILKYWAYWEAVER",
+        "clue": "Stardust flying worm enemy",
         "chunks": [
-            "GIAN",
-            "TJ",
-            "EL",
-            "LY"
+            "MIL",
+            "KYWA",
+            "YWE",
+            "AVER"
         ],
         "chunkCount": 4
     },
     {
         "id": 525,
-        "answer": "SKELETONWYVERN",
-        "clue": "Common enemy",
+        "answer": "FLYINGDUTCHMAN",
+        "clue": "Pirate Invasion mini-boss",
         "chunks": [
-            "SKEL",
-            "ETON",
-            "WYVE",
-            "RN"
+            "FLYI",
+            "NGD",
+            "UTC",
+            "HMAN"
         ],
         "chunkCount": 4
     },
     {
         "id": 526,
-        "answer": "OASISMINNOW",
-        "clue": "Catchable fish",
+        "answer": "BARRELLAUNCHER",
+        "clue": "Dead Cells launcher collab",
         "chunks": [
-            "OASI",
-            "SMI",
-            "NN",
-            "OW"
+            "BARR",
+            "ELL",
+            "AUN",
+            "CHER"
         ],
         "chunkCount": 4
     },
     {
         "id": 527,
-        "answer": "SORCERERSCARF",
-        "clue": "Wearable accessory",
+        "answer": "MOURNINGWOOD",
+        "clue": "Pumpkin Moon mini-boss",
         "chunks": [
-            "SORC",
-            "ERER",
-            "SCA",
-            "RF"
+            "MOU",
+            "RNI",
+            "NGW",
+            "OOD"
         ],
         "chunkCount": 4
     },
     {
         "id": 528,
-        "answer": "BLUEMUMMY",
-        "clue": "Common enemy",
+        "answer": "MARTIANMADNESS",
+        "clue": "Alien-themed hardmode event",
         "chunks": [
-            "BLU",
-            "EM",
-            "UM",
-            "MY"
+            "MAR",
+            "TIAN",
+            "MADN",
+            "ESS"
         ],
         "chunkCount": 4
     },
     {
         "id": 529,
-        "answer": "JUNGLECATFISH",
-        "clue": "Catchable fish",
+        "answer": "VORTEXBOOSTER",
+        "clue": "Post-Moon Lord wings",
         "chunks": [
-            "JUNG",
-            "LECA",
-            "TFI",
-            "SH"
+            "VORT",
+            "EXBO",
+            "OS",
+            "TER"
         ],
         "chunkCount": 4
     },
@@ -5361,68 +5361,68 @@
     },
     {
         "id": 531,
-        "answer": "CRYSTALCARP",
-        "clue": "Catchable fish",
+        "answer": "CELESTIALSHELL",
+        "clue": "Celestial Stone + Moon Shell",
         "chunks": [
-            "CRYS",
-            "TAL",
-            "CA",
-            "RP"
+            "CELE",
+            "STI",
+            "ALSH",
+            "ELL"
         ],
         "chunkCount": 4
     },
     {
         "id": 532,
-        "answer": "BLACKDUCK",
-        "clue": "Hostile creature",
+        "answer": "TARGETDUMMY",
+        "clue": "Furniture you can damage",
         "chunks": [
-            "BLA",
-            "CK",
-            "DU",
-            "CK"
+            "TA",
+            "RGE",
+            "TDUM",
+            "MY"
         ],
         "chunkCount": 4
     },
     {
         "id": 533,
-        "answer": "SILVERARMOR",
-        "clue": "Armor set",
+        "answer": "MOONLORDSLEGS",
+        "clue": "Leg armor found in Drunk or Zenith seeds",
         "chunks": [
-            "SILV",
-            "ERA",
-            "RM",
-            "OR"
+            "MOO",
+            "NLO",
+            "RDSL",
+            "EGS"
         ],
         "chunkCount": 4
     },
     {
         "id": 534,
-        "answer": "DARKJELLY",
-        "clue": "Hostile creature",
+        "answer": "VALKYRIEYOYO",
+        "clue": "Developer's yoyo",
         "chunks": [
-            "DAR",
-            "KJ",
-            "EL",
-            "LY"
+            "VA",
+            "LKYR",
+            "IEY",
+            "OYO"
         ],
         "chunkCount": 4
     },
     {
         "id": 535,
-        "answer": "DESERTDEMON",
-        "clue": "Common enemy",
+        "answer": "THEROTTENFORK",
+        "clue": "Crimson heart drop",
         "chunks": [
-            "DESE",
-            "RTD",
-            "EM",
-            "ON"
+            "THER",
+            "OTT",
+            "ENFO",
+            "RK"
         ],
         "chunkCount": 4
     },
     {
         "id": 536,
         "answer": "RIFLESCOPE",
-        "clue": "Helpful accessory",
+        "clue": "Accessory that allows zooming in",
         "chunks": [
             "RIFL",
             "ES",
