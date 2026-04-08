@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at enemies - bosses, item 1861
+Finished at Whips, item 573
 
 Skipping 501 - 700, will update after 3 chunk words
 
@@ -45,6 +45,7 @@ NOTES ABOUT NAMING CONVENTIONS:
 - Keep clues relatively small
 - If there is no obvious description for an accessory,
 list the ingredients seperated by '+'
+- Endgame lunar mage weapon is an example of a lunar weapon
 
 
 Remember to add:

@@ -5433,140 +5433,140 @@
     },
     {
         "id": 537,
-        "answer": "AMBERSTAFF",
-        "clue": "Gem magic staff",
+        "answer": "GHASTLYGLAIVE",
+        "clue": "Spear dropped from Ogres",
         "chunks": [
-            "AMBE",
-            "RS",
-            "TA",
-            "FF"
+            "GHA",
+            "STLY",
+            "GLA",
+            "IVE"
         ],
         "chunkCount": 4
     },
     {
         "id": 538,
-        "answer": "JUNGLETROUT",
-        "clue": "Catchable fish",
+        "answer": "MUSHROOMSPEAR",
+        "clue": "Only buyable spear",
         "chunks": [
-            "JUNG",
-            "LET",
-            "RO",
-            "UT"
+            "MUS",
+            "HRO",
+            "OMSP",
+            "EAR"
         ],
         "chunkCount": 4
     },
     {
         "id": 539,
-        "answer": "CRABGHOST",
-        "clue": "Common enemy",
+        "answer": "BLOODYMACHETE",
+        "clue": "Weapon dropped during Halloween",
         "chunks": [
-            "CRA",
-            "BG",
-            "HO",
-            "ST"
+            "BL",
+            "OODY",
+            "MAC",
+            "HETE"
         ],
         "chunkCount": 4
     },
     {
         "id": 540,
-        "answer": "LAVAHORNET",
-        "clue": "Common enemy",
+        "answer": "COMBATWRENCH",
+        "clue": "Weapon dropped from the Mechanic",
         "chunks": [
-            "LAVA",
-            "HO",
-            "RN",
-            "ET"
+            "CO",
+            "MBA",
+            "TWRE",
+            "NCH"
         ],
         "chunkCount": 4
     },
     {
         "id": 541,
-        "answer": "EMERALDHOOK",
-        "clue": "Gem grapple hook",
+        "answer": "PALADINSHAMMER",
+        "clue": "Hardmode Dungeon boomerang",
         "chunks": [
-            "EMER",
-            "ALD",
-            "HO",
-            "OK"
+            "PALA",
+            "DIN",
+            "SHA",
+            "MMER"
         ],
         "chunkCount": 4
     },
     {
         "id": 542,
-        "answer": "STARDUSTDRILL",
-        "clue": "Useful tool",
+        "answer": "JOUSTINGLANCE",
+        "clue": "Weapon gaining damage with speed",
         "chunks": [
-            "STAR",
-            "DUST",
-            "DRI",
-            "LL"
+            "JOU",
+            "STI",
+            "NGLA",
+            "NCE"
         ],
         "chunkCount": 4
     },
     {
         "id": 543,
-        "answer": "",
-        "clue": "Catchable fish",
+        "answer": "SHADOWFLAMEKNIFE",
+        "clue": "Throwable hardmode melee weapon",
         "chunks": [
-            "FROS",
-            "TT",
-            "RO",
-            "UT"
+            "SHAD",
+            "OWFL",
+            "AMEK",
+            "NIFE"
         ],
         "chunkCount": 4
     },
     {
         "id": 544,
-        "answer": "SMALLBAT",
-        "clue": "Hostile creature",
+        "answer": "SLEEPYOCTOPOD",
+        "clue": "Melee weapon dropped by Ogres",
         "chunks": [
-            "SM",
-            "AL",
-            "LB",
-            "AT"
+            "SLE",
+            "EPYO",
+            "CTOP",
+            "OD"
         ],
         "chunkCount": 4
     },
     {
         "id": 545,
-        "answer": "HONEYSHRIMP",
-        "clue": "Catchable fish",
+        "answer": "VAMPIREKNIVES",
+        "clue": "Lifesteal melee weapon",
         "chunks": [
-            "HONE",
-            "YSH",
-            "RI",
-            "MP"
+            "VAM",
+            "PIR",
+            "EKNI",
+            "VES"
         ],
         "chunkCount": 4
     },
     {
         "id": 546,
-        "answer": "COPPERARMOR",
-        "clue": "Armor set",
+        "answer": "SKYDRAGONSFURY",
+        "clue": "Melee weapon dropped by Betsy",
         "chunks": [
-            "COPP",
-            "ERA",
-            "RM",
-            "OR"
+            "SKYD",
+            "RAGO",
+            "NSFU",
+            "RY"
         ],
         "chunkCount": 4
     },
     {
         "id": 547,
-        "answer": "APPRENTICEHAT",
-        "clue": "Headgear hat",
+        "answer": "SOLARERUPTION",
+        "clue": "Endgame lunar melee flail",
         "chunks": [
-            "APPR",
-            "ENTI",
-            "CEH",
-            "AT"
+            "SOL",
+            "ARE",
+            "RUPT",
+            "ION"
         ],
         "chunkCount": 4
     },
     {
         "id": 548,
         "answer": "BEWITCHED",
-        "clue": "Beneficial buff",
+        "clue": "Summoner buff gained through furniture",
         "chunks": [
             "BEW",
             "IT",
@@ -5577,212 +5577,212 @@
     },
     {
         "id": 549,
-        "answer": "SPECTROUT",
-        "clue": "Catchable fish",
+        "answer": "DAEDALUSSTORMBOW",
+        "clue": "Bow that fires arrows from the sky",
         "chunks": [
-            "SPE",
-            "CT",
-            "RO",
-            "UT"
+            "DAED",
+            "ALUS",
+            "STOR",
+            "MBOW"
         ],
         "chunkCount": 4
     },
     {
         "id": 550,
-        "answer": "DEMONGHOST",
-        "clue": "Common enemy",
+        "answer": "SHADOWFLAMEBOW",
+        "clue": "Weapon drop from Goblin Warlocks",
         "chunks": [
-            "DEMO",
-            "NG",
-            "HO",
-            "ST"
+            "SHA",
+            "DOWF",
+            "LAM",
+            "EBOW"
         ],
         "chunkCount": 4
     },
     {
         "id": 551,
-        "answer": "GREENFISH",
-        "clue": "Common enemy",
+        "answer": "STAKELAUNCHER",
+        "clue": "Crossbow that doesn't fire arrows",
         "chunks": [
-            "GRE",
-            "EN",
-            "FI",
-            "SH"
+            "STA",
+            "KEL",
+            "AUN",
+            "CHER"
         ],
         "chunkCount": 4
     },
     {
         "id": 552,
-        "answer": "PINKDRAGON",
-        "clue": "Hostile creature",
+        "answer": "THEUNDERTAKER",
+        "clue": "Crimson Heart ranged weapon drop",
         "chunks": [
-            "PINK",
-            "DR",
-            "AG",
-            "ON"
+            "THEU",
+            "ND",
+            "ERTA",
+            "KER"
         ],
         "chunkCount": 4
     },
     {
         "id": 553,
-        "answer": "MUMMYHORNET",
-        "clue": "Common enemy",
+        "answer": "PHOENIXBLASTER",
+        "clue": "Upgraded Handgun",
         "chunks": [
-            "MUMM",
-            "YHO",
-            "RN",
-            "ET"
+            "PHO",
+            "ENIX",
+            "BLA",
+            "STER"
         ],
         "chunkCount": 4
     },
     {
         "id": 554,
-        "answer": "HONEYKELP",
-        "clue": "Catchable fish",
+        "answer": "VENUSMAGNUM",
+        "clue": "Plantera ranged weapon drop",
         "chunks": [
-            "HON",
-            "EY",
-            "KE",
-            "LP"
+            "VE",
+            "NUSM",
+            "AGN",
+            "UM"
         ],
         "chunkCount": 4
     },
     {
         "id": 555,
-        "answer": "FIERCEFROG",
-        "clue": "Hostile creature",
+        "answer": "ROCKETLAUNCHER",
+        "clue": "Hardmode Dungeon ranged weapon drop",
         "chunks": [
-            "FIER",
-            "CE",
-            "FR",
-            "OG"
+            "ROC",
+            "KETL",
+            "AUN",
+            "CHER"
         ],
         "chunkCount": 4
     },
     {
         "id": 556,
-        "answer": "HALLOWEDIMP",
-        "clue": "Hostile creature",
+        "answer": "SNOWMANCANNON",
+        "clue": "Ice Queen ranged weapon drop",
         "chunks": [
-            "HALL",
-            "OWE",
-            "DI",
-            "MP"
+            "SNO",
+            "WMA",
+            "NCAN",
+            "NON"
         ],
         "chunkCount": 4
     },
     {
         "id": 557,
-        "answer": "SKELEMUMMY",
-        "clue": "Hostile creature",
+        "answer": "PAINTBALLGUN",
+        "clue": "Weapon dropped from the Painter",
         "chunks": [
-            "SKEL",
-            "EM",
-            "UM",
-            "MY"
+            "PAI",
+            "NTB",
+            "AL",
+            "LGUN"
         ],
         "chunkCount": 4
     },
     {
         "id": 558,
-        "answer": "CAVECULTIST",
-        "clue": "Hostile creature",
+        "answer": "WANDOFSPARKING",
+        "clue": "Magic weapon found in surface chests",
         "chunks": [
-            "CAVE",
-            "CUL",
-            "TI",
-            "ST"
+            "WAN",
+            "DOFS",
+            "PARK",
+            "ING"
         ],
         "chunkCount": 4
     },
     {
         "id": 559,
-        "answer": "ARMOREDBIRD",
-        "clue": "Hostile creature",
+        "answer": "WANDOFFROSTING",
+        "clue": "Upgrade to the Wand of Sparking",
         "chunks": [
-            "ARMO",
-            "RED",
-            "BI",
-            "RD"
+            "WA",
+            "NDOF",
+            "FROS",
+            "TING"
         ],
         "chunkCount": 4
     },
     {
         "id": 560,
-        "answer": "VENOMCRAB",
-        "clue": "Hostile creature",
+        "answer": "THUNDERZAPPER",
+        "clue": "Magic weapon found in Desert chests",
         "chunks": [
-            "VEN",
-            "OM",
-            "CR",
-            "AB"
+            "THUN",
+            "DERZ",
+            "APP",
+            "ER"
         ],
         "chunkCount": 4
     },
     {
         "id": 561,
-        "answer": "MARTIANDUCK",
-        "clue": "Hostile creature",
+        "answer": "FLOWEROFFIRE",
+        "clue": "Magic weapon found in shadow chests",
         "chunks": [
-            "MART",
-            "IAN",
-            "DU",
-            "CK"
+            "FLO",
+            "WERO",
+            "FF",
+            "IRE"
         ],
         "chunkCount": 4
     },
     {
         "id": 562,
-        "answer": "JUNGLEJELLY",
-        "clue": "Hostile creature",
+        "answer": "CRYSTALSERPENT",
+        "clue": "Hardmode weapon fished for",
         "chunks": [
-            "JUNG",
-            "LEJ",
-            "EL",
-            "LY"
+            "CRYS",
+            "TA",
+            "LSER",
+            "PENT"
         ],
         "chunkCount": 4
     },
     {
         "id": 563,
-        "answer": "GOBLINANT",
-        "clue": "Hostile creature",
+        "answer": "FLOWEROFFROST",
+        "clue": "Weapon dropped from Ice Mimics",
         "chunks": [
-            "GOB",
-            "LI",
-            "NA",
-            "NT"
+            "FLO",
+            "WER",
+            "OFFR",
+            "OST"
         ],
         "chunkCount": 4
     },
     {
         "id": 564,
-        "answer": "PINKSKELETON",
-        "clue": "Common enemy",
+        "answer": "BLIZZARDSTAFF",
+        "clue": "Ice Queen mage weapon drop",
         "chunks": [
-            "PINK",
-            "SKEL",
-            "ET",
-            "ON"
+            "BLI",
+            "ZZAR",
+            "DSTA",
+            "FF"
         ],
         "chunkCount": 4
     },
     {
         "id": 565,
-        "answer": "CURSEDOGRE",
-        "clue": "Hostile creature",
+        "answer": "SHADOWBEAMSTAFF",
+        "clue": "Hardmode Dungeon magic weapon",
         "chunks": [
-            "CURS",
-            "ED",
-            "OG",
-            "RE"
+            "SHAD",
+            "OWBE",
+            "AMST",
+            "AFF"
         ],
         "chunkCount": 4
     },
     {
         "id": 566,
         "answer": "FLESHKNUCKLES",
-        "clue": "Helpful accessory",
+        "clue": "Crimson Mimic accessory drop",
         "chunks": [
             "FLES",
             "HKNU",
@@ -5793,73 +5793,73 @@
     },
     {
         "id": 567,
-        "answer": "ARMOREDMINNOW",
-        "clue": "Catchable fish",
+        "answer": "ORANGEZAPINATOR",
+        "clue": "Used to be a developer test weapon",
         "chunks": [
-            "ARMO",
-            "REDM",
-            "INN",
-            "OW"
+            "ORAN",
+            "GEZA",
+            "PINA",
+            "TOR"
         ],
         "chunkCount": 4
     },
     {
         "id": 568,
-        "answer": "WHITESHARK",
-        "clue": "Common enemy",
+        "answer": "LASERMACHINEGUN",
+        "clue": "Martian Madness magic gun",
         "chunks": [
-            "WHIT",
-            "ES",
-            "HA",
-            "RK"
+            "LASE",
+            "RMAC",
+            "GINE",
+            "GUN"
         ],
         "chunkCount": 4
     },
     {
         "id": 569,
-        "answer": "BEESKELETON",
-        "clue": "Common enemy",
+        "answer": "NEBULAARCANUM",
+        "clue": "Endgame lunar mage weapon",
         "chunks": [
-            "BEES",
-            "KEL",
-            "ET",
-            "ON"
+            "NEB",
+            "ULAA",
+            "RCA",
+            "NUM"
         ],
         "chunkCount": 4
     },
     {
         "id": 570,
-        "answer": "ARMOREDBAT",
-        "clue": "Common enemy",
+        "answer": "LIGHTNINGAURA",
+        "clue": "Old One's Army sentry weapon",
         "chunks": [
-            "ARMO",
-            "RE",
-            "DB",
-            "AT"
+            "LIG",
+            "HTN",
+            "INGA",
+            "URA"
         ],
         "chunkCount": 4
     },
     {
         "id": 571,
-        "answer": "DESERTSNAIL",
-        "clue": "Hostile creature",
+        "answer": "EXPLOSIVETRAP",
+        "clue": "Old One's Army sentry weapon",
         "chunks": [
-            "DESE",
-            "RTS",
-            "NA",
-            "IL"
+            "EXP",
+            "LOSI",
+            "VET",
+            "RAP"
         ],
         "chunkCount": 4
     },
     {
         "id": 572,
-        "answer": "MIRRORCATFISH",
-        "clue": "Catchable fish",
+        "answer": "BARNACLESTAFF",
+        "clue": "Sentry weapon fished for",
         "chunks": [
-            "MIRR",
-            "ORCA",
-            "TFI",
-            "SH"
+            "BARN",
+            "ACL",
+            "ESTA",
+            "FF"
         ],
         "chunkCount": 4
     },
@@ -9426,7 +9426,7 @@
     {
         "id": 885,
         "answer": "BALLISTA",
-        "clue": "Crossbow sentry",
+        "clue": "Old One's Army sentry weapon",
         "chunks": [
             "BA",
             "LLI",
@@ -9437,7 +9437,7 @@
     {
         "id": 886,
         "answer": "FLAMEBURST",
-        "clue": "Fireball sentry",
+        "clue": "Old One's Army sentry weapon",
         "chunks": [
             "FLA",
             "MEBU",
