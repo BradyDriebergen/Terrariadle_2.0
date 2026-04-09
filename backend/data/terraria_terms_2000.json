@@ -5865,56 +5865,56 @@
     },
     {
         "id": 573,
-        "answer": "BONESNAIL",
-        "clue": "Hostile creature",
+        "answer": "CONSTELLATION",
+        "clue": "Stardust whip",
         "chunks": [
-            "BON",
-            "ES",
-            "NA",
-            "IL"
+            "CON",
+            "STE",
+            "LLA",
+            "TION"
         ],
         "chunkCount": 4
     },
     {
         "id": 574,
-        "answer": "VENOMMUMMY",
-        "clue": "Hostile creature",
+        "answer": "KALEDISCOPE",
+        "clue": "Empress of Light whip drop",
         "chunks": [
-            "VENO",
-            "MM",
-            "UM",
-            "MY"
+            "KA",
+            "LEDI",
+            "SC",
+            "OPE"
         ],
         "chunkCount": 4
     },
     {
         "id": 575,
-        "answer": "SILVEREYE",
-        "clue": "Hostile creature",
+        "answer": "ACORNSLINGSHOT",
+        "clue": "Weapon that plants acorns",
         "chunks": [
-            "SIL",
-            "VE",
-            "RE",
-            "YE"
+            "ACO",
+            "RNSL",
+            "INGS",
+            "HOT"
         ],
         "chunkCount": 4
     },
     {
         "id": 576,
-        "answer": "SILVERSKELETON",
-        "clue": "Hostile creature",
+        "answer": "STAFFOFREGROWTH",
+        "clue": "Tool that plants grass on dirt",
         "chunks": [
-            "SILV",
-            "ERSK",
-            "ELET",
-            "ON"
+            "STA",
+            "FFOF",
+            "REGR",
+            "OWTH"
         ],
         "chunkCount": 4
     },
     {
         "id": 577,
         "answer": "FERALCLAWS",
-        "clue": "Helpful accessory",
+        "clue": "Accessory found in Jungle chests",
         "chunks": [
             "FERA",
             "LC",
@@ -5925,92 +5925,92 @@
     },
     {
         "id": 578,
-        "answer": "BLACKWORM",
-        "clue": "Hostile creature",
+        "answer": "HEAVYASSEMBLER",
+        "clue": "Crafting station for statues",
         "chunks": [
-            "BLA",
-            "CK",
-            "WO",
-            "RM"
+            "HEAV",
+            "YASS",
+            "EMB",
+            "LER"
         ],
         "chunkCount": 4
     },
     {
         "id": 579,
-        "answer": "SMALLWRAITH",
-        "clue": "Hostile creature",
+        "answer": "ADAMANTITEFORGE",
+        "clue": "Upgrade for the Hellforge",
         "chunks": [
-            "SMAL",
-            "LWR",
-            "AI",
-            "TH"
+            "ADAM",
+            "ANTI",
+            "TEFO",
+            "RGE"
         ],
         "chunkCount": 4
     },
     {
         "id": 580,
-        "answer": "CORRUPTSPIDER",
-        "clue": "Hostile creature",
+        "answer": "TITANIUMFORGE",
+        "clue": "Upgrade for the Hellforge",
         "chunks": [
-            "CORR",
-            "UPTS",
-            "PID",
-            "ER"
+            "TITA",
+            "NIU",
+            "MFOR",
+            "GE"
         ],
         "chunkCount": 4
     },
     {
         "id": 581,
-        "answer": "FROSTBELT",
-        "clue": "Wearable accessory",
+        "answer": "BLENDOMATIC",
+        "clue": "Crafting station for Asphalt",
         "chunks": [
-            "FRO",
-            "ST",
-            "BE",
-            "LT"
+            "BLE",
+            "NDO",
+            "MA",
+            "TIC"
         ],
         "chunkCount": 4
     },
     {
         "id": 582,
-        "answer": "FIERCEANT",
-        "clue": "Hostile creature",
+        "answer": "HIGHVELOCITY",
+        "clue": "Bullet made from Cogs",
         "chunks": [
-            "FIE",
-            "RC",
-            "EA",
-            "NT"
+            "HIG",
+            "HVEL",
+            "OC",
+            "ITY"
         ],
         "chunkCount": 4
     },
     {
         "id": 583,
-        "answer": "GOBLINWORM",
-        "clue": "Hostile creature",
+        "answer": "BOOKCASE",
+        "clue": "Crafting station for tomes",
         "chunks": [
-            "GOBL",
-            "IN",
-            "WO",
-            "RM"
+            "BO",
+            "OK",
+            "CA",
+            "SE"
         ],
         "chunkCount": 4
     },
     {
         "id": 584,
-        "answer": "RANGERCLOAK",
-        "clue": "Wearable accessory",
+        "answer": "HONEYDISPENSER",
+        "clue": "Crafting station for honey",
         "chunks": [
-            "RANG",
-            "ERC",
-            "LO",
-            "AK"
+            "HON",
+            "EYD",
+            "ISPE",
+            "NSER"
         ],
         "chunkCount": 4
     },
     {
         "id": 585,
         "answer": "PARTYGIRL",
-        "clue": "Friendly npc",
+        "clue": "NPC with pink hair",
         "chunks": [
             "PAR",
             "TY",
@@ -6022,7 +6022,7 @@
     {
         "id": 586,
         "answer": "THEDESTROYER",
-        "clue": "Major boss",
+        "clue": "Mechanical worm boss",
         "chunks": [
             "THED",
             "ESTR",
@@ -6034,7 +6034,7 @@
     {
         "id": 587,
         "answer": "ADAMANTITE",
-        "clue": "Crafting metal",
+        "clue": "Hardmode crafting metal",
         "chunks": [
             "ADAM",
             "AN",
@@ -6045,104 +6045,104 @@
     },
     {
         "id": 588,
-        "answer": "GREENCULTIST",
-        "clue": "Hostile creature",
+        "answer": "ALCHEMYFLASK",
+        "clue": "Used to increase new buff durations",
         "chunks": [
-            "GREE",
-            "NCUL",
-            "TI",
-            "ST"
+            "ALC",
+            "HEM",
+            "YFL",
+            "ASK"
         ],
         "chunkCount": 4
     },
     {
         "id": 589,
-        "answer": "BLOODYFISH",
-        "clue": "Catchable fish",
+        "answer": "EXTRACTINATOR",
+        "clue": "Converts blocks to coins and ores",
         "chunks": [
-            "BLOO",
-            "DY",
-            "FI",
-            "SH"
+            "EXT",
+            "RACT",
+            "INA",
+            "TOR"
         ],
         "chunkCount": 4
     },
     {
         "id": 590,
-        "answer": "HONEYAMULET",
-        "clue": "Wearable accessory",
+        "answer": "ANKLETOFTHEWIND",
+        "clue": "Lightning boots component",
         "chunks": [
-            "HONE",
-            "YAM",
-            "UL",
-            "ET"
+            "ANKL",
+            "ETOF",
+            "THEW",
+            "IND"
         ],
         "chunkCount": 4
     },
     {
         "id": 591,
-        "answer": "BONETROUT",
-        "clue": "Catchable fish",
+        "answer": "ARTICDIVINGGEAR",
+        "clue": "Jellyfish Diving Gear + Ice Skates",
         "chunks": [
-            "BON",
-            "ET",
-            "RO",
-            "UT"
+            "ARTI",
+            "CDIV",
+            "INGG",
+            "EAR"
         ],
         "chunkCount": 4
     },
     {
         "id": 592,
-        "answer": "ARMOREDZOMBIE",
-        "clue": "Common enemy",
+        "answer": "FROGWEBBING",
+        "clue": "Frog Leg + Tiger Climbing Gear",
         "chunks": [
-            "ARMO",
-            "REDZ",
-            "OMB",
-            "IE"
+            "FRO",
+            "GWE",
+            "BBI",
+            "NG"
         ],
         "chunkCount": 4
     },
     {
         "id": 593,
-        "answer": "HONEYCHARM",
-        "clue": "Wearable accessory",
+        "answer": "MAGILUMINESCENCE",
+        "clue": "Early-game movement speed accessory",
         "chunks": [
-            "HONE",
-            "YC",
-            "HA",
-            "RM"
+            "MAGI",
+            "LUMI",
+            "NESC",
+            "ENCE"
         ],
         "chunkCount": 4
     },
     {
         "id": 594,
-        "answer": "STARWINGS",
-        "clue": "Allows flight",
+        "answer": "LUCKYHORSESHOE",
+        "clue": "Accessory that prevents fall damage",
         "chunks": [
-            "STA",
-            "RW",
-            "IN",
-            "GS"
+            "LUC",
+            "KYHO",
+            "RSES",
+            "HOE"
         ],
         "chunkCount": 4
     },
     {
         "id": 595,
-        "answer": "MARTIANSNAIL",
+        "answer": "MASTERNINJAGEAR",
         "clue": "Hostile creature",
         "chunks": [
-            "MART",
-            "IANS",
-            "NA",
-            "IL"
+            "MAST",
+            "ERNI",
+            "NJAG",
+            "EAR"
         ],
         "chunkCount": 4
     },
     {
         "id": 596,
         "answer": "SWIFTNESS",
-        "clue": "Beneficial buff",
+        "clue": "Buff that grants movement speed",
         "chunks": [
             "SWI",
             "FT",
@@ -6153,428 +6153,428 @@
     },
     {
         "id": 597,
-        "answer": "VAMPDEMON",
-        "clue": "Hostile creature",
+        "answer": "NEPTUNESSHELL",
+        "clue": "Merfolk transforming accessory",
         "chunks": [
-            "VAM",
-            "PD",
-            "EM",
-            "ON"
+            "NEPT",
+            "UNES",
+            "SH",
+            "ELL"
         ],
         "chunkCount": 4
     },
     {
         "id": 598,
-        "answer": "TOXICSHARK",
-        "clue": "Hostile creature",
+        "answer": "METALDETECTOR",
+        "clue": "Accessory that displays valuable objects",
         "chunks": [
-            "TOXI",
-            "CS",
-            "HA",
-            "RK"
+            "MET",
+            "ALDE",
+            "TE",
+            "CTOR"
         ],
         "chunkCount": 4
     },
     {
         "id": 599,
-        "answer": "WHITEFISH",
-        "clue": "Common enemy",
+        "answer": "MECHANICALLENS",
+        "clue": "Accessory that shows placed wire",
         "chunks": [
-            "WHI",
-            "TE",
-            "FI",
-            "SH"
+            "MEC",
+            "HANI",
+            "CALL",
+            "ENS"
         ],
         "chunkCount": 4
     },
     {
         "id": 600,
-        "answer": "WYVERNBAT",
-        "clue": "Common enemy",
+        "answer": "BANDOFSTARPOWER",
+        "clue": "Shadow Orb accessory drop",
         "chunks": [
-            "WYV",
-            "ER",
-            "NB",
-            "AT"
+            "BAN",
+            "DOFS",
+            "TARP",
+            "OWER"
         ],
         "chunkCount": 4
     },
     {
         "id": 601,
-        "answer": "BONEJELLY",
-        "clue": "Hostile creature",
+        "answer": "CELESTIALMAGNET",
+        "clue": "Increases Mana Star pickup range",
         "chunks": [
-            "BON",
-            "EJ",
-            "EL",
-            "LY"
+            "CELE",
+            "STI",
+            "ALMA",
+            "GNET"
         ],
         "chunkCount": 4
     },
     {
         "id": 602,
-        "answer": "VENOMPIRATE",
-        "clue": "Hostile creature",
+        "answer": "CELESTIALEMBLEM",
+        "clue": "Celestial Magnet + Avenger Emblem",
         "chunks": [
-            "VENO",
-            "MPI",
-            "RA",
-            "TE"
+            "CEL",
+            "ESTI",
+            "ALEM",
+            "BLEM"
         ],
         "chunkCount": 4
     },
     {
         "id": 603,
-        "answer": "PURPLEHORNET",
-        "clue": "Common enemy",
+        "answer": "BERSERKERSGLOVE",
+        "clue": "Power Glove + Flesh Knuckles",
         "chunks": [
-            "PURP",
-            "LEHO",
-            "RN",
-            "ET"
+            "BERS",
+            "ERK",
+            "ERSG",
+            "LOVE"
         ],
         "chunkCount": 4
     },
     {
         "id": 604,
-        "answer": "CAVEZOMBIE",
-        "clue": "Hostile creature",
+        "answer": "CROSSNECKLASS",
+        "clue": "Accessory increasing immunity frames",
         "chunks": [
-            "CAVE",
-            "ZO",
-            "MB",
-            "IE"
+            "CR",
+            "OSSN",
+            "ECKL",
+            "ASS"
         ],
         "chunkCount": 4
     },
     {
         "id": 605,
-        "answer": "CRIMSONTROUT",
-        "clue": "Catchable fish",
+        "answer": "EYEOFTHEGOLEM",
+        "clue": "Accessory dropped by the Golem",
         "chunks": [
-            "CRIM",
-            "SONT",
-            "RO",
-            "UT"
+            "EY",
+            "EOFT",
+            "HEGO",
+            "LEM"
         ],
         "chunkCount": 4
     },
     {
         "id": 606,
-        "answer": "VENOMGHOST",
-        "clue": "Hostile creature",
+        "answer": "MECHANICALGLOVE",
+        "clue": "Power Glove + Avenger Emblem",
         "chunks": [
-            "VENO",
-            "MG",
-            "HO",
-            "ST"
+            "MECH",
+            "ANI",
+            "CALG",
+            "LOVE"
         ],
         "chunkCount": 4
     },
     {
         "id": 607,
-        "answer": "SPECMINNOW",
-        "clue": "Catchable fish",
+        "answer": "OBSIDIANSHIELD",
+        "clue": "Cobalt Shield + Obsidian Skull",
         "chunks": [
-            "SPEC",
-            "MI",
-            "NN",
-            "OW"
+            "OBS",
+            "IDIA",
+            "NSHI",
+            "ELD"
         ],
         "chunkCount": 4
     },
     {
         "id": 608,
-        "answer": "GREENGHOST",
-        "clue": "Common enemy",
+        "answer": "PALADINSSHIELD",
+        "clue": "Accessory that redirects damage to you",
         "chunks": [
-            "GREE",
-            "NG",
-            "HO",
-            "ST"
+            "PALA",
+            "DINS",
+            "SH",
+            "IELD"
         ],
         "chunkCount": 4
     },
     {
         "id": 609,
-        "answer": "CURSEDSLIME",
-        "clue": "Common enemy",
+        "answer": "PANICNECKLACE",
+        "clue": "Crimson Heart accessory drop",
         "chunks": [
-            "CURS",
-            "EDS",
-            "LI",
-            "ME"
+            "PAN",
+            "ICNE",
+            "CKL",
+            "ACE"
         ],
         "chunkCount": 4
     },
     {
         "id": 610,
-        "answer": "SHADOWPIRATE",
-        "clue": "Hostile creature",
+        "answer": "STALKERSQUIVER",
+        "clue": "Magic Quiver + Putrid Scent",
         "chunks": [
-            "SHAD",
-            "OWPI",
-            "RA",
-            "TE"
+            "STAL",
+            "KERS",
+            "QUI",
+            "VER"
         ],
         "chunkCount": 4
     },
     {
         "id": 611,
-        "answer": "SHADOWBIRD",
-        "clue": "Hostile creature",
+        "answer": "STINGERNECKLACE",
+        "clue": "Shark Tooth Necklace + Honey Comb",
         "chunks": [
-            "SHAD",
-            "OW",
-            "BI",
-            "RD"
+            "STIN",
+            "GERN",
+            "ECK",
+            "LACE"
         ],
         "chunkCount": 4
     },
     {
         "id": 612,
-        "answer": "DESERTWRAITH",
-        "clue": "Common enemy",
+        "answer": "HURCULESBEETLE",
+        "clue": "Accessory bought from the Witch Doctor",
         "chunks": [
-            "DESE",
-            "RTWR",
-            "AI",
-            "TH"
+            "HUR",
+            "CULE",
+            "SBE",
+            "ETLE"
         ],
         "chunkCount": 4
     },
     {
         "id": 613,
-        "answer": "DARKGOBLIN",
-        "clue": "Common enemy",
+        "answer": "PAPYRUSSCARAB",
+        "clue": "Hercules Beetle + Necromantic Scroll",
         "chunks": [
-            "DARK",
-            "GO",
-            "BL",
-            "IN"
+            "PAPY",
+            "RUSS",
+            "CAR",
+            "AB"
         ],
         "chunkCount": 4
     },
     {
         "id": 614,
-        "answer": "CRABWRAITH",
-        "clue": "Common enemy",
+        "answer": "PYGMYNECKLACE",
+        "clue": "Accessory bought from the Witch Doctor",
         "chunks": [
-            "CRAB",
-            "WR",
-            "AI",
-            "TH"
+            "PYG",
+            "MYNE",
+            "CKL",
+            "ACE"
         ],
         "chunkCount": 4
     },
     {
         "id": 615,
-        "answer": "FROSTSNAIL",
-        "clue": "Hostile creature",
+        "answer": "ADHESIVEBANDAGE",
+        "clue": "Grants immunity to Bleeding",
         "chunks": [
-            "FROS",
-            "TS",
-            "NA",
-            "IL"
+            "ADHE",
+            "SIV",
+            "EBAN",
+            "DAGE"
         ],
         "chunkCount": 4
     },
     {
         "id": 616,
-        "answer": "SWAMPWYVERN",
-        "clue": "Hostile creature",
+        "answer": "ANCIENTCHISEL",
+        "clue": "Accessory found in the Desert",
         "chunks": [
-            "SWAM",
-            "PWY",
-            "VE",
-            "RN"
+            "ANC",
+            "IEN",
+            "TCH",
+            "ISEL"
         ],
         "chunkCount": 4
     },
     {
         "id": 617,
-        "answer": "SILVERWRAITH",
-        "clue": "Hostile creature",
+        "answer": "HANDOFCREATION",
+        "clue": "Ultimate building accessory",
         "chunks": [
-            "SILV",
-            "ERWR",
-            "AI",
-            "TH"
+            "HAN",
+            "DOFC",
+            "REA",
+            "TION"
         ],
         "chunkCount": 4
     },
     {
         "id": 618,
-        "answer": "WYVERNSKELETON",
-        "clue": "Common enemy",
+        "answer": "ANGLEREARRING",
+        "clue": "Accessory that increases fishing power",
         "chunks": [
-            "WYVE",
-            "RNSK",
-            "ELET",
-            "ON"
+            "ANG",
+            "LERE",
+            "ARR",
+            "ING"
         ],
         "chunkCount": 4
     },
     {
         "id": 619,
-        "answer": "CORRUPTWORM",
-        "clue": "Hostile creature",
+        "answer": "FISHINGBOBBER",
+        "clue": "Accessory that increases fishing power",
         "chunks": [
-            "CORR",
-            "UPT",
-            "WO",
-            "RM"
+            "FIS",
+            "HING",
+            "BOB",
+            "BER"
         ],
         "chunkCount": 4
     },
     {
         "id": 620,
-        "answer": "GIANTGHOST",
-        "clue": "Common enemy",
+        "answer": "COUNTERWEIGHT",
+        "clue": "Spawns a projectile when using yoyos",
         "chunks": [
-            "GIAN",
-            "TG",
-            "HO",
-            "ST"
+            "COU",
+            "NTER",
+            "WEI",
+            "GHT"
         ],
         "chunkCount": 4
     },
     {
         "id": 621,
-        "answer": "CORRUPTDEMON",
-        "clue": "Hostile creature",
+        "answer": "MAGICYOYOBAG",
+        "clue": "Ultimate yoyo accessory",
         "chunks": [
-            "CORR",
-            "UPTD",
-            "EM",
-            "ON"
+            "MAG",
+            "ICY",
+            "OY",
+            "OBAG"
         ],
         "chunkCount": 4
     },
     {
         "id": 622,
-        "answer": "WHITEWRAITH",
-        "clue": "Common enemy",
+        "answer": "DISCOUNTCARD",
+        "clue": "Accessory that reduces prices",
         "chunks": [
-            "WHIT",
-            "EWR",
-            "AI",
-            "TH"
+            "DISC",
+            "OUN",
+            "TCA",
+            "RD"
         ],
         "chunkCount": 4
     },
     {
         "id": 623,
-        "answer": "CRABSKELETON",
-        "clue": "Common enemy",
+        "answer": "CHROMATICCLOAK",
+        "clue": "Aquired from shimmering a Star Cloak",
         "chunks": [
-            "CRAB",
-            "SKEL",
-            "ET",
-            "ON"
+            "CH",
+            "ROMA",
+            "TICC",
+            "LOAK"
         ],
         "chunkCount": 4
     },
     {
         "id": 624,
         "answer": "STEAMPUNKER",
-        "clue": "Friendly npc",
+        "clue": "NPC that sells the Clentaminator",
         "chunks": [
-            "STEA",
-            "MPU",
-            "NK",
-            "ER"
+            "STE",
+            "AMP",
+            "UN",
+            "KER"
         ],
         "chunkCount": 4
     },
     {
         "id": 625,
-        "answer": "FROSTPIKE",
-        "clue": "Catchable fish",
+        "answer": "SHIELDOFCTHULHU",
+        "clue": "Expert mode EoC accessory",
         "chunks": [
-            "FRO",
-            "ST",
-            "PI",
-            "KE"
+            "SHIE",
+            "LDOF",
+            "CTHU",
+            "LHU"
         ],
         "chunkCount": 4
     },
     {
         "id": 626,
-        "answer": "FIERCEBAT",
-        "clue": "Hostile creature",
+        "answer": "VOLATILEGELATIN",
+        "clue": "Expert mode Queen Slime accessory",
         "chunks": [
-            "FIE",
-            "RC",
-            "EB",
-            "AT"
+            "VOL",
+            "ATIL",
+            "EGEL",
+            "ATIN"
         ],
         "chunkCount": 4
     },
     {
         "id": 627,
-        "answer": "WYVERNFISH",
-        "clue": "Common enemy",
+        "answer": "SOARINGINSIGNIA",
+        "clue": "Expert mode EoL accessory",
         "chunks": [
-            "WYVE",
-            "RN",
-            "FI",
-            "SH"
+            "SOAR",
+            "INGI",
+            "NSI",
+            "NIA"
         ],
         "chunkCount": 4
     },
     {
         "id": 628,
-        "answer": "CAVEMUMMY",
-        "clue": "Hostile creature",
+        "answer": "ANOMURAFUNGUS",
+        "clue": "Glowing Mushroom Biome enemy",
         "chunks": [
-            "CAV",
-            "EM",
-            "UM",
-            "MY"
+            "ANOM",
+            "URAF",
+            "UNG",
+            "US"
         ],
         "chunkCount": 4
     },
     {
         "id": 629,
-        "answer": "BLOODPIRATE",
-        "clue": "Common enemy",
+        "answer": "DUNGEONGUARDIAN",
+        "clue": "Appears before Skeletron is defeated",
         "chunks": [
-            "BLOO",
-            "DPI",
-            "RA",
-            "TE"
+            "DUNG",
+            "EONG",
+            "UAR",
+            "DIAN"
         ],
         "chunkCount": 4
     },
     {
         "id": 630,
-        "answer": "SPOREGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "DUNGEONSLIME",
+        "clue": "Slime that drops golden keys",
         "chunks": [
-            "SPOR",
-            "EGO",
-            "BL",
-            "IN"
+            "DUN",
+            "GEO",
+            "NSLI",
+            "ME"
         ],
         "chunkCount": 4
     },
     {
         "id": 631,
-        "answer": "GIANTSNAIL",
-        "clue": "Hostile creature",
+        "answer": "GRANITEELEMENTAL",
+        "clue": "Granite Cave enemy",
         "chunks": [
-            "GIAN",
-            "TS",
-            "NA",
-            "IL"
+            "GRAN",
+            "ITEE",
+            "LEME",
+            "NTAL"
         ],
         "chunkCount": 4
     },
     {
         "id": 632,
         "answer": "PHANTASM",
-        "clue": "Powerful weapon",
+        "clue": "Endgame lunar ranged weapon",
         "chunks": [
             "PH",
             "AN",
@@ -6585,133 +6585,133 @@
     },
     {
         "id": 633,
-        "answer": "SPOREWINGS",
-        "clue": "Allows flight",
+        "answer": "MUSHILADYBUG",
+        "clue": "Glowing Mushroom Biome flying enemy",
         "chunks": [
-            "SPOR",
-            "EW",
-            "IN",
-            "GS"
+            "MUS",
+            "HILA",
+            "DYB",
+            "UG"
         ],
         "chunkCount": 4
     },
     {
         "id": 634,
-        "answer": "CRYSTALSALMON",
-        "clue": "Catchable fish",
+        "answer": "SPORESKELETON",
+        "clue": "Glowing Mushroom Biome enemy",
         "chunks": [
-            "CRYS",
-            "TALS",
-            "ALM",
-            "ON"
+            "SP",
+            "ORES",
+            "KELE",
+            "TON"
         ],
         "chunkCount": 4
     },
     {
         "id": 635,
-        "answer": "HONEYSNAPPER",
-        "clue": "Catchable fish",
+        "answer": "UNDEADVIKING",
+        "clue": "Ice biome pre-hardmode enemy",
         "chunks": [
-            "HONE",
-            "YSNA",
-            "PP",
-            "ER"
+            "UND",
+            "EADV",
+            "IKI",
+            "NG"
         ],
         "chunkCount": 4
     },
     {
         "id": 636,
-        "answer": "VENOMWORM",
-        "clue": "Hostile creature",
+        "answer": "WATERBOLTMIMIC",
+        "clue": "Enemy that disguises itself as a book",
         "chunks": [
-            "VEN",
-            "OM",
-            "WO",
-            "RM"
+            "WA",
+            "TERB",
+            "OLTM",
+            "IMIC"
         ],
         "chunkCount": 4
     },
     {
         "id": 637,
-        "answer": "DEMONWYVERN",
-        "clue": "Common enemy",
+        "answer": "ARMOREDSKELETON",
+        "clue": "Hardmode Dungeon enemy",
         "chunks": [
-            "DEMO",
-            "NWY",
-            "VE",
-            "RN"
+            "ARMO",
+            "REDS",
+            "KEL",
+            "ETON"
         ],
         "chunkCount": 4
     },
     {
         "id": 638,
-        "answer": "LAVASNAIL",
-        "clue": "Hostile creature",
+        "answer": "ARMOREDVIKING",
+        "clue": "Ice biome hardmode enemy",
         "chunks": [
-            "LAV",
-            "AS",
-            "NA",
-            "IL"
+            "ARM",
+            "ORE",
+            "DVIK",
+            "ING"
         ],
         "chunkCount": 4
     },
     {
         "id": 639,
-        "answer": "GOBLINSLIME",
-        "clue": "Common enemy",
+        "answer": "CHAOSELEMENTAL",
+        "clue": "Enemy that dropps the Rod of Discord",
         "chunks": [
-            "GOBL",
-            "INS",
-            "LI",
-            "ME"
+            "CHA",
+            "OSEL",
+            "EMEN",
+            "TAL"
         ],
         "chunkCount": 4
     },
     {
         "id": 640,
-        "answer": "WHITEDRAGON",
-        "clue": "Hostile creature",
+        "answer": "CULTISTARCHER",
+        "clue": "Killing these spawns the Lunatic Cultist",
         "chunks": [
-            "WHIT",
-            "EDR",
-            "AG",
-            "ON"
+            "CUL",
+            "TIS",
+            "TAR",
+            "CHER"
         ],
         "chunkCount": 4
     },
     {
         "id": 641,
-        "answer": "VAMPIREGHOST",
-        "clue": "Common enemy",
+        "answer": "DUNGEONSPIRIT",
+        "clue": "Drops Ectoplasm when killed",
         "chunks": [
-            "VAMP",
-            "IREG",
-            "HO",
-            "ST"
+            "DUN",
+            "GEO",
+            "NSPI",
+            "RIT"
         ],
         "chunkCount": 4
     },
     {
         "id": 642,
-        "answer": "GOBLINGOBLIN",
-        "clue": "Hostile creature",
+        "answer": "GIANTTORTOISE",
+        "clue": "Jungle enemy that one-shots you",
         "chunks": [
-            "GOBL",
-            "INGO",
-            "BL",
-            "IN"
+            "GIA",
+            "NTTO",
+            "RTO",
+            "ISE"
         ],
         "chunkCount": 4
     },
     {
         "id": 643,
-        "answer": "MOSSSKELETON",
-        "clue": "Hostile creature",
+        "answer": "HALLOWEDMIMIC",
+        "clue": "Spawns with a key of light and a chest",
         "chunks": [
-            "MOSS",
-            "SKEL",
-            "ET",
-            "ON"
+            "HALL",
+            "OWE",
+            "DMIM",
+            "IC"
         ],
         "chunkCount": 4
     },
@@ -18336,7 +18336,7 @@
     {
         "id": 1695,
         "answer": "OFFICER",
-        "clue": "Martian enemy that makes bubble sheilds",
+        "clue": "Martian enemy that makes bubble shields",
         "chunks": [
             "OF",
             "FI",
@@ -21460,7 +21460,7 @@
     {
         "id": 1979,
         "answer": "THETWINS",
-        "clue": "One of the mechanical bosses",
+        "clue": "Mechanical eyes boss",
         "chunks": [
             "TH",
             "ETW",
@@ -21602,12 +21602,12 @@
     },
     {
         "id": 1992,
-        "answer": "HIGHVELOCITY",
-        "clue": "Bullet crafted from cogs",
+        "answer": "ASPHALT",
+        "clue": "Block that increases running speed",
         "chunks": [
-            "HIGH",
-            "VELO",
-            "CITY"
+            "ASP",
+            "HA",
+            "LT"
         ],
         "chunkCount": 3
     },
