@@ -22,7 +22,7 @@
     {
         "id": 3,
         "answer": "TINY",
-        "clue": "\"Why is your weapon so small?\"",
+        "clue": "Negative weapon size modifier",
         "chunks": [
             "TI",
             "NY"
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "answer": "CAVERN",
-        "clue": "Just below underground",
+        "clue": "Biome between Underground and Underworld",
         "chunks": [
             "CAV",
             "ERN"
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "answer": "WRAITH",
-        "clue": "Floating creature of smoke",
+        "clue": "Floating hardmode enemy",
         "chunks": [
             "WRA",
             "ITH"
@@ -62,7 +62,7 @@
     {
         "id": 7,
         "answer": "ANGRY",
-        "clue": "Damage accessory modifier",
+        "clue": "Damage increasing accessory modifier",
         "chunks": [
             "AN",
             "GRY"
@@ -72,7 +72,7 @@
     {
         "id": 8,
         "answer": "POINTY",
-        "clue": "Extra sharp",
+        "clue": "Damage increasing weapon modifier",
         "chunks": [
             "POI",
             "NTY"
@@ -112,7 +112,7 @@
     {
         "id": 12,
         "answer": "HOOK",
-        "clue": "Grapple",
+        "clue": "Tool that helps with navigating terrain",
         "chunks": [
             "HO",
             "OK"
@@ -142,7 +142,7 @@
     {
         "id": 15,
         "answer": "JUNGLE",
-        "clue": "Muddy and full of hornets",
+        "clue": "Biome containing mud and bees",
         "chunks": [
             "JUN",
             "GLE"
@@ -152,7 +152,7 @@
     {
         "id": 16,
         "answer": "OCEAN",
-        "clue": "Beach party!",
+        "clue": "Biome on either edge of the world",
         "chunks": [
             "OC",
             "EAN"
@@ -162,7 +162,7 @@
     {
         "id": 17,
         "answer": "LOOM",
-        "clue": "Where cloth is crafted",
+        "clue": "Crafting station for cloth",
         "chunks": [
             "LO",
             "OM"
@@ -172,7 +172,7 @@
     {
         "id": 18,
         "answer": "ARENA",
-        "clue": "Necessity for fighting bosses",
+        "clue": "Structure made for fighting bosses",
         "chunks": [
             "ARE",
             "NA"
@@ -182,7 +182,7 @@
     {
         "id": 19,
         "answer": "DESERT",
-        "clue": "Pyramids and oasises",
+        "clue": "Biome containing pyramids and oasises",
         "chunks": [
             "DES",
             "ERT"
@@ -192,7 +192,7 @@
     {
         "id": 20,
         "answer": "ARCANE",
-        "clue": "+20 mana",
+        "clue": "Permanently increases Mana",
         "chunks": [
             "ARCA",
             "NE"
@@ -202,7 +202,7 @@
     {
         "id": 21,
         "answer": "ROPE",
-        "clue": "Useless after getting hook",
+        "clue": "Used to traverse vertically",
         "chunks": [
             "RO",
             "PE"
@@ -222,7 +222,7 @@
     {
         "id": 23,
         "answer": "ONFIRE",
-        "clue": "Stop, drop, and roll",
+        "clue": "Debuff caused from touching lava",
         "chunks": [
             "ONFI",
             "RE"
@@ -232,7 +232,7 @@
     {
         "id": 24,
         "answer": "WARDING",
-        "clue": "Accessory with extra protection",
+        "clue": "Best defense accessory modifier",
         "chunks": [
             "WAR",
             "DING"
@@ -252,7 +252,7 @@
     {
         "id": 26,
         "answer": "PROBE",
-        "clue": "The Destroyer's minions",
+        "clue": "The Destroyer servant",
         "chunks": [
             "PRO",
             "BE"
@@ -262,7 +262,7 @@
     {
         "id": 27,
         "answer": "WYVERN",
-        "clue": "Killing this gives flight",
+        "clue": "Enemy that drops Souls of Flight.",
         "chunks": [
             "WYV",
             "ERN"
