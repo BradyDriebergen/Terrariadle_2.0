@@ -272,7 +272,7 @@
     {
         "id": 28,
         "answer": "INTREPID",
-        "clue": "Makes you swing faster",
+        "clue": "Melee speed accessory modifier",
         "chunks": [
             "INTR",
             "EPID"
@@ -282,7 +282,7 @@
     {
         "id": 29,
         "answer": "FLAIL",
-        "clue": "Spinning melee weapon",
+        "clue": "Type of melee weapon",
         "chunks": [
             "FL",
             "AIL"
@@ -292,7 +292,7 @@
     {
         "id": 30,
         "answer": "TOPHAT",
-        "clue": "Hat fit for a groom",
+        "clue": "Vanity hat fit for a groom",
         "chunks": [
             "TOPH",
             "AT"
@@ -312,7 +312,7 @@
     {
         "id": 32,
         "answer": "SHARK",
-        "clue": "Tasty soup and gun material",
+        "clue": "Enemy found in the Ocean",
         "chunks": [
             "SH",
             "ARK"
@@ -322,7 +322,7 @@
     {
         "id": 33,
         "answer": "DEMON",
-        "clue": "Scythe thrower",
+        "clue": "Flying Underworld enemy",
         "chunks": [
             "DE",
             "MON"
@@ -332,7 +332,7 @@
     {
         "id": 34,
         "answer": "HARPY",
-        "clue": "Flys around space",
+        "clue": "Flying Space enemy",
         "chunks": [
             "HAR",
             "PY"
@@ -342,7 +342,7 @@
     {
         "id": 35,
         "answer": "PEARL",
-        "clue": "Used in luck potions",
+        "clue": "Material used in luck potions",
         "chunks": [
             "PE",
             "ARL"
@@ -352,7 +352,7 @@
     {
         "id": 36,
         "answer": "DRYAD",
-        "clue": "Oldest NPC",
+        "clue": "NPC said to be 100s of years old",
         "chunks": [
             "DR",
             "YAD"
@@ -362,7 +362,7 @@
     {
         "id": 37,
         "answer": "GOBLIN",
-        "clue": "There's a whole army of them",
+        "clue": "Type enemy with its own invasion",
         "chunks": [
             "GOB",
             "LIN"
@@ -372,7 +372,7 @@
     {
         "id": 38,
         "answer": "ZOMBIE",
-        "clue": "Brains...",
+        "clue": "Enemy hungry for brains",
         "chunks": [
             "ZOM",
             "BIE"
@@ -382,7 +382,7 @@
     {
         "id": 39,
         "answer": "SLIME",
-        "clue": "Now comes in cloud and confetti variants!",
+        "clue": "Enemy with the most variants",
         "chunks": [
             "SL",
             "IME"
@@ -392,7 +392,7 @@
     {
         "id": 40,
         "answer": "HURTFUL",
-        "clue": "10% increase in damage",
+        "clue": "Damage increasing weapon modifier",
         "chunks": [
             "HUR",
             "TFUL"
@@ -412,7 +412,7 @@
     {
         "id": 42,
         "answer": "JAGGED",
-        "clue": "Weakest damage modifier",
+        "clue": "Damage increasing accessory modifier",
         "chunks": [
             "JAG",
             "GED"
@@ -422,7 +422,7 @@
     {
         "id": 43,
         "answer": "MANA",
-        "clue": "Magic users 'ammo'",
+        "clue": "Resource consumed by mages",
         "chunks": [
             "MA",
             "NA"
@@ -432,7 +432,7 @@
     {
         "id": 44,
         "answer": "BOMB",
-        "clue": "Explosive device",
+        "clue": "Explosive tool",
         "chunks": [
             "BO",
             "MB"
@@ -442,7 +442,7 @@
     {
         "id": 45,
         "answer": "NURSE",
-        "clue": "Healing NPC",
+        "clue": "NPC that heals you",
         "chunks": [
             "NUR",
             "SE"
@@ -452,7 +452,7 @@
     {
         "id": 46,
         "answer": "RUBY",
-        "clue": "The king's crown gem",
+        "clue": "Red gem",
         "chunks": [
             "RU",
             "BY"
@@ -462,7 +462,7 @@
     {
         "id": 47,
         "answer": "LIGHT",
-        "clue": "Fastest use time modifier",
+        "clue": "Increased use time weapon modifier",
         "chunks": [
             "LIG",
             "HT"
@@ -482,7 +482,7 @@
     {
         "id": 49,
         "answer": "SAVAGE",
-        "clue": "\"That modifier is straight killer yo\"",
+        "clue": "Damage increasing weapon modifier",
         "chunks": [
             "SAVA",
             "GE"
@@ -492,7 +492,7 @@
     {
         "id": 50,
         "answer": "BASS",
-        "clue": "Common fish in the sea",
+        "clue": "Common fish",
         "chunks": [
             "BA",
             "SS"
@@ -522,7 +522,7 @@
     {
         "id": 53,
         "answer": "BUFF",
-        "clue": "Usually gained from potions",
+        "clue": "Temporary, positive status effects",
         "chunks": [
             "BU",
             "FF"
@@ -542,7 +542,7 @@
     {
         "id": 55,
         "answer": "SILT",
-        "clue": "Used in a extractinator",
+        "clue": "Block used in an Extractinator",
         "chunks": [
             "SI",
             "LT"
@@ -562,7 +562,7 @@
     {
         "id": 57,
         "answer": "GOLEM",
-        "clue": "Temple boss",
+        "clue": "Lihzahrd temple boss",
         "chunks": [
             "GOL",
             "EM"
@@ -572,7 +572,7 @@
     {
         "id": 58,
         "answer": "HUNTER",
-        "clue": "Shows location of enemies",
+        "clue": "Buff that shows location of enemies",
         "chunks": [
             "HUN",
             "TER"
@@ -592,7 +592,7 @@
     {
         "id": 60,
         "answer": "HELLBAT",
-        "clue": "Flying underworld enemy",
+        "clue": "Flying Underworld enemy",
         "chunks": [
             "HEL",
             "LBAT"
@@ -602,7 +602,7 @@
     {
         "id": 61,
         "answer": "HORNET",
-        "clue": "Shoots stingers at you",
+        "clue": "Enemy that shoots stingers",
         "chunks": [
             "HOR",
             "NET"
@@ -612,7 +612,7 @@
     {
         "id": 62,
         "answer": "PIXIE",
-        "clue": "Drops dust when killed",
+        "clue": "Flying Hallow enemy",
         "chunks": [
             "PI",
             "XIE"
@@ -632,7 +632,7 @@
     {
         "id": 64,
         "answer": "WINGS",
-        "clue": "Allows flight",
+        "clue": "Accessory that allows flight",
         "chunks": [
             "WI",
             "NGS"
@@ -642,7 +642,7 @@
     {
         "id": 65,
         "answer": "FOREST",
-        "clue": "Where the player spawns",
+        "clue": "Biome where the player spawns",
         "chunks": [
             "FOR",
             "EST"
@@ -652,7 +652,7 @@
     {
         "id": 66,
         "answer": "MIMIC",
-        "clue": "Chest that will kill you",
+        "clue": "Enemy disguised as a chest",
         "chunks": [
             "MIM",
             "IC"
@@ -672,7 +672,7 @@
     {
         "id": 68,
         "answer": "KATANA",
-        "clue": "Traveling merchant sword",
+        "clue": "Sword sold by the Traveling Merchant",
         "chunks": [
             "KAT",
             "ANA"
@@ -682,7 +682,7 @@
     {
         "id": 69,
         "answer": "YOYO",
-        "clue": "Weapon on a string",
+        "clue": "Type of melee weapon on a string",
         "chunks": [
             "YO",
             "YO"
@@ -702,7 +702,7 @@
     {
         "id": 71,
         "answer": "STAFF",
-        "clue": "Type of magic weapons",
+        "clue": "Type of magic weapon",
         "chunks": [
             "STA",
             "FF"
@@ -712,7 +712,7 @@
     {
         "id": 72,
         "answer": "SICKLE",
-        "clue": "Used to gather hay",
+        "clue": "Tool used to gather hay",
         "chunks": [
             "SIC",
             "KLE"
@@ -722,7 +722,7 @@
     {
         "id": 73,
         "answer": "WHIPS",
-        "clue": "Type of summoner weapons",
+        "clue": "Type of summoner weapon",
         "chunks": [
             "WH",
             "IPS"
@@ -732,7 +732,7 @@
     {
         "id": 74,
         "answer": "DARTS",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "DAR",
             "TS"
@@ -742,7 +742,7 @@
     {
         "id": 75,
         "answer": "WAND",
-        "clue": "Type of magic weapons",
+        "clue": "Type of magic weapon",
         "chunks": [
             "WA",
             "ND"
@@ -762,7 +762,7 @@
     {
         "id": 77,
         "answer": "AXES",
-        "clue": "Used to cut down trees",
+        "clue": "Tool used to cut down trees",
         "chunks": [
             "AX",
             "ES"
@@ -772,7 +772,7 @@
     {
         "id": 78,
         "answer": "GOLD",
-        "clue": "Best pre-hardmode ore",
+        "clue": "Pre-hardmode ore",
         "chunks": [
             "GO",
             "LD"
@@ -822,7 +822,7 @@
     {
         "id": 83,
         "answer": "WOOD",
-        "clue": "Block that grows on the surface",
+        "clue": "Block dropped from trees",
         "chunks": [
             "WO",
             "OD"
@@ -842,7 +842,7 @@
     {
         "id": 85,
         "answer": "FLIGHT",
-        "clue": "Souls dropped from wyverns",
+        "clue": "Souls dropped from Wyverns",
         "chunks": [
             "FLI",
             "GHT"
@@ -852,7 +852,7 @@
     {
         "id": 86,
         "answer": "TOMB",
-        "clue": "What's dropped on death",
+        "clue": "Item dropped on death",
         "chunks": [
             "TO",
             "MB"
@@ -872,7 +872,7 @@
     {
         "id": 88,
         "answer": "TRAPS",
-        "clue": "Hidden dangers underground",
+        "clue": "Hidden, player-triggered dangers",
         "chunks": [
             "TR",
             "APS"
@@ -882,7 +882,7 @@
     {
         "id": 89,
         "answer": "CANNON",
-        "clue": "Pirate-themed defensive placeable",
+        "clue": "Pirate-themed defensive furniture",
         "chunks": [
             "CAN",
             "NON"
@@ -892,7 +892,7 @@
     {
         "id": 90,
         "answer": "AMAROK",
-        "clue": "Frostbite yoyo",
+        "clue": "Frostbite-causing yoyo",
         "chunks": [
             "AMA",
             "ROK"
@@ -912,7 +912,7 @@
     {
         "id": 92,
         "answer": "ARTERY",
-        "clue": "Crimson yoyo",
+        "clue": "Crimtane yoyo",
         "chunks": [
             "ART",
             "ERY"
@@ -932,7 +932,7 @@
     {
         "id": 94,
         "answer": "HELFIRE",
-        "clue": "Fire yoyo",
+        "clue": "OnFire-causing yoyo",
         "chunks": [
             "HELF",
             "IRE"
@@ -962,7 +962,7 @@
     {
         "id": 97,
         "answer": "YELETS",
-        "clue": "Jungle yoyo",
+        "clue": "Hardmode Jungle yoyo",
         "chunks": [
             "YEL",
             "ETS"
@@ -972,7 +972,7 @@
     {
         "id": 98,
         "answer": "MARROW",
-        "clue": "Rare bone bow",
+        "clue": "Bow dropped from Skeleton Archers",
         "chunks": [
             "MAR",
             "ROW"
@@ -982,7 +982,7 @@
     {
         "id": 99,
         "answer": "FRITZ",
-        "clue": "Solar Eclipse common enemy",
+        "clue": "Solar Eclipse enemy with a hunchback",
         "chunks": [
             "FRI",
             "TZ"
@@ -992,7 +992,7 @@
     {
         "id": 100,
         "answer": "ROCKET",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "ROC",
             "KET"
@@ -1002,7 +1002,7 @@
     {
         "id": 101,
         "answer": "BATBAT",
-        "clue": "Slow, high damage sword",
+        "clue": "Sword dropped by bats",
         "chunks": [
             "BAT",
             "BAT"
@@ -1012,7 +1012,7 @@
     {
         "id": 102,
         "answer": "ANCHOR",
-        "clue": "Flail gotten through fishing",
+        "clue": "Flail aquired from fishing",
         "chunks": [
             "ANC",
             "HOR"
@@ -1022,7 +1022,7 @@
     {
         "id": 103,
         "answer": "RULER",
-        "clue": "12 inches of stabbing power",
+        "clue": "12 inch melee weapon",
         "chunks": [
             "RU",
             "LER"
@@ -1032,7 +1032,7 @@
     {
         "id": 104,
         "answer": "GLADIUS",
-        "clue": "Roman shortsword",
+        "clue": "Shortsword dropped by Hoplites",
         "chunks": [
             "GLA",
             "DIUS"
@@ -1042,7 +1042,7 @@
     {
         "id": 105,
         "answer": "HAMBAT",
-        "clue": "Grows stronger the better fed you are",
+        "clue": "Stronger the better fed you are weapon",
         "chunks": [
             "HAM",
             "BAT"
@@ -1052,7 +1052,7 @@
     {
         "id": 106,
         "answer": "HIVE",
-        "clue": "Full of bees",
+        "clue": "Jungle mini-biome containing Bees",
         "chunks": [
             "HI",
             "VE"
@@ -1062,7 +1062,7 @@
     {
         "id": 107,
         "answer": "CHIK",
-        "clue": "Crystal yoyo",
+        "clue": "Yoyo made from crystal shards",
         "chunks": [
             "CH",
             "IK"
@@ -1072,7 +1072,7 @@
     {
         "id": 108,
         "answer": "KRAKEN",
-        "clue": "Yoyo somehow not from the ocean",
+        "clue": "Yoyo dropped by hardmode Dungeon enemies",
         "chunks": [
             "KRA",
             "KEN"
@@ -1102,7 +1102,7 @@
     {
         "id": 111,
         "answer": "FLAIRON",
-        "clue": "Crafting station",
+        "clue": "Melee weapon dropped by Duke Fishron",
         "chunks": [
             "FLAI",
             "RON"
@@ -1112,7 +1112,7 @@
     {
         "id": 112,
         "answer": "BEEARMOR",
-        "clue": "Covered in bees",
+        "clue": "Summoner set made from Bee Wax",
         "chunks": [
             "BEEA",
             "RMOR"
@@ -1122,7 +1122,7 @@
     {
         "id": 113,
         "answer": "SDMG",
-        "clue": "\"First sharks, now dolphins?\"",
+        "clue": "Dolphin version of the Megashark",
         "chunks": [
             "SD",
             "MG"
@@ -1142,7 +1142,7 @@
     {
         "id": 115,
         "answer": "ZENITH",
-        "clue": "Has the longest crafting tree",
+        "clue": "Forged from the strongest swords",
         "chunks": [
             "ZEN",
             "ITH"
@@ -1152,7 +1152,7 @@
     {
         "id": 116,
         "answer": "FURNACE",
-        "clue": "Used to smelt ores",
+        "clue": "Crafting station for smelting ores",
         "chunks": [
             "FURN",
             "ACE"
@@ -1162,7 +1162,7 @@
     {
         "id": 117,
         "answer": "PIRATE",
-        "clue": "\"Yarrr!\"",
+        "clue": "Scariest NPC in the seven seas",
         "chunks": [
             "PIR",
             "ATE"
@@ -1172,7 +1172,7 @@
     {
         "id": 118,
         "answer": "GUIDE",
-        "clue": "\"You look like this voodoo doll\"",
+        "clue": "First NPC that spawns",
         "chunks": [
             "GUI",
             "DE"
@@ -1182,7 +1182,7 @@
     {
         "id": 119,
         "answer": "MUSKET",
-        "clue": "\"As the founding fathers intended\"",
+        "clue": "Ranged weapon dropped from Shadow Orbs",
         "chunks": [
             "MUS",
             "KET"
@@ -1202,7 +1202,7 @@
     {
         "id": 121,
         "answer": "JAVELIN",
-        "clue": "What hoplites throw at you",
+        "clue": "Weapon Hoplites throw at you",
         "chunks": [
             "JAV",
             "ELIN"
@@ -1232,7 +1232,7 @@
     {
         "id": 124,
         "answer": "BALL",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "BA",
             "LL"
@@ -1242,7 +1242,7 @@
     {
         "id": 125,
         "answer": "BULLET",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "BUL",
             "LET"
@@ -1252,7 +1252,7 @@
     {
         "id": 126,
         "answer": "SEED",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "SE",
             "ED"
@@ -1262,7 +1262,7 @@
     {
         "id": 127,
         "answer": "BOLT",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "BO",
             "LT"
@@ -1272,7 +1272,7 @@
     {
         "id": 128,
         "answer": "STAKE",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "ST",
             "AKE"
@@ -1282,7 +1282,7 @@
     {
         "id": 129,
         "answer": "FLARE",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "FL",
             "ARE"
@@ -1292,7 +1292,7 @@
     {
         "id": 130,
         "answer": "NAIL",
-        "clue": "Type of ranger's ammo",
+        "clue": "Type of ranger ammo",
         "chunks": [
             "NA",
             "IL"
@@ -1302,7 +1302,7 @@
     {
         "id": 131,
         "answer": "DUCK",
-        "clue": "Critter near lakes",
+        "clue": "Critter spawning near lakes",
         "chunks": [
             "DU",
             "CK"
@@ -1312,7 +1312,7 @@
     {
         "id": 132,
         "answer": "THORNS",
-        "clue": "Attackers also take damage",
+        "clue": "Buff where attackers also take damage",
         "chunks": [
             "THO",
             "RNS"
@@ -1332,7 +1332,7 @@
     {
         "id": 134,
         "answer": "COINS",
-        "clue": "Used to buy stuff",
+        "clue": "Currency used to buy stuff",
         "chunks": [
             "CO",
             "INS"
@@ -1372,7 +1372,7 @@
     {
         "id": 138,
         "answer": "SAWMIL",
-        "clue": "Used to craft advanced wood furniture",
+        "clue": "Crafting station for wood furniture",
         "chunks": [
             "SAW",
             "MIL"
@@ -1382,7 +1382,7 @@
     {
         "id": 139,
         "answer": "GOLFER",
-        "clue": "NPC found in the desert",
+        "clue": "NPC found bound in the desert",
         "chunks": [
             "GOL",
             "FER"
@@ -1392,7 +1392,7 @@
     {
         "id": 140,
         "answer": "BOTTLE",
-        "clue": "Used to craft potions",
+        "clue": "Material used in every potion",
         "chunks": [
             "BOT",
             "TLE"
@@ -1402,7 +1402,7 @@
     {
         "id": 141,
         "answer": "SINK",
-        "clue": "Used for bottles of water",
+        "clue": "Crafting station for bottles of water",
         "chunks": [
             "SI",
             "NK"
@@ -1412,7 +1412,7 @@
     {
         "id": 142,
         "answer": "ICHOR",
-        "clue": "The blood of the gods",
+        "clue": "The blood of the gods material",
         "chunks": [
             "ICH",
             "OR"
@@ -1422,7 +1422,7 @@
     {
         "id": 143,
         "answer": "SKYMILL",
-        "clue": "Used to craft sky-themed furniture",
+        "clue": "Crafting station for sky-themed furniture",
         "chunks": [
             "SKYM",
             "ILL"
@@ -1432,7 +1432,7 @@
     {
         "id": 144,
         "answer": "CANDLE",
-        "clue": "Light source",
+        "clue": "Type of light source",
         "chunks": [
             "CAN",
             "DLE"
@@ -1442,7 +1442,7 @@
     {
         "id": 145,
         "answer": "LAMP",
-        "clue": "Light source",
+        "clue": "Type of light source",
         "chunks": [
             "LA",
             "MP"
@@ -1452,7 +1452,7 @@
     {
         "id": 146,
         "answer": "CHEST",
-        "clue": "Used to hold items",
+        "clue": "Used to store items",
         "chunks": [
             "CH",
             "EST"
@@ -1462,7 +1462,7 @@
     {
         "id": 147,
         "answer": "SAFE",
-        "clue": "Private storage",
+        "clue": "Used to access private storage",
         "chunks": [
             "SA",
             "FE"
@@ -1482,7 +1482,7 @@
     {
         "id": 149,
         "answer": "SIGNS",
-        "clue": "Great for messages",
+        "clue": "Used to display messages",
         "chunks": [
             "SI",
             "GNS"
@@ -1532,7 +1532,7 @@
     {
         "id": 154,
         "answer": "STATUE",
-        "clue": "Sometimes spawns stuff when activated",
+        "clue": "Spawns stuff when activated",
         "chunks": [
             "STA",
             "TUE"
@@ -1542,7 +1542,7 @@
     {
         "id": 155,
         "answer": "PUMPS",
-        "clue": "Used to move liquids",
+        "clue": "Mechanism used to move liquids",
         "chunks": [
             "PUM",
             "PS"
@@ -1562,7 +1562,7 @@
     {
         "id": 157,
         "answer": "LANTERN",
-        "clue": "Light source",
+        "clue": "Type of light source",
         "chunks": [
             "LANT",
             "ERN"
@@ -1582,7 +1582,7 @@
     {
         "id": 159,
         "answer": "TOILET",
-        "clue": "\"Also comes in a Terra version\"",
+        "clue": "Furniture with a Terra version",
         "chunks": [
             "TOI",
             "LET"
@@ -1632,7 +1632,7 @@
     {
         "id": 164,
         "answer": "DULL",
-        "clue": "Damage reducing modifier",
+        "clue": "Damage reducing weapon modifier",
         "chunks": [
             "DU",
             "LL"
@@ -1672,7 +1672,7 @@
     {
         "id": 168,
         "answer": "KITE",
-        "clue": "Fun on a windy day",
+        "clue": "Fun activity on a windy day",
         "chunks": [
             "KI",
             "TE"
@@ -1732,7 +1732,7 @@
     {
         "id": 174,
         "answer": "BARS",
-        "clue": "What's used in crafting tools/armor",
+        "clue": "What ore smelts into",
         "chunks": [
             "BA",
             "RS"
@@ -1762,7 +1762,7 @@
     {
         "id": 177,
         "answer": "POTS",
-        "clue": "Used to grow plants",
+        "clue": "Drops loot when broken",
         "chunks": [
             "PO",
             "TS"
@@ -1772,7 +1772,7 @@
     {
         "id": 178,
         "answer": "AGLET",
-        "clue": "Used in Terraspark boots",
+        "clue": "Component in Lightning Boots",
         "chunks": [
             "AG",
             "LET"
@@ -1782,7 +1782,7 @@
     {
         "id": 179,
         "answer": "WEAK",
-        "clue": "Physical abilities are decreased",
+        "clue": "Debuff that decreases physical abilities",
         "chunks": [
             "WE",
             "AK"
@@ -1792,7 +1792,7 @@
     {
         "id": 180,
         "answer": "LARGE",
-        "clue": "Increased a weapons size",
+        "clue": "Weapon size weapon modifier",
         "chunks": [
             "LAR",
             "GE"
@@ -1812,7 +1812,7 @@
     {
         "id": 182,
         "answer": "TABI",
-        "clue": "Allows dashing",
+        "clue": "Accessory that allows dashing",
         "chunks": [
             "TA",
             "BI"
@@ -1852,7 +1852,7 @@
     {
         "id": 186,
         "answer": "BIRD",
-        "clue": "Flying critter",
+        "clue": "Flying Forest critter",
         "chunks": [
             "BI",
             "RD"
@@ -1862,7 +1862,7 @@
     {
         "id": 187,
         "answer": "SHACKLE",
-        "clue": "Grants 1 defense",
+        "clue": "Accessory granting 1 defense",
         "chunks": [
             "SHAC",
             "KLE"
@@ -1902,7 +1902,7 @@
     {
         "id": 191,
         "answer": "SLOW",
-        "clue": "Speed is halved",
+        "clue": "Debuff where speed is halved",
         "chunks": [
             "SL",
             "OW"
@@ -1922,7 +1922,7 @@
     {
         "id": 193,
         "answer": "ROBE",
-        "clue": "Mage early-game armor",
+        "clue": "Early-game mage armor",
         "chunks": [
             "RO",
             "BE"
@@ -1932,7 +1932,7 @@
     {
         "id": 194,
         "answer": "ANVIL",
-        "clue": "Used to craft tools/armor",
+        "clue": "Crafting station for tools/armor",
         "chunks": [
             "ANV",
             "IL"
@@ -1952,7 +1952,7 @@
     {
         "id": 196,
         "answer": "BEANIE",
-        "clue": "Simple hat",
+        "clue": "Hat bought from the Clothier",
         "chunks": [
             "BEA",
             "NIE"
@@ -1962,7 +1962,7 @@
     {
         "id": 197,
         "answer": "SMALL",
-        "clue": "Shrinks your weapon",
+        "clue": "Size decreasing weapon modifier",
         "chunks": [
             "SMA",
             "LL"
@@ -1972,7 +1972,7 @@
     {
         "id": 198,
         "answer": "FEDORA",
-        "clue": "Classy hat",
+        "clue": "Hat for the classiest of Neckbeards",
         "chunks": [
             "FED",
             "ORA"
@@ -1992,7 +1992,7 @@
     {
         "id": 200,
         "answer": "ROBOT",
-        "clue": "Halloween set",
+        "clue": "Halloween vanity set",
         "chunks": [
             "RO",
             "BOT"
@@ -2012,7 +2012,7 @@
     {
         "id": 202,
         "answer": "SILVER",
-        "clue": "Crafting metal",
+        "clue": "Pre-hardmode crafting metal",
         "chunks": [
             "SILV",
             "ER"
@@ -2042,7 +2042,7 @@
     {
         "id": 205,
         "answer": "KEEN",
-        "clue": "Increases weapon critical strike chance",
+        "clue": "Critical strike chance weapon modifier",
         "chunks": [
             "KE",
             "EN"
@@ -2052,7 +2052,7 @@
     {
         "id": 206,
         "answer": "QUEENBEE",
-        "clue": "\"NOT THE BEES!\"",
+        "clue": "Boss that doesn't despawn when left",
         "chunks": [
             "QUEE",
             "NBEE"
@@ -2062,7 +2062,7 @@
     {
         "id": 207,
         "answer": "WOLF",
-        "clue": "Alpha and omega enemy",
+        "clue": "Alpha or omega Snow Biome enemy",
         "chunks": [
             "WO",
             "LF"
@@ -2082,7 +2082,7 @@
     {
         "id": 209,
         "answer": "TREE",
-        "clue": "Sources of wood",
+        "clue": "Drops fruit when struck",
         "chunks": [
             "TR",
             "EE"
@@ -2092,7 +2092,7 @@
     {
         "id": 210,
         "answer": "CLOWN",
-        "clue": "Vanity set",
+        "clue": "Goofiest vanity set",
         "chunks": [
             "CL",
             "OWN"
@@ -2102,7 +2102,7 @@
     {
         "id": 211,
         "answer": "CHEF",
-        "clue": "Vanity set",
+        "clue": "Michelin star vanity set",
         "chunks": [
             "CH",
             "EF"
@@ -2112,7 +2112,7 @@
     {
         "id": 212,
         "answer": "COWBOY",
-        "clue": "Vanity set",
+        "clue": "Rootinest, tootinest vanity set",
         "chunks": [
             "COW",
             "BOY"
@@ -2122,7 +2122,7 @@
     {
         "id": 213,
         "answer": "FISH",
-        "clue": "The Angler's shtick",
+        "clue": "Caught with a pole and water",
         "chunks": [
             "FI",
             "SH"
@@ -2142,7 +2142,7 @@
     {
         "id": 215,
         "answer": "FUNERAL",
-        "clue": "Vanity set",
+        "clue": "Grave vanity set",
         "chunks": [
             "FUN",
             "ERAL"
@@ -2152,7 +2152,7 @@
     {
         "id": 216,
         "answer": "HEROS",
-        "clue": "Vanity set",
+        "clue": "Link's vanity set",
         "chunks": [
             "HER",
             "OS"
@@ -2162,7 +2162,7 @@
     {
         "id": 217,
         "answer": "LAMIA",
-        "clue": "Vanity set",
+        "clue": "Hardmode underground Desert enemy",
         "chunks": [
             "LAM",
             "IA"
@@ -2172,7 +2172,7 @@
     {
         "id": 218,
         "answer": "MAID",
-        "clue": "Vanity set",
+        "clue": "Vanity set for cleaners",
         "chunks": [
             "MA",
             "ID"
@@ -2202,7 +2202,7 @@
     {
         "id": 221,
         "answer": "SPIKED",
-        "clue": "Damage increasing modifier",
+        "clue": "Damage increasing accessory modifier",
         "chunks": [
             "SPIK",
             "ED"
@@ -2212,7 +2212,7 @@
     {
         "id": 222,
         "answer": "HARD",
-        "clue": "Devense increasing modifier",
+        "clue": "Defense accessory modifier",
         "chunks": [
             "HA",
             "RD"
@@ -2222,7 +2222,7 @@
     {
         "id": 223,
         "answer": "SHARP",
-        "clue": "Damage increasing modifier",
+        "clue": "Damage increasing weapon modifier",
         "chunks": [
             "SHA",
             "RP"
@@ -2232,7 +2232,7 @@
     {
         "id": 224,
         "answer": "TAILS",
-        "clue": "Vanity items for furries",
+        "clue": "Vanity items sold by the Zoologist",
         "chunks": [
             "TA",
             "ILS"
@@ -2242,7 +2242,7 @@
     {
         "id": 225,
         "answer": "EARS",
-        "clue": "Vanity items for furries",
+        "clue": "Vanity items sold by the Zoologist",
         "chunks": [
             "EA",
             "RS"
@@ -2252,7 +2252,7 @@
     {
         "id": 226,
         "answer": "CAPES",
-        "clue": "Elegant vanity items",
+        "clue": "Vanity items that flows in the wind",
         "chunks": [
             "CA",
             "PES"
@@ -2272,7 +2272,7 @@
     {
         "id": 228,
         "answer": "CLOAKS",
-        "clue": "Elegant vanity items",
+        "clue": "Vanity items that flows in the wind",
         "chunks": [
             "CLO",
             "AKS"
@@ -2282,7 +2282,7 @@
     {
         "id": 229,
         "answer": "CURSOR",
-        "clue": "\"Also comes in rainbow\"",
+        "clue": "Used to aim, navigate, and interact",
         "chunks": [
             "CUR",
             "SOR"
@@ -2332,7 +2332,7 @@
     {
         "id": 234,
         "answer": "QUICK",
-        "clue": "Fastest modifier",
+        "clue": "Movement speed accessory modifier",
         "chunks": [
             "QUI",
             "CK"
@@ -2362,7 +2362,7 @@
     {
         "id": 237,
         "answer": "TEACUP",
-        "clue": "\"Steeped or iced?\"",
+        "clue": "Food made from Teapots",
         "chunks": [
             "TE",
             "ACUP"
@@ -2412,7 +2412,7 @@
     {
         "id": 242,
         "answer": "MANGO",
-        "clue": "Fruit dropped by jungle trees",
+        "clue": "Fruit dropped by mahogany trees",
         "chunks": [
             "MAN",
             "GO"
@@ -2434,15 +2434,15 @@
         "answer": "PLUM",
         "clue": "Fruit dropped by boreal trees",
         "chunks": [
-            "FROS",
-            "TEEL"
+            "PL",
+            "UM"
         ],
         "chunkCount": 2
     },
     {
         "id": 245,
         "answer": "BACON",
-        "clue": "Dropped by pigrons",
+        "clue": "Food dropped by Pigrons",
         "chunks": [
             "BA",
             "CON"
@@ -2452,17 +2452,17 @@
     {
         "id": 246,
         "answer": "BURGER",
-        "clue": "Food dropped by eater of souls",
+        "clue": "Food dropped by Eater of Souls",
         "chunks": [
-            "BONE",
-            "BIRD"
+            "BURG",
+            "ER"
         ],
         "chunkCount": 2
     },
     {
         "id": 247,
         "answer": "COFFEE",
-        "clue": "\"Don't talk to me until I've had this\"",
+        "clue": "Food dropped by Man Eaters and Snatchers",
         "chunks": [
             "COF",
             "FEE"
@@ -2472,17 +2472,17 @@
     {
         "id": 248,
         "answer": "FRIES",
-        "clue": "Food dropped by flying fish",
+        "clue": "Food dropped by Flying Fish",
         "chunks": [
-            "MOSS",
-            "BIRD"
+            "FR",
+            "IES"
         ],
         "chunkCount": 2
     },
     {
         "id": 249,
         "answer": "GRAPES",
-        "clue": "Fruit dropped from derplings",
+        "clue": "Fruit dropped from Derplings",
         "chunks": [
             "GRA",
             "PES"
@@ -2492,7 +2492,7 @@
     {
         "id": 250,
         "answer": "LEAD",
-        "clue": "Crafting metal",
+        "clue": "Pre-hardmode crafting metal",
         "chunks": [
             "LE",
             "AD"
@@ -2502,7 +2502,7 @@
     {
         "id": 251,
         "answer": "HOTDOG",
-        "clue": "Food dropped by bone serpents",
+        "clue": "Food dropped by Bone Serpents",
         "chunks": [
             "HOT",
             "DOG"
@@ -2512,7 +2512,7 @@
     {
         "id": 252,
         "answer": "NACHOS",
-        "clue": "Food dropped by sand sharks",
+        "clue": "Food dropped by Sand Sharks",
         "chunks": [
             "NAC",
             "HOS"
@@ -2522,7 +2522,7 @@
     {
         "id": 253,
         "answer": "PIZZA",
-        "clue": "Food dropped by medusas",
+        "clue": "Food dropped by Medusas",
         "chunks": [
             "PI",
             "ZZA"
@@ -2532,7 +2532,7 @@
     {
         "id": 254,
         "answer": "STEAK",
-        "clue": "Food dropped by undead miners",
+        "clue": "Food dropped by Undead Miners",
         "chunks": [
             "ST",
             "EAK"
@@ -2542,7 +2542,7 @@
     {
         "id": 255,
         "answer": "SAKE",
-        "clue": "Drink to make you tipsy",
+        "clue": "Drink that makes you tipsy",
         "chunks": [
             "SA",
             "KE"
@@ -2592,7 +2592,7 @@
     {
         "id": 260,
         "answer": "ROYALGEL",
-        "clue": "Slimes become friendly",
+        "clue": "Slimes become friendly accessory",
         "chunks": [
             "ROYA",
             "LGEL"
@@ -2612,7 +2612,7 @@
     {
         "id": 262,
         "answer": "ESTEE",
-        "clue": "Pet summoned by a celestial wand",
+        "clue": "Pet summoned by a Celestial Wand",
         "chunks": [
             "ES",
             "TEE"
@@ -2622,7 +2622,7 @@
     {
         "id": 263,
         "answer": "JUNIMO",
-        "clue": "Pet gained from jola cola",
+        "clue": "Pet traded from Jola Cola",
         "chunks": [
             "JUN",
             "IMO"
@@ -2652,7 +2652,7 @@
     {
         "id": 266,
         "answer": "BUNNY",
-        "clue": "Classic forest critter",
+        "clue": "Classic Forest critter",
         "chunks": [
             "BUN",
             "NY"
@@ -2662,7 +2662,7 @@
     {
         "id": 267,
         "answer": "PARROT",
-        "clue": "Flying pirate enemy",
+        "clue": "Flying pirate invasion enemy",
         "chunks": [
             "PAR",
             "ROT"
@@ -2672,7 +2672,7 @@
     {
         "id": 268,
         "answer": "CHILLED",
-        "clue": "Should've worn a jacket debuff",
+        "clue": "Slowness debuff caused by cold water",
         "chunks": [
             "CHIL",
             "LED"
@@ -2682,7 +2682,7 @@
     {
         "id": 269,
         "answer": "PIGMAN",
-        "clue": "Pet summoned by monster meat",
+        "clue": "Pet summoned by Monster Meat",
         "chunks": [
             "PIG",
             "MAN"
@@ -2692,7 +2692,7 @@
     {
         "id": 270,
         "answer": "PUPPY",
-        "clue": "Pet gotten from presents",
+        "clue": "Pet aquired from presents",
         "chunks": [
             "PUP",
             "PY"
@@ -2712,7 +2712,7 @@
     {
         "id": 272,
         "answer": "SPIDER",
-        "clue": "Enemy that can climb walls",
+        "clue": "Underground enemy that can climb walls",
         "chunks": [
             "SPI",
             "DER"
@@ -2732,7 +2732,7 @@
     {
         "id": 274,
         "answer": "CONFUSED",
-        "clue": "Player's controls are reversed",
+        "clue": "Debuff where your controls are reversed",
         "chunks": [
             "CONF",
             "USED"
@@ -2752,7 +2752,7 @@
     {
         "id": 276,
         "answer": "WISP",
-        "clue": "Dungeon pet that grants light",
+        "clue": "Dungeon pet that emits light",
         "chunks": [
             "WI",
             "SP"
@@ -2772,7 +2772,7 @@
     {
         "id": 278,
         "answer": "GOAT",
-        "clue": "Mount dropped by the WOF",
+        "clue": "Mount dropped by the WoF",
         "chunks": [
             "REDA",
             "NT"
@@ -2782,7 +2782,7 @@
     {
         "id": 279,
         "answer": "FINCH",
-        "clue": "Earliest summoner minion",
+        "clue": "Early-game flying summoner minion",
         "chunks": [
             "FI",
             "NCH"
@@ -2792,7 +2792,7 @@
     {
         "id": 280,
         "answer": "PARTY",
-        "clue": "Event that causes NPDs to wear hats",
+        "clue": "Event that causes NPCs to wear hats",
         "chunks": [
             "PA",
             "RTY"
@@ -2892,7 +2892,7 @@
     {
         "id": 290,
         "answer": "PENGUIN",
-        "clue": "Snow critter",
+        "clue": "Snow Biome critter",
         "chunks": [
             "PENG",
             "UIN"
@@ -2912,7 +2912,7 @@
     {
         "id": 292,
         "answer": "SKULL",
-        "clue": "Hat dropped from skeletons",
+        "clue": "Vanity helmet dropped from skeletons",
         "chunks": [
             "SK",
             "ULL"
@@ -2932,7 +2932,7 @@
     {
         "id": 294,
         "answer": "FEATHER",
-        "clue": "Dropped from Harpys",
+        "clue": "Drops from Harpys",
         "chunks": [
             "FEA",
             "THER"
@@ -2952,7 +2952,7 @@
     {
         "id": 296,
         "answer": "SNOW",
-        "clue": "Equivalent to dirt in the snow biome",
+        "clue": "Equivalent to dirt in the Snow Biome",
         "chunks": [
             "SN",
             "OW"
@@ -2962,7 +2962,7 @@
     {
         "id": 297,
         "answer": "LAVABAT",
-        "clue": "Hardmode underworld flying enemy",
+        "clue": "Hardmode Underworld flying enemy",
         "chunks": [
             "LAV",
             "ABAT"
@@ -2982,7 +2982,7 @@
     {
         "id": 299,
         "answer": "TOYSLED",
-        "clue": "Pet dropped by ice mimics",
+        "clue": "Pet dropped by Ice Mimics",
         "chunks": [
             "TOYS",
             "LED"
@@ -2992,7 +2992,7 @@
     {
         "id": 300,
         "answer": "SLUSH",
-        "clue": "Ice biome silt",
+        "clue": "Block used in an Extractinator",
         "chunks": [
             "SLU",
             "SH"
@@ -3002,7 +3002,7 @@
     {
         "id": 301,
         "answer": "GUARDING",
-        "clue": "Modifier increasing defense",
+        "clue": "Defense accessory modifier",
         "chunks": [
             "GUAR",
             "DING"
@@ -3042,7 +3042,7 @@
     {
         "id": 305,
         "answer": "CRAB",
-        "clue": "\"Not me secret formula!\"",
+        "clue": "Ocean critter",
         "chunks": [
             "CR",
             "AB"
@@ -3052,7 +3052,7 @@
     {
         "id": 306,
         "answer": "ICESLIME",
-        "clue": "Drops cold gel",
+        "clue": "Snow Biome slime",
         "chunks": [
             "ICES",
             "LIME"
@@ -3062,7 +3062,7 @@
     {
         "id": 307,
         "answer": "SQUID",
-        "clue": "\"It's just a stupid boulder!\"",
+        "clue": "Enemy that drops black ink",
         "chunks": [
             "SQ",
             "UID"
@@ -3072,7 +3072,7 @@
     {
         "id": 308,
         "answer": "SPONGE",
-        "clue": "\"I'm ready, I'm ready, I'm ready\"",
+        "clue": "Tool that clears liquid",
         "chunks": [
             "SPO",
             "NGE"
@@ -3082,7 +3082,7 @@
     {
         "id": 309,
         "answer": "ORCA",
-        "clue": "Killer whale",
+        "clue": "Killer whale enemy",
         "chunks": [
             "OR",
             "CA"
@@ -3102,7 +3102,7 @@
     {
         "id": 311,
         "answer": "DOLPHIN",
-        "clue": "Friendly ocean critter",
+        "clue": "Friendly Ocean critter",
         "chunks": [
             "DOLP",
             "HIN"
@@ -3112,7 +3112,7 @@
     {
         "id": 312,
         "answer": "SEAGULL",
-        "clue": "Flying ocean critter",
+        "clue": "Flying Ocean critter",
         "chunks": [
             "SEA",
             "GULL"
@@ -3132,7 +3132,7 @@
     {
         "id": 314,
         "answer": "CORAL",
-        "clue": "Type of ocean floor decor",
+        "clue": "Type of Ocean floor decor",
         "chunks": [
             "CO",
             "RAL"
