@@ -2,7 +2,7 @@
 	let { selectItem, itemList, itemName } = $props();
 
 	let input = $state('');
-	let filtered = $state([...itemList]);
+	let filtered = $derived([...itemList]);
 	let dropdownIndex = $state(-1);
 	let itemElements = $state<(HTMLButtonElement | null)[]>([]); // used for smooth scrolling
 
