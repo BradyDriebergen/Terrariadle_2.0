@@ -3162,7 +3162,7 @@
     {
         "id": 317,
         "answer": "SHRIMP",
-        "clue": "Common fish in the ocean",
+        "clue": "Common 'fish' in the ocean",
         "chunks": [
             "SHR",
             "IMP"
@@ -3172,7 +3172,7 @@
     {
         "id": 318,
         "answer": "MACAW",
-        "clue": "Jungle flying critter",
+        "clue": "Flying Jungle critter",
         "chunks": [
             "MA",
             "CAW"
@@ -3192,7 +3192,7 @@
     {
         "id": 320,
         "answer": "TOUCAN",
-        "clue": "Jungle flying critter",
+        "clue": "Flying Jungle critter",
         "chunks": [
             "TOU",
             "CAN"
@@ -3202,7 +3202,7 @@
     {
         "id": 321,
         "answer": "GRUBBY",
-        "clue": "Small jungle critter",
+        "clue": "Small Jungle critter",
         "chunks": [
             "GRU",
             "BBY"
@@ -3212,7 +3212,7 @@
     {
         "id": 322,
         "answer": "SLUGGY",
-        "clue": "Small jungle critter",
+        "clue": "Small Jungle critter",
         "chunks": [
             "SLU",
             "GGY"
@@ -3222,7 +3222,7 @@
     {
         "id": 323,
         "answer": "SIGHTED",
-        "clue": "Ranger damage modifier",
+        "clue": "Ranger weapon damage modifier",
         "chunks": [
             "SIGH",
             "TED"
@@ -3232,7 +3232,7 @@
     {
         "id": 324,
         "answer": "BUGGY",
-        "clue": "Small jungle critter",
+        "clue": "Small Jungle critter",
         "chunks": [
             "BUG",
             "GY"
@@ -3242,7 +3242,7 @@
     {
         "id": 325,
         "answer": "BAMBOO",
-        "clue": "Block that grows in shallow water",
+        "clue": "Jungle block that grows in shallow water",
         "chunks": [
             "BAM",
             "BOO"
@@ -3252,7 +3252,7 @@
     {
         "id": 326,
         "answer": "MOTH",
-        "clue": "Somehow drops butterfly dust",
+        "clue": "Enemy that drops Butterfly Dust",
         "chunks": [
             "MO",
             "TH"
@@ -3262,7 +3262,7 @@
     {
         "id": 327,
         "answer": "VINE",
-        "clue": "Drops from man eaters",
+        "clue": "Drops from Man Eaters",
         "chunks": [
             "VI",
             "NE"
@@ -3272,7 +3272,7 @@
     {
         "id": 328,
         "answer": "SEEDLING",
-        "clue": "Summons a sapling pet",
+        "clue": "Summons a Sapling pet",
         "chunks": [
             "SEED",
             "LING"
@@ -3292,7 +3292,7 @@
     {
         "id": 330,
         "answer": "SPORES",
-        "clue": "Glowing jungle plant",
+        "clue": "Glowing Jungle plant",
         "chunks": [
             "SPO",
             "RES"
@@ -3312,7 +3312,7 @@
     {
         "id": 332,
         "answer": "FLAME",
-        "clue": "Type of jungle temple trap",
+        "clue": "Type of Jungle Temple trap",
         "chunks": [
             "FL",
             "AME"
@@ -3332,7 +3332,7 @@
     {
         "id": 334,
         "answer": "SLIMER",
-        "clue": "Flying hardmode corruption enemy",
+        "clue": "Flying hardmode Corruption enemy",
         "chunks": [
             "SLI",
             "MER"
@@ -3352,7 +3352,7 @@
     {
         "id": 336,
         "answer": "EBONKOI",
-        "clue": "Corruption fish",
+        "clue": "Fish used in wrath potions",
         "chunks": [
             "EBO",
             "NKOI"
@@ -3372,7 +3372,7 @@
     {
         "id": 338,
         "answer": "BOREAL",
-        "clue": "Ice biome wood",
+        "clue": "Ice Biome wood",
         "chunks": [
             "BOR",
             "EAL"
@@ -3382,7 +3382,7 @@
     {
         "id": 339,
         "answer": "PALM",
-        "clue": "Ocean/oasis wood",
+        "clue": "Ocean/Oasis wood",
         "chunks": [
             "PA",
             "LM"
@@ -3392,7 +3392,7 @@
     {
         "id": 340,
         "answer": "SPOOKY",
-        "clue": "Pumkin moon event wood",
+        "clue": "Pumkin Moon wood",
         "chunks": [
             "SPO",
             "OKY"
@@ -3402,7 +3402,7 @@
     {
         "id": 341,
         "answer": "HAMMER",
-        "clue": "Used to break walls",
+        "clue": "Tool used to break walls",
         "chunks": [
             "HAM",
             "MER"
@@ -3442,7 +3442,7 @@
     {
         "id": 345,
         "answer": "CURSED",
-        "clue": "Cannot use any items",
+        "clue": "Debuff where you cannot use any items",
         "chunks": [
             "CURS",
             "ED"
@@ -3452,7 +3452,7 @@
     {
         "id": 346,
         "answer": "BULKY",
-        "clue": "Increases size and decreases speed",
+        "clue": "Size increasing weapon modifier",
         "chunks": [
             "BUL",
             "KY"
@@ -3462,7 +3462,7 @@
     {
         "id": 347,
         "answer": "CRIMERA",
-        "clue": "Flying crimson enemy",
+        "clue": "Flying Crimson enemy",
         "chunks": [
             "CRI",
             "MERA"
@@ -3472,7 +3472,7 @@
     {
         "id": 348,
         "answer": "HEART",
-        "clue": "Heals for 20 health",
+        "clue": "Drop that heals for 20 health",
         "chunks": [
             "HE",
             "ART"
@@ -3492,7 +3492,7 @@
     {
         "id": 350,
         "answer": "MASSIVE",
-        "clue": "Modifier increasing size",
+        "clue": "Size increasing weapon modifier",
         "chunks": [
             "MASS",
             "IVE"
@@ -3502,7 +3502,7 @@
     {
         "id": 351,
         "answer": "CLOTHIER",
-        "clue": "Cursed old man",
+        "clue": "Used to be a cursed old man",
         "chunks": [
             "CLOT",
             "HIER"
@@ -3532,7 +3532,7 @@
     {
         "id": 354,
         "answer": "BONEKEY",
-        "clue": "Summons baby skeletron head",
+        "clue": "Summons Baby Skeletron Head",
         "chunks": [
             "BON",
             "EKEY"
@@ -3542,7 +3542,7 @@
     {
         "id": 355,
         "answer": "SILENCED",
-        "clue": "Retricts use of mana items",
+        "clue": "Debuff that retricts use of mana items",
         "chunks": [
             "SILE",
             "NCED"
@@ -3572,7 +3572,7 @@
     {
         "id": 358,
         "answer": "WELLFED",
-        "clue": "Minor improvements to all stats",
+        "clue": "Minor improvements to all stats buff",
         "chunks": [
             "WELL",
             "FED"
@@ -3582,7 +3582,7 @@
     {
         "id": 359,
         "answer": "BRICK",
-        "clue": "Type of dungeon block",
+        "clue": "Another name for Dungeon blocks",
         "chunks": [
             "BR",
             "ICK"
@@ -3592,7 +3592,7 @@
     {
         "id": 360,
         "answer": "BATTLE",
-        "clue": "Increases enemy spawn rate",
+        "clue": "Buff that increases enemy spawn rate",
         "chunks": [
             "BAT",
             "TLE"
@@ -3632,7 +3632,7 @@
     {
         "id": 364,
         "answer": "RAPID",
-        "clue": "modifier increasing fire-rate",
+        "clue": "Ranger modifier increasing fire-rate",
         "chunks": [
             "RAP",
             "ID"
@@ -3702,7 +3702,7 @@
     {
         "id": 371,
         "answer": "WARMTH",
-        "clue": "Reduces damage from cold enemies",
+        "clue": "Reduces damage from cold enemies buff",
         "chunks": [
             "WAR",
             "MTH"
@@ -3722,7 +3722,7 @@
     {
         "id": 373,
         "answer": "PANIC",
-        "clue": "Speed buff gained from getting hit",
+        "clue": "Buff gained from the Panic Necklace",
         "chunks": [
             "PAN",
             "IC"
@@ -3752,7 +3752,7 @@
     {
         "id": 376,
         "answer": "SHODDY",
-        "clue": "Modifier decreasing damage",
+        "clue": "Decreasing damage weapon modifier",
         "chunks": [
             "SHOD",
             "DY"
@@ -3772,7 +3772,7 @@
     {
         "id": 378,
         "answer": "OOZED",
-        "clue": "Slowness debuff from ogre",
+        "clue": "Slowness debuff from Ogres",
         "chunks": [
             "OO",
             "ZED"
@@ -3792,7 +3792,7 @@
     {
         "id": 380,
         "answer": "PECKISH",
-        "clue": "Hunger buff on Constant seed",
+        "clue": "Hunger debuff on Constant seed",
         "chunks": [
             "PECK",
             "ISH"
@@ -3802,7 +3802,7 @@
     {
         "id": 381,
         "answer": "MIDAS",
-        "clue": "Debuff causing more coins to drop",
+        "clue": "Debuff causing more coins to drop on death",
         "chunks": [
             "MI",
             "DAS"
@@ -3822,7 +3822,7 @@
     {
         "id": 383,
         "answer": "CELLED",
-        "clue": "DoT debuff caused by the star cell",
+        "clue": "DoT debuff caused by Star Cells",
         "chunks": [
             "CEL",
             "LED"
@@ -3832,7 +3832,7 @@
     {
         "id": 384,
         "answer": "QUEST",
-        "clue": "What the Angler gives you",
+        "clue": "Task the Angler gives you",
         "chunks": [
             "QU",
             "EST"
@@ -3882,7 +3882,7 @@
     {
         "id": 389,
         "answer": "LAVAFLY",
-        "clue": "Underworld flying critter",
+        "clue": "Flying Underworld critter",
         "chunks": [
             "LAV",
             "AFLY"
@@ -3952,7 +3952,7 @@
     {
         "id": 396,
         "answer": "CATFISH",
-        "clue": "Quest fish caught in the jungle",
+        "clue": "Quest fish caught in the Jungle",
         "chunks": [
             "CATF",
             "ISH"
@@ -3992,7 +3992,7 @@
     {
         "id": 400,
         "answer": "MUDFISH",
-        "clue": "Quest fish caught in the jungle",
+        "clue": "Quest fish caught in the Jungle",
         "chunks": [
             "MUDF",
             "ISH"
