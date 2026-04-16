@@ -31,7 +31,7 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at item 400
+Finished at item 507
 
 Skipping 501 - 700, will update after 3 chunk words
 

@@ -4002,7 +4002,7 @@
     {
         "id": 401,
         "answer": "TOXIKARP",
-        "clue": "Ranged weapon gained from fishing",
+        "clue": "Ranged weapon aquired from fishing",
         "chunks": [
             "TOXI",
             "KARP"
@@ -4012,7 +4012,7 @@
     {
         "id": 402,
         "answer": "OYSTER",
-        "clue": "Fished item that grants pearls",
+        "clue": "Fished item that drops pearls",
         "chunks": [
             "OYS",
             "TER"
@@ -4064,8 +4064,8 @@
         "answer": "DIVINE",
         "clue": "Hallow hardmode crate",
         "chunks": [
-            "CATM",
-            "ASK"
+            "DIV",
+            "INE"
         ],
         "chunkCount": 2
     },
@@ -4092,7 +4092,7 @@
     {
         "id": 410,
         "answer": "GODLY",
-        "clue": "\"The holiest of modifiers\"",
+        "clue": "\"The holiest of weapon modifiers\"",
         "chunks": [
             "GOD",
             "LY"
@@ -4142,7 +4142,7 @@
     {
         "id": 415,
         "answer": "MERMAN",
-        "clue": "Blood moon ocean enemy",
+        "clue": "Blood moon Ocean enemy",
         "chunks": [
             "MER",
             "MAN"
@@ -4162,7 +4162,7 @@
     {
         "id": 417,
         "answer": "SASHIMI",
-        "clue": "Food that's crafted from fish",
+        "clue": "Sushi that's crafted from fish",
         "chunks": [
             "SASH",
             "IMI"
@@ -4172,7 +4172,7 @@
     {
         "id": 418,
         "answer": "ANGLER",
-        "clue": "NPC that never dies, just leaves",
+        "clue": "NPC that never dies",
         "chunks": [
             "ANGL",
             "ER"
@@ -4192,7 +4192,7 @@
     {
         "id": 420,
         "answer": "INFERNO",
-        "clue": "\"Ring of FIRE!\"",
+        "clue": "Ring of fire buff",
         "chunks": [
             "INFE",
             "RNO"
@@ -4212,7 +4212,7 @@
     {
         "id": 422,
         "answer": "PRESENT",
-        "clue": "Item dropped durring december",
+        "clue": "Item dropped during December",
         "chunks": [
             "PRES",
             "ENT"
@@ -4222,7 +4222,7 @@
     {
         "id": 423,
         "answer": "MYTHICAL",
-        "clue": "Best mage modifier",
+        "clue": "Best magic weapon modifier",
         "chunks": [
             "MYTH",
             "ICAL"
@@ -4262,7 +4262,7 @@
     {
         "id": 427,
         "answer": "DEFENSE",
-        "clue": "Stat protecting you from damage",
+        "clue": "Stat lowering damage taken",
         "chunks": [
             "DEF",
             "ENSE"
@@ -4272,7 +4272,7 @@
     {
         "id": 428,
         "answer": "AGILE",
-        "clue": "Modifier increasing speed",
+        "clue": "Movement speed accessory modifier",
         "chunks": [
             "AGI",
             "LE"
@@ -4292,7 +4292,7 @@
     {
         "id": 430,
         "answer": "LUCK",
-        "clue": "Stat that improves randomness",
+        "clue": "Stat that improves random chances",
         "chunks": [
             "LU",
             "CK"
@@ -4312,7 +4312,7 @@
     {
         "id": 432,
         "answer": "RARITY",
-        "clue": "Property assigned to all items",
+        "clue": "Tier assigned to all items",
         "chunks": [
             "RAR",
             "ITY"
@@ -4382,7 +4382,7 @@
     {
         "id": 439,
         "answer": "DARKNESS",
-        "clue": "Decreases light vision",
+        "clue": "Decreases night vision debuff",
         "chunks": [
             "DARK",
             "NESS"
@@ -4402,7 +4402,7 @@
     {
         "id": 441,
         "answer": "CHAINGUN",
-        "clue": "Santa's minigun",
+        "clue": "Fastest weapon in the game",
         "chunks": [
             "CHAI",
             "NGUN"
@@ -4412,7 +4412,7 @@
     {
         "id": 442,
         "answer": "MINIONS",
-        "clue": "Summoners main source of damage",
+        "clue": "Summoner's main source of damage",
         "chunks": [
             "MIN",
             "IONS"
@@ -4442,7 +4442,7 @@
     {
         "id": 445,
         "answer": "ARMOR",
-        "clue": "Sets that grant stats and defense",
+        "clue": "Wearable sets that grant buffs and defense",
         "chunks": [
             "AR",
             "MOR"
@@ -4462,7 +4462,7 @@
     {
         "id": 447,
         "answer": "AETHER",
-        "clue": "Where the shimmer is found",
+        "clue": "Mini-biome where the shimmer is found",
         "chunks": [
             "AET",
             "HER"
@@ -4492,7 +4492,7 @@
     {
         "id": 450,
         "answer": "SPACEGUN",
-        "clue": "Mage weapon, not need mana with armor",
+        "clue": "Pairs well with Meteorite Armor",
         "chunks": [
             "SPAC",
             "EGUN"
@@ -4532,7 +4532,7 @@
     {
         "id": 454,
         "answer": "MOWED",
-        "clue": "Grass that won't grow tall grass",
+        "clue": "Grass that was ran over by a Lawnmower",
         "chunks": [
             "MOW",
             "ED"
@@ -4582,7 +4582,7 @@
     {
         "id": 459,
         "answer": "IRON",
-        "clue": "Crafting metal",
+        "clue": "Pre-hardmode crafting metal",
         "chunks": [
             "IR",
             "ON"
@@ -4622,7 +4622,7 @@
     {
         "id": 463,
         "answer": "PUMPKIN",
-        "clue": "Plant grown durring October",
+        "clue": "Plant grown naturally during October",
         "chunks": [
             "PUMP",
             "KIN"
@@ -4632,7 +4632,7 @@
     {
         "id": 464,
         "answer": "SEEDS",
-        "clue": "The start of any good garden",
+        "clue": "Plantable versions of herbs",
         "chunks": [
             "SEE",
             "DS"
@@ -4642,7 +4642,7 @@
     {
         "id": 465,
         "answer": "ALTARS",
-        "clue": "Breaking these grants hardmode ores",
+        "clue": "Breaking these sqpwns hardmode ores",
         "chunks": [
             "ALT",
             "ARS"
@@ -4672,7 +4672,7 @@
     {
         "id": 468,
         "answer": "BLEEDING",
-        "clue": "No health regeneration",
+        "clue": "No health regeneration debuff",
         "chunks": [
             "BLEE",
             "DING"
@@ -4692,7 +4692,7 @@
     {
         "id": 470,
         "answer": "HEAVY",
-        "clue": "Modifier decreasing speed",
+        "clue": "Speed decreasing weapon modifier",
         "chunks": [
             "HEA",
             "VY"
@@ -4722,7 +4722,7 @@
     {
         "id": 473,
         "answer": "CASCADE",
-        "clue": "Pre-hardmode underworld yoyo",
+        "clue": "Pre-hardmode Underworld yoyo",
         "chunks": [
             "CASC",
             "ADE"
@@ -4802,7 +4802,7 @@
     {
         "id": 481,
         "answer": "WILD",
-        "clue": "Modifer slightly increasing melee speed",
+        "clue": "Melee speed accessory modifier",
         "chunks": [
             "WI",
             "LD"
@@ -4842,7 +4842,7 @@
     {
         "id": 485,
         "answer": "CLOUD",
-        "clue": "No fall damage if landed on",
+        "clue": "Block with no fall damage",
         "chunks": [
             "CLO",
             "UD"
@@ -4912,7 +4912,7 @@
     {
         "id": 492,
         "answer": "EASTER",
-        "clue": "A bunny's favorite furniture",
+        "clue": "A bunny's favorite furniture set",
         "chunks": [
             "EAS",
             "TER"
@@ -4922,7 +4922,7 @@
     {
         "id": 493,
         "answer": "CHALICE",
-        "clue": "Fancy cup sold by traveling merchant",
+        "clue": "Fancy cup sold by Traveling Merchant",
         "chunks": [
             "CHA",
             "LICE"
@@ -4932,7 +4932,7 @@
     {
         "id": 494,
         "answer": "KIMONO",
-        "clue": "Vanity sold by traveling merchant",
+        "clue": "Vanity item sold by traveling merchant",
         "chunks": [
             "KI",
             "MONO"
@@ -4952,7 +4952,7 @@
     {
         "id": 496,
         "answer": "SAIL",
-        "clue": "Wall sold by the Pirate",
+        "clue": "Decorative wall sold by the Pirate",
         "chunks": [
             "SA",
             "IL"
@@ -4972,7 +4972,7 @@
     {
         "id": 498,
         "answer": "TIKI",
-        "clue": "Endgame summoner armor",
+        "clue": "Endgame summoner armor set",
         "chunks": [
             "TI",
             "KI"
@@ -4982,7 +4982,7 @@
     {
         "id": 499,
         "answer": "PYGMY",
-        "clue": "Tiki summoner minion",
+        "clue": "Tiki-themed summoner minion",
         "chunks": [
             "PY",
             "GMY"
@@ -4992,7 +4992,7 @@
     {
         "id": 500,
         "answer": "BUBBLE",
-        "clue": "Block that holds liquids, not players",
+        "clue": "Block that blocks liquids and not players",
         "chunks": [
             "BUB",
             "BLE"
@@ -5002,7 +5002,7 @@
     {
         "id": 501,
         "answer": "DIGGINGCLAW",
-        "clue": "Shroomite pickaxe type",
+        "clue": "Shroomite pickaxe",
         "chunks": [
             "DIG",
             "GIN",
@@ -5038,7 +5038,7 @@
     {
         "id": 504,
         "answer": "TRAGICUMBRELLA",
-        "clue": "Weapon bought from a graveyard",
+        "clue": "Weapon bought at a graveyard",
         "chunks": [
             "TRAG",
             "ICUM",
