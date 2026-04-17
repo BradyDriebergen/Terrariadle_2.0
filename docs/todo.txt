@@ -31,7 +31,10 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
 
-Finished at item 507
+Finished at item 933
+
+REMEMBER! Ask AI to see any duplicates between armors
+- Ex. BEETLE vs BEETLEARMOR
 
 Skipping 501 - 700, will update after 3 chunk words
 
@@ -46,6 +49,13 @@ NOTES ABOUT NAMING CONVENTIONS:
 - If there is no obvious description for an accessory,
 list the ingredients seperated by '+'
 - Endgame lunar mage weapon is an example of a lunar weapon
+
+
+- All biomes, items, and enemies need to be capitalized
+- All chunks when combined need to spell the answer for each item
+- Spell check all the clues
+- Make sure there are no hanging spaces or quotation marks
+- Make sure there are no repeats
 
 
 Potential categories:

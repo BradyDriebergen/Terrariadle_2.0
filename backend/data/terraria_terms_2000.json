@@ -5230,7 +5230,7 @@
     {
         "id": 520,
         "answer": "DEMONWINGS",
-        "clue": "Wings made from souls of night",
+        "clue": "Wings made from Souls of Night",
         "chunks": [
             "DEM",
             "ONW",
@@ -5254,7 +5254,7 @@
     {
         "id": 522,
         "answer": "NEBULAFLOATER",
-        "clue": "Nebula enemy that teleports around",
+        "clue": "Nebula enemy that teleports",
         "chunks": [
             "NE",
             "BULA",
@@ -7402,7 +7402,7 @@
     {
         "id": 701,
         "answer": "TUNGSTEN",
-        "clue": "Crafting metal",
+        "clue": "Pre-hardmode crafting metal",
         "chunks": [
             "TU",
             "NGS",
@@ -7413,7 +7413,7 @@
     {
         "id": 702,
         "answer": "NIGHTMARE",
-        "clue": "Corruption pickaxe",
+        "clue": "Demonite pickaxe",
         "chunks": [
             "NIG",
             "HTM",
@@ -7424,7 +7424,7 @@
     {
         "id": 703,
         "answer": "MOLTEN",
-        "clue": "Hellstone pickaxe",
+        "clue": "Hellstone tools prefix",
         "chunks": [
             "MO",
             "LT",
@@ -7457,7 +7457,7 @@
     {
         "id": 706,
         "answer": "PICKAXE",
-        "clue": "Used to break blocks",
+        "clue": "Tool used to break blocks",
         "chunks": [
             "PIC",
             "KA",
@@ -7468,7 +7468,7 @@
     {
         "id": 707,
         "answer": "HAMAXE",
-        "clue": "Can break trees and walls",
+        "clue": "Tool that can break trees and walls",
         "chunks": [
             "HA",
             "MA",
@@ -7490,7 +7490,7 @@
     {
         "id": 709,
         "answer": "WARAXE",
-        "clue": "Chopping tool",
+        "clue": "Type of axe",
         "chunks": [
             "WA",
             "RA",
@@ -7501,7 +7501,7 @@
     {
         "id": 710,
         "answer": "CHAINSAW",
-        "clue": "Chopping tool",
+        "clue": "Type of axe",
         "chunks": [
             "CHA",
             "INS",
@@ -7512,7 +7512,7 @@
     {
         "id": 711,
         "answer": "THEAXE",
-        "clue": "Tribute to Dimebag Darrell",
+        "clue": "Tribute tool to Dimebag Darrell",
         "chunks": [
             "TH",
             "EA",
@@ -7534,7 +7534,7 @@
     {
         "id": 713,
         "answer": "THEBREAKER",
-        "clue": "Corruption hammer",
+        "clue": "Demonite hammer",
         "chunks": [
             "TH",
             "EBRE",
@@ -7545,7 +7545,7 @@
     {
         "id": 714,
         "answer": "FLESHGRINDER",
-        "clue": "Crimson hammer",
+        "clue": "Crimtane hammer",
         "chunks": [
             "FLES",
             "HGRI",
@@ -7556,7 +7556,7 @@
     {
         "id": 715,
         "answer": "ROCKFISH",
-        "clue": "Hammer you fish for",
+        "clue": "Hammer aquired from fishing",
         "chunks": [
             "ROC",
             "KF",
@@ -7578,7 +7578,7 @@
     {
         "id": 717,
         "answer": "HAEMORRHAXE",
-        "clue": "Blood moon hamaxe",
+        "clue": "Blood moon tool",
         "chunks": [
             "HAE",
             "MORR",
@@ -7589,7 +7589,7 @@
     {
         "id": 718,
         "answer": "WRENCH",
-        "clue": "Used to place wire",
+        "clue": "Tool used to place wire",
         "chunks": [
             "WR",
             "EN",
@@ -7600,7 +7600,7 @@
     {
         "id": 719,
         "answer": "CUTTER",
-        "clue": "Used to break wire",
+        "clue": "Tool used to break wire",
         "chunks": [
             "CU",
             "TT",
@@ -7611,7 +7611,7 @@
     {
         "id": 720,
         "answer": "SCRAPER",
-        "clue": "Used to remove paint",
+        "clue": "Tool used to remove paint",
         "chunks": [
             "SCR",
             "AP",
@@ -7622,7 +7622,7 @@
     {
         "id": 721,
         "answer": "SPECTRE",
-        "clue": "Pre-moonlord mage set",
+        "clue": "Lifesteal mage armor set",
         "chunks": [
             "SP",
             "ECT",
@@ -7633,7 +7633,7 @@
     {
         "id": 722,
         "answer": "WEBSLINGER",
-        "clue": "Spiderman",
+        "clue": "Hook found in Spider Caves",
         "chunks": [
             "WEBS",
             "LIN",
@@ -7644,7 +7644,7 @@
     {
         "id": 723,
         "answer": "IVYWHIP",
-        "clue": "One of the first hooks",
+        "clue": "One of the first hooks added to the game",
         "chunks": [
             "IV",
             "YW",
@@ -7666,7 +7666,7 @@
     {
         "id": 725,
         "answer": "BONEWINGS",
-        "clue": "Wings obtained from armored bones",
+        "clue": "Wings obtained from Armored Bones",
         "chunks": [
             "BON",
             "EWIN",
@@ -7712,16 +7712,16 @@
         "answer": "STATICHOOK",
         "clue": "Hook that keeps the player in place",
         "chunks": [
-            "ANTI",
-            "GRAV",
-            "ITY"
+            "STA",
+            "TICH",
+            "OOK"
         ],
         "chunkCount": 3
     },
     {
         "id": 730,
         "answer": "DISSONANCE",
-        "clue": "Hook that teleports player",
+        "clue": "Hook that teleports the player",
         "chunks": [
             "DIS",
             "SON",
@@ -7732,7 +7732,7 @@
     {
         "id": 731,
         "answer": "NINJAGEAR",
-        "clue": "Shinobi accessory",
+        "clue": "Tabi + Black Belt + Tiger Climbing Gear",
         "chunks": [
             "NIN",
             "JAG",
@@ -7743,7 +7743,7 @@
     {
         "id": 732,
         "answer": "MAGICMIRROR",
-        "clue": "Gaze into this to return home",
+        "clue": "Gazing into this returns you home",
         "chunks": [
             "MAGI",
             "CMI",
@@ -7754,7 +7754,7 @@
     {
         "id": 733,
         "answer": "CELLPHONE",
-        "clue": "Displays everything",
+        "clue": "PDA + Magic Mirror",
         "chunks": [
             "CEL",
             "LPH",
@@ -7776,7 +7776,7 @@
     {
         "id": 735,
         "answer": "PORTALGUN",
-        "clue": "Speedy-thing goes in, speedy-thing comes out",
+        "clue": "Portal 2 reference tool",
         "chunks": [
             "POR",
             "TALG",
@@ -7809,7 +7809,7 @@
     {
         "id": 738,
         "answer": "DEMONCONCH",
-        "clue": "If you listen closely, you can hear screams",
+        "clue": "Tool used to teleport to the Underworld",
         "chunks": [
             "DEM",
             "ONC",
@@ -7886,7 +7886,7 @@
     {
         "id": 745,
         "answer": "DIRTROD",
-        "clue": "Best way to move dirt",
+        "clue": "Tool that moves dirt",
         "chunks": [
             "DI",
             "RTR",
@@ -7897,7 +7897,7 @@
     {
         "id": 746,
         "answer": "BLOODMOON",
-        "clue": "Blood rains where creatures lurk",
+        "clue": "Event where water turns blood red",
         "chunks": [
             "BLOO",
             "DMO",
@@ -7908,7 +7908,7 @@
     {
         "id": 747,
         "answer": "FLAREGUN",
-        "clue": "Best item from gold chests",
+        "clue": "Tool that shoots light sources",
         "chunks": [
             "FLA",
             "REG",
@@ -7941,7 +7941,7 @@
     {
         "id": 750,
         "answer": "ALCHEMYTABLE",
-        "clue": "Potion brewing stand",
+        "clue": "Potion brewing crafting station",
         "chunks": [
             "ALCH",
             "EMYT",
@@ -7996,7 +7996,7 @@
     {
         "id": 755,
         "answer": "FLYMEAL",
-        "clue": "Best used for pranking townsfolk",
+        "clue": "Weapon that can damage NPCs",
         "chunks": [
             "FL",
             "YME",
@@ -8007,7 +8007,7 @@
     {
         "id": 756,
         "answer": "ICEBLADE",
-        "clue": "Sub zero's weapon of choice",
+        "clue": "Melee sword from ice chests",
         "chunks": [
             "IC",
             "EB",
@@ -8018,7 +8018,7 @@
     {
         "id": 757,
         "answer": "MURAMASA",
-        "clue": "Nights edge component",
+        "clue": "Night's Edge component",
         "chunks": [
             "MUR",
             "AMA",
@@ -8029,7 +8029,7 @@
     {
         "id": 758,
         "answer": "LIGHTSBANE",
-        "clue": "Nights edge component",
+        "clue": "Night's Edge component",
         "chunks": [
             "LIGH",
             "TSB",
@@ -8051,7 +8051,7 @@
     {
         "id": 760,
         "answer": "PHASEBLADE",
-        "clue": "The Force is strong with this one",
+        "clue": "Lightsaber reference",
         "chunks": [
             "PHA",
             "SEBL",
@@ -8062,7 +8062,7 @@
     {
         "id": 761,
         "answer": "STARFURY",
-        "clue": "Used to rain 3 stars per swing",
+        "clue": "Used to rain 3 stars on swing",
         "chunks": [
             "STA",
             "RF",
@@ -8084,7 +8084,7 @@
     {
         "id": 763,
         "answer": "VOLCANO",
-        "clue": "Nights edge component",
+        "clue": "Night's Edge component",
         "chunks": [
             "VO",
             "LCA",
@@ -8095,7 +8095,7 @@
     {
         "id": 764,
         "answer": "NIGHTSEDGE",
-        "clue": "Best pre-hardmode sword",
+        "clue": "Longest crafting tree, pre-hardmode weapon",
         "chunks": [
             "NIGH",
             "TSE",
@@ -8117,7 +8117,7 @@
     {
         "id": 766,
         "answer": "CUTLASS",
-        "clue": "\"Yarr! I'll run ye through with this\"",
+        "clue": "Melee weapon dropped from Pirates",
         "chunks": [
             "CU",
             "TLA",
@@ -8128,7 +8128,7 @@
     {
         "id": 767,
         "answer": "FROSTBRAND",
-        "clue": "Ice blade on crack",
+        "clue": "Weapon dropped by Ice Mimics",
         "chunks": [
             "FRO",
             "STB",
@@ -8139,7 +8139,7 @@
     {
         "id": 768,
         "answer": "BEAMSWORD",
-        "clue": "Hardmode enchanted sword",
+        "clue": "Only sword with bouncing projectiles",
         "chunks": [
             "BEA",
             "MSW",
@@ -8183,7 +8183,7 @@
     {
         "id": 772,
         "answer": "KEYBRAND",
-        "clue": "The Kingdom Key",
+        "clue": "Kingdom Hearts weapon reference",
         "chunks": [
             "KE",
             "YBR",
@@ -8194,7 +8194,7 @@
     {
         "id": 773,
         "answer": "TERRABLADE",
-        "clue": "Forged from the finest blades of light and darkness",
+        "clue": "Forged from the blades of light and darkness",
         "chunks": [
             "TERR",
             "ABL",
@@ -8205,7 +8205,7 @@
     {
         "id": 774,
         "answer": "MEOWMERE",
-        "clue": "Nyan cat",
+        "clue": "Nyan cat reference",
         "chunks": [
             "MEO",
             "WM",
@@ -8216,7 +8216,7 @@
     {
         "id": 775,
         "answer": "MALAISE",
-        "clue": "Corruption yoyo",
+        "clue": "Demonite yoyo",
         "chunks": [
             "MAL",
             "AI",
@@ -8238,7 +8238,7 @@
     {
         "id": 777,
         "answer": "HIVEFIVE",
-        "clue": "\"Why is this yoyo so sticky\"",
+        "clue": "Yoyo that releases bees",
         "chunks": [
             "HI",
             "VEF",
@@ -8326,7 +8326,7 @@
     {
         "id": 785,
         "answer": "DARKLANCE",
-        "clue": "The Night's Edge of spears",
+        "clue": "Spear found in shadow chests",
         "chunks": [
             "DA",
             "RKL",
@@ -8370,7 +8370,7 @@
     {
         "id": 789,
         "answer": "GUNGNIR",
-        "clue": "The spear of Odin",
+        "clue": "Spear referencing the spear of Odin",
         "chunks": [
             "GUN",
             "GN",
@@ -8392,7 +8392,7 @@
     {
         "id": 791,
         "answer": "NORTHPOLE",
-        "clue": "Reference to Santa's home location",
+        "clue": "Melee weapon dropped by Ice Queens",
         "chunks": [
             "NOR",
             "THP",
@@ -8403,7 +8403,7 @@
     {
         "id": 792,
         "answer": "SHROOMERANG",
-        "clue": "Dropped from spore bats",
+        "clue": "Trimarang component",
         "chunks": [
             "SHRO",
             "OMER",
@@ -8425,7 +8425,7 @@
     {
         "id": 794,
         "answer": "TRIMARANG",
-        "clue": "Three are better than one",
+        "clue": "Three Boomerangs are better than one",
         "chunks": [
             "TRI",
             "MAR",
@@ -8436,7 +8436,7 @@
     {
         "id": 795,
         "answer": "FLYINGKNIFE",
-        "clue": "Mind-controled bommerang",
+        "clue": "Cursor controlled bommerang",
         "chunks": [
             "FLY",
             "INGK",
@@ -8447,7 +8447,7 @@
     {
         "id": 796,
         "answer": "LIGHTDISC",
-        "clue": "Greetings, programs!",
+        "clue": "Boomerang reference from Tron",
         "chunks": [
             "LIG",
             "HTD",
@@ -8458,7 +8458,7 @@
     {
         "id": 797,
         "answer": "BALLOHURT",
-        "clue": "Corruption mace",
+        "clue": "Shadow Orb melee drop",
         "chunks": [
             "BAL",
             "LOH",
@@ -8469,7 +8469,7 @@
     {
         "id": 798,
         "answer": "THEMEATBALL",
-        "clue": "Crimson mace",
+        "clue": "Crimtane mace",
         "chunks": [
             "THEM",
             "EATB",
@@ -8502,7 +8502,7 @@
     {
         "id": 801,
         "answer": "CHAINKNIFE",
-        "clue": "\"GET OVER HERE!\"",
+        "clue": "Flail dropped from Cave Bats",
         "chunks": [
             "CHA",
             "INK",
@@ -8513,7 +8513,7 @@
     {
         "id": 802,
         "answer": "DAOOFPOW",
-        "clue": "Yin and yang",
+        "clue": "Yin and yang flail",
         "chunks": [
             "DAO",
             "OFP",
@@ -8524,7 +8524,7 @@
     {
         "id": 803,
         "answer": "KOCANNON",
-        "clue": "Knockout gun",
+        "clue": "Knockout flail",
         "chunks": [
             "KOC",
             "AN",
@@ -8557,7 +8557,7 @@
     {
         "id": 806,
         "answer": "ALETOSSER",
-        "clue": "69% chance to save ammo",
+        "clue": "Has a 69% chance to save ammo",
         "chunks": [
             "ALE",
             "TOS",
@@ -8568,7 +8568,7 @@
     {
         "id": 807,
         "answer": "NIMBLE",
-        "clue": "Modifier increasing speed",
+        "clue": "Speed increasing weapon modifer",
         "chunks": [
             "NI",
             "MB",
@@ -8667,7 +8667,7 @@
     {
         "id": 816,
         "answer": "EVENTIDE",
-        "clue": "Shoots twilight lances",
+        "clue": "Bow that shoots twilight lances",
         "chunks": [
             "EVE",
             "NTI",
@@ -8678,7 +8678,7 @@
     {
         "id": 817,
         "answer": "REDRYDER",
-        "clue": "\"Youll shoot your eye out\"",
+        "clue": "\"You'll shoot your eye out\"",
         "chunks": [
             "RED",
             "RYD",
@@ -8700,7 +8700,7 @@
     {
         "id": 819,
         "answer": "MINISHARK",
-        "clue": "Has it's own steam trading card",
+        "clue": "Weapon with it's own steam trading card",
         "chunks": [
             "MIN",
             "ISH",
@@ -8711,7 +8711,7 @@
     {
         "id": 820,
         "answer": "BOOMSTICK",
-        "clue": "\"See this? This, is my ...!\"",
+        "clue": "Ranged weapon found in Jungle chests",
         "chunks": [
             "BOO",
             "MST",
@@ -8722,7 +8722,7 @@
     {
         "id": 821,
         "answer": "HANDGUN",
-        "clue": "Dungeon chest gun",
+        "clue": "Ranged weapon found in Dungeon chests",
         "chunks": [
             "HAN",
             "DG",
@@ -8733,7 +8733,7 @@
     {
         "id": 822,
         "answer": "GATLIGATOR",
-        "clue": "Another gun based off an animal",
+        "clue": "Gun based off a reptile",
         "chunks": [
             "GAT",
             "LIG",
@@ -8755,7 +8755,7 @@
     {
         "id": 824,
         "answer": "SNIPERRIFLE",
-        "clue": "360 no scope!",
+        "clue": "\"360 no scope!\"",
         "chunks": [
             "SNI",
             "PERR",
@@ -8766,7 +8766,7 @@
     {
         "id": 825,
         "answer": "CELEBRATION",
-        "clue": "Used to be dropped by the Moon Lord",
+        "clue": "Launcher sold by the Party Girl",
         "chunks": [
             "CEL",
             "EBRA",
@@ -8777,7 +8777,7 @@
     {
         "id": 826,
         "answer": "GRENADE",
-        "clue": "\"Fire in the hole!\"",
+        "clue": "Explosive weapon sold by the Demolitionist",
         "chunks": [
             "GR",
             "EN",
@@ -8788,7 +8788,7 @@
     {
         "id": 827,
         "answer": "LIFEFORCE",
-        "clue": "Increases max life by 20%",
+        "clue": "Buff that increases max life by 20%",
         "chunks": [
             "LIF",
             "EFO",
@@ -8799,7 +8799,7 @@
     {
         "id": 828,
         "answer": "STICKY",
-        "clue": "Type of bomb or glowstick",
+        "clue": "Bomb or glowstick combined with gel",
         "chunks": [
             "ST",
             "IC",
@@ -8810,7 +8810,7 @@
     {
         "id": 829,
         "answer": "WITCHDOCTOR",
-        "clue": "\"Which doctor am I?\"",
+        "clue": "NPC that spawns after Queen Bee is defeated",
         "chunks": [
             "WITC",
             "HDOC",
@@ -8821,7 +8821,7 @@
     {
         "id": 830,
         "answer": "BOUNCY",
-        "clue": "Type of bomb or glowstick",
+        "clue": "Bomb or glowstick combined with pink gel",
         "chunks": [
             "BO",
             "UN",
@@ -8854,7 +8854,7 @@
     {
         "id": 833,
         "answer": "SPIKYBALL",
-        "clue": "Throwing weapon dropped by goblins",
+        "clue": "Throwing weapon dropped by Goblins",
         "chunks": [
             "SPIK",
             "YBA",
@@ -8865,7 +8865,7 @@
     {
         "id": 834,
         "answer": "ROTTENEGG",
-        "clue": "Weapon that can hurt NPCs",
+        "clue": "Throwable weapon that can hurt NPCs",
         "chunks": [
             "ROT",
             "TENE",
@@ -8953,7 +8953,7 @@
     {
         "id": 842,
         "answer": "DARTPISTOL",
-        "clue": "Crimson mimic range weapon",
+        "clue": "Crimson Mimic ranged weapon",
         "chunks": [
             "DAR",
             "TPI",
@@ -8964,7 +8964,7 @@
     {
         "id": 843,
         "answer": "DARTRIFLE",
-        "clue": "Corruption mimic range weapon",
+        "clue": "Corruption Mimic ranged weapon",
         "chunks": [
             "DA",
             "RTR",
@@ -8997,7 +8997,7 @@
     {
         "id": 846,
         "answer": "PIRANHAGUN",
-        "clue": "\"Oh yes! Fires live piranhas!\"",
+        "clue": "Ranged weapon that doesn't use ammo",
         "chunks": [
             "PIRA",
             "NHAG",
@@ -9019,11 +9019,11 @@
     {
         "id": 848,
         "answer": "VILETHORN",
-        "clue": "Summons a vile thorn",
+        "clue": "Shadow Orb mage drop",
         "chunks": [
-            "STIN",
-            "KSNA",
-            "PPER"
+            "VI",
+            "LETH",
+            "ORN"
         ],
         "chunkCount": 3
     },
@@ -9052,7 +9052,7 @@
     {
         "id": 851,
         "answer": "SKELETRON",
-        "clue": "Has a secret chippy variant",
+        "clue": "Boss with a secret Chippy variant",
         "chunks": [
             "SKEL",
             "ETR",
@@ -9085,7 +9085,7 @@
     {
         "id": 854,
         "answer": "FROSTSTAFF",
-        "clue": "Hardmode, gem staff type weapon",
+        "clue": "Staff dropped by Ice Mimics",
         "chunks": [
             "FRO",
             "STS",
@@ -9107,7 +9107,7 @@
     {
         "id": 856,
         "answer": "RAINBOWROD",
-        "clue": "Casts a controllable rainbow",
+        "clue": "Casts a controllable rainbow projectile",
         "chunks": [
             "RAI",
             "NBO",
@@ -9118,7 +9118,7 @@
     {
         "id": 857,
         "answer": "VENOMSTAFF",
-        "clue": "Upgraded poison staff",
+        "clue": "Upgraded Poison Staff",
         "chunks": [
             "VEN",
             "OMST",
@@ -9151,7 +9151,7 @@
     {
         "id": 860,
         "answer": "BETSYSWRATH",
-        "clue": "Splashes defense reducing miasma!",
+        "clue": "Betsy mage weapon drop",
         "chunks": [
             "BETS",
             "YSW",
@@ -9162,7 +9162,7 @@
     {
         "id": 861,
         "answer": "ZAPINATOR",
-        "clue": "It might be broken",
+        "clue": "Weapon previously used for dev testing",
         "chunks": [
             "ZA",
             "PINA",
@@ -9184,7 +9184,7 @@
     {
         "id": 863,
         "answer": "WASPGUN",
-        "clue": "Bee gun, but better",
+        "clue": "Upgrade from the Bee Gun",
         "chunks": [
             "WAS",
             "PG",
@@ -9217,7 +9217,7 @@
     {
         "id": 866,
         "answer": "RAINBOWGUN",
-        "clue": "\"TASTE THE RAINBOW MOTHER F***\"",
+        "clue": "Weapon that fires a lingering rainbow",
         "chunks": [
             "RAI",
             "NBOW",
@@ -9228,7 +9228,7 @@
     {
         "id": 867,
         "answer": "HEATRAY",
-        "clue": "Shoots a scorching ray of heat 'Oolaa!!'",
+        "clue": "Shoots a scorching ray of heat",
         "chunks": [
             "HE",
             "ATR",
@@ -9239,7 +9239,7 @@
     {
         "id": 868,
         "answer": "BUBBLEGUN",
-        "clue": "Shoots homing bubbles",
+        "clue": "Magic gun that shoots homing bubbles",
         "chunks": [
             "BUB",
             "BLEG",
@@ -9261,7 +9261,7 @@
     {
         "id": 870,
         "answer": "LUNARFLARE",
-        "clue": "Post Moon Lord tome",
+        "clue": "Post-Moon Lord tome",
         "chunks": [
             "LUN",
             "ARF",
@@ -9283,7 +9283,7 @@
     {
         "id": 872,
         "answer": "KILLINGDECK",
-        "clue": "A Dead Man's Hand for your opponents",
+        "clue": "Dead Cells magic weapon collab",
         "chunks": [
             "KIL",
             "LING",
@@ -9294,7 +9294,7 @@
     {
         "id": 873,
         "answer": "NIMBUSROD",
-        "clue": "Summons a rain cloud",
+        "clue": "Summons a damaging rain cloud",
         "chunks": [
             "NIMB",
             "USR",
@@ -9338,7 +9338,7 @@
     {
         "id": 877,
         "answer": "NIGHTGLOW",
-        "clue": "Mimics the Empress of Light's prismatic bolts",
+        "clue": "Empress of Light magic weapon drop",
         "chunks": [
             "NIG",
             "HTB",
@@ -9360,7 +9360,7 @@
     {
         "id": 879,
         "answer": "CATTIVA",
-        "clue": "Cat that mines and fights for you",
+        "clue": "Minion that mines and fights for you",
         "chunks": [
             "CA",
             "TTI",
@@ -9371,7 +9371,7 @@
     {
         "id": 880,
         "answer": "FOXPARKS",
-        "clue": "Also doubles as a flame thrower",
+        "clue": "Minion also doubling as a flame thrower",
         "chunks": [
             "FO",
             "XPA",
@@ -9382,7 +9382,7 @@
     {
         "id": 881,
         "answer": "ABIGAIL",
-        "clue": "Friendly ghost",
+        "clue": "Friendly ghost minion",
         "chunks": [
             "AB",
             "IGA",
@@ -9393,7 +9393,7 @@
     {
         "id": 882,
         "answer": "BLADESTAFF",
-        "clue": "Summons enchanted daggers",
+        "clue": "Summons Enchanted Daggers",
         "chunks": [
             "BLA",
             "DEST",
@@ -9404,7 +9404,7 @@
     {
         "id": 883,
         "answer": "OPTICSTAFF",
-        "clue": "Summons mini twins to fight for you",
+        "clue": "Summons mini Twins to fight for you",
         "chunks": [
             "OPT",
             "ICS",
@@ -9470,7 +9470,7 @@
     {
         "id": 889,
         "answer": "SOULSCOURGE",
-        "clue": "Lash with the remnants of evil incarnate'",
+        "clue": "Lash with the remnants of evil incarnate",
         "chunks": [
             "SOU",
             "LSCO",
@@ -9503,7 +9503,7 @@
     {
         "id": 892,
         "answer": "SNAPTHORN",
-        "clue": "Not to be confused with the thorn hook",
+        "clue": "Jungle whip",
         "chunks": [
             "SNA",
             "PTH",
@@ -9524,12 +9524,12 @@
     },
     {
         "id": 894,
-        "answer": "MURAMASA",
-        "clue": "Nights edge component",
+        "answer": "PLANTERBOX",
+        "clue": "Alternative to platforms for arenas",
         "chunks": [
-            "MURA",
-            "MA",
-            "SA"
+            "PLAN",
+            "TERB",
+            "OX"
         ],
         "chunkCount": 3
     },
@@ -9547,7 +9547,7 @@
     {
         "id": 896,
         "answer": "COOLWHIP",
-        "clue": "\"Let me have some of that\"",
+        "clue": "Whip based on a Family Guy sketch",
         "chunks": [
             "COO",
             "LW",
@@ -9558,7 +9558,7 @@
     {
         "id": 897,
         "answer": "DURENDAL",
-        "clue": "Wielded by paladin Roland of Charlemagne court",
+        "clue": "Whip of the paladin Roland of Charlemagne",
         "chunks": [
             "DU",
             "REN",
@@ -9569,7 +9569,7 @@
     {
         "id": 898,
         "answer": "DARKHARVEST",
-        "clue": "Gives 'Harvest Time' buff",
+        "clue": "Whip that grants the 'Harvest Time' buff",
         "chunks": [
             "DAR",
             "KHAR",
@@ -9580,7 +9580,7 @@
     {
         "id": 899,
         "answer": "MORNINGSTAR",
-        "clue": "Based on the vampire killer whip",
+        "clue": "Whip reference from Castlevania",
         "chunks": [
             "MORN",
             "INGS",
@@ -9591,7 +9591,7 @@
     {
         "id": 900,
         "answer": "ELECTRICEEL",
-        "clue": "Like trying to hold an eel",
+        "clue": "Whip dropped from Duke Fishron",
         "chunks": [
             "ELE",
             "CTRI",
@@ -9602,7 +9602,7 @@
     {
         "id": 901,
         "answer": "POSSESSION",
-        "clue": "8 whips in one!",
+        "clue": "Endgame whip dropped from Moon Lord",
         "chunks": [
             "POS",
             "SESS",
@@ -9613,7 +9613,7 @@
     {
         "id": 902,
         "answer": "MEGASHARK",
-        "clue": "Upgraded mini shark",
+        "clue": "Upgraded Mini Shark",
         "chunks": [
             "MEGA",
             "SHA",
@@ -9646,7 +9646,7 @@
     {
         "id": 905,
         "answer": "BANANARANG",
-        "clue": "Monkeys favorite weapon",
+        "clue": "A monkeys favorite weapon",
         "chunks": [
             "BANA",
             "NARA",
@@ -9657,7 +9657,7 @@
     {
         "id": 906,
         "answer": "DYNAMITE",
-        "clue": "\"We gon light it up, like its ...\"",
+        "clue": "Large explosive sold by the Demolitionist",
         "chunks": [
             "DYN",
             "AM",
@@ -9668,7 +9668,7 @@
     {
         "id": 907,
         "answer": "POWERBOMB",
-        "clue": "Non-pickaxe item that can break hardmode ores",
+        "clue": "Explosive that can break hardmode ores",
         "chunks": [
             "POW",
             "ERB",
@@ -9690,7 +9690,7 @@
     {
         "id": 909,
         "answer": "DRYBOMB",
-        "clue": "Removes an area of liquid",
+        "clue": "Explosive that removes liquid",
         "chunks": [
             "DR",
             "YB",
@@ -9701,7 +9701,7 @@
     {
         "id": 910,
         "answer": "HOLYWATER",
-        "clue": "Weapon that spreads hallow",
+        "clue": "Throwing weapon that spreads Hallow",
         "chunks": [
             "HO",
             "LYWA",
@@ -9712,7 +9712,7 @@
     {
         "id": 911,
         "answer": "UNHOLYWATER",
-        "clue": "Weapon that spreads corruption",
+        "clue": "Throwing weapon that spreads Corruption",
         "chunks": [
             "UNH",
             "OLYW",
@@ -9723,7 +9723,7 @@
     {
         "id": 912,
         "answer": "BLOODWATER",
-        "clue": "Weapon that spreads crimson",
+        "clue": "Throwing weapon that spreads Crimson",
         "chunks": [
             "BLOO",
             "DWA",
@@ -9822,7 +9822,7 @@
     {
         "id": 921,
         "answer": "GLADIATOR",
-        "clue": "Armor set dropped by hoplites",
+        "clue": "Armor set dropped by Hoplites",
         "chunks": [
             "GLA",
             "DIA",
@@ -9844,7 +9844,7 @@
     {
         "id": 923,
         "answer": "METEOR",
-        "clue": "Space gun armor set",
+        "clue": "Space Gun armor set",
         "chunks": [
             "ME",
             "TE",
@@ -9910,7 +9910,7 @@
     {
         "id": 929,
         "answer": "SQUIRE",
-        "clue": "Old one's army event armor set",
+        "clue": "Old One's Army event armor set",
         "chunks": [
             "SQ",
             "UI",
@@ -9921,7 +9921,7 @@
     {
         "id": 930,
         "answer": "HUNTRESS",
-        "clue": "Old one's army event armor set",
+        "clue": "Old One's Army event armor set",
         "chunks": [
             "HUN",
             "TRE",
@@ -9932,7 +9932,7 @@
     {
         "id": 931,
         "answer": "APPRENTICE",
-        "clue": "Old one's army event armor set",
+        "clue": "Old One's Army event armor set",
         "chunks": [
             "APP",
             "RENT",
