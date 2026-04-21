@@ -9976,7 +9976,7 @@
     {
         "id": 935,
         "answer": "REDRIDING",
-        "clue": "Old one's army event armor set",
+        "clue": "Old One's Army event armor set",
         "chunks": [
             "RE",
             "DRI",
@@ -9987,7 +9987,7 @@
     {
         "id": 936,
         "answer": "DARKARTIST",
-        "clue": "Old one's army event armor set",
+        "clue": "Old One's Army event armor set",
         "chunks": [
             "DAR",
             "KART",
@@ -10009,7 +10009,7 @@
     {
         "id": 938,
         "answer": "MAGICHAT",
-        "clue": "Mage hat sold by the traveling merchant",
+        "clue": "Mage hat sold by the Traveling Merchant",
         "chunks": [
             "MAG",
             "ICH",
@@ -10031,7 +10031,7 @@
     {
         "id": 940,
         "answer": "MYSTICROBE",
-        "clue": "Mage armor sold by the traveling merchant",
+        "clue": "Mage armor sold by the Traveling Merchant",
         "chunks": [
             "MYS",
             "TICR",
@@ -10053,7 +10053,7 @@
     {
         "id": 942,
         "answer": "GREENCAP",
-        "clue": "Vanity dropped by the Guide",
+        "clue": "Vanity item dropped by the Guide",
         "chunks": [
             "GRE",
             "ENC",
@@ -10064,7 +10064,7 @@
     {
         "id": 943,
         "answer": "DYEVAT",
-        "clue": "Crafting station",
+        "clue": "Crafting station for dyes",
         "chunks": [
             "DY",
             "EV",
@@ -10075,7 +10075,7 @@
     {
         "id": 944,
         "answer": "CRYSTALBALL",
-        "clue": "Used to predict your future",
+        "clue": "Crafting station granting a magic buff",
         "chunks": [
             "CRY",
             "STAL",
@@ -10086,7 +10086,7 @@
     {
         "id": 945,
         "answer": "AUTOHAMMER",
-        "clue": "Crafting station used to craft mini nukes",
+        "clue": "Crafting station used to shroomite bars",
         "chunks": [
             "AUT",
             "OHA",
@@ -10130,7 +10130,7 @@
     {
         "id": 949,
         "answer": "CANDELABRA",
-        "clue": "Placable light firniture",
+        "clue": "Placable light source firniture",
         "chunks": [
             "CAN",
             "DELA",
@@ -10163,7 +10163,7 @@
     {
         "id": 952,
         "answer": "PIGGYBANK",
-        "clue": "Equivalent to an ender chest",
+        "clue": "Used to access private storage",
         "chunks": [
             "PIG",
             "GYB",
@@ -10240,7 +10240,7 @@
     {
         "id": 959,
         "answer": "MANNEQUIN",
-        "clue": "Used to display armor",
+        "clue": "Firniture used to display armor",
         "chunks": [
             "FLES",
             "HSPI",
@@ -10284,7 +10284,7 @@
     {
         "id": 963,
         "answer": "DRUMSET",
-        "clue": "Badum, psh",
+        "clue": "Instrament bought from the Merchant",
         "chunks": [
             "DR",
             "UMS",
@@ -10339,7 +10339,7 @@
     {
         "id": 968,
         "answer": "PLATFORM",
-        "clue": "Building block of any arena",
+        "clue": "Choice building block of any arena",
         "chunks": [
             "PL",
             "ATF",
@@ -10372,7 +10372,7 @@
     {
         "id": 971,
         "answer": "PIGRONATA",
-        "clue": "Beat the shindig out of it!",
+        "clue": "Breaking this drops Bacon",
         "chunks": [
             "PIG",
             "RON",
@@ -10449,7 +10449,7 @@
     {
         "id": 978,
         "answer": "GARDENGNOME",
-        "clue": "Said to bring good fortune",
+        "clue": "Placeable that increases luck",
         "chunks": [
             "GARD",
             "ENGN",
@@ -10482,7 +10482,7 @@
     {
         "id": 981,
         "answer": "LIVINGFIRE",
-        "clue": "Placeable fire",
+        "clue": "Placeable fire blocks",
         "chunks": [
             "LIVI",
             "NGF",
@@ -10504,7 +10504,7 @@
     {
         "id": 983,
         "answer": "AMPHIBIAN",
-        "clue": "boots that increases jump speed",
+        "clue": "Boots that increases jump speed",
         "chunks": [
             "AMP",
             "HIB",
@@ -10515,7 +10515,7 @@
     {
         "id": 984,
         "answer": "DIVINGGEAR",
-        "clue": "Crafted from flippers and diving helmet",
+        "clue": "Flippers + Diving Helmet",
         "chunks": [
             "DIV",
             "INGG",
@@ -10537,7 +10537,7 @@
     {
         "id": 986,
         "answer": "FAIRYBOOTS",
-        "clue": "Accessory made from hermes and flower boots",
+        "clue": "Hermes Boots + Flower Boots",
         "chunks": [
             "FAI",
             "RYBO",
@@ -10559,7 +10559,7 @@
     {
         "id": 988,
         "answer": "FROGGEAR",
-        "clue": "Amphibian-powers accessory",
+        "clue": "Frog Webbing + Flipper",
         "chunks": [
             "FRO",
             "GG",
@@ -10581,7 +10581,7 @@
     {
         "id": 990,
         "answer": "FROSTSPARK",
-        "clue": "Boots made from lightning and ice skates",
+        "clue": "Lightning Boots + Ice Skates",
         "chunks": [
             "FRO",
             "STS",
@@ -10592,7 +10592,7 @@
     {
         "id": 991,
         "answer": "HELLFIRE",
-        "clue": "Flame walker + hermes boots",
+        "clue": "Upgrade to the OnFire! debuff",
         "chunks": [
             "HEL",
             "LFI",
@@ -10614,7 +10614,7 @@
     {
         "id": 993,
         "answer": "ICESKATES",
-        "clue": "Required for frostspark boots",
+        "clue": "Accessory that doesn't break thin ice",
         "chunks": [
             "IC",
             "ESKA",
@@ -10636,7 +10636,7 @@
     {
         "id": 995,
         "answer": "LIGHTNING",
-        "clue": "New event durring storms",
+        "clue": "Electric weather event during storms",
         "chunks": [
             "LIG",
             "HTN",
@@ -10647,7 +10647,7 @@
     {
         "id": 996,
         "answer": "MAGMASKULL",
-        "clue": "Component in lava waders",
+        "clue": "Component in Lava Waders",
         "chunks": [
             "MAG",
             "MASK",
@@ -10669,7 +10669,7 @@
     {
         "id": 998,
         "answer": "MOONSHELL",
-        "clue": "Component of the celestial shell",
+        "clue": "Component of the Celestial Shell",
         "chunks": [
             "MOO",
             "NSH",
@@ -10680,7 +10680,7 @@
     {
         "id": 999,
         "answer": "RAMRUNE",
-        "clue": "Grants a ground pound",
+        "clue": "Accessory granting a ground pound",
         "chunks": [
             "RA",
             "MRU",
@@ -10691,7 +10691,7 @@
     {
         "id": 1000,
         "answer": "ROCKETBOOTS",
-        "clue": "Component in spectre boots",
+        "clue": "Component in Spectre Boots",
         "chunks": [
             "ROCK",
             "ETBO",
@@ -10702,7 +10702,7 @@
     {
         "id": 1001,
         "answer": "SAILFISH",
-        "clue": "Hermes-type boots fished for",
+        "clue": "Hermes-type boots aquired from fishing",
         "chunks": [
             "SAI",
             "LFI",
@@ -10724,7 +10724,7 @@
     {
         "id": 1003,
         "answer": "STEPSTOOL",
-        "clue": "Best accessory for short kings",
+        "clue": "Accessory for short kings",
         "chunks": [
             "STE",
             "PST",
@@ -10735,7 +10735,7 @@
     {
         "id": 1004,
         "answer": "TERRASPARK",
-        "clue": "Best boots in the game",
+        "clue": "Frostspark Boots + Lava Waders",
         "chunks": [
             "TER",
             "RASP",
@@ -10757,7 +10757,7 @@
     {
         "id": 1006,
         "answer": "ANGELWINGS",
-        "clue": "Wings crafted from souls of light",
+        "clue": "Wings crafted from Souls of Light",
         "chunks": [
             "ANG",
             "ELW",
@@ -10768,7 +10768,7 @@
     {
         "id": 1007,
         "answer": "LEAFWINGS",
-        "clue": "Buyable wings",
+        "clue": "Wings that the Witch Doctor sells",
         "chunks": [
             "LEA",
             "FW",
@@ -10790,7 +10790,7 @@
     {
         "id": 1009,
         "answer": "BEEWINGS",
-        "clue": "Wings aquired from moss hornets",
+        "clue": "Wings aquired from Moss Hornets",
         "chunks": [
             "BE",
             "EWI",
@@ -10801,7 +10801,7 @@
     {
         "id": 1010,
         "answer": "BATWINGS",
-        "clue": "Wings aquired from vampires",
+        "clue": "Wings aquired from Vampires",
         "chunks": [
             "BATW",
             "IN",
@@ -10812,7 +10812,7 @@
     {
         "id": 1011,
         "answer": "FLAMEWINGS",
-        "clue": "Wings aquired from red devils",
+        "clue": "Wings aquired from Red Devils",
         "chunks": [
             "FLA",
             "MEW",
@@ -10845,7 +10845,7 @@
     {
         "id": 1014,
         "answer": "STEAMPUNK",
-        "clue": "Buyable wings",
+        "clue": "Wings sold by the Steampunker",
         "chunks": [
             "STEA",
             "MPU",
@@ -10944,7 +10944,7 @@
     {
         "id": 1023,
         "answer": "NATURESGIFT",
-        "clue": "Background object accessory",
+        "clue": "Naturally grown accessory",
         "chunks": [
             "NATU",
             "RESG",
@@ -10988,7 +10988,7 @@
     {
         "id": 1027,
         "answer": "FROZENSHIELD",
-        "clue": "Crafted from the frozen turtle shell",
+        "clue": "Frozen Turtle Shell + Paladin's Shield",
         "chunks": [
             "FROZ",
             "ENSH",
@@ -10999,7 +10999,7 @@
     {
         "id": 1028,
         "answer": "HEROSHIELD",
-        "clue": "Crafted from the flesh knuckles",
+        "clue": "Flesh Knuckles + Paladin's Shield",
         "chunks": [
             "HER",
             "OSHI",
@@ -11010,7 +11010,7 @@
     {
         "id": 1029,
         "answer": "MAGICQUIVER",
-        "clue": "Accessory that boosts arrows stats",
+        "clue": "Accessory that boosts arrow stats",
         "chunks": [
             "MAGI",
             "CQU",
@@ -11032,7 +11032,7 @@
     {
         "id": 1031,
         "answer": "MAGMASTONE",
-        "clue": "Inflicts hellfire on melee hits",
+        "clue": "Inflicts Hellfire on melee hits",
         "chunks": [
             "MAG",
             "MAST",
@@ -11043,7 +11043,7 @@
     {
         "id": 1032,
         "answer": "MOONSTONE",
-        "clue": "Boosts stats during the night",
+        "clue": "Accessory boosting stats during night",
         "chunks": [
             "MO",
             "ONST",
@@ -11054,7 +11054,7 @@
     {
         "id": 1033,
         "answer": "MOLTENQUIVER",
-        "clue": "Converts arrows to flaming arrows",
+        "clue": "Converts arrows into flaming arrows",
         "chunks": [
             "MOLT",
             "ENQU",
@@ -11076,7 +11076,7 @@
     {
         "id": 1035,
         "answer": "SUNSTONE",
-        "clue": "Boosts stats during the day",
+        "clue": "Accessory boosting stats during the day",
         "chunks": [
             "SU",
             "NSTO",
@@ -11098,7 +11098,7 @@
     {
         "id": 1037,
         "answer": "MONKSBELT",
-        "clue": "Old one's army event accessory",
+        "clue": "Old One's Army event accessory",
         "chunks": [
             "MON",
             "KSB",
@@ -11109,7 +11109,7 @@
     {
         "id": 1038,
         "answer": "FASTCLOCK",
-        "clue": "Provides immunity to slow",
+        "clue": "Provides immunity to Slow",
         "chunks": [
             "SPIK",
             "YSNA",
@@ -11120,7 +11120,7 @@
     {
         "id": 1039,
         "answer": "TRIFOLDMAP",
-        "clue": "Provides immunity to confused",
+        "clue": "Provides immunity to Confused",
         "chunks": [
             "TRIF",
             "OL",
@@ -11153,7 +11153,7 @@
     {
         "id": 1042,
         "answer": "ANKHCHARM",
-        "clue": "Immune to most debuffs",
+        "clue": "Grants immunity to most debuffs",
         "chunks": [
             "AN",
             "KHCH",
@@ -11164,7 +11164,7 @@
     {
         "id": 1043,
         "answer": "HANDWARMER",
-        "clue": "Provides immunity to chilled/frozen",
+        "clue": "Provides immunity to Chilled/Frozen",
         "chunks": [
             "HAN",
             "DWAR",
@@ -11175,7 +11175,7 @@
     {
         "id": 1044,
         "answer": "POCKETMIRROR",
-        "clue": "Provides immunity to stoned",
+        "clue": "Provides immunity to Stoned",
         "chunks": [
             "POCK",
             "ETMI",
@@ -11241,7 +11241,7 @@
     {
         "id": 1050,
         "answer": "COINRING",
-        "clue": "Component in Greedy Ring",
+        "clue": "Gold Ring + Lucky Coin",
         "chunks": [
             "COI",
             "NRI",
@@ -11252,7 +11252,7 @@
     {
         "id": 1051,
         "answer": "FLOWER",
-        "clue": "Boots that cause grass to grow",
+        "clue": "Boots that causes grass to grow",
         "chunks": [
             "FL",
             "OW",
@@ -11274,7 +11274,7 @@
     {
         "id": 1053,
         "answer": "GREEDYRING",
-        "clue": "Couponers dream accessory",
+        "clue": "Coin Ring + Discount Card",
         "chunks": [
             "GRE",
             "EDY",
@@ -11296,7 +11296,7 @@
     {
         "id": 1055,
         "answer": "ECHOCHAMBER",
-        "clue": "Monilith that reveals echo blocks",
+        "clue": "Monilith that reveals Echo blocks",
         "chunks": [
             "ECHO",
             "CHA",
@@ -11307,7 +11307,7 @@
     {
         "id": 1056,
         "answer": "JUNGLEROSE",
-        "clue": "Randomly grown jungle vanity item",
+        "clue": "Randomly grown Jungle vanity item",
         "chunks": [
             "JUN",
             "GLER",
@@ -11460,8 +11460,8 @@
     },
     {
         "id": 1070,
-        "answer": "GOBLINMUMMY",
-        "clue": "Common enemy",
+        "answer": "BOOSTER",
+        "clue": "Power-up dropped wearing Nebula Armor",
         "chunks": [
             "GOBL",
             "INMU",
@@ -11494,7 +11494,7 @@
     {
         "id": 1073,
         "answer": "BONEHELM",
-        "clue": "Summons shadow hands",
+        "clue": "Summons friendly shadow hands",
         "chunks": [
             "BO",
             "NEHE",
@@ -11527,7 +11527,7 @@
     {
         "id": 1076,
         "answer": "LESSER",
-        "clue": "Weakest healing potion",
+        "clue": "Weakest type of healing potion",
         "chunks": [
             "LE",
             "SS",
@@ -11549,7 +11549,7 @@
     {
         "id": 1078,
         "answer": "FLIPPER",
-        "clue": "Accessory that grants swimming underwater",
+        "clue": "Accessory that allows swimming",
         "chunks": [
             "FL",
             "IP",
@@ -11626,7 +11626,7 @@
     {
         "id": 1085,
         "answer": "REDPOTION",
-        "clue": "Only for those who are worthy",
+        "clue": "Potion only for those who are worthy",
         "chunks": [
             "REDP",
             "PTI",
@@ -11648,7 +11648,7 @@
     {
         "id": 1087,
         "answer": "DANGERSENSE",
-        "clue": "Highlights traps",
+        "clue": "Potion that highlights traps",
         "chunks": [
             "DAN",
             "GERS",
@@ -11659,7 +11659,7 @@
     {
         "id": 1088,
         "answer": "FEATHERFALL",
-        "clue": "Allows slow falling",
+        "clue": "Buff allowing slow falling",
         "chunks": [
             "FEAT",
             "HER",
@@ -11670,7 +11670,7 @@
     {
         "id": 1089,
         "answer": "GRAVITATION",
-        "clue": "Allows the player to invert gravity",
+        "clue": "Buff that allows reversing gravity",
         "chunks": [
             "GRA",
             "VITA",
@@ -11681,7 +11681,7 @@
     {
         "id": 1090,
         "answer": "INVISIBILITY",
-        "clue": "Attacking will remove this buff",
+        "clue": "Buff that gets removed when attacking",
         "chunks": [
             "INVI",
             "SIBI",
@@ -11703,7 +11703,7 @@
     {
         "id": 1092,
         "answer": "SPELUNKER",
-        "clue": "Highlights ores and treasures",
+        "clue": "Buff that highlights ores and treasures",
         "chunks": [
             "SPL",
             "ELU",
@@ -11714,7 +11714,7 @@
     {
         "id": 1093,
         "answer": "SUMMONING",
-        "clue": "Buff increasing max minions",
+        "clue": "Buff increasing number of max minions",
         "chunks": [
             "SUM",
             "MONI",
@@ -11736,7 +11736,7 @@
     {
         "id": 1095,
         "answer": "BEETLEMIGHT",
-        "clue": "Buff gained from beetle armor",
+        "clue": "Buff gained from Beetle Armor",
         "chunks": [
             "BEET",
             "LEMI",
@@ -11769,7 +11769,7 @@
     {
         "id": 1098,
         "answer": "ICEBARRIER",
-        "clue": "Buff gained from the Frozen Turtle Shell",
+        "clue": "Frozen Turtle Shell buff",
         "chunks": [
             "ICE",
             "BAR",
@@ -11791,7 +11791,7 @@
     {
         "id": 1100,
         "answer": "LEAFCRYSTAL",
-        "clue": "Buff gained from Chlorophyte armor",
+        "clue": "Buff gained from Chlorophyte Armor",
         "chunks": [
             "LEA",
             "FCRY",
@@ -11813,7 +11813,7 @@
     {
         "id": 1102,
         "answer": "SOLARBLAZE",
-        "clue": "Buff gained from Solar armor",
+        "clue": "Buff gained from Solar Armor",
         "chunks": [
             "TOXI",
             "CWYV",
@@ -11846,7 +11846,7 @@
     {
         "id": 1105,
         "answer": "STRATEGIST",
-        "clue": "Buff gained from the war table",
+        "clue": "Buff gained from the War Table",
         "chunks": [
             "STR",
             "ATE",
@@ -11857,7 +11857,7 @@
     {
         "id": 1106,
         "answer": "SUGARRUSH",
-        "clue": "Buff gained from the slice of cake",
+        "clue": "Buff gained from the Slice of Cake",
         "chunks": [
             "SUG",
             "ARR",
@@ -11890,7 +11890,7 @@
     {
         "id": 1109,
         "answer": "BABYFINCH",
-        "clue": "Minion summoned from the finch staff",
+        "clue": "Minion summoned from the Finch Staff",
         "chunks": [
             "BAB",
             "YFI",
@@ -11901,7 +11901,7 @@
     {
         "id": 1110,
         "answer": "BABYSLIME",
-        "clue": "Minion summoned from the slime staff",
+        "clue": "Minion summoned from the Slime Staff",
         "chunks": [
             "BAB",
             "YSL",
@@ -11912,7 +11912,7 @@
     {
         "id": 1111,
         "answer": "DEADLYSPHERE",
-        "clue": "Minion that cycles between 3 forms",
+        "clue": "Minion that has 3 different variants",
         "chunks": [
             "DEAD",
             "LYSP",
@@ -11978,7 +11978,7 @@
     {
         "id": 1117,
         "answer": "LAVAWADERS",
-        "clue": "Terraspark boots component",
+        "clue": "Terraspark Boots component",
         "chunks": [
             "LAVA",
             "WADE",
@@ -12000,7 +12000,7 @@
     {
         "id": 1119,
         "answer": "VAMPIREFROG",
-        "clue": "Minion aquired from the blood moon",
+        "clue": "Minion aquired from the Blood Moon",
         "chunks": [
             "VAMP",
             "IREF",
@@ -12011,7 +12011,7 @@
     {
         "id": 1120,
         "answer": "BASILISK",
-        "clue": "Hardmode underground Desert enemy",
+        "clue": "Hardmode Underground Desert enemy",
         "chunks": [
             "BAS",
             "ILI",
@@ -12022,7 +12022,7 @@
     {
         "id": 1121,
         "answer": "SQUIRESHIELD",
-        "clue": "Old one's army event accessory",
+        "clue": "Old One's Army event accessory",
         "chunks": [
             "SQUI",
             "RESH",
@@ -12286,7 +12286,7 @@
     {
         "id": 1145,
         "answer": "FUZZYCARROT",
-        "clue": "Angler quest reward",
+        "clue": "Angler mount quest reward",
         "chunks": [
             "FUZ",
             "ZYCA",
