@@ -12363,7 +12363,7 @@
     {
         "id": 1152,
         "answer": "HARDYSADDLE",
-        "clue": "Angler quest reward",
+        "clue": "Angler quest mount reward",
         "chunks": [
             "HAR",
             "DYSA",
@@ -12462,7 +12462,7 @@
     {
         "id": 1161,
         "answer": "FERTILIZER",
-        "clue": "Causes saplings to grow into trees",
+        "clue": "Causes saplings to grow",
         "chunks": [
             "FERT",
             "ILI",
@@ -12495,7 +12495,7 @@
     {
         "id": 1164,
         "answer": "FROSTBURN",
-        "clue": "Blue flame debuff",
+        "clue": "Blue flame looking debuff",
         "chunks": [
             "FROS",
             "TBU",
@@ -12660,7 +12660,7 @@
     {
         "id": 1179,
         "answer": "MOSSHORNET",
-        "clue": "Hardmode underground jungle enemy",
+        "clue": "Hardmode underground Jungle enemy",
         "chunks": [
             "MOS",
             "SHO",
@@ -12682,7 +12682,7 @@
     {
         "id": 1181,
         "answer": "WATERWALKING",
-        "clue": "Buff allowing you to run on liquids",
+        "clue": "Buff allowing you to stand on liquids",
         "chunks": [
             "WATE",
             "RWAL",
@@ -12737,7 +12737,7 @@
     {
         "id": 1186,
         "answer": "BLUEJAY",
-        "clue": "FLying forest critter",
+        "clue": "Flying forest critter",
         "chunks": [
             "BL",
             "UE",
@@ -12748,7 +12748,7 @@
     {
         "id": 1187,
         "answer": "CARDINAL",
-        "clue": "FLying forest critter",
+        "clue": "Flying forest critter",
         "chunks": [
             "CAR",
             "DIN",
@@ -12781,7 +12781,7 @@
     {
         "id": 1190,
         "answer": "MALLARD",
-        "clue": "Flying surface critter",
+        "clue": "Flying Surface critter",
         "chunks": [
             "MA",
             "LL",
@@ -12836,7 +12836,7 @@
     {
         "id": 1195,
         "answer": "GOLDFISH",
-        "clue": "Walk on land during the rain",
+        "clue": "Critter that walks on land during the rain",
         "chunks": [
             "GOL",
             "DFI",
@@ -12858,7 +12858,7 @@
     {
         "id": 1197,
         "answer": "FROSTARMOR",
-        "clue": "Gives melee and ranged attacks frostburn",
+        "clue": "Gives melee and ranged attacks Frostburn",
         "chunks": [
             "FROS",
             "TARM",
@@ -12869,7 +12869,7 @@
     {
         "id": 1198,
         "answer": "PUPFISH",
-        "clue": "Swimming desert critter",
+        "clue": "Swimming Desert critter",
         "chunks": [
             "PU",
             "PFI",
@@ -12891,7 +12891,7 @@
     {
         "id": 1200,
         "answer": "GLOWINGSNAIL",
-        "clue": "Underground mushroom biome critter",
+        "clue": "Glowing Mushroom Biome critter",
         "chunks": [
             "GLOW",
             "INGS",
@@ -12957,7 +12957,7 @@
     {
         "id": 1206,
         "answer": "REGENERATION",
-        "clue": "Increases life gained per second",
+        "clue": "Increased life gained per second buff",
         "chunks": [
             "REGE",
             "NERA",
@@ -13034,7 +13034,7 @@
     {
         "id": 1213,
         "answer": "GOODIEBAG",
-        "clue": "Droped from any enemy durring Halloween",
+        "clue": "Halloween-specific drop from enemies",
         "chunks": [
             "GOO",
             "DIE",
@@ -13056,7 +13056,7 @@
     {
         "id": 1215,
         "answer": "STINKPOTION",
-        "clue": "Inflicts the stinky debuff",
+        "clue": "Inflicts the Stinky debuff",
         "chunks": [
             "STI",
             "NKPO",
@@ -13100,7 +13100,7 @@
     {
         "id": 1219,
         "answer": "BEACHBALL",
-        "clue": "Common tool to reach projectile limit",
+        "clue": "Common tool to reach the projectile limit",
         "chunks": [
             "BEA",
             "CHB",
@@ -13133,7 +13133,7 @@
     {
         "id": 1222,
         "answer": "MOONGLOBE",
-        "clue": "Changes the style of the moon",
+        "clue": "Changes the style of the Moon",
         "chunks": [
             "MOO",
             "NGL",
@@ -13177,7 +13177,7 @@
     {
         "id": 1226,
         "answer": "GOLDENKEY",
-        "clue": "Used to open dungeon chests",
+        "clue": "Used to open Dungeon chests",
         "chunks": [
             "GOL",
             "DENK",
@@ -13199,7 +13199,7 @@
     {
         "id": 1228,
         "answer": "BIOMEKEY",
-        "clue": "Unlocks special dungeon chests",
+        "clue": "Unlocks biome Dungeon chests",
         "chunks": [
             "BI",
             "OME",
@@ -13210,7 +13210,7 @@
     {
         "id": 1229,
         "answer": "DESERTFOSSIL",
-        "clue": "Used to produce sturdy fossils",
+        "clue": "Used to extract Sturdy Fossils",
         "chunks": [
             "DESE",
             "RTFO",
@@ -13232,7 +13232,7 @@
     {
         "id": 1231,
         "answer": "KINGSTATUE",
-        "clue": "Can teleport random male NPC",
+        "clue": "Can teleport a random male NPC",
         "chunks": [
             "KIN",
             "GST",
@@ -13243,7 +13243,7 @@
     {
         "id": 1232,
         "answer": "QUEENSTATUE",
-        "clue": "Can teleport random female NPC",
+        "clue": "Can teleport a random female NPC",
         "chunks": [
             "QUE",
             "ENST",
@@ -13353,7 +13353,7 @@
     {
         "id": 1242,
         "answer": "POOBOULDER",
-        "clue": "Boulder that inflicts the stinky debuff",
+        "clue": "Boulder that inflicts the Stinky debuff",
         "chunks": [
             "POOB",
             "OULD",
@@ -13419,7 +13419,7 @@
     {
         "id": 1248,
         "answer": "DEADMANS",
-        "clue": "Trapped chest's name",
+        "clue": "Trapped chest prefix",
         "chunks": [
             "DE",
             "ADM",
@@ -13430,7 +13430,7 @@
     {
         "id": 1249,
         "answer": "DEMONSCYTHE",
-        "clue": "Tome dropped from demons",
+        "clue": "Tome dropped from Demons",
         "chunks": [
             "DEMO",
             "NSCY",
@@ -13507,7 +13507,7 @@
     {
         "id": 1256,
         "answer": "FOGMACHINE",
-        "clue": "Used to create a cloud of fog",
+        "clue": "Furniture used to create a cloud of fog",
         "chunks": [
             "FO",
             "GMAC",
@@ -13518,7 +13518,7 @@
     {
         "id": 1257,
         "answer": "ACTUATIONROD",
-        "clue": "Switches the states of actuators",
+        "clue": "Tool that switches the states of actuators",
         "chunks": [
             "ACTU",
             "ATIO",
@@ -13628,7 +13628,7 @@
     {
         "id": 1267,
         "answer": "CHESTER",
-        "clue": "Pet that acts like a mobile piggy bank",
+        "clue": "Pet that can open your private storage",
         "chunks": [
             "CH",
             "EST",
@@ -13650,7 +13650,7 @@
     {
         "id": 1269,
         "answer": "GLOMMER",
-        "clue": "Pet dropped by derplings",
+        "clue": "Pet dropped by Derplings",
         "chunks": [
             "GLO",
             "MM",
@@ -13826,7 +13826,7 @@
     {
         "id": 1285,
         "answer": "CACTUSARMOR",
-        "clue": "Armor that grants thorns",
+        "clue": "Armor that grants Thorns",
         "chunks": [
             "CACT",
             "USAR",
