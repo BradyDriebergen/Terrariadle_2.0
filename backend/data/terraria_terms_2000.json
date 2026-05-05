@@ -16785,7 +16785,7 @@
     {
         "id": 1554,
         "answer": "CORRUPTOR",
-        "clue": "Flying hardmode corruption enemy",
+        "clue": "Flying hardmode Corruption enemy",
         "chunks": [
             "COR",
             "RU",
@@ -16807,7 +16807,7 @@
     {
         "id": 1556,
         "answer": "WORLDFEEDER",
-        "clue": "Hardmode corruption worm enemy",
+        "clue": "Hardmode Corruption worm enemy",
         "chunks": [
             "WORL",
             "DEAT",
@@ -17159,7 +17159,7 @@
     {
         "id": 1588,
         "answer": "SPIKEBALL",
-        "clue": "Invincible dungeon enemy",
+        "clue": "Invincible Dungeon enemy",
         "chunks": [
             "SPIK",
             "EBA",
@@ -17170,7 +17170,7 @@
     {
         "id": 1589,
         "answer": "BLAZINGWHEEL",
-        "clue": "Invincible dungeon enemy",
+        "clue": "Invincible Dungeon enemy",
         "chunks": [
             "BLAZ",
             "INGW",
@@ -17247,7 +17247,7 @@
     {
         "id": 1596,
         "answer": "BBQRIBS",
-        "clue": "Food dropped by dungeon enemies",
+        "clue": "Food dropped by Dungeon enemies",
         "chunks": [
             "BB",
             "QR",
@@ -17335,7 +17335,7 @@
     {
         "id": 1604,
         "answer": "LAVALAMP",
-        "clue": "Light bought from the Party Girl",
+        "clue": "Lamp sold from the Party Girl",
         "chunks": [
             "LAV",
             "ALA",
@@ -17346,7 +17346,7 @@
     {
         "id": 1605,
         "answer": "LAVASHARK",
-        "clue": "Mount summoned by the superheated blood",
+        "clue": "Mount summoned by the Superheated Blood",
         "chunks": [
             "LAV",
             "ASH",
@@ -17357,7 +17357,7 @@
     {
         "id": 1606,
         "answer": "PLASMALAMP",
-        "clue": "Light bought from the Party Girl",
+        "clue": "Lamp bought from the Party Girl",
         "chunks": [
             "PLA",
             "SMAL",
@@ -17379,7 +17379,7 @@
     {
         "id": 1608,
         "answer": "WORKBENCH",
-        "clue": "Equivalent to a crafting table",
+        "clue": "Equivalent to a Minecraft crafting table",
         "chunks": [
             "WOR",
             "KBEN",
@@ -17434,7 +17434,7 @@
     {
         "id": 1613,
         "answer": "ARMSDEALER",
-        "clue": "NPC who likes the nurse",
+        "clue": "NPC who likes the Nurse",
         "chunks": [
             "ARM",
             "SDE",
@@ -17445,7 +17445,7 @@
     {
         "id": 1614,
         "answer": "BLOODSQUID",
-        "clue": "Enemy fished for during Blood Moon",
+        "clue": "Enemy fished for during the Blood Moon",
         "chunks": [
             "BLO",
             "ODSQ",
@@ -17456,7 +17456,7 @@
     {
         "id": 1615,
         "answer": "BLOODEEL",
-        "clue": "Enemy fished for during Blood Moon",
+        "clue": "Enemy fished for during the Blood Moon",
         "chunks": [
             "BL",
             "OO",
@@ -17852,7 +17852,7 @@
     {
         "id": 1651,
         "answer": "LUNAREVENT",
-        "clue": "Event with four different pillars",
+        "clue": "Event with four pillars",
         "chunks": [
             "LUN",
             "AREV",
@@ -17863,7 +17863,7 @@
     {
         "id": 1652,
         "answer": "HONEYCOMB",
-        "clue": "Releases bees when hurt accessory",
+        "clue": "Releases Bees when hurt accessory",
         "chunks": [
             "HONE",
             "YCO",
@@ -18028,7 +18028,7 @@
     {
         "id": 1667,
         "answer": "RECALLPOTION",
-        "clue": "Subsitute to the Magic Mirror",
+        "clue": "Subsitute for the Magic Mirror",
         "chunks": [
             "RECA",
             "LLPO",
@@ -18149,7 +18149,7 @@
     {
         "id": 1678,
         "answer": "FROZENWINGS",
-        "clue": "Crafted from a Ice Feather",
+        "clue": "Crafted from an Ice Feather",
         "chunks": [
             "FROZ",
             "ENWI",
@@ -18226,7 +18226,7 @@
     {
         "id": 1685,
         "answer": "FLOWINVADER",
-        "clue": "Stardust enemy that shoots on death",
+        "clue": "Stardust enemy that shoots you on death",
         "chunks": [
             "FLO",
             "WINV",
@@ -18248,7 +18248,7 @@
     {
         "id": 1687,
         "answer": "STARGAZER",
-        "clue": "Stardust enemy that shoots lasers",
+        "clue": "Stardust enemy that shoots laser beams",
         "chunks": [
             "STA",
             "RGA",
@@ -18292,7 +18292,7 @@
     {
         "id": 1691,
         "answer": "TESLATURRET",
-        "clue": "Enemy placed by Martian Engineers",
+        "clue": "Sentry placed by Martian Engineers",
         "chunks": [
             "TES",
             "LATU",
@@ -18589,7 +18589,7 @@
     {
         "id": 1718,
         "answer": "SWAMPTHING",
-        "clue": "Green Solar Eclipse enemy",
+        "clue": "Mossy Solar Eclipse enemy",
         "chunks": [
             "SWA",
             "MPT",
@@ -18633,7 +18633,7 @@
     {
         "id": 1722,
         "answer": "DRMANFLY",
-        "clue": "Solar Eclipse Scientist enemy",
+        "clue": "Solar Eclipse scientist enemy",
         "chunks": [
             "DRM",
             "ANF",
@@ -18699,7 +18699,7 @@
     {
         "id": 1728,
         "answer": "SKYBLOCK",
-        "clue": "FLoating island seed",
+        "clue": "Floating island seed",
         "chunks": [
             "SK",
             "YBL",
@@ -19183,7 +19183,7 @@
     {
         "id": 1772,
         "answer": "SPIDERNEST",
-        "clue": "Mini biome where the stylist is found",
+        "clue": "Mini biome where the Stylist is found",
         "chunks": [
             "SPI",
             "DERN",
@@ -19348,7 +19348,7 @@
     {
         "id": 1787,
         "answer": "HARDMODE",
-        "clue": "World after the WoF is defeated",
+        "clue": "World difficulty after the WoF is defeated",
         "chunks": [
             "HAR",
             "DM",
@@ -19777,7 +19777,7 @@
     {
         "id": 1826,
         "answer": "FOSSILSLIME",
-        "clue": "Slime found in skyblock deserts",
+        "clue": "Slime found in Skyblock Deserts",
         "chunks": [
             "FOSS",
             "ILSL",
@@ -19821,7 +19821,7 @@
     {
         "id": 1830,
         "answer": "HEARTSLIME",
-        "clue": "Slime found in skyblock caverns",
+        "clue": "Slime found in Skyblock Caverns",
         "chunks": [
             "HEA",
             "RTS",
@@ -19865,7 +19865,7 @@
     {
         "id": 1834,
         "answer": "MOSSZOMBIE",
-        "clue": "Graveyard zombie",
+        "clue": "Graveyard Zombie",
         "chunks": [
             "MOS",
             "SZO",
@@ -20393,7 +20393,7 @@
     {
         "id": 1882,
         "answer": "PEARLSTONE",
-        "clue": "Hallow Stone",
+        "clue": "Hallow stone",
         "chunks": [
             "PEA",
             "RLST",
@@ -20503,7 +20503,7 @@
     {
         "id": 1892,
         "answer": "CRACKED",
-        "clue": "Weak type of Dungeon brick",
+        "clue": "Weak Dungeon brick prefix",
         "chunks": [
             "CR",
             "AC",
@@ -20646,7 +20646,7 @@
     {
         "id": 1905,
         "answer": "STARWRATH",
-        "clue": "Zenith sword component",
+        "clue": "Cosmic Zenith sword component",
         "chunks": [
             "STAR",
             "WRA",
@@ -20657,7 +20657,7 @@
     {
         "id": 1906,
         "answer": "HEARTBREAKER",
-        "clue": "Achievement for breaking a heart crystal",
+        "clue": "Achievement for breaking a Heart Crystal",
         "chunks": [
             "HEAR",
             "TBRE",
@@ -20679,7 +20679,7 @@
     {
         "id": 1908,
         "answer": "IAMLOOT",
-        "clue": "Achievement for making a mana crystal",
+        "clue": "Achievement for making a Mana Crystal",
         "chunks": [
             "IAM",
             "LO",
@@ -20734,7 +20734,7 @@
     {
         "id": 1913,
         "answer": "DUNGEONHEIST",
-        "clue": "Achievement for opening a locked chest",
+        "clue": "Achievement for opening a Locked Chest",
         "chunks": [
             "DUNG",
             "EONH",
@@ -20767,7 +20767,7 @@
     {
         "id": 1916,
         "answer": "BEGONEEVIL",
-        "clue": "Achievement for breaking a demon altar",
+        "clue": "Achievement for breaking a Demon Altar",
         "chunks": [
             "BEGO",
             "NEE",
@@ -20920,12 +20920,12 @@
     },
     {
         "id": 1930,
-        "answer": "SILVERBIRD",
-        "clue": "Hostile creature",
+        "answer": "MINECRAFT",
+        "clue": "Game that Terraria is compared to",
         "chunks": [
-            "SILV",
-            "ERBI",
-            "RD"
+            "MIN",
+            "ECR",
+            "AFT"
         ],
         "chunkCount": 3
     },
@@ -20954,7 +20954,7 @@
     {
         "id": 1933,
         "answer": "KNOCKBACK",
-        "clue": "Stat determining entinty repelled",
+        "clue": "Stat determining thrown distance of enemies",
         "chunks": [
             "PINK",
             "SHA",
@@ -21229,7 +21229,7 @@
     {
         "id": 1958,
         "answer": "FORCEFUL",
-        "clue": "Knockback weapon modifier",
+        "clue": "Knockback increasing weapon modifier",
         "chunks": [
             "FOR",
             "CEF",
@@ -21240,7 +21240,7 @@
     {
         "id": 1959,
         "answer": "STRONG",
-        "clue": "Knockback weapon modifier",
+        "clue": "Knockback increasing weapon modifier",
         "chunks": [
             "ST",
             "RO",
@@ -21251,7 +21251,7 @@
     {
         "id": 1960,
         "answer": "RUTHLESS",
-        "clue": "Damage weapon modifier",
+        "clue": "Damage increasing weapon modifier",
         "chunks": [
             "RU",
             "THL",
@@ -21262,7 +21262,7 @@
     {
         "id": 1961,
         "answer": "CAVEBAT",
-        "clue": "Flying underground enemy",
+        "clue": "Flying Underground enemy",
         "chunks": [
             "CA",
             "VEB",
