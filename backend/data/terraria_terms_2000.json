@@ -14112,7 +14112,7 @@
     {
         "id": 1311,
         "answer": "INFLUXWAVER",
-        "clue": "Zenith sword component",
+        "clue": "Electric Zenith sword component",
         "chunks": [
             "INFL",
             "UXWA",
@@ -14145,7 +14145,7 @@
     {
         "id": 1314,
         "answer": "ICEQUEEN",
-        "clue": "Frost moon boss",
+        "clue": "Frost Moon boss",
         "chunks": [
             "IC",
             "EQU",
@@ -14310,7 +14310,7 @@
     {
         "id": 1329,
         "answer": "SHADOWORB",
-        "clue": "Drops weapons when broken",
+        "clue": "Drops weapons/accessories when broken",
         "chunks": [
             "SHA",
             "DOWO",
@@ -14321,7 +14321,7 @@
     {
         "id": 1330,
         "answer": "CRIMSONHEART",
-        "clue": "Drops weapons when broken",
+        "clue": "Drops weapons/accessories when broken",
         "chunks": [
             "CRIM",
             "SONH",
@@ -14398,7 +14398,7 @@
     {
         "id": 1337,
         "answer": "BLESSEDAPPLE",
-        "clue": "Summons a ridable unicorn",
+        "clue": "Summons a ridable Unicorn",
         "chunks": [
             "BLES",
             "SEDA",
@@ -14420,7 +14420,7 @@
     {
         "id": 1339,
         "answer": "MANDIBLE",
-        "clue": "Dropped from Antlions",
+        "clue": "Material dropped from Antlions",
         "chunks": [
             "MAN",
             "DIB",
@@ -14431,7 +14431,7 @@
     {
         "id": 1340,
         "answer": "BEEWAX",
-        "clue": "Used to craft the bee armor",
+        "clue": "Used to craft Bee Armor",
         "chunks": [
             "BE",
             "EW",
@@ -14442,7 +14442,7 @@
     {
         "id": 1341,
         "answer": "BEETLEHUSK",
-        "clue": "Used to upgrade the turtle armor",
+        "clue": "Used to upgrade the Turtle Armor",
         "chunks": [
             "BEE",
             "TLEH",
@@ -14453,7 +14453,7 @@
     {
         "id": 1342,
         "answer": "BLACKLENS",
-        "clue": "Used to craft sunglasses",
+        "clue": "Used to craft Sunglasses",
         "chunks": [
             "BL",
             "ACKL",
@@ -14475,7 +14475,7 @@
     {
         "id": 1344,
         "answer": "BONEFEATHER",
-        "clue": "Used to craft bone wings",
+        "clue": "Used to craft Bone Wings",
         "chunks": [
             "BON",
             "EFEA",
@@ -14486,7 +14486,7 @@
     {
         "id": 1345,
         "answer": "BROKENHERO",
-        "clue": "Sword you can't swing",
+        "clue": "Sword used to craft True weapons",
         "chunks": [
             "BROK",
             "ENHE",
@@ -14508,7 +14508,7 @@
     {
         "id": 1347,
         "answer": "CYANHUSK",
-        "clue": "Dropped from underground beetles",
+        "clue": "Dropped from Underground Beetles",
         "chunks": [
             "CYA",
             "NHU",
@@ -14519,7 +14519,7 @@
     {
         "id": 1348,
         "answer": "REDHUSK",
-        "clue": "Dropped from underground beetles",
+        "clue": "Dropped from Underground Beetles",
         "chunks": [
             "RE",
             "DH",
@@ -14530,7 +14530,7 @@
     {
         "id": 1349,
         "answer": "DARKSHARD",
-        "clue": "Dropped from dark mummies",
+        "clue": "Dropped from Dark Mummies",
         "chunks": [
             "CURS",
             "EDWY",
@@ -14563,7 +14563,7 @@
     {
         "id": 1352,
         "answer": "ECTOPLASM",
-        "clue": "Used to make spectre bars",
+        "clue": "Used to make Spectre bars",
         "chunks": [
             "ECT",
             "OPL",
@@ -14585,7 +14585,7 @@
     {
         "id": 1354,
         "answer": "FIREFEATHER",
-        "clue": "Used to craft flame wings",
+        "clue": "Used to craft Flame Wings",
         "chunks": [
             "FIR",
             "EFEA",
@@ -14596,7 +14596,7 @@
     {
         "id": 1355,
         "answer": "FIREBLOSSOM",
-        "clue": "Herb that blooms durring sunset",
+        "clue": "Herb that blooms during sunset",
         "chunks": [
             "FIR",
             "EBLO",
@@ -14629,7 +14629,7 @@
     {
         "id": 1358,
         "answer": "ICEFEATHER",
-        "clue": "Used to craft ice wings",
+        "clue": "Used to craft Ice Wings",
         "chunks": [
             "ICE",
             "FEA",
@@ -14684,7 +14684,7 @@
     {
         "id": 1363,
         "answer": "PINKPEARL",
-        "clue": "Shimmers into the galatic pearl",
+        "clue": "Shimmers into the Galatic Pearl",
         "chunks": [
             "PI",
             "NKP",
@@ -14706,7 +14706,7 @@
     {
         "id": 1365,
         "answer": "TSUNAMI",
-        "clue": "Duke Fishron drop",
+        "clue": "Duke Fishron bow drop",
         "chunks": [
             "TSU",
             "NA",
@@ -14772,7 +14772,7 @@
     {
         "id": 1371,
         "answer": "SPIDERFANG",
-        "clue": "Used to craft spider armor",
+        "clue": "Used to craft Spider Armor",
         "chunks": [
             "SPID",
             "ERF",
@@ -14783,7 +14783,7 @@
     {
         "id": 1372,
         "answer": "SPOOKYTWIG",
-        "clue": "Used to craft spooky wings",
+        "clue": "Used to craft Spooky Wings",
         "chunks": [
             "SPO",
             "OKYT",
@@ -14794,7 +14794,7 @@
     {
         "id": 1373,
         "answer": "STINGER",
-        "clue": "Dropped from hornets",
+        "clue": "Dropped from Hornets",
         "chunks": [
             "STI",
             "NG",
@@ -14849,7 +14849,7 @@
     {
         "id": 1378,
         "answer": "VIOLETHUSK",
-        "clue": "Dropped from underground beetles",
+        "clue": "Dropped from Underground Beetles",
         "chunks": [
             "VIOL",
             "ETHU",
@@ -14882,7 +14882,7 @@
     {
         "id": 1381,
         "answer": "WORMTOOTH",
-        "clue": "Used to make unholy arrows",
+        "clue": "Used to make Unholy Arrows",
         "chunks": [
             "WOR",
             "MTO",
@@ -14915,7 +14915,7 @@
     {
         "id": 1384,
         "answer": "BEEHIVE",
-        "clue": "Spawns bees when broken",
+        "clue": "Spawns Bees when broken",
         "chunks": [
             "BE",
             "EHI",
@@ -14937,7 +14937,7 @@
     {
         "id": 1386,
         "answer": "FALLENLOG",
-        "clue": "Spawns fairies around it at night",
+        "clue": "Spawns Fairies around it at night",
         "chunks": [
             "FAL",
             "LENL",
@@ -14970,7 +14970,7 @@
     {
         "id": 1389,
         "answer": "CANDYAPPLE",
-        "clue": "Replaces hearts durring Halloween",
+        "clue": "Replaces hearts during Halloween",
         "chunks": [
             "CAND",
             "YAP",
@@ -15003,7 +15003,7 @@
     {
         "id": 1392,
         "answer": "MONKSBELT",
-        "clue": "Old one's army event accessory",
+        "clue": "Old One's Army event accessory",
         "chunks": [
             "MON",
             "KSBE",
@@ -15047,7 +15047,7 @@
     {
         "id": 1396,
         "answer": "SOULCAKE",
-        "clue": "Replaces mana stars durring Halloween",
+        "clue": "Replaces mana stars during Halloween",
         "chunks": [
             "SOU",
             "LCA",
@@ -15058,7 +15058,7 @@
     {
         "id": 1397,
         "answer": "SUGARPLUM",
-        "clue": "Replaces mana stars durring Christmas",
+        "clue": "Replaces mana stars during Christmas",
         "chunks": [
             "SUG",
             "ARP",
@@ -15091,7 +15091,7 @@
     {
         "id": 1400,
         "answer": "WATERGUN",
-        "clue": "Shooting this can turn lights off",
+        "clue": "Shooting this can turn torches off",
         "chunks": [
             "WAT",
             "ERG",
@@ -15135,7 +15135,7 @@
     {
         "id": 1404,
         "answer": "DEMONEYE",
-        "clue": "FLying surface enemy",
+        "clue": "FLying Surface enemy",
         "chunks": [
             "DEMO",
             "NE",
@@ -15190,7 +15190,7 @@
     {
         "id": 1409,
         "answer": "ZOMBIEARM",
-        "clue": "Weapon dropped from zombies",
+        "clue": "Weapon dropped from Zombies",
         "chunks": [
             "ZOM",
             "BIEA",
@@ -15201,7 +15201,7 @@
     {
         "id": 1410,
         "answer": "SPIFFOPLUSH",
-        "clue": "Rarely dropped from zombies",
+        "clue": "Rarely dropped from Zombies",
         "chunks": [
             "SPIF",
             "FOPL",
@@ -15278,7 +15278,7 @@
     {
         "id": 1417,
         "answer": "GRAPEFRUIT",
-        "clue": "Fruit dropped by forest trees",
+        "clue": "Fruit dropped by Forest trees",
         "chunks": [
             "GRA",
             "PEFR",
@@ -15311,7 +15311,7 @@
     {
         "id": 1420,
         "answer": "PWNHAMMER",
-        "clue": "Used to break demon altars",
+        "clue": "Used to break Demon Altars",
         "chunks": [
             "PW",
             "NHA",
@@ -15520,7 +15520,7 @@
     {
         "id": 1439,
         "answer": "LEGENDARY",
-        "clue": "Best melee modifier",
+        "clue": "Best melee weapon modifier",
         "chunks": [
             "LEGE",
             "NDA",
@@ -15531,7 +15531,7 @@
     {
         "id": 1440,
         "answer": "GIANTBAT",
-        "clue": "Hardmode cavern bat",
+        "clue": "Hardmode Cavern Bat",
         "chunks": [
             "GI",
             "ANTB",
@@ -15586,7 +15586,7 @@
     {
         "id": 1445,
         "answer": "POTATOCHIPS",
-        "clue": "Food dropped by cavern enemies",
+        "clue": "Food dropped by Cavern enemies",
         "chunks": [
             "POT",
             "ATOC",
@@ -15696,7 +15696,7 @@
     {
         "id": 1455,
         "answer": "PICKAXEAXE",
-        "clue": "Capible of mining chlorophyte",
+        "clue": "Capible of mining Chlorophyte",
         "chunks": [
             "PICK",
             "AXEA",
@@ -15773,7 +15773,7 @@
     {
         "id": 1462,
         "answer": "WALLOFFLESH",
-        "clue": "Boss that spans the entire underworld",
+        "clue": "Boss that spans the entire Underworld",
         "chunks": [
             "WAL",
             "LOFF",
@@ -15927,7 +15927,7 @@
     {
         "id": 1476,
         "answer": "ICEELEMENTAL",
-        "clue": "Hardmode ice biome flying enemy",
+        "clue": "Hardmode Ice Biome flying enemy",
         "chunks": [
             "ICEE",
             "LEME",
@@ -15938,7 +15938,7 @@
     {
         "id": 1477,
         "answer": "ICEGOLEM",
-        "clue": "Ice version of the sand elemental",
+        "clue": "Ice version of the Sand Elemental",
         "chunks": [
             "IC",
             "EGO",
@@ -16048,7 +16048,7 @@
     {
         "id": 1487,
         "answer": "TUNDRATROUT",
-        "clue": "Quest fish caught in the ice biome",
+        "clue": "Quest fish caught in the Ice Biome",
         "chunks": [
             "OBSI",
             "DIAN",
@@ -16059,7 +16059,7 @@
     {
         "id": 1488,
         "answer": "PENGFISH",
-        "clue": "Quest fish caught in the ice biome",
+        "clue": "Quest fish caught in the Ice Biome",
         "chunks": [
             "COPP",
             "ERA",
@@ -16169,7 +16169,7 @@
     {
         "id": 1498,
         "answer": "FISHRON",
-        "clue": "Quest fish caught in the ice biome",
+        "clue": "Quest fish caught in the Ice Biome",
         "chunks": [
             "FIS",
             "HR",
@@ -16191,7 +16191,7 @@
     {
         "id": 1500,
         "answer": "SOLARECLIPSE",
-        "clue": "Daytime event",
+        "clue": "Hardmode daytime event",
         "chunks": [
             "SOLA",
             "RECL",
@@ -16598,7 +16598,7 @@
     {
         "id": 1537,
         "answer": "MINISHARK",
-        "clue": "Weapon on a Steam card",
+        "clue": "Weapon seen on a Steam card",
         "chunks": [
             "MIN",
             "ISHA",
