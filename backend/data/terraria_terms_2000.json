@@ -262,7 +262,7 @@
     {
         "id": 27,
         "answer": "WYVERN",
-        "clue": "Enemy that drops Souls of Flight.",
+        "clue": "Enemy that drops Souls of Flight",
         "chunks": [
             "WYV",
             "ERN"
@@ -2774,8 +2774,8 @@
         "answer": "GOAT",
         "clue": "Mount dropped by the WoF",
         "chunks": [
-            "REDA",
-            "NT"
+            "GO",
+            "AT"
         ],
         "chunkCount": 2
     },
@@ -2871,13 +2871,14 @@
     },
     {
         "id": 288,
-        "answer": "ANGLER",
+        "answer": "ANGLERFISH",
         "clue": "Hardmode swimming enemy",
         "chunks": [
-            "AN",
-            "GLER"
+            "ANGL",
+            "ERFI",
+            "SH"
         ],
-        "chunkCount": 2
+        "chunkCount": 3
     },
     {
         "id": 289,
@@ -3034,8 +3035,8 @@
         "answer": "GHOUL",
         "clue": "Underground Desert enemy",
         "chunks": [
-            "BLUE",
-            "EYE"
+            "GHO",
+            "UL"
         ],
         "chunkCount": 2
     },
@@ -3156,16 +3157,6 @@
         "chunks": [
             "TU",
             "NA"
-        ],
-        "chunkCount": 2
-    },
-    {
-        "id": 317,
-        "answer": "SHRIMP",
-        "clue": "Common 'fish' in the ocean",
-        "chunks": [
-            "SHR",
-            "IMP"
         ],
         "chunkCount": 2
     },
@@ -3784,8 +3775,8 @@
         "answer": "STINKY",
         "clue": "Debuff causing NPCS to run away",
         "chunks": [
-            "TINS",
-            "WORD"
+            "STI",
+            "NKY"
         ],
         "chunkCount": 2
     },
@@ -4420,16 +4411,6 @@
         "chunkCount": 2
     },
     {
-        "id": 443,
-        "answer": "LEECH",
-        "clue": "Wall of Flesh servant",
-        "chunks": [
-            "LEE",
-            "CH"
-        ],
-        "chunkCount": 2
-    },
-    {
         "id": 444,
         "answer": "CRIMSON",
         "clue": "Evil biome",
@@ -4564,7 +4545,7 @@
         "answer": "XENON",
         "clue": "Glowing blue moss",
         "chunks": [
-            "ZE",
+            "XE",
             "NON"
         ],
         "chunkCount": 2
@@ -4664,8 +4645,8 @@
         "answer": "GRIM",
         "clue": "'Smokey' red dye",
         "chunks": [
-            "BONE",
-            "BAT"
+            "GR",
+            "IM"
         ],
         "chunkCount": 2
     },
@@ -4736,16 +4717,6 @@
         "chunks": [
             "HON",
             "EY"
-        ],
-        "chunkCount": 2
-    },
-    {
-        "id": 475,
-        "answer": "MIRAGE",
-        "clue": "Wavy effect dye",
-        "chunks": [
-            "MIR",
-            "AGE"
         ],
         "chunkCount": 2
     },
@@ -5241,7 +5212,7 @@
     },
     {
         "id": 521,
-        "answer": "EVOLUTION BEAST",
+        "answer": "EVOLUTIONBEAST",
         "clue": "Nebula enemy that shoots homing spheres",
         "chunks": [
             "EVO",
@@ -5810,7 +5781,7 @@
         "chunks": [
             "LASE",
             "RMAC",
-            "GINE",
+            "HINE",
             "GUN"
         ],
         "chunkCount": 4
@@ -6518,7 +6489,7 @@
         "chunks": [
             "SOAR",
             "INGI",
-            "NSI",
+            "NSIG",
             "NIA"
         ],
         "chunkCount": 4
@@ -6804,10 +6775,10 @@
         "answer": "SANDELEMENTAL",
         "clue": "Sandstorm mini-boss",
         "chunks": [
-            "SPIK",
-            "YS",
-            "HA",
-            "RK"
+            "SAND",
+            "ELE",
+            "MEN",
+            "TAL"
         ],
         "chunkCount": 4
     },
@@ -6909,7 +6880,7 @@
     },
     {
         "id": 660,
-        "answer": "PIRATECAPTIAN",
+        "answer": "PIRATECAPTAIN",
         "clue": "Pirate enemy that spawns a ghost on death",
         "chunks": [
             "PI",
@@ -6973,8 +6944,8 @@
         "clue": "Mechanical skeleton boss",
         "chunks": [
             "SKE",
-            "LETO",
-            "NPR",
+            "LETR",
+            "ONPR",
             "IME"
         ],
         "chunkCount": 4
@@ -7104,12 +7075,11 @@
         "answer": "RAPIDHEALING",
         "clue": "Buff gained from Palladium Armor",
         "chunks": [
-            "LAVA",
-            "WR",
-            "AI",
-            "TH"
+            "RAPID",
+            "HEAL",
+            "ING"
         ],
-        "chunkCount": 4
+        "chunkCount": 3
     },
     {
         "id": 677,
@@ -8174,7 +8144,7 @@
         "answer": "PSYCHOKNIFE",
         "clue": "Weapon granting stealth when standing still",
         "chunks": [
-            "PHSY",
+            "PSY",
             "CHOK",
             "NIFE"
         ],
@@ -8482,11 +8452,10 @@
         "answer": "BLUEMOON",
         "clue": "Has a special synergy with the Sunfury",
         "chunks": [
-            "ICE",
-            "WO",
-            "RM"
+            "BLUE",
+            "MOON"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 800,
@@ -9274,7 +9243,7 @@
         "answer": "CRIMSONROD",
         "clue": "Summons a blood rain cloud",
         "chunks": [
-            "CHRI",
+            "CRI",
             "MSO",
             "NROD"
         ],
@@ -9340,11 +9309,10 @@
         "answer": "NIGHTGLOW",
         "clue": "Empress of Light magic weapon drop",
         "chunks": [
-            "NIG",
-            "HTB",
-            "OLT"
+            "NIGHT",
+            "GLOW"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 878,
@@ -10240,11 +10208,11 @@
     {
         "id": 959,
         "answer": "MANNEQUIN",
-        "clue": "Firniture used to display armor",
+        "clue": "Furniture used to display armor",
         "chunks": [
-            "FLES",
-            "HSPI",
-            "DER"
+            "MAN",
+            "NEQ",
+            "UIN"
         ],
         "chunkCount": 3
     },
@@ -11111,9 +11079,9 @@
         "answer": "FASTCLOCK",
         "clue": "Provides immunity to Slow",
         "chunks": [
-            "SPIK",
-            "YSNA",
-            "IL"
+            "FAST",
+            "CLO",
+            "CK"
         ],
         "chunkCount": 3
     },
@@ -11463,11 +11431,10 @@
         "answer": "BOOSTER",
         "clue": "Power-up dropped wearing Nebula Armor",
         "chunks": [
-            "GOBL",
-            "INMU",
-            "MMY"
+            "BOOS",
+            "TER"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1071,
@@ -11606,11 +11573,10 @@
         "answer": "ARCHERY",
         "clue": "Buff that increases bow stats",
         "chunks": [
-            "LAVA",
-            "CATF",
-            "ISH"
+            "ARC",
+            "HERY"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1084,
@@ -11628,9 +11594,9 @@
         "answer": "REDPOTION",
         "clue": "Potion only for those who are worthy",
         "chunks": [
-            "REDP",
-            "PTI",
-            "ON"
+            "RED",
+            "POT",
+            "ION"
         ],
         "chunkCount": 3
     },
@@ -11705,9 +11671,9 @@
         "answer": "SPELUNKER",
         "clue": "Buff that highlights ores and treasures",
         "chunks": [
-            "SPL",
-            "ELU",
-            "NKER"
+            "SPE",
+            "LUN",
+            "KER"
         ],
         "chunkCount": 3
     },
@@ -11815,9 +11781,9 @@
         "answer": "SOLARBLAZE",
         "clue": "Buff gained from Solar Armor",
         "chunks": [
-            "TOXI",
-            "CWYV",
-            "ERN"
+            "SOLA",
+            "RBL",
+            "AZE"
         ],
         "chunkCount": 3
     },
@@ -12222,11 +12188,10 @@
         "answer": "SANTANK",
         "clue": "Mount summoned by the Toy Tank",
         "chunks": [
-            "GOL",
-            "DO",
-            "RC"
+            "SAN",
+            "TANK"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1140,
@@ -12245,7 +12210,7 @@
         "clue": "Mount summoned by the Gelatinous Pillion",
         "chunks": [
             "WIN",
-            "GED",
+            "GEDS",
             "LIME"
         ],
         "chunkCount": 3
@@ -12652,7 +12617,7 @@
         "clue": "Summons Deerclops",
         "chunks": [
             "DEE",
-            "ERTH",
+            "RTH",
             "ING"
         ],
         "chunkCount": 3
@@ -12794,19 +12759,18 @@
         "answer": "FAELING",
         "clue": "Aether critter",
         "chunks": [
-            "RABI",
-            "DGOB",
-            "LIN"
+            "FAE",
+            "LING"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1192,
         "answer": "LIGHTNINGBUG",
         "clue": "Flying nighttime Hallow critter",
         "chunks": [
-            "LIG",
-            "HTIN",
+            "LIGH",
+            "TNIN",
             "GBUG"
         ],
         "chunkCount": 3
@@ -12926,9 +12890,9 @@
         "answer": "SEATURTLE",
         "clue": "Ocean critter",
         "chunks": [
-            "CORR",
-            "UPTS",
-            "HARK"
+            "SEA",
+            "TUR",
+            "TLE"
         ],
         "chunkCount": 3
     },
@@ -13597,9 +13561,9 @@
         "answer": "BLUECHICKEN",
         "clue": "Pet sold by the Traveling Merchant",
         "chunks": [
-            "PURP",
-            "LEWY",
-            "VERN"
+            "BLUE",
+            "CHI",
+            "CKEN"
         ],
         "chunkCount": 3
     },
@@ -13622,17 +13586,6 @@
             "CE",
             "NA",
             "XE"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1267,
-        "answer": "CHESTER",
-        "clue": "Pet that can open your private storage",
-        "chunks": [
-            "CH",
-            "EST",
-            "ER"
         ],
         "chunkCount": 3
     },
@@ -13675,8 +13628,8 @@
         "clue": "Pet summoned by the Dragon Egg",
         "chunks": [
             "HOAR",
-            "DRA",
-            "GON"
+            "DAG",
+            "RON"
         ],
         "chunkCount": 3
     },
@@ -13861,11 +13814,10 @@
         "answer": "NECTAR",
         "clue": "Summons the Baby Hornet Pet",
         "chunks": [
-            "GOBL",
-            "INFR",
-            "OG"
+            "NEC",
+            "TAR"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1289,
@@ -14004,9 +13956,9 @@
         "answer": "LIZARDEGG",
         "clue": "Summons the Lizard pet",
         "chunks": [
-            "WOLF",
-            "DRAG",
-            "ON"
+            "LIZ",
+            "ARD",
+            "EGG"
         ],
         "chunkCount": 3
     },
@@ -14191,11 +14143,12 @@
         "answer": "SKELETRONJR",
         "clue": "Pet dropped by Skeletron",
         "chunks": [
-            "VAMP",
-            "WYVE",
-            "RN"
+            "SKE",
+            "LET",
+            "RON",
+            "JR"
         ],
-        "chunkCount": 3
+        "chunkCount": 4
     },
     {
         "id": 1319,
@@ -14246,9 +14199,9 @@
         "answer": "TINYFISHRON",
         "clue": "Pet dropped by Duke Fishron",
         "chunks": [
-            "HORN",
-            "ETFI",
-            "SH"
+            "TINY",
+            "FISH",
+            "RON"
         ],
         "chunkCount": 3
     },
@@ -14279,9 +14232,9 @@
         "answer": "FROZENCROWN",
         "clue": "Summons the Ice Queen pet",
         "chunks": [
-            "HELL",
-            "SKEL",
-            "ETON"
+            "FRO",
+            "ZEN",
+            "CROWN"
         ],
         "chunkCount": 3
     },
@@ -14532,9 +14485,9 @@
         "answer": "DARKSHARD",
         "clue": "Dropped from Dark Mummies",
         "chunks": [
-            "CURS",
-            "EDWY",
-            "VERN"
+            "DARK",
+            "SHA",
+            "RD"
         ],
         "chunkCount": 3
     },
@@ -14554,9 +14507,9 @@
         "answer": "DEATHWEED",
         "clue": "Herb that blooms during a Blood Moon",
         "chunks": [
-            "DARK",
-            "ZOMB",
-            "IE"
+            "DEA",
+            "THWE",
+            "ED"
         ],
         "chunkCount": 3
     },
@@ -14997,17 +14950,6 @@
             "ICE",
             "MIR",
             "ROR"
-        ],
-        "chunkCount": 3
-    },
-    {
-        "id": 1392,
-        "answer": "MONKSBELT",
-        "clue": "Old One's Army event accessory",
-        "chunks": [
-            "MON",
-            "KSBE",
-            "LT"
         ],
         "chunkCount": 3
     },
@@ -15732,8 +15674,8 @@
         "clue": "Mechanic determining NPC prices",
         "chunks": [
             "HAP",
-            "INE",
-            "SS"
+            "PIN",
+            "ESS"
         ],
         "chunkCount": 3
     },
@@ -16050,9 +15992,9 @@
         "answer": "TUNDRATROUT",
         "clue": "Quest fish caught in the Ice Biome",
         "chunks": [
-            "OBSI",
-            "DIAN",
-            "BELT"
+            "TUND",
+            "RAT",
+            "ROUT"
         ],
         "chunkCount": 3
     },
@@ -16061,11 +16003,10 @@
         "answer": "PENGFISH",
         "clue": "Quest fish caught in the Ice Biome",
         "chunks": [
-            "COPP",
-            "ERA",
-            "XE"
+            "PENG",
+            "FISH"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1489,
@@ -16596,17 +16537,6 @@
         "chunkCount": 3
     },
     {
-        "id": 1537,
-        "answer": "MINISHARK",
-        "clue": "Weapon seen on a Steam card",
-        "chunks": [
-            "MIN",
-            "ISHA",
-            "RK"
-        ],
-        "chunkCount": 3
-    },
-    {
         "id": 1538,
         "answer": "NEONTETRA",
         "clue": "Fish caught in the Jungle",
@@ -16756,7 +16686,7 @@
         "chunks": [
             "SP",
             "ORE",
-            "BET"
+            "BAT"
         ],
         "chunkCount": 3
     },
@@ -16810,8 +16740,8 @@
         "clue": "Hardmode Corruption worm enemy",
         "chunks": [
             "WORL",
-            "DEAT",
-            "ER"
+            "DFEE",
+            "DER"
         ],
         "chunkCount": 3
     },
@@ -17150,9 +17080,9 @@
         "answer": "CURSEDSKULL",
         "clue": "Enemy found in the Dungeon",
         "chunks": [
-            "CAVE",
-            "DRAG",
-            "ON"
+            "CURS",
+            "EDSK",
+            "ULL"
         ],
         "chunkCount": 3
     },
@@ -18514,7 +18444,7 @@
         "answer": "HELLHOUND",
         "clue": "Pumpkin Moon 4 legged enemy",
         "chunks": [
-            "HEL",
+            "HELL",
             "HOU",
             "ND"
         ],
@@ -18866,11 +18796,10 @@
         "answer": "BESTIARY",
         "clue": "In-game catalog of Terraria's entities",
         "chunks": [
-            "CRAB",
-            "WYVE",
-            "RN"
+            "BEST",
+            "IARY"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1744,
@@ -19148,17 +19077,6 @@
         "chunkCount": 3
     },
     {
-        "id": 1769,
-        "answer": "MANAFLOWER",
-        "clue": "Enables auto use of mana potions",
-        "chunks": [
-            "MAN",
-            "AFLO",
-            "WER"
-        ],
-        "chunkCount": 3
-    },
-    {
         "id": 1770,
         "answer": "GRANITECAVE",
         "clue": "Underground mini biome",
@@ -19196,9 +19114,9 @@
         "answer": "ASHFOREST",
         "clue": "Underworld mini biome",
         "chunks": [
-            "SHAD",
-            "OWC",
-            "OD"
+            "ASH",
+            "FOR",
+            "EST"
         ],
         "chunkCount": 3
     },
@@ -19759,7 +19677,7 @@
         "chunks": [
             "BALL",
             "OONS",
-            "LIIME"
+            "LIME"
         ],
         "chunkCount": 3
     },
@@ -20868,11 +20786,10 @@
         "answer": "JOURNEY",
         "clue": "Equivalent to creative mode",
         "chunks": [
-            "JUNG",
-            "LEGH",
-            "OST"
+            "JOUR",
+            "NEY"
         ],
-        "chunkCount": 3
+        "chunkCount": 2
     },
     {
         "id": 1926,
@@ -20913,8 +20830,8 @@
         "clue": "Regular world difficulty",
         "chunks": [
             "CLAS",
-            "ICMO",
-            "DE"
+            "SICM",
+            "ODE"
         ],
         "chunkCount": 3
     },
@@ -20956,9 +20873,9 @@
         "answer": "KNOCKBACK",
         "clue": "Stat determining thrown distance of enemies",
         "chunks": [
-            "PINK",
-            "SHA",
-            "RK"
+            "KNO",
+            "CKB",
+            "ACK"
         ],
         "chunkCount": 3
     },
@@ -21155,7 +21072,7 @@
         "clue": "Sniper Scope + Putrid Scent",
         "chunks": [
             "REC",
-            "CONS",
+            "ONS",
             "COPE"
         ],
         "chunkCount": 3
