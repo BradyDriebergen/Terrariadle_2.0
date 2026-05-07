@@ -30,7 +30,6 @@ Oracle Cloud - Hosting website
 REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 - turn list into unique items and check if there is more than one solution per problem.
 
-
 Finished at item 1539
 
 REMEMBER! Ask AI to see any duplicates between armors
