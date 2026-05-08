@@ -2,6 +2,7 @@
 
 **Next items needed**
 - [ ] Move data to Atlas
+- [ ] Change backend to pull from Atlas rather than JSON
 - [ ] Create page for new game
     - [ ] Plan and Implement Wordaria backend for minigame
     - [ ] Create front-end components for game
@@ -21,6 +22,7 @@
 **Backend changes**
 - [ ] Implement in-memory guess store with periodic flush
 - [ ] Change backend guess counts to use web-sockets
+- [ ] Go through backend and finalize structure
 
 **Hosting steps**
 - [ ] Add static adapter to Sveltekit
@@ -36,9 +38,10 @@ Terrariadle/
 └── docs/
 
 - [ ] Add a new user to Oracle instance
-- [ ] Add .env files to project
+- [ ] Add .env files to Oracle instance
 - [ ] Create a systemd service for the app
 - [ ] Implement Caddy in place of Nginx
+- [ ] Create new script that automatically builds and deploys
 
 **Finishing steps**
 - [ ] Update documentation and wiki
