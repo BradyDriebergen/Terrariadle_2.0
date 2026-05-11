@@ -26,7 +26,7 @@
 
 **Hosting steps**
 - [ ] Add static adapter to Sveltekit
-- [ ] Reformat the site file structure:
+- [x] Reformat the site file structure:
 
 Terrariadle/
 ├── main.go
