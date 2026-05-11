@@ -1,7 +1,7 @@
 ## Next Steps for final product
 
 **Next items needed**
-- [ ] Move data to Atlas
+- [x] Move data to Atlas
 - [ ] Change backend to pull from Atlas rather than JSON
 - [ ] Create page for new game
     - [ ] Plan and Implement Wordaria backend for minigame
@@ -39,9 +39,11 @@ Terrariadle/
 
 - [ ] Add a new user to Oracle instance
 - [ ] Add .env files to Oracle instance
+- [ ] Reset MongoDB Atlas password for db
 - [ ] Create a systemd service for the app
 - [ ] Implement Caddy in place of Nginx
 - [ ] Create new script that automatically builds and deploys
+- [ ] Reset MongoDB Atlas password for db
 
 **Finishing steps**
 - [ ] Update documentation and wiki
