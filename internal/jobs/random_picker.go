@@ -3,7 +3,7 @@ package jobs
 import (
 	"fmt"
 	"math/rand"
-	"terrariadle-backend/internal/jsonreader"
+	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/models"
 	"terrariadle-backend/internal/store"
 )
@@ -24,7 +24,7 @@ func shuffle[T any](list []T, rnd *rand.Rand) {
 // ---------------------------------------------
 
 // Generates a pair of random weapons
-func randomDailyWeapons(rnd *rand.Rand, prevWeapon jsonreader.Weapon) (models.WeaponData, error) {
+func randomDailyWeapons(rnd *rand.Rand, prevWeapon domain.Weapon) (models.WeaponData, error) {
 	weapons, ok := store.WeaponsCache.Get()
 	if !ok {
 		return models.WeaponData{}, fmt.Errorf("failed to get weapons from memstore")
@@ -39,13 +39,13 @@ func randomDailyWeapons(rnd *rand.Rand, prevWeapon jsonreader.Weapon) (models.We
 }
 
 // Generates a set of categories with unique options
-func randomCategories(rnd *rand.Rand) ([]jsonreader.Category, error) {
+func randomCategories(rnd *rand.Rand) ([]domain.Category, error) {
 	categories, ok := store.CategoriesCache.Get()
 	if !ok {
-		return []jsonreader.Category{}, fmt.Errorf("failed to get categories from memstore")
+		return []domain.Category{}, fmt.Errorf("failed to get categories from memstore")
 	}
 	if len(categories) < 4 {
-		return []jsonreader.Category{}, fmt.Errorf("need at least 4 categories, got %d", len(categories))
+		return []domain.Category{}, fmt.Errorf("need at least 4 categories, got %d", len(categories))
 	}
 
 	shuffle(categories, rnd)
@@ -57,7 +57,7 @@ func randomCategories(rnd *rand.Rand) ([]jsonreader.Category, error) {
 	for i := range selectedCategories {
 		opts := selectedCategories[i].Options
 		if len(opts) < 4 {
-			return []jsonreader.Category{}, fmt.Errorf("categories don't have 4 options: %v", selectedCategories[i])
+			return []domain.Category{}, fmt.Errorf("categories don't have 4 options: %v", selectedCategories[i])
 		}
 
 		shuffle(opts, rnd)
@@ -114,10 +114,10 @@ func randomNpcData(rnd *rand.Rand) (models.NPCdata, error) {
 }
 
 // Gets a random enemy
-func randomEnemy(rnd *rand.Rand) (jsonreader.Enemy, error) {
+func randomEnemy(rnd *rand.Rand) (domain.Enemy, error) {
 	enemies, ok := store.EnemiesCache.Get()
 	if !ok {
-		return jsonreader.Enemy{}, fmt.Errorf("failed to get weapons from memstore")
+		return domain.Enemy{}, fmt.Errorf("failed to get weapons from memstore")
 	}
 
 	shuffle(enemies, rnd)

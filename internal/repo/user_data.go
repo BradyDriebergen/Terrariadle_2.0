@@ -1,13 +1,10 @@
 package models
 
 import (
-	"context"
 	"errors"
 	"fmt"
 	"terrariadle-backend/internal/db"
-	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -57,24 +54,19 @@ type hangmanGame struct {
 	Attempts int  `bson:"attempts"`
 }
 
-// Retrieves the user data
-func GetUserData(userId string) (*UserData, error) {
-	collection := db.GetCollection("terrariadle", "user_guesses")
+type UserRepo struct {
+	database *db.MongoDB
+}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	var user UserData
-	res := collection.FindOne(ctx, bson.M{"userId": userId})
-	err := res.Decode(&user)
-	if err != nil {
-		if errors.Is(err, mongo.ErrNoDocuments) {
-			return nil, mongo.ErrNoDocuments
-		}
-		return nil, fmt.Errorf("failed to find record %v", err)
+func NewUserRepo(db *db.MongoDB) *UserRepo {
+	return &UserRepo{
+		database: db,
 	}
+}
 
-	return &user, nil
+// Tries to get user from db. If user doesn't exist, create a new one.
+func GetUser(userId string) (*UserData, error) {
+
 }
 
 // Retrieves the user data or creates a new user if not found
@@ -115,15 +107,10 @@ func GetOrCreateUser(userId string) (*UserData, error) {
 	return user, nil
 }
 
-// Updates or creates the user data in the database
 func UpdateUserData(user *UserData) error {
-	collection := db.GetCollection("terrariadle", "user_guesses")
-	err := db.UpsertRecord(collection, bson.M{"userId": user.UserID}, bson.M{"$set": user})
-	return err
+
 }
 
 func DeleteUserData() error {
-	collection := db.GetCollection("terrariadle", "user_guesses")
-	err := db.DropCollection(collection)
-	return err
+
 }

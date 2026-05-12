@@ -10,14 +10,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-type DB interface {
-	Upsert(ctx context.Context, collectionName string, filter, update any) error
-	Drop(ctx context.Context, collectionName string) error
-	Close(ctx context.Context) error
-}
-
-var _ DB = (*MongoDB)(nil)
-
 type MongoDB struct {
 	client *mongo.Client
 	dbName string
@@ -39,7 +31,20 @@ func Connect(uri, dbName string) (*MongoDB, error) {
 	return &MongoDB{client: client, dbName: dbName}, nil
 }
 
-func (m *MongoDB) Upsert(ctx context.Context, collectionName string, filter, update any) error {
+func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filter any) (*T, error) {
+	collection := m.client.Database(m.dbName).Collection(collectionName)
+
+	var result T
+
+	err := collection.FindOne(ctx, filter).Decode(&result)
+	if err != nil {
+		return nil, fmt.Errorf("findone %s: %w", collectionName, err)
+	}
+
+	return &result, nil
+}
+
+func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter, update any) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 
 	opts := options.Update().SetUpsert(true)
@@ -52,7 +57,7 @@ func (m *MongoDB) Upsert(ctx context.Context, collectionName string, filter, upd
 	return nil
 }
 
-func (m *MongoDB) Drop(ctx context.Context, collectionName string) error {
+func Drop(ctx context.Context, m *MongoDB, collectionName string) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 
 	if err := collection.Drop(ctx); err != nil {
@@ -62,6 +67,6 @@ func (m *MongoDB) Drop(ctx context.Context, collectionName string) error {
 	return nil
 }
 
-func (m *MongoDB) Close(ctx context.Context) error {
+func Close(ctx context.Context, m *MongoDB) error {
 	return m.client.Disconnect(ctx)
 }
