@@ -15,6 +15,10 @@ type MongoDB struct {
 	dbName string
 }
 
+type Filter map[string]any
+
+var ErrNotFound = mongo.ErrNoDocuments
+
 func Connect(uri, dbName string) (*MongoDB, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -31,12 +35,12 @@ func Connect(uri, dbName string) (*MongoDB, error) {
 	return &MongoDB{client: client, dbName: dbName}, nil
 }
 
-func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filter any) (*T, error) {
+func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filter Filter) (*T, error) {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 
 	var result T
 
-	err := collection.FindOne(ctx, filter).Decode(&result)
+	err := collection.FindOne(ctx, bson.M(filter)).Decode(&result)
 	if err != nil {
 		return nil, fmt.Errorf("findone %s: %w", collectionName, err)
 	}
@@ -44,12 +48,12 @@ func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filt
 	return &result, nil
 }
 
-func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter, update any) error {
+func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter Filter, update any) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 
 	opts := options.Update().SetUpsert(true)
 
-	_, err := collection.UpdateOne(ctx, filter, bson.M{"$set": update}, opts)
+	_, err := collection.UpdateOne(ctx, bson.M(filter), bson.M{"$set": update}, opts)
 	if err != nil {
 		return fmt.Errorf("failed to upsert record: %w", err)
 	}

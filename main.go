@@ -6,6 +6,8 @@ import (
 	"log"
 	"os"
 	"terrariadle-backend/internal/db"
+	"terrariadle-backend/internal/repo"
+	"time"
 
 	"github.com/joho/godotenv"
 )
@@ -28,9 +30,21 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer mongoDB.Close(context.Background())
+	defer db.Close(context.Background(), mongoDB)
 
 	fmt.Print("Database connected")
+
+	ur := repo.NewUserRepo(mongoDB)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	user, err := ur.GetUser(ctx, "test")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Print(user)
 
 	// // Initialize atomicstore
 	// store.InitializeStoreFromJson()

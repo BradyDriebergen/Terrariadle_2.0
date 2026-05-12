@@ -6,6 +6,32 @@ import (
 	"terrariadle-backend/internal/utils/atomicstore"
 )
 
+// emptyGame := game{
+// 				Guesses:  []int{},
+// 				HasWon:   false,
+// 				Position: 0,
+// 			}
+
+// 			newUser := userData{
+// 				UserID: userId,
+// 				DailySlash: dailySlashGame{
+// 					Game:   emptyGame,
+// 					Checks: []weaponChecks{},
+// 				},
+// 				Connections: connectionGame{
+// 					Game:     emptyGame,
+// 					Attempts: 4,
+// 				},
+// 				GuessTheNPC: guessTheNpcGame{
+// 					Game:        emptyGame,
+// 					GuessedName: "",
+// 				},
+// 				Hangman: hangmanGame{
+// 					Game:     emptyGame,
+// 					Attempts: 6,
+// 				},
+// 			}
+
 // Global stores
 var (
 	GameData           = atomicstore.New[models.GameData]()

@@ -2,20 +2,20 @@ package domain
 
 type User struct {
 	UserID      string
-	DailySlash  dailySlashGame
-	Connections connectionGame
-	GuessTheNPC guessTheNpcGame
-	Hangman     hangmanGame
+	DailySlash  DailySlashGame
+	Connections ConnectionGame
+	GuessTheNPC GuessTheNpcGame
+	Hangman     HangmanGame
 }
 
-type game struct {
+type Game struct {
 	Guesses  []int // default: []
 	HasWon   bool  // default: false
 	Position int   // default: -1
 }
 
-type dailySlashGame struct {
-	Game   game
+type DailySlashGame struct {
+	Game   Game
 	Checks []WeaponChecks
 }
 
@@ -36,17 +36,17 @@ type WeaponChecks struct {
 	Obtained   int
 }
 
-type connectionGame struct {
-	Game     game
+type ConnectionGame struct {
+	Game     Game
 	Attempts int
 }
 
-type guessTheNpcGame struct {
-	Game        game
+type GuessTheNpcGame struct {
+	Game        Game
 	GuessedName string
 }
 
-type hangmanGame struct {
-	Game     game
+type HangmanGame struct {
+	Game     Game
 	Attempts int
 }
