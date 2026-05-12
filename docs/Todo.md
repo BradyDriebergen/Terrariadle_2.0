@@ -22,9 +22,10 @@
 
 **Backend changes**
 - [x] Update database package to use dependency injection
+- [ ] Split up `server` package for `handler` + `service`
+- [ ] Create `domain` package for shared types
+- [ ] Add time functions to the `job` package
 - [ ] Create `repo` package to replace `models` functionality
-    - [ ] Updating game data
-    - [ ] Updating user data via 30 second intervals
 - [ ] Implement in-memory guess store with periodic flush
 - [ ] Change backend guess counts to use web-sockets
 - [ ] Go through backend and finalize structure
