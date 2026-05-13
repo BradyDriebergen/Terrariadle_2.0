@@ -60,6 +60,9 @@ Terrariadle/
     - [ ] Svelte promotions
 - [ ] Add page for contacting support
 - [ ] Add monitering for better analytics
+- [ ] Update categories data
+    - [ ] Add more categories
+    - [ ] Update the options to contain only 4 options
 
 **Future nice to haves:**
 
