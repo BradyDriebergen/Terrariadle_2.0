@@ -8,6 +8,7 @@
     - [ ] Create front-end components for game
     - [ ] Integrate backend and front-end
 - [x] Update go and npm packages
+- [ ] Updating flying enemies in categories and fix 'Fultures'
 
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge
