@@ -2,38 +2,40 @@ package repo
 
 import "time"
 
-type gameData struct {
-	DailySlash    weaponData        `bson:"dailySlash"`
-	Connections   connectionsData   `bson:"connections"`
-	GuessTheNpc   npcData           `bson:"guessTheNpc"`
-	Hangman       hangmanData       `bson:"hangman"`
-	GuessCounts   playerGuessCounts `bson:"guessCounts"`
-	ResetTime     time.Time         `bson:"resetTime"`
-	NextResetTime time.Time         `bson:"nextResetTime"`
+type GameData struct {
+	DailySlash    WeaponData         `bson:"dailySlash"`
+	Connections   []ConnectionOption `bson:"connections"`
+	GuessTheNpc   NpcData            `bson:"guessTheNpc"`
+	Hangman       HangmanData        `bson:"hangman"`
+	GuessCounts   PlayerGuessCounts  `bson:"guessCounts"`
+	ResetTime     time.Time          `bson:"resetTime"`
+	NextResetTime time.Time          `bson:"nextResetTime"`
 }
 
-type playerGuessCounts struct {
-	DailySlashCount  int `bson:"dailySlashCount"`
-	ConnectionsCount int `bson:"connectionsCount"`
-	GuessTheNpcCount int `bson:"guessTheNpcCount"`
-	HangmanCount     int `bson:"hangmanCount"`
-}
-
-type weaponData struct {
+type WeaponData struct {
 	CurrentWeaponID int `bson:"currentWeaponId"`
 	PrevWeaponID    int `bson:"prevWeaponId"`
 }
 
-type connectionsData struct {
-	CategoryIDs []int `bson:"categoryIds"`
+type ConnectionOption struct {
+	Option     string `bson:"option"`
+	CategoryID int    `bson:"categoryId"`
 }
 
-type npcData struct {
-	ID    int      `bson:"id"`
-	Quote string   `bson:"quote"`
-	Names []string `bson:"names"`
+type NpcData struct {
+	NpcID       int      `bson:"npcId"`
+	Quote       string   `bson:"quote"`
+	Name        string   `bson:"name"`
+	NameOptions []string `bson:"names"`
 }
 
-type hangmanData struct {
-	ID int `bson:"id"`
+type HangmanData struct {
+	EnemyID int `bson:"enemyId"`
+}
+
+type PlayerGuessCounts struct {
+	DailySlashCount  int `bson:"dailySlashCount"`
+	ConnectionsCount int `bson:"connectionsCount"`
+	GuessTheNpcCount int `bson:"guessTheNpcCount"`
+	HangmanCount     int `bson:"hangmanCount"`
 }
