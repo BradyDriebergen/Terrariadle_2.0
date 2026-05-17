@@ -2,7 +2,7 @@ package repo
 
 import "time"
 
-type GameData struct {
+type AnswerData struct {
 	DailySlash    WeaponData         `bson:"dailySlash"`
 	Connections   []ConnectionOption `bson:"connections"`
 	GuessTheNpc   NpcData            `bson:"guessTheNpc"`

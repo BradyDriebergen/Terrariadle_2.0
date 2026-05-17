@@ -9,7 +9,7 @@ type Npc struct {
 }
 
 type SearchNpcResult struct {
-	NpcId int
+	NpcID int
 	Name  string
 	Path  string
 }

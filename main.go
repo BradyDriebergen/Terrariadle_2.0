@@ -34,17 +34,41 @@ func main() {
 
 	fmt.Print("Database connected")
 
-	ur := repo.NewUserRepo(mongoDB)
+	// ur := repo.NewUserRepo(mongoDB)
+
+	// ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	// defer cancel()
+
+	// user, err := ur.GetUser(ctx, "test")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// fmt.Print(user)
+
+	// ar := repo.NewAnswerRepo(mongoDB)
+
+	// ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	// defer cancel()
+
+	// answers, err := ar.GetAnswerData(ctx)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// fmt.Printf("\n%+v\n", answers)
+
+	cr := repo.NewCatalogRepo(mongoDB)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	user, err := ur.GetUser(ctx, "test")
+	result, err := cr.GetEnemies(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Print(user)
+	fmt.Printf("\n%+v\n", result)
 
 	// // Initialize atomicstore
 	// store.InitializeStoreFromJson()

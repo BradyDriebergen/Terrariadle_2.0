@@ -20,7 +20,7 @@ type WeaponInfo struct {
 }
 
 type SearchWeaponResult struct {
-	WeaponId int
+	WeaponID int
 	Name     string
 	Path     string
 }

@@ -48,6 +48,23 @@ func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filt
 	return &result, nil
 }
 
+func GetAll[T any](ctx context.Context, m *MongoDB, collectionName string) ([]T, error) {
+	collection := m.client.Database(m.dbName).Collection(collectionName)
+
+	cursor, err := collection.Find(ctx, bson.M{})
+	if err != nil {
+		return nil, fmt.Errorf("failed to query %s: %w", collectionName, err)
+	}
+	defer cursor.Close(ctx)
+
+	var result []T
+	if err := cursor.All(ctx, &result); err != nil {
+		return nil, fmt.Errorf("failed to decode %s: %w", collectionName, err)
+	}
+
+	return result, nil
+}
+
 func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter Filter, update any) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 
