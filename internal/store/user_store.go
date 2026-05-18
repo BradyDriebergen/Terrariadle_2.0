@@ -2,6 +2,7 @@ package store
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"sync"
 	"terrariadle-backend/internal/domain"
@@ -9,22 +10,22 @@ import (
 )
 
 type UserStore struct {
-	mu       sync.RWMutex
-	cache    map[string]domain.User
-	userRepo *repo.UserRepo
+	mu        sync.RWMutex
+	userCache map[string]domain.User
+	userRepo  *repo.UserRepo
 }
 
 func NewUserStore(userRepo *repo.UserRepo) *UserStore {
 	return &UserStore{
-		cache:    make(map[string]domain.User),
-		userRepo: userRepo,
+		userCache: make(map[string]domain.User),
+		userRepo:  userRepo,
 	}
 }
 
 // GetUser returns from cache if present, otherwise fetches from repo and caches.
 func (s *UserStore) GetUser(ctx context.Context, userID string) (domain.User, error) {
 	s.mu.RLock()
-	if user, ok := s.cache[userID]; ok {
+	if user, ok := s.userCache[userID]; ok {
 		s.mu.RUnlock()
 		return user, nil
 	}
@@ -32,38 +33,69 @@ func (s *UserStore) GetUser(ctx context.Context, userID string) (domain.User, er
 
 	user, err := s.userRepo.GetUser(ctx, userID)
 	if err != nil {
-		return domain.User{}, fmt.Errorf("store: GetUser: %w", err)
+		if errors.Is(err, repo.ErrNotFound) {
+			// If no user is found, make a new one and put it in the cache
+			user = createNewUser(userID)
+		} else {
+			return domain.User{}, fmt.Errorf("store: GetUser: %w", err)
+		}
 	}
 
 	s.mu.Lock()
-	s.cache[userID] = user
+	s.userCache[userID] = user
 	s.mu.Unlock()
 
 	return user, nil
 }
 
-// UpsertUser writes through to the repo and updates the cache.
 func (s *UserStore) UpsertUser(ctx context.Context, user *domain.User) error {
 	if err := s.userRepo.UpsertUserData(ctx, user); err != nil {
 		return fmt.Errorf("store: UpsertUser: %w", err)
 	}
 
 	s.mu.Lock()
-	s.cache[user.UserID] = *user
+	s.userCache[user.UserID] = *user
 	s.mu.Unlock()
 
 	return nil
 }
 
-// DropAllUsers clears the repo and wipes the cache.
 func (s *UserStore) DropAllUsers(ctx context.Context) error {
 	if err := s.userRepo.DropAllUserData(ctx); err != nil {
 		return fmt.Errorf("store: DropAllUsers: %w", err)
 	}
 
 	s.mu.Lock()
-	s.cache = make(map[string]domain.User)
+	s.userCache = make(map[string]domain.User)
 	s.mu.Unlock()
 
 	return nil
+}
+
+func createNewUser(userID string) domain.User {
+	emptyGame := domain.Game{
+		Guesses:  []int{},
+		HasWon:   false,
+		Position: 0,
+	}
+
+	return domain.User{
+		UserID: userID,
+		DailySlash: domain.DailySlashGame{
+			Game:   emptyGame,
+			Checks: []domain.WeaponChecks{},
+		},
+		Connections: domain.ConnectionGame{
+			Game:     emptyGame,
+			Attempts: 4,
+		},
+		GuessTheNPC: domain.GuessTheNpcGame{
+			Game:        emptyGame,
+			GuessedName: "",
+		},
+		Hangman: domain.HangmanGame{
+			Game:     emptyGame,
+			Attempts: 6,
+		},
+	}
 }

@@ -1,6 +1,10 @@
 package repo
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
+import (
+	"errors"
+
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
 
 type userData struct {
 	id          primitive.ObjectID `bson:"_id,omitempty"`
@@ -46,3 +50,6 @@ type hangmanGame struct {
 	game     game `bson:"game"`
 	attempts int  `bson:"attempts"`
 }
+
+// Error for not found documents
+var ErrNotFound = errors.New("not found")

@@ -1,11 +1,15 @@
 package domain
 
+import "time"
+
 type User struct {
 	UserID      string
 	DailySlash  DailySlashGame
 	Connections ConnectionGame
 	GuessTheNPC GuessTheNpcGame
 	Hangman     HangmanGame
+	LastSeen    time.Time
+	Dirty       bool
 }
 
 type Game struct {

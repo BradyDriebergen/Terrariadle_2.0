@@ -1,6 +1,9 @@
 package repo
 
-import "terrariadle-backend/internal/domain"
+import (
+	"terrariadle-backend/internal/domain"
+	"time"
+)
 
 func (u *userData) toDomain() domain.User {
 	checks := make([]domain.WeaponChecks, len(u.dailySlash.checks))
@@ -34,6 +37,8 @@ func (u *userData) toDomain() domain.User {
 			Game:     toGameDomain(u.hangman.game),
 			Attempts: u.hangman.attempts,
 		},
+		LastSeen: time.Now(),
+		Dirty:    false,
 	}
 }
 

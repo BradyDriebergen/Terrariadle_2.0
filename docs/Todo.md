@@ -2,7 +2,7 @@
 
 **Next items needed**
 - [x] Move data to Atlas
-- [ ] Change backend to pull from Atlas rather than JSON
+- [x] Change backend to pull from Atlas rather than JSON
 - [ ] Create page for new game
     - [ ] Plan and Implement Wordaria backend for minigame
     - [ ] Create front-end components for game
@@ -24,9 +24,9 @@
 **Backend changes**
 - [x] Update database package to use dependency injection
 - [ ] Split up `server` package for `handler` + `service`
-- [ ] Create `domain` package for shared types
+- [x] Create `domain` package for shared types
 - [ ] Add time functions to the `job` package
-- [ ] Create `repo` package to replace `models` functionality
+- [x] Create `repo` package to replace `models` functionality
 - [ ] Implement in-memory guess store with periodic flush
 - [ ] Change backend guess counts to use web-sockets
 - [ ] Go through backend and finalize structure

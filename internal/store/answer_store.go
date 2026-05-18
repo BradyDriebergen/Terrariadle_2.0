@@ -12,7 +12,7 @@ type AnswerStore struct {
 	answerRepo   *repo.AnswerRepo
 	catalogStore *CatalogStore
 	mu           sync.RWMutex
-	answerData   domain.DailyAnswers
+	answerCache  domain.DailyAnswers
 }
 
 func NewAnswerStore(ctx context.Context, answerRepo *repo.AnswerRepo, catalogStore *CatalogStore) (*AnswerStore, error) {
@@ -29,14 +29,14 @@ func NewAnswerStore(ctx context.Context, answerRepo *repo.AnswerRepo, catalogSto
 	return &AnswerStore{
 		answerRepo:   answerRepo,
 		catalogStore: catalogStore,
-		answerData:   answers,
+		answerCache:  answers,
 	}, nil
 }
 
 func (s *AnswerStore) GetAnswers() domain.DailyAnswers {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
-	return s.answerData
+	return s.answerCache
 }
 
 func (s *AnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error {
@@ -54,7 +54,7 @@ func (s *AnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnsw
 		return fmt.Errorf("set-answer: upserting answers: %w", err)
 	}
 
-	s.answerData = answer
+	s.answerCache = answer
 
 	return nil
 }

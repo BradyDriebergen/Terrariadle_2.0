@@ -2,6 +2,7 @@ package repo
 
 import (
 	"context"
+	"errors"
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/domain"
 )
@@ -20,6 +21,9 @@ func NewUserRepo(db *db.MongoDB) *UserRepo {
 func (r *UserRepo) GetUser(ctx context.Context, userId string) (domain.User, error) {
 	user, err := db.FindOne[userData](ctx, r.database, "user_data", db.Filter{"userId": userId})
 	if err != nil {
+		if errors.Is(err, db.ErrNotFound) {
+			return domain.User{}, ErrNotFound
+		}
 		return domain.User{}, err
 	}
 
