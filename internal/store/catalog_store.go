@@ -1,6 +1,8 @@
 package store
 
 import (
+	"context"
+	"fmt"
 	"maps"
 	"slices"
 	"terrariadle-backend/internal/domain"
@@ -14,6 +16,40 @@ type CatalogStore struct {
 	categoryCache map[int]domain.Category
 	npcCache      map[int]domain.Npc
 	enemyCache    map[int]domain.Enemy
+}
+
+func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*CatalogStore, error) {
+	weaponData, err := catalogRepo.GetWeapons(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	weapons := indexByID(weaponData, func(w domain.Weapon) int { return w.ID })
+
+	categoryData, err := catalogRepo.GetCategories(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	categories := indexByID(categoryData, func(c domain.Category) int { return c.ID })
+
+	npcData, err := catalogRepo.GetNpcs(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	npcs := indexByID(npcData, func(n domain.Npc) int { return n.ID })
+
+	enemyData, err := catalogRepo.GetEnemies(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	enemies := indexByID(enemyData, func(e domain.Enemy) int { return e.ID })
+
+	return &CatalogStore{
+		catalogRepo:   catalogRepo,
+		weaponCache:   weapons,
+		categoryCache: categories,
+		npcCache:      npcs,
+		enemyCache:    enemies,
+	}, nil
 }
 
 func (s *CatalogStore) GetWeapons() []domain.Weapon {
@@ -50,4 +86,12 @@ func (s *CatalogStore) GetEnemies() []domain.Enemy {
 func (s *CatalogStore) GetEnemy(id int) (domain.Enemy, bool) {
 	e, ok := s.enemyCache[id]
 	return e, ok
+}
+
+func indexByID[T any](items []T, id func(T) int) map[int]T {
+	m := make(map[int]T, len(items))
+	for _, item := range items {
+		m[id(item)] = item
+	}
+	return m
 }
