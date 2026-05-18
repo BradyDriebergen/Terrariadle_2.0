@@ -1,6 +1,7 @@
 package store
 
 import (
+	"context"
 	"fmt"
 	"sync"
 	"terrariadle-backend/internal/domain"
@@ -11,16 +12,34 @@ type AnswerStore struct {
 	answerRepo   *repo.AnswerRepo
 	catalogStore *CatalogStore
 	mu           sync.RWMutex
-	answerData   repo.AnswerData
+	answerData   domain.DailyAnswers
 }
 
-func (s *AnswerStore) GetAnswer() (domain.DailyAnswers, error) {
+func NewAnswerStore(ctx context.Context, answerRepo *repo.AnswerRepo, catalogStore *CatalogStore) (*AnswerStore, error) {
+	answerData, err := answerRepo.GetAnswerData(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
+	}
+
+	answers, err := toDomain(answerData, catalogStore)
+	if err != nil {
+		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
+	}
+
+	return &AnswerStore{
+		answerRepo:   answerRepo,
+		catalogStore: catalogStore,
+		answerData:   answers,
+	}, nil
+}
+
+func (s *AnswerStore) GetAnswers() domain.DailyAnswers {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
-	return toDomain(s.answerData, s.catalogStore)
+	return s.answerData
 }
 
-func (s *AnswerStore) SetAnswer(answer domain.DailyAnswers) error {
+func (s *AnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error {
 	ad := fromDomain(answer)
 
 	// Validate that all IDs resolve before committing
@@ -30,29 +49,35 @@ func (s *AnswerStore) SetAnswer(answer domain.DailyAnswers) error {
 
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	s.answerData = ad
+
+	if err := s.answerRepo.UpsertAnswerData(ctx, &ad); err != nil {
+		return fmt.Errorf("set-answer: upserting answers: %w", err)
+	}
+
+	s.answerData = answer
+
 	return nil
 }
 
 func toDomain(ad repo.AnswerData, cs *CatalogStore) (domain.DailyAnswers, error) {
 	currentWeapon, ok := cs.GetWeapon(ad.DailySlash.CurrentWeaponID)
 	if !ok {
-		return domain.DailyAnswers{}, fmt.Errorf("set-answer: failed to find current weapon with id: %v", ad.DailySlash.CurrentWeaponID)
+		return domain.DailyAnswers{}, fmt.Errorf("failed to find current weapon with id: %v", ad.DailySlash.CurrentWeaponID)
 	}
 
 	prevWeapon, ok := cs.GetWeapon(ad.DailySlash.PrevWeaponID)
 	if !ok {
-		return domain.DailyAnswers{}, fmt.Errorf("set-answer: failed to find previous weapon with id: %v", ad.DailySlash.PrevWeaponID)
+		return domain.DailyAnswers{}, fmt.Errorf("failed to find previous weapon with id: %v", ad.DailySlash.PrevWeaponID)
 	}
 
 	npc, ok := cs.GetNpc(ad.GuessTheNpc.NpcID)
 	if !ok {
-		return domain.DailyAnswers{}, fmt.Errorf("set-answer: failed to find npc with id: %v", ad.GuessTheNpc.NpcID)
+		return domain.DailyAnswers{}, fmt.Errorf("failed to find npc with id: %v", ad.GuessTheNpc.NpcID)
 	}
 
 	enemy, ok := cs.GetEnemy(ad.Hangman.EnemyID)
 	if !ok {
-		return domain.DailyAnswers{}, fmt.Errorf("set-answer: failed to find enemy with id: %v", ad.Hangman.EnemyID)
+		return domain.DailyAnswers{}, fmt.Errorf("failed to find enemy with id: %v", ad.Hangman.EnemyID)
 	}
 
 	return domain.DailyAnswers{
@@ -60,7 +85,7 @@ func toDomain(ad repo.AnswerData, cs *CatalogStore) (domain.DailyAnswers, error)
 			CurrentWeapon: currentWeapon,
 			PrevWeapon:    prevWeapon,
 		},
-		Connections: []domain.ConnectionAnswer{},
+		Connections: optionsToAnswers(ad.Connections),
 		GuessTheNpc: domain.NpcAnswer{
 			NpcID:       npc.ID,
 			Npc:         npc.NPC,
@@ -88,7 +113,7 @@ func fromDomain(da domain.DailyAnswers) repo.AnswerData {
 			CurrentWeaponID: da.DailySlash.CurrentWeapon.ID,
 			PrevWeaponID:    da.DailySlash.PrevWeapon.ID,
 		},
-		Connections: []repo.ConnectionOption{},
+		Connections: answersToOptions(da.Connections),
 		GuessTheNpc: repo.NpcData{
 			NpcID:       da.GuessTheNpc.NpcID,
 			Quote:       da.GuessTheNpc.Quote,
@@ -107,4 +132,26 @@ func fromDomain(da domain.DailyAnswers) repo.AnswerData {
 		ResetTime:     da.ResetTime,
 		NextResetTime: da.NextResetTime,
 	}
+}
+
+func answersToOptions(answers []domain.ConnectionAnswer) []repo.ConnectionOption {
+	options := make([]repo.ConnectionOption, len(answers))
+	for i, a := range answers {
+		options[i] = repo.ConnectionOption{
+			Option:     a.Option,
+			CategoryID: a.CategoryID,
+		}
+	}
+	return options
+}
+
+func optionsToAnswers(options []repo.ConnectionOption) []domain.ConnectionAnswer {
+	answers := make([]domain.ConnectionAnswer, len(options))
+	for i, o := range options {
+		answers[i] = domain.ConnectionAnswer{
+			Option:     o.Option,
+			CategoryID: o.CategoryID,
+		}
+	}
+	return answers
 }
