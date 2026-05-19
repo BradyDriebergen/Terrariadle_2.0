@@ -26,7 +26,6 @@ func (r *UserRepo) GetUser(ctx context.Context, userId string) (domain.User, err
 		}
 		return domain.User{}, err
 	}
-
 	return user.toDomain(), nil
 }
 

@@ -130,5 +130,7 @@ func createNewUser(userID string) domain.User {
 			Game:     emptyGame,
 			Attempts: 6,
 		},
+		LastSeen: time.Now(),
+		Dirty:    true,
 	}
 }

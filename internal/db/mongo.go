@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"time"
 
@@ -42,6 +43,9 @@ func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filt
 
 	err := collection.FindOne(ctx, bson.M(filter)).Decode(&result)
 	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return nil, ErrNotFound
+		}
 		return nil, fmt.Errorf("findone %s: %w", collectionName, err)
 	}
 

@@ -7,6 +7,7 @@ import (
 	"os"
 	"terrariadle-backend/internal/db"
 	"terrariadle-backend/internal/repo"
+	"terrariadle-backend/internal/store"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -35,16 +36,17 @@ func main() {
 	fmt.Print("Database connected")
 
 	ur := repo.NewUserRepo(mongoDB)
+	us := store.NewUserStore(ur)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	user, err := ur.GetUser(ctx, "test")
+	user, err := us.GetUser(ctx, "test")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Print(user)
+	fmt.Printf("%+v", user)
 
 	// ar := repo.NewAnswerRepo(mongoDB)
 

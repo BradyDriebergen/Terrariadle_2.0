@@ -1,40 +1,40 @@
 package repo
 
 type weapon struct {
-	id           int        `bson:"id"`
-	name         string     `bson:"name"`
-	weaponType   string     `bson:"weapon-type"`
-	modeObtained string     `bson:"mode-obtained"`
-	info         weaponInfo `bson:"info"`
+	ID           int        `bson:"id"`
+	Name         string     `bson:"name"`
+	WeaponType   string     `bson:"weapon-type"`
+	ModeObtained string     `bson:"mode-obtained"`
+	Info         weaponInfo `bson:"info"`
 }
 
 type weaponInfo struct {
-	imagePath  string   `bson:"image-path"`
-	damageType string   `bson:"damage-type"`
-	damage     int      `bson:"damage"`
-	useTime    string   `bson:"use-time"`
-	rarity     string   `bson:"rarity"`
-	operation  string   `bson:"operation"`
-	material   string   `bson:"material"`
-	obtained   []string `bson:"obtained"`
+	ImagePath  string   `bson:"image-path"`
+	DamageType string   `bson:"damage-type"`
+	Damage     int      `bson:"damage"`
+	UseTime    string   `bson:"use-time"`
+	Rarity     string   `bson:"rarity"`
+	Operation  string   `bson:"operation"`
+	Material   string   `bson:"material"`
+	Obtained   []string `bson:"obtained"`
 }
 
 type category struct {
-	id       int      `bson:"id"`
-	category string   `bson:"category"`
-	options  []string `bson:"options"`
+	ID       int      `bson:"id"`
+	Category string   `bson:"category"`
+	Options  []string `bson:"options"`
 }
 
 type npc struct {
-	id      int      `bson:"id"`
-	npc     string   `bson:"npc"`
-	npcPath string   `bson:"npc-path"`
-	quotes  []string `bson:"quotes"`
-	names   []string `bson:"names"`
+	ID      int      `bson:"id"`
+	NPC     string   `bson:"npc"`
+	NpcPath string   `bson:"npc-path"`
+	Quotes  []string `bson:"quotes"`
+	Names   []string `bson:"names"`
 }
 
 type enemy struct {
-	id        int    `bson:"id"`
-	name      string `bson:"name"`
-	imagePath string `bson:"image_path"`
+	ID        int    `bson:"id"`
+	Name      string `bson:"name"`
+	ImagePath string `bson:"image_path"`
 }

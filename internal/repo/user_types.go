@@ -7,48 +7,48 @@ import (
 )
 
 type userData struct {
-	id          primitive.ObjectID `bson:"_id,omitempty"`
-	userID      string             `bson:"userId,omitempty"`
-	dailySlash  dailySlashGame     `bson:"dailySlash,omitempty"`
-	connections connectionGame     `bson:"connections,omitempty"`
-	guessTheNPC guessTheNpcGame    `bson:"guessTheNpc,omitempty"`
-	hangman     hangmanGame        `bson:"hangman,omitempty"`
+	ID          primitive.ObjectID `bson:"_id,omitempty"`
+	UserID      string             `bson:"userId,omitempty"`
+	DailySlash  dailySlashGame     `bson:"dailySlash,omitempty"`
+	Connections connectionGame     `bson:"connections,omitempty"`
+	GuessTheNPC guessTheNpcGame    `bson:"guessTheNpc,omitempty"`
+	Hangman     hangmanGame        `bson:"hangman,omitempty"`
 }
 
 type game struct {
-	guesses  []int `bson:"guesses,omitempty"`
-	hasWon   bool  `bson:"hasWon,omitempty"`
-	position int   `bson:"position,omitempty"`
+	Guesses  []int `bson:"guesses,omitempty"`
+	HasWon   bool  `bson:"hasWon,omitempty"`
+	Position int   `bson:"position,omitempty"`
 }
 
 type dailySlashGame struct {
-	game   game           `bson:"game"`
-	checks []weaponChecks `bson:"checks"`
+	Game   game           `bson:"game"`
+	Checks []weaponChecks `bson:"checks"`
 }
 
 type weaponChecks struct {
-	damageType bool `bson:"damageType"`
-	damage     int  `bson:"damage"`
-	useTime    int  `bson:"useTime"`
-	rarity     int  `bson:"rarity"`
-	operation  bool `bson:"operation"`
-	material   bool `bson:"material"`
-	obtained   int  `bson:"obtained"`
+	DamageType bool `bson:"damageType"`
+	Damage     int  `bson:"damage"`
+	UseTime    int  `bson:"useTime"`
+	Rarity     int  `bson:"rarity"`
+	Operation  bool `bson:"operation"`
+	Material   bool `bson:"material"`
+	Obtained   int  `bson:"obtained"`
 }
 
 type connectionGame struct {
-	game     game `bson:"game"`
-	attempts int  `bson:"attempts"`
+	Game     game `bson:"game"`
+	Attempts int  `bson:"attempts"`
 }
 
 type guessTheNpcGame struct {
-	game        game   `bson:"game"`
-	guessedName string `bson:"guessedName"`
+	Game        game   `bson:"game"`
+	GuessedName string `bson:"guessedName"`
 }
 
 type hangmanGame struct {
-	game     game `bson:"game"`
-	attempts int  `bson:"attempts"`
+	Game     game `bson:"game"`
+	Attempts int  `bson:"attempts"`
 }
 
 // Error for not found documents
