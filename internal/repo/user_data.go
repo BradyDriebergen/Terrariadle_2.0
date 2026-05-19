@@ -30,8 +30,8 @@ func (r *UserRepo) GetUser(ctx context.Context, userId string) (domain.User, err
 	return user.toDomain(), nil
 }
 
-func (r *UserRepo) UpsertUserData(ctx context.Context, user *domain.User) error {
-	err := db.Upsert(ctx, r.database, "user_data", db.Filter{"userId": user.UserID}, fromDomain(*user))
+func (r *UserRepo) UpsertUserData(ctx context.Context, user domain.User) error {
+	err := db.Upsert(ctx, r.database, "user_data", db.Filter{"userId": user.UserID}, fromDomain(user))
 	return err
 }
 

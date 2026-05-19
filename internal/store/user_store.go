@@ -7,6 +7,7 @@ import (
 	"sync"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/repo"
+	"time"
 )
 
 type UserStore struct {
@@ -48,13 +49,13 @@ func (s *UserStore) GetUser(ctx context.Context, userID string) (domain.User, er
 	return user, nil
 }
 
-func (s *UserStore) UpsertUser(ctx context.Context, user *domain.User) error {
+func (s *UserStore) UpsertUser(ctx context.Context, user domain.User) error {
 	if err := s.userRepo.UpsertUserData(ctx, user); err != nil {
 		return fmt.Errorf("store: UpsertUser: %w", err)
 	}
 
 	s.mu.Lock()
-	s.userCache[user.UserID] = *user
+	s.userCache[user.UserID] = user
 	s.mu.Unlock()
 
 	return nil
@@ -70,6 +71,38 @@ func (s *UserStore) DropAllUsers(ctx context.Context) error {
 	s.mu.Unlock()
 
 	return nil
+}
+
+func (s *UserStore) FlushDirty(ctx context.Context) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	for userID, entry := range s.userCache {
+		if !entry.Dirty {
+			continue
+		}
+
+		if err := s.userRepo.UpsertUserData(ctx, entry); err != nil {
+			return fmt.Errorf("store: flush-dirty: %w", err)
+		}
+
+		entry.Dirty = false
+		s.userCache[userID] = entry
+	}
+
+	return nil
+}
+
+func (s *UserStore) EvictStale() {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	cutoff := time.Now().Add(-1 * time.Hour)
+	for userID, entry := range s.userCache {
+		if entry.LastSeen.Before(cutoff) {
+			delete(s.userCache, userID)
+		}
+	}
 }
 
 func createNewUser(userID string) domain.User {
