@@ -7,7 +7,7 @@
     - [ ] Plan and Implement Wordaria backend for minigame
     - [ ] Create front-end components for game
     - [ ] Integrate backend and front-end
-- [x] Update go and npm packages
+- [ ] Update go and npm packages
 - [ ] Updating flying enemies in categories and fix 'Fultures'
 
 **Frontend changes**
@@ -25,9 +25,8 @@
 - [x] Update database package to use dependency injection
 - [ ] Split up `server` package for `handler` + `service`
 - [x] Create `domain` package for shared types
-- [ ] Add time functions to the `job` package
 - [x] Create `repo` package to replace `models` functionality
-- [ ] Implement in-memory guess store with periodic flush
+- [x] Implement in-memory guess store with periodic flush
 - [ ] Change backend guess counts to use web-sockets
 - [ ] Go through backend and finalize structure
 
