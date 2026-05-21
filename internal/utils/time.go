@@ -2,7 +2,7 @@ package utils
 
 import "time"
 
-// Get's the next midnight from now
+// Returns the start of the next day in t's location.
 func NextMidnight(t time.Time) time.Time {
 	// Midnight at the *start* of the next day in the same location.
 	y, m, d := t.Date()
@@ -22,5 +22,5 @@ func TimeUntilNextMidnightFromNow() time.Duration {
 
 // Used for testing, get's the next ten seconds
 func NextShortTime(t time.Time) time.Time {
-	return t.Truncate(10 * time.Second).Add(10 * 60 * time.Second)
+	return t.Truncate(10 * time.Second).Add(10 * time.Second)
 }
