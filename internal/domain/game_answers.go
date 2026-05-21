@@ -4,7 +4,7 @@ import "time"
 
 type DailyAnswers struct {
 	DailySlash    WeaponAnswer
-	Connections   []ConnectionAnswer
+	Connections   ConnectionAnswer
 	GuessTheNpc   NpcAnswer
 	Hangman       HangmanAnswer
 	GuessCounts   PlayerGuessCounts
@@ -18,6 +18,11 @@ type WeaponAnswer struct {
 }
 
 type ConnectionAnswer struct {
+	CategoryIDs []int
+	Options     []ConnectionOption
+}
+
+type ConnectionOption struct {
 	Option     string
 	CategoryID int
 }

@@ -85,7 +85,10 @@ func toDomain(ad repo.AnswerData, cs *CatalogStore) (domain.DailyAnswers, error)
 			CurrentWeapon: currentWeapon,
 			PrevWeapon:    prevWeapon,
 		},
-		Connections: optionsToAnswers(ad.Connections),
+		Connections: domain.ConnectionAnswer{
+			CategoryIDs: ad.Connections.CategoryIDs,
+			Options:     optionsToAnswers(ad.Connections.Options),
+		},
 		GuessTheNpc: domain.NpcAnswer{
 			NpcID:       npc.ID,
 			Npc:         npc.NPC,
@@ -113,7 +116,10 @@ func fromDomain(da domain.DailyAnswers) repo.AnswerData {
 			CurrentWeaponID: da.DailySlash.CurrentWeapon.ID,
 			PrevWeaponID:    da.DailySlash.PrevWeapon.ID,
 		},
-		Connections: answersToOptions(da.Connections),
+		Connections: repo.ConnectionData{
+			CategoryIDs: da.Connections.CategoryIDs,
+			Options:     answersToOptions(da.Connections.Options),
+		},
 		GuessTheNpc: repo.NpcData{
 			NpcID:       da.GuessTheNpc.NpcID,
 			Quote:       da.GuessTheNpc.Quote,
@@ -134,7 +140,7 @@ func fromDomain(da domain.DailyAnswers) repo.AnswerData {
 	}
 }
 
-func answersToOptions(answers []domain.ConnectionAnswer) []repo.ConnectionOption {
+func answersToOptions(answers []domain.ConnectionOption) []repo.ConnectionOption {
 	options := make([]repo.ConnectionOption, len(answers))
 	for i, a := range answers {
 		options[i] = repo.ConnectionOption{
@@ -145,10 +151,10 @@ func answersToOptions(answers []domain.ConnectionAnswer) []repo.ConnectionOption
 	return options
 }
 
-func optionsToAnswers(options []repo.ConnectionOption) []domain.ConnectionAnswer {
-	answers := make([]domain.ConnectionAnswer, len(options))
+func optionsToAnswers(options []repo.ConnectionOption) []domain.ConnectionOption {
+	answers := make([]domain.ConnectionOption, len(options))
 	for i, o := range options {
-		answers[i] = domain.ConnectionAnswer{
+		answers[i] = domain.ConnectionOption{
 			Option:     o.Option,
 			CategoryID: o.CategoryID,
 		}

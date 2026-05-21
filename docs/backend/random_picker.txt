@@ -13,11 +13,6 @@ import (
 // ---------------------------------------------
 
 // Shuffles a slice (no reference needed)
-func shuffle[T any](list []T, rnd *rand.Rand) {
-	rnd.Shuffle(len(list), func(i, j int) {
-		list[i], list[j] = list[j], list[i]
-	})
-}
 
 // ---------------------------------------------
 // Get random guess data methods

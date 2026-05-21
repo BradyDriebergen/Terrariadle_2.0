@@ -27,6 +27,7 @@
 - [x] Create `domain` package for shared types
 - [x] Create `repo` package to replace `models` functionality
 - [x] Implement in-memory guess store with periodic flush
+- [x] Fix jobs after implementing domain and store
 - [ ] Change backend guess counts to use web-sockets
 - [ ] Go through backend and finalize structure
 

@@ -23,11 +23,17 @@ func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*Catal
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
 	}
+	if len(weaponData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no weapons found")
+	}
 	weapons := indexByID(weaponData, func(w domain.Weapon) int { return w.ID })
 
 	categoryData, err := catalogRepo.GetCategories(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	if len(categoryData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no categories found")
 	}
 	categories := indexByID(categoryData, func(c domain.Category) int { return c.ID })
 
@@ -35,11 +41,17 @@ func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*Catal
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
 	}
+	if len(npcData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no npcs found")
+	}
 	npcs := indexByID(npcData, func(n domain.Npc) int { return n.ID })
 
 	enemyData, err := catalogRepo.GetEnemies(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	if len(enemyData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no enemies found")
 	}
 	enemies := indexByID(enemyData, func(e domain.Enemy) int { return e.ID })
 
