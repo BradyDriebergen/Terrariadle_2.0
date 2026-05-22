@@ -10,21 +10,29 @@ import (
 	"time"
 )
 
-type UserStore struct {
-	mu        sync.RWMutex
-	userCache map[string]domain.User
-	userRepo  *repo.UserRepo
+type UserStore interface {
+	GetUser(ctx context.Context, userID string) (domain.User, error)
+	UpsertUser(ctx context.Context, user domain.User) error
+	DropAllUsers(ctx context.Context) error
+	FlushDirty(ctx context.Context) error
+	EvictStale()
 }
 
-func NewUserStore(userRepo *repo.UserRepo) *UserStore {
-	return &UserStore{
+type CachedUserStore struct {
+	mu        sync.RWMutex
+	userCache map[string]domain.User
+	userRepo  repo.UserRepo
+}
+
+func NewUserStore(userRepo repo.UserRepo) *CachedUserStore {
+	return &CachedUserStore{
 		userCache: make(map[string]domain.User),
 		userRepo:  userRepo,
 	}
 }
 
 // GetUser returns from cache if present, otherwise fetches from repo and caches.
-func (s *UserStore) GetUser(ctx context.Context, userID string) (domain.User, error) {
+func (s *CachedUserStore) GetUser(ctx context.Context, userID string) (domain.User, error) {
 	s.mu.RLock()
 	if user, ok := s.userCache[userID]; ok {
 		s.mu.RUnlock()
@@ -49,7 +57,7 @@ func (s *UserStore) GetUser(ctx context.Context, userID string) (domain.User, er
 	return user, nil
 }
 
-func (s *UserStore) UpsertUser(ctx context.Context, user domain.User) error {
+func (s *CachedUserStore) UpsertUser(ctx context.Context, user domain.User) error {
 	if err := s.userRepo.UpsertUserData(ctx, user); err != nil {
 		return fmt.Errorf("store: UpsertUser: %w", err)
 	}
@@ -61,7 +69,7 @@ func (s *UserStore) UpsertUser(ctx context.Context, user domain.User) error {
 	return nil
 }
 
-func (s *UserStore) DropAllUsers(ctx context.Context) error {
+func (s *CachedUserStore) DropAllUsers(ctx context.Context) error {
 	if err := s.userRepo.DropAllUserData(ctx); err != nil {
 		return fmt.Errorf("store: DropAllUsers: %w", err)
 	}
@@ -73,7 +81,7 @@ func (s *UserStore) DropAllUsers(ctx context.Context) error {
 	return nil
 }
 
-func (s *UserStore) FlushDirty(ctx context.Context) error {
+func (s *CachedUserStore) FlushDirty(ctx context.Context) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -93,7 +101,7 @@ func (s *UserStore) FlushDirty(ctx context.Context) error {
 	return nil
 }
 
-func (s *UserStore) EvictStale() {
+func (s *CachedUserStore) EvictStale() {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 

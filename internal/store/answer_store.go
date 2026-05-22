@@ -8,14 +8,19 @@ import (
 	"terrariadle-backend/internal/repo"
 )
 
-type AnswerStore struct {
-	answerRepo   *repo.AnswerRepo
-	catalogStore *CatalogStore
+type AnswerStore interface {
+	GetAnswers() domain.DailyAnswers
+	UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error
+}
+
+type CachedAnswerStore struct {
+	answerRepo   repo.AnswerRepo
+	catalogStore CatalogStore
 	mu           sync.RWMutex
 	answerCache  domain.DailyAnswers
 }
 
-func NewAnswerStore(ctx context.Context, answerRepo *repo.AnswerRepo, catalogStore *CatalogStore) (*AnswerStore, error) {
+func NewAnswerStore(ctx context.Context, answerRepo repo.AnswerRepo, catalogStore CatalogStore) (*CachedAnswerStore, error) {
 	answerData, err := answerRepo.GetAnswerData(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
@@ -26,20 +31,20 @@ func NewAnswerStore(ctx context.Context, answerRepo *repo.AnswerRepo, catalogSto
 		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
 	}
 
-	return &AnswerStore{
+	return &CachedAnswerStore{
 		answerRepo:   answerRepo,
 		catalogStore: catalogStore,
 		answerCache:  answers,
 	}, nil
 }
 
-func (s *AnswerStore) GetAnswers() domain.DailyAnswers {
+func (s *CachedAnswerStore) GetAnswers() domain.DailyAnswers {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.answerCache
 }
 
-func (s *AnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error {
+func (s *CachedAnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error {
 	ad := fromDomain(answer)
 
 	// Validate that all IDs resolve before committing
@@ -59,7 +64,7 @@ func (s *AnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnsw
 	return nil
 }
 
-func toDomain(ad repo.AnswerData, cs *CatalogStore) (domain.DailyAnswers, error) {
+func toDomain(ad repo.AnswerData, cs CatalogStore) (domain.DailyAnswers, error) {
 	currentWeapon, ok := cs.GetWeapon(ad.DailySlash.CurrentWeaponID)
 	if !ok {
 		return domain.DailyAnswers{}, fmt.Errorf("failed to find current weapon with id: %v", ad.DailySlash.CurrentWeaponID)

@@ -9,16 +9,26 @@ import (
 	"terrariadle-backend/internal/repo"
 )
 
-type CatalogStore struct {
-	catalogRepo *repo.CatalogRepo
+type CatalogStore interface {
+	GetWeapons() []domain.Weapon
+	GetWeapon(id int) (domain.Weapon, bool)
+	GetCategories() []domain.Category
+	GetCategory(id int) (domain.Category, bool)
+	GetNpcs() []domain.Npc
+	GetNpc(id int) (domain.Npc, bool)
+	GetEnemies() []domain.Enemy
+	GetEnemy(id int) (domain.Enemy, bool)
+}
 
+type CachedCatalogStore struct {
+	catalogRepo   repo.CatalogRepo
 	weaponCache   map[int]domain.Weapon
 	categoryCache map[int]domain.Category
 	npcCache      map[int]domain.Npc
 	enemyCache    map[int]domain.Enemy
 }
 
-func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*CatalogStore, error) {
+func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*CachedCatalogStore, error) {
 	weaponData, err := catalogRepo.GetWeapons(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
@@ -55,7 +65,7 @@ func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*Catal
 	}
 	enemies := indexByID(enemyData, func(e domain.Enemy) int { return e.ID })
 
-	return &CatalogStore{
+	return &CachedCatalogStore{
 		catalogRepo:   catalogRepo,
 		weaponCache:   weapons,
 		categoryCache: categories,
@@ -64,38 +74,38 @@ func NewCatalogStore(ctx context.Context, catalogRepo *repo.CatalogRepo) (*Catal
 	}, nil
 }
 
-func (s *CatalogStore) GetWeapons() []domain.Weapon {
+func (s *CachedCatalogStore) GetWeapons() []domain.Weapon {
 	return slices.Collect(maps.Values(s.weaponCache))
 }
 
-func (s *CatalogStore) GetWeapon(id int) (domain.Weapon, bool) {
+func (s *CachedCatalogStore) GetWeapon(id int) (domain.Weapon, bool) {
 	w, ok := s.weaponCache[id]
 	return w, ok
 }
 
-func (s *CatalogStore) GetCategories() []domain.Category {
+func (s *CachedCatalogStore) GetCategories() []domain.Category {
 	return slices.Collect(maps.Values(s.categoryCache))
 }
 
-func (s *CatalogStore) GetCategory(id int) (domain.Category, bool) {
+func (s *CachedCatalogStore) GetCategory(id int) (domain.Category, bool) {
 	c, ok := s.categoryCache[id]
 	return c, ok
 }
 
-func (s *CatalogStore) GetNpcs() []domain.Npc {
+func (s *CachedCatalogStore) GetNpcs() []domain.Npc {
 	return slices.Collect(maps.Values(s.npcCache))
 }
 
-func (s *CatalogStore) GetNpc(id int) (domain.Npc, bool) {
+func (s *CachedCatalogStore) GetNpc(id int) (domain.Npc, bool) {
 	n, ok := s.npcCache[id]
 	return n, ok
 }
 
-func (s *CatalogStore) GetEnemies() []domain.Enemy {
+func (s *CachedCatalogStore) GetEnemies() []domain.Enemy {
 	return slices.Collect(maps.Values(s.enemyCache))
 }
 
-func (s *CatalogStore) GetEnemy(id int) (domain.Enemy, bool) {
+func (s *CachedCatalogStore) GetEnemy(id int) (domain.Enemy, bool) {
 	e, ok := s.enemyCache[id]
 	return e, ok
 }

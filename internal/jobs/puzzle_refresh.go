@@ -10,12 +10,12 @@ import (
 )
 
 type PuzzleRefreshJob struct {
-	answerStore  *store.AnswerStore
-	catalogStore *store.CatalogStore
+	answerStore  *store.CachedAnswerStore
+	catalogStore *store.CachedCatalogStore
 	rng          *rand.Rand
 }
 
-func NewPuzzleRefresh(as *store.AnswerStore, cs *store.CatalogStore) *PuzzleRefreshJob {
+func NewPuzzleRefresh(as *store.CachedAnswerStore, cs *store.CachedCatalogStore) *PuzzleRefreshJob {
 	return &PuzzleRefreshJob{
 		answerStore:  as,
 		catalogStore: cs,

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func StartFlushJob(ctx context.Context, s *store.UserStore) {
+func StartFlushJob(ctx context.Context, s *store.CachedUserStore) {
 	ticker := time.NewTicker(30 * time.Second)
 	defer ticker.Stop()
 
