@@ -14,7 +14,7 @@ type User struct {
 
 type Game struct {
 	Guesses  []int // default: []
-	HasWon   bool  // default: false
+	Finished bool  // default: false
 	Position int   // default: -1
 }
 
@@ -23,21 +23,22 @@ type DailySlashGame struct {
 	Checks []WeaponChecks
 }
 
-// Little checklist for how this works:
-/*
-	Damage: 0 = lower, 1 = match, 2 = over
-	UseTime: 0 = slower, 1 = match, 2 = faster
-	Rarity: 0 = earlier, 1 = match, 2 = later
-	Obtained: 0 = no match, 1 = partial, 2 = exact
-*/
+type CompareResult int
+
+const (
+	Lower  CompareResult = -1
+	Match  CompareResult = 0
+	Higher CompareResult = 1
+)
+
 type WeaponChecks struct {
 	DamageType bool
-	Damage     int
-	UseTime    int
-	Rarity     int
+	Damage     CompareResult
+	UseTime    CompareResult
+	Rarity     CompareResult
 	Operation  bool
 	Material   bool
-	Obtained   int
+	Obtained   CompareResult
 }
 
 type ConnectionGame struct {

@@ -24,3 +24,9 @@ type SearchWeaponResult struct {
 	Name     string
 	Path     string
 }
+
+type WeaponPreview struct {
+	Name   string
+	Path   string
+	Rarity string
+}

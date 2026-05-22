@@ -45,7 +45,7 @@ func (u *userData) toDomain() domain.User {
 func toGameDomain(g game) domain.Game {
 	return domain.Game{
 		Guesses:  g.Guesses,
-		HasWon:   g.HasWon,
+		Finished: g.HasWon,
 		Position: g.Position,
 	}
 }
@@ -87,7 +87,7 @@ func fromDomain(u domain.User) userData {
 func fromGameDomain(g domain.Game) game {
 	return game{
 		Guesses:  g.Guesses,
-		HasWon:   g.HasWon,
+		HasWon:   g.Finished,
 		Position: g.Position,
 	}
 }

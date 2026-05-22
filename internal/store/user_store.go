@@ -116,7 +116,7 @@ func (s *CachedUserStore) EvictStale() {
 func createNewUser(userID string) domain.User {
 	emptyGame := domain.Game{
 		Guesses:  []int{},
-		HasWon:   false,
+		Finished: false,
 		Position: 0,
 	}
 

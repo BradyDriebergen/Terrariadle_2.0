@@ -2,6 +2,7 @@ package repo
 
 import (
 	"errors"
+	"terrariadle-backend/internal/domain"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -27,13 +28,13 @@ type dailySlashGame struct {
 }
 
 type weaponChecks struct {
-	DamageType bool `bson:"damageType"`
-	Damage     int  `bson:"damage"`
-	UseTime    int  `bson:"useTime"`
-	Rarity     int  `bson:"rarity"`
-	Operation  bool `bson:"operation"`
-	Material   bool `bson:"material"`
-	Obtained   int  `bson:"obtained"`
+	DamageType bool                 `bson:"damageType"`
+	Damage     domain.CompareResult `bson:"damage"`
+	UseTime    domain.CompareResult `bson:"useTime"`
+	Rarity     domain.CompareResult `bson:"rarity"`
+	Operation  bool                 `bson:"operation"`
+	Material   bool                 `bson:"material"`
+	Obtained   domain.CompareResult `bson:"obtained"`
 }
 
 type connectionGame struct {
