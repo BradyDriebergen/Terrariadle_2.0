@@ -51,5 +51,5 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 }
 
 func (g *DailySlash) SearchableWeapons(ctx context.Context) ([]domain.SearchWeaponResult, error) {
-	return []domain.SearchWeaponResult{}, nil
+	return g.catalogCache.GetSearchableWeapons(), nil
 }

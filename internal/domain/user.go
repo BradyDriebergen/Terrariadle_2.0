@@ -32,6 +32,7 @@ const (
 )
 
 type WeaponChecks struct {
+	WeaponID   int
 	DamageType bool
 	Damage     CompareResult
 	UseTime    CompareResult

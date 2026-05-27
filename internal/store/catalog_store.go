@@ -12,20 +12,24 @@ import (
 type CatalogStore interface {
 	GetWeapons() []domain.Weapon
 	GetWeapon(id int) (domain.Weapon, bool)
+	GetSearchableWeapons() []domain.SearchWeaponResult
 	GetCategories() []domain.Category
 	GetCategory(id int) (domain.Category, bool)
 	GetNpcs() []domain.Npc
 	GetNpc(id int) (domain.Npc, bool)
+	GetSearchableNpcs() []domain.SearchNpcResult
 	GetEnemies() []domain.Enemy
 	GetEnemy(id int) (domain.Enemy, bool)
 }
 
 type CachedCatalogStore struct {
-	catalogRepo   repo.CatalogRepo
-	weaponCache   map[int]domain.Weapon
-	categoryCache map[int]domain.Category
-	npcCache      map[int]domain.Npc
-	enemyCache    map[int]domain.Enemy
+	catalogRepo       repo.CatalogRepo
+	weaponCache       map[int]domain.Weapon
+	searchWeaponCache []domain.SearchWeaponResult
+	categoryCache     map[int]domain.Category
+	npcCache          map[int]domain.Npc
+	searchNpcCache    []domain.SearchNpcResult
+	enemyCache        map[int]domain.Enemy
 }
 
 func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*CachedCatalogStore, error) {
@@ -37,6 +41,11 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 		return nil, fmt.Errorf("new-catalog-store: no weapons found")
 	}
 	weapons := indexByID(weaponData, func(w domain.Weapon) int { return w.ID })
+
+	searchWeapons := make([]domain.SearchWeaponResult, 0, len(weaponData))
+	for i := range weaponData {
+		searchWeapons = append(searchWeapons, toSearchWeapon(weaponData[i]))
+	}
 
 	categoryData, err := catalogRepo.GetCategories(ctx)
 	if err != nil {
@@ -56,6 +65,11 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 	}
 	npcs := indexByID(npcData, func(n domain.Npc) int { return n.ID })
 
+	searchNpcs := make([]domain.SearchNpcResult, 0, len(npcData))
+	for i := range searchNpcs {
+		searchNpcs = append(searchNpcs, toSearchNPC(npcData[i]))
+	}
+
 	enemyData, err := catalogRepo.GetEnemies(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
@@ -66,11 +80,13 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 	enemies := indexByID(enemyData, func(e domain.Enemy) int { return e.ID })
 
 	return &CachedCatalogStore{
-		catalogRepo:   catalogRepo,
-		weaponCache:   weapons,
-		categoryCache: categories,
-		npcCache:      npcs,
-		enemyCache:    enemies,
+		catalogRepo:       catalogRepo,
+		weaponCache:       weapons,
+		searchWeaponCache: searchWeapons,
+		categoryCache:     categories,
+		npcCache:          npcs,
+		searchNpcCache:    searchNpcs,
+		enemyCache:        enemies,
 	}, nil
 }
 
@@ -81,6 +97,10 @@ func (s *CachedCatalogStore) GetWeapons() []domain.Weapon {
 func (s *CachedCatalogStore) GetWeapon(id int) (domain.Weapon, bool) {
 	w, ok := s.weaponCache[id]
 	return w, ok
+}
+
+func (s *CachedCatalogStore) GetSearchableWeapons() []domain.SearchWeaponResult {
+	return s.searchWeaponCache
 }
 
 func (s *CachedCatalogStore) GetCategories() []domain.Category {
@@ -101,6 +121,10 @@ func (s *CachedCatalogStore) GetNpc(id int) (domain.Npc, bool) {
 	return n, ok
 }
 
+func (s *CachedCatalogStore) GetSearchableNpcs() []domain.SearchNpcResult {
+	return s.searchNpcCache
+}
+
 func (s *CachedCatalogStore) GetEnemies() []domain.Enemy {
 	return slices.Collect(maps.Values(s.enemyCache))
 }
@@ -112,8 +136,24 @@ func (s *CachedCatalogStore) GetEnemy(id int) (domain.Enemy, bool) {
 
 func indexByID[T any](items []T, id func(T) int) map[int]T {
 	m := make(map[int]T, len(items))
-	for _, item := range items {
-		m[id(item)] = item
+	for i := range items {
+		m[id(items[i])] = items[i]
 	}
 	return m
+}
+
+func toSearchWeapon(w domain.Weapon) domain.SearchWeaponResult {
+	return domain.SearchWeaponResult{
+		WeaponID: w.ID,
+		Name:     w.Name,
+		Path:     w.Info.ImagePath,
+	}
+}
+
+func toSearchNPC(n domain.Npc) domain.SearchNpcResult {
+	return domain.SearchNpcResult{
+		NpcID: n.ID,
+		Name:  n.NPC,
+		Path:  n.NPCPath,
+	}
 }
