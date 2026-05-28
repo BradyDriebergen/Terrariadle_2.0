@@ -2,12 +2,17 @@ package services
 
 import (
 	"context"
-	"fmt"
+	"slices"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/store"
 )
 
 type DailySlashService interface {
+	InitializeGame(ctx context.Context, userId string) (DailySlashInitData, error)
+	GetSearchableWeapons() []domain.SearchWeaponResult
+	GetHint(hintNum int) (string, error)
+	CheckGuess(ctx context.Context, userId string, weaponId int) (DailySlashCheckData, error)
+	GetWinningData(ctx context.Context, userId string) (DailySlashWinningData, error)
 }
 
 type DailySlash struct {
@@ -17,27 +22,48 @@ type DailySlash struct {
 	userCache       store.UserStore
 }
 
+func NewDailySlashGame(
+	answerCache store.AnswerStore,
+	guessCountCache store.GuessCountsStore,
+	catalogCache store.CatalogStore,
+	userCache store.UserStore,
+) *DailySlash {
+
+	return &DailySlash{
+		answerCache:     answerCache,
+		guessCountCache: guessCountCache,
+		catalogCache:    catalogCache,
+		userCache:       userCache,
+	}
+}
+
 func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySlashInitData, error) {
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
-		return DailySlashInitData{}, fmt.Errorf("Daily Slash: InitializeGame: %w", err)
+		return DailySlashInitData{}, domain.UserNotFound("User not found", err)
 	}
 
-	if len(user.DailySlash.Game.Guesses) != len(user.DailySlash.Checks) {
-		return DailySlashInitData{}, fmt.Errorf("Daily Slash: InitializeGame: guess/check length mismatch for user %s", userId)
+	checks := make(map[int]domain.WeaponChecks, len(user.DailySlash.Checks))
+	for _, c := range user.DailySlash.Checks {
+		checks[c.WeaponID] = c
 	}
 
 	guesses := make([]WeaponGuess, 0, len(user.DailySlash.Game.Guesses))
 
-	for i, weaponID := range user.DailySlash.Game.Guesses {
+	for _, weaponID := range user.DailySlash.Game.Guesses {
 		guessedWeapon, ok := g.catalogCache.GetWeapon(weaponID)
 		if !ok {
-			return DailySlashInitData{}, fmt.Errorf("Daily Slash: InitializeGame: unknown weapon ID %d", weaponID)
+			return DailySlashInitData{}, domain.NotFound("The guessed weapon doesn't exist", nil)
+		}
+
+		check, ok := checks[guessedWeapon.ID]
+		if !ok {
+			return DailySlashInitData{}, domain.Internal("Weapon does not have check associated with it", nil)
 		}
 
 		guesses = append(guesses, WeaponGuess{
 			Weapon: toWeaponData(guessedWeapon),
-			Checks: user.DailySlash.Checks[i],
+			Checks: check,
 		})
 	}
 
@@ -66,39 +92,47 @@ func (g *DailySlash) GetHint(hintNum int) (string, error) {
 	case 3:
 		return weapon.Info.ImagePath, nil
 	default:
-		return "", fmt.Errorf("requested hint does not exist")
+		return "", domain.NotFound("The requested hint does not exist", nil)
 	}
 }
 
 func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int) (DailySlashCheckData, error) {
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
-		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: %w", err)
+		return DailySlashCheckData{}, domain.UserNotFound("User not found", err)
+	}
+
+	if slices.Contains(user.DailySlash.Game.Guesses, weaponId) {
+		return DailySlashCheckData{}, domain.Conflict("User previously guessed this weapon", nil)
 	}
 
 	weaponAnswer := g.answerCache.GetAnswers().DailySlash.CurrentWeapon
 	guessedWeapon, ok := g.catalogCache.GetWeapon(weaponId)
 	if !ok {
-		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: guessed weapon id does not exist %w", err)
+		return DailySlashCheckData{}, domain.NotFound("The requested weapon doesn't exist", nil)
 	}
+
 	checks := generateWeaponChecks(guessedWeapon, weaponAnswer)
+	correct := weaponAnswer.ID == guessedWeapon.ID
+
+	var position int
+	if correct {
+		position, err = g.guessCountCache.IncrementDailySlashCount(ctx)
+		if err != nil {
+			return DailySlashCheckData{}, domain.Internal("An error occurred updating user's position", err)
+		}
+	}
 
 	user.DailySlash.Game.Guesses = append(user.DailySlash.Game.Guesses, guessedWeapon.ID)
 	user.DailySlash.Checks = append(user.DailySlash.Checks, checks)
-
-	correct := weaponAnswer.ID == guessedWeapon.ID
-
 	if correct {
 		user.DailySlash.Game.Finished = true
-		user.DailySlash.Game.Position, err = g.guessCountCache.IncrementDailySlashCount(ctx)
-		if err != nil {
-			return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: error updating user position %w", err)
-		}
+		user.DailySlash.Game.Position = position
 	}
 
 	err = g.userCache.UpsertUser(ctx, user)
 	if err != nil {
-		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: error updating user %w", err)
+		return DailySlashCheckData{}, domain.Internal("An error occurred updating user's guess", err)
 	}
 
 	return DailySlashCheckData{
@@ -107,5 +141,17 @@ func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int
 			Weapon: toWeaponData(guessedWeapon),
 			Checks: checks,
 		},
+	}, nil
+}
+
+func (g *DailySlash) GetWinningData(ctx context.Context, userId string) (DailySlashWinningData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return DailySlashWinningData{}, domain.UserNotFound("User not found", err)
+	}
+
+	return DailySlashWinningData{
+		Position:    user.DailySlash.Game.Position,
+		PlayerCount: g.guessCountCache.GetGuessCounts().DailySlashCount,
 	}, nil
 }
