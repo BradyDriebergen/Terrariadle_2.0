@@ -50,6 +50,34 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 	}, nil
 }
 
-func (g *DailySlash) SearchableWeapons(ctx context.Context) ([]domain.SearchWeaponResult, error) {
-	return g.catalogCache.GetSearchableWeapons(), nil
+func (g *DailySlash) GetSearchableWeapons() []domain.SearchWeaponResult {
+	return g.catalogCache.GetSearchableWeapons()
+}
+
+func (g *DailySlash) GetHint(hintNum int) (string, error) {
+	weapon := g.answerCache.GetAnswers().DailySlash.CurrentWeapon
+
+	switch hintNum {
+	case 1:
+		return weapon.ModeObtained, nil
+	case 2:
+		return weapon.WeaponType, nil
+	case 3:
+		return weapon.Info.ImagePath, nil
+	default:
+		return "", fmt.Errorf("requested hint does not exist")
+	}
+}
+
+func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int) (DailySlashCheckData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: %w", err)
+	}
+
+	weaponAnswer := g.answerCache.GetAnswers().DailySlash.CurrentWeapon
+	guessedWeapon, ok := g.catalogCache.GetWeapon(weaponId)
+	if !ok {
+		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: guessed weapon id does not exist %w", err)
+	}
 }
