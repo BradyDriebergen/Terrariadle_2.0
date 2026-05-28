@@ -27,8 +27,7 @@ var useTimes = map[string]int{
 	"Snail":          0,
 }
 
-func checkGuess(guess, answer domain.Weapon) domain.WeaponChecks {
-	// Compares damage (1 is equal, 2 is greater, 0 is less)
+func generateWeaponChecks(guess, answer domain.Weapon) domain.WeaponChecks {
 	damage := domain.Match
 	if answer.Info.Damage > guess.Info.Damage {
 		damage = domain.Higher
@@ -36,7 +35,6 @@ func checkGuess(guess, answer domain.Weapon) domain.WeaponChecks {
 		damage = domain.Lower
 	}
 
-	// Compares use time (1 is equal, 2 is greater, 0 is less)
 	useTime := domain.Match
 	if useTimes[answer.Info.UseTime] > useTimes[guess.Info.UseTime] {
 		useTime = domain.Higher
@@ -44,7 +42,6 @@ func checkGuess(guess, answer domain.Weapon) domain.WeaponChecks {
 		useTime = domain.Lower
 	}
 
-	// Compares rarities (1 is equal, 2 is greater, 0 is less)
 	rarity := domain.Match
 	if rarities[answer.Info.Rarity] > rarities[guess.Info.Rarity] {
 		rarity = domain.Higher
@@ -52,10 +49,10 @@ func checkGuess(guess, answer domain.Weapon) domain.WeaponChecks {
 		rarity = domain.Lower
 	}
 
-	// Compares obtained values (2 is equal, 1 is partial, 0 is non-matching)
 	obtained := sliceCompare(guess.Info.Obtained, answer.Info.Obtained)
 
 	return domain.WeaponChecks{
+		WeaponID:   guess.ID,
 		DamageType: answer.Info.DamageType == guess.Info.DamageType,
 		Damage:     damage,
 		UseTime:    useTime,
@@ -66,22 +63,22 @@ func checkGuess(guess, answer domain.Weapon) domain.WeaponChecks {
 	}
 }
 
-func sliceCompare(g, w []string) domain.CompareResult {
+func sliceCompare(guess, answer []string) domain.CompareResult {
 	// Convert to maps for quick lookup
-	gMap := make(map[string]bool)
-	for _, val := range g {
-		gMap[val] = true
+	guessMap := make(map[string]bool)
+	for _, val := range guess {
+		guessMap[val] = true
 	}
-	wMap := make(map[string]bool)
-	for _, val := range w {
-		wMap[val] = true
+	answerMap := make(map[string]bool)
+	for _, val := range answer {
+		answerMap[val] = true
 	}
 
 	// Check if they are identical sets
-	if len(gMap) == len(wMap) {
+	if len(guessMap) == len(answerMap) {
 		same := true
-		for key := range gMap {
-			if !wMap[key] {
+		for key := range guessMap {
+			if !answerMap[key] {
 				same = false
 				break
 			}
@@ -92,13 +89,13 @@ func sliceCompare(g, w []string) domain.CompareResult {
 	}
 
 	// Check for partial overlap
-	for key := range gMap {
-		if wMap[key] {
-			return domain.Higher
+	for key := range guessMap {
+		if answerMap[key] {
+			return domain.PartialMatch
 		}
 	}
 
-	return domain.Lower
+	return domain.NoMatch
 }
 
 func toPreview(w domain.Weapon) domain.WeaponPreview {

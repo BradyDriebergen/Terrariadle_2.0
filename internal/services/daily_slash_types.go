@@ -6,7 +6,7 @@ type DailySlashInitData struct {
 	PreviousWeapon domain.WeaponPreview
 	GuessedIDs     []int
 	Guesses        []WeaponGuess
-	HasWon         bool
+	Finished       bool
 }
 
 type WeaponGuess struct {
@@ -28,9 +28,8 @@ type WeaponData struct {
 }
 
 type DailySlashCheckData struct {
-	Finished      bool
-	GuessedWeapon domain.Weapon
-	GuessChecks   domain.WeaponChecks
+	Finished    bool
+	GuessResult WeaponGuess
 }
 
 type DailySlashWinningData struct {

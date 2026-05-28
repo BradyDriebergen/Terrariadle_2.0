@@ -3,13 +3,12 @@ package repo
 import "time"
 
 type AnswerData struct {
-	DailySlash    WeaponData        `bson:"dailySlash"`
-	Connections   ConnectionData    `bson:"connections"`
-	GuessTheNpc   NpcData           `bson:"guessTheNpc"`
-	Hangman       HangmanData       `bson:"hangman"`
-	GuessCounts   PlayerGuessCounts `bson:"guessCounts"`
-	ResetTime     time.Time         `bson:"resetTime"`
-	NextResetTime time.Time         `bson:"nextResetTime"`
+	DailySlash    WeaponData     `bson:"dailySlash"`
+	Connections   ConnectionData `bson:"connections"`
+	GuessTheNpc   NpcData        `bson:"guessTheNpc"`
+	Hangman       HangmanData    `bson:"hangman"`
+	ResetTime     time.Time      `bson:"resetTime"`
+	NextResetTime time.Time      `bson:"nextResetTime"`
 }
 
 type WeaponData struct {

@@ -11,9 +11,10 @@ type DailySlashService interface {
 }
 
 type DailySlash struct {
-	answerCache  store.AnswerStore
-	catalogCache store.CatalogStore
-	userCache    store.UserStore
+	answerCache     store.AnswerStore
+	guessCountCache store.GuessCountsStore
+	catalogCache    store.CatalogStore
+	userCache       store.UserStore
 }
 
 func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySlashInitData, error) {
@@ -46,7 +47,7 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 		PreviousWeapon: previousWeapon,
 		GuessedIDs:     user.DailySlash.Game.Guesses,
 		Guesses:        guesses,
-		HasWon:         user.DailySlash.Game.Finished,
+		Finished:       user.DailySlash.Game.Finished,
 	}, nil
 }
 
@@ -80,4 +81,31 @@ func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int
 	if !ok {
 		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: guessed weapon id does not exist %w", err)
 	}
+	checks := generateWeaponChecks(guessedWeapon, weaponAnswer)
+
+	user.DailySlash.Game.Guesses = append(user.DailySlash.Game.Guesses, guessedWeapon.ID)
+	user.DailySlash.Checks = append(user.DailySlash.Checks, checks)
+
+	correct := weaponAnswer.ID == guessedWeapon.ID
+
+	if correct {
+		user.DailySlash.Game.Finished = true
+		user.DailySlash.Game.Position, err = g.guessCountCache.IncrementDailySlashCount(ctx)
+		if err != nil {
+			return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: error updating user position %w", err)
+		}
+	}
+
+	err = g.userCache.UpsertUser(ctx, user)
+	if err != nil {
+		return DailySlashCheckData{}, fmt.Errorf("Daily Slash: CheckGuess: error updating user %w", err)
+	}
+
+	return DailySlashCheckData{
+		Finished: correct,
+		GuessResult: WeaponGuess{
+			Weapon: toWeaponData(guessedWeapon),
+			Checks: checks,
+		},
+	}, nil
 }

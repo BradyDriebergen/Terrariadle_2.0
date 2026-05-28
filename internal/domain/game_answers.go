@@ -7,7 +7,6 @@ type DailyAnswers struct {
 	Connections   ConnectionAnswer
 	GuessTheNpc   NpcAnswer
 	Hangman       HangmanAnswer
-	GuessCounts   PlayerGuessCounts
 	ResetTime     time.Time
 	NextResetTime time.Time
 }

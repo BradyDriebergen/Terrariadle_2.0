@@ -10,16 +10,18 @@ import (
 )
 
 type PuzzleRefreshJob struct {
-	answerStore  *store.CachedAnswerStore
-	catalogStore *store.CachedCatalogStore
-	rng          *rand.Rand
+	answerStore     *store.CachedAnswerStore
+	guessCountStore *store.CachedGuessCountsStore
+	catalogStore    *store.CachedCatalogStore
+	rng             *rand.Rand
 }
 
-func NewPuzzleRefresh(as *store.CachedAnswerStore, cs *store.CachedCatalogStore) *PuzzleRefreshJob {
+func NewPuzzleRefresh(as *store.CachedAnswerStore, gcs *store.CachedGuessCountsStore, cs *store.CachedCatalogStore) *PuzzleRefreshJob {
 	return &PuzzleRefreshJob{
-		answerStore:  as,
-		catalogStore: cs,
-		rng:          rand.New(rand.NewSource(time.Now().UnixNano())),
+		answerStore:     as,
+		catalogStore:    cs,
+		guessCountStore: gcs,
+		rng:             rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
 }
 
@@ -47,8 +49,9 @@ func (j *PuzzleRefreshJob) refresh(ctx context.Context) {
 		Connections:   j.refreshCategories(),
 		GuessTheNpc:   j.refreshNpc(),
 		Hangman:       j.refreshEnemy(),
-		GuessCounts:   domain.PlayerGuessCounts{},
 		ResetTime:     now,
 		NextResetTime: utils.NextMidnight(now),
 	})
+
+	j.guessCountStore.ResetGuessCounts(ctx)
 }
