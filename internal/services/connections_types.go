@@ -11,3 +11,15 @@ type SolvedCategory struct {
 	Name    string
 	Options []string
 }
+
+type ConnectionsCheckData struct {
+	Attempts     int
+	IsCorrect    bool
+	OneAway      bool
+	CorrectGuess SolvedCategory
+}
+
+type ConnectionsWinningData struct {
+	Position    int
+	PlayerCount int
+}

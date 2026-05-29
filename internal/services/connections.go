@@ -74,3 +74,102 @@ func (g *Connections) InitializeGame(ctx context.Context, userId string) (Connec
 		SolvedCategories: guessedCategories,
 	}, nil
 }
+
+func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOptions []string) (ConnectionsCheckData, error) {
+	if err := validateGuessOptions(guessedOptions); err != nil {
+		return ConnectionsCheckData{}, err
+	}
+
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return ConnectionsCheckData{}, domain.UserNotFound("User not found", err)
+	}
+
+	if user.Connections.Attempts <= 0 {
+		return ConnectionsCheckData{}, domain.Conflict("User does not have any more attempts", nil)
+	}
+
+	answerOptions := g.answerCache.GetAnswers().Connections.Options
+	answerMap := make(map[string]int, 16)
+	for _, o := range answerOptions {
+		answerMap[o.Option] = o.CategoryID
+	}
+
+	oneAway := false
+	isCorrect := false
+	correctGuess := SolvedCategory{}
+
+	guessedCategoryIdMap := make(map[int]int) // id -> id count
+
+	for _, guess := range guessedOptions {
+		guessedID, ok := answerMap[guess]
+		if !ok {
+			return ConnectionsCheckData{}, domain.NotFound("Connection guess is not an option", nil)
+		}
+
+		guessedCategoryIdMap[guessedID] += 1
+		switch guessedCategoryIdMap[guessedID] {
+		case 3:
+			oneAway = true
+		case 4:
+			if slices.Contains(user.Connections.Game.Guesses, guessedID) {
+				return ConnectionsCheckData{}, domain.Conflict("User already guessed this category", nil)
+			}
+
+			oneAway = false
+			isCorrect = true
+
+			correctCategory, ok := g.catalogCache.GetCategory(guessedID)
+			if !ok {
+				return ConnectionsCheckData{}, domain.Internal("Catagory does not exist", nil)
+			}
+
+			correctGuess = SolvedCategory{
+				Name:    correctCategory.Category,
+				Options: guessedOptions,
+			}
+
+			user.Connections.Game.Guesses = append(user.Connections.Game.Guesses, guessedID)
+		}
+	}
+
+	if !isCorrect {
+		user.Connections.Attempts--
+
+		if user.Connections.Attempts <= 0 {
+			user.Connections.Game.Finished = true
+		}
+	} else if len(user.Connections.Game.Guesses) == 4 {
+		position, err := g.guessCountCache.IncrementConnectionsCount(ctx)
+		if err != nil {
+			return ConnectionsCheckData{}, domain.Internal("An error occurred updating user's position", err)
+		}
+
+		user.Connections.Game.Finished = true
+		user.Connections.Game.Position = position
+	}
+
+	err = g.userCache.UpsertUser(ctx, user)
+	if err != nil {
+		return ConnectionsCheckData{}, domain.Internal("An error occurred updating user's guess", err)
+	}
+
+	return ConnectionsCheckData{
+		Attempts:     user.Connections.Attempts,
+		IsCorrect:    isCorrect,
+		OneAway:      oneAway,
+		CorrectGuess: correctGuess,
+	}, nil
+}
+
+func (g *Connections) GetWinningData(ctx context.Context, userId string) (ConnectionsWinningData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return ConnectionsWinningData{}, domain.UserNotFound("User not found", err)
+	}
+
+	return ConnectionsWinningData{
+		Position:    user.Connections.Game.Position,
+		PlayerCount: g.guessCountCache.GetGuessCounts().ConnectionsCount,
+	}, nil
+}

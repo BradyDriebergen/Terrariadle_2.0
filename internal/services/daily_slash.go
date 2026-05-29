@@ -115,20 +115,18 @@ func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int
 	checks := generateWeaponChecks(guessedWeapon, weaponAnswer)
 	correct := weaponAnswer.ID == guessedWeapon.ID
 
-	var position int
 	if correct {
-		position, err = g.guessCountCache.IncrementDailySlashCount(ctx)
+		position, err := g.guessCountCache.IncrementDailySlashCount(ctx)
 		if err != nil {
 			return DailySlashCheckData{}, domain.Internal("An error occurred updating user's position", err)
 		}
+
+		user.DailySlash.Game.Finished = true
+		user.DailySlash.Game.Position = position
 	}
 
 	user.DailySlash.Game.Guesses = append(user.DailySlash.Game.Guesses, guessedWeapon.ID)
 	user.DailySlash.Checks = append(user.DailySlash.Checks, checks)
-	if correct {
-		user.DailySlash.Game.Finished = true
-		user.DailySlash.Game.Position = position
-	}
 
 	err = g.userCache.UpsertUser(ctx, user)
 	if err != nil {
