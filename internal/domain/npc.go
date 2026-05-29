@@ -13,3 +13,8 @@ type SearchNpcResult struct {
 	Name  string
 	Path  string
 }
+
+type NpcInfo struct {
+	Name string
+	Path string
+}

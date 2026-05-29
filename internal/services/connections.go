@@ -8,6 +8,9 @@ import (
 )
 
 type ConnectionsService interface {
+	InitializeGame(ctx context.Context, userId string) (ConnectionsInitData, error)
+	CheckGuess(ctx context.Context, userId string, guessedOptions []string) (ConnectionsCheckData, error)
+	GetWinningData(ctx context.Context, userId string) (ConnectionsWinningData, error)
 }
 
 type Connections struct {
