@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+	"slices"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/store"
 )
@@ -37,15 +38,39 @@ func (g *Connections) InitializeGame(ctx context.Context, userId string) (Connec
 		return ConnectionsInitData{}, domain.UserNotFound("User not found", err)
 	}
 
-	options := g.answerCache.GetAnswers().Connections.Options
-	solvedCategories := []SolvedCategory{}
+	answerOptions := g.answerCache.GetAnswers().Connections.Options
+	userGuesses := user.Connections.Game.Guesses
 
-	// filter options down
+	guessedCategoryMap := make(map[int][]string) // category id -> options slice
+	guessedCategories := []SolvedCategory{}
+	options := []string{}
+
+	for _, o := range answerOptions {
+		if slices.Contains(userGuesses, o.CategoryID) {
+			guessedCategoryMap[o.CategoryID] = append(guessedCategoryMap[o.CategoryID], o.Option)
+		} else {
+			options = append(options, o.Option)
+		}
+	}
+
+	for catId := range guessedCategoryMap {
+		category, ok := g.catalogCache.GetCategory(catId)
+		if !ok {
+			return ConnectionsInitData{}, domain.Internal("Failed to find matching category", nil)
+		}
+
+		guessedCategories = append(guessedCategories, SolvedCategory{
+			Name:    category.Category,
+			Options: guessedCategoryMap[catId],
+		})
+	}
+
+	shuffleOptions(options)
 
 	return ConnectionsInitData{
 		Attepts:          user.Connections.Attempts,
 		Finished:         user.Connections.Game.Finished,
 		Options:          options,
-		SolvedCategories: solvedCategories,
+		SolvedCategories: guessedCategories,
 	}, nil
 }
