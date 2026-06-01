@@ -171,6 +171,10 @@ func (g *Connections) GetWinningData(ctx context.Context, userId string) (Connec
 		return ConnectionsWinningData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if !user.Connections.Game.Finished {
+		return ConnectionsWinningData{}, domain.Conflict("User isn't finished guessing", err)
+	}
+
 	return ConnectionsWinningData{
 		Position:    user.Connections.Game.Position,
 		PlayerCount: g.guessCountCache.GetGuessCounts().ConnectionsCount,

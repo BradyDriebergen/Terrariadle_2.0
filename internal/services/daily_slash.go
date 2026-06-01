@@ -148,6 +148,10 @@ func (g *DailySlash) GetWinningData(ctx context.Context, userId string) (DailySl
 		return DailySlashWinningData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if !user.DailySlash.Game.Finished {
+		return DailySlashWinningData{}, domain.Conflict("User isn't finished guessing", err)
+	}
+
 	return DailySlashWinningData{
 		Position:    user.DailySlash.Game.Position,
 		PlayerCount: g.guessCountCache.GetGuessCounts().DailySlashCount,
