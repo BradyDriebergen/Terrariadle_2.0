@@ -38,9 +38,9 @@ func NewDailySlashGame(
 }
 
 func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySlashInitData, error) {
-	user, err := g.userCache.GetUser(ctx, userId)
+	user, err := g.userCache.GetOrCreateUser(ctx, userId)
 	if err != nil {
-		return DailySlashInitData{}, domain.UserNotFound("User not found", err)
+		return DailySlashInitData{}, domain.UserNotFound("Error creating user", err)
 	}
 
 	checks := make(map[int]domain.WeaponChecks, len(user.DailySlash.Checks))

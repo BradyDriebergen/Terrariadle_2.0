@@ -36,9 +36,9 @@ func NewConnectionsGame(
 }
 
 func (g *Connections) InitializeGame(ctx context.Context, userId string) (ConnectionsInitData, error) {
-	user, err := g.userCache.GetUser(ctx, userId)
+	user, err := g.userCache.GetOrCreateUser(ctx, userId)
 	if err != nil {
-		return ConnectionsInitData{}, domain.UserNotFound("User not found", err)
+		return ConnectionsInitData{}, domain.UserNotFound("Error creating user", err)
 	}
 
 	answerOptions := g.answerCache.GetAnswers().Connections.Options
@@ -79,7 +79,7 @@ func (g *Connections) InitializeGame(ctx context.Context, userId string) (Connec
 }
 
 func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOptions []string) (ConnectionsCheckData, error) {
-	if err := validateGuessOptions(guessedOptions); err != nil {
+	if err := validateGuessedOptions(guessedOptions); err != nil {
 		return ConnectionsCheckData{}, err
 	}
 

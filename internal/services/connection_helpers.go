@@ -11,7 +11,7 @@ func shuffleOptions(options []string) {
 	})
 }
 
-func validateGuessOptions(options []string) error {
+func validateGuessedOptions(options []string) error {
 	if len(options) != 4 {
 		return domain.InvalidInput("Guess must contain 4 options", nil)
 	}

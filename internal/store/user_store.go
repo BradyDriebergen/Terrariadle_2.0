@@ -11,6 +11,7 @@ import (
 )
 
 type UserStore interface {
+	GetOrCreateUser(ctx context.Context, userID string) (domain.User, error)
 	GetUser(ctx context.Context, userID string) (domain.User, error)
 	UpsertUser(ctx context.Context, user domain.User) error
 	DropAllUsers(ctx context.Context) error
@@ -31,8 +32,8 @@ func NewUserStore(userRepo repo.UserRepo) *CachedUserStore {
 	}
 }
 
-// GetUser returns from cache if present, otherwise fetches from repo and caches.
-func (s *CachedUserStore) GetUser(ctx context.Context, userID string) (domain.User, error) {
+// GetOrCreateUser returns from cache if present, otherwise fetches from repo and caches.
+func (s *CachedUserStore) GetOrCreateUser(ctx context.Context, userID string) (domain.User, error) {
 	s.mu.RLock()
 	if user, ok := s.userCache[userID]; ok {
 		s.mu.RUnlock()
@@ -48,6 +49,26 @@ func (s *CachedUserStore) GetUser(ctx context.Context, userID string) (domain.Us
 		} else {
 			return domain.User{}, fmt.Errorf("store: GetUser: %w", err)
 		}
+	}
+
+	s.mu.Lock()
+	s.userCache[userID] = user
+	s.mu.Unlock()
+
+	return user, nil
+}
+
+func (s *CachedUserStore) GetUser(ctx context.Context, userID string) (domain.User, error) {
+	s.mu.RLock()
+	if user, ok := s.userCache[userID]; ok {
+		s.mu.RUnlock()
+		return user, nil
+	}
+	s.mu.RUnlock()
+
+	user, err := s.userRepo.GetUser(ctx, userID)
+	if err != nil {
+		return domain.User{}, fmt.Errorf("store: GetUser: %w", err)
 	}
 
 	s.mu.Lock()

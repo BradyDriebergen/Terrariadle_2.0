@@ -38,9 +38,9 @@ func NewGuessTheNpcGame(
 }
 
 func (g *GuessTheNpc) InitializeGame(ctx context.Context, userId string) (GuessTheNpcInitData, error) {
-	user, err := g.userCache.GetUser(ctx, userId)
+	user, err := g.userCache.GetOrCreateUser(ctx, userId)
 	if err != nil {
-		return GuessTheNpcInitData{}, domain.UserNotFound("User not found", err)
+		return GuessTheNpcInitData{}, domain.UserNotFound("Error creating user", err)
 	}
 
 	guesses := []domain.NpcInfo{}
