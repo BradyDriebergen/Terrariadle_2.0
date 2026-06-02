@@ -8,7 +8,7 @@
     - [ ] Create front-end components for game
     - [ ] Integrate backend and front-end
 - [ ] Update go and npm packages
-- [ ] Updating flying enemies in categories and fix 'Fultures'
+- [x] Updating flying enemies in categories and fix 'Fultures'
 
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge
@@ -23,12 +23,12 @@
 
 **Backend changes**
 - [x] Update database package to use dependency injection
-- [ ] Split up `server` package for `handler` + `service`
+- [x] Split up `server` package for `server` + `service`
 - [x] Create `domain` package for shared types
 - [x] Create `repo` package to replace `models` functionality
 - [x] Implement in-memory guess store with periodic flush
 - [x] Fix jobs after implementing domain and store
-- [ ] Change backend guess counts to use web-sockets
+- [ ] Change backend guess counts to use SSE - server sent events (used to be web-sockets)
 - [ ] Go through backend and finalize structure
 
 **Hosting steps**
