@@ -71,7 +71,7 @@ func (g *Connections) InitializeGame(ctx context.Context, userId string) (Connec
 	shuffleOptions(options)
 
 	return ConnectionsInitData{
-		Attepts:          user.Connections.Attempts,
+		Attempts:         user.Connections.Attempts,
 		Finished:         user.Connections.Game.Finished,
 		Options:          options,
 		SolvedCategories: guessedCategories,

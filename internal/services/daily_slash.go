@@ -9,7 +9,7 @@ import (
 
 type DailySlashService interface {
 	InitializeGame(ctx context.Context, userId string) (DailySlashInitData, error)
-	GetSearchableWeapons() []domain.SearchWeaponResult
+	GetSearchableWeapons() []SearchWeaponData
 	GetHint(hintNum int) (string, error)
 	CheckGuess(ctx context.Context, userId string, weaponId int) (DailySlashCheckData, error)
 	GetWinningData(ctx context.Context, userId string) (DailySlashWinningData, error)
@@ -77,8 +77,8 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 	}, nil
 }
 
-func (g *DailySlash) GetSearchableWeapons() []domain.SearchWeaponResult {
-	return g.catalogCache.GetSearchableWeapons()
+func (g *DailySlash) GetSearchableWeapons() []SearchWeaponData {
+	return toSearchableWeapons(g.catalogCache.GetSearchableWeapons())
 }
 
 func (g *DailySlash) GetHint(hintNum int) (string, error) {

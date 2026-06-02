@@ -1,25 +1,25 @@
 package services
 
 type ConnectionsInitData struct {
-	Attepts          int
-	Finished         bool
-	Options          []string
-	SolvedCategories []SolvedCategory
+	Attempts         int              `json:"attempts"`
+	Finished         bool             `json:"finished"`
+	Options          []string         `json:"options"`
+	SolvedCategories []SolvedCategory `json:"solved_categories"`
 }
 
 type SolvedCategory struct {
-	Name    string
-	Options []string
+	Name    string   `json:"name"`
+	Options []string `json:"options"`
 }
 
 type ConnectionsCheckData struct {
-	Attempts     int
-	IsCorrect    bool
-	OneAway      bool
-	CorrectGuess SolvedCategory
+	Attempts     int            `json:"attempts"`
+	IsCorrect    bool           `json:"is_correct"`
+	OneAway      bool           `json:"one_away"`
+	CorrectGuess SolvedCategory `json:"correct_guess"`
 }
 
 type ConnectionsWinningData struct {
-	Position    int
-	PlayerCount int
+	Position    int `json:"position"`
+	PlayerCount int `json:"player_count"`
 }
