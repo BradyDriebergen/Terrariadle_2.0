@@ -1,6 +1,7 @@
 package api
 
 import (
+	"context"
 	"net/http"
 	"terrariadle-backend/internal/services"
 )
@@ -34,4 +35,12 @@ func NewServer(
 	}
 
 	return s
+}
+
+func (s *Server) Start() error {
+	return s.httpServer.ListenAndServe()
+}
+
+func (s *Server) Shutdown(ctx context.Context) error {
+	return s.httpServer.Shutdown(ctx)
 }
