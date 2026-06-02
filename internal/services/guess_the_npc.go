@@ -9,7 +9,7 @@ import (
 
 type GuessTheNpcService interface {
 	InitializeGame(ctx context.Context, userId string) (GuessTheNpcInitData, error)
-	GetSearchableNpcs() []domain.SearchNpcResult
+	GetSearchableNpcs() []SearchNpcData
 	CheckGuess(ctx context.Context, userId string, npcId int) (GuessTheNpcCheckData, error)
 	GetWinningData(ctx context.Context, userId string) (GuessTheNpcWinningData, error)
 	CheckName(ctx context.Context, userId string, name string) (GuessTheNpcMiniGameData, error)
@@ -64,8 +64,8 @@ func (g *GuessTheNpc) InitializeGame(ctx context.Context, userId string) (GuessT
 	}, nil
 }
 
-func (g *GuessTheNpc) GetSearchableNpcs() []domain.SearchNpcResult {
-	return g.catalogCache.GetSearchableNpcs()
+func (g *GuessTheNpc) GetSearchableNpcs() []SearchNpcData {
+	return toSearchableNpcs(g.catalogCache.GetSearchableNpcs())
 }
 
 func (g *GuessTheNpc) CheckGuess(ctx context.Context, userId string, npcId int) (GuessTheNpcCheckData, error) {

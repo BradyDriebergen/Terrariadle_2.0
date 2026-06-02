@@ -28,21 +28,21 @@ func (s *Server) registerDailySlashRoutes(mux *http.ServeMux) {
 }
 
 func (s *Server) registerConnectionsRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("GET /api/connections/initialize-game/", InitializeConnectionsGame)
-	mux.HandleFunc("POST /api/connections/check-guess", CheckConnectionsGuess)
-	mux.HandleFunc("GET /api/connections/winning-data/", GetConnectionsWinningData)
+	mux.HandleFunc("GET /api/connections/initialize-game/", s.initializeConnectionsGame)
+	mux.HandleFunc("POST /api/connections/check-guess", s.checkConnectionsGuess)
+	mux.HandleFunc("GET /api/connections/winning-data/", s.getConnectionsWinningData)
 }
 
 func (s *Server) registerGuessTheNpcRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("GET /api/guess-the-npc/initialize-game/", InitializeNpcGame)
-	mux.HandleFunc("GET /api/guess-the-npc/search-items", GetNpcSearchItems)
-	mux.HandleFunc("POST /api/guess-the-npc/check-guess", CheckNpcGuess)
-	mux.HandleFunc("GET /api/guess-the-npc/winning-data/", GetNpcWinningData)
-	mux.HandleFunc("POST /api/guess-the-npc/check-name-guess", CheckNpcNameGuess)
+	mux.HandleFunc("GET /api/guess-the-npc/initialize-game/", s.initializeNpcGame)
+	mux.HandleFunc("GET /api/guess-the-npc/search-items", s.getNpcSearchItems)
+	mux.HandleFunc("POST /api/guess-the-npc/check-guess", s.checkNpcGuess)
+	mux.HandleFunc("GET /api/guess-the-npc/winning-data/", s.getNpcWinningData)
+	mux.HandleFunc("POST /api/guess-the-npc/check-name-guess", s.checkNpcNameGuess)
 }
 
 func (s *Server) registerHangmanRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("GET /api/hangman/initialize-game/", InitializeHangmanGame)
-	mux.HandleFunc("POST /api/hangman/check-guess", CheckHangmanGuess)
-	mux.HandleFunc("GET /api/hangman/winning-data/", GetHangmanWinningData)
+	mux.HandleFunc("GET /api/hangman/initialize-game/", s.initializeHangmanGame)
+	mux.HandleFunc("POST /api/hangman/check-guess", s.checkHangmanGuess)
+	mux.HandleFunc("GET /api/hangman/winning-data/", s.getHangmanWinningData)
 }

@@ -8,6 +8,12 @@ type GuessTheNpcInitData struct {
 	Guesses  []domain.NpcInfo `json:"guesses"`
 }
 
+type SearchNpcData struct {
+	NpcID int    `json:"npc_id"`
+	Name  string `json:"name"`
+	Path  string `json:"path"`
+}
+
 type GuessTheNpcCheckData struct {
 	Finished bool           `json:"finished"`
 	Guess    domain.NpcInfo `json:"guess"`

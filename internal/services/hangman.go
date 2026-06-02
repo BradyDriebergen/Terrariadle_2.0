@@ -10,7 +10,7 @@ import (
 
 type HangmanService interface {
 	InitializeGame(ctx context.Context, userId string) (HangmanInitData, error)
-	CheckGuess(ctx context.Context, userId string, guessedOptions []string) (HangmanCheckData, error)
+	CheckGuess(ctx context.Context, userId string, guess string) (HangmanCheckData, error)
 	GetWinningData(ctx context.Context, userId string) (HangmanWinningData, error)
 }
 
