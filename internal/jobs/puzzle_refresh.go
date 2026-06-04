@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/store"
-	"terrariadle-backend/internal/utils"
 	"time"
 )
 
@@ -27,7 +26,7 @@ func NewPuzzleRefresh(as *store.CachedAnswerStore, gcs *store.CachedGuessCountsS
 
 func (j *PuzzleRefreshJob) Start(ctx context.Context) {
 	for {
-		waitDur := utils.TimeUntilNextMidnightFromNow()
+		waitDur := domain.TimeUntilNextMidnightFromNow()
 
 		// Used for quick testing/development
 		// waitDur := utils.NextShortTime()
@@ -50,7 +49,7 @@ func (j *PuzzleRefreshJob) refresh(ctx context.Context) {
 		GuessTheNpc:   j.refreshNpc(),
 		Hangman:       j.refreshEnemy(),
 		ResetTime:     now,
-		NextResetTime: utils.NextMidnight(now),
+		NextResetTime: domain.NextMidnight(now),
 	})
 
 	j.guessCountStore.ResetGuessCounts(ctx)

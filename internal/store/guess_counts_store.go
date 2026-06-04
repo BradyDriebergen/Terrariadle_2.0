@@ -21,9 +21,15 @@ type CachedGuessCountsStore struct {
 	answerRepo       repo.AnswerRepo
 	mu               sync.RWMutex
 	guessCountsCache domain.PlayerGuessCounts
+	broker           domain.GuessCountBroker
 }
 
-func NewGuessCountStore(ctx context.Context, answerRepo repo.AnswerRepo) (*CachedGuessCountsStore, error) {
+func NewGuessCountStore(
+	ctx context.Context,
+	answerRepo repo.AnswerRepo,
+	broker domain.GuessCountBroker,
+) (*CachedGuessCountsStore, error) {
+
 	guessCounts, err := answerRepo.GetGuessCounts(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-guess-count-store: failed to initialize: %w", err)
@@ -31,6 +37,7 @@ func NewGuessCountStore(ctx context.Context, answerRepo repo.AnswerRepo) (*Cache
 
 	return &CachedGuessCountsStore{
 		answerRepo:       answerRepo,
+		broker:           broker,
 		guessCountsCache: toGuessCountDomain(guessCounts),
 	}, nil
 }
@@ -67,6 +74,12 @@ func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (
 		s.guessCountsCache.DailySlashCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
 	}
+
+	// An example of how to publish from the broker
+	// s.broker.Publish(domain.GuessCountEvent{
+	// 	GameMode: domain.GameModeDailySlash,
+	// 	Count:    s.guessCountsCache.DailySlashCount,
+	// })
 
 	return s.guessCountsCache.DailySlashCount, nil
 }

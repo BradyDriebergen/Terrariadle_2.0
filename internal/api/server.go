@@ -3,6 +3,7 @@ package api
 import (
 	"context"
 	"net/http"
+	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/services"
 )
 
@@ -12,6 +13,7 @@ type Server struct {
 	connections services.ConnectionsService
 	guessTheNpc services.GuessTheNpcService
 	hangman     services.HangmanService
+	broker      domain.GuessCountBroker
 }
 
 func NewServer(
@@ -20,6 +22,7 @@ func NewServer(
 	connections services.ConnectionsService,
 	guessTheNpc services.GuessTheNpcService,
 	hangman services.HangmanService,
+	broker domain.GuessCountBroker,
 ) *Server {
 
 	s := &Server{
@@ -27,6 +30,7 @@ func NewServer(
 		connections: connections,
 		guessTheNpc: guessTheNpc,
 		hangman:     hangman,
+		broker:      broker,
 	}
 
 	s.httpServer = &http.Server{
