@@ -153,7 +153,6 @@ func (g *DailySlash) GetWinningData(ctx context.Context, userId string) (DailySl
 	}
 
 	return DailySlashWinningData{
-		Position:    user.DailySlash.Game.Position,
-		PlayerCount: g.guessCountCache.GetGuessCounts().DailySlashCount,
+		Position: user.DailySlash.Game.Position,
 	}, nil
 }

@@ -133,9 +133,8 @@ func (g *Hangman) GetWinningData(ctx context.Context, userId string) (HangmanWin
 	enemyAnswer := g.answerCache.GetAnswers().Hangman
 
 	return HangmanWinningData{
-		PlayerCount: g.guessCountCache.GetGuessCounts().HangmanCount,
-		Position:    user.Hangman.Game.Position,
-		EnemyName:   enemyAnswer.Enemy.Name,
-		EnemyPath:   enemyAnswer.Enemy.ImagePath,
+		Position:  user.Hangman.Game.Position,
+		EnemyName: enemyAnswer.Enemy.Name,
+		EnemyPath: enemyAnswer.Enemy.ImagePath,
 	}, nil
 }

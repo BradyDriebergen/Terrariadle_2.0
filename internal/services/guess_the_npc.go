@@ -130,7 +130,6 @@ func (g *GuessTheNpc) GetWinningData(ctx context.Context, userId string) (GuessT
 
 	return GuessTheNpcWinningData{
 		Position:    user.GuessTheNPC.Game.Position,
-		PlayerCount: g.guessCountCache.GetGuessCounts().GuessTheNpcCount,
 		Names:       npcAnswer.NameOptions,
 		GuessedName: user.GuessTheNPC.GuessedName,
 		CorrectName: correctName,

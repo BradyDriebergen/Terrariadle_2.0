@@ -17,8 +17,7 @@ type HangmanCheckData struct {
 }
 
 type HangmanWinningData struct {
-	PlayerCount int    `json:"player_count"`
-	Position    int    `json:"position"`
-	EnemyName   string `json:"enemy_name"`
-	EnemyPath   string `json:"enemy_path"`
+	Position  int    `json:"position"`
+	EnemyName string `json:"enemy_name"`
+	EnemyPath string `json:"enemy_path"`
 }

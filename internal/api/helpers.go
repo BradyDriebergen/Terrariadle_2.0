@@ -43,3 +43,14 @@ func handleError(w http.ResponseWriter, err error) {
 	}
 	writeError(w, http.StatusInternalServerError, "something went wrong")
 }
+
+func validGameMode(m domain.GameMode) bool {
+	switch m {
+	case domain.GameModeDailySlash,
+		domain.GameModeConnections,
+		domain.GameModeGuessTheNpc,
+		domain.GameModeHangman:
+		return true
+	}
+	return false
+}

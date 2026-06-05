@@ -20,6 +20,5 @@ type ConnectionsCheckData struct {
 }
 
 type ConnectionsWinningData struct {
-	Position    int `json:"position"`
-	PlayerCount int `json:"player_count"`
+	Position int `json:"position"`
 }

@@ -21,7 +21,6 @@ type GuessTheNpcCheckData struct {
 
 type GuessTheNpcWinningData struct {
 	Position    int      `json:"position"`
-	PlayerCount int      `json:"player_count"`
 	Names       []string `json:"names"`
 	GuessedName string   `json:"guessed_name"`
 	CorrectName string   `json:"correct_name"`

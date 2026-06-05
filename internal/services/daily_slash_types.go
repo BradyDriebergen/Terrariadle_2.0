@@ -39,6 +39,5 @@ type DailySlashCheckData struct {
 }
 
 type DailySlashWinningData struct {
-	Position    int `json:"position"`
-	PlayerCount int `json:"player_count"`
+	Position int `json:"position"`
 }
