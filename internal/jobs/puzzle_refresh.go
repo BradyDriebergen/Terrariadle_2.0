@@ -1,0 +1,56 @@
+package jobs
+
+import (
+	"context"
+	"math/rand"
+	"terrariadle-backend/internal/domain"
+	"terrariadle-backend/internal/store"
+	"time"
+)
+
+type PuzzleRefreshJob struct {
+	answerStore     *store.CachedAnswerStore
+	guessCountStore *store.CachedGuessCountsStore
+	catalogStore    *store.CachedCatalogStore
+	rng             *rand.Rand
+}
+
+func NewPuzzleRefresh(as *store.CachedAnswerStore, gcs *store.CachedGuessCountsStore, cs *store.CachedCatalogStore) *PuzzleRefreshJob {
+	return &PuzzleRefreshJob{
+		answerStore:     as,
+		catalogStore:    cs,
+		guessCountStore: gcs,
+		rng:             rand.New(rand.NewSource(time.Now().UnixNano())),
+	}
+}
+
+func (j *PuzzleRefreshJob) Start(ctx context.Context) {
+	for {
+		waitDur := domain.TimeUntilNextMidnightFromNow()
+
+		// Used for quick testing/development
+		// waitDur := utils.NextShortTime()
+
+		select {
+		case <-ctx.Done():
+			return
+		case <-time.After(waitDur):
+			j.refresh(ctx)
+		}
+	}
+}
+
+func (j *PuzzleRefreshJob) refresh(ctx context.Context) {
+	now := time.Now()
+
+	j.answerStore.UpsertAnswers(ctx, domain.DailyAnswers{
+		DailySlash:    j.refreshWeapons(),
+		Connections:   j.refreshCategories(),
+		GuessTheNpc:   j.refreshNpc(),
+		Hangman:       j.refreshEnemy(),
+		ResetTime:     now,
+		NextResetTime: domain.NextMidnight(now),
+	})
+
+	j.guessCountStore.ResetGuessCounts(ctx)
+}
