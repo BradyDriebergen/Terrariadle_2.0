@@ -66,7 +66,7 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 	npcs := indexByID(npcData, func(n domain.Npc) int { return n.ID })
 
 	searchNpcs := make([]domain.SearchNpcResult, 0, len(npcData))
-	for i := range searchNpcs {
+	for i := range npcData {
 		searchNpcs = append(searchNpcs, toSearchNPC(npcData[i]))
 	}
 

@@ -74,11 +74,13 @@ func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (
 		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
 	}
 
+	count := s.guessCountsCache.DailySlashCount
+
 	s.mu.Unlock()
 
 	s.broker.Publish(domain.GuessCountEvent{
 		GameMode: domain.GameModeDailySlash,
-		Count:    s.guessCountsCache.DailySlashCount,
+		Count:    count,
 	})
 
 	return s.guessCountsCache.DailySlashCount, nil
@@ -95,11 +97,13 @@ func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) 
 		return 0, fmt.Errorf("increment-connections-count: %w", err)
 	}
 
+	count := s.guessCountsCache.ConnectionsCount
+
 	s.mu.Unlock()
 
 	s.broker.Publish(domain.GuessCountEvent{
 		GameMode: domain.GameModeConnections,
-		Count:    s.guessCountsCache.ConnectionsCount,
+		Count:    count,
 	})
 
 	return s.guessCountsCache.ConnectionsCount, nil
@@ -116,11 +120,13 @@ func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) 
 		return 0, fmt.Errorf("increment-guess-the-npc-count: %w", err)
 	}
 
+	count := s.guessCountsCache.GuessTheNpcCount
+
 	s.mu.Unlock()
 
 	s.broker.Publish(domain.GuessCountEvent{
 		GameMode: domain.GameModeGuessTheNpc,
-		Count:    s.guessCountsCache.GuessTheNpcCount,
+		Count:    count,
 	})
 
 	return s.guessCountsCache.GuessTheNpcCount, nil
@@ -134,14 +140,16 @@ func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int
 	gc := fromGuessCountDomain(s.guessCountsCache)
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
 		s.guessCountsCache.HangmanCount-- // roll back on failure
-		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
+		return 0, fmt.Errorf("increment-hangman-count: %w", err)
 	}
+
+	count := s.guessCountsCache.HangmanCount
 
 	s.mu.Unlock()
 
 	s.broker.Publish(domain.GuessCountEvent{
 		GameMode: domain.GameModeHangman,
-		Count:    s.guessCountsCache.HangmanCount,
+		Count:    count,
 	})
 
 	return s.guessCountsCache.HangmanCount, nil

@@ -31,10 +31,10 @@ func validateGuessedLetter(guess string) error {
 		return domain.InvalidInput("Guess must be a single letter", nil)
 	}
 	if !unicode.IsLetter(rune(guess[0])) {
-		domain.InvalidInput("Guess must be a letter", nil)
+		return domain.InvalidInput("Guess must be a letter", nil)
 	}
 	if !unicode.IsUpper(rune(guess[0])) {
-		domain.InvalidInput("Guess must be capitalized", nil)
+		return domain.InvalidInput("Guess must be capitalized", nil)
 	}
 
 	return nil
