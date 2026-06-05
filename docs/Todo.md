@@ -9,6 +9,7 @@
     - [ ] Integrate backend and front-end
 - [ ] Update go and npm packages
 - [x] Updating flying enemies in categories and fix 'Fultures'
+- [ ] Seperate Staff/Wand in db
 
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge

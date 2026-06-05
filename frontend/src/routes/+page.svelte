@@ -23,7 +23,7 @@
 		<li aria-current={page.url.pathname === '/hangman'}>
 			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
-		<li aria-current={page.url.pathname === '/about'}>
+		<li aria-current={page.url.pathname === '/wordaria'}>
 			<a href={resolve('/wordaria')}>Wordaria</a>
 		</li>
 	</ul>

@@ -21,8 +21,7 @@
     <hr />
 
     <p>
-        Welcome to Terrariadle! This is a passion project based on the popular sandbox
-        game,
+        Welcome to Terrariadle! This is a passion project based on the best game ever,
         <a class="link" href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>.
         I appreciate you stopping by and taking the time to read this.
     </p>
@@ -32,18 +31,20 @@
         <a class="link" href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="noopener noreferrer">Wordle</a>,
         <a class="link" href="https://loldle.net/" target="_blank" rel="noopener noreferrer">Loldle</a>,
         <a class="link" href="https://www.nytimes.com/games/connections" target="_blank" rel="noopener noreferrer">Connections</a>,
-        <a class="link" href="https://puzzles.usatoday.com/" target="_blank" rel="noopener noreferrer">Crossword</a>,
-        etc. I wanted to make a version of these daily guessing games based on my all-time
-        favorite game, Terraria.
+        and <a class="link" href="https://puzzles.usatoday.com/" target="_blank" rel="noopener noreferrer">Crossword</a>. 
+        I wanted to make a version of these daily guessing games based on my all-time
+        favorite game.
     </p>
 
     <p>
         This project aims to remake another developer's project:
         <a class="link" href="https://www.terradle.com/" target="_blank" rel="noopener noreferrer">Terradle</a>.
         They did an amazing job on his site but I wanted to expand and improve on the idea.
-        Please check out their
-        <a class="link" href="https://github.com/cxhuy" target="_blank" rel="noopener noreferrer">github</a>
-        to see some of their other projects.
+    </p>
+
+    <p>
+        If you're a developer or just curious about how this was built, the full source code is available on GitHub. 
+        Feel free to poke around, and if you build something inspired by it, I'd love to hear about it.
     </p>
 
     <p>
@@ -60,15 +61,42 @@
         <img src="/emojis/Coffee.png" alt="" id="coffee" />
     </p>
 
-    <h2 id="dw">How to play: Daily Weapon</h2>
+    <h2 id="t">How to play: Terrariadle</h2>
     <hr />
     <p>
-        The daily weapon is a random weapon found in Terraria picked every 24 hours. The daily
-        weapon is picked from a pool of ~450 weapons. Users can then try to guess the daily weapon
-        using hints given by previous guesses. The game is won by guessing the correct weapon.
+        Terrariadle is made up of 5 different mini-games that test you on your knowledge of the game. 
+        Each puzzle involves different aspects of Terraria, such as weapons, enemies, npcs, and more.
+        Below are the five different puzzles you can solve:
+    </p>
+    <ul style="font-size: 18px;">
+        <li>Daily Slash</li>
+        <li>Connections</li>
+        <li>Guess the NPC</li>
+        <li>Hangman</li>
+        <li>Wordaria</li>
+    </ul>
+    <p>
+        Each of these games have their own unique styles. Some allow you to guess until you solve it,
+        others give you a certain amount of chances. Players can solve the daily puzzles every 24 hours.
+        Puzzles refresh at mightnight every night. To see specific game functionality, the sections below
+        discribe these games in detail.
+    </p>
+
+    <h2 id="dw">How to play: Daily Slash</h2>
+    <hr />
+    <p>
+        The Daily Slash plays a lot like Wordle, where you try to guess the daily weapon using hints from 
+        previous guesses. To start guessing, you will see a module on the top of the page containing a 
+        search bar. Typing in this search bar lists all of the weapons in the game. You can select any of
+        these weapons by clicking/tapping, or you can also navigate using arrow keys and guess using the enter key.
     </p>
     <p>
-        Guesses are displayed below the input prompt. Each guess contains traits specific to the guessed
+        Throughout guessing, you'll unlock hints that reveal traits about the daily weapon. Each hint
+        is more revealing than the last. You can reveal the hint once you've guessed enough times, shown
+        by the progress bar.
+    </p>
+    <p>
+        Guessed weapons are displayed below the input prompt. Each guess contains traits specific to the guessed
         weapon. Each trait can have one of three backgrounds:
     </p>
     <ul>
@@ -91,7 +119,7 @@
 
     <h4>Extra notes about the game:</h4>
     <ul style="font-size: 16px;">
-        <li>- Melee weapons that are thrown count at throwables (hint).</li>
+        <li>- Melee weapons that are thrown count at throwables.</li>
         <li>- Lances count as spears</li>
         <li>- Repeaters and crossbows count as bows</li>
         <li>- Specialty guns count as guns</li>
@@ -132,35 +160,38 @@
     <hr />
     <p>
         Terraria's NPCs say all kinds of things. Everyday, a random quote said by a NPC is picked and you are prompted
-        to guess who said it. The quote can be from any NPC found in the game excluding Santa Claus. A full list of
-        NPCs can be found
-        <a class="link" href="https://terraria.fandom.com/wiki/NPCs" target="_blank" rel="noopener noreferrer">here</a>.
+        to guess who said it. The quote can be from any NPC found in the game excluding Santa Claus.
         You can guess through entering the trade of the NPC (Guide, Dryad, Arms Dealer, etc.). You will know when your right
         when the winning screen appears.
     </p>
 
     <p>
         When you guess correctly, you will be prompted to play a mini-game. Like NPC quotes, many NPCs have unique names.
-        The mini-game will task you with guessing the name of the Daily NPC. You will be prompted with four NPC names.
-        One of the names is a name the Daily NPC can have. After you have made your guess, the correct guess will appear.
-        If you guessed correctly, you will be shown the message "Nailed it!". If not, it will will show you the correct guess
-        and say "Better Luck Next Time!". Be careful, you only have one guess.
+        This mini-game will task you with guessing a name the Daily NPC could have. This game can only be played once the
+        daily NPC has been guessed.
+    </p>
+
+    <p>
+        To play this game, you are given four name options. Only one of the names is what the daily NPC could be named in
+        the game. The rest of the three are names that other NPCs could be named. You get one chance to make your guess.
+        Once the guess is made, the answer will be revealed alongside your guess.
     </p>
 
     <h2 id="hm">How to play: Hangman</h2>
     <hr />
     <p>
-        This gamemode is a twist on the classic game; Hangman. The goal of this game is to guess the name of a random enemy
-        before you hang the guide. You can guess by selecting letters on the on-screen keyboard. If the letter is within the
-        enemy's name, it will show up on the position of the letter(s). If the letter is not in the name, it will add a limb to
-        the guide. If you add all 6 body parts to the guide, you lose and the correct name is revealed. The enemies can consist
-        of any enemy found in the game and bosses.
+        This gamemode is a twist on the classic Hangman game. The goal of this game is to guess the name of a random enemy
+        before you hang the Guide. Enemies can consist of any enemy or boss found in the game.
+    </p> 
+    <p>
+        You can guess by selecting letters on the on-screen keyboard. If the letter is within the
+        enemy's name, it will show up on the position of the letter in respect to the enemy's name. If the letter is not 
+        in the name, it will add a limb to the Guide. If you add all 6 body parts to the Guide, you lose and the 
+        correct name is revealed.
     </p>
 
     <p>
-        Some helpful tips to get started is to guess vowels first. Pay attention to punctuation. More often than not, words that
-        end with '_' usually end in the letter s. If your stuck after that, guess common letters such as h, t, s, r, etc. Also
-        remember that a lot of creatures in the game are zombies, slimes, and skeletons. The more you play, the more you'll develop
+        If you struggle at first, don't worry. The more you play, the more you'll develop
         patterns that can help you. Good luck guessing Terrarian!
     </p>
 </div>
