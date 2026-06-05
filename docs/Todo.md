@@ -28,8 +28,8 @@
 - [x] Create `repo` package to replace `models` functionality
 - [x] Implement in-memory guess store with periodic flush
 - [x] Fix jobs after implementing domain and store
-- [ ] Change backend guess counts to use SSE - server sent events (used to be web-sockets)
-- [ ] Go through backend and finalize structure
+- [x] Change backend guess counts to use SSE - server sent events (used to be web-sockets)
+- [x] Go through backend and finalize structure
 
 **Hosting steps**
 - [ ] Add static adapter to Sveltekit
@@ -60,7 +60,7 @@ Terrariadle/
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
 - [ ] Add page for contacting support
-- [ ] Add monitering for better analytics
+- [ ] Add monitoring for better analytics
 - [ ] Update categories data
     - [ ] Add more categories
     - [ ] Update the options to contain only 4 options
