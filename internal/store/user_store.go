@@ -52,7 +52,10 @@ func (s *CachedUserStore) GetOrCreateUser(ctx context.Context, userID string) (d
 	}
 
 	s.mu.Lock()
-	s.userCache[userID] = user
+	// Prevents creating two new users from race condition
+	if _, ok := s.userCache[userID]; !ok {
+		s.userCache[userID] = user
+	}
 	s.mu.Unlock()
 
 	return user, nil
