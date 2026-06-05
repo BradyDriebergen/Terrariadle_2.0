@@ -2,11 +2,13 @@
 
 **Next items needed**
 - [x] Move data to Atlas
-- [ ] Change backend to pull from Atlas rather than JSON
+- [x] Change backend to pull from Atlas rather than JSON
 - [ ] Create page for new game
     - [ ] Plan and Implement Wordaria backend for minigame
     - [ ] Create front-end components for game
     - [ ] Integrate backend and front-end
+- [ ] Update go and npm packages
+- [x] Updating flying enemies in categories and fix 'Fultures'
 
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge
@@ -20,13 +22,18 @@
 - [ ] Change About section link to sign at the bottom
 
 **Backend changes**
-- [ ] Implement in-memory guess store with periodic flush
-- [ ] Change backend guess counts to use web-sockets
+- [x] Update database package to use dependency injection
+- [x] Split up `server` package for `server` + `service`
+- [x] Create `domain` package for shared types
+- [x] Create `repo` package to replace `models` functionality
+- [x] Implement in-memory guess store with periodic flush
+- [x] Fix jobs after implementing domain and store
+- [ ] Change backend guess counts to use SSE - server sent events (used to be web-sockets)
 - [ ] Go through backend and finalize structure
 
 **Hosting steps**
 - [ ] Add static adapter to Sveltekit
-- [ ] Reformat the site file structure:
+- [x] Reformat the site file structure:
 
 Terrariadle/
 ├── main.go
@@ -54,6 +61,9 @@ Terrariadle/
     - [ ] Svelte promotions
 - [ ] Add page for contacting support
 - [ ] Add monitering for better analytics
+- [ ] Update categories data
+    - [ ] Add more categories
+    - [ ] Update the options to contain only 4 options
 
 **Future nice to haves:**
 
