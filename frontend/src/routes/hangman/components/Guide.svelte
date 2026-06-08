@@ -15,42 +15,42 @@
         />
 
         <img
-            src="/hangman/Guide/Right_Arm.png"
+            src="/hangman/guide/Right_Arm.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 5 ? 1 : 0.3}
         />
 
         <img
-            src="/hangman/Guide/Torso.png"
+            src="/hangman/guide/Torso.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 4 ? 1 : 0.3}
         />
 
         <img
-            src="/hangman/Guide/Left_Arm.png"
+            src="/hangman/guide/Left_Arm.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 3 ? 1 : 0.3}
         />
 
         <img
-            src="/hangman/Guide/Right_Leg.png"
+            src="/hangman/guide/Right_Leg.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 2 ? 1 : 0.3}
         />
 
         <img
-            src="/hangman/Guide/Left_Leg.png"
+            src="/hangman/guide/Left_Leg.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 1 ? 1 : 0.3}
         />
 
         <img
-            src="/hangman/Guide/Head.png"
+            src="/hangman/guide/Head.png"
             alt=""
             class="guide-part"
             style:opacity={attempts <= 0 ? 1 : 0.3}
@@ -66,10 +66,10 @@
             duration={2000}
             noGravity
             colorArray={[
-                'url(/hangman/Guide/Flesh1.png)',
-                'url(/hangman/Guide/Flesh2.png)',
-                'url(/hangman/Guide/Head.png)',
-                'url(/hangman/Guide/Right_Arm.png)'
+                'url(/hangman/guide/Flesh1.png)',
+                'url(/hangman/guide/Flesh2.png)',
+                'url(/hangman/guide/Head.png)',
+                'url(/hangman/guide/Right_Arm.png)'
             ]}
         />
     </div>

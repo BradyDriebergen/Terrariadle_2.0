@@ -293,22 +293,22 @@
 	}
 
 	.answer-pane.pane-0 {
-		background: url('/connections/GrassWall.png');
+		background: url('/category-backgrounds/GrassWall.png');
 		background-repeat: repeat;
 		background-size: 20%;
 	}
 	.answer-pane.pane-1 {
-		background: url('/connections/HardenedSandWall.png');
+		background: url('/category-backgrounds/HardenedSandWall.png');
 		background-repeat: repeat;
 		background-size: 20%;
 	}
 	.answer-pane.pane-2 {
-		background: url('/connections/SnowWall.png');
+		background: url('/category-backgrounds/SnowWall.png');
 		background-repeat: repeat;
 		background-size: 20%;
 	}
 	.answer-pane.pane-3 {
-		background: url('/connections/JungleVineWall.png');
+		background: url('/category-backgrounds/JungleVineWall.png');
 		background-repeat: repeat;
 		background-size: 20%;
 	}
