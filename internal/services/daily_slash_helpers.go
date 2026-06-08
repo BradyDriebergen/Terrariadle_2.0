@@ -98,8 +98,8 @@ func sliceCompare(guess, answer []string) domain.CompareResult {
 	return domain.NoMatch
 }
 
-func toPreview(w domain.Weapon) domain.WeaponPreview {
-	return domain.WeaponPreview{
+func toPreview(w domain.Weapon) WeaponPreview {
+	return WeaponPreview{
 		Name:   w.Name,
 		Path:   w.Info.ImagePath,
 		Rarity: w.Info.Rarity,
@@ -132,4 +132,17 @@ func toSearchableWeapons(w []domain.SearchWeaponResult) []SearchWeaponData {
 	}
 
 	return weapons
+}
+
+func toWeaponCheckData(w domain.WeaponChecks) WeaponCheckData {
+	return WeaponCheckData{
+		WeaponID:   w.WeaponID,
+		DamageType: w.DamageType,
+		Damage:     w.Damage,
+		UseTime:    w.UseTime,
+		Rarity:     w.Rarity,
+		Operation:  w.Operation,
+		Material:   w.Material,
+		Obtained:   w.Obtained,
+	}
 }

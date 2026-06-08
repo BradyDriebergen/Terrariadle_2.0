@@ -63,7 +63,7 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 
 		guesses = append(guesses, WeaponGuess{
 			Weapon: toWeaponData(guessedWeapon),
-			Checks: check,
+			Checks: toWeaponCheckData(check),
 		})
 	}
 
@@ -137,7 +137,7 @@ func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int
 		Finished: correct,
 		GuessResult: WeaponGuess{
 			Weapon: toWeaponData(guessedWeapon),
-			Checks: checks,
+			Checks: toWeaponCheckData(checks),
 		},
 	}, nil
 }

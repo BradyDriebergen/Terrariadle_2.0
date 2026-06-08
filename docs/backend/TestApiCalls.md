@@ -13,7 +13,7 @@ curl -i -X GET http://localhost:8080/api/remaining-time
 Daily-slash init game handler:
 curl -i -X GET "http://localhost:8080/api/daily-slash/initialize-game/?user_id=123"
 
-Daily-slash get search npcs:
+Daily-slash get search weapons:
 curl -i -X GET "http://localhost:8080/api/daily-slash/search-items"
 
 Daily-slash get hint:

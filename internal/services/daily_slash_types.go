@@ -3,15 +3,15 @@ package services
 import "terrariadle-backend/internal/domain"
 
 type DailySlashInitData struct {
-	PreviousWeapon domain.WeaponPreview `json:"previous_weapon"`
-	GuessedIDs     []int                `json:"guessed_ids"`
-	Guesses        []WeaponGuess        `json:"guesses"`
-	Finished       bool                 `json:"finished"`
+	PreviousWeapon WeaponPreview `json:"previous_weapon"`
+	GuessedIDs     []int         `json:"guessed_ids"`
+	Guesses        []WeaponGuess `json:"guesses"`
+	Finished       bool          `json:"finished"`
 }
 
 type WeaponGuess struct {
-	Weapon WeaponData          `json:"weapon"`
-	Checks domain.WeaponChecks `json:"checks"`
+	Weapon WeaponData      `json:"weapon"`
+	Checks WeaponCheckData `json:"checks"`
 }
 
 type WeaponData struct {
@@ -40,4 +40,21 @@ type DailySlashCheckData struct {
 
 type DailySlashWinningData struct {
 	Position int `json:"position"`
+}
+
+type WeaponPreview struct {
+	Name   string `json:"name"`
+	Path   string `json:"path"`
+	Rarity string `json:"rarity"`
+}
+
+type WeaponCheckData struct {
+	WeaponID   int                  `json:"weapon_id"`
+	DamageType bool                 `json:"damage_type"`
+	Damage     domain.CompareResult `json:"damage"`
+	UseTime    domain.CompareResult `json:"use_time"`
+	Rarity     domain.CompareResult `json:"rarity"`
+	Operation  bool                 `json:"operation"`
+	Material   bool                 `json:"material"`
+	Obtained   domain.CompareResult `json:"obtained"`
 }

@@ -33,17 +33,6 @@ const (
 	PartialMatch CompareResult = 3
 )
 
-type WeaponChecks struct {
-	WeaponID   int
-	DamageType bool
-	Damage     CompareResult
-	UseTime    CompareResult
-	Rarity     CompareResult
-	Operation  bool
-	Material   bool
-	Obtained   CompareResult
-}
-
 type ConnectionGame struct {
 	Game     Game
 	Attempts int

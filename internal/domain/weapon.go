@@ -19,14 +19,19 @@ type WeaponInfo struct {
 	Obtained   []string
 }
 
+type WeaponChecks struct {
+	WeaponID   int
+	DamageType bool
+	Damage     CompareResult
+	UseTime    CompareResult
+	Rarity     CompareResult
+	Operation  bool
+	Material   bool
+	Obtained   CompareResult
+}
+
 type SearchWeaponResult struct {
 	WeaponID int
 	Name     string
 	Path     string
-}
-
-type WeaponPreview struct {
-	Name   string
-	Path   string
-	Rarity string
 }
