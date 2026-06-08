@@ -70,6 +70,8 @@ func main() {
 		}
 	}()
 
+	log.Println("Server started listening on port :8080")
+
 	// On quit, shuts down the app cleanly
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
@@ -137,7 +139,7 @@ func createServices(s stores) gameServices {
 }
 
 func startBackgroundJobs(ctx context.Context, s stores) {
-	puzzleRefresh := jobs.NewPuzzleRefresh(s.answer, s.guessCount, s.catalog)
+	puzzleRefresh := jobs.NewPuzzleRefresh(s.answer, s.guessCount, s.catalog, s.user)
 	go puzzleRefresh.Start(ctx)
 	go jobs.StartFlushJob(ctx, s.user)
 	log.Println("Background jobs started")

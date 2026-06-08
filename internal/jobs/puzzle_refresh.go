@@ -9,27 +9,40 @@ import (
 )
 
 type PuzzleRefreshJob struct {
-	answerStore     *store.CachedAnswerStore
-	guessCountStore *store.CachedGuessCountsStore
-	catalogStore    *store.CachedCatalogStore
+	answerStore     store.AnswerStore
+	guessCountStore store.GuessCountsStore
+	catalogStore    store.CatalogStore
+	userStore       store.UserStore
 	rng             *rand.Rand
 }
 
-func NewPuzzleRefresh(as *store.CachedAnswerStore, gcs *store.CachedGuessCountsStore, cs *store.CachedCatalogStore) *PuzzleRefreshJob {
+func NewPuzzleRefresh(
+	as store.AnswerStore,
+	gcs store.GuessCountsStore,
+	cs store.CatalogStore,
+	us store.UserStore,
+) *PuzzleRefreshJob {
+
 	return &PuzzleRefreshJob{
 		answerStore:     as,
 		catalogStore:    cs,
 		guessCountStore: gcs,
+		userStore:       us,
 		rng:             rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
 }
 
 func (j *PuzzleRefreshJob) Start(ctx context.Context) {
+	// If we missed a reset (e.g. server was down at midnight), refresh immediately.
+	if j.answerStore.GetAnswers().NextResetTime.Before(time.Now()) {
+		j.refresh(ctx)
+	}
+
+	// Testing method for refreshing on startup
+	j.refresh((ctx))
+
 	for {
 		waitDur := domain.TimeUntilNextMidnightFromNow()
-
-		// Used for quick testing/development
-		// waitDur := utils.NextShortTime()
 
 		select {
 		case <-ctx.Done():
@@ -53,4 +66,6 @@ func (j *PuzzleRefreshJob) refresh(ctx context.Context) {
 	})
 
 	j.guessCountStore.ResetGuessCounts(ctx)
+
+	j.userStore.DropAllUsers(ctx)
 }

@@ -82,13 +82,11 @@ func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter Filte
 	return nil
 }
 
-func Drop(ctx context.Context, m *MongoDB, collectionName string) error {
+func DeleteAll(ctx context.Context, m *MongoDB, collectionName string) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
-
-	if err := collection.Drop(ctx); err != nil {
-		return fmt.Errorf("failed to drop collection %s.%s: %w", collection.Database().Name(), collection.Name(), err)
+	if _, err := collection.DeleteMany(ctx, bson.D{}); err != nil {
+		return fmt.Errorf("failed to delete all documents from %s.%s: %w", collection.Database().Name(), collection.Name(), err)
 	}
-
 	return nil
 }
 

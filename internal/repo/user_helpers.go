@@ -9,6 +9,7 @@ func (u *userData) toDomain() domain.User {
 	checks := make([]domain.WeaponChecks, len(u.DailySlash.Checks))
 	for i, c := range u.DailySlash.Checks {
 		checks[i] = domain.WeaponChecks{
+			WeaponID:   c.WeaponID,
 			DamageType: c.DamageType,
 			Damage:     c.Damage,
 			UseTime:    c.UseTime,
@@ -54,6 +55,7 @@ func fromDomain(u domain.User) userData {
 	checks := make([]weaponChecks, len(u.DailySlash.Checks))
 	for i, c := range u.DailySlash.Checks {
 		checks[i] = weaponChecks{
+			WeaponID:   c.WeaponID,
 			DamageType: c.DamageType,
 			Damage:     c.Damage,
 			UseTime:    c.UseTime,
