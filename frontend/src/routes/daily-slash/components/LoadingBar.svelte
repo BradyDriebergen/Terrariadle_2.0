@@ -4,12 +4,18 @@
 	import loadingBar1 from '$lib/assets/LoadingBar1.png';
 	import loadingBar2 from '$lib/assets/LoadingBar2.png';
 
-	let { guesses, won } = $props();
+	let { 
+		guessCount = 0, 
+		finished = false
+	} : {
+		guessCount: number;
+		finished: boolean;
+	} = $props();
 
 	const progressBar2ByGuess = [100, 75, 50, 25, 100, 60, 30, 100, 80, 60, 40, 20, 0];
 
 	// Use 12 guesses when won is true
-	let effectiveGuesses = $derived.by(() => (won ? 12 : guesses));
+	let effectiveGuesses = $derived(finished ? 12 : guessCount);
 
 	let progressBar1 = $derived.by(() => {
 		if (effectiveGuesses < 4) {

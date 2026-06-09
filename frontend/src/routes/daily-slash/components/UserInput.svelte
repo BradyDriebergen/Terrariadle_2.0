@@ -4,54 +4,93 @@
 	import LoadingBar from './LoadingBar.svelte';
 	import { scale, slide } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
+	import type { WeaponGuess, WeaponListItem } from '$lib/types/daily-slash';
+	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
 
-	let { guesses, submitGuess, weaponList, won } = $props();
+	let {
+		guesses = $bindable<WeaponGuess[]>([]),
+		finished = false,
+		weaponList = [],
+	} : {
+		guesses: WeaponGuess[];
+		finished: boolean;
+		weaponList: WeaponListItem[]
+	} = $props();
+
 	let guessCount = $derived(guesses?.length ?? 0);
 
-	let hints = $state(['', '', '']);
-	let showHints = $state([false, false, false]);
+	type HintState = { text: string; visible: boolean };
+
+	let hints = $state<HintState[]>([
+		{ text: '', visible: false },
+		{ text: '', visible: false },
+		{ text: '', visible: false },
+	]);
+
+	let hint1Locked = $derived(guessCount < 4 && !finished);
+	let hint2Locked = $derived(guessCount < 7 && !finished);
+	let hint3Locked = $derived(guessCount < 12 && !finished);
 
 	async function revealHint(num: number) {
-		if (hints[num - 1]) {
-			showHints[num - 1] = !showHints[num - 1];
-			return;
-		}
+		try {
+			if (hints[num - 1].text) {
+				hints[num - 1].visible = !hints[num - 1].visible;
+				return;
+			}
 
-		const res = await fetch(`http://localhost:3000/api/daily-slash/hint/${num}`);
-		hints[num - 1] = await res.json();
-		showHints[num - 1] = true;
+			const res = await getWeaponHint(num);
+			hints[num - 1] = { text: res, visible: true };
+		} catch (e: any) {
+			// handle error here
+			console.log(e);
+		}
+	}
+
+	async function submitGuess(weaponId: number) {
+		try {
+			const guess = await checkWeaponGuess(weaponId);
+			guesses = [guess, ...guesses];
+		} catch (e) {
+			// handle error here
+			console.log(e);
+		}
 	}
 </script>
 
-{#if !won}
+{#if !finished}
 	<div class="guess-panel" out:slide={{ duration: 700, easing: cubicInOut }}>
 		<h2>Guess Today's Weapon</h2>
 
-		<div class="loadingBar" class:won>
-			<LoadingBar guesses={guessCount} {won} />
+		<div class="loadingBar" class:finished>
+			<LoadingBar {guessCount} {finished} />
 		</div>
 
 		<div class="hint-buttons">
-			<button disabled={guessCount < 4 && !won} onclick={() => revealHint(1)}>
-				{#if guessCount < 4 && !won}
+			<!-- Hint 1 -->
+			<button disabled={hint1Locked} onclick={() => revealHint(1)}>
+				{#if hint1Locked}
 					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
 				{/if}
-				<span>{showHints[0] ? hints[0] : 'Mode Obtained'}</span>
+				<span>{hints[0].visible ? hints[0].text : 'Mode Obtained'}</span>
 			</button>
-			<button disabled={guessCount < 7 && !won} onclick={() => revealHint(2)}>
-				{#if guessCount < 7 && !won}
+
+			<!-- Hint 2 -->
+			<button disabled={hint2Locked} onclick={() => revealHint(2)}>
+				{#if hint2Locked}
 					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
 				{/if}
-				<span>{showHints[1] ? hints[1] : 'Weapon Type'}</span>
+				<span>{hints[1].visible ? hints[1].text : 'Weapon Type'}</span>
 			</button>
-			<button disabled={guessCount < 12 && !won} onclick={() => revealHint(3)}>
-				{#if showHints[2]}
-					<img class="hint-3" src={`/weapons/${hints[2]}`} alt={hints[2]} />
-				{:else}
-					{#if guessCount < 12 && !won}
+
+			<!-- Hint 3 -->
+			<button disabled={hint3Locked} onclick={() => revealHint(3)}>
+				{#if !hints[2].visible}
+					{#if hint3Locked}
 						<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
 					{/if}
 					<span>Image Clue</span>
+				{:else}
+					<img class="hint-3" src={`/weapons/${hints[2].text}`} alt={hints[2].text} />
 				{/if}
 			</button>
 		</div>

@@ -1,19 +1,37 @@
 <script lang="ts">
+	import { subscribeToPlayerCount } from '$lib/api/common';
+	import type { WeaponPreview } from '$lib/types/daily-slash';
 	import { colors, type Rarity } from '$lib/types/dailySlash';
+	import { onMount } from 'svelte';
 
-	let { previousWeapon } = $props();
+	let { 
+		prevWeapon
+	} : {
+		prevWeapon: WeaponPreview | null;
+	} = $props();
+
+	let playerCount = $state<number>(0);
+
+	// Streams live player count to the user
+	onMount(() => {
+        const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
+            playerCount = count;
+        });
+
+        return cleanup;
+    });
 </script>
 
 <div>
-	<p>5 people have guessed today's weapon</p>
+	<p>{playerCount} people have guessed today's weapon</p>
 	<p>Yesterday's weapon was:</p>
 
 	<img
-		style="border-color: {colors[previousWeapon.rarity as Rarity]}"
-		src={`/weapons/${previousWeapon.path}`}
+		style="border-color: {colors[prevWeapon?.rarity as Rarity]}"
+		src={`/weapons/${prevWeapon?.path}`}
 		alt="Previous weapon"
 	/>
-	<p style="color: {colors[previousWeapon.rarity as Rarity]}">{previousWeapon.name}</p>
+	<p style="color: {colors[prevWeapon?.rarity as Rarity]}">{prevWeapon?.name}</p>
 
 	<p>Guess any weapon to begin.</p>
 </div>

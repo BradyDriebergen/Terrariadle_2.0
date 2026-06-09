@@ -4,14 +4,30 @@
 	import UserInput from './components/UserInput.svelte';
 	import GameInfo from './components/GameInfo.svelte';
 	import WinningCard from './components/WinningCard.svelte';
-	import { finished } from 'stream';
 	import { checkWeaponGuess } from '$lib/api/daily-slash';
+	import type { WeaponListItem, WeaponGuess, WeaponPreview } from '$lib/types/daily-slash';
 
 	let { data } = $props();
 
-	let gameContext = $derived(data.gameContext)
-	let weaponList = $derived(data.weaponList)
+	$inspect(data)
 
+	let guesses = $state<WeaponGuess[]>([]);
+    let prevWeapon = $state<WeaponPreview | null>(null);
+    let finished = $state<boolean>(false);
+
+    $effect(() => {
+		// Initialize data once pre-fetch is finished
+        if (data.gameContext) {
+            guesses = data.gameContext.guesses;
+            prevWeapon = data.gameContext.previous_weapon;
+            finished = data.gameContext.finished;
+        }
+    });
+
+    let weaponList = $derived<WeaponListItem[]>(
+        (data.weaponList ?? []).filter(w => !data.gameContext?.guessed_ids.includes(w.weapon_id))
+    );
+	
 	async function submitGuess(weaponId: number) {
 		try {
 			const result = await checkWeaponGuess(weaponId);
@@ -30,17 +46,17 @@
 <svelte:document style:overflow-y="hidden" />
 
 <div>
-	<UserInput guesses={gameContext.guesses} {submitGuess} weaponList={weaponList} won={gameContext.finished} />
+	<UserInput guesses={guesses} {submitGuess} weaponList={weaponList} won={finished} />
 
-	{#if gameContext.finished}
-		<WinningCard weapon={gameContext.guesses[0]} userId={data.userId} />
+	{#if finished}
+		<WinningCard weapon={guesses[0]} userId={data.userId} />
 	{/if}
 
-	{#if gameContext.guesses.length < 1}
-		<GameInfo previousWeapon={gameContext.previous_weapon} />
+	{#if guesses.length < 1}
+		<GameInfo {prevWeapon} />
 	{:else}
-		<GuessList guesses={gameContext.guesses} checks={gameContext.guesses} />
+		<GuessList guesses={guesses} checks={guesses} />
 	{/if}
 
-	<Confetti won={gameContext.finished} />
+	<Confetti won={finished} />
 </div>

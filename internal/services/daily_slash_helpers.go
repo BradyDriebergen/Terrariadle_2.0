@@ -123,12 +123,12 @@ func toWeaponData(w domain.Weapon) WeaponData {
 
 func toSearchableWeapons(w []domain.SearchWeaponResult) []SearchWeaponData {
 	weapons := make([]SearchWeaponData, len(w))
-	for _, sw := range w {
-		weapons = append(weapons, SearchWeaponData{
+	for i, sw := range w {
+		weapons[i] = SearchWeaponData{
 			WeaponID: sw.WeaponID,
 			Name:     sw.Name,
 			Path:     sw.Path,
-		})
+		}
 	}
 
 	return weapons
