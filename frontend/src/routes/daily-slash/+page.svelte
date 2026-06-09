@@ -5,26 +5,25 @@
 	import GameInfo from './components/GameInfo.svelte';
 	import WinningCard from './components/WinningCard.svelte';
 	import { finished } from 'stream';
+	import { checkWeaponGuess } from '$lib/api/daily-slash';
 
 	let { data } = $props();
 
 	let gameContext = $derived(data.gameContext)
 	let weaponList = $derived(data.weaponList)
 
-	async function submitGuess(weaponid: number) {
-		fetch('http://localhost:3000/api/daily-slash/check-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: weaponid })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				guesses.unshift(data.guess);
-				checks.unshift(data.check);
-				won = data.won;
+	async function submitGuess(weaponId: number) {
+		try {
+			const result = await checkWeaponGuess(weaponId);
 
-				weapons = weapons.filter((w) => w.id !== weaponid);
-			});
+			// guesses.unshift(result.weapon);
+			// checks.unshift(result.check);
+			// won = result.won;
+			// weapons = weapons.filter((w) => w.id !== weaponId);
+		} catch (err) {
+			// handle UI feedback here, e.g.:
+			console.error(err);
+		}
 	}
 </script>
 

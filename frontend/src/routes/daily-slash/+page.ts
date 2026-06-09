@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 export async function load({ fetch, parent }) {
 	const { userId } = await parent();
 
-	const contextRes = await fetch(`http://localhost:8080/api/daily-slash/initialize-game/?user_id=${userId}`);
+	const contextRes = await fetch(`/api/daily-slash/initialize-game/?user_id=${userId}`);
 	if (!contextRes.ok) {
 		const body = await contextRes.json();
 		error(contextRes.status, body.error ?? 'Unable to initialize game');
@@ -15,7 +15,7 @@ export async function load({ fetch, parent }) {
 	let weaponList: WeaponListItem[] = [];
 
 	if (!gameContext.finished) {
-		const weaponsRes = await fetch('http://localhost:8080/api/daily-slash/search-items');
+		const weaponsRes = await fetch('/api/daily-slash/search-items');
 		if (!weaponsRes.ok) {
 			const body = await weaponsRes.json();
 			error(weaponsRes.status, body.error ?? 'Unable to fetch weapons');
