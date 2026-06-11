@@ -46,7 +46,7 @@
 <svelte:document style:overflow-y="hidden" />
 
 <div>
-	<UserInput guesses={guesses} {submitGuess} weaponList={weaponList} won={finished} />
+	<UserInput {guesses} {weaponList} {finished} />
 
 	{#if finished}
 		<WinningCard weapon={guesses[0]} userId={data.userId} />
