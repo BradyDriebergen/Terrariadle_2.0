@@ -26,24 +26,13 @@
 	}
 </script>
 
-<GuessPanel 
-	submitGuess={submitGuess}
-	npcList={npcs} 
-	quote={data.quote} 
-	won={won}
-/>
+<GuessPanel {submitGuess} npcList={npcs} quote={data.quote} {won} />
 
 {#if won}
-	<WinningComponent
-		npc={guesses[0]}
-		userId={data.userId}
-	/>
+	<WinningComponent npc={guesses[0]} userId={data.userId} />
 {/if}
 
-<GuessList
-	guesses={guesses}
-	won={won}
-/>
+<GuessList {guesses} {won} />
 
 <Confetti {won} />
 

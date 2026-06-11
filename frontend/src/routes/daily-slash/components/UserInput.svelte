@@ -10,11 +10,11 @@
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),
 		finished = false,
-		weaponList = [],
-	} : {
+		weaponList = []
+	}: {
 		guesses: WeaponGuess[];
 		finished: boolean;
-		weaponList: WeaponListItem[]
+		weaponList: WeaponListItem[];
 	} = $props();
 
 	let guessCount = $derived(guesses?.length ?? 0);
@@ -24,7 +24,7 @@
 	let hints = $state<HintState[]>([
 		{ text: '', visible: false },
 		{ text: '', visible: false },
-		{ text: '', visible: false },
+		{ text: '', visible: false }
 	]);
 
 	let hint1Locked = $derived(guessCount < 4 && !finished);

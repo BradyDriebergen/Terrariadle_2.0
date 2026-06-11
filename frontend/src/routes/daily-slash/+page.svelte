@@ -9,25 +9,25 @@
 
 	let { data } = $props();
 
-	$inspect(data)
+	$inspect(data);
 
 	let guesses = $state<WeaponGuess[]>([]);
-    let prevWeapon = $state<WeaponPreview | null>(null);
-    let finished = $state<boolean>(false);
+	let prevWeapon = $state<WeaponPreview | null>(null);
+	let finished = $state<boolean>(false);
 
-    $effect(() => {
+	$effect(() => {
 		// Initialize data once pre-fetch is finished
-        if (data.gameContext) {
-            guesses = data.gameContext.guesses;
-            prevWeapon = data.gameContext.previous_weapon;
-            finished = data.gameContext.finished;
-        }
-    });
+		if (data.gameContext) {
+			guesses = data.gameContext.guesses;
+			prevWeapon = data.gameContext.previous_weapon;
+			finished = data.gameContext.finished;
+		}
+	});
 
-    let weaponList = $derived<WeaponListItem[]>(
-        (data.weaponList ?? []).filter(w => !data.gameContext?.guessed_ids.includes(w.weapon_id))
-    );
-	
+	let weaponList = $derived<WeaponListItem[]>(
+		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.weapon_id))
+	);
+
 	async function submitGuess(weaponId: number) {
 		try {
 			const result = await checkWeaponGuess(weaponId);
@@ -55,7 +55,7 @@
 	{#if guesses.length < 1}
 		<GameInfo {prevWeapon} />
 	{:else}
-		<GuessList guesses={guesses} checks={guesses} />
+		<GuessList {guesses} checks={guesses} />
 	{/if}
 
 	<Confetti won={finished} />

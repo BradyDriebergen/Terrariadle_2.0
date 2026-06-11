@@ -4,9 +4,9 @@
 	import { colors, type Rarity } from '$lib/types/dailySlash';
 	import { onMount } from 'svelte';
 
-	let { 
+	let {
 		prevWeapon
-	} : {
+	}: {
 		prevWeapon: WeaponPreview | null;
 	} = $props();
 
@@ -14,12 +14,12 @@
 
 	// Streams live player count to the user
 	onMount(() => {
-        const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
-            playerCount = count;
-        });
+		const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
+			playerCount = count;
+		});
 
-        return cleanup;
-    });
+		return cleanup;
+	});
 </script>
 
 <div>

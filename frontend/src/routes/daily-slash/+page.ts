@@ -10,7 +10,7 @@ export async function load({ fetch, parent }) {
 		error(contextRes.status, body.error ?? 'Unable to initialize game');
 	}
 
-	const gameContext = await contextRes.json() as DailySlashSession;
+	const gameContext = (await contextRes.json()) as DailySlashSession;
 
 	let weaponList: WeaponListItem[] = [];
 
@@ -21,7 +21,7 @@ export async function load({ fetch, parent }) {
 			error(weaponsRes.status, body.error ?? 'Unable to fetch weapons');
 		}
 
-		weaponList = await weaponsRes.json() as WeaponListItem[];
+		weaponList = (await weaponsRes.json()) as WeaponListItem[];
 	}
 
 	return { gameContext, weaponList };

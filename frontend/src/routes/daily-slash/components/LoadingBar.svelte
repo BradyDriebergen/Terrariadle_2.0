@@ -1,8 +1,8 @@
 <script lang="ts">
-	let { 
-		guessCount = 0, 
+	let {
+		guessCount = 0,
 		finished = false
-	} : {
+	}: {
 		guessCount: number;
 		finished: boolean;
 	} = $props();
@@ -31,16 +31,20 @@
 
 <div class="wrapper">
 	<div class="text">Hint Progress Bar</div>
-	<img class="background" src="/loading-bar-assets/LoadingBackground.png" alt="Loading background" />
+	<img
+		class="background"
+		src="/loading-bar-assets/LoadingBackground.png"
+		alt="Loading background"
+	/>
 	<img
 		class="bar"
-		src={"/loading-bar-assets/LoadingBar1.png"}
+		src={'/loading-bar-assets/LoadingBar1.png'}
 		alt="Loading bar 1"
 		style="clip-path: inset(0 {progressBar1}% 0 0);"
 	/>
 	<img
 		class="bar"
-		src={"/loading-bar-assets/LoadingBar2.png"}
+		src={'/loading-bar-assets/LoadingBar2.png'}
 		alt="Loading bar 2"
 		style="clip-path: inset(0 {progressBar2}% 0 0);"
 	/>

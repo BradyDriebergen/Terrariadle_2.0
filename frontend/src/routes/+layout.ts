@@ -2,13 +2,13 @@
 import { browser } from '$app/environment';
 
 export function load() {
-    if (!browser) return { userId: null };
+	if (!browser) return { userId: null };
 
-    let userId = localStorage.getItem('user_id');
-    if (!userId) {
-        userId = crypto.randomUUID();
-        localStorage.setItem('user_id', userId);
-    }
+	let userId = localStorage.getItem('user_id');
+	if (!userId) {
+		userId = crypto.randomUUID();
+		localStorage.setItem('user_id', userId);
+	}
 
-    return { userId };
+	return { userId };
 }

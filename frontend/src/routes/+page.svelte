@@ -4,7 +4,7 @@
 
 	let { data } = $props();
 
-	$inspect(data.userId)
+	$inspect(data.userId);
 </script>
 
 <div>

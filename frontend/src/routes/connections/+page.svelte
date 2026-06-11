@@ -111,8 +111,8 @@
 
 	async function submitGuess() {
 		const guesses = options
-			.filter(option => selectedOptions.includes(option))
-			.map(option => option.label);
+			.filter((option) => selectedOptions.includes(option))
+			.map((option) => option.label);
 
 		fetch('http://localhost:3000/api/connections/check-guess', {
 			method: 'POST',
