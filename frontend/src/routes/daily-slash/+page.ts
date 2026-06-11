@@ -1,4 +1,5 @@
-import type { DailySlashSession, WeaponListItem, WeaponPreview } from '$lib/types/daily-slash.js';
+import type { DropdownListItem } from '$lib/types/common.js';
+import type { DailySlashSession } from '$lib/types/daily-slash.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, parent }) {
@@ -12,7 +13,7 @@ export async function load({ fetch, parent }) {
 
 	const gameContext = (await contextRes.json()) as DailySlashSession;
 
-	let weaponList: WeaponListItem[] = [];
+	let weaponList: DropdownListItem[] = [];
 
 	if (!gameContext.finished) {
 		const weaponsRes = await fetch('/api/daily-slash/search-items');
@@ -21,7 +22,7 @@ export async function load({ fetch, parent }) {
 			error(weaponsRes.status, body.error ?? 'Unable to fetch weapons');
 		}
 
-		weaponList = (await weaponsRes.json()) as WeaponListItem[];
+		weaponList = (await weaponsRes.json()) as DropdownListItem[];
 	}
 
 	return { gameContext, weaponList };

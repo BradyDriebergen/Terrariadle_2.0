@@ -1,4 +1,4 @@
-import type { WeaponGuess } from '$lib/types/daily-slash';
+import type { DailySlashCheckResult, DailySlashWinningData, WeaponGuess } from '$lib/types/daily-slash';
 import { error } from '@sveltejs/kit';
 
 export async function getWeaponHint(num: number): Promise<string> {
@@ -10,7 +10,7 @@ export async function getWeaponHint(num: number): Promise<string> {
 	return (await res.json()) as string;
 }
 
-export async function checkWeaponGuess(weaponId: number): Promise<WeaponGuess> {
+export async function checkWeaponGuess(weaponId: number): Promise<DailySlashCheckResult> {
 	const userId = localStorage.getItem('userId');
 
 	if (!userId) {
@@ -28,5 +28,16 @@ export async function checkWeaponGuess(weaponId: number): Promise<WeaponGuess> {
 		error(res.status, body.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as WeaponGuess;
+	return body as DailySlashCheckResult;
+}
+
+export async function getDailySlashWinningData(): Promise<DailySlashWinningData> {
+	const userId = localStorage.getItem('userId');
+
+	if (!userId) {
+		throw new Error('Session not found. Try refreshing the page.');
+	}
+
+	const res = await fetch(`/api/daily-slash/hint/?user_id=${userId}`);
+	return (await res.json()) as DailySlashWinningData
 }

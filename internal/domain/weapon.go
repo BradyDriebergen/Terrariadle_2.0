@@ -19,6 +19,16 @@ type WeaponInfo struct {
 	Obtained   []string
 }
 
+type CompareResult int
+
+const (
+	Lower        CompareResult = -1
+	Match        CompareResult = 0
+	Higher       CompareResult = 1
+	NoMatch      CompareResult = 2
+	PartialMatch CompareResult = 3
+)
+
 type WeaponChecks struct {
 	WeaponID   int
 	DamageType bool

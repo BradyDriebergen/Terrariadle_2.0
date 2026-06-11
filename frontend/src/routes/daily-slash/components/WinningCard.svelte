@@ -1,47 +1,65 @@
 <script lang="ts">
+	import { subscribeToPlayerCount } from '$lib/api/common';
+	import { getDailySlashWinningData } from '$lib/api/daily-slash';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { backgrounds, borders, colors, type Rarity } from '$lib/types/dailySlash';
+	import { backgrounds, borders, colors, type Rarity, type Weapon } from '$lib/types/daily-slash';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
-	let { weapon, userId } = $props();
 
-	let pos = $state(0);
-	let count = $state(0);
+	let { 
+		weaponAnswer
+	} : {
+		weaponAnswer: Weapon;
+	}= $props();
+
+	let position = $state(0);
+	let playerCount = $state(0);
 
 	onMount(async () => {
-		const winningData = await fetch(`http://localhost:3000/api/daily-slash/winning-data/${userId}`);
-		const winningDataJson = await winningData.json();
+		const winningData = await getDailySlashWinningData();
 
-		pos = winningDataJson.pos;
-		count = winningDataJson.count;
+		position = winningData.position;
+	});
+
+	// Streams live player count to the user
+	onMount(() => {
+		const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
+			playerCount = count;
+		});
+
+		return cleanup;
 	});
 </script>
 
 <div
 	class="wrapper"
 	style="
-        border-image-source: {borders[weapon.info.rarity as Rarity]}; 
-        background: {backgrounds[weapon.info.rarity as Rarity]}"
+        border-image-source: {borders[weaponAnswer.rarity as Rarity]}; 
+        background: {backgrounds[weaponAnswer.rarity as Rarity]}"
 	in:scale
 >
 	<h1>You Got It!</h1>
-	{#if pos !== 0}
+	
+	{#if position !== 0}
 		<p transition:typewriter={{ speed: 1 }}>
-			You were the {ConvertPositionToString(pos)} person to guess today's weapon!
+			You were the {ConvertPositionToString(position)} person to guess today's weapon!
 		</p>
 	{:else}
 		<br />
 	{/if}
+
 	<img
-		style="border-color: {colors[weapon.info.rarity as Rarity]}"
-		src={`/weapons/${weapon.info['image-path']}`}
+		style="border-color: {colors[weaponAnswer.rarity as Rarity]}"
+		src={`/weapons/${weaponAnswer.image_path}`}
 		alt="Previous weapon"
 		in:scale
 	/>
-	<h3 class="weapon-name" style="color: {colors[weapon.info.rarity as Rarity]}">{weapon.name}</h3>
-	<p>{count} people guessed todays weapon</p>
+	
+	<h3 class="weapon-name" style="color: {colors[weaponAnswer.rarity as Rarity]}">{weaponAnswer.name}</h3>
+	<p>{playerCount} people guessed todays weapon</p>
+
 	<RemainingTime />
 </div>
 

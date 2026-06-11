@@ -1,20 +1,20 @@
 <script lang="ts">
 	import Dropdown from '$lib/components/Dropdown.svelte';
-	import hintLock from '$lib/assets/LockedHint.png';
 	import LoadingBar from './LoadingBar.svelte';
 	import { scale, slide } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
-	import type { WeaponGuess, WeaponListItem } from '$lib/types/daily-slash';
+	import type { WeaponGuess } from '$lib/types/daily-slash';
 	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
+	import type { DropdownListItem } from '$lib/types/common';
 
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),
-		finished = false,
+		finished = $bindable<boolean>(false),
 		weaponList = []
 	}: {
 		guesses: WeaponGuess[];
 		finished: boolean;
-		weaponList: WeaponListItem[];
+		weaponList: DropdownListItem[];
 	} = $props();
 
 	let guessCount = $derived(guesses?.length ?? 0);
@@ -48,8 +48,10 @@
 
 	async function submitGuess(weaponId: number) {
 		try {
-			const guess = await checkWeaponGuess(weaponId);
-			guesses = [guess, ...guesses];
+			const res = await checkWeaponGuess(weaponId);
+			guesses = [res.guess_result, ...guesses];
+			finished = res.finished
+			weaponList.filter(w => w.id !== res.guess_result.weapon.id)
 		} catch (e) {
 			// handle error here
 			console.log(e);
@@ -69,7 +71,12 @@
 			<!-- Hint 1 -->
 			<button disabled={hint1Locked} onclick={() => revealHint(1)}>
 				{#if hint1Locked}
-					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+					<img 
+						class="lock" 
+						out:scale={{ duration: 1000 }} 
+						src="/daily-slash/LockedHint.png" 
+						alt="Locked hint 1" 
+					/>
 				{/if}
 				<span>{hints[0].visible ? hints[0].text : 'Mode Obtained'}</span>
 			</button>
@@ -77,7 +84,12 @@
 			<!-- Hint 2 -->
 			<button disabled={hint2Locked} onclick={() => revealHint(2)}>
 				{#if hint2Locked}
-					<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+					<img 
+						class="lock" 
+						out:scale={{ duration: 1000 }} 
+						src="/daily-slash/LockedHint.png" 
+						alt="Locked hint 2" 
+					/>
 				{/if}
 				<span>{hints[1].visible ? hints[1].text : 'Weapon Type'}</span>
 			</button>
@@ -86,7 +98,12 @@
 			<button disabled={hint3Locked} onclick={() => revealHint(3)}>
 				{#if !hints[2].visible}
 					{#if hint3Locked}
-						<img class="lock" out:scale={{ duration: 1000 }} src={hintLock} alt="Locked hint" />
+						<img 
+							class="lock" 
+							out:scale={{ duration: 1000 }} 
+							src="/daily-slash/LockedHint.png"
+							alt="Locked hint 3" 
+						/>
 					{/if}
 					<span>Image Clue</span>
 				{:else}
@@ -101,7 +118,7 @@
 					submitGuess(weaponid);
 				}}
 				itemList={weaponList}
-				itemName="weapon"
+				itemType="weapon"
 			/>
 		</div>
 	</div>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { subscribeToPlayerCount } from '$lib/api/common';
-	import type { WeaponPreview } from '$lib/types/daily-slash';
-	import { colors, type Rarity } from '$lib/types/dailySlash';
+	import { colors, type Rarity, type WeaponPreview } from '$lib/types/daily-slash';
 	import { onMount } from 'svelte';
 
 	let {

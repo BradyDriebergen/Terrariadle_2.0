@@ -4,8 +4,8 @@
 	import UserInput from './components/UserInput.svelte';
 	import GameInfo from './components/GameInfo.svelte';
 	import WinningCard from './components/WinningCard.svelte';
-	import { checkWeaponGuess } from '$lib/api/daily-slash';
-	import type { WeaponListItem, WeaponGuess, WeaponPreview } from '$lib/types/daily-slash';
+	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
+	import type { DropdownListItem } from '$lib/types/common';
 
 	let { data } = $props();
 
@@ -14,6 +14,8 @@
 	let guesses = $state<WeaponGuess[]>([]);
 	let prevWeapon = $state<WeaponPreview | null>(null);
 	let finished = $state<boolean>(false);
+
+	let correctWeapon = $derived<Weapon | null>(finished ? guesses[0].weapon : null);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -24,39 +26,25 @@
 		}
 	});
 
-	let weaponList = $derived<WeaponListItem[]>(
-		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.weapon_id))
+	let weaponList = $derived<DropdownListItem[]>(
+		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
 	);
-
-	async function submitGuess(weaponId: number) {
-		try {
-			const result = await checkWeaponGuess(weaponId);
-
-			// guesses.unshift(result.weapon);
-			// checks.unshift(result.check);
-			// won = result.won;
-			// weapons = weapons.filter((w) => w.id !== weaponId);
-		} catch (err) {
-			// handle UI feedback here, e.g.:
-			console.error(err);
-		}
-	}
 </script>
 
 <svelte:document style:overflow-y="hidden" />
 
 <div>
-	<UserInput {guesses} {weaponList} {finished} />
+	<UserInput bind:guesses bind:finished {weaponList} />
 
 	{#if finished}
-		<WinningCard weapon={guesses[0]} userId={data.userId} />
+		<WinningCard weaponAnswer={correctWeapon!} />
 	{/if}
 
 	{#if guesses.length < 1}
 		<GameInfo {prevWeapon} />
 	{:else}
-		<GuessList {guesses} checks={guesses} />
+		<GuessList {guesses} />
 	{/if}
 
-	<Confetti won={finished} />
+	<Confetti {finished} />
 </div>

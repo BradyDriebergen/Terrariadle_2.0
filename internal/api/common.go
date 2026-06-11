@@ -15,10 +15,7 @@ func (s *Server) CheckHealth(w http.ResponseWriter, r *http.Request) {
 func (s *Server) GetRemainingTime(w http.ResponseWriter, r *http.Request) {
 	remaining := domain.TimeUntilNextMidnight(time.Now())
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]any{
-		"remainingSeconds": int(remaining.Seconds()),
-	})
+	writeJSON(w, http.StatusOK, remaining.Seconds())
 }
 
 func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
