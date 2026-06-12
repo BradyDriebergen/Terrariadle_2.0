@@ -71,8 +71,8 @@
 			<!-- Damage -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={guess.checks.damage === CompareResult.Lower}
-				class:arrow-down={guess.checks.damage === CompareResult.Higher}
+				class:arrow-up={guess.checks.damage === CompareResult.Higher}
+				class:arrow-down={guess.checks.damage === CompareResult.Lower}
 				style={guess.checks.damage === CompareResult.Match ? guessCorrect : guessWrong}
 				in:fly={{ x: 400, duration: 2000 }}
 			>
@@ -82,8 +82,8 @@
 			<!-- Use time -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={guess.checks.use_time === CompareResult.Lower}
-				class:arrow-down={guess.checks.use_time === CompareResult.Higher}
+				class:arrow-up={guess.checks.use_time === CompareResult.Higher}
+				class:arrow-down={guess.checks.use_time === CompareResult.Lower}
 				style={guess.checks.use_time === CompareResult.Match ? guessCorrect : guessWrong}
 				in:fly={{ x: 320, duration: 2000 }}
 			>
@@ -93,8 +93,8 @@
 			<!-- Rarity -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={guess.checks.rarity === CompareResult.Lower}
-				class:arrow-down={guess.checks.rarity === CompareResult.Higher}
+				class:arrow-up={guess.checks.rarity === CompareResult.Higher}
+				class:arrow-down={guess.checks.rarity === CompareResult.Lower}
 				style={
 					(guess.checks.rarity === CompareResult.Match ? guessCorrect : guessWrong) +
 					getRarityColor(guess.weapon.rarity as Rarity)

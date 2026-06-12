@@ -38,6 +38,11 @@ func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 	ch := s.broker.Subscribe()
 	defer s.broker.Unsubscribe(ch)
 
+	// TODO: Fix this so it sends the current guess count to the user on initial load
+	// currentCount := s.broker.CurrentCount(mode)
+	// fmt.Fprintf(w, "data: {\"count\":%d}\n\n", currentCount)
+	// flusher.Flush()
+
 	for {
 		select {
 		case <-r.Context().Done():

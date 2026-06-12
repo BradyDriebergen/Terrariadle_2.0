@@ -50,7 +50,9 @@ func (g *DailySlash) InitializeGame(ctx context.Context, userId string) (DailySl
 
 	guesses := make([]WeaponGuess, 0, len(user.DailySlash.Game.Guesses))
 
-	for _, weaponID := range user.DailySlash.Game.Guesses {
+	for i := len(user.DailySlash.Game.Guesses) - 1; i >= 0; i-- {
+		weaponID := user.DailySlash.Game.Guesses[i]
+
 		guessedWeapon, ok := g.catalogCache.GetWeapon(weaponID)
 		if !ok {
 			return DailySlashInitData{}, domain.NotFound("The guessed weapon doesn't exist", nil)

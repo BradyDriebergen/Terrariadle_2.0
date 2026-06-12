@@ -11,7 +11,7 @@ export async function getWeaponHint(num: number): Promise<string> {
 }
 
 export async function checkWeaponGuess(weaponId: number): Promise<DailySlashCheckResult> {
-	const userId = localStorage.getItem('userId');
+	const userId = localStorage.getItem('user_id');
 
 	if (!userId) {
 		throw new Error('Session not found. Try refreshing the page.');
