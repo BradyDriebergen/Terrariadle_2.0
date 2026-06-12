@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { colors, type Rarity, type WeaponPreview } from '$lib/types/daily-slash';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	let {
 		prevWeapon
@@ -13,12 +13,10 @@
 
 	// Streams live player count to the user
 	onMount(() => {
-		const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
-			playerCount = count;
-		});
-
-		return cleanup;
-	});
+		return subscribeToPlayerCount('daily_slash', (count) => {
+			playerCount = count
+		})
+	})
 </script>
 
 <div>

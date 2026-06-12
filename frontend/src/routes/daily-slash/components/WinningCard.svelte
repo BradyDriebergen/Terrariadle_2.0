@@ -25,11 +25,9 @@
 
 	// Streams live player count to the user
 	onMount(() => {
-		const cleanup = subscribeToPlayerCount('daily_slash', (count) => {
+		return subscribeToPlayerCount('daily_slash', (count) => {
 			playerCount = count;
 		});
-
-		return cleanup;
 	});
 </script>
 
