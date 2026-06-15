@@ -13,6 +13,7 @@ type Server struct {
 	connections services.ConnectionsService
 	guessTheNpc services.GuessTheNpcService
 	hangman     services.HangmanService
+	sseServer   services.SseStreamService
 	broker      domain.GuessCountBroker
 }
 
@@ -22,6 +23,7 @@ func NewServer(
 	connections services.ConnectionsService,
 	guessTheNpc services.GuessTheNpcService,
 	hangman services.HangmanService,
+	sseServer services.SseStreamService,
 	broker domain.GuessCountBroker,
 ) *Server {
 
@@ -30,6 +32,7 @@ func NewServer(
 		connections: connections,
 		guessTheNpc: guessTheNpc,
 		hangman:     hangman,
+		sseServer:   sseServer,
 		broker:      broker,
 	}
 

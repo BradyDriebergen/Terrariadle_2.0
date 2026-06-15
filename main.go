@@ -32,6 +32,7 @@ type gameServices struct {
 	connections *services.Connections
 	guessTheNpc *services.GuessTheNpc
 	hangman     *services.Hangman
+	sseService  *services.SseStream
 }
 
 func main() {
@@ -62,6 +63,7 @@ func main() {
 		svc.connections,
 		svc.guessTheNpc,
 		svc.hangman,
+		svc.sseService,
 		sseBroker,
 	)
 	go func() {
@@ -135,6 +137,7 @@ func createServices(s stores) gameServices {
 		connections: services.NewConnectionsGame(s.answer, s.guessCount, s.catalog, s.user),
 		guessTheNpc: services.NewGuessTheNpcGame(s.answer, s.guessCount, s.catalog, s.user),
 		hangman:     services.NewHangmanGame(s.answer, s.guessCount, s.catalog, s.user),
+		sseService:  services.NewSseStream(s.guessCount),
 	}
 }
 

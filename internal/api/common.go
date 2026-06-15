@@ -39,10 +39,12 @@ func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 	ch := s.broker.Subscribe()
 	defer s.broker.Unsubscribe(ch)
 
-	// TODO: Fix this so it sends the current guess count to the user on initial load
-	// currentCount := s.broker.CurrentCount(mode)
-	// fmt.Fprintf(w, "data: {\"count\":%d}\n\n", currentCount)
-	// flusher.Flush()
+	// Ignore error because it's already accounted for
+	initialCount, _ := s.sseServer.GetGuessCount(mode)
+	initialEvent := domain.GuessCountEvent{GameMode: mode, Count: initialCount}
+	data, _ := json.Marshal(initialEvent)
+	fmt.Fprintf(w, "data: %s\n\n", data)
+	flusher.Flush()
 
 	for {
 		select {
