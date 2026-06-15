@@ -17,6 +17,9 @@
 		weaponList: DropdownListItem[];
 	} = $props();
 
+	// svelte-ignore state_referenced_locally
+	let weapons = $state<DropdownListItem[]>(weaponList);
+
 	let guessCount = $derived(guesses?.length ?? 0);
 
 	type HintState = { text: string; visible: boolean };
@@ -51,7 +54,7 @@
 			const res = await checkWeaponGuess(weaponId);
 			guesses = [res.guess_result, ...guesses];
 			finished = res.finished
-			weaponList.filter(w => w.id !== res.guess_result.weapon.id)
+			weapons = weapons.filter(w => w.id !== weaponId)
 		} catch (e) {
 			// handle error here
 			console.log(e);
@@ -117,7 +120,7 @@
 				selectItem={(weaponid: number) => {
 					submitGuess(weaponid);
 				}}
-				itemList={weaponList}
+				itemList={weapons}
 				itemType="weapon"
 			/>
 		</div>

@@ -32,12 +32,12 @@ export async function checkWeaponGuess(weaponId: number): Promise<DailySlashChec
 }
 
 export async function getDailySlashWinningData(): Promise<DailySlashWinningData> {
-	const userId = localStorage.getItem('userId');
+	const userId = localStorage.getItem('user_id');
 
 	if (!userId) {
 		throw new Error('Session not found. Try refreshing the page.');
 	}
 
-	const res = await fetch(`/api/daily-slash/hint/?user_id=${userId}`);
+	const res = await fetch(`/api/daily-slash/winning-data/?user_id=${userId}`);
 	return (await res.json()) as DailySlashWinningData
 }

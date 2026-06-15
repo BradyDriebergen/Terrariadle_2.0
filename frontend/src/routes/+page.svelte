@@ -3,8 +3,6 @@
 	import { resolve } from '$app/paths';
 
 	let { data } = $props();
-
-	$inspect(data.userId);
 </script>
 
 <div>

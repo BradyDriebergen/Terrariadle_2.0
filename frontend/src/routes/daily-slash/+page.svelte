@@ -9,8 +9,6 @@
 
 	let { data } = $props();
 
-	$inspect(data);
-
 	let guesses = $state<WeaponGuess[]>([]);
 	let prevWeapon = $state<WeaponPreview | null>(null);
 	let finished = $state<boolean>(false);
