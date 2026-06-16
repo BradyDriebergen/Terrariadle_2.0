@@ -1,4 +1,8 @@
-import type { DailySlashCheckResult, DailySlashWinningData, WeaponGuess } from '$lib/types/daily-slash';
+import type {
+	DailySlashCheckResult,
+	DailySlashWinningData,
+	WeaponGuess
+} from '$lib/types/daily-slash';
 import { error } from '@sveltejs/kit';
 
 export async function getWeaponHint(num: number): Promise<string> {
@@ -39,5 +43,5 @@ export async function getDailySlashWinningData(): Promise<DailySlashWinningData>
 	}
 
 	const res = await fetch(`/api/daily-slash/winning-data/?user_id=${userId}`);
-	return (await res.json()) as DailySlashWinningData
+	return (await res.json()) as DailySlashWinningData;
 }

@@ -53,8 +53,8 @@
 		try {
 			const res = await checkWeaponGuess(weaponId);
 			guesses = [res.guess_result, ...guesses];
-			finished = res.finished
-			weapons = weapons.filter(w => w.id !== weaponId)
+			finished = res.finished;
+			weapons = weapons.filter((w) => w.id !== weaponId);
 		} catch (e) {
 			// handle error here
 			console.log(e);
@@ -74,11 +74,11 @@
 			<!-- Hint 1 -->
 			<button disabled={hint1Locked} onclick={() => revealHint(1)}>
 				{#if hint1Locked}
-					<img 
-						class="lock" 
-						out:scale={{ duration: 1000 }} 
-						src="/daily-slash/LockedHint.png" 
-						alt="Locked hint 1" 
+					<img
+						class="lock"
+						out:scale={{ duration: 1000 }}
+						src="/daily-slash/LockedHint.png"
+						alt="Locked hint 1"
 					/>
 				{/if}
 				<span>{hints[0].visible ? hints[0].text : 'Mode Obtained'}</span>
@@ -87,11 +87,11 @@
 			<!-- Hint 2 -->
 			<button disabled={hint2Locked} onclick={() => revealHint(2)}>
 				{#if hint2Locked}
-					<img 
-						class="lock" 
-						out:scale={{ duration: 1000 }} 
-						src="/daily-slash/LockedHint.png" 
-						alt="Locked hint 2" 
+					<img
+						class="lock"
+						out:scale={{ duration: 1000 }}
+						src="/daily-slash/LockedHint.png"
+						alt="Locked hint 2"
 					/>
 				{/if}
 				<span>{hints[1].visible ? hints[1].text : 'Weapon Type'}</span>
@@ -101,11 +101,11 @@
 			<button disabled={hint3Locked} onclick={() => revealHint(3)}>
 				{#if !hints[2].visible}
 					{#if hint3Locked}
-						<img 
-							class="lock" 
-							out:scale={{ duration: 1000 }} 
+						<img
+							class="lock"
+							out:scale={{ duration: 1000 }}
 							src="/daily-slash/LockedHint.png"
-							alt="Locked hint 3" 
+							alt="Locked hint 3"
 						/>
 					{/if}
 					<span>Image Clue</span>

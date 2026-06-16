@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { DropdownListItem } from "$lib/types/common";
+	import type { DropdownListItem } from '$lib/types/common';
 
-	let { 
+	let {
 		itemList,
 		itemType,
-		selectItem,
-	} : { 
-		itemList: DropdownListItem[]; 
+		selectItem
+	}: {
+		itemList: DropdownListItem[];
 		itemType: string;
 		selectItem: (id: number) => void;
 	} = $props();

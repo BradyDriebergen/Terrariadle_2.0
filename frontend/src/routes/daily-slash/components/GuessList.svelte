@@ -3,10 +3,10 @@
 	import { flip } from 'svelte/animate';
 	import { fly } from 'svelte/transition';
 
-	let { 
-		guesses 
-	} : {
-		guesses: WeaponGuess[]
+	let {
+		guesses
+	}: {
+		guesses: WeaponGuess[];
 	} = $props();
 
 	const guessCorrect = 'background-color: var(--color-green);';
@@ -15,7 +15,7 @@
 
 	const weaponTitle = 'Image of Weapon';
 	const damageTypeTitle = 'Melee, Ranged, Magic, etc.';
-	const damageTitle = 'Weapon\'s damage';
+	const damageTitle = "Weapon's damage";
 	const useTimeTitle = 'Snail, Slow, Average, Very Fast, etc.';
 	const rarityTitle = 'White, Green, Pink, Red, etc.';
 	const operationTitle = 'Auto or Manual';
@@ -29,12 +29,12 @@
 			case CompareResult.PartialMatch:
 				return guessPartial;
 			case CompareResult.NoMatch:
-				return guessWrong
+				return guessWrong;
 			default:
 				break;
 		}
 
-		return guessWrong
+		return guessWrong;
 	}
 
 	function getRarityColor(rarity: Rarity): string {
@@ -44,14 +44,14 @@
 
 <div in:fly={{ x: 800, duration: 1000 }}>
 	<div class="header">
-		<span title={weaponTitle} >Weapon</span>
-		<span title={damageTypeTitle} >Damage Type</span>
-		<span title={damageTitle} >Damage</span>
-		<span title={useTimeTitle} >Use Time</span>
-		<span title={rarityTitle} >Rarity</span>
-		<span title={operationTitle} >Operation</span>
-		<span title={materialTitle} >Material</span>
-		<span title={obtainedTitle} >Obtained</span>
+		<span title={weaponTitle}>Weapon</span>
+		<span title={damageTypeTitle}>Damage Type</span>
+		<span title={damageTitle}>Damage</span>
+		<span title={useTimeTitle}>Use Time</span>
+		<span title={rarityTitle}>Rarity</span>
+		<span title={operationTitle}>Operation</span>
+		<span title={materialTitle}>Material</span>
+		<span title={obtainedTitle}>Obtained</span>
 	</div>
 	{#each guesses as guess, i (guess.weapon.id)}
 		<div class="row" animate:flip>
@@ -95,10 +95,8 @@
 				class="arrow-cell"
 				class:arrow-up={guess.checks.rarity === CompareResult.Higher}
 				class:arrow-down={guess.checks.rarity === CompareResult.Lower}
-				style={
-					(guess.checks.rarity === CompareResult.Match ? guessCorrect : guessWrong) +
-					getRarityColor(guess.weapon.rarity as Rarity)
-				}
+				style={(guess.checks.rarity === CompareResult.Match ? guessCorrect : guessWrong) +
+					getRarityColor(guess.weapon.rarity as Rarity)}
 				in:fly={{ x: 240, duration: 2000 }}
 			>
 				{guess.weapon.rarity}

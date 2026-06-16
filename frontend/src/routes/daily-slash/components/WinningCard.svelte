@@ -8,11 +8,11 @@
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
 
-	let { 
+	let {
 		weaponAnswer
-	} : {
+	}: {
 		weaponAnswer: Weapon;
-	}= $props();
+	} = $props();
 
 	let position = $state(0);
 	let playerCount = $state(0);
@@ -39,7 +39,7 @@
 	in:scale
 >
 	<h1>You Got It!</h1>
-	
+
 	{#if position !== 0}
 		<p transition:typewriter={{ speed: 1 }}>
 			You were the {ConvertPositionToString(position)} person to guess today's weapon!
@@ -54,8 +54,10 @@
 		alt="Previous weapon"
 		in:scale
 	/>
-	
-	<h3 class="weapon-name" style="color: {colors[weaponAnswer.rarity as Rarity]}">{weaponAnswer.name}</h3>
+
+	<h3 class="weapon-name" style="color: {colors[weaponAnswer.rarity as Rarity]}">
+		{weaponAnswer.name}
+	</h3>
 	<p>{playerCount} people guessed todays weapon</p>
 
 	<RemainingTime />

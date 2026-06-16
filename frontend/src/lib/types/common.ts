@@ -1,5 +1,5 @@
 export interface DropdownListItem {
-    id: number
-    name: string;
-    path: string;
+	id: number;
+	name: string;
+	path: string;
 }
