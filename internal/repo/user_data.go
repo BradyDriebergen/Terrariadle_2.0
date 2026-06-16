@@ -40,6 +40,6 @@ func (r *MongoUserRepo) UpsertUserData(ctx context.Context, user domain.User) er
 }
 
 func (r *MongoUserRepo) DropAllUserData(ctx context.Context) error {
-	err := db.Drop(ctx, r.database, "user_data")
+	err := db.DeleteAll(ctx, r.database, "user_data")
 	return err
 }

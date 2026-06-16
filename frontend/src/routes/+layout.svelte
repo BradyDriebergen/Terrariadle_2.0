@@ -23,6 +23,8 @@
 				return '| Guess the NPC';
 			case '/hangman':
 				return '| Hangman';
+			case '/wordaria':
+				return '| Wordaria';
 			case '/about':
 				return '| About';
 			default:

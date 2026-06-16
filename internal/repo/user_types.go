@@ -28,6 +28,7 @@ type dailySlashGame struct {
 }
 
 type weaponChecks struct {
+	WeaponID   int                  `bson:"weapon_id"`
 	DamageType bool                 `bson:"damageType"`
 	Damage     domain.CompareResult `bson:"damage"`
 	UseTime    domain.CompareResult `bson:"useTime"`

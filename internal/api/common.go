@@ -13,18 +13,16 @@ func (s *Server) CheckHealth(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) GetRemainingTime(w http.ResponseWriter, r *http.Request) {
-	remaining := domain.TimeUntilNextMidnight(time.Now())
+	remaining := int(domain.TimeUntilNextMidnight(time.Now()).Seconds())
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]any{
-		"remainingSeconds": int(remaining.Seconds()),
-	})
+	writeJSON(w, http.StatusOK, remaining)
 }
 
 func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/event-stream")
 	w.Header().Set("Cache-Control", "no-cache")
 	w.Header().Set("Connection", "keep-alive")
+	w.Header().Set("X-Accel-Buffering", "no")
 
 	flusher, ok := w.(http.Flusher)
 	if !ok {
@@ -40,6 +38,13 @@ func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 
 	ch := s.broker.Subscribe()
 	defer s.broker.Unsubscribe(ch)
+
+	// Ignore error because it's already accounted for
+	initialCount, _ := s.sseServer.GetGuessCount(mode)
+	initialEvent := domain.GuessCountEvent{GameMode: mode, Count: initialCount}
+	data, _ := json.Marshal(initialEvent)
+	fmt.Fprintf(w, "data: %s\n\n", data)
+	flusher.Flush()
 
 	for {
 		select {

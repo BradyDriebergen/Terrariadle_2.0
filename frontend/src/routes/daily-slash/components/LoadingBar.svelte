@@ -1,15 +1,16 @@
 <script lang="ts">
-	import loadingBorder from '$lib/assets/LoadingBorder.png';
-	import loadingBackground from '$lib/assets/LoadingBackground.png';
-	import loadingBar1 from '$lib/assets/LoadingBar1.png';
-	import loadingBar2 from '$lib/assets/LoadingBar2.png';
-
-	let { guesses, won } = $props();
+	let {
+		guessCount = 0,
+		finished = false
+	}: {
+		guessCount: number;
+		finished: boolean;
+	} = $props();
 
 	const progressBar2ByGuess = [100, 75, 50, 25, 100, 60, 30, 100, 80, 60, 40, 20, 0];
 
 	// Use 12 guesses when won is true
-	let effectiveGuesses = $derived.by(() => (won ? 12 : guesses));
+	let effectiveGuesses = $derived(finished ? 12 : guessCount);
 
 	let progressBar1 = $derived.by(() => {
 		if (effectiveGuesses < 4) {
@@ -30,20 +31,24 @@
 
 <div class="wrapper">
 	<div class="text">Hint Progress Bar</div>
-	<img class="background" src={loadingBackground} alt="Loading background" />
+	<img
+		class="background"
+		src="/loading-bar-assets/LoadingBackground.png"
+		alt="Loading background"
+	/>
 	<img
 		class="bar"
-		src={loadingBar1}
+		src={'/loading-bar-assets/LoadingBar1.png'}
 		alt="Loading bar 1"
 		style="clip-path: inset(0 {progressBar1}% 0 0);"
 	/>
 	<img
 		class="bar"
-		src={loadingBar2}
+		src={'/loading-bar-assets/LoadingBar2.png'}
 		alt="Loading bar 2"
 		style="clip-path: inset(0 {progressBar2}% 0 0);"
 	/>
-	<img class="border" src={loadingBorder} alt="Loading border" />
+	<img class="border" src="/loading-bar-assets/LoadingBorder.png" alt="Loading border" />
 </div>
 
 <style>
