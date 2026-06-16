@@ -23,27 +23,6 @@ type DailySlashGame struct {
 	Checks []WeaponChecks
 }
 
-type CompareResult int
-
-const (
-	Lower        CompareResult = -1
-	Match        CompareResult = 0
-	Higher       CompareResult = 1
-	NoMatch      CompareResult = 2
-	PartialMatch CompareResult = 3
-)
-
-type WeaponChecks struct {
-	WeaponID   int
-	DamageType bool
-	Damage     CompareResult
-	UseTime    CompareResult
-	Rarity     CompareResult
-	Operation  bool
-	Material   bool
-	Obtained   CompareResult
-}
-
 type ConnectionGame struct {
 	Game     Game
 	Attempts int

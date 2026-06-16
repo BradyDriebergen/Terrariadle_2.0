@@ -4,10 +4,8 @@
 	let time = $state(0);
 
 	onMount(async () => {
-		const timeData = await fetch(`http://localhost:3000/api/remaining-time`);
-		const timeDataJson = await timeData.json();
-
-		time = timeDataJson.remaining;
+		const timeData = await fetch(`/api/remaining-time`);
+		time = (await timeData.json()) as number;
 	});
 
 	$effect(() => {

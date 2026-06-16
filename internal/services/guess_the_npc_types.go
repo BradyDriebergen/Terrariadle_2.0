@@ -9,7 +9,7 @@ type GuessTheNpcInitData struct {
 }
 
 type SearchNpcData struct {
-	NpcID int    `json:"npc_id"`
+	NpcID int    `json:"id"`
 	Name  string `json:"name"`
 	Path  string `json:"path"`
 }

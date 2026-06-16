@@ -32,6 +32,7 @@ type gameServices struct {
 	connections *services.Connections
 	guessTheNpc *services.GuessTheNpc
 	hangman     *services.Hangman
+	sseService  *services.SseStream
 }
 
 func main() {
@@ -57,11 +58,13 @@ func main() {
 
 	// Starts the server
 	srv := api.NewServer(
+		context.Background(),
 		":8080",
 		svc.dailySlash,
 		svc.connections,
 		svc.guessTheNpc,
 		svc.hangman,
+		svc.sseService,
 		sseBroker,
 	)
 	go func() {
@@ -69,6 +72,8 @@ func main() {
 			log.Fatalf("server error: %v", err)
 		}
 	}()
+
+	log.Println("Server started listening on port :8080")
 
 	// On quit, shuts down the app cleanly
 	quit := make(chan os.Signal, 1)
@@ -133,11 +138,12 @@ func createServices(s stores) gameServices {
 		connections: services.NewConnectionsGame(s.answer, s.guessCount, s.catalog, s.user),
 		guessTheNpc: services.NewGuessTheNpcGame(s.answer, s.guessCount, s.catalog, s.user),
 		hangman:     services.NewHangmanGame(s.answer, s.guessCount, s.catalog, s.user),
+		sseService:  services.NewSseStream(s.guessCount),
 	}
 }
 
 func startBackgroundJobs(ctx context.Context, s stores) {
-	puzzleRefresh := jobs.NewPuzzleRefresh(s.answer, s.guessCount, s.catalog)
+	puzzleRefresh := jobs.NewPuzzleRefresh(s.answer, s.guessCount, s.catalog, s.user)
 	go puzzleRefresh.Start(ctx)
 	go jobs.StartFlushJob(ctx, s.user)
 	log.Println("Background jobs started")

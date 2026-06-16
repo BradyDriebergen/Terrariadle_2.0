@@ -1,12 +1,21 @@
 <script lang="ts">
-	let { selectItem, itemList, itemName } = $props();
+	import type { DropdownListItem } from '$lib/types/common';
+
+	let {
+		itemList,
+		itemType,
+		selectItem
+	}: {
+		itemList: DropdownListItem[];
+		itemType: string;
+		selectItem: (id: number) => void;
+	} = $props();
 
 	let input = $state('');
-	let filtered = $derived([...itemList]);
+	let filtered = $derived<DropdownListItem[]>([...itemList]);
 	let dropdownIndex = $state(-1);
 	let itemElements = $state<(HTMLButtonElement | null)[]>([]); // used for smooth scrolling
 
-	// Effect for when input changes
 	$effect(() => {
 		const query = input.toLowerCase();
 		filtered = itemList
@@ -47,7 +56,7 @@
 <div class="wrapper">
 	<input
 		type="text"
-		placeholder="Type any {itemName} to guess..."
+		placeholder="Type any {itemType} to guess..."
 		bind:value={input}
 		onkeydown={onKeyDown}
 	/>
@@ -65,7 +74,7 @@
 							input = '';
 						}}
 					>
-						<img src={`/${itemName}s/${item.path}`} alt={item.path} />
+						<img src={`/${itemType}s/${item.path}`} alt={item.path} />
 						<span>{item.name}</span>
 					</button>
 				{/each}

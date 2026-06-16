@@ -1,48 +1,48 @@
 <script lang="ts">
 	import Confetti from '$lib/components/Confetti.svelte';
 	import GuessList from './components/GuessList.svelte';
-	import GuessPanel from './components/GuessPanel.svelte';
-	import PrevWeaponGroup from './components/PrevWeaponGroup.svelte';
-	import WinningPanel from './components/WinningPanel.svelte';
+	import UserInput from './components/UserInput.svelte';
+	import GameInfo from './components/GameInfo.svelte';
+	import WinningCard from './components/WinningCard.svelte';
+	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
+	import type { DropdownListItem } from '$lib/types/common';
 
 	let { data } = $props();
 
-	let guesses = $state(data.guesses);
-	let checks = $state(data.checks);
-	let weapons = $state(data.weapons);
-	let won = $state(data.won);
+	let guesses = $state<WeaponGuess[]>([]);
+	let prevWeapon = $state<WeaponPreview | null>(null);
+	let finished = $state<boolean>(false);
 
-	async function submitGuess(weaponid: number) {
-		fetch('http://localhost:3000/api/daily-slash/check-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: weaponid })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				guesses.unshift(data.guess);
-				checks.unshift(data.check);
-				won = data.won;
+	let correctWeapon = $derived<Weapon | null>(finished ? guesses[0].weapon : null);
 
-				weapons = weapons.filter((w) => w.id !== weaponid);
-			});
-	}
+	$effect(() => {
+		// Initialize data once pre-fetch is finished
+		if (data.gameContext) {
+			guesses = data.gameContext.guesses;
+			prevWeapon = data.gameContext.previous_weapon;
+			finished = data.gameContext.finished;
+		}
+	});
+
+	let weaponList = $derived<DropdownListItem[]>(
+		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
+	);
 </script>
 
 <svelte:document style:overflow-y="hidden" />
 
 <div>
-	<GuessPanel {guesses} {submitGuess} weaponList={weapons} {won} />
+	<UserInput bind:guesses bind:finished {weaponList} />
 
-	{#if won}
-		<WinningPanel weapon={guesses[0]} userId={data.userId} />
+	{#if finished}
+		<WinningCard weaponAnswer={correctWeapon!} />
 	{/if}
 
 	{#if guesses.length < 1}
-		<PrevWeaponGroup previousWeapon={data.previousWeapon} />
+		<GameInfo {prevWeapon} />
 	{:else}
-		<GuessList {guesses} {checks} />
+		<GuessList {guesses} />
 	{/if}
 
-	<Confetti {won} />
+	<Confetti {finished} />
 </div>

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func (s *Server) initializeDailySlashGame(w http.ResponseWriter, r *http.Request) {
@@ -60,6 +61,11 @@ func (s *Server) checkDailySlashGuess(w http.ResponseWriter, r *http.Request) {
 
 	if err := json.NewDecoder(r.Body).Decode(&payload); err != nil {
 		writeError(w, http.StatusBadRequest, "invalid body for request")
+		return
+	}
+
+	if strings.TrimSpace(payload.UserID) == "" {
+		writeError(w, http.StatusBadRequest, "user_id is required")
 		return
 	}
 

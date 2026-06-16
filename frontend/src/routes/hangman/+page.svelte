@@ -5,11 +5,11 @@
 	import WinningComponent from './components/WinningComponent.svelte';
 	import { cubicInOut } from 'svelte/easing';
 
-    let { data } = $props();
+	let { data } = $props();
 
-    let attempts: number = $state(data.attempts);
-    let finished: boolean = $state(data.finished);
-	let guessedLetters: string[] = $state(data.guessedLetters)
+	let attempts: number = $state(data.attempts);
+	let finished: boolean = $state(data.finished);
+	let guessedLetters: string[] = $state(data.guessedLetters);
 	let enemy: string[] = $state(data.phrase);
 
 	// Audio to play after guess
@@ -18,10 +18,10 @@
 	// Split into words for better wrapping
 	let enemyWords = $derived.by(() => {
 		const enemyString = enemy.join('');
-		return enemyString.split(' ').map(word => word.split(''));
+		return enemyString.split(' ').map((word) => word.split(''));
 	});
 
-    async function onKeyPressed(letter: string) {
+	async function onKeyPressed(letter: string) {
 		fetch('http://localhost:3000/api/hangman/check-guess', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
@@ -43,16 +43,13 @@
 					}
 				}
 			});
-    }
+	}
 
 	// Effect for updating the background with fade
 	let failed: boolean = $derived(attempts <= 0);
 	$effect(() => {
 		if (failed) {
-			document.body.style.setProperty(
-				'--bg-image',
-				"url('/backgrounds/Underworld.png')"
-			);
+			document.body.style.setProperty('--bg-image', "url('/backgrounds/Underworld.png')");
 			document.body.style.setProperty('--bg-opacity', '1');
 		}
 
@@ -63,13 +60,13 @@
 </script>
 
 {#if !finished}
-    <!-- out:slide={{ duration: 700, easing: cubicInOut }} -->
+	<!-- out:slide={{ duration: 700, easing: cubicInOut }} -->
 	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
 		<h2>Hangman</h2>
 		<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 	</div>
 {:else}
-	<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? "15px" : "-20px"}">
+	<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
 		<span class="color-cycle">Hangman Results</span>
 	</div>
 {/if}
@@ -77,7 +74,7 @@
 <Guide {attempts} />
 
 {#if finished}
-	<WinningComponent {attempts} userId={data.userId}/>
+	<WinningComponent {attempts} userId={data.userId} />
 {/if}
 
 <div class="phrase-container">
@@ -90,7 +87,7 @@
 	{/each}
 </div>
 {#if !finished}
-<Keyboard {onKeyPressed} enemyLetters={enemy} {guessedLetters} />
+	<Keyboard {onKeyPressed} enemyLetters={enemy} {guessedLetters} />
 {/if}
 
 <!-- Audio that only plays after final guess is made -->
@@ -116,8 +113,7 @@
 		pointer-events: none;
 	}
 
-
-    .title-box {
+	.title-box {
 		background-color: var(--color-backgroundblue);
 		width: fit-content;
 		text-align: center;

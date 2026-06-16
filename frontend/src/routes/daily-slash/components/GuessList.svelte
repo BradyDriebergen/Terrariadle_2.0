@@ -1,107 +1,128 @@
 <script lang="ts">
-	import { colors, type Rarity } from '$lib/types/dailySlash';
+	import { colors, CompareResult, type Rarity, type WeaponGuess } from '$lib/types/daily-slash';
 	import { flip } from 'svelte/animate';
 	import { fly } from 'svelte/transition';
-	let { guesses, checks } = $props();
+
+	let {
+		guesses
+	}: {
+		guesses: WeaponGuess[];
+	} = $props();
 
 	const guessCorrect = 'background-color: var(--color-green);';
 	const guessPartial = 'background-color: var(--color-yellow);';
 	const guessWrong = 'background-color: var(--color-red);';
 
-	function checkedObtained(value: number): string {
-		if (value === 2) {
-			return guessCorrect;
-		} else if (value === 1) {
-			return guessPartial;
+	const weaponTitle = 'Image of Weapon';
+	const damageTypeTitle = 'Melee, Ranged, Magic, etc.';
+	const damageTitle = "Weapon's damage";
+	const useTimeTitle = 'Snail, Slow, Average, Very Fast, etc.';
+	const rarityTitle = 'White, Green, Pink, Red, etc.';
+	const operationTitle = 'Auto or Manual';
+	const materialTitle = 'Yes or No';
+	const obtainedTitle = 'Crafting, Chest, Buy, etc.';
+
+	function checkedObtained(value: CompareResult): string {
+		switch (value) {
+			case CompareResult.Match:
+				return guessCorrect;
+			case CompareResult.PartialMatch:
+				return guessPartial;
+			case CompareResult.NoMatch:
+				return guessWrong;
+			default:
+				break;
 		}
+
 		return guessWrong;
 	}
 
-	function getRarityColor(rarity: string) {
-		return 'color: ' + colors[rarity as Rarity];
+	function getRarityColor(rarity: Rarity): string {
+		return 'color: ' + colors[rarity];
 	}
 </script>
 
 <div in:fly={{ x: 800, duration: 1000 }}>
 	<div class="header">
-		<span title="Image of Weapon">Weapon</span>
-		<span title="Melee, Ranged, Magic, Summon, Throwing">Damage Type</span>
-		<span title="Weapon Damage">Damage</span>
-		<span title="Snail, Extremely Slow, Very Slow, Slow, Average, Fast, Very Fast, Insanely Fast"
-			>Use Time</span
-		>
-		<span title="White, Blue, Green, Orange, Light_Red, Pink, Light_Purple, Lime, Yellow, Cyan, Red"
-			>Rarity</span
-		>
-		<span title="Auto or Manual">Operation</span>
-		<span title="Yes or No">Material</span>
-		<span title="Crafting, Chest, Buy, Drop, Fishing, Background Object">Obtained</span>
+		<span title={weaponTitle}>Weapon</span>
+		<span title={damageTypeTitle}>Damage Type</span>
+		<span title={damageTitle}>Damage</span>
+		<span title={useTimeTitle}>Use Time</span>
+		<span title={rarityTitle}>Rarity</span>
+		<span title={operationTitle}>Operation</span>
+		<span title={materialTitle}>Material</span>
+		<span title={obtainedTitle}>Obtained</span>
 	</div>
-	{#each guesses as guess, i (guess.id)}
+	{#each guesses as guess, i (guess.weapon.id)}
 		<div class="row" animate:flip>
+			<!-- Weapon icon -->
 			<div in:fly={{ x: 560, duration: 2000 }}>
-				<img src={`/weapons/${guess.info['image-path']}`} alt={`${guess.name} image`} />
+				<img src={`/weapons/${guess.weapon.image_path}`} alt={`${guess.weapon.name} image`} />
 			</div>
 
+			<!-- Damage type -->
 			<span
-				style={checks[i].DamageType ? guessCorrect : guessWrong}
+				style={guess.checks.damage_type ? guessCorrect : guessWrong}
 				in:fly={{ x: 480, duration: 2000 }}
 			>
-				{guess.info['damage-type']}
+				{guess.weapon.damage_type}
 			</span>
 
-			<!-- DAMAGE: triangle behind text -->
+			<!-- Damage -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={checks[i].Damage === 2}
-				class:arrow-down={checks[i].Damage === 0}
-				style={checks[i].Damage === 1 ? guessCorrect : guessWrong}
+				class:arrow-up={guess.checks.damage === CompareResult.Higher}
+				class:arrow-down={guess.checks.damage === CompareResult.Lower}
+				style={guess.checks.damage === CompareResult.Match ? guessCorrect : guessWrong}
 				in:fly={{ x: 400, duration: 2000 }}
 			>
-				{guess.info.damage}
+				{guess.weapon.damage}
 			</span>
 
-			<!-- USE TIME: triangle behind text -->
+			<!-- Use time -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={checks[i].UseTime === 2}
-				class:arrow-down={checks[i].UseTime === 0}
-				style={checks[i].UseTime === 1 ? guessCorrect : guessWrong}
+				class:arrow-up={guess.checks.use_time === CompareResult.Higher}
+				class:arrow-down={guess.checks.use_time === CompareResult.Lower}
+				style={guess.checks.use_time === CompareResult.Match ? guessCorrect : guessWrong}
 				in:fly={{ x: 320, duration: 2000 }}
 			>
-				{guess.info['use-time']}
+				{guess.weapon.use_time}
 			</span>
 
-			<!-- RARITY: triangle behind text -->
+			<!-- Rarity -->
 			<span
 				class="arrow-cell"
-				class:arrow-up={checks[i].Rarity === 2}
-				class:arrow-down={checks[i].Rarity === 0}
-				style={(checks[i].Rarity === 1 ? guessCorrect : guessWrong) +
-					getRarityColor(guess.info.rarity as string)}
+				class:arrow-up={guess.checks.rarity === CompareResult.Higher}
+				class:arrow-down={guess.checks.rarity === CompareResult.Lower}
+				style={(guess.checks.rarity === CompareResult.Match ? guessCorrect : guessWrong) +
+					getRarityColor(guess.weapon.rarity as Rarity)}
 				in:fly={{ x: 240, duration: 2000 }}
 			>
-				{guess.info.rarity}
+				{guess.weapon.rarity}
 			</span>
 
+			<!-- Operation -->
 			<span
-				style={checks[i].Operation ? guessCorrect : guessWrong}
+				style={guess.checks.operation ? guessCorrect : guessWrong}
 				in:fly={{ x: 160, duration: 2000 }}
 			>
-				{guess.info.operation}
+				{guess.weapon.operation}
 			</span>
+
+			<!-- Material -->
 			<span
-				style={checks[i].Material ? guessCorrect : guessWrong}
+				style={guess.checks.material ? guessCorrect : guessWrong}
 				in:fly={{ x: 80, duration: 2000 }}
 			>
-				{guess.info.material}
+				{guess.weapon.material}
 			</span>
 
 			<div
-				style="flex-direction: column; {checkedObtained(checks[i].Obtained)}"
+				style="flex-direction: column; {checkedObtained(guess.checks.obtained)}"
 				in:fly={{ x: 0, duration: 2000 }}
 			>
-				{#each guess.info.obtained as item}
+				{#each guess.weapon.obtained as item}
 					<span>{item}</span>
 				{/each}
 			</div>

@@ -1,31 +1,29 @@
-import type { SimpleWeapon, Weapon } from '$lib/types/dailySlash.js';
+import type { DropdownListItem } from '$lib/types/common.js';
+import type { DailySlashSession } from '$lib/types/daily-slash.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, parent }) {
 	const { userId } = await parent();
 
-	const initData = await fetch(`http://localhost:3000/api/daily-slash/initialize-game/${userId}`);
-	if (!initData) {
-		error(404, 'Unable to fetch initializing data');
+	const contextRes = await fetch(`/api/daily-slash/initialize-game/?user_id=${userId}`);
+	if (!contextRes.ok) {
+		const body = await contextRes.json();
+		error(contextRes.status, body.error ?? 'Unable to initialize game');
 	}
-	const initDataJson = await initData.json();
 
-	const previousWeapon = initDataJson.previousWeapon;
-	const guesses: Weapon[] = initDataJson.guesses ?? [];
-	const checks = initDataJson.checks;
-	const won = initDataJson.won;
+	const gameContext = (await contextRes.json()) as DailySlashSession;
 
-	let weapons: SimpleWeapon[] = [];
-	if (!won) {
-		const weaponFetch = await fetch('http://localhost:3000/api/daily-slash/search-items');
-		if (!weaponFetch) {
-			error(404, 'Unable to fetch weapons');
+	let weaponList: DropdownListItem[] = [];
+
+	if (!gameContext.finished) {
+		const weaponsRes = await fetch('/api/daily-slash/search-items');
+		if (!weaponsRes.ok) {
+			const body = await weaponsRes.json();
+			error(weaponsRes.status, body.error ?? 'Unable to fetch weapons');
 		}
-		weapons = await weaponFetch.json();
 
-		const guessIds: number[] = guesses?.map((g) => g.id) ?? [];
-		weapons = weapons.filter((w) => !guessIds.includes(w.id));
+		weaponList = (await weaponsRes.json()) as DropdownListItem[];
 	}
 
-	return { weapons, previousWeapon, guesses, checks, won };
+	return { gameContext, weaponList };
 }

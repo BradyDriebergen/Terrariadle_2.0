@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { Confetti } from 'svelte-confetti';
 
-	let { won } = $props();
+	let { finished } = $props();
 
 	let showConfetti = $state([false, false, false]);
 
 	$effect(() => {
-		if (!won) {
+		if (!finished) {
 			showConfetti = [false, false, false];
 			return;
 		}
@@ -23,7 +23,7 @@
 	});
 </script>
 
-{#if won}
+{#if finished}
 	{#if showConfetti[0]}
 		<div
 			class="confetti"
