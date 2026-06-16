@@ -58,6 +58,7 @@ func main() {
 
 	// Starts the server
 	srv := api.NewServer(
+		context.Background(),
 		":8080",
 		svc.dailySlash,
 		svc.connections,
