@@ -6,22 +6,23 @@
 	import Confetti from '$lib/components/Confetti.svelte';
 	import { Tween } from 'svelte/motion';
 	import { cubicInOut, cubicOut } from 'svelte/easing';
+	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
 
 	let { data } = $props();
 
-	type Option = {
-		id: string;
-		label: string;
-	};
+	let attempts = $state<number>(0);
+	let finished = $state<boolean>(false);
+	let options = $state<CategoryOption[]>([]);
+	let solvedCategories = $state<SolvedCategory[]>([]);
 
-	let options = $state<Option[]>(
-		data.options.map((label: string) => ({
-			id: crypto.randomUUID(),
-			label
-		}))
-	);
-	let attempts: number = $state(data.attempts);
-	let finished: boolean = $derived(data.finished);
+	// let options = $state<Option[]>(
+	// 	data.options.map((label: string) => ({
+	// 		id: crypto.randomUUID(),
+	// 		label
+	// 	}))
+	// );
+	// let attempts: number = $state(data.attempts);
+	// let finished: boolean = $derived(data.finished);
 
 	let transitioning: boolean = $state(false);
 

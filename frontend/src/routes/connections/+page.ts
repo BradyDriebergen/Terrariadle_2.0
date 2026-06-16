@@ -1,18 +1,17 @@
+import type { ConnectionsSession } from '$lib/types/connections.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, parent }) {
 	const { userId } = await parent();
 
-	const initData = await fetch(`http://localhost:3000/api/connections/initialize-game/${userId}`);
-	if (!initData) {
-		error(404, 'Unable to fetch initializing data');
+	const contextRes = await fetch(`/api/connections/initialize-game/?user_id=${userId}`);
+	if (!contextRes.ok) {
+		const body = await contextRes.json();
+		error(contextRes.status, body.error ?? 'Unable to initialize game');
 	}
-	const initDataJson = await initData.json();
 
-	const attempts = initDataJson.attempts;
-	const options = initDataJson.options;
-	const guesses = initDataJson.guesses;
-	const finished = initDataJson.finished;
+	const gameContext = (await contextRes.json()) as ConnectionsSession;
 
-	return { attempts, options, guesses, finished };
+	return { gameContext };
 }
+
