@@ -9,11 +9,11 @@
 
 	let { data } = $props();
 
-	let guesses = $state<WeaponGuess[]>([]);
-	let prevWeapon = $state<WeaponPreview | null>(null);
-	let finished = $state<boolean>(false);
+	let guesses: WeaponGuess[] = $state([]);
+	let prevWeapon: WeaponPreview | null = $state(null);
+	let finished: boolean = $state(false);
 
-	let correctWeapon = $derived<Weapon | null>(finished ? guesses[0].weapon : null);
+	let correctWeapon: Weapon | null = $derived(finished ? guesses[0].weapon : null);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -24,7 +24,7 @@
 		}
 	});
 
-	let weaponList = $derived<DropdownListItem[]>(
+	let weaponList: DropdownListItem[] = $derived(
 		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
 	);
 </script>

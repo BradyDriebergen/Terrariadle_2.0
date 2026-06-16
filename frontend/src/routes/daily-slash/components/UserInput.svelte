@@ -18,21 +18,20 @@
 	} = $props();
 
 	// svelte-ignore state_referenced_locally
-	let weapons = $state<DropdownListItem[]>(weaponList);
+	let weapons: DropdownListItem[] = $state(weaponList);
 
-	let guessCount = $derived(guesses?.length ?? 0);
+	let guessCount: number = $derived(guesses?.length ?? 0);
 
 	type HintState = { text: string; visible: boolean };
-
 	let hints = $state<HintState[]>([
 		{ text: '', visible: false },
 		{ text: '', visible: false },
 		{ text: '', visible: false }
 	]);
 
-	let hint1Locked = $derived(guessCount < 4 && !finished);
-	let hint2Locked = $derived(guessCount < 7 && !finished);
-	let hint3Locked = $derived(guessCount < 12 && !finished);
+	let hint1Locked: boolean = $derived(guessCount < 4 && !finished);
+	let hint2Locked: boolean = $derived(guessCount < 7 && !finished);
+	let hint3Locked: boolean = $derived(guessCount < 12 && !finished);
 
 	async function revealHint(num: number) {
 		try {
