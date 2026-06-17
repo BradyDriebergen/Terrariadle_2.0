@@ -162,6 +162,7 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 		IsCorrect:    isCorrect,
 		OneAway:      oneAway,
 		CorrectGuess: correctGuess,
+		Finished:     user.Connections.Game.Finished,
 	}, nil
 }
 

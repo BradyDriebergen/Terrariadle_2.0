@@ -7,7 +7,8 @@ export interface ConnectionsSession {
 
 export interface CategoryOption {
     id: number;
-    option: string;
+    value: string;
+    selected: boolean;
 }
 
 export interface SolvedCategory {
@@ -20,6 +21,7 @@ export interface ConnectionsCheckResult {
   is_correct: boolean;
   one_away: boolean;
   correct_guess: SolvedCategory;
+  finished: boolean;
 }
 
 export interface ConnectionsWinningData {
