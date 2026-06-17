@@ -5,7 +5,7 @@
 	import GameInfo from './components/GameInfo.svelte';
 	import WinningCard from './components/WinningCard.svelte';
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
-	import type { DropdownListItem } from '$lib/types/common';
+	import type { DropdownListItem } from '$lib/types/shared';
 
 	let { data } = $props();
 

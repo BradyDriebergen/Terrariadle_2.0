@@ -5,7 +5,7 @@
 	import { cubicInOut } from 'svelte/easing';
 	import type { WeaponGuess } from '$lib/types/daily-slash';
 	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
-	import type { DropdownListItem } from '$lib/types/common';
+	import type { DropdownListItem } from '$lib/types/shared';
 
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),

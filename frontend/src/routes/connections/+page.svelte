@@ -33,13 +33,13 @@
 	// Used to delay winning panel from showing on last successful guess
 	let transitioning: boolean = $state(false);
 
+	let showOneAway: boolean = $state(false);
+	let timeout: ReturnType<typeof setTimeout> | undefined = $state(undefined);
+
 	// let answerCategories: string[] = $state(updateAnswerCategories(data.guesses));
 	// let answerOptions: Record<string, string[]> = $state(updateAnswerOptions(data.guesses));
 	// let tempAnswerCategory: string = $state('');
 	// let tempAnswerOptions: string[] = $state([]);
-
-	let showOneAway: boolean = $state(false);
-	let timeout: ReturnType<typeof setTimeout> | undefined = $state(undefined);
 
 	// // Update methods for complex assignments
 	// function updateAnswerCategories(list: any) {
@@ -196,7 +196,7 @@
 {/if}
 
 {#if finished && !transitioning}
-	<WinningPanel won={attempts > 0} {attempts} userId={data.userId} />
+	<WinningPanel {attempts} />
 	<Confetti finished={attempts > 0} />
 {/if}
 
