@@ -8,8 +8,10 @@
 	import { cubicInOut, cubicOut } from 'svelte/easing';
 	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
 	import { checkCategoryGuess } from '$lib/api/connections';
+	import { getUserId } from '$lib/api/shared';
+	import type { PageData } from './$types';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	let attempts: number = $state(0);
 	let finished: boolean = $state(false);
@@ -115,7 +117,8 @@
 			.filter((option) => option.selected)
 			.map((option) => option.value);
 
-		const res = await checkCategoryGuess(guess);
+		const userId = getUserId();
+		const res = await checkCategoryGuess(guess, userId);
 
 		if (res.is_correct) {
 			animatingOptions = [...options.filter(o => o.selected)]

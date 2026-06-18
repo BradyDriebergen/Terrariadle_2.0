@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { getConnectionsWinningData } from '$lib/api/connections';
+	import { getUserId } from '$lib/api/shared';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { onMount } from 'svelte';
@@ -16,7 +17,8 @@
 	let playerCount: number = $state(0);
 
 	onMount(async () => {
-		const winningData = await getConnectionsWinningData();
+		const userId = getUserId();
+		const winningData = await getConnectionsWinningData(userId);
 
 		position = winningData.position;
 	});

@@ -1,4 +1,4 @@
-import type { DropdownListItem } from '$lib/types/common.js';
+import type { DropdownListItem } from '$lib/types/shared.js';
 import type { DailySlashSession } from '$lib/types/daily-slash.js';
 import { error } from '@sveltejs/kit';
 
