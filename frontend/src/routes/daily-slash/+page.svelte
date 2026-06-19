@@ -31,18 +31,22 @@
 
 <svelte:document style:overflow-y="hidden" />
 
-<div>
-	<UserInput bind:guesses bind:finished {weaponList} />
+{#if data.gameContext}
+	<div>
+		<UserInput bind:guesses bind:finished {weaponList} />
 
-	{#if finished}
-		<WinningCard weaponAnswer={correctWeapon!} />
-	{/if}
+		{#if finished}
+			<WinningCard weaponAnswer={correctWeapon!} />
+		{/if}
 
-	{#if guesses.length < 1}
-		<GameInfo {prevWeapon} />
-	{:else}
-		<GuessList {guesses} />
-	{/if}
+		{#if guesses.length < 1}
+			<GameInfo {prevWeapon} />
+		{:else}
+			<GuessList {guesses} />
+		{/if}
 
-	<Confetti {finished} />
-</div>
+		<Confetti {finished} />
+	</div>
+{:else}
+	<p>Loading...</p>
+{/if}

@@ -81,7 +81,7 @@
 			if (processingSolvedCategory) {
 				solvedCategories.push(processingSolvedCategory)
 			}
-			processingSolvedCategory = null
+			processingSolvedCategory = null;
 
 			// answerCategories.push(tempAnswerCategory);
 			// answerOptions[tempAnswerCategory] = tempAnswerOptions;
@@ -126,7 +126,6 @@
 
 			options = options.filter(o => !o.selected)
 
-			deselectOptions();
 			return
 		}
 
@@ -135,6 +134,7 @@
 		await triggerShake();
 		attempts = res.attempts
 		finished = res.finished
+		deselectOptions();
 
 		if (attempts === 0) {
 			// Call new endpoint that solves the connections game and
