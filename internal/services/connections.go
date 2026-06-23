@@ -172,9 +172,10 @@ func (g *Connections) revealAnswers(ctx context.Context, userId string) (Connect
 		return ConnectionsRevealData{}, domain.UserNotFound("User not found", err)
 	}
 
-	if !user.Connections.Game.Finished {
-		return ConnectionsRevealData{}, domain.Conflict("User isn't finished guessing", err)
+	if user.Connections.Attempts > 0 {
+		return ConnectionsRevealData{}, domain.Conflict("User still has attempts", err)
 	}
+
 }
 
 func (g *Connections) GetWinningData(ctx context.Context, userId string) (ConnectionsWinningData, error) {
