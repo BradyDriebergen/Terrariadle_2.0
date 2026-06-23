@@ -20,6 +20,10 @@ type ConnectionsCheckData struct {
 	Finished     bool           `json:"finished"`
 }
 
+type ConnectionsRevealData struct {
+	RevealedCategories []SolvedCategory `json:"revealed_categories"`
+}
+
 type ConnectionsWinningData struct {
 	Position int `json:"position"`
 }

@@ -166,6 +166,17 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 	}, nil
 }
 
+func (g *Connections) revealAnswers(ctx context.Context, userId string) (ConnectionsRevealData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return ConnectionsRevealData{}, domain.UserNotFound("User not found", err)
+	}
+
+	if !user.Connections.Game.Finished {
+		return ConnectionsRevealData{}, domain.Conflict("User isn't finished guessing", err)
+	}
+}
+
 func (g *Connections) GetWinningData(ctx context.Context, userId string) (ConnectionsWinningData, error) {
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {

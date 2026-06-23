@@ -32,41 +32,11 @@
 	let animatingOptions: CategoryOption[] = $state([]);
 	let processingSolvedCategory: SolvedCategory | null = $state(null);
 
-	// Used to delay winning panel from showing on last successful guess
-	let transitioning: boolean = $state(false);
-
 	let showOneAway: boolean = $state(false);
 	let timeout: ReturnType<typeof setTimeout> | undefined = $state(undefined);
 
-	// let answerCategories: string[] = $state(updateAnswerCategories(data.guesses));
-	// let answerOptions: Record<string, string[]> = $state(updateAnswerOptions(data.guesses));
-	// let tempAnswerCategory: string = $state('');
-	// let tempAnswerOptions: string[] = $state([]);
-
-	// // Update methods for complex assignments
-	// function updateAnswerCategories(list: any) {
-	// 	return list.map((item: { category: any }) => item.category);
-	// }
-
-	// function updateAnswerOptions(list: any) {
-	// 	return list.reduce(
-	// 		(acc: Record<string, string[]>, item: { category: string; options: string[] }) => {
-	// 			acc[item.category] = item.options;
-	// 			return acc;
-	// 		},
-	// 		{}
-	// 	);
-	// }
-
-	// Shuffles the remaining panels
-	function shuffle() {
-		const result = [...options];
-		for (let i = result.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[result[i], result[j]] = [result[j], result[i]];
-		}
-		options = result;
-	}
+	// Used to delay winning panel from showing on last successful guess
+	let transitioning: boolean = $state(false);
 
 	// Makes the banner appear when correct guess is made
 	const MAX = 4;
@@ -82,25 +52,21 @@
 				solvedCategories.push(processingSolvedCategory)
 			}
 			processingSolvedCategory = null;
-
-			// answerCategories.push(tempAnswerCategory);
-			// answerOptions[tempAnswerCategory] = tempAnswerOptions;
-			// tempAnswerCategory = '';
-			// tempAnswerOptions = [];
 		}
 	}
 
-	let x = new Tween(0, {
-		duration: 80,
+	// Used for shake functionality
+	let shakeTween = new Tween(0, {
+		duration: 90,
 		easing: cubicOut
 	});
 
 	async function triggerShake() {
-		await x.set(10);
-		await x.set(-10);
-		await x.set(7);
-		await x.set(-7);
-		await x.set(0);
+		await shakeTween.set(8);
+		await shakeTween.set(-8);
+		await shakeTween.set(5);
+		await shakeTween.set(-5);
+		await shakeTween.set(0);
 	}
 
 	function toggleOneAway() {
@@ -120,6 +86,9 @@
 		const userId = getUserId();
 		const res = await checkCategoryGuess(guess, userId);
 
+		attempts = res.attempts
+		finished = res.finished
+
 		if (res.is_correct) {
 			animatingOptions = [...options.filter(o => o.selected)]
 			processingSolvedCategory = res.correct_guess
@@ -132,8 +101,6 @@
 		if (res.one_away) toggleOneAway();
 
 		await triggerShake();
-		attempts = res.attempts
-		finished = res.finished
 		deselectOptions();
 
 		if (attempts === 0) {
@@ -143,47 +110,19 @@
 
 			options = []
 		}
-
-		// fetch('http://localhost:3000/api/connections/check-guess', {
-		// 	method: 'POST',
-		// 	headers: { 'Content-Type': 'application/json' },
-		// 	body: JSON.stringify({ userId: data.userId, guess: guess })
-		// })
-		// 	.then((r) => r.json())
-		// 	.then(async (res) => {
-		// 		if (res.guess.id !== 0) {
-		// 			tempAnswerCategory = res.guess.category;
-		// 			tempAnswerOptions = res.guess.options;
-
-		// 			options = options.filter((s: Option) => !selectedOptions.includes(s));
-		// 			tempGuesses.push(...selectedOptions);
-		// 		} else {
-		// 			if (res.oneAway) {
-		// 				toggleOneAway();
-		// 			}
-
-		// 			await triggerShake();
-		// 			attempts--;
-		// 		}
-
-		// 		finished = res.finished;
-		// 		if (finished && attempts === 0) {
-		// 			const rawData = await fetch(
-		// 				`http://localhost:3000/api/connections/initialize-game/${data.userId}`
-		// 			);
-		// 			const dataJson = await rawData.json();
-
-		// 			options = dataJson.options;
-		// 			answerCategories = updateAnswerCategories(dataJson.guesses);
-		// 			answerOptions = updateAnswerOptions(dataJson.guesses);
-		// 		}
-
-		// 		selectedOptions = [];
-		// 	});
 	}
 
 	function deselectOptions() {
 		options.forEach(o => o.selected = false)
+	}
+
+	function shuffle() {
+		const result = [...options];
+		for (let i = result.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[result[i], result[j]] = [result[j], result[i]];
+		}
+		options = result;
 	}
 </script>
 
@@ -203,78 +142,82 @@
 	<Confetti finished={attempts > 0} />
 {/if}
 
-<div class="grid">
-	{#each solvedCategories as category, index}
-		<div 
-			class="answer-pane pane-{index}" 
-			id={String(index)} 
-			style="grid-column: span 4;" 
-			in:scale
-		>
-			<h4>{category.name}</h4>
-			<span>
-				{category.options[0]}, 
-				{category.options[1]}, 
-				{category.options[2]}, 
-				{category.options[3]}
-			</span>
-		</div>
-	{/each}
-
-	{#each animatingOptions as option (option.id)}
-		<button class="option" in:receive={{ key: option.value }}>
-			<span>{option.value}</span>
-		</button>
-	{/each}
-
-	{#each options as option (option.id)}
-		<button
-			type="button"
-			class="option"
-			class:Selected={option.selected}
-			style:transform={option.selected ? `translateX(${x.current}px)` : undefined}
-			onclick={() => option.selected = !option.selected}
-			disabled={selectedOptionCount >= 4 && !option.selected}
-			out:send={{ key: option.value }}
-			animate:flip={{ duration: 220, easing: (t) => t }}
-			onoutroend={() => {
-				updateAnswerPanes();
-				transitioning = false;
-			}}
-			onoutrostart={() => {
-				index = MAX;
-				transitioning = true;
-			}}
-		>
-			<span>{option.value}</span>
-		</button>
-	{/each}
-</div>
-
-<div>
-	<div class="attempts-bar">
-		<span>Attempts Left:</span>
-		{#each Array(attempts) as _, i}
-			<img src="/emojis/LifeHeart.png" alt="Number of changes left" out:scale />
+{#if data.gameContext}
+	<div class="grid">
+		{#each solvedCategories as category, index}
+			<div 
+				class="answer-pane pane-{index}" 
+				id={String(index)} 
+				style="grid-column: span 4;" 
+				in:scale
+			>
+				<h4>{category.name}</h4>
+				<span>
+					{category.options[0]}, 
+					{category.options[1]}, 
+					{category.options[2]}, 
+					{category.options[3]}
+				</span>
+			</div>
 		{/each}
-		{#if attempts === 0}
-			<span>None</span>
-		{/if}
+
+		{#each animatingOptions as option (option.id)}
+			<button class="option" in:receive={{ key: option.value }}>
+				<span>{option.value}</span>
+			</button>
+		{/each}
+
+		{#each options as option (option.id)}
+			<button
+				type="button"
+				class="option"
+				class:Selected={option.selected}
+				style:transform={option.selected ? `translateX(${shakeTween.current}px)` : undefined}
+				onclick={() => option.selected = !option.selected}
+				disabled={(selectedOptionCount >= 4 && !option.selected) || transitioning}
+				out:send={{ key: option.value }}
+				animate:flip={{ duration: 220, easing: (t) => t }}
+				onoutroend={() => {
+					updateAnswerPanes();
+					transitioning = false;
+				}}
+				onoutrostart={() => {
+					index = MAX;
+					transitioning = true;
+				}}
+			>
+				<span>{option.value}</span>
+			</button>
+		{/each}
 	</div>
 
-	{#if !finished}
-		<div class="game-buttons">
-			<button onclick={shuffle}>Shuffle</button>
-			<button onclick={deselectOptions}>Deselect All</button>
-			<button 
-				onclick={submitGuess} 
-				disabled={selectedOptionCount !== 4}
-			>
-				Check Connection
-			</button>
+	<div>
+		<div class="attempts-bar">
+			<span>Attempts Left:</span>
+			{#each Array(attempts) as _, i}
+				<img src="/emojis/LifeHeart.png" alt="Number of changes left" out:scale />
+			{/each}
+			{#if attempts === 0}
+				<span>None</span>
+			{/if}
 		</div>
-	{/if}
-</div>
+
+		{#if !finished}
+			<div class="game-buttons">
+				<button onclick={shuffle}>Shuffle</button>
+				<button onclick={deselectOptions}>Deselect All</button>
+				<button 
+					onclick={submitGuess} 
+					disabled={selectedOptionCount !== 4}
+				>
+					Check Connection
+				</button>
+			</div>
+		{/if}
+	</div>
+{:else}
+	<p>loading...</p>
+{/if}
 
 <style>
 	.title-box {
