@@ -14,7 +14,7 @@ export async function load({ fetch, parent }) {
 		let weaponList: DropdownListItem[] = [];
 
 		if (!gameContext.finished) {
-			weaponList = await getSearchableWeapons(fetch)
+			weaponList = await getSearchableWeapons(fetch);
 		}
 
 		return { gameContext, weaponList };

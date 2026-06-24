@@ -18,46 +18,31 @@
 	let options: CategoryOption[] = $state([]);
 	let solvedCategories: SolvedCategory[] = $state([]);
 
-	$inspect(options);
-	$inspect(solvedCategories);
-
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
-			attempts = data.gameContext.attempts
-			finished = data.gameContext.finished
-			options = data.gameContext.options.map((value, i) => ({ id: i, value, selected: false })) as CategoryOption[];
+			attempts = data.gameContext.attempts;
+			finished = data.gameContext.finished;
+			options = data.gameContext.options.map((value, i) => ({
+				id: i,
+				value,
+				selected: false
+			})) as CategoryOption[];
 			solvedCategories = data.gameContext.solved_categories as SolvedCategory[];
 		}
 	});
 
-	let selectedOptionCount: number = $derived(options.filter(o => o.selected).length)
+	let selectedOptionCount: number = $derived(options.filter((o) => o.selected).length);
 	let animatingOptions: CategoryOption[] = $state([]);
-	let processingSolvedCategory: SolvedCategory[] = $state([]);
+	let inFlightCategories: SolvedCategory[] = $state([]);
 
 	let showOneAway: boolean = $state(false);
-	let timeout: ReturnType<typeof setTimeout> | undefined = $state(undefined);
 
 	// Used to delay winning panel from showing on last successful guess
 	let transitioning: boolean = $state(false);
 
+	// Used to prevent users from guessing during the transition
 	let loadingGuess: boolean = $state(false);
-
-	// Makes the banner appear when correct guess is made
-	const MAX = 4;
-	let index = $state(0);
-	function updateAnswerPanes() {
-		index--;
-		if (index === 0) {
-			animatingOptions = [];
-
-			processingSolvedCategory.forEach((category: SolvedCategory) => {
-				solvedCategories.push(category)
-			});
-
-			processingSolvedCategory = [];
-		}
-	}
 
 	// Used for shake functionality
 	let shakeTween = new Tween(0, {
@@ -73,6 +58,7 @@
 		await shakeTween.set(0);
 	}
 
+	let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 	function toggleOneAway() {
 		showOneAway = true;
 		clearTimeout(timeout);
@@ -85,28 +71,26 @@
 	async function submitGuess() {
 		loadingGuess = true;
 
-		const guess = options
-			.filter((option) => option.selected)
-			.map((option) => option.value);
+		const guess = options.filter((option) => option.selected).map((option) => option.value);
 
 		const userId = getUserId();
 		const guessResult = await checkCategoryGuess(guess, userId);
 
-		attempts = guessResult.attempts
+		attempts = guessResult.attempts;
 
 		if (guessResult.finished) {
 			transitioning = true;
-			finished = guessResult.finished
+			finished = guessResult.finished;
 		}
 
 		if (guessResult.is_correct) {
-			animatingOptions = [...options.filter(o => o.selected)]
-			processingSolvedCategory = [guessResult.correct_guess]
+			animatingOptions = [...options.filter((o) => o.selected)];
+			inFlightCategories = [guessResult.correct_guess];
 
-			options = options.filter(o => !o.selected)
+			options = options.filter((o) => !o.selected);
 
 			loadingGuess = false;
-			return
+			return;
 		}
 
 		if (guessResult.one_away) toggleOneAway();
@@ -117,14 +101,30 @@
 		if (attempts === 0) {
 			const answers = await revealConnectionsAnswers(userId);
 
-			options = []
-			solvedCategories = []
-			processingSolvedCategory = [...answers.revealed_categories]
+			options = [];
+			solvedCategories = [];
+			inFlightCategories = [...answers.revealed_categories];
+		}
+	}
+
+	// Makes the banner appear when correct guess is made
+	const MAX = 4;
+	let index = $state(0);
+	function updateAnswerPanes() {
+		index--;
+		if (index === 0) {
+			animatingOptions = [];
+
+			inFlightCategories.forEach((category: SolvedCategory) => {
+				solvedCategories.push(category);
+			});
+
+			inFlightCategories = [];
 		}
 	}
 
 	function deselectOptions() {
-		options.forEach(o => o.selected = false)
+		options.forEach((o) => (o.selected = false));
 		loadingGuess = false;
 	}
 
@@ -157,17 +157,17 @@
 {#if data.gameContext}
 	<div class="grid">
 		{#each solvedCategories as category, index}
-			<div 
-				class="answer-pane pane-{index}" 
-				id={String(index)} 
-				style="grid-column: span 4;" 
+			<div
+				class="answer-pane pane-{index}"
+				id={String(index)}
+				style="grid-column: span 4;"
 				in:scale
 			>
 				<h4>{category.name}</h4>
 				<span>
-					{category.options[0]}, 
-					{category.options[1]}, 
-					{category.options[2]}, 
+					{category.options[0]},
+					{category.options[1]},
+					{category.options[2]},
 					{category.options[3]}
 				</span>
 			</div>
@@ -185,17 +185,17 @@
 				class="option"
 				class:Selected={option.selected}
 				style:transform={option.selected ? `translateX(${shakeTween.current}px)` : undefined}
-				onclick={() => option.selected = !option.selected}
+				onclick={() => (option.selected = !option.selected)}
 				disabled={(selectedOptionCount >= 4 && !option.selected) || transitioning}
 				out:send={{ key: option.value }}
 				animate:flip={{ duration: 220, easing: (t) => t }}
-				onoutroend={() => {
-					updateAnswerPanes();
-					transitioning = false;
-				}}
 				onoutrostart={() => {
 					index = MAX;
 					transitioning = true;
+				}}
+				onoutroend={() => {
+					updateAnswerPanes();
+					transitioning = false;
 				}}
 			>
 				<span>{option.value}</span>
@@ -218,10 +218,7 @@
 			<div class="game-buttons">
 				<button onclick={shuffle}>Shuffle</button>
 				<button onclick={deselectOptions}>Deselect All</button>
-				<button 
-					onclick={submitGuess} 
-					disabled={selectedOptionCount !== 4 || loadingGuess}
-				>
+				<button onclick={submitGuess} disabled={selectedOptionCount !== 4 || loadingGuess}>
 					Check Connection
 				</button>
 			</div>

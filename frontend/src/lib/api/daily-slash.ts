@@ -24,8 +24,8 @@ export async function initializeDailySlashGame(
 
 export async function getSearchableWeapons(fetchFn: typeof fetch) {
 	const res = await fetchFn('/api/daily-slash/search-items');
-	const body = await parseJsonSafe(res)
-	
+	const body = await parseJsonSafe(res);
+
 	if (!res.ok) {
 		throw new ApiError(res.status, body?.error ?? 'Unable to find weapons');
 	}
