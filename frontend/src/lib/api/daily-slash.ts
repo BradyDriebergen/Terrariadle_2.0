@@ -12,7 +12,7 @@ export async function initializeDailySlashGame(
 	fetchFn: typeof fetch,
 	userId: string
 ): Promise<DailySlashSession> {
-	const res = await fetchFn(`/api/daily-slash/initialize-game/?user_id=${userId}`);
+	const res = await fetchFn(`/api/daily-slash/initialize-game?user_id=${userId}`);
 	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
@@ -38,7 +38,7 @@ export async function getWeaponHint(num: number): Promise<string> {
 		throw new Error('Invalid hint number input');
 	}
 
-	const res = await fetch(`/api/daily-slash/hint/?hint=${num}`);
+	const res = await fetch(`/api/daily-slash/hint?hint=${num}`);
 	return (await res.json()) as string;
 }
 
@@ -70,6 +70,6 @@ export async function getDailySlashWinningData(): Promise<DailySlashWinningData>
 		throw new Error('Session not found. Try refreshing the page.');
 	}
 
-	const res = await fetch(`/api/daily-slash/winning-data/?user_id=${userId}`);
+	const res = await fetch(`/api/daily-slash/winning-data?user_id=${userId}`);
 	return (await res.json()) as DailySlashWinningData;
 }

@@ -53,8 +53,7 @@
 	.container {
 		background-color: var(--color-button);
 		width: fit-content;
-		margin: auto;
-		margin-bottom: 20px;
+		margin: 20px auto;
 		padding: 0 20px;
 		border-radius: 10px;
 		border: 2px solid black;

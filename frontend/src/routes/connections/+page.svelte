@@ -7,7 +7,7 @@
 	import { Tween } from 'svelte/motion';
 	import { cubicInOut, cubicOut } from 'svelte/easing';
 	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
-	import { checkCategoryGuess } from '$lib/api/connections';
+	import { checkCategoryGuess, revealConnectionsAnswers } from '$lib/api/connections';
 	import { getUserId } from '$lib/api/shared';
 	import type { PageData } from './$types';
 
@@ -17,6 +17,9 @@
 	let finished: boolean = $state(false);
 	let options: CategoryOption[] = $state([]);
 	let solvedCategories: SolvedCategory[] = $state([]);
+
+	$inspect(options);
+	$inspect(solvedCategories);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -30,7 +33,7 @@
 
 	let selectedOptionCount: number = $derived(options.filter(o => o.selected).length)
 	let animatingOptions: CategoryOption[] = $state([]);
-	let processingSolvedCategory: SolvedCategory | null = $state(null);
+	let processingSolvedCategory: SolvedCategory[] = $state([]);
 
 	let showOneAway: boolean = $state(false);
 	let timeout: ReturnType<typeof setTimeout> | undefined = $state(undefined);
@@ -38,20 +41,21 @@
 	// Used to delay winning panel from showing on last successful guess
 	let transitioning: boolean = $state(false);
 
+	let loadingGuess: boolean = $state(false);
+
 	// Makes the banner appear when correct guess is made
 	const MAX = 4;
 	let index = $state(0);
-	async function updateAnswerPanes() {
+	function updateAnswerPanes() {
 		index--;
 		if (index === 0) {
 			animatingOptions = [];
 
-			if (finished && attempts === 0) return;
+			processingSolvedCategory.forEach((category: SolvedCategory) => {
+				solvedCategories.push(category)
+			});
 
-			if (processingSolvedCategory) {
-				solvedCategories.push(processingSolvedCategory)
-			}
-			processingSolvedCategory = null;
+			processingSolvedCategory = [];
 		}
 	}
 
@@ -79,41 +83,49 @@
 	}
 
 	async function submitGuess() {
+		loadingGuess = true;
+
 		const guess = options
 			.filter((option) => option.selected)
 			.map((option) => option.value);
 
 		const userId = getUserId();
-		const res = await checkCategoryGuess(guess, userId);
+		const guessResult = await checkCategoryGuess(guess, userId);
 
-		attempts = res.attempts
-		finished = res.finished
+		attempts = guessResult.attempts
 
-		if (res.is_correct) {
+		if (guessResult.finished) {
+			transitioning = true;
+			finished = guessResult.finished
+		}
+
+		if (guessResult.is_correct) {
 			animatingOptions = [...options.filter(o => o.selected)]
-			processingSolvedCategory = res.correct_guess
+			processingSolvedCategory = [guessResult.correct_guess]
 
 			options = options.filter(o => !o.selected)
 
+			loadingGuess = false;
 			return
 		}
 
-		if (res.one_away) toggleOneAway();
+		if (guessResult.one_away) toggleOneAway();
 
 		await triggerShake();
 		deselectOptions();
 
 		if (attempts === 0) {
-			// Call new endpoint that solves the connections game and
-			// returns the new guesses. Also assigns them to the SolvedCategories
-			// state
+			const answers = await revealConnectionsAnswers(userId);
 
 			options = []
+			solvedCategories = []
+			processingSolvedCategory = [...answers.revealed_categories]
 		}
 	}
 
 	function deselectOptions() {
 		options.forEach(o => o.selected = false)
+		loadingGuess = false;
 	}
 
 	function shuffle() {
@@ -126,7 +138,7 @@
 	}
 </script>
 
-{#if !finished}
+{#if !finished || transitioning}
 	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
 		<h2>Connections</h2>
 		<p>Find groups of 4 with something in common!</p>
@@ -208,7 +220,7 @@
 				<button onclick={deselectOptions}>Deselect All</button>
 				<button 
 					onclick={submitGuess} 
-					disabled={selectedOptionCount !== 4}
+					disabled={selectedOptionCount !== 4 || loadingGuess}
 				>
 					Check Connection
 				</button>

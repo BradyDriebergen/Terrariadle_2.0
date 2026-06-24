@@ -24,6 +24,10 @@ export interface ConnectionsCheckResult {
   finished: boolean;
 }
 
+export interface ConnectionsRevealData {
+	revealed_categories: SolvedCategory[];
+}
+
 export interface ConnectionsWinningData {
 	position: number;
 }
