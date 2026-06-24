@@ -1,71 +1,72 @@
-import type { ConnectionsCheckResult, ConnectionsRevealData, ConnectionsSession, ConnectionsWinningData } from "$lib/types/connections";
-import { ApiError } from "$lib/types/error";
-import { parseJsonSafe } from "./shared";
+import type {
+	ConnectionsCheckResult,
+	ConnectionsRevealData,
+	ConnectionsSession,
+	ConnectionsWinningData
+} from '$lib/types/connections';
+import { ApiError } from '$lib/types/error';
+import { parseJsonSafe } from './shared';
 
 export async function initializeConnectionsGame(
-    fetchFn: typeof fetch,
-    userId: string
+	fetchFn: typeof fetch,
+	userId: string
 ): Promise<ConnectionsSession> {
-    const res = await fetchFn(`/api/connections/initialize-game?user_id=${userId}`);
-    const body = await parseJsonSafe(res);
+	const res = await fetchFn(`/api/connections/initialize-game?user_id=${userId}`);
+	const body = await parseJsonSafe(res);
 
-    if (!res.ok) {
-        throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
-    }
+	if (!res.ok) {
+		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+	}
 
-    return body as ConnectionsSession;
+	return body as ConnectionsSession;
 }
 
 export async function checkCategoryGuess(
-    options: string[],
-    userId: string
+	options: string[],
+	userId: string
 ): Promise<ConnectionsCheckResult> {
-    if (options.length !== 4) {
-        throw new ApiError(400, 'Connections guess must have a length of 4');
-    }
+	if (options.length !== 4) {
+		throw new ApiError(400, 'Connections guess must have a length of 4');
+	}
 
-    const res = await fetch('/api/connections/check-guess', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_id: userId, guess: options })
-    });
+	const res = await fetch('/api/connections/check-guess', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ user_id: userId, guess: options })
+	});
 
-    const body = await parseJsonSafe(res);
+	const body = await parseJsonSafe(res);
 
-    if (!res.ok) {
-        throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
-    }
+	if (!res.ok) {
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+	}
 
-    return body as ConnectionsCheckResult;
+	return body as ConnectionsCheckResult;
 }
 
-export async function revealConnectionsAnswers(
-    userId: string
-): Promise<ConnectionsRevealData> {
-    const res = await fetch('/api/connections/reveal-answers', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_id: userId })
-    });
+export async function revealConnectionsAnswers(userId: string): Promise<ConnectionsRevealData> {
+	const res = await fetch('/api/connections/reveal-answers', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ user_id: userId })
+	});
 
-    const body = await parseJsonSafe(res);
+	const body = await parseJsonSafe(res);
 
-    if (!res.ok) {
-        throw new ApiError(res.status, body?.error ?? 'An error occurred when revealing answers');
-    }
+	if (!res.ok) {
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when revealing answers');
+	}
 
-    return body as ConnectionsRevealData;
+	return body as ConnectionsRevealData;
 }
 
-export async function getConnectionsWinningData(
-    userId: string
-): Promise<ConnectionsWinningData> {
-    const res = await fetch(`/api/connections/winning-data?user_id=${userId}`);
-    const body = await parseJsonSafe(res);
+export async function getConnectionsWinningData(userId: string): Promise<ConnectionsWinningData> {
+	const res = await fetch(`/api/connections/winning-data?user_id=${userId}`);
+	const body = await parseJsonSafe(res);
 
-    if (!res.ok) {
-        throw new ApiError(res.status, body?.error ?? 'Unable to load winning data');
-    }
+	if (!res.ok) {
+		throw new ApiError(res.status, body?.error ?? 'Unable to load winning data');
+	}
 
-    return body as ConnectionsWinningData;
+	return body as ConnectionsWinningData;
 }

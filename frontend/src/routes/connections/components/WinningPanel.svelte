@@ -7,9 +7,9 @@
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
-	let { 
+	let {
 		attempts = 0
-	} : {
+	}: {
 		attempts: number;
 	} = $props();
 
