@@ -9,7 +9,7 @@
 		prevWeapon: WeaponPreview | null;
 	} = $props();
 
-	let playerCount = $state<number>(0);
+	let playerCount: number = $state(0);
 
 	// Streams live player count to the user
 	onMount(() => {

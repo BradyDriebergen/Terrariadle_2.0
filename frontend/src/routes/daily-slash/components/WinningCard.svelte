@@ -14,8 +14,8 @@
 		weaponAnswer: Weapon;
 	} = $props();
 
-	let position = $state(0);
-	let playerCount = $state(0);
+	let position: number = $state(0);
+	let playerCount: number = $state(0);
 
 	onMount(async () => {
 		const winningData = await getDailySlashWinningData();

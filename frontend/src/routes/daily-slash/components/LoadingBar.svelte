@@ -10,9 +10,9 @@
 	const progressBar2ByGuess = [100, 75, 50, 25, 100, 60, 30, 100, 80, 60, 40, 20, 0];
 
 	// Use 12 guesses when won is true
-	let effectiveGuesses = $derived(finished ? 12 : guessCount);
+	let effectiveGuesses: number = $derived(finished ? 12 : guessCount);
 
-	let progressBar1 = $derived.by(() => {
+	let progressBar1: number = $derived.by(() => {
 		if (effectiveGuesses < 4) {
 			return 100;
 		} else if (effectiveGuesses < 7) {
@@ -23,7 +23,7 @@
 		return 0;
 	});
 
-	let progressBar2 = $derived.by(() => {
+	let progressBar2: number = $derived.by(() => {
 		if (effectiveGuesses >= 12) return progressBar2ByGuess[12];
 		return progressBar2ByGuess[effectiveGuesses];
 	});

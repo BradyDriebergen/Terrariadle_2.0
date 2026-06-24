@@ -10,6 +10,7 @@ import (
 type ConnectionsService interface {
 	InitializeGame(ctx context.Context, userId string) (ConnectionsInitData, error)
 	CheckGuess(ctx context.Context, userId string, guessedOptions []string) (ConnectionsCheckData, error)
+	RevealAnswers(ctx context.Context, userId string) (ConnectionsRevealData, error)
 	GetWinningData(ctx context.Context, userId string) (ConnectionsWinningData, error)
 }
 
@@ -93,7 +94,7 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 	}
 
 	answerOptions := g.answerCache.GetAnswers().Connections.Options
-	answerMap := make(map[string]int, 16)
+	answerMap := make(map[string]int, 16) // option -> answer category id
 	for _, o := range answerOptions {
 		answerMap[o.Option] = o.CategoryID
 	}
@@ -162,6 +163,55 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 		IsCorrect:    isCorrect,
 		OneAway:      oneAway,
 		CorrectGuess: correctGuess,
+		Finished:     user.Connections.Game.Finished,
+	}, nil
+}
+
+func (g *Connections) RevealAnswers(ctx context.Context, userId string) (ConnectionsRevealData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return ConnectionsRevealData{}, domain.UserNotFound("User not found", err)
+	}
+
+	if user.Connections.Attempts > 0 {
+		return ConnectionsRevealData{}, domain.Conflict("User still has attempts", nil)
+	}
+
+	answerOptions := g.answerCache.GetAnswers().Connections.Options
+	userGuesses := user.Connections.Game.Guesses
+
+	correctCategoryMap := make(map[int][]string) // category id -> options slice
+	correctCategories := []SolvedCategory{}
+
+	for _, o := range answerOptions {
+		if !slices.Contains(userGuesses, o.CategoryID) {
+			userGuesses = append(userGuesses, o.CategoryID)
+		}
+
+		correctCategoryMap[o.CategoryID] = append(correctCategoryMap[o.CategoryID], o.Option)
+	}
+
+	for catId := range correctCategoryMap {
+		category, ok := g.catalogCache.GetCategory(catId)
+		if !ok {
+			return ConnectionsRevealData{}, domain.Internal("Failed to find matching category", nil)
+		}
+
+		correctCategories = append(correctCategories, SolvedCategory{
+			Name:    category.Category,
+			Options: correctCategoryMap[catId],
+		})
+	}
+
+	user.Connections.Game.Guesses = userGuesses
+
+	err = g.userCache.UpsertUser(ctx, user)
+	if err != nil {
+		return ConnectionsRevealData{}, domain.Internal("An error occurred updating user's data", err)
+	}
+
+	return ConnectionsRevealData{
+		RevealedCategories: correctCategories,
 	}, nil
 }
 
