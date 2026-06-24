@@ -17,6 +17,11 @@ type ConnectionsCheckData struct {
 	IsCorrect    bool           `json:"is_correct"`
 	OneAway      bool           `json:"one_away"`
 	CorrectGuess SolvedCategory `json:"correct_guess"`
+	Finished     bool           `json:"finished"`
+}
+
+type ConnectionsRevealData struct {
+	RevealedCategories []SolvedCategory `json:"revealed_categories"`
 }
 
 type ConnectionsWinningData struct {

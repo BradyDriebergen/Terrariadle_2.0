@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { DropdownListItem } from '$lib/types/common';
+	import type { DropdownListItem } from '$lib/types/shared';
 
 	let {
 		itemList,

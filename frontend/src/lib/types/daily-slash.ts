@@ -1,5 +1,3 @@
-import type { DropdownListItem } from './common';
-
 export const CompareResult = {
 	Lower: -1,
 	Match: 0,

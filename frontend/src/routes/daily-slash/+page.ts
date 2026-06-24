@@ -1,29 +1,27 @@
-import type { DropdownListItem } from '$lib/types/common.js';
+import type { DropdownListItem } from '$lib/types/shared.js';
 import type { DailySlashSession } from '$lib/types/daily-slash.js';
 import { error } from '@sveltejs/kit';
+import { ApiError } from '$lib/types/error';
+import { getSearchableWeapons, initializeDailySlashGame } from '$lib/api/daily-slash.js';
 
 export async function load({ fetch, parent }) {
 	const { userId } = await parent();
+	if (!userId) return { gameContext: null, weaponList: [] };
 
-	const contextRes = await fetch(`/api/daily-slash/initialize-game/?user_id=${userId}`);
-	if (!contextRes.ok) {
-		const body = await contextRes.json();
-		error(contextRes.status, body.error ?? 'Unable to initialize game');
-	}
+	try {
+		const gameContext = await initializeDailySlashGame(fetch, userId);
 
-	const gameContext = (await contextRes.json()) as DailySlashSession;
+		let weaponList: DropdownListItem[] = [];
 
-	let weaponList: DropdownListItem[] = [];
-
-	if (!gameContext.finished) {
-		const weaponsRes = await fetch('/api/daily-slash/search-items');
-		if (!weaponsRes.ok) {
-			const body = await weaponsRes.json();
-			error(weaponsRes.status, body.error ?? 'Unable to fetch weapons');
+		if (!gameContext.finished) {
+			weaponList = await getSearchableWeapons(fetch)
 		}
 
-		weaponList = (await weaponsRes.json()) as DropdownListItem[];
+		return { gameContext, weaponList };
+	} catch (e) {
+		if (e instanceof ApiError) {
+			error(e.status, e.message);
+		}
+		error(500, 'Unexpected error initializing game');
 	}
-
-	return { gameContext, weaponList };
 }

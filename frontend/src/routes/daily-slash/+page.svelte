@@ -5,15 +5,15 @@
 	import GameInfo from './components/GameInfo.svelte';
 	import WinningCard from './components/WinningCard.svelte';
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
-	import type { DropdownListItem } from '$lib/types/common';
+	import type { DropdownListItem } from '$lib/types/shared';
 
 	let { data } = $props();
 
-	let guesses = $state<WeaponGuess[]>([]);
-	let prevWeapon = $state<WeaponPreview | null>(null);
-	let finished = $state<boolean>(false);
+	let guesses: WeaponGuess[] = $state([]);
+	let prevWeapon: WeaponPreview | null = $state(null);
+	let finished: boolean = $state(false);
 
-	let correctWeapon = $derived<Weapon | null>(finished ? guesses[0].weapon : null);
+	let correctWeapon: Weapon | null = $derived(finished ? guesses[0].weapon : null);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -24,25 +24,29 @@
 		}
 	});
 
-	let weaponList = $derived<DropdownListItem[]>(
+	let weaponList: DropdownListItem[] = $derived(
 		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
 	);
 </script>
 
 <svelte:document style:overflow-y="hidden" />
 
-<div>
-	<UserInput bind:guesses bind:finished {weaponList} />
+{#if data.gameContext}
+	<div>
+		<UserInput bind:guesses bind:finished {weaponList} />
 
-	{#if finished}
-		<WinningCard weaponAnswer={correctWeapon!} />
-	{/if}
+		{#if finished}
+			<WinningCard weaponAnswer={correctWeapon!} />
+		{/if}
 
-	{#if guesses.length < 1}
-		<GameInfo {prevWeapon} />
-	{:else}
-		<GuessList {guesses} />
-	{/if}
+		{#if guesses.length < 1}
+			<GameInfo {prevWeapon} />
+		{:else}
+			<GuessList {guesses} />
+		{/if}
 
-	<Confetti {finished} />
-</div>
+		<Confetti {finished} />
+	</div>
+{:else}
+	<p>Loading...</p>
+{/if}
