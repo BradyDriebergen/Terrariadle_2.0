@@ -45,6 +45,7 @@ Terrariadle/
 ├── Makefile
 └── docs/
 
+- [ ] Figure out versioning
 - [ ] Add a new user to Oracle instance
 - [ ] Add .env files to Oracle instance
 - [ ] Reset MongoDB Atlas password for db
