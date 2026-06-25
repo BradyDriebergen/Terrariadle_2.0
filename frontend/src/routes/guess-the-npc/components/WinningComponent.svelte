@@ -8,7 +8,7 @@
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
 
-	let { npc } : { npc: NpcGuess }= $props();
+	let { npc }: { npc: NpcGuess } = $props();
 
 	let position: number = $state(0);
 	let playerCount: number = $state(0);
@@ -36,7 +36,7 @@
 	async function guessName(name: string) {
 		try {
 			const res = await checkNpcName(name);
-			
+
 			guessedName = res.guessed_name;
 			correctName = res.correct_name;
 		} catch (e) {

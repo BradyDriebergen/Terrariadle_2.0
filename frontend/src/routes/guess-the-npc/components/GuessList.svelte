@@ -3,10 +3,10 @@
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 
-	let { 
-		guesses = [], 
-		finished = false 
-	} : {
+	let {
+		guesses = [],
+		finished = false
+	}: {
 		guesses: NpcGuess[];
 		finished: boolean;
 	} = $props();

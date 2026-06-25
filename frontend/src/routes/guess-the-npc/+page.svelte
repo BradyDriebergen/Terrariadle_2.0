@@ -20,7 +20,7 @@
 		}
 	});
 
-	let quote: string = $derived(data.gameContext?.quote ?? '')
+	let quote: string = $derived(data.gameContext?.quote ?? '');
 	let npcList: DropdownListItem[] = $derived(
 		(data.npcList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
 	);

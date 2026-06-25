@@ -6,12 +6,12 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
-	let { 
+	let {
 		guesses = $bindable<NpcGuess[]>([]),
 		finished = $bindable<boolean>(false),
 		quote = '',
 		npcList = []
-	} : {
+	}: {
 		guesses: NpcGuess[];
 		finished: boolean;
 		quote: string;
