@@ -14,8 +14,8 @@
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge
     - [ ] Home page
-    - [ ] Daily Slash
-    - [ ] Connections
+    - [x] Daily Slash
+    - [x] Connections
     - [ ] Guess the NPC
     - [ ] Hangman
     - [ ] About
