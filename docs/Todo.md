@@ -14,9 +14,9 @@
 **Frontend changes**
 - [ ] Go through all the front-end and update it with new knowledge
     - [ ] Home page
-    - [ ] Daily Slash
-    - [ ] Connections
-    - [ ] Guess the NPC
+    - [x] Daily Slash
+    - [x] Connections
+    - [x] Guess the NPC
     - [ ] Hangman
     - [ ] About
 - [ ] Create tabs at the top to navigate through games

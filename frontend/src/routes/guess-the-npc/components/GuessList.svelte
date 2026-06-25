@@ -1,8 +1,15 @@
 <script lang="ts">
+	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import { flip } from 'svelte/animate';
 	import { scale } from 'svelte/transition';
 
-	let { guesses, won } = $props();
+	let {
+		guesses = [],
+		finished = false
+	}: {
+		guesses: NpcGuess[];
+		finished: boolean;
+	} = $props();
 
 	function shake(node: Element, { delay = 80, duration = 500, x = 6 } = {}) {
 		return {
@@ -24,10 +31,10 @@
 			<span>Guessed Npcs</span>
 		</div>
 
-		{#each guesses as guess, i (guess.id)}
+		{#each guesses as guess, i (guess.name)}
 			<div
 				class="item"
-				style="background-color: {won && i === 0 ? 'var(--color-green)' : 'var(--color-red)'}"
+				style="background-color: {finished && i === 0 ? 'var(--color-green)' : 'var(--color-red)'}"
 				in:shake
 				animate:flip={{ duration: 200 }}
 			>

@@ -6,8 +6,9 @@
 	import WinningCard from './components/WinningCard.svelte';
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
+	import type { PageData } from './$types';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	let guesses: WeaponGuess[] = $state([]);
 	let prevWeapon: WeaponPreview | null = $state(null);

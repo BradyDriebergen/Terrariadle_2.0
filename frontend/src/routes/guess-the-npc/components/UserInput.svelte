@@ -1,17 +1,45 @@
 <script lang="ts">
+	import { checkNpcGuess } from '$lib/api/guess-the-npc';
 	import Dropdown from '$lib/components/Dropdown.svelte';
+	import type { NpcGuess } from '$lib/types/guess-the-npc';
+	import type { DropdownListItem } from '$lib/types/shared';
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
-	let { submitGuess, npcList, quote, won } = $props();
+	let {
+		guesses = $bindable<NpcGuess[]>([]),
+		finished = $bindable<boolean>(false),
+		quote = '',
+		npcList = []
+	}: {
+		guesses: NpcGuess[];
+		finished: boolean;
+		quote: string;
+		npcList: DropdownListItem[];
+	} = $props();
+
+	// svelte-ignore state_referenced_locally
+	let npcs: DropdownListItem[] = $state(npcList);
+
+	async function submitGuess(npcId: number) {
+		try {
+			const res = await checkNpcGuess(npcId);
+			guesses = [res.guess, ...guesses];
+			finished = res.finished;
+			npcs = npcs.filter((w) => w.id !== npcId);
+		} catch (e) {
+			// handle error here
+			console.log(e);
+		}
+	}
 </script>
 
-{#if won}
+{#if finished}
 	<span class="color-cycle">Guess The NPC Results</span>
 {/if}
 
-<div class="container" style="margin-top: {won ? 15 : 40}px;">
-	{#if !won}
+<div class="container" style="margin-top: {finished ? 15 : 40}px;">
+	{#if !finished}
 		<h2 out:slide={{ duration: 700, easing: cubicInOut }}>Guess the NPC</h2>
 		<p out:slide={{ duration: 700, easing: cubicInOut }}>Which NPC says this quote?</p>
 	{/if}
@@ -25,14 +53,14 @@
 		</div>
 	</div>
 
-	{#if !won}
+	{#if !finished}
 		<div class="dropdown" out:slide={{ duration: 700, easing: cubicInOut }}>
 			<Dropdown
 				selectItem={(npcId: number) => {
 					submitGuess(npcId);
 				}}
-				itemList={npcList}
-				itemName="npc"
+				itemList={npcs}
+				itemType="npc"
 			/>
 		</div>
 	{/if}

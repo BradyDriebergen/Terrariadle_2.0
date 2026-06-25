@@ -1,27 +1,26 @@
-import type { SimpleNpc } from '$lib/types/guess-the-npc.js';
+import { ApiError } from '$lib/types/error';
+import type { DropdownListItem } from '$lib/types/shared';
 import { error } from '@sveltejs/kit';
+import { getSearchableNpcs, initializeNpcGame } from '$lib/api/guess-the-npc.js';
 
 export async function load({ fetch, parent }) {
 	const { userId } = await parent();
+	if (!userId) return { gameContext: null, npcList: [] };
 
-	const npcFetch = await fetch('http://localhost:3000/api/guess-the-npc/search-items');
-	if (!npcFetch) {
-		error(404, 'Unable to fetch weapons');
+	try {
+		const gameContext = await initializeNpcGame(fetch, userId);
+
+		let npcList: DropdownListItem[] = [];
+
+		if (!gameContext.finished) {
+			npcList = await getSearchableNpcs(fetch);
+		}
+
+		return { gameContext, npcList };
+	} catch (e) {
+		if (e instanceof ApiError) {
+			error(e.status, e.message);
+		}
+		error(500, 'Unexpected error initializing game');
 	}
-	let npcs: SimpleNpc[] = await npcFetch.json();
-
-	const initData = await fetch(`http://localhost:3000/api/guess-the-npc/initialize-game/${userId}`);
-	if (!initData) {
-		error(404, 'Unable to fetch initializing data');
-	}
-	const initDataJson = await initData.json();
-
-	const quote = initDataJson.quote;
-	const guesses: SimpleNpc[] = initDataJson.guesses ?? [];
-	const won = initDataJson.won;
-
-	const guessIds: number[] = guesses?.map((g) => g.id) ?? [];
-	npcs = npcs.filter((n) => !guessIds.includes(n.id));
-
-	return { npcs, quote, guesses, won };
 }

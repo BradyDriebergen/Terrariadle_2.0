@@ -43,24 +43,25 @@ func (g *GuessTheNpc) InitializeGame(ctx context.Context, userId string) (GuessT
 		return GuessTheNpcInitData{}, domain.UserNotFound("Error creating user", err)
 	}
 
-	guesses := []domain.NpcInfo{}
+	guesses := []GuessTheNpcGuessData{}
 
-	for _, id := range user.GuessTheNPC.Game.Guesses {
-		npc, ok := g.catalogCache.GetNpc(id)
+	for i := len(user.GuessTheNPC.Game.Guesses) - 1; i >= 0; i-- {
+		npc, ok := g.catalogCache.GetNpc(user.GuessTheNPC.Game.Guesses[i])
 		if !ok {
 			return GuessTheNpcInitData{}, domain.Internal("Failed to find matching npc", nil)
 		}
 
-		guesses = append(guesses, domain.NpcInfo{
+		guesses = append(guesses, GuessTheNpcGuessData{
 			Name: npc.NPC,
 			Path: npc.NPCPath,
 		})
 	}
 
 	return GuessTheNpcInitData{
-		Quote:    g.answerCache.GetAnswers().GuessTheNpc.Quote,
-		Finished: user.GuessTheNPC.Game.Finished,
-		Guesses:  guesses,
+		Quote:      g.answerCache.GetAnswers().GuessTheNpc.Quote,
+		Finished:   user.GuessTheNPC.Game.Finished,
+		Guesses:    guesses,
+		GuessedIDs: user.GuessTheNPC.Game.Guesses,
 	}, nil
 }
 
@@ -104,7 +105,7 @@ func (g *GuessTheNpc) CheckGuess(ctx context.Context, userId string, npcId int) 
 
 	return GuessTheNpcCheckData{
 		Finished: isCorrect,
-		Guess: domain.NpcInfo{
+		Guess: GuessTheNpcGuessData{
 			Name: npcGuess.NPC,
 			Path: npcGuess.NPCPath,
 		},
