@@ -1,9 +1,10 @@
 package services
 
 type GuessTheNpcInitData struct {
-	Quote    string                 `json:"quote"`
-	Finished bool                   `json:"finished"`
-	Guesses  []GuessTheNpcGuessData `json:"guesses"`
+	Quote      string                 `json:"quote"`
+	Finished   bool                   `json:"finished"`
+	Guesses    []GuessTheNpcGuessData `json:"guesses"`
+	GuessedIDs []int                  `json:"guessed_ids"`
 }
 
 type SearchNpcData struct {

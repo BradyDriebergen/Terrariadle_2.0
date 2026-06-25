@@ -18,12 +18,12 @@ export async function initializeNpcGame(
     return body as GuessTheNpcSession;
 }
 
-export async function getSearchableNpc(fetchFn: typeof fetch) {
+export async function getSearchableNpcs(fetchFn: typeof fetch) {
     const res = await fetchFn('/api/guess-the-npc/search-items');
     const body = await parseJsonSafe(res);
 
     if (!res.ok) {
-        throw new ApiError(res.status, body?.error ?? 'Unable to find weapons');
+        throw new ApiError(res.status, body?.error ?? 'Unable to find npcs');
     }
 
     return body as DropdownListItem[];

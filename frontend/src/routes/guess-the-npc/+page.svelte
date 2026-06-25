@@ -1,40 +1,44 @@
 <script lang="ts">
 	import GuessList from './components/GuessList.svelte';
-	import GuessPanel from './components/GuessPanel.svelte';
+	import UserInput from './components/UserInput.svelte';
 	import WinningComponent from './components/WinningComponent.svelte';
 	import Confetti from '$lib/components/Confetti.svelte';
+	import type { PageData } from './$types';
+	import type { NpcGuess } from '$lib/types/guess-the-npc';
+	import type { DropdownListItem } from '$lib/types/shared';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
-	let npcs = $state(data.npcs);
-	let guesses = $state(data.guesses);
-	let won = $state(data.won);
+	let guesses: NpcGuess[] = $state([]);
+	let finished: boolean = $state(false);
 
-	async function submitGuess(npcId: number) {
-		fetch('http://localhost:3000/api/guess-the-npc/check-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: npcId })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				guesses.unshift(data.guess);
-				won = data.won;
+	$effect(() => {
+		// Initialize data once pre-fetch is finished
+		if (data.gameContext) {
+			guesses = data.gameContext.guesses;
+			finished = data.gameContext.finished;
+		}
+	});
 
-				npcs = npcs.filter((n) => n.id !== npcId);
-			});
-	}
+	let quote: string = $derived(data.gameContext?.quote ?? '')
+	let npcList: DropdownListItem[] = $derived(
+		(data.npcList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
+	);
 </script>
 
-<GuessPanel {submitGuess} npcList={npcs} quote={data.quote} {won} />
+{#if data.gameContext}
+	<UserInput bind:guesses bind:finished {npcList} {quote} />
 
-{#if won}
-	<WinningComponent npc={guesses[0]} userId={data.userId} />
+	{#if finished}
+		<WinningComponent npc={guesses[0]} />
+	{/if}
+
+	<GuessList {guesses} {finished} />
+
+	<Confetti {finished} />
+{:else}
+	<p>Loading...</p>
 {/if}
-
-<GuessList {guesses} {won} />
-
-<Confetti {won} />
 
 <style>
 </style>

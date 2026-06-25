@@ -1,4 +1,4 @@
-export interface GuessTheNpcGuessData {
+export interface NpcGuess {
   name: string;
   path: string;
 }
@@ -6,12 +6,13 @@ export interface GuessTheNpcGuessData {
 export interface GuessTheNpcSession {
   quote: string;
   finished: boolean;
-  guesses: GuessTheNpcGuessData[];
+  guesses: NpcGuess[];
+  guessed_ids: number[];
 }
 
 export interface GuessTheNpcCheckResult {
   finished: boolean;
-  guess: GuessTheNpcGuessData;
+  guess: NpcGuess;
 }
 
 export interface GuessTheNpcWinningData {
