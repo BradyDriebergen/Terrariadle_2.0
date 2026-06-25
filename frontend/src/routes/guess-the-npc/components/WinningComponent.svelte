@@ -1,42 +1,48 @@
 <script lang="ts">
+	import { subscribeToPlayerCount } from '$lib/api/common';
+	import { checkNpcName, getNpcWinningData } from '$lib/api/guess-the-npc';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
+	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
 
-	let { npc, userId } = $props();
+	let { npc }: { npc: NpcGuess } = $props();
 
-	let pos = $state(0);
-	let count = $state(0);
+	let position: number = $state(0);
+	let playerCount: number = $state(0);
+
 	let names: string[] = $state([]);
 	let guessedName = $state('');
 	let correctName = $state('');
 
 	onMount(async () => {
-		const winningData = await fetch(
-			`http://localhost:3000/api/guess-the-npc/winning-data/${userId}`
-		);
-		const winningDataJson = await winningData.json();
+		const winningData = await getNpcWinningData();
 
-		pos = winningDataJson.pos;
-		count = winningDataJson.count;
-		names = winningDataJson.names;
-		guessedName = winningDataJson.guessedName;
-		correctName = winningDataJson.correctName;
+		position = winningData.position;
+		names = winningData.names;
+		guessedName = winningData.guessed_name;
+		correctName = winningData.correct_name;
+	});
+
+	// Streams live player count to the user
+	onMount(() => {
+		return subscribeToPlayerCount('guess_the_npc', (count) => {
+			playerCount = count;
+		});
 	});
 
 	async function guessName(name: string) {
-		fetch('http://localhost:3000/api/guess-the-npc/check-name-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: userId, guess: name })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				guessedName = data.guessedName;
-				correctName = data.correctName;
-			});
+		try {
+			const res = await checkNpcName(name);
+
+			guessedName = res.guessed_name;
+			correctName = res.correct_name;
+		} catch (e) {
+			// handle error here
+			console.log(e);
+		}
 	}
 </script>
 
@@ -59,14 +65,14 @@
 		<img class="npc-image" src={'/npcs/' + npc.path} alt="" />
 	</div>
 
-	{#if pos !== 0}
+	{#if position !== 0}
 		<p transition:typewriter={{ speed: 1 }}>
-			You were the {ConvertPositionToString(pos)} person to guess today's NPC!
+			You were the {ConvertPositionToString(position)} person to guess today's NPC!
 		</p>
 	{:else}
 		<br />
 	{/if}
-	<p>{count} people guessed todays weapon</p>
+	<p>{playerCount} people guessed todays weapon</p>
 
 	<div class="bonus-container">
 		<h2 class="bonus-title">Bonus Round!</h2>

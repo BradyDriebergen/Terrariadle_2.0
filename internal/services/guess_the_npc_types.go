@@ -1,11 +1,10 @@
 package services
 
-import "terrariadle-backend/internal/domain"
-
 type GuessTheNpcInitData struct {
-	Quote    string           `json:"quote"`
-	Finished bool             `json:"finished"`
-	Guesses  []domain.NpcInfo `json:"guesses"`
+	Quote      string                 `json:"quote"`
+	Finished   bool                   `json:"finished"`
+	Guesses    []GuessTheNpcGuessData `json:"guesses"`
+	GuessedIDs []int                  `json:"guessed_ids"`
 }
 
 type SearchNpcData struct {
@@ -15,8 +14,8 @@ type SearchNpcData struct {
 }
 
 type GuessTheNpcCheckData struct {
-	Finished bool           `json:"finished"`
-	Guess    domain.NpcInfo `json:"guess"`
+	Finished bool                 `json:"finished"`
+	Guess    GuessTheNpcGuessData `json:"guess"`
 }
 
 type GuessTheNpcWinningData struct {
@@ -29,4 +28,9 @@ type GuessTheNpcWinningData struct {
 type GuessTheNpcMiniGameData struct {
 	GuessedName string `json:"guessed_name"`
 	CorrectName string `json:"correct_name"`
+}
+
+type GuessTheNpcGuessData struct {
+	Name string `json:"name"`
+	Path string `json:"path"`
 }
