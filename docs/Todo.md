@@ -17,7 +17,7 @@
     - [x] Daily Slash
     - [x] Connections
     - [x] Guess the NPC
-    - [ ] Hangman
+    - [x] Hangman
     - [ ] About
 - [ ] Create tabs at the top to navigate through games
 - [ ] Change About section link to sign at the bottom

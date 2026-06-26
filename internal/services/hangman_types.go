@@ -3,17 +3,22 @@ package services
 var specialChars = []string{"'", ".", "-", "1", " "}
 
 type HangmanInitData struct {
-	Attempts int      `json:"attempts"`
-	Finished bool     `json:"finished"`
-	Phrase   []string `json:"phrase"`
-	Guesses  []string `json:"guesses"`
+	Attempts int            `json:"attempts"`
+	Finished bool           `json:"finished"`
+	Phrase   []string       `json:"phrase"`
+	Guesses  []HangmanGuess `json:"guesses"`
 }
 
 type HangmanCheckData struct {
-	Phrase    []string `json:"phrase"`
-	Finished  bool     `json:"finished"`
-	IsCorrect bool     `json:"is_correct"`
-	Attempts  int      `json:"attempts"`
+	Phrase   []string     `json:"phrase"`
+	Guess    HangmanGuess `json:"guess"`
+	Finished bool         `json:"finished"`
+	Attempts int          `json:"attempts"`
+}
+
+type HangmanGuess struct {
+	Letter  string `json:"letter"`
+	Correct bool   `json:"correct"`
 }
 
 type HangmanWinningData struct {

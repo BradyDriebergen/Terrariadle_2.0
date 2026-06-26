@@ -4,7 +4,6 @@ import type {
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
 import { ApiError } from '$lib/types/error';
-import { error } from '@sveltejs/kit';
 import { parseJsonSafe } from './shared';
 import type { DropdownListItem } from '$lib/types/shared';
 
@@ -42,34 +41,23 @@ export async function getWeaponHint(num: number): Promise<string> {
 	return (await res.json()) as string;
 }
 
-export async function checkWeaponGuess(weaponId: number): Promise<DailySlashCheckResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkWeaponGuess(userId: string, weaponId: number): Promise<DailySlashCheckResult> {
 	const res = await fetch('/api/daily-slash/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ user_id: userId, guess: weaponId })
 	});
 
-	const body = await res.json();
+	const body = await parseJsonSafe(res);
+
 	if (!res.ok) {
-		error(res.status, body.error ?? 'An error occurred when checking guess');
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
 	}
 
 	return body as DailySlashCheckResult;
 }
 
-export async function getDailySlashWinningData(): Promise<DailySlashWinningData> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function getDailySlashWinningData(userId: string): Promise<DailySlashWinningData> {
 	const res = await fetch(`/api/daily-slash/winning-data?user_id=${userId}`);
 	return (await res.json()) as DailySlashWinningData;
 }
