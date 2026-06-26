@@ -7,14 +7,14 @@
 	import type { PageData } from './$types';
 	import { get } from 'svelte/store';
 	import { userIdStore } from '$lib/store/session';
-	import { checkNpcGuess } from '$lib/api/guess-the-npc';
 	import { checkEnemyGuess } from '$lib/api/hangman';
+	import type { HangmanGuess } from '$lib/types/hangman';
 
 	let { data }: { data: PageData } = $props();
 
 	let attempts: number = $state(0);
 	let finished: boolean = $state(false);
-	let guesses: string[] = $state([]);
+	let guesses: HangmanGuess[] = $state([]);
 	let phrase: string[] = $state([]);
 
 	$effect(() => {
@@ -37,36 +37,23 @@
 	});
 
 	async function onKeyPressed(letter: string) {
-		// fetch('http://localhost:3000/api/hangman/check-guess', {
-		// 	method: 'POST',
-		// 	headers: { 'Content-Type': 'application/json' },
-		// 	body: JSON.stringify({ userId: data.userId, guess: letter })
-		// })
-		// 	.then((r) => r.json())
-		// 	.then((data) => {
-		// 		enemy = data.newPhrase;
-		// 		if (!guessedLetters.includes(letter)) {
-		// 			guessedLetters.push(letter);
-		// 		}
-
-		// 		finished = data.finished;
-
-		// 		if (!data.correct) {
-		// 			attempts--;
-		// 			if (attempts <= 0) {
-		// 				audio?.play();
-		// 			}
-		// 		}
-		// 	});
-
-
-		let guessResponse;
+		let res;
 		try {
 			const userId = get(userIdStore);
-			guessResponse = await checkEnemyGuess(userId, letter);
+			res = await checkEnemyGuess(userId, letter);
 		} catch (e) {
 			// handle error here
 			console.error(e);
+			return
+		}
+
+		phrase = res.phrase;
+		guesses = [res.guess, ...guesses];
+		attempts = res.attempts;
+		finished = res.finished;
+
+		if (attempts <= 0) {
+			audio?.play();
 		}
 	}
 
@@ -74,7 +61,7 @@
 	let failed: boolean = $derived(attempts <= 0);
 	$effect(() => {
 		if (failed) {
-			document.body.style.setProperty('--bg-image', "url('/backgrounds/Underworld.png')");
+			document.body.style.setProperty('--bg-image', "url('/page-backgrounds/Underworld.png')");
 			document.body.style.setProperty('--bg-opacity', '1');
 		}
 
@@ -84,35 +71,38 @@
 	});
 </script>
 
-{#if !finished}
-	<!-- out:slide={{ duration: 700, easing: cubicInOut }} -->
-	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-		<h2>Hangman</h2>
-		<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
-	</div>
-{:else}
-	<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
-		<span class="color-cycle">Hangman Results</span>
-	</div>
-{/if}
-
-<Guide {attempts} />
-
-{#if finished}
-	<WinningComponent {attempts} userId={data.userId} />
-{/if}
-
-<div class="phrase-container">
-	{#each enemyWords as word}
-		<div class="word">
-			{#each word as letter}
-				<span>{letter}</span>
-			{/each}
+{#if data.gameContext}
+	{#if !finished}
+		<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
+			<h2>Hangman</h2>
+			<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 		</div>
-	{/each}
-</div>
-{#if !finished}
-	<Keyboard {onKeyPressed} enemyLetters={enemy} {guessedLetters} />
+	{:else}
+		<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
+			<span class="color-cycle">Hangman Results</span>
+		</div>
+	{/if}
+
+	<Guide {attempts} />
+
+	{#if finished}
+		<WinningComponent {attempts} />
+	{/if}
+
+	<div class="phrase-container">
+		{#each phraseWords as word}
+			<div class="word">
+				{#each word as letter}
+					<span>{letter}</span>
+				{/each}
+			</div>
+		{/each}
+	</div>
+	{#if !finished}
+		<Keyboard {onKeyPressed} {guesses} />
+	{/if}
+{:else}
+	<p>Loading...</p>
 {/if}
 
 <!-- Audio that only plays after final guess is made -->

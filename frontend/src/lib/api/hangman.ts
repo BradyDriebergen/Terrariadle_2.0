@@ -31,7 +31,7 @@ export async function checkEnemyGuess(userId: string, letter: string): Promise<H
     return body as HangmanCheckResult;
 }
 
-export async function getConnectionsWinningData(userId: string): Promise<HangmanWinningData> {
+export async function getHangmanWinningData(userId: string): Promise<HangmanWinningData> {
     const res = await fetch(`/api/hangman/winning-data?user_id=${userId}`);
     const body = await parseJsonSafe(res);
 

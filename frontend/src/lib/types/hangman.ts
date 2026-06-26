@@ -2,13 +2,18 @@ export interface HangmanSession {
   attempts: number;
   finished: boolean;
   phrase: string[];
-  guesses: string[];
+  guesses: HangmanGuess[];
+}
+
+export interface HangmanGuess {
+    letter: string;
+    correct: boolean;
 }
 
 export interface HangmanCheckResult {
   phrase: string[];
   finished: boolean;
-  is_correct: boolean;
+  guess: HangmanGuess;
   attempts: number;
 }
 

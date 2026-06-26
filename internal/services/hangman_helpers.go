@@ -7,18 +7,25 @@ import (
 	"unicode"
 )
 
-func buildHangmanPhrase(name string, guesses []int) (phrase []string, guessedLetters []string) {
-	guessedLetters = []string{}
+func buildHangmanPhrase(name string, guesses []int) (phrase []string, guessedLetters []HangmanGuess) {
+	guessedLetters = []HangmanGuess{}
+	rawLetters := []string{}
 	phrase = strings.Split(name, "")
 
 	// Hydrate int guesses into characters
 	for _, c := range guesses {
-		guessedLetters = append(guessedLetters, string(rune(c)))
+		letter := string(rune(c))
+
+		rawLetters = append(rawLetters, letter)
+		guessedLetters = append(guessedLetters, HangmanGuess{
+			Letter:  letter,
+			Correct: slices.Contains(phrase, letter),
+		})
 	}
 
 	for i, c := range phrase {
 		// Removes any unguessed letters
-		if !slices.Contains(guessedLetters, c) && !slices.Contains(specialChars, c) {
+		if !slices.Contains(rawLetters, c) && !slices.Contains(specialChars, c) {
 			phrase[i] = "_"
 		}
 	}

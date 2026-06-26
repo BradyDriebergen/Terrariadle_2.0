@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { checkNpcGuess } from '$lib/api/guess-the-npc';
 	import Dropdown from '$lib/components/Dropdown.svelte';
+	import { userIdStore } from '$lib/store/session';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import { cubicInOut } from 'svelte/easing';
+	import { get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 
 	let {
@@ -23,7 +25,8 @@
 
 	async function submitGuess(npcId: number) {
 		try {
-			const res = await checkNpcGuess(npcId);
+			const userId = get(userIdStore);
+			const res = await checkNpcGuess(userId, npcId);
 			guesses = [res.guess, ...guesses];
 			finished = res.finished;
 			npcs = npcs.filter((w) => w.id !== npcId);
