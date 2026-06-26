@@ -41,13 +41,7 @@ export async function getWeaponHint(num: number): Promise<string> {
 	return (await res.json()) as string;
 }
 
-export async function checkWeaponGuess(weaponId: number): Promise<DailySlashCheckResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkWeaponGuess(userId: string, weaponId: number): Promise<DailySlashCheckResult> {
 	const res = await fetch('/api/daily-slash/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
@@ -63,13 +57,7 @@ export async function checkWeaponGuess(weaponId: number): Promise<DailySlashChec
 	return body as DailySlashCheckResult;
 }
 
-export async function getDailySlashWinningData(): Promise<DailySlashWinningData> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function getDailySlashWinningData(userId: string): Promise<DailySlashWinningData> {
 	const res = await fetch(`/api/daily-slash/winning-data?user_id=${userId}`);
 	return (await res.json()) as DailySlashWinningData;
 }

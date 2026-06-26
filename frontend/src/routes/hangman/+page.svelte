@@ -4,45 +4,70 @@
 	import Keyboard from './components/Keyboard.svelte';
 	import WinningComponent from './components/WinningComponent.svelte';
 	import { cubicInOut } from 'svelte/easing';
+	import type { PageData } from './$types';
+	import { get } from 'svelte/store';
+	import { userIdStore } from '$lib/store/session';
+	import { checkNpcGuess } from '$lib/api/guess-the-npc';
+	import { checkEnemyGuess } from '$lib/api/hangman';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
-	let attempts: number = $state(data.attempts);
-	let finished: boolean = $state(data.finished);
-	let guessedLetters: string[] = $state(data.guessedLetters);
-	let enemy: string[] = $state(data.phrase);
+	let attempts: number = $state(0);
+	let finished: boolean = $state(false);
+	let guesses: string[] = $state([]);
+	let phrase: string[] = $state([]);
+
+	$effect(() => {
+		// Initialize data once pre-fetch is finished
+		if (data.gameContext) {
+			attempts = data.gameContext.attempts;
+			finished = data.gameContext.finished;
+			guesses = data.gameContext.guesses;
+			phrase = data.gameContext.phrase
+		}
+	});
 
 	// Audio to play after guess
 	let audio = $state<HTMLAudioElement>();
 
 	// Split into words for better wrapping
-	let enemyWords = $derived.by(() => {
-		const enemyString = enemy.join('');
+	let phraseWords = $derived.by(() => {
+		const enemyString = phrase.join('');
 		return enemyString.split(' ').map((word) => word.split(''));
 	});
 
 	async function onKeyPressed(letter: string) {
-		fetch('http://localhost:3000/api/hangman/check-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: letter })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				enemy = data.newPhrase;
-				if (!guessedLetters.includes(letter)) {
-					guessedLetters.push(letter);
-				}
+		// fetch('http://localhost:3000/api/hangman/check-guess', {
+		// 	method: 'POST',
+		// 	headers: { 'Content-Type': 'application/json' },
+		// 	body: JSON.stringify({ userId: data.userId, guess: letter })
+		// })
+		// 	.then((r) => r.json())
+		// 	.then((data) => {
+		// 		enemy = data.newPhrase;
+		// 		if (!guessedLetters.includes(letter)) {
+		// 			guessedLetters.push(letter);
+		// 		}
 
-				finished = data.finished;
+		// 		finished = data.finished;
 
-				if (!data.correct) {
-					attempts--;
-					if (attempts <= 0) {
-						audio?.play();
-					}
-				}
-			});
+		// 		if (!data.correct) {
+		// 			attempts--;
+		// 			if (attempts <= 0) {
+		// 				audio?.play();
+		// 			}
+		// 		}
+		// 	});
+
+
+		let guessResponse;
+		try {
+			const userId = get(userIdStore);
+			guessResponse = await checkEnemyGuess(userId, letter);
+		} catch (e) {
+			// handle error here
+			console.error(e);
+		}
 	}
 
 	// Effect for updating the background with fade

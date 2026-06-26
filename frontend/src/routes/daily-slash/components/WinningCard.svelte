@@ -2,10 +2,12 @@
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { getDailySlashWinningData } from '$lib/api/daily-slash';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
+	import { userIdStore } from '$lib/store/session';
 	import { backgrounds, borders, colors, type Rarity, type Weapon } from '$lib/types/daily-slash';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
 
 	let {
@@ -18,7 +20,8 @@
 	let playerCount: number = $state(0);
 
 	onMount(async () => {
-		const winningData = await getDailySlashWinningData();
+		const userId = get(userIdStore);
+		const winningData = await getDailySlashWinningData(userId);
 
 		position = winningData.position;
 	});

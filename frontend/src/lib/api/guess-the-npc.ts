@@ -33,13 +33,7 @@ export async function getSearchableNpcs(fetchFn: typeof fetch) {
 	return body as DropdownListItem[];
 }
 
-export async function checkNpcGuess(npcId: number): Promise<GuessTheNpcCheckResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkNpcGuess(userId: string, npcId: number): Promise<GuessTheNpcCheckResult> {
 	const res = await fetch('/api/guess-the-npc/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
@@ -55,24 +49,12 @@ export async function checkNpcGuess(npcId: number): Promise<GuessTheNpcCheckResu
 	return body as GuessTheNpcCheckResult;
 }
 
-export async function getNpcWinningData(): Promise<GuessTheNpcWinningData> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function getNpcWinningData(userId: string): Promise<GuessTheNpcWinningData> {
 	const res = await fetch(`/api/guess-the-npc/winning-data?user_id=${userId}`);
 	return (await res.json()) as GuessTheNpcWinningData;
 }
 
-export async function checkNpcName(name: string): Promise<GuessTheNpcMiniGameResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkNpcName(userId: string, name: string): Promise<GuessTheNpcMiniGameResult> {
 	const res = await fetch('/api/guess-the-npc/check-name-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },

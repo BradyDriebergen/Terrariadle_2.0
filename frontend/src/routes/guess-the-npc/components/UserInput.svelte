@@ -29,7 +29,7 @@
 			npcs = npcs.filter((w) => w.id !== npcId);
 		} catch (e) {
 			// handle error here
-			console.log(e);
+			console.error(e);
 		}
 	}
 </script>

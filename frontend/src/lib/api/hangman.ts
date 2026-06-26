@@ -16,17 +16,11 @@ export async function initializeHangmanGame(
     return body as HangmanSession;
 }
 
-export async function checkEnemyGuess(enemyId: number): Promise<HangmanCheckResult> {
-    const userId = localStorage.getItem('user_id');
-
-    if (!userId) {
-        throw new Error('Session not found. Try refreshing the page.');
-    }
-
+export async function checkEnemyGuess(userId: string, letter: string): Promise<HangmanCheckResult> {
     const res = await fetch('/api/hangman/check-guess', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_id: userId, guess: enemyId })
+        body: JSON.stringify({ user_id: userId, guess: letter })
     });
 
     const body = await parseJsonSafe(res);
