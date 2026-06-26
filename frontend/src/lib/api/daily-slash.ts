@@ -4,7 +4,6 @@ import type {
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
 import { ApiError } from '$lib/types/error';
-import { error } from '@sveltejs/kit';
 import { parseJsonSafe } from './shared';
 import type { DropdownListItem } from '$lib/types/shared';
 
@@ -55,9 +54,10 @@ export async function checkWeaponGuess(weaponId: number): Promise<DailySlashChec
 		body: JSON.stringify({ user_id: userId, guess: weaponId })
 	});
 
-	const body = await res.json();
+	const body = await parseJsonSafe(res);
+
 	if (!res.ok) {
-		error(res.status, body.error ?? 'An error occurred when checking guess');
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
 	}
 
 	return body as DailySlashCheckResult;
