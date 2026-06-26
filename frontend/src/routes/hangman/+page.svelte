@@ -2,7 +2,7 @@
 	import { slide } from 'svelte/transition';
 	import Guide from './components/Guide.svelte';
 	import Keyboard from './components/Keyboard.svelte';
-	import WinningComponent from './components/WinningComponent.svelte';
+	import WinningCard from './components/WinningCard.svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import type { PageData } from './$types';
 	import { get } from 'svelte/store';
@@ -86,7 +86,7 @@
 	<Guide {attempts} />
 
 	{#if finished}
-		<WinningComponent {attempts} />
+		<WinningCard {attempts} />
 	{/if}
 
 	<div class="phrase-container">

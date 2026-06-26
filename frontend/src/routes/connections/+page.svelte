@@ -2,7 +2,7 @@
 	import { send, receive } from '$lib/utils/transitions';
 	import { flip } from 'svelte/animate';
 	import { scale, slide } from 'svelte/transition';
-	import WinningPanel from './components/WinningPanel.svelte';
+	import WinningCard from './components/WinningCard.svelte';
 	import Confetti from '$lib/components/Confetti.svelte';
 	import { Tween } from 'svelte/motion';
 	import { cubicInOut, cubicOut } from 'svelte/easing';
@@ -166,7 +166,7 @@
 {/if}
 
 {#if finished && !transitioning}
-	<WinningPanel {attempts} />
+	<WinningCard {attempts} />
 	<Confetti finished={attempts > 0} />
 {/if}
 

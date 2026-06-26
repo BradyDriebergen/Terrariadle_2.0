@@ -1,7 +1,7 @@
 <script lang="ts">
 	import GuessList from './components/GuessList.svelte';
 	import UserInput from './components/UserInput.svelte';
-	import WinningComponent from './components/WinningComponent.svelte';
+	import WinningCard from './components/WinningCard.svelte';
 	import Confetti from '$lib/components/Confetti.svelte';
 	import type { PageData } from './$types';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
@@ -30,7 +30,7 @@
 	<UserInput bind:guesses bind:finished {npcList} {quote} />
 
 	{#if finished}
-		<WinningComponent npc={guesses[0]} />
+		<WinningCard npc={guesses[0]} />
 	{/if}
 
 	<GuessList {guesses} {finished} />
