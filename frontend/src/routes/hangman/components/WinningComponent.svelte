@@ -1,31 +1,41 @@
 <script lang="ts">
 	import Confetti from '$lib/components/Confetti.svelte';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
+	import { userIdStore } from '$lib/store/session';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
+	import { getHangmanWinningData } from '$lib/api/hangman'
+	import { subscribeToPlayerCount } from '$lib/api/common';
 
-	let { attempts, userId } = $props();
+	let { attempts } = $props();
 
-	let name = $state('');
-	let path = $state('');
-	let count = $state(0);
-	let pos = $state(0);
+	let name: string = $state('');
+	let path: string = $state('');
+	let playerCount: number = $state(0);
+	let position: number = $state(0);
 
 	onMount(async () => {
-		const winningData = await fetch(`http://localhost:3000/api/hangman/winning-data/${userId}`);
-		const winningDataJson = await winningData.json();
+		const userId = get(userIdStore);
+		const winningData = await getHangmanWinningData(userId);
 
-		pos = winningDataJson.pos;
-		count = winningDataJson.count;
-		name = winningDataJson.name;
-		path = winningDataJson.path;
+		position = winningData.position;
+		name = winningData.enemy_name;
+		path = winningData.enemy_path;
+	});
+
+	// Streams live player count to the user
+	onMount(() => {
+		return subscribeToPlayerCount('hangman', (count) => {
+			playerCount = count;
+		});
 	});
 </script>
 
 <div class="container" class:fail={attempts == 0} class:success={attempts > 0} in:scale>
-	<Confetti won={attempts > 0} />
+	<Confetti finished={attempts > 0} />
 
 	{#if attempts == 6}
 		<h2 class="title">Outstanding!</h2>
@@ -46,14 +56,14 @@
 		<img src={'/enemies' + path} alt="" />
 	</div>
 
-	{#if pos !== 0}
+	{#if position !== 0}
 		<p transition:typewriter={{ speed: 1 }}>
-			You were the {ConvertPositionToString(pos)} person to guess today's enemy!
+			You were the {ConvertPositionToString(position)} person to guess today's enemy!
 		</p>
 	{:else}
 		<br />
 	{/if}
-	<p>{count} people guessed todays enemy</p>
+	<p>{playerCount} people guessed todays enemy</p>
 	<RemainingTime />
 </div>
 

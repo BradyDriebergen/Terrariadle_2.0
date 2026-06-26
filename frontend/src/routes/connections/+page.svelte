@@ -8,8 +8,9 @@
 	import { cubicInOut, cubicOut } from 'svelte/easing';
 	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
 	import { checkCategoryGuess, revealConnectionsAnswers } from '$lib/api/connections';
-	import { getUserId } from '$lib/api/shared';
 	import type { PageData } from './$types';
+	import { get } from 'svelte/store';
+	import { userIdStore } from '$lib/store/session';
 
 	let { data }: { data: PageData } = $props();
 
@@ -72,9 +73,17 @@
 		loadingGuess = true;
 
 		const guess = options.filter((option) => option.selected).map((option) => option.value);
-
-		const userId = getUserId();
-		const guessResult = await checkCategoryGuess(guess, userId);
+		const userId = get(userIdStore);
+		
+		let guessResult;
+		try {
+			guessResult = await checkCategoryGuess(guess, userId);
+		} catch (e) {
+			loadingGuess = false;
+			// handle error here
+			console.error(e);
+			return;
+		}
 
 		attempts = guessResult.attempts;
 
@@ -97,9 +106,17 @@
 
 		await triggerShake();
 		deselectOptions();
+		loadingGuess = false;
 
 		if (attempts === 0) {
-			const answers = await revealConnectionsAnswers(userId);
+			let answers;
+			try {
+				answers = await revealConnectionsAnswers(userId);
+			} catch (e) {
+				// handle error here
+				console.error(e);
+				return;
+			}
 
 			options = [];
 			solvedCategories = [];
@@ -125,7 +142,6 @@
 
 	function deselectOptions() {
 		options.forEach((o) => (o.selected = false));
-		loadingGuess = false;
 	}
 
 	function shuffle() {

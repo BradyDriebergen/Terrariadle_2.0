@@ -113,10 +113,13 @@ func (g *Hangman) CheckGuess(ctx context.Context, userId string, guess string) (
 	}
 
 	return HangmanCheckData{
-		Phrase:    phrase,
-		Finished:  user.Hangman.Game.Finished,
-		IsCorrect: isCorrect,
-		Attempts:  user.Hangman.Attempts,
+		Phrase:   phrase,
+		Finished: user.Hangman.Game.Finished,
+		Attempts: user.Hangman.Attempts,
+		Guess: HangmanGuess{
+			Letter:  guess,
+			Correct: isCorrect,
+		},
 	}, nil
 }
 

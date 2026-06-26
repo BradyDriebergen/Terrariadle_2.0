@@ -1,18 +1,23 @@
 import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
+import { ApiError } from '$lib/types/error';
+import { initializeHangmanGame } from '$lib/api/hangman'
 
-export async function load({ fetch, parent }) {
+export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
+	if (!userId) return { gameContext: null };
 
-	const initData = await fetch(`http://localhost:3000/api/hangman/initialize-game/${userId}`);
-	if (!initData) {
-		error(404, 'Unable to fetch initializing data');
+	if (!userId) {
+		error(401, 'No session found. Try refreshing the page.');
 	}
-	const initDataJson = await initData.json();
 
-	const phrase = initDataJson.phrase;
-	const guessedLetters = initDataJson.guessedLetters;
-	const attempts = initDataJson.attempts;
-	const finished = initDataJson.finished;
-
-	return { phrase, guessedLetters, attempts, finished };
-}
+	try {
+		const gameContext = await initializeHangmanGame(fetch, userId);
+		return { gameContext };
+	} catch (e) {
+		if (e instanceof ApiError) {
+			error(e.status, e.message);
+		}
+		error(500, 'Unexpected error initializing game');
+	}
+};

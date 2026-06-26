@@ -1,14 +1,26 @@
 <script lang="ts">
+	import type { HangmanGuess } from '$lib/types/hangman';
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
-	let { onKeyPressed, enemyLetters, guessedLetters } = $props();
+	let { 
+		onKeyPressed = () => {}, 
+		guesses = []
+	} : {
+		onKeyPressed: (letter: string) => void;
+		guesses: HangmanGuess[]
+	} = $props();
 
 	const rows: string[][] = [
 		['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
 		['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
 		['Z', 'X', 'C', 'V', 'B', 'N', 'M']
 	];
+
+	const guessMap = $derived(new Map<string, boolean>(
+		guesses.map(g => [g.letter, g.correct])
+	));
+	const guessedLetters = $derived([...guessMap.keys()]);
 </script>
 
 <div class="keyboard" out:slide={{ duration: 700, easing: cubicInOut }}>
@@ -17,8 +29,8 @@
 			{#each row as letter (letter)}
 				<button
 					class="keyboard-key"
-					class:correct={enemyLetters.includes(letter)}
-					class:incorrect={!enemyLetters.includes(letter)}
+					class:correct={guessMap.get(letter) ?? false}
+					class:incorrect={!(guessMap.get(letter) ?? true)} // double negative conditional
 					disabled={guessedLetters.includes(letter)}
 					onclick={() => onKeyPressed(letter)}
 				>

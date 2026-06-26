@@ -4,52 +4,64 @@
 	import Keyboard from './components/Keyboard.svelte';
 	import WinningComponent from './components/WinningComponent.svelte';
 	import { cubicInOut } from 'svelte/easing';
+	import type { PageData } from './$types';
+	import { get } from 'svelte/store';
+	import { userIdStore } from '$lib/store/session';
+	import { checkEnemyGuess } from '$lib/api/hangman';
+	import type { HangmanGuess } from '$lib/types/hangman';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
-	let attempts: number = $state(data.attempts);
-	let finished: boolean = $state(data.finished);
-	let guessedLetters: string[] = $state(data.guessedLetters);
-	let enemy: string[] = $state(data.phrase);
+	let attempts: number = $state(0);
+	let finished: boolean = $state(false);
+	let guesses: HangmanGuess[] = $state([]);
+	let phrase: string[] = $state([]);
+
+	$effect(() => {
+		// Initialize data once pre-fetch is finished
+		if (data.gameContext) {
+			attempts = data.gameContext.attempts;
+			finished = data.gameContext.finished;
+			guesses = data.gameContext.guesses;
+			phrase = data.gameContext.phrase
+		}
+	});
 
 	// Audio to play after guess
 	let audio = $state<HTMLAudioElement>();
 
 	// Split into words for better wrapping
-	let enemyWords = $derived.by(() => {
-		const enemyString = enemy.join('');
+	let phraseWords = $derived.by(() => {
+		const enemyString = phrase.join('');
 		return enemyString.split(' ').map((word) => word.split(''));
 	});
 
 	async function onKeyPressed(letter: string) {
-		fetch('http://localhost:3000/api/hangman/check-guess', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: data.userId, guess: letter })
-		})
-			.then((r) => r.json())
-			.then((data) => {
-				enemy = data.newPhrase;
-				if (!guessedLetters.includes(letter)) {
-					guessedLetters.push(letter);
-				}
+		let res;
+		try {
+			const userId = get(userIdStore);
+			res = await checkEnemyGuess(userId, letter);
+		} catch (e) {
+			// handle error here
+			console.error(e);
+			return
+		}
 
-				finished = data.finished;
+		phrase = res.phrase;
+		guesses = [res.guess, ...guesses];
+		attempts = res.attempts;
+		finished = res.finished;
 
-				if (!data.correct) {
-					attempts--;
-					if (attempts <= 0) {
-						audio?.play();
-					}
-				}
-			});
+		if (attempts <= 0) {
+			audio?.play();
+		}
 	}
 
 	// Effect for updating the background with fade
 	let failed: boolean = $derived(attempts <= 0);
 	$effect(() => {
 		if (failed) {
-			document.body.style.setProperty('--bg-image', "url('/backgrounds/Underworld.png')");
+			document.body.style.setProperty('--bg-image', "url('/page-backgrounds/Underworld.png')");
 			document.body.style.setProperty('--bg-opacity', '1');
 		}
 
@@ -59,35 +71,38 @@
 	});
 </script>
 
-{#if !finished}
-	<!-- out:slide={{ duration: 700, easing: cubicInOut }} -->
-	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-		<h2>Hangman</h2>
-		<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
-	</div>
-{:else}
-	<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
-		<span class="color-cycle">Hangman Results</span>
-	</div>
-{/if}
-
-<Guide {attempts} />
-
-{#if finished}
-	<WinningComponent {attempts} userId={data.userId} />
-{/if}
-
-<div class="phrase-container">
-	{#each enemyWords as word}
-		<div class="word">
-			{#each word as letter}
-				<span>{letter}</span>
-			{/each}
+{#if data.gameContext}
+	{#if !finished}
+		<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
+			<h2>Hangman</h2>
+			<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 		</div>
-	{/each}
-</div>
-{#if !finished}
-	<Keyboard {onKeyPressed} enemyLetters={enemy} {guessedLetters} />
+	{:else}
+		<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
+			<span class="color-cycle">Hangman Results</span>
+		</div>
+	{/if}
+
+	<Guide {attempts} />
+
+	{#if finished}
+		<WinningComponent {attempts} />
+	{/if}
+
+	<div class="phrase-container">
+		{#each phraseWords as word}
+			<div class="word">
+				{#each word as letter}
+					<span>{letter}</span>
+				{/each}
+			</div>
+		{/each}
+	</div>
+	{#if !finished}
+		<Keyboard {onKeyPressed} {guesses} />
+	{/if}
+{:else}
+	<p>Loading...</p>
 {/if}
 
 <!-- Audio that only plays after final guess is made -->

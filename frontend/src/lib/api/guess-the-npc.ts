@@ -1,5 +1,4 @@
 import { ApiError } from '$lib/types/error';
-import { error } from '@sveltejs/kit';
 import { parseJsonSafe } from './shared';
 import type {
 	GuessTheNpcCheckResult,
@@ -34,54 +33,38 @@ export async function getSearchableNpcs(fetchFn: typeof fetch) {
 	return body as DropdownListItem[];
 }
 
-export async function checkNpcGuess(npcId: number): Promise<GuessTheNpcCheckResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkNpcGuess(userId: string, npcId: number): Promise<GuessTheNpcCheckResult> {
 	const res = await fetch('/api/guess-the-npc/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ user_id: userId, guess: npcId })
 	});
 
-	const body = await res.json();
+	const body = await parseJsonSafe(res);
+
 	if (!res.ok) {
-		error(res.status, body.error ?? 'An error occurred when checking guess');
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
 	}
 
 	return body as GuessTheNpcCheckResult;
 }
 
-export async function getNpcWinningData(): Promise<GuessTheNpcWinningData> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function getNpcWinningData(userId: string): Promise<GuessTheNpcWinningData> {
 	const res = await fetch(`/api/guess-the-npc/winning-data?user_id=${userId}`);
 	return (await res.json()) as GuessTheNpcWinningData;
 }
 
-export async function checkNpcName(name: string): Promise<GuessTheNpcMiniGameResult> {
-	const userId = localStorage.getItem('user_id');
-
-	if (!userId) {
-		throw new Error('Session not found. Try refreshing the page.');
-	}
-
+export async function checkNpcName(userId: string, name: string): Promise<GuessTheNpcMiniGameResult> {
 	const res = await fetch('/api/guess-the-npc/check-name-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ user_id: userId, guess: name })
 	});
 
-	const body = await res.json();
+	const body = await parseJsonSafe(res);
+
 	if (!res.ok) {
-		error(res.status, body.error ?? 'An error occurred when checking guess');
+		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
 	}
 
 	return body as GuessTheNpcMiniGameResult;

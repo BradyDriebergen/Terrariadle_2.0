@@ -3,10 +3,16 @@
 	import Footer from './Footer.svelte';
 	import '../app.css';
 	import { navigating, page } from '$app/state';
+	import { onMount } from 'svelte';
+	import { initSession } from '$lib/store/session';
 
 	let { children } = $props();
 
-	let title = $state(getTitle(page.url.pathname));
+	onMount(() => {
+		initSession();
+	});
+
+	let title: string = $state(getTitle(page.url.pathname));
 	$effect(() => {
 		if (navigating.to) {
 			title = getTitle(navigating.to.url.pathname);

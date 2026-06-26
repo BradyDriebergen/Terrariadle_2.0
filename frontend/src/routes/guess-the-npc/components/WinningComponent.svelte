@@ -2,10 +2,12 @@
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { checkNpcName, getNpcWinningData } from '$lib/api/guess-the-npc';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
+	import { userIdStore } from '$lib/store/session';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
 
 	let { npc }: { npc: NpcGuess } = $props();
@@ -18,7 +20,8 @@
 	let correctName = $state('');
 
 	onMount(async () => {
-		const winningData = await getNpcWinningData();
+		const userId = get(userIdStore);
+		const winningData = await getNpcWinningData(userId);
 
 		position = winningData.position;
 		names = winningData.names;
@@ -35,13 +38,14 @@
 
 	async function guessName(name: string) {
 		try {
-			const res = await checkNpcName(name);
+			const userId = get(userIdStore);
+			const res = await checkNpcName(userId, name);
 
 			guessedName = res.guessed_name;
 			correctName = res.correct_name;
 		} catch (e) {
 			// handle error here
-			console.log(e);
+			console.error(e);
 		}
 	}
 </script>
