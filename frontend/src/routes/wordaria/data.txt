@@ -1,0 +1,82 @@
+{
+  "id": 501,
+  "answer": "DIGGINGCLAW",
+  "clue": "Shroomite pickaxe",
+  "chunks": [
+    "DIG",
+    "GIN",
+    "GC",
+    "LAW"
+  ],
+  "chunkCount": 4
+}
+
+{
+  "id": 288,
+  "answer": "ANGLERFISH",
+  "clue": "Hardmode swimming enemy",
+  "chunks": [
+    "ANGL",
+    "ERFI",
+    "SH"
+  ],
+  "chunkCount": 3
+}
+
+{
+  "id": 676,
+  "answer": "RAPIDHEALING",
+  "clue": "Buff gained from Palladium Armor",
+  "chunks": [
+    "RAPI",
+    "DHEA",
+    "LING"
+  ],
+  "chunkCount": 3
+}
+
+{
+  "id": 703,
+  "answer": "MOLTEN",
+  "clue": "Hellstone tools prefix",
+  "chunks": [
+    "MO",
+    "LT",
+    "EN"
+  ],
+  "chunkCount": 3
+}
+
+{
+  "id": 706,
+  "answer": "PICKAXE",
+  "clue": "Tool used to break blocks",
+  "chunks": [
+    "PIC",
+    "KA",
+    "XE"
+  ],
+  "chunkCount": 3
+}
+
+{
+  "id": 10,
+  "answer": "VORTEX",
+  "clue": "Galatic material for rangers",
+  "chunks": [
+    "VOR",
+    "TEX"
+  ],
+  "chunkCount": 2
+}
+
+{
+  "id": 1,
+  "answer": "RAIN",
+  "clue": "Wet weather event",
+  "chunks": [
+    "RA",
+    "IN"
+  ],
+  "chunkCount": 2
+}
