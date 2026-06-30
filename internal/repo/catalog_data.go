@@ -58,3 +58,12 @@ func (r *MongoCatalogRepo) GetEnemies(ctx context.Context) ([]domain.Enemy, erro
 
 	return toDomainEnemies(enemyCatalog), nil
 }
+
+func (r *MongoCatalogRepo) GetTriviaQuestions(ctx context.Context) ([]domain.TriviaQuestion, error) {
+	triviaCatalog, err := db.GetAll[triviaQuestion](ctx, r.database, "terratrivia_questions")
+	if err != nil {
+		return []domain.TriviaQuestion{}, err
+	}
+
+	return toDomainTriviaQuestions(triviaCatalog), nil
+}
