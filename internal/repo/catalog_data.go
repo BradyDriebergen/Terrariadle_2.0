@@ -11,6 +11,7 @@ type CatalogRepo interface {
 	GetCategories(ctx context.Context) ([]domain.Category, error)
 	GetNpcs(ctx context.Context) ([]domain.Npc, error)
 	GetEnemies(ctx context.Context) ([]domain.Enemy, error)
+	GetTriviaQuestions(ctx context.Context) ([]domain.TriviaQuestion, error)
 }
 
 type MongoCatalogRepo struct {
