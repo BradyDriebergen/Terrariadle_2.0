@@ -84,8 +84,11 @@
                     selectedChunks.includes(chunk.value) || 
                     chunk.value === ""
                 }
-				onclick={() => selectedChunks.push(chunk.value)} 
-				disabled={selectedChunks.length >= 4 || selectedChunks.includes(chunk.value)}
+				disabled={
+                    selectedChunks.includes(chunk.value) || 
+                    selectedChunks.length >= 4
+                }
+                onclick={() => selectedChunks.push(chunk.value)} 
                 animate:flip={{ duration: 220, easing: (t) => t }}
 			>
 				{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
