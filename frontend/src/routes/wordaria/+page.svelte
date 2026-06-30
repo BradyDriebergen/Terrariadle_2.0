@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { send } from "$lib/utils/transitions";
+	import { flip } from "svelte/animate";
 	import { cubicInOut } from "svelte/easing";
 	import { slide } from "svelte/transition";
 
@@ -12,7 +14,7 @@
 		"Wet weather event"
 	];
 
-	const chunks = [
+	const chunk = [
 		"DIG", "GIN", "GC", "LAW", "ANGL", 
 		"ERFI", "SH", "RAPI", "DHEA", "LING", 
 		"MO", "LT", "EN", "PIC", "KA", "XE", 
@@ -20,26 +22,32 @@
 	];
 
 	let finished: boolean = $state(false);
+    let chunks= $state(chunk.map((value, i) => ({id: i, value})));
 	let selectedChunks: string[] = $state([]);
 	let input: string | null = $derived(selectedChunks.length > 0 ? selectedChunks.join('') : null);
 
-	function selectChunk(chunk: string) {
-		if (selectedChunks.includes(chunk)) {
-			selectedChunks = selectedChunks.filter(c => c !== chunk);
-		} else {
-			selectedChunks.push(chunk);
+    function shuffle() {
+		const result = [...chunks];
+		for (let i = result.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[result[i], result[j]] = [result[j], result[i]];
 		}
+		chunks = result;
 	}
 </script>
 
-{#if !finished}
-	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-		<h2>Wordaria</h2>
-		<p>Use clues to decipher all 7 words!</p>
-	</div>
+{#if finished}
+    <span class="color-cycle">Wordaria Results</span>
 {/if}
 
 <div class="game-window">
+    {#if !finished}
+        <selection out:slide={{ duration: 700, easing: cubicInOut }}>
+            <h2>Wordaria</h2>
+            <p>Use clues to decipher all 7 words!</p>
+        </selection>
+    {/if}
+
 	<div class="clue-box">
 		{#each clues as clue}
 			<div class="clue-row">
@@ -50,62 +58,59 @@
 	</div>
 
 	<div class="selection-menu">
-		<button>Shuffle</button>
+		<button onclick={shuffle}>Shuffle</button>
 		<button>Hint</button>
 		<button onclick={() => selectedChunks = []}>Clear</button>
 	</div>
 
 	<div class="input-box">
-		<span style:color={selectedChunks.length > 0 ? "" : "Grey"}>{input ?? "Start by forming some words"}</span>
-		<button onclick={() => selectedChunks.pop()}>X</button>
+		<span class:empty={selectedChunks.length > 0}>
+            {input ?? "Start building words..."}
+        </span>
+		<button 
+            onclick={() => selectedChunks.pop()}
+            disabled={selectedChunks.length === 0}
+        >
+            ←
+        </button>
 	</div>
 </div>
 
 <div class="chunk-grid">
-	{#each chunks as chunk}
-		{#if selectedChunks.includes(chunk) || chunk === ""}
-			<div></div>
-		{:else}
+	{#each chunks as chunk (chunk.id)}
 			<button 
 				class="chunk" 
-				onclick={() => selectChunk(chunk)} 
-				disabled={selectedChunks.length >= 4}
+                class:chunk-placeholder={
+                    selectedChunks.includes(chunk.value) || 
+                    chunk.value === ""
+                }
+				onclick={() => selectedChunks.push(chunk.value)} 
+				disabled={selectedChunks.length >= 4 || selectedChunks.includes(chunk.value)}
+                animate:flip={{ duration: 220, easing: (t) => t }}
 			>
-				{chunk}
+				{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
 			</button>
-		{/if}
 	{/each}
 </div>
 
 <style>
-	.title-box {
-		background-color: var(--color-backgroundblue);
-		width: fit-content;
-		text-align: center;
-		margin: 30px auto 15px auto;
-		padding: 0 15px;
-
-		border-radius: 15px;
-		border: thin solid black;
-	}
-
-	.title-box h2 {
-		background-color: var(--color-lightblue);
-		width: fit-content;
-		margin: auto;
-		margin-top: -30px;
-		margin-bottom: 10px;
-		padding: 10px 20px;
-
-		border-radius: 15px;
-		border: 2px solid black;
-	}
-	
 	.game-window {
 		background-color: var(--color-backgroundblue);
 		width: fit-content;
-		margin: 0 auto 15px auto;
+		margin: 15px auto 15px auto;
 		padding: 10px;
+		border-radius: 15px;
+		border: 2px solid black;
+	}
+
+    .game-window h2 {
+		background-color: var(--color-lightblue);
+		width: fit-content;
+		margin: auto;
+		margin-top: -38px;
+		margin-bottom: 10px;
+		padding: 10px 20px;
+
 		border-radius: 15px;
 		border: 2px solid black;
 	}
@@ -113,7 +118,6 @@
 	.clue-box {
 		background-color: var(--color-button);
 		width: 350px;
-		margin: 0 auto 15px auto;
 		padding: 4px 0;
 
 		border-radius: 15px;
@@ -123,7 +127,8 @@
 	.clue-row {
 		display: flex; 
 		justify-content: space-between;
-		padding: 4px;
+        align-items: center;
+		padding: 4px 8px;
 	}
 
 	.selection-menu {
@@ -136,7 +141,13 @@
 		border: 2px solid black;
 		padding: 5px 10px;
 		font-size: 16px;
+        transition: background-color 0.1s ease;
 	}
+
+    .selection-menu button:hover {
+        background-color: var(--color-lightblue);
+        cursor: pointer;
+    }
 
 	.input-box {
 		background-color: var(--color-button);
@@ -145,19 +156,28 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 5px 10px;
-		font-size: 16px;
-		margin: 5px auto;
+		padding: 8px 12px;
+		font-size: 20px;
+		margin: 0px auto;
 		width: 250px;
 		min-height: 20px;
 		cursor: default;
 	}
 
+    .input-box span {
+        color: gray;
+    }
+
+    .input-box .empty {
+        color: white;
+        letter-spacing: 2px;
+    }
+
 	.input-box button {
 		background-color: var(--color-lightblue);
 		border-radius: 8px;
 		border: 2px solid black;
-		padding: 2px 6px;
+		padding: 4px 8px 2px;
 		transition: background-color 0.1s ease;
 	}
 
@@ -196,13 +216,30 @@
 		transition: background-color 0.1s ease;
 	}
 
+    .chunk-placeholder {
+        border: none;
+        background: none;
+    }
+
 	.chunk:hover {
 		background-color: var(--color-lightblue);
 		cursor: pointer;
 	}
 
+    .chunk-placeholder:hover {
+        border: none;
+        background: none;
+        cursor: default;
+    }
+
 	.chunk:disabled {
 		cursor: not-allowed;
 		background-color: var(--color-button);
 	}
+    
+    .chunk-placeholder:disabled {
+        border: none;
+        background: none;
+        cursor: default;
+    }
 </style>
