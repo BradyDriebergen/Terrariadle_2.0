@@ -8,6 +8,7 @@ type User struct {
 	Connections ConnectionGame
 	GuessTheNPC GuessTheNpcGame
 	Hangman     HangmanGame
+	TerraTrivia TerraTriviaGame
 	LastSeen    time.Time
 	Dirty       bool
 }
@@ -36,4 +37,8 @@ type GuessTheNpcGame struct {
 type HangmanGame struct {
 	Game     Game
 	Attempts int
+}
+
+type TerraTriviaGame struct {
+	Game Game
 }

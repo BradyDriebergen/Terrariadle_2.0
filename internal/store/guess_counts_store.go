@@ -15,6 +15,7 @@ type GuessCountsStore interface {
 	IncrementConnectionsCount(ctx context.Context) (int, error)
 	IncrementGuessTheNpcCount(ctx context.Context) (int, error)
 	IncrementHangmanCount(ctx context.Context) (int, error)
+	IncrementTerraTriviaCount(ctx context.Context) (int, error)
 }
 
 type CachedGuessCountsStore struct {
@@ -153,4 +154,27 @@ func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int
 	})
 
 	return s.guessCountsCache.HangmanCount, nil
+}
+
+func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) (int, error) {
+	s.mu.Lock()
+
+	s.guessCountsCache.TerraTriviaCount++
+
+	gc := fromGuessCountDomain(s.guessCountsCache)
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+		s.guessCountsCache.TerraTriviaCount-- // roll back on failure
+		return 0, fmt.Errorf("increment-terratrivia-count: %w", err)
+	}
+
+	count := s.guessCountsCache.TerraTriviaCount
+
+	s.mu.Unlock()
+
+	s.broker.Publish(domain.GuessCountEvent{
+		GameMode: domain.GameModeTerraTrivia,
+		Count:    count,
+	})
+
+	return s.guessCountsCache.TerraTriviaCount, nil
 }

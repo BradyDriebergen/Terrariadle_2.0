@@ -9,6 +9,7 @@ const (
 	GameModeConnections GameMode = "connections"
 	GameModeGuessTheNpc GameMode = "guess_the_npc"
 	GameModeHangman     GameMode = "hangman"
+	GameModeTerraTrivia GameMode = "terratrivia"
 )
 
 type GuessCountBroker interface {
