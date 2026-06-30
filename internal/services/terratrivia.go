@@ -2,6 +2,8 @@ package services
 
 import (
 	"context"
+	"slices"
+	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/store"
 )
 
@@ -31,4 +33,41 @@ func NewTerraTriviaGame(
 		catalogCache:    catalogCache,
 		userCache:       userCache,
 	}
+}
+
+func (g *TerraTrivia) InitializeGame(ctx context.Context, userId string) (TerraTriviaInitData, error) {
+	user, err := g.userCache.GetOrCreateUser(ctx, userId)
+	if err != nil {
+		return TerraTriviaInitData{}, domain.UserNotFound("Error creating user", err)
+	}
+
+	triviaAnswers := g.answerCache.GetAnswers().TerraTrivia.Questions
+	if len(triviaAnswers) != 7 {
+		return TerraTriviaInitData{}, domain.Internal("Internal error with trivia answers", nil)
+	}
+
+	triviaItems := make([]TriviaItem, 7)
+	chunks := []string{}
+
+	for i, t := range triviaAnswers {
+		answer := ""
+
+		if slices.Contains(user.TerraTrivia.Game.Guesses, t.ID) {
+			answer = t.Answer
+		} else {
+			chunks = append(chunks, t.Chunks...)
+		}
+
+		triviaItems[i] = TriviaItem{
+			Clue:        t.Clue,
+			LetterCount: len(t.Answer),
+			Answer:      answer,
+		}
+	}
+
+	return TerraTriviaInitData{
+		Finished:    user.TerraTrivia.Game.Finished,
+		TriviaItems: triviaItems,
+		Chunks:      chunks,
+	}, nil
 }
