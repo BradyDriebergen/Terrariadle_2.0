@@ -74,6 +74,10 @@ func (g *TerraTrivia) InitializeGame(ctx context.Context, userId string) (TerraT
 }
 
 func (g *TerraTrivia) CheckGuess(ctx context.Context, userId string, guess string) (TerraTriviaCheckData, error) {
+	if len(guess) == 0 {
+		return TerraTriviaCheckData{}, domain.InvalidInput("Guess cannot be empty", nil)
+	}
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return TerraTriviaCheckData{}, domain.UserNotFound("User not found", err)

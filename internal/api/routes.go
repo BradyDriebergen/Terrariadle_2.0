@@ -10,6 +10,7 @@ func (s *Server) newMux() http.Handler {
 	s.registerConnectionsRoutes(mux)
 	s.registerGuessTheNpcRoutes(mux)
 	s.registerHangmanRoutes(mux)
+	s.registerTerraTriviaRoutes(mux)
 
 	return withCORS(mux)
 }
@@ -47,4 +48,10 @@ func (s *Server) registerHangmanRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /api/hangman/initialize-game", s.initializeHangmanGame)
 	mux.HandleFunc("POST /api/hangman/check-guess", s.checkHangmanGuess)
 	mux.HandleFunc("GET /api/hangman/winning-data", s.getHangmanWinningData)
+}
+
+func (s *Server) registerTerraTriviaRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /api/terratrivia/initialize-game", s.initializeTerraTriviaGame)
+	mux.HandleFunc("POST /api/terratrivia/check-guess", s.checkTerraTriviaGuess)
+	mux.HandleFunc("GET /api/terratrivia/winning-data", s.getTerraTriviaWinningData)
 }
