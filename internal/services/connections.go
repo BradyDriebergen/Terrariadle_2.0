@@ -89,6 +89,10 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 		return ConnectionsCheckData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if user.Connections.Game.Finished {
+		return ConnectionsCheckData{}, domain.Conflict("Game already finished", nil)
+	}
+
 	if user.Connections.Attempts <= 0 {
 		return ConnectionsCheckData{}, domain.Conflict("User does not have any more attempts", nil)
 	}
