@@ -18,3 +18,7 @@ type TriviaItem struct {
 	LetterCount int    `json:"letter_count"`
 	Answer      string `json:"answer"`
 }
+
+type TerraTriviaWinningData struct {
+	Position int `json:"position"`
+}

@@ -124,3 +124,18 @@ func (g *TerraTrivia) CheckGuess(ctx context.Context, userId string, guess strin
 
 	return checkData, nil
 }
+
+func (g *TerraTrivia) GetWinningData(ctx context.Context, userId string) (TerraTriviaWinningData, error) {
+	user, err := g.userCache.GetUser(ctx, userId)
+	if err != nil {
+		return TerraTriviaWinningData{}, domain.UserNotFound("User not found", err)
+	}
+
+	if !user.TerraTrivia.Game.Finished {
+		return TerraTriviaWinningData{}, domain.Conflict("User isn't finished guessing", err)
+	}
+
+	return TerraTriviaWinningData{
+		Position: user.TerraTrivia.Game.Position,
+	}, nil
+}
