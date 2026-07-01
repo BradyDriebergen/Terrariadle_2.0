@@ -7,6 +7,7 @@ type DailyAnswers struct {
 	Connections   ConnectionAnswer
 	GuessTheNpc   NpcAnswer
 	Hangman       HangmanAnswer
+	TerraTrivia   TerraTriviaAnswer
 	ResetTime     time.Time
 	NextResetTime time.Time
 }
@@ -38,9 +39,14 @@ type HangmanAnswer struct {
 	Enemy Enemy
 }
 
+type TerraTriviaAnswer struct {
+	Questions []TriviaQuestion
+}
+
 type PlayerGuessCounts struct {
 	DailySlashCount  int
 	ConnectionsCount int
 	GuessTheNpcCount int
 	HangmanCount     int
+	TerraTriviaCount int
 }

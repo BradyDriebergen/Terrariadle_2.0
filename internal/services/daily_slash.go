@@ -104,6 +104,10 @@ func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int
 		return DailySlashCheckData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if user.DailySlash.Game.Finished {
+		return DailySlashCheckData{}, domain.Conflict("Game already finished", nil)
+	}
+
 	if slices.Contains(user.DailySlash.Game.Guesses, weaponId) {
 		return DailySlashCheckData{}, domain.Conflict("User previously guessed this weapon", nil)
 	}

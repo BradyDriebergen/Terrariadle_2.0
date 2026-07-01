@@ -38,3 +38,11 @@ type enemy struct {
 	Name      string `bson:"name"`
 	ImagePath string `bson:"image_path"`
 }
+
+type triviaQuestion struct {
+	ID         int      `bson:"id"`
+	Answer     string   `bson:"answer"`
+	Clue       string   `bson:"clue"`
+	Chunks     []string `bson:"chunks"`
+	ChunkCount int      `bson:"chunkCount"`
+}

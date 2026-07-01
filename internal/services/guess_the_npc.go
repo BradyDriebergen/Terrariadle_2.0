@@ -75,6 +75,10 @@ func (g *GuessTheNpc) CheckGuess(ctx context.Context, userId string, npcId int) 
 		return GuessTheNpcCheckData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if user.GuessTheNPC.Game.Finished {
+		return GuessTheNpcCheckData{}, domain.Conflict("Game already finished", nil)
+	}
+
 	if slices.Contains(user.GuessTheNPC.Game.Guesses, npcId) {
 		return GuessTheNpcCheckData{}, domain.Conflict("User previously guessed this npc", nil)
 	}

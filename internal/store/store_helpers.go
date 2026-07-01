@@ -27,6 +27,14 @@ func toAnswerDomain(ad repo.AnswerData, cs CatalogStore) (domain.DailyAnswers, e
 		return domain.DailyAnswers{}, fmt.Errorf("failed to find enemy with id: %v", ad.Hangman.EnemyID)
 	}
 
+	triviaQuestions := make([]domain.TriviaQuestion, 7)
+	for i, q := range ad.TerraTrivia.QuestionIDs {
+		triviaQuestions[i], ok = cs.GetTriviaQuestion(q)
+		if !ok {
+			return domain.DailyAnswers{}, fmt.Errorf("failed to find enemy with id: %v", ad.Hangman.EnemyID)
+		}
+	}
+
 	return domain.DailyAnswers{
 		DailySlash: domain.WeaponAnswer{
 			CurrentWeapon: currentWeapon,
@@ -46,12 +54,20 @@ func toAnswerDomain(ad repo.AnswerData, cs CatalogStore) (domain.DailyAnswers, e
 		Hangman: domain.HangmanAnswer{
 			Enemy: enemy,
 		},
+		TerraTrivia: domain.TerraTriviaAnswer{
+			Questions: triviaQuestions,
+		},
 		ResetTime:     ad.ResetTime,
 		NextResetTime: ad.NextResetTime,
 	}, nil
 }
 
 func fromAnswerDomain(da domain.DailyAnswers) repo.AnswerData {
+	triviaQuestionIDs := make([]int, 7)
+	for i, q := range da.TerraTrivia.Questions {
+		triviaQuestionIDs[i] = q.ID
+	}
+
 	return repo.AnswerData{
 		DailySlash: repo.WeaponData{
 			CurrentWeaponID: da.DailySlash.CurrentWeapon.ID,
@@ -69,6 +85,9 @@ func fromAnswerDomain(da domain.DailyAnswers) repo.AnswerData {
 		},
 		Hangman: repo.HangmanData{
 			EnemyID: da.Hangman.Enemy.ID,
+		},
+		TerraTrivia: repo.TerraTriviaData{
+			QuestionIDs: triviaQuestionIDs,
 		},
 		ResetTime:     da.ResetTime,
 		NextResetTime: da.NextResetTime,
@@ -103,6 +122,7 @@ func toGuessCountDomain(guessCounts repo.PlayerGuessCounts) domain.PlayerGuessCo
 		ConnectionsCount: guessCounts.ConnectionsCount,
 		GuessTheNpcCount: guessCounts.GuessTheNpcCount,
 		HangmanCount:     guessCounts.HangmanCount,
+		TerraTriviaCount: guessCounts.TerraTriviaCount,
 	}
 }
 
@@ -112,5 +132,6 @@ func fromGuessCountDomain(guessCounts domain.PlayerGuessCounts) repo.PlayerGuess
 		ConnectionsCount: guessCounts.ConnectionsCount,
 		GuessTheNpcCount: guessCounts.GuessTheNpcCount,
 		HangmanCount:     guessCounts.HangmanCount,
+		TerraTriviaCount: guessCounts.TerraTriviaCount,
 	}
 }
