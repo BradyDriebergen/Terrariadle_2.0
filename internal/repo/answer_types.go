@@ -3,12 +3,13 @@ package repo
 import "time"
 
 type AnswerData struct {
-	DailySlash    WeaponData     `bson:"dailySlash"`
-	Connections   ConnectionData `bson:"connections"`
-	GuessTheNpc   NpcData        `bson:"guessTheNpc"`
-	Hangman       HangmanData    `bson:"hangman"`
-	ResetTime     time.Time      `bson:"resetTime"`
-	NextResetTime time.Time      `bson:"nextResetTime"`
+	DailySlash    WeaponData      `bson:"dailySlash"`
+	Connections   ConnectionData  `bson:"connections"`
+	GuessTheNpc   NpcData         `bson:"guessTheNpc"`
+	Hangman       HangmanData     `bson:"hangman"`
+	TerraTrivia   TerraTriviaData `bson:"terratrivia"`
+	ResetTime     time.Time       `bson:"resetTime"`
+	NextResetTime time.Time       `bson:"nextResetTime"`
 }
 
 type WeaponData struct {
@@ -37,9 +38,14 @@ type HangmanData struct {
 	EnemyID int `bson:"enemyId"`
 }
 
+type TerraTriviaData struct {
+	QuestionIDs []int `bson:"questionIds"`
+}
+
 type PlayerGuessCounts struct {
 	DailySlashCount  int `bson:"dailySlashCount"`
 	ConnectionsCount int `bson:"connectionsCount"`
 	GuessTheNpcCount int `bson:"guessTheNpcCount"`
 	HangmanCount     int `bson:"hangmanCount"`
+	TerraTriviaCount int `bson:"terratriviaCount"`
 }

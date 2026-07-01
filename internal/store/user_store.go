@@ -162,6 +162,9 @@ func createNewUser(userID string) domain.User {
 			Game:     emptyGame,
 			Attempts: 6,
 		},
+		TerraTrivia: domain.TerraTriviaGame{
+			Game: emptyGame,
+		},
 		LastSeen: time.Now(),
 		Dirty:    true,
 	}

@@ -65,6 +65,10 @@ func (g *Hangman) CheckGuess(ctx context.Context, userId string, guess string) (
 		return HangmanCheckData{}, domain.UserNotFound("User not found", err)
 	}
 
+	if user.Hangman.Game.Finished {
+		return HangmanCheckData{}, domain.Conflict("Game already finished", nil)
+	}
+
 	enemyAnswer := g.answerCache.GetAnswers().Hangman
 	phrase := strings.Split(enemyAnswer.Enemy.Name, "")
 	guessedLetters := []string{}

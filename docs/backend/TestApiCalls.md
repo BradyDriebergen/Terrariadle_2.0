@@ -78,3 +78,16 @@ curl -X POST http://localhost:8080/api/hangman/check-guess \
 
 Hangman winning data:
 curl -i -X GET "http://localhost:8080/api/hangman/winning-data?user_id=123"
+
+## TerraTrivia Tests
+
+Hangman init game handler:
+curl -i -X GET "http://localhost:8080/api/terratrivia/initialize-game?user_id=123"
+
+Hangman check guess:
+curl -X POST http://localhost:8080/api/terratrivia/check-guess \
+  -H "Content-Type: application/json" \
+  -d '{"user_id": "123", "guess": "SHRUBSTAR"}'
+
+Hangman winning data:
+curl -i -X GET "http://localhost:8080/api/terratrivia/winning-data?user_id=123"
