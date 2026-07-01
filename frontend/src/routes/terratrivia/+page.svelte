@@ -37,13 +37,13 @@
 </script>
 
 {#if finished}
-    <span class="color-cycle">Wordaria Results</span>
+    <span class="color-cycle">TerraTrivia Results</span>
 {/if}
 
 <div class="game-window">
     {#if !finished}
         <selection out:slide={{ duration: 700, easing: cubicInOut }}>
-            <h2>Wordaria</h2>
+            <h2>TerraTrivia</h2>
             <p>Use clues to decipher all 7 words!</p>
         </selection>
     {/if}

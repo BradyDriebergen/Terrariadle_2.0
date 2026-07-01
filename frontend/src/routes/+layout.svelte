@@ -29,8 +29,8 @@
 				return '| Guess the NPC';
 			case '/hangman':
 				return '| Hangman';
-			case '/wordaria':
-				return '| Wordaria';
+			case '/terratrivia':
+				return '| TerraTrivia';
 			case '/about':
 				return '| About';
 			default:
