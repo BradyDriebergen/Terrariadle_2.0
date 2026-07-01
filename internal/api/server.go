@@ -15,7 +15,7 @@ type Server struct {
 	connections services.ConnectionsService
 	guessTheNpc services.GuessTheNpcService
 	hangman     services.HangmanService
-	terraTrivia services.TerraTrivia
+	terraTrivia services.TerraTriviaService
 	sseServer   services.SseStreamService
 	broker      domain.GuessCountBroker
 }
@@ -27,7 +27,7 @@ func NewServer(
 	connections services.ConnectionsService,
 	guessTheNpc services.GuessTheNpcService,
 	hangman services.HangmanService,
-	terraTrivia services.TerraTrivia,
+	terraTrivia services.TerraTriviaService,
 	sseServer services.SseStreamService,
 	broker domain.GuessCountBroker,
 ) *Server {

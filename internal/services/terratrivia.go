@@ -8,9 +8,9 @@ import (
 )
 
 type TerraTriviaService interface {
-	InitializeGame(ctx context.Context, userId string) (HangmanInitData, error)
-	CheckGuess(ctx context.Context, userId string, guess string) (HangmanCheckData, error)
-	GetWinningData(ctx context.Context, userId string) (HangmanWinningData, error)
+	InitializeGame(ctx context.Context, userId string) (TerraTriviaInitData, error)
+	CheckGuess(ctx context.Context, userId string, guess string) (TerraTriviaCheckData, error)
+	GetWinningData(ctx context.Context, userId string) (TerraTriviaWinningData, error)
 }
 
 type TerraTrivia struct {
