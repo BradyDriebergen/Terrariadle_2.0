@@ -20,6 +20,8 @@ type CatalogStore interface {
 	GetSearchableNpcs() []domain.SearchNpcResult
 	GetEnemies() []domain.Enemy
 	GetEnemy(id int) (domain.Enemy, bool)
+	GetTriviaQuestions() []domain.TriviaQuestion
+	GetTriviaQuestion(id int) (domain.TriviaQuestion, bool)
 }
 
 type CachedCatalogStore struct {
@@ -30,6 +32,7 @@ type CachedCatalogStore struct {
 	npcCache          map[int]domain.Npc
 	searchNpcCache    []domain.SearchNpcResult
 	enemyCache        map[int]domain.Enemy
+	triviaCache       map[int]domain.TriviaQuestion
 }
 
 func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*CachedCatalogStore, error) {
@@ -79,6 +82,15 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 	}
 	enemies := indexByID(enemyData, func(e domain.Enemy) int { return e.ID })
 
+	triviaData, err := catalogRepo.GetTriviaQuestions(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
+	}
+	if len(enemyData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no enemies found")
+	}
+	triviaQuestions := indexByID(triviaData, func(e domain.TriviaQuestion) int { return e.ID })
+
 	return &CachedCatalogStore{
 		catalogRepo:       catalogRepo,
 		weaponCache:       weapons,
@@ -87,6 +99,7 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 		npcCache:          npcs,
 		searchNpcCache:    searchNpcs,
 		enemyCache:        enemies,
+		triviaCache:       triviaQuestions,
 	}, nil
 }
 
@@ -131,6 +144,15 @@ func (s *CachedCatalogStore) GetEnemies() []domain.Enemy {
 
 func (s *CachedCatalogStore) GetEnemy(id int) (domain.Enemy, bool) {
 	e, ok := s.enemyCache[id]
+	return e, ok
+}
+
+func (s *CachedCatalogStore) GetTriviaQuestions() []domain.TriviaQuestion {
+	return slices.Collect(maps.Values(s.triviaCache))
+}
+
+func (s *CachedCatalogStore) GetTriviaQuestion(id int) (domain.TriviaQuestion, bool) {
+	e, ok := s.triviaCache[id]
 	return e, ok
 }
 

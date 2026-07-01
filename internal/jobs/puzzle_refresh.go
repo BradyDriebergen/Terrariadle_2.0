@@ -61,6 +61,7 @@ func (j *PuzzleRefreshJob) refresh(ctx context.Context) {
 		Connections:   j.refreshCategories(),
 		GuessTheNpc:   j.refreshNpc(),
 		Hangman:       j.refreshEnemy(),
+		TerraTrivia:   j.refreshTriviaQuestions(),
 		ResetTime:     now,
 		NextResetTime: domain.NextMidnight(now),
 	})

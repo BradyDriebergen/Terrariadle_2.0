@@ -14,6 +14,7 @@ type userData struct {
 	Connections connectionGame     `bson:"connections,omitempty"`
 	GuessTheNPC guessTheNpcGame    `bson:"guessTheNpc,omitempty"`
 	Hangman     hangmanGame        `bson:"hangman,omitempty"`
+	TerraTrivia terraTriviaGame    `bson:"terratrivia,omitempty"`
 }
 
 type game struct {
@@ -51,6 +52,10 @@ type guessTheNpcGame struct {
 type hangmanGame struct {
 	Game     game `bson:"game"`
 	Attempts int  `bson:"attempts"`
+}
+
+type terraTriviaGame struct {
+	Game game `bson:"game"`
 }
 
 // Error for not found documents

@@ -106,6 +106,32 @@ func (j *PuzzleRefreshJob) refreshEnemy() domain.HangmanAnswer {
 	}
 }
 
+func (j *PuzzleRefreshJob) refreshTriviaQuestions() domain.TerraTriviaAnswer {
+	allQuestions := j.catalogStore.GetTriviaQuestions()
+	oldQuestions := j.answerStore.GetAnswers().TerraTrivia.Questions
+
+	oldIDs := make([]int, len(oldQuestions))
+	for i, q := range oldQuestions {
+		oldIDs[i] = q.ID
+	}
+
+	shuffle(allQuestions, j.rng)
+
+	newQuestions := make([]domain.TriviaQuestion, 0, 7)
+	index := 0
+	for len(newQuestions) < 7 && index < len(allQuestions) {
+		if !slices.Contains(oldIDs, allQuestions[index].ID) {
+			newQuestions = append(newQuestions, allQuestions[index])
+		}
+
+		index++
+	}
+
+	return domain.TerraTriviaAnswer{
+		Questions: newQuestions,
+	}
+}
+
 func shuffle[T any](list []T, rnd *rand.Rand) {
 	rnd.Shuffle(len(list), func(i, j int) {
 		list[i], list[j] = list[j], list[i]

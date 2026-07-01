@@ -38,6 +38,9 @@ func (u *userData) toDomain() domain.User {
 			Game:     toGameDomain(u.Hangman.Game),
 			Attempts: u.Hangman.Attempts,
 		},
+		TerraTrivia: domain.TerraTriviaGame{
+			Game: toGameDomain(u.TerraTrivia.Game),
+		},
 		LastSeen: time.Now(),
 		Dirty:    false,
 	}
@@ -82,6 +85,9 @@ func fromDomain(u domain.User) userData {
 		Hangman: hangmanGame{
 			Game:     fromGameDomain(u.Hangman.Game),
 			Attempts: u.Hangman.Attempts,
+		},
+		TerraTrivia: terraTriviaGame{
+			Game: fromGameDomain(u.TerraTrivia.Game),
 		},
 	}
 }

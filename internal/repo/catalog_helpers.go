@@ -65,3 +65,18 @@ func toDomainEnemies(src []enemy) []domain.Enemy {
 
 	return result
 }
+
+func toDomainTriviaQuestions(src []triviaQuestion) []domain.TriviaQuestion {
+	result := make([]domain.TriviaQuestion, len(src))
+	for i, e := range src {
+		result[i] = domain.TriviaQuestion{
+			ID:         e.ID,
+			Answer:     e.Answer,
+			Clue:       e.Clue,
+			Chunks:     e.Chunks,
+			ChunkCount: e.ChunkCount,
+		}
+	}
+
+	return result
+}
