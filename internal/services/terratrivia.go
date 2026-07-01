@@ -114,7 +114,7 @@ func (g *TerraTrivia) CheckGuess(ctx context.Context, userId string, guess strin
 
 				checkData.Finished = true
 				user.TerraTrivia.Game.Finished = true
-				user.GuessTheNPC.Game.Position = position
+				user.TerraTrivia.Game.Position = position
 			}
 
 			err = g.userCache.UpsertUser(ctx, user)
