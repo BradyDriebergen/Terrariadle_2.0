@@ -2,23 +2,29 @@
 	import { checkTriviaQuestionGuess } from "$lib/api/terratrivia";
 	import { userIdStore } from "$lib/store/session";
 	import type { TriviaItem } from "$lib/types/terratrivia.js";
+	import { onDestroy } from "svelte";
 	import { flip } from "svelte/animate";
 	import { cubicInOut } from "svelte/easing";
 	import { get } from "svelte/store";
 	import { slide } from "svelte/transition";
+	import WinningCard from "./components/WinningCard.svelte";
+	import { SvelteMap } from "svelte/reactivity";
+	import Confetti from "$lib/components/Confetti.svelte";
 
 	let { data } = $props();
 
 	let finished: boolean = $state(false);
 	let chunks: string[] = $state([]);
-	let triviaItems: Map<number, TriviaItem> = $state(new Map());
+	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
+
+	$inspect(chunks)
 	
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			finished = data.gameContext.finished;
 			chunks = data.gameContext.chunks;
-			triviaItems = new Map<number, TriviaItem>(
+			triviaItems = new SvelteMap<number, TriviaItem>(
 				data.gameContext.trivia_items.map(item => [item.id, item])
 			);
 		}
@@ -33,16 +39,32 @@
 	let selectedChunks: string[] = $state([]);
 	let input: string | null = $derived(selectedChunks.length > 0 ? selectedChunks.join('') : null);
 
-	async function submitGuess(guess: string) {
+	// Debouncer function for api calls
+	let timeoutId: ReturnType<typeof setTimeout> | undefined;
+	function handleClick() {
+		if (selectedChunks.length <= 1 || !input) return;
+
+		clearTimeout(timeoutId);
+		timeoutId = setTimeout(() => {
+			submitGuess();
+		}, 500);
+	}
+	onDestroy(() => clearTimeout(timeoutId));
+
+	async function submitGuess() {
+		if (!input) return;
+
 		try {
 			const userId = get(userIdStore);
-			const res = await checkTriviaQuestionGuess(userId, guess);
+			const res = await checkTriviaQuestionGuess(userId, input);
 
 			if (res.is_correct) {
-				
+				triviaItems.set(res.guess_result.id, res.guess_result)	
+				finished = res.finished;
+
+				chunks = chunks.filter(c => !selectedChunks.includes(c));
+				selectedChunks = [];
 			}
-
-
 		} catch (e) {
 			// handle error here
 			console.error(e);
@@ -61,15 +83,16 @@
 
 {#if data.gameContext}
 	{#if finished}
-		<span class="color-cycle">TerraTrivia Results</span>
+		<WinningCard />
+		<Confetti finished />
 	{/if}
 
 	<div class="game-window">
 		{#if !finished}
-			<selection out:slide={{ duration: 700, easing: cubicInOut }}>
+			<div out:slide={{ duration: 700, easing: cubicInOut }}>
 				<h2>TerraTrivia</h2>
 				<p>Use clues to decipher all 7 words!</p>
-			</selection>
+			</div>
 		{/if}
 
 		<div class="clue-box">
@@ -81,43 +104,52 @@
 			{/each}
 		</div>
 
-		<div class="selection-menu">
-			<button onclick={shuffle}>Shuffle</button>
-			<button>Hint</button>
-			<button onclick={() => selectedChunks = []}>Clear</button>
-		</div>
+		{#if !finished}
+			<div class="selection-menu">
+				<button onclick={shuffle}>Shuffle</button>
+				<button onclick={() => selectedChunks = []}>Clear</button>
+			</div>
 
-		<div class="input-box">
-			<span class:empty={selectedChunks.length > 0}>
-				{input ?? "Start building words..."}
-			</span>
-			<button 
-				onclick={() => selectedChunks.pop()}
-				disabled={selectedChunks.length === 0}
-			>
-				←
-			</button>
-		</div>
-	</div>
-
-	<div class="chunk-grid">
-		{#each chunkButtons as chunk (chunk.id)}
+			<div class="input-box">
+				<span class:empty={selectedChunks.length > 0}>
+					{input ?? "Start building words..."}
+				</span>
 				<button 
-					class="chunk" 
-					class:chunk-placeholder={
-						selectedChunks.includes(chunk.value) || 
-						chunk.value === ""
-					}
-					disabled={
-						selectedChunks.includes(chunk.value) || 
-						selectedChunks.length >= 4
-					}
-					onclick={() => selectedChunks.push(chunk.value)} 
+					onclick={() => {
+						selectedChunks.pop();
+						handleClick();
+					}}
+					disabled={selectedChunks.length === 0}
 				>
-					{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
+					←
 				</button>
-		{/each}
+			</div>
+		{/if}
 	</div>
+
+	{#if !finished}
+		<div class="chunk-grid" out:slide={{ duration: 300, easing: cubicInOut }}>
+			{#each chunkButtons as chunk (chunk.id)}
+					<button 
+						class="chunk" 
+						class:chunk-placeholder={
+							selectedChunks.includes(chunk.value) || 
+							chunk.value === ""
+						}
+						disabled={
+							selectedChunks.includes(chunk.value) || 
+							selectedChunks.length >= 4
+						}
+						onclick={() => {
+							selectedChunks.push(chunk.value);
+							handleClick();
+						}} 
+					>
+						{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
+					</button>
+			{/each}
+		</div>
+	{/if}
 {:else}
 	<p>Loading...</p>
 {/if}
@@ -146,7 +178,7 @@
 
 	.clue-box {
 		background-color: var(--color-button);
-		width: 350px;
+		width: 380px;
 		padding: 4px 0;
 
 		border-radius: 15px;

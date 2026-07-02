@@ -29,6 +29,8 @@ func (s *SseStream) GetGuessCount(game domain.GameMode) (int, error) {
 		return s.guessCountCache.GetGuessCounts().GuessTheNpcCount, nil
 	case "hangman":
 		return s.guessCountCache.GetGuessCounts().HangmanCount, nil
+	case "terratrivia":
+		return s.guessCountCache.GetGuessCounts().TerraTriviaCount, nil
 	default:
 		return 0, domain.NotFound("The requested guess count doesn't exist", nil)
 	}
