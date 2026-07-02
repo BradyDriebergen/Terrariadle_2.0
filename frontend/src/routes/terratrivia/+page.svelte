@@ -1,30 +1,53 @@
 <script lang="ts">
-	import { send } from "$lib/utils/transitions";
+	import { checkTriviaQuestionGuess } from "$lib/api/terratrivia";
+	import { userIdStore } from "$lib/store/session";
+	import type { TriviaItem } from "$lib/types/terratrivia.js";
 	import { flip } from "svelte/animate";
 	import { cubicInOut } from "svelte/easing";
+	import { get } from "svelte/store";
 	import { slide } from "svelte/transition";
 
-	const clues = [
-		"Shroomite pickaxe", 
-		"Hardmode swimming enemy", 
-		"Buff gained from Palladium Armor", 
-		"Hellstone tools prefix", 
-		"Tool used to break blocks", 
-		"Galatic material for rangers", 
-		"Wet weather event"
-	];
-
-	const chunk = [
-		"DIG", "GIN", "GC", "LAW", "ANGL", 
-		"ERFI", "SH", "RAPI", "DHEA", "LING", 
-		"MO", "LT", "EN", "PIC", "KA", "XE", 
-		"VOR", "TEX", "RA", "IN"
-	];
+	let { data } = $props();
 
 	let finished: boolean = $state(false);
-    let chunks= $state(chunk.map((value, i) => ({id: i, value})));
+	let chunks: string[] = $state([]);
+	let triviaItems: Map<number, TriviaItem> = $state(new Map());
+	
+	$effect(() => {
+		// Initialize data once pre-fetch is finished
+		if (data.gameContext) {
+			finished = data.gameContext.finished;
+			chunks = data.gameContext.chunks;
+			triviaItems = new Map<number, TriviaItem>(
+				data.gameContext.trivia_items.map(item => [item.id, item])
+			);
+		}
+	});
+
+	let chunkButtons = $derived(
+		Array.from({ length: 20 }, (_, i) => ({
+			id: i,
+			value: chunks[i] ?? ''
+		}))
+	);
 	let selectedChunks: string[] = $state([]);
 	let input: string | null = $derived(selectedChunks.length > 0 ? selectedChunks.join('') : null);
+
+	async function submitGuess(guess: string) {
+		try {
+			const userId = get(userIdStore);
+			const res = await checkTriviaQuestionGuess(userId, guess);
+
+			if (res.is_correct) {
+				
+			}
+
+
+		} catch (e) {
+			// handle error here
+			console.error(e);
+		}
+	}
 
     function shuffle() {
 		const result = [...chunks];
@@ -36,65 +59,68 @@
 	}
 </script>
 
-{#if finished}
-    <span class="color-cycle">TerraTrivia Results</span>
-{/if}
+{#if data.gameContext}
+	{#if finished}
+		<span class="color-cycle">TerraTrivia Results</span>
+	{/if}
 
-<div class="game-window">
-    {#if !finished}
-        <selection out:slide={{ duration: 700, easing: cubicInOut }}>
-            <h2>TerraTrivia</h2>
-            <p>Use clues to decipher all 7 words!</p>
-        </selection>
-    {/if}
+	<div class="game-window">
+		{#if !finished}
+			<selection out:slide={{ duration: 700, easing: cubicInOut }}>
+				<h2>TerraTrivia</h2>
+				<p>Use clues to decipher all 7 words!</p>
+			</selection>
+		{/if}
 
-	<div class="clue-box">
-		{#each clues as clue}
-			<div class="clue-row">
-				<span class="clue">{clue}</span>
-				<span class="letter-count">6 letters</span>
-			</div>
+		<div class="clue-box">
+			{#each triviaItems as [id, item] (id)}
+				<div class="clue-row">
+					<span>{item.clue}</span>
+					<span>{item.answer !== "" ? item.answer : item.letter_count + ' letters'}</span>
+				</div>
+			{/each}
+		</div>
+
+		<div class="selection-menu">
+			<button onclick={shuffle}>Shuffle</button>
+			<button>Hint</button>
+			<button onclick={() => selectedChunks = []}>Clear</button>
+		</div>
+
+		<div class="input-box">
+			<span class:empty={selectedChunks.length > 0}>
+				{input ?? "Start building words..."}
+			</span>
+			<button 
+				onclick={() => selectedChunks.pop()}
+				disabled={selectedChunks.length === 0}
+			>
+				←
+			</button>
+		</div>
+	</div>
+
+	<div class="chunk-grid">
+		{#each chunkButtons as chunk (chunk.id)}
+				<button 
+					class="chunk" 
+					class:chunk-placeholder={
+						selectedChunks.includes(chunk.value) || 
+						chunk.value === ""
+					}
+					disabled={
+						selectedChunks.includes(chunk.value) || 
+						selectedChunks.length >= 4
+					}
+					onclick={() => selectedChunks.push(chunk.value)} 
+				>
+					{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
+				</button>
 		{/each}
 	</div>
-
-	<div class="selection-menu">
-		<button onclick={shuffle}>Shuffle</button>
-		<button>Hint</button>
-		<button onclick={() => selectedChunks = []}>Clear</button>
-	</div>
-
-	<div class="input-box">
-		<span class:empty={selectedChunks.length > 0}>
-            {input ?? "Start building words..."}
-        </span>
-		<button 
-            onclick={() => selectedChunks.pop()}
-            disabled={selectedChunks.length === 0}
-        >
-            ←
-        </button>
-	</div>
-</div>
-
-<div class="chunk-grid">
-	{#each chunks as chunk (chunk.id)}
-			<button 
-				class="chunk" 
-                class:chunk-placeholder={
-                    selectedChunks.includes(chunk.value) || 
-                    chunk.value === ""
-                }
-				disabled={
-                    selectedChunks.includes(chunk.value) || 
-                    selectedChunks.length >= 4
-                }
-                onclick={() => selectedChunks.push(chunk.value)} 
-                animate:flip={{ duration: 220, easing: (t) => t }}
-			>
-				{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
-			</button>
-	{/each}
-</div>
+{:else}
+	<p>Loading...</p>
+{/if}
 
 <style>
 	.game-window {

@@ -66,6 +66,8 @@ func (g *TerraTrivia) InitializeGame(ctx context.Context, userId string) (TerraT
 		}
 	}
 
+	shuffleChunks(chunks)
+
 	return TerraTriviaInitData{
 		Finished:    user.TerraTrivia.Game.Finished,
 		TriviaItems: triviaItems,
