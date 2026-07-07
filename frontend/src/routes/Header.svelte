@@ -5,16 +5,19 @@
 	import { crossfade, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	let isHome = $derived(page.url.pathname === '/')
-	let headerHeight = new Spring(page.url.pathname === '/' ? 140 : 100)
+	let isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/about')
+	// svelte-ignore state_referenced_locally
+	let headerHeight = new Spring(isHome ? 140 : 100)
 
-	$inspect(page.url.pathname)
+	// Easter egg for showing old achievement logos
+	const isEasterEgg = Math.random() < 1 / 1000;
+	const prefix = isEasterEgg ? 'old_' : '';
 
-	let dailySlashLogoLink = '/logos/daily_slash_logo.png';
-	let connectionsLogoLink = '/logos/connections_logo.png';
-	let guessTheNpcLogoLink = '/logos/guess_the_npc_logo.png';
-	let hangmanLogoLink = '/logos/hangman_logo.png';
-	let terraTriviaLogoLink = '/logos/terratrivia_logo.png';
+	let dailySlashLogoLink = `/logos/${prefix}daily_slash_logo.png`;
+	let connectionsLogoLink = `/logos/${prefix}connections_logo.png`;
+	let guessTheNpcLogoLink = `/logos/${prefix}guess_the_npc_logo.png`;
+	let hangmanLogoLink = `/logos/${prefix}hangman_logo.png`;
+	let terraTriviaLogoLink = `/logos/${prefix}terratrivia_logo.png`;
 
 	const [send, receive] = crossfade({
 		duration: 400,

@@ -19,7 +19,7 @@
     - [x] Guess the NPC
     - [x] Hangman
     - [ ] About
-- [ ] Create tabs at the top to navigate through games
+- [x] Create tabs at the top to navigate through games
 - [ ] Change About section link to sign at the bottom
 
 **Backend changes**

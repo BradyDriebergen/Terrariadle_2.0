@@ -1,11 +1,12 @@
 <script>
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import { fly } from 'svelte/transition';
 
 	let { data } = $props();
 </script>
 
-<div>
+<div in:fly={{ y: 50, duration: 500 }}>
 	<p>
 		A Terraria inspired daily puzzle game. <br />
 		Test your Terraria knowledge.

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fly, scale } from "svelte/transition";
+
 	function handleScroll(event: MouseEvent, id: string) {
 		event.preventDefault();
 		const element = document.getElementById(id);
@@ -6,14 +8,15 @@
 	}
 </script>
 
-<div class="how-to-play">
+<div class="how-to-play" in:fly={{ x: 80, duration: 500 }}>
 	<div class="directory">
 		<h3>How to Play</h3>
 		<nav>
 			<a class="link" href="#dw" on:click={(e) => handleScroll(e, 'dw')}>Daily Weapon</a>
-			<a class="link" href="#tc" on:click={(e) => handleScroll(e, 'tc')}>Terraria Connections</a>
+			<a class="link" href="#tc" on:click={(e) => handleScroll(e, 'tc')}>Connections</a>
 			<a class="link" href="#gtn" on:click={(e) => handleScroll(e, 'gtn')}>Guess The NPC</a>
 			<a class="link" href="#hm" on:click={(e) => handleScroll(e, 'hm')}>Hangman</a>
+			<a class="link" href="#tt" on:click={(e) => handleScroll(e, 'tt')}>TerraTrivia</a>
 		</nav>
 	</div>
 
@@ -221,6 +224,30 @@
 	<p>
 		If you struggle at first, don't worry. The more you play, the more you'll develop patterns that
 		can help you. Good luck guessing Terrarian!
+	</p>
+
+	<h2 id="tt">How to play: TerraTrivia</h2>
+	<hr />
+	<p>
+		TerraTrivia is a new gamemode based on the niche game, 
+		<a	
+			class="link" 
+			href="https://7littlewords.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+		>Seven Little Words</a>. The goal of this game is to build all of the Terraria-based
+		terms using the letter bundles given to you. 
+	</p>
+	<p>
+		You can start building out the terms by selecting letter 'chunks' via the buttons. There is no
+		check guess button, rather, you can keep guessing by trying out different combinations. Once
+		you've solved a word, it will automatically update the row with the associated clue. Once you've
+		solved all 7 terms, you've won the game.
+	</p>
+	<p>
+		Don't be fooled by all the words you can create. While you can create all sorts of whacky terms,
+		you can only solve the puzzle with specific Terraria terms. Pay attention to the clues and try your
+		best to guess. 
 	</p>
 </div>
 
