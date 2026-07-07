@@ -35,10 +35,10 @@
 <span class="color-cycle">TerraTrivia Results</span>
 
 <div class="container" in:slide>
-    <h1>Fantastic!</h1>
-    <p>
-        You were the {ConvertPositionToString(position)} person to solved the puzzle.
-    </p>
+	<h1>Fantastic!</h1>
+	<p>
+		You were the {ConvertPositionToString(position)} person to solved the puzzle.
+	</p>
 
 	<p>{playerCount} players solved this puzzle successfully</p>
 	<RemainingTime />

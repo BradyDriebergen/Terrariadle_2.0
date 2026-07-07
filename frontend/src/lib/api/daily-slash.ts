@@ -41,7 +41,10 @@ export async function getWeaponHint(num: number): Promise<string> {
 	return (await res.json()) as string;
 }
 
-export async function checkWeaponGuess(userId: string, weaponId: number): Promise<DailySlashCheckResult> {
+export async function checkWeaponGuess(
+	userId: string,
+	weaponId: number
+): Promise<DailySlashCheckResult> {
 	const res = await fetch('/api/daily-slash/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },

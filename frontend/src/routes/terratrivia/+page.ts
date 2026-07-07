@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { ApiError } from '$lib/types/error';
-import { initializeTerraTriviaGame } from '$lib/api/terratrivia'
+import { initializeTerraTriviaGame } from '$lib/api/terratrivia';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, parent }) => {

@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { ApiError } from '$lib/types/error';
-import { initializeHangmanGame } from '$lib/api/hangman'
+import { initializeHangmanGame } from '$lib/api/hangman';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();

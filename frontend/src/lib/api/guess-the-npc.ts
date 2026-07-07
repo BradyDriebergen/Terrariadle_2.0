@@ -33,7 +33,10 @@ export async function getSearchableNpcs(fetchFn: typeof fetch) {
 	return body as DropdownListItem[];
 }
 
-export async function checkNpcGuess(userId: string, npcId: number): Promise<GuessTheNpcCheckResult> {
+export async function checkNpcGuess(
+	userId: string,
+	npcId: number
+): Promise<GuessTheNpcCheckResult> {
 	const res = await fetch('/api/guess-the-npc/check-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
@@ -54,7 +57,10 @@ export async function getNpcWinningData(userId: string): Promise<GuessTheNpcWinn
 	return (await res.json()) as GuessTheNpcWinningData;
 }
 
-export async function checkNpcName(userId: string, name: string): Promise<GuessTheNpcMiniGameResult> {
+export async function checkNpcName(
+	userId: string,
+	name: string
+): Promise<GuessTheNpcMiniGameResult> {
 	const res = await fetch('/api/guess-the-npc/check-name-guess', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },

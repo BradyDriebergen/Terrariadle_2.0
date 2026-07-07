@@ -23,7 +23,7 @@
 			attempts = data.gameContext.attempts;
 			finished = data.gameContext.finished;
 			guesses = data.gameContext.guesses;
-			phrase = data.gameContext.phrase
+			phrase = data.gameContext.phrase;
 		}
 	});
 
@@ -44,7 +44,7 @@
 		} catch (e) {
 			// handle error here
 			console.error(e);
-			return
+			return;
 		}
 
 		phrase = res.phrase;

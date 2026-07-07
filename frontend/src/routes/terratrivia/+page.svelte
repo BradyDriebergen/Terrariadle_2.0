@@ -1,15 +1,14 @@
 <script lang="ts">
-	import { checkTriviaQuestionGuess } from "$lib/api/terratrivia";
-	import { userIdStore } from "$lib/store/session";
-	import type { TriviaItem } from "$lib/types/terratrivia.js";
-	import { onDestroy } from "svelte";
-	import { flip } from "svelte/animate";
-	import { cubicInOut } from "svelte/easing";
-	import { get } from "svelte/store";
-	import { slide } from "svelte/transition";
-	import WinningCard from "./components/WinningCard.svelte";
-	import { SvelteMap } from "svelte/reactivity";
-	import Confetti from "$lib/components/Confetti.svelte";
+	import { checkTriviaQuestionGuess } from '$lib/api/terratrivia';
+	import { userIdStore } from '$lib/store/session';
+	import type { TriviaItem } from '$lib/types/terratrivia.js';
+	import { onDestroy } from 'svelte';
+	import { cubicInOut } from 'svelte/easing';
+	import { get } from 'svelte/store';
+	import { slide } from 'svelte/transition';
+	import WinningCard from './components/WinningCard.svelte';
+	import { SvelteMap } from 'svelte/reactivity';
+	import Confetti from '$lib/components/Confetti.svelte';
 
 	let { data } = $props();
 
@@ -17,15 +16,15 @@
 	let chunks: string[] = $state([]);
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
 
-	$inspect(chunks)
-	
+	$inspect(chunks);
+
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			finished = data.gameContext.finished;
 			chunks = data.gameContext.chunks;
 			triviaItems = new SvelteMap<number, TriviaItem>(
-				data.gameContext.trivia_items.map(item => [item.id, item])
+				data.gameContext.trivia_items.map((item) => [item.id, item])
 			);
 		}
 	});
@@ -59,10 +58,10 @@
 			const res = await checkTriviaQuestionGuess(userId, input);
 
 			if (res.is_correct) {
-				triviaItems.set(res.guess_result.id, res.guess_result)	
+				triviaItems.set(res.guess_result.id, res.guess_result);
 				finished = res.finished;
 
-				chunks = chunks.filter(c => !selectedChunks.includes(c));
+				chunks = chunks.filter((c) => !selectedChunks.includes(c));
 				selectedChunks = [];
 			}
 		} catch (e) {
@@ -71,7 +70,7 @@
 		}
 	}
 
-    function shuffle() {
+	function shuffle() {
 		const result = [...chunks];
 		for (let i = result.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -99,7 +98,7 @@
 			{#each triviaItems as [id, item] (id)}
 				<div class="clue-row">
 					<span>{item.clue}</span>
-					<span>{item.answer !== "" ? item.answer : item.letter_count + ' letters'}</span>
+					<span>{item.answer !== '' ? item.answer : item.letter_count + ' letters'}</span>
 				</div>
 			{/each}
 		</div>
@@ -107,14 +106,14 @@
 		{#if !finished}
 			<div class="selection-menu">
 				<button onclick={shuffle}>Shuffle</button>
-				<button onclick={() => selectedChunks = []}>Clear</button>
+				<button onclick={() => (selectedChunks = [])}>Clear</button>
 			</div>
 
 			<div class="input-box">
 				<span class:empty={selectedChunks.length > 0}>
-					{input ?? "Start building words..."}
+					{input ?? 'Start building words...'}
 				</span>
-				<button 
+				<button
 					onclick={() => {
 						selectedChunks.pop();
 						handleClick();
@@ -130,23 +129,17 @@
 	{#if !finished}
 		<div class="chunk-grid" out:slide={{ duration: 300, easing: cubicInOut }}>
 			{#each chunkButtons as chunk (chunk.id)}
-					<button 
-						class="chunk" 
-						class:chunk-placeholder={
-							selectedChunks.includes(chunk.value) || 
-							chunk.value === ""
-						}
-						disabled={
-							selectedChunks.includes(chunk.value) || 
-							selectedChunks.length >= 4
-						}
-						onclick={() => {
-							selectedChunks.push(chunk.value);
-							handleClick();
-						}} 
-					>
-						{!selectedChunks.includes(chunk.value) ? chunk.value : ""}
-					</button>
+				<button
+					class="chunk"
+					class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
+					disabled={selectedChunks.includes(chunk.value) || selectedChunks.length >= 4}
+					onclick={() => {
+						selectedChunks.push(chunk.value);
+						handleClick();
+					}}
+				>
+					{!selectedChunks.includes(chunk.value) ? chunk.value : ''}
+				</button>
 			{/each}
 		</div>
 	{/if}
@@ -164,7 +157,7 @@
 		border: 2px solid black;
 	}
 
-    .game-window h2 {
+	.game-window h2 {
 		background-color: var(--color-lightblue);
 		width: fit-content;
 		margin: auto;
@@ -186,9 +179,9 @@
 	}
 
 	.clue-row {
-		display: flex; 
+		display: flex;
 		justify-content: space-between;
-        align-items: center;
+		align-items: center;
 		padding: 4px 8px;
 	}
 
@@ -202,13 +195,13 @@
 		border: 2px solid black;
 		padding: 5px 10px;
 		font-size: 16px;
-        transition: background-color 0.1s ease;
+		transition: background-color 0.1s ease;
 	}
 
-    .selection-menu button:hover {
-        background-color: var(--color-lightblue);
-        cursor: pointer;
-    }
+	.selection-menu button:hover {
+		background-color: var(--color-lightblue);
+		cursor: pointer;
+	}
 
 	.input-box {
 		background-color: var(--color-button);
@@ -225,14 +218,14 @@
 		cursor: default;
 	}
 
-    .input-box span {
-        color: gray;
-    }
+	.input-box span {
+		color: gray;
+	}
 
-    .input-box .empty {
-        color: white;
-        letter-spacing: 2px;
-    }
+	.input-box .empty {
+		color: white;
+		letter-spacing: 2px;
+	}
 
 	.input-box button {
 		background-color: var(--color-lightblue);
@@ -277,30 +270,30 @@
 		transition: background-color 0.1s ease;
 	}
 
-    .chunk-placeholder {
-        border: none;
-        background: none;
-    }
+	.chunk-placeholder {
+		border: none;
+		background: none;
+	}
 
 	.chunk:hover {
 		background-color: var(--color-lightblue);
 		cursor: pointer;
 	}
 
-    .chunk-placeholder:hover {
-        border: none;
-        background: none;
-        cursor: default;
-    }
+	.chunk-placeholder:hover {
+		border: none;
+		background: none;
+		cursor: default;
+	}
 
 	.chunk:disabled {
 		cursor: not-allowed;
 		background-color: var(--color-button);
 	}
-    
-    .chunk-placeholder:disabled {
-        border: none;
-        background: none;
-        cursor: default;
-    }
+
+	.chunk-placeholder:disabled {
+		border: none;
+		background: none;
+		cursor: default;
+	}
 </style>

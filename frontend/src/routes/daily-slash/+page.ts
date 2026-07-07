@@ -24,4 +24,4 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 		}
 		error(500, 'Unexpected error initializing game');
 	}
-}
+};
