@@ -2,7 +2,7 @@
 	import Confetti from 'svelte-confetti';
 	import { scale } from 'svelte/transition';
 
-	let { attempts } : { attempts: number; } = $props();
+	let { attempts }: { attempts: number } = $props();
 </script>
 
 <div class="container">

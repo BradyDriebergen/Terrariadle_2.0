@@ -86,8 +86,8 @@ func NewCatalogStore(ctx context.Context, catalogRepo repo.CatalogRepo) (*Cached
 	if err != nil {
 		return nil, fmt.Errorf("new-catalog-store: failed to initialize: %w", err)
 	}
-	if len(enemyData) == 0 {
-		return nil, fmt.Errorf("new-catalog-store: no enemies found")
+	if len(triviaData) == 0 {
+		return nil, fmt.Errorf("new-catalog-store: no trivia questions found")
 	}
 	triviaQuestions := indexByID(triviaData, func(e domain.TriviaQuestion) int { return e.ID })
 

@@ -1,10 +1,10 @@
 import type { DropdownListItem } from '$lib/types/shared.js';
-import type { DailySlashSession } from '$lib/types/daily-slash.js';
 import { error } from '@sveltejs/kit';
 import { ApiError } from '$lib/types/error';
 import { getSearchableWeapons, initializeDailySlashGame } from '$lib/api/daily-slash.js';
+import type { PageLoad } from './$types';
 
-export async function load({ fetch, parent }) {
+export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 	if (!userId) return { gameContext: null, weaponList: [] };
 
@@ -24,4 +24,4 @@ export async function load({ fetch, parent }) {
 		}
 		error(500, 'Unexpected error initializing game');
 	}
-}
+};

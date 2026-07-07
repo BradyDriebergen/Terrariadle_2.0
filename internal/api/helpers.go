@@ -49,7 +49,8 @@ func validGameMode(m domain.GameMode) bool {
 	case domain.GameModeDailySlash,
 		domain.GameModeConnections,
 		domain.GameModeGuessTheNpc,
-		domain.GameModeHangman:
+		domain.GameModeHangman,
+		domain.GameModeTerraTrivia:
 		return true
 	}
 	return false

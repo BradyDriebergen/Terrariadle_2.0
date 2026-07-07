@@ -4,7 +4,7 @@
 - [x] Move data to Atlas
 - [x] Change backend to pull from Atlas rather than JSON
 - [ ] Create page for new game
-    - [ ] Plan and Implement Wordaria backend for minigame
+    - [ ] Plan and Implement TerraTrivia backend for minigame
     - [ ] Create front-end components for game
     - [ ] Integrate backend and front-end
 - [ ] Update go and npm packages

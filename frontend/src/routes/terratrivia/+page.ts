@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
 import { ApiError } from '$lib/types/error';
-import { initializeHangmanGame } from '$lib/api/hangman';
+import { initializeTerraTriviaGame } from '$lib/api/terratrivia';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
@@ -12,7 +12,7 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 	}
 
 	try {
-		const gameContext = await initializeHangmanGame(fetch, userId);
+		const gameContext = await initializeTerraTriviaGame(fetch, userId);
 		return { gameContext };
 	} catch (e) {
 		if (e instanceof ApiError) {

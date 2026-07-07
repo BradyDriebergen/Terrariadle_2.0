@@ -108,24 +108,66 @@ func (j *PuzzleRefreshJob) refreshEnemy() domain.HangmanAnswer {
 
 func (j *PuzzleRefreshJob) refreshTriviaQuestions() domain.TerraTriviaAnswer {
 	allQuestions := j.catalogStore.GetTriviaQuestions()
-	oldQuestions := j.answerStore.GetAnswers().TerraTrivia.Questions
-
-	oldIDs := make([]int, len(oldQuestions))
-	for i, q := range oldQuestions {
-		oldIDs[i] = q.ID
-	}
-
 	shuffle(allQuestions, j.rng)
 
-	newQuestions := make([]domain.TriviaQuestion, 0, 7)
-	index := 0
-	for len(newQuestions) < 7 && index < len(allQuestions) {
-		if !slices.Contains(oldIDs, allQuestions[index].ID) {
-			newQuestions = append(newQuestions, allQuestions[index])
+	// Split questions up based on chunk size
+	twoChunks := make([]*domain.TriviaQuestion, 0, 500)
+	threeChunks := make([]*domain.TriviaQuestion, 0, 1300)
+	fourChunks := make([]*domain.TriviaQuestion, 0, 200)
+	for _, o := range allQuestions {
+		switch o.ChunkCount {
+		case 2:
+			twoChunks = append(twoChunks, &o)
+		case 3:
+			threeChunks = append(threeChunks, &o)
+		case 4:
+			fourChunks = append(fourChunks, &o)
 		}
-
-		index++
 	}
+
+	oldQuestions := j.answerStore.GetAnswers().TerraTrivia.Questions
+	oldIDs := make(map[int]struct{}, len(oldQuestions))
+	for _, q := range oldQuestions {
+		oldIDs[q.ID] = struct{}{}
+	}
+
+	// helper function for adding questions based on chunk size
+	add := func(
+		dst []domain.TriviaQuestion,
+		pool []*domain.TriviaQuestion,
+		count int,
+	) []domain.TriviaQuestion {
+		for _, q := range pool {
+			if count == 0 {
+				break
+			}
+			if _, seen := oldIDs[q.ID]; seen {
+				continue
+			}
+			dst = append(dst, *q)
+			count--
+		}
+		return dst
+	}
+
+	newQuestions := make([]domain.TriviaQuestion, 0, 7)
+	if j.rng.Float64() < 0.70 {
+		newQuestions = add(newQuestions, threeChunks, 6)
+		newQuestions = add(newQuestions, twoChunks, 1)
+	} else {
+		newQuestions = add(newQuestions, fourChunks, 1)
+		newQuestions = add(newQuestions, threeChunks, 4)
+		newQuestions = add(newQuestions, twoChunks, 2)
+	}
+
+	if len(newQuestions) != 7 {
+		// log error: reusing previous day's questions if fail
+		return domain.TerraTriviaAnswer{
+			Questions: oldQuestions,
+		}
+	}
+
+	shuffle(newQuestions, j.rng)
 
 	return domain.TerraTriviaAnswer{
 		Questions: newQuestions,

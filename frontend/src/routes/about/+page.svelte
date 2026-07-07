@@ -86,7 +86,7 @@
 		<li>Connections</li>
 		<li>Guess the NPC</li>
 		<li>Hangman</li>
-		<li>Wordaria</li>
+		<li>TerraTrivia</li>
 	</ul>
 	<p>
 		Each of these games have their own unique styles. Some allow you to guess until you solve it,
