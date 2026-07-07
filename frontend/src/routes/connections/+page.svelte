@@ -80,7 +80,7 @@
 			guessResult = await checkCategoryGuess(guess, userId);
 		} catch (e) {
 			loadingGuess = false;
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 			return;
 		}
@@ -113,7 +113,7 @@
 			try {
 				answers = await revealConnectionsAnswers(userId);
 			} catch (e) {
-				// handle error here
+				// TODO: handle error here
 				console.error(e);
 				return;
 			}

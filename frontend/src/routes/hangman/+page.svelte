@@ -42,7 +42,7 @@
 			const userId = get(userIdStore);
 			res = await checkEnemyGuess(userId, letter);
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 			return;
 		}
@@ -78,7 +78,7 @@
 			<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 		</div>
 	{:else}
-		<div style="margin-top: -20px; margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
+		<div style="margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
 			<span class="color-cycle">Hangman Results</span>
 		</div>
 	{/if}

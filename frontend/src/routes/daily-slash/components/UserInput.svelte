@@ -45,7 +45,7 @@
 			const res = await getWeaponHint(num);
 			hints[num - 1] = { text: res, visible: true };
 		} catch (e: any) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}
@@ -58,7 +58,7 @@
 			finished = res.finished;
 			weapons = weapons.filter((w) => w.id !== weaponId);
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}

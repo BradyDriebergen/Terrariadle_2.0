@@ -31,7 +31,7 @@
 			finished = res.finished;
 			npcs = npcs.filter((w) => w.id !== npcId);
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}

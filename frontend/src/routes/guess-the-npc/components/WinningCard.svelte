@@ -44,7 +44,7 @@
 			guessedName = res.guessed_name;
 			correctName = res.correct_name;
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}

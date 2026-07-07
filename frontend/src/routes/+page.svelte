@@ -3,7 +3,11 @@
 	import { resolve } from '$app/paths';
 	import { fly } from 'svelte/transition';
 
-	let { data } = $props();
+	let isDailySlashPage = $derived(page.url.pathname === '/daily-slash');
+	let isConnectionsPage = $derived(page.url.pathname === '/connections');
+	let isGuessTheNpcPage = $derived(page.url.pathname === '/guess-the-npc');
+	let isHangmanPage = $derived(page.url.pathname === '/hangman');
+	let isTerraTriviaPage = $derived(page.url.pathname === '/terratrivia');
 </script>
 
 <div in:fly={{ y: 50, duration: 500 }}>
@@ -14,20 +18,45 @@
 	<br />
 
 	<ul>
-		<li aria-current={page.url.pathname === '/daily-slash'}>
-			<a href={resolve('/daily-slash')}>Daily Slash</a>
+		<li aria-current={isDailySlashPage}>
+			<a 
+				href={resolve('/daily-slash')} 
+				class:strikethrough={false}
+			>
+				Daily Slash
+			</a>
 		</li>
-		<li aria-current={page.url.pathname === '/connections'}>
-			<a href={resolve('/connections')}>Connections</a>
+		<li aria-current={isConnectionsPage}>
+			<a 
+				href={resolve('/connections')} 
+				class:strikethrough={false}
+			>
+				Connections
+			</a>
 		</li>
-		<li aria-current={page.url.pathname === '/guess-the-npc'}>
-			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
+		<li aria-current={isGuessTheNpcPage}>
+			<a 
+				href={resolve('/guess-the-npc')} 
+				class:strikethrough={false}
+			>
+				Guess The NPC
+			</a>
 		</li>
-		<li aria-current={page.url.pathname === '/hangman'}>
-			<a href={resolve('/hangman')}>Hangman</a>
+		<li aria-current={isHangmanPage}>
+			<a 
+				href={resolve('/hangman')} 
+				class:strikethrough={false}
+			>
+				Hangman
+			</a>
 		</li>
-		<li aria-current={page.url.pathname === '/terratrivia'}>
-			<a href={resolve('/terratrivia')}>TerraTrivia</a>
+		<li aria-current={isTerraTriviaPage}>
+			<a 
+				href={resolve('/terratrivia')} 
+				class:strikethrough={false}
+			>
+				TerraTrivia
+			</a>
 		</li>
 	</ul>
 </div>
@@ -62,5 +91,9 @@
 	a:hover {
 		transform: scale(1.1) rotate(-3deg); /* grows and tilts left */
 		color: yellow;
+	}
+
+	.strikethrough {
+		text-decoration: line-through;
 	}
 </style>

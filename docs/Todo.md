@@ -12,13 +12,13 @@
 - [x] Seperate Staff/Wand in db
 
 **Frontend changes**
-- [ ] Go through all the front-end and update it with new knowledge
-    - [ ] Home page
+- [x] Go through all the front-end and update it with new knowledge
+    - [x] Home page
     - [x] Daily Slash
     - [x] Connections
     - [x] Guess the NPC
     - [x] Hangman
-    - [ ] About
+    - [x] About
 - [x] Create tabs at the top to navigate through games
 - [ ] Change About section link to sign at the bottom
 
