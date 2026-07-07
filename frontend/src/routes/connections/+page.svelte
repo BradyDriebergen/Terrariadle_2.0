@@ -74,7 +74,7 @@
 
 		const guess = options.filter((option) => option.selected).map((option) => option.value);
 		const userId = get(userIdStore);
-		
+
 		let guessResult;
 		try {
 			guessResult = await checkCategoryGuess(guess, userId);

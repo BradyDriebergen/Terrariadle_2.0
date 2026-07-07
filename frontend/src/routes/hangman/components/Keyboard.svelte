@@ -3,12 +3,12 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
 
-	let { 
-		onKeyPressed = () => {}, 
+	let {
+		onKeyPressed = () => {},
 		guesses = []
-	} : {
+	}: {
 		onKeyPressed: (letter: string) => void;
-		guesses: HangmanGuess[]
+		guesses: HangmanGuess[];
 	} = $props();
 
 	const rows: string[][] = [
@@ -17,9 +17,7 @@
 		['Z', 'X', 'C', 'V', 'B', 'N', 'M']
 	];
 
-	const guessMap = $derived(new Map<string, boolean>(
-		guesses.map(g => [g.letter, g.correct])
-	));
+	const guessMap = $derived(new Map<string, boolean>(guesses.map((g) => [g.letter, g.correct])));
 	const guessedLetters = $derived([...guessMap.keys()]);
 </script>
 
@@ -30,7 +28,8 @@
 				<button
 					class="keyboard-key"
 					class:correct={guessMap.get(letter) ?? false}
-					class:incorrect={!(guessMap.get(letter) ?? true)} // double negative conditional
+					// double negative conditional
+					class:incorrect={!(guessMap.get(letter) ?? true)}
 					disabled={guessedLetters.includes(letter)}
 					onclick={() => onKeyPressed(letter)}
 				>

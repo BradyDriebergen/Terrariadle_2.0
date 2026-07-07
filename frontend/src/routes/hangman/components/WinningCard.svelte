@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
-	import { getHangmanWinningData } from '$lib/api/hangman'
+	import { getHangmanWinningData } from '$lib/api/hangman';
 	import { subscribeToPlayerCount } from '$lib/api/common';
 
 	let { attempts } = $props();

@@ -2,8 +2,9 @@ import { ApiError } from '$lib/types/error';
 import type { DropdownListItem } from '$lib/types/shared';
 import { error } from '@sveltejs/kit';
 import { getSearchableNpcs, initializeNpcGame } from '$lib/api/guess-the-npc.js';
+import type { PageLoad } from './$types';
 
-export async function load({ fetch, parent }) {
+export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 	if (!userId) return { gameContext: null, npcList: [] };
 
@@ -23,4 +24,4 @@ export async function load({ fetch, parent }) {
 		}
 		error(500, 'Unexpected error initializing game');
 	}
-}
+};
