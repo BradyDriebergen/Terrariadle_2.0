@@ -8,6 +8,9 @@ curl -i -X GET http://localhost:8080/api/health
 Remaining time handler:
 curl -i -X GET http://localhost:8080/api/remaining-time
 
+User game result handler:
+curl -i -X GET "http://localhost:8080/api/finished-games?user_id=123"
+
 ## Daily Slash Tests
 
 Daily-slash init game handler:
