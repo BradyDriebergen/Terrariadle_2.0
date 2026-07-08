@@ -120,7 +120,7 @@
 					}}
 					disabled={selectedChunks.length === 0}
 				>
-					←
+					<img src="/emojis/backspace.png" alt="backspace" />
 				</button>
 			</div>
 		{/if}
@@ -228,10 +228,13 @@
 	}
 
 	.input-box button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background-color: var(--color-lightblue);
 		border-radius: 8px;
 		border: 2px solid black;
-		padding: 4px 8px 2px;
+		padding: 6px 8px;
 		transition: background-color 0.1s ease;
 	}
 

@@ -16,9 +16,10 @@ func (s *Server) newMux() http.Handler {
 }
 
 func (s *Server) registerCommonRoutes(mux *http.ServeMux) {
-	mux.HandleFunc("GET /api/health", s.CheckHealth)
-	mux.HandleFunc("GET /api/remaining-time", s.GetRemainingTime)
-	mux.HandleFunc("GET /api/guess-count", s.GuessCountStream)
+	mux.HandleFunc("GET /api/health", s.checkHealth)
+	mux.HandleFunc("GET /api/remaining-time", s.getRemainingTime)
+	mux.HandleFunc("GET /api/guess-count", s.guessCountStream)
+	mux.HandleFunc("GET /api/finished-games", s.getUserGameStatuses)
 }
 
 func (s *Server) registerDailySlashRoutes(mux *http.ServeMux) {
