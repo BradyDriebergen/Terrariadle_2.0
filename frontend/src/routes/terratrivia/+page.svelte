@@ -9,8 +9,9 @@
 	import WinningCard from './components/WinningCard.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
 	import Confetti from '$lib/components/Confetti.svelte';
+	import type { PageData } from './$types';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	let finished: boolean = $state(false);
 	let chunks: string[] = $state([]);

@@ -1,13 +1,16 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
 	import { fly } from 'svelte/transition';
+	import type { PageData } from './$types';
 
-	let isDailySlashPage = $derived(page.url.pathname === '/daily-slash');
-	let isConnectionsPage = $derived(page.url.pathname === '/connections');
-	let isGuessTheNpcPage = $derived(page.url.pathname === '/guess-the-npc');
-	let isHangmanPage = $derived(page.url.pathname === '/hangman');
-	let isTerraTriviaPage = $derived(page.url.pathname === '/terratrivia');
+	let { data }: { data: PageData } = $props();
+
+	let isDailySlashPage: boolean = $derived(page.url.pathname === '/daily-slash');
+	let isConnectionsPage: boolean = $derived(page.url.pathname === '/connections');
+	let isGuessTheNpcPage: boolean = $derived(page.url.pathname === '/guess-the-npc');
+	let isHangmanPage: boolean = $derived(page.url.pathname === '/hangman');
+	let isTerraTriviaPage: boolean = $derived(page.url.pathname === '/terratrivia');
 </script>
 
 <div in:fly={{ y: 50, duration: 500 }}>
@@ -21,7 +24,7 @@
 		<li aria-current={isDailySlashPage}>
 			<a 
 				href={resolve('/daily-slash')} 
-				class:strikethrough={false}
+				class:strikethrough={data.gameResults?.daily_slash}
 			>
 				Daily Slash
 			</a>
@@ -29,7 +32,7 @@
 		<li aria-current={isConnectionsPage}>
 			<a 
 				href={resolve('/connections')} 
-				class:strikethrough={false}
+				class:strikethrough={data.gameResults?.connections}
 			>
 				Connections
 			</a>
@@ -37,7 +40,7 @@
 		<li aria-current={isGuessTheNpcPage}>
 			<a 
 				href={resolve('/guess-the-npc')} 
-				class:strikethrough={false}
+				class:strikethrough={data.gameResults?.guess_the_npc}
 			>
 				Guess The NPC
 			</a>
@@ -45,7 +48,7 @@
 		<li aria-current={isHangmanPage}>
 			<a 
 				href={resolve('/hangman')} 
-				class:strikethrough={false}
+				class:strikethrough={data.gameResults?.hangman}
 			>
 				Hangman
 			</a>
@@ -53,7 +56,7 @@
 		<li aria-current={isTerraTriviaPage}>
 			<a 
 				href={resolve('/terratrivia')} 
-				class:strikethrough={false}
+				class:strikethrough={data.gameResults?.terratrivia}
 			>
 				TerraTrivia
 			</a>

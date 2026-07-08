@@ -5,8 +5,9 @@
 	import { navigating, page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { initSession } from '$lib/store/session';
+	import type { LayoutData } from './$types';
 
-	let { children } = $props();
+	let { data, children }: { data: LayoutData; children: any } = $props();
 
 	onMount(() => {
 		initSession();
