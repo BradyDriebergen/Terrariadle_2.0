@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly, scale } from "svelte/transition";
+	import { fly, scale } from 'svelte/transition';
 
 	function handleScroll(event: MouseEvent, id: string) {
 		event.preventDefault();
@@ -229,14 +229,11 @@
 	<h2 id="tt">How to play: TerraTrivia</h2>
 	<hr />
 	<p>
-		TerraTrivia is a new gamemode based on the niche game, 
-		<a	
-			class="link" 
-			href="https://7littlewords.com/"
-			target="_blank"
-			rel="noopener noreferrer"
-		>Seven Little Words</a>. The goal of this game is to build all of the Terraria-based
-		terms using the letter bundles given to you. 
+		TerraTrivia is a new gamemode based on the niche game,
+		<a class="link" href="https://7littlewords.com/" target="_blank" rel="noopener noreferrer">
+			Seven Little Words
+		</a>. The goal of this game is to build all of the Terraria-based terms using the letter bundles
+		given to you.
 	</p>
 	<p>
 		You can start building out the terms by selecting letter 'chunks' via the buttons. There is no
@@ -246,8 +243,8 @@
 	</p>
 	<p>
 		Don't be fooled by all the words you can create. While you can create all sorts of whacky terms,
-		you can only solve the puzzle with specific Terraria terms. Pay attention to the clues and try your
-		best to guess. 
+		you can only solve the puzzle with specific Terraria terms. Pay attention to the clues and try
+		your best to guess.
 	</p>
 </div>
 

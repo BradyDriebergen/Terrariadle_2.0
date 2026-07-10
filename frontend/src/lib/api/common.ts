@@ -1,6 +1,6 @@
-import { ApiError } from "$lib/types/error";
-import type { UserGameResults } from "$lib/types/shared";
-import { parseJsonSafe } from "./utils";
+import { ApiError } from '$lib/types/error';
+import type { UserGameResults } from '$lib/types/shared';
+import { parseJsonSafe } from './utils';
 
 export function subscribeToPlayerCount(mode: string, onCount: (count: number) => void): () => void {
 	const es = new EventSource(`/api/guess-count?mode=${mode}`);

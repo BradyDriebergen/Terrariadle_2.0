@@ -9,5 +9,5 @@ export const load: LayoutLoad = async ({ fetch }) => {
 	const userId = getOrCreateUserId();
 	const gameResults = await getUserGameResults(fetch, userId);
 
-	return { gameResults, userId }
-}
+	return { gameResults, userId };
+};
