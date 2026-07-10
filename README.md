@@ -2,7 +2,7 @@
 
 > A daily puzzle site for Terraria fans — five game modes, one new challenge every day.
 
-[Live Site](#) · [Report a Bug](#) · [Suggest a Puzzle Idea](#)
+[Live Site](#) - [Report a Bug](#) - [Suggest a Puzzle Idea](#)
 
 <!-- Optional: hero screenshot or GIF of the site here -->
 
@@ -36,10 +36,24 @@ This is the section that makes the project feel like *yours* rather than a gener
 
 Keep this honest and a little personal — it's the part hiring managers and fellow devs actually remember.
 
+I am a huge fan of Terraria, putting over 2000 into the base game. I started playing it when Ocram was still a boss on the Mobile version. I wanted to show my appreciation for the game, so I combined it with my passion for software and created this daily game site.
+
+I built this project not only improve my skills as a developer, but to also start and finish a project I am passionate about. Having a project I can be passionate about encouraged me to make this the best it could possibly be. That's what's led me to go through three different iterations of the code to get it just right.  
+
 - Lack of any daily puzzle game based on Terraria
 - I've put 2000+ hours into Terraria
 - Improved knowledge in software architecture, languages, and infrastructure
 - Portfolio project
+
+---
+
+## The History Behind this Game
+
+This repository is actually a remake of the game. I made the first iteration in college with little knowledge on full-stack development. While I learned a lot from my first iteration, it was the definition of MVP. 
+
+My backend was in `Node.js`, and was a combination of 2 Javascript files. My frontend was built in `React`, with no experience in any framework beforehand. The site was extremely buggy, always crashing, and throwing constant errors about rendering images. I've included some parts of my old projects in **INSERT DIRECTORY HERE BOZO**. I recommend looking if you want to know what not to do.
+
+After restarting my server constantly and taking a break from developing for a bit, I decided that this project needed to be rewritten. I did a ton of research into what stack worked best for me, and went for it. Now I have an organized, bulletproof application that I can hopefully turn on once and occasionally update the dependencies.
 
 ---
 
@@ -88,9 +102,10 @@ I chose this language because:
 
 Challenges:
 
-- Very high learning curve. Started out with OOP and learning Go's package structure was very different
+- Very high learning curve. Started out with OOP and learning Go's package structure was very different. 
 - Very easy to mess up a project without proper system design fundamentals. Started out with a web of dependency loops, and after learning about system design where I found out where I was going wrong. It's easy to mess up a project. 
-- Error handling can get a bit much at time. 
+- Error handling can get a bit much at time. Busies up the code and makes certain parts hard to read. 
+- Easy to create race conditions with goroutines
 
 ---
 
