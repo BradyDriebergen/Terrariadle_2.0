@@ -46,6 +46,7 @@ Terrariadle/
 ├── Makefile
 └── docs/
 
+- [ ] Embed frontend build in go binary
 - [ ] Figure out versioning
 - [ ] Update Github to ignore certain files
 - [ ] Add a new user to Oracle instance
