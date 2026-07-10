@@ -21,31 +21,31 @@
 	<ul>
 		<li aria-current={isDailySlashPage}>
 			{#if session.dailySlashStatus}
-				<img  src="/emojis/red_x.png" alt="Game complete!" />
+				<img src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/daily-slash')}>Daily Slash</a>
 		</li>
 		<li aria-current={isConnectionsPage}>
 			{#if session.connectionStatus}
-				<img  src="/emojis/red_x.png" alt="Game complete!" />
+				<img src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/connections')}>Connections</a>
 		</li>
 		<li aria-current={isGuessTheNpcPage}>
 			{#if session.guessTheNpcStatus}
-				<img  src="/emojis/red_x.png" alt="Game complete!" />
+				<img src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
 		</li>
 		<li aria-current={isHangmanPage}>
 			{#if session.hangmanStatus}
-				<img  src="/emojis/red_x.png" alt="Game complete!" />
+				<img src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
 		<li aria-current={isTerraTriviaPage}>
 			{#if session.terratriviaStatus}
-				<img  src="/emojis/red_x.png" alt="Game complete!" />
+				<img src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/terratrivia')}>TerraTrivia</a>
 		</li>

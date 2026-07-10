@@ -6,9 +6,9 @@
 	import { cubicOut } from 'svelte/easing';
 	import { session } from '$lib/store/session.svelte';
 
-	let isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/about')
+	let isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/about');
 	// svelte-ignore state_referenced_locally
-	let headerHeight = new Spring(isHome ? 140 : 100)
+	let headerHeight = new Spring(isHome ? 140 : 100);
 
 	// Easter egg for showing old achievement logos
 	const isEasterEgg = Math.random() < 1 / 1000;
@@ -42,7 +42,7 @@
 			in:receive={{ key: 'block' }}
 			out:send={{ key: 'block' }}
 		>
-			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle"/>
+			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
 		</a>
 	{:else}
 		<a
@@ -54,35 +54,36 @@
 			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
 		</a>
 		<div class="links" in:scale out:scale>
-			<a 
-				class:Selected={page.url.pathname === '/daily-slash'} 
-				href={resolve('/daily-slash')}
-			>
-				<img class:incomplete={!session.dailySlashStatus} src={dailySlashLogoLink} alt="Daily slash" />
+			<a class:Selected={page.url.pathname === '/daily-slash'} href={resolve('/daily-slash')}>
+				<img
+					class:incomplete={!session.dailySlashStatus}
+					src={dailySlashLogoLink}
+					alt="Daily slash"
+				/>
 			</a>
-			<a 
-				class:Selected={page.url.pathname === '/connections'} 
-				href={resolve('/connections')}
-			>
-				<img class:incomplete={!session.connectionStatus} src={connectionsLogoLink} alt="Connections" />
+			<a class:Selected={page.url.pathname === '/connections'} href={resolve('/connections')}>
+				<img
+					class:incomplete={!session.connectionStatus}
+					src={connectionsLogoLink}
+					alt="Connections"
+				/>
 			</a>
-			<a 
-				class:Selected={page.url.pathname === '/guess-the-npc'} 
-				href={resolve('/guess-the-npc')}
-			>
-				<img class:incomplete={!session.guessTheNpcStatus} src={guessTheNpcLogoLink} alt="Guess the NPC" />
+			<a class:Selected={page.url.pathname === '/guess-the-npc'} href={resolve('/guess-the-npc')}>
+				<img
+					class:incomplete={!session.guessTheNpcStatus}
+					src={guessTheNpcLogoLink}
+					alt="Guess the NPC"
+				/>
 			</a>
-			<a 
-				class:Selected={page.url.pathname === '/hangman'} 
-				href={resolve('/hangman')}
-			>
+			<a class:Selected={page.url.pathname === '/hangman'} href={resolve('/hangman')}>
 				<img class:incomplete={!session.hangmanStatus} src={hangmanLogoLink} alt="Hangman" />
 			</a>
-			<a 
-				class:Selected={page.url.pathname === '/terratrivia'} 
-				href={resolve('/terratrivia')}
-			>
-				<img class:incomplete={!session.terratriviaStatus} src={terraTriviaLogoLink} alt="TerraTrivia" />
+			<a class:Selected={page.url.pathname === '/terratrivia'} href={resolve('/terratrivia')}>
+				<img
+					class:incomplete={!session.terratriviaStatus}
+					src={terraTriviaLogoLink}
+					alt="TerraTrivia"
+				/>
 			</a>
 		</div>
 	{/if}
@@ -156,6 +157,6 @@
 	}
 
 	.incomplete {
-  		filter: grayscale(100%);
+		filter: grayscale(100%);
 	}
 </style>
