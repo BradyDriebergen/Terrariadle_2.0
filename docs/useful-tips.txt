@@ -1,0 +1,2 @@
+If the backend keeps getting hit pretty heavily, change line 9 on app.html. It stops
+the feature of preloading data when hovering over a link.

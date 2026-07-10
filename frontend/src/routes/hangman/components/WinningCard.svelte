@@ -50,9 +50,11 @@
 
 	<h1>{name}</h1>
 
-	<div class="enemy-image">
-		<img src={'/enemies' + path} alt="" />
-	</div>
+	{#if path}
+		<div class="enemy-image">
+			<img src={'/enemies' + path} alt="" />
+		</div>
+	{/if}
 
 	{#if position !== 0}
 		<p transition:typewriter={{ speed: 1 }}>
