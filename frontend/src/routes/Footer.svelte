@@ -32,7 +32,7 @@
 		height: 24px;
 		transition: height 0.2s ease;
 	}
-	
+
 	.icon:hover,
 	.sign:hover {
 		transform: scale(1.05);
