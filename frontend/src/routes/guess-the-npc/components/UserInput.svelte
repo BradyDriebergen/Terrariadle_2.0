@@ -29,6 +29,10 @@
 			guesses = [res.guess, ...guesses];
 			finished = res.finished;
 			npcs = npcs.filter((w) => w.id !== npcId);
+
+			if (finished) {
+				session.guessTheNpcStatus = true;
+			}
 		} catch (e) {
 			// TODO: handle error here
 			console.error(e);

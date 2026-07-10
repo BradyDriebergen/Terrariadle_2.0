@@ -11,11 +11,11 @@
 
 	onMount(() => {
 		if (data.gameResults) {
-			session.dailySlash = data.gameResults.daily_slash;
-			session.connection = data.gameResults.connections;
-			session.guessTheNpc = data.gameResults.guess_the_npc;
-			session.hangman = data.gameResults.hangman;
-			session.terratrivia = data.gameResults.terratrivia;
+			session.dailySlashStatus = data.gameResults.daily_slash;
+			session.connectionStatus = data.gameResults.connections;
+			session.guessTheNpcStatus = data.gameResults.guess_the_npc;
+			session.hangmanStatus = data.gameResults.hangman;
+			session.terratriviaStatus = data.gameResults.terratrivia;
 		}
 	});
 

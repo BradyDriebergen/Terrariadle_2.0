@@ -4,6 +4,7 @@
 	import { Spring } from 'svelte/motion';
 	import { crossfade, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { session } from '$lib/store/session.svelte';
 
 	let isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/about')
 	// svelte-ignore state_referenced_locally
@@ -57,31 +58,31 @@
 				class:Selected={page.url.pathname === '/daily-slash'} 
 				href={resolve('/daily-slash')}
 			>
-				<img src={dailySlashLogoLink} alt="Daily slash" />
+				<img class:incomplete={!session.dailySlashStatus} src={dailySlashLogoLink} alt="Daily slash" />
 			</a>
 			<a 
 				class:Selected={page.url.pathname === '/connections'} 
 				href={resolve('/connections')}
 			>
-				<img src={connectionsLogoLink} alt="Connections" />
+				<img class:incomplete={!session.connectionStatus} src={connectionsLogoLink} alt="Connections" />
 			</a>
 			<a 
 				class:Selected={page.url.pathname === '/guess-the-npc'} 
 				href={resolve('/guess-the-npc')}
 			>
-				<img src={guessTheNpcLogoLink} alt="Guess the NPC" />
+				<img class:incomplete={!session.guessTheNpcStatus} src={guessTheNpcLogoLink} alt="Guess the NPC" />
 			</a>
 			<a 
 				class:Selected={page.url.pathname === '/hangman'} 
 				href={resolve('/hangman')}
 			>
-				<img src={hangmanLogoLink} alt="Hangman" />
+				<img class:incomplete={!session.hangmanStatus} src={hangmanLogoLink} alt="Hangman" />
 			</a>
 			<a 
 				class:Selected={page.url.pathname === '/terratrivia'} 
 				href={resolve('/terratrivia')}
 			>
-				<img src={terraTriviaLogoLink} alt="TerraTrivia" />
+				<img class:incomplete={!session.terratriviaStatus} src={terraTriviaLogoLink} alt="TerraTrivia" />
 			</a>
 		</div>
 	{/if}
@@ -152,5 +153,9 @@
 
 	.links img {
 		width: 40px;
+	}
+
+	.incomplete {
+  		filter: grayscale(100%);
 	}
 </style>

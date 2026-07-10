@@ -51,6 +51,10 @@
 		attempts = res.attempts;
 		finished = res.finished;
 
+		if (finished) {
+			session.hangmanStatus = true;
+		}
+
 		if (attempts <= 0) {
 			audio?.play();
 		}

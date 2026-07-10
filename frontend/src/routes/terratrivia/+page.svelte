@@ -9,6 +9,7 @@
 	import Confetti from '$lib/components/Confetti.svelte';
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
+	import { session } from '$lib/store/session.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -57,6 +58,10 @@
 			if (res.is_correct) {
 				triviaItems.set(res.guess_result.id, res.guess_result);
 				finished = res.finished;
+
+				if (finished) {
+					session.terratriviaStatus = true;
+				}
 
 				chunks = chunks.filter((c) => !selectedChunks.includes(c));
 				selectedChunks = [];

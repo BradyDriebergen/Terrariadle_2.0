@@ -20,31 +20,31 @@
 
 	<ul>
 		<li aria-current={isDailySlashPage}>
-			{#if session.dailySlash}
+			{#if session.dailySlashStatus}
 				<img  src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/daily-slash')}>Daily Slash</a>
 		</li>
 		<li aria-current={isConnectionsPage}>
-			{#if session.connection}
+			{#if session.connectionStatus}
 				<img  src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/connections')}>Connections</a>
 		</li>
 		<li aria-current={isGuessTheNpcPage}>
-			{#if session.guessTheNpc}
+			{#if session.guessTheNpcStatus}
 				<img  src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
 		</li>
 		<li aria-current={isHangmanPage}>
-			{#if session.hangman}
+			{#if session.hangmanStatus}
 				<img  src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
 		<li aria-current={isTerraTriviaPage}>
-			{#if session.terratrivia}
+			{#if session.terratriviaStatus}
 				<img  src="/emojis/red_x.png" alt="Game complete!" />
 			{/if}
 			<a href={resolve('/terratrivia')}>TerraTrivia</a>

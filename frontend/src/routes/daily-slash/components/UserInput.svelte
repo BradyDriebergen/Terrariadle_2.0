@@ -7,6 +7,7 @@
 	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import { page } from '$app/state';
+	import { session } from '$lib/store/session.svelte';
 
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),
@@ -55,6 +56,10 @@
 			guesses = [res.guess_result, ...guesses];
 			finished = res.finished;
 			weapons = weapons.filter((w) => w.id !== weaponId);
+
+			if (finished) {
+				session.dailySlashStatus = true;
+			}
 		} catch (e) {
 			// TODO: handle error here
 			console.error(e);

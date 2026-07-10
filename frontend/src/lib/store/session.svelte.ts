@@ -1,7 +1,7 @@
 export const session = $state({
-  dailySlash: false,
-  connection: false,
-  guessTheNpc: false,
-  hangman: false,
-  terratrivia: false
+  dailySlashStatus: false,
+  connectionStatus: false,
+  guessTheNpcStatus: false,
+  hangmanStatus: false,
+  terratriviaStatus: false
 });
