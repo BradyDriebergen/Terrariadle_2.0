@@ -20,7 +20,7 @@
     - [x] Hangman
     - [x] About
 - [x] Create tabs at the top to navigate through games
-- [ ] Change About section link to sign at the bottom
+- [x] Change About section link to sign at the bottom
 
 **Backend changes**
 - [x] Update database package to use dependency injection
@@ -46,6 +46,7 @@ Terrariadle/
 └── docs/
 
 - [ ] Figure out versioning
+- [ ] Update Github to ignore certain files
 - [ ] Add a new user to Oracle instance
 - [ ] Add .env files to Oracle instance
 - [ ] Reset MongoDB Atlas password for db
@@ -63,17 +64,13 @@ Terrariadle/
     - [ ] Svelte promotions
 - [ ] Add page for contacting support
 - [ ] Add monitoring for better analytics
+- [ ] Add some sort of logging that doesn't bog down my server
 - [ ] Update categories data
     - [ ] Add more categories
     - [ ] Update the options to contain only 4 options
 
 **Future nice to haves:**
 
-**CD/CI changes**
-- [ ] Github cleanup
-    - [ ] Reset commits so no previous history was there
-    - [ ] Implement Github actions
-    - [ ] Configure Github secrets
-    - [ ] Setup container registry
-    - [ ] Verify that flow works from end to end
-
+- [ ] Consider GitHub Actions for automatic deployment
+- [ ] Add a stats screen at the beginning for how many users have guessed
+- [ ] Change cursor to the Terraria cursor (in progress)
