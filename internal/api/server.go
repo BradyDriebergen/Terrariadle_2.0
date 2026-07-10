@@ -16,7 +16,7 @@ type Server struct {
 	guessTheNpc services.GuessTheNpcService
 	hangman     services.HangmanService
 	terraTrivia services.TerraTriviaService
-	sseServer   services.SseStreamService
+	common      services.CommonService
 	broker      domain.GuessCountBroker
 }
 
@@ -28,7 +28,7 @@ func NewServer(
 	guessTheNpc services.GuessTheNpcService,
 	hangman services.HangmanService,
 	terraTrivia services.TerraTriviaService,
-	sseServer services.SseStreamService,
+	sseServer services.CommonService,
 	broker domain.GuessCountBroker,
 ) *Server {
 	baseCtx, cancelBase := context.WithCancel(ctx)
@@ -40,7 +40,7 @@ func NewServer(
 		guessTheNpc: guessTheNpc,
 		hangman:     hangman,
 		terraTrivia: terraTrivia,
-		sseServer:   sseServer,
+		common:      sseServer,
 		broker:      broker,
 	}
 

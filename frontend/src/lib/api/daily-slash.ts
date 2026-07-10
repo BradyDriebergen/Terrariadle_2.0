@@ -4,7 +4,7 @@ import type {
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
 import { ApiError } from '$lib/types/error';
-import { parseJsonSafe } from './shared';
+import { parseJsonSafe } from './utils';
 import type { DropdownListItem } from '$lib/types/shared';
 
 export async function initializeDailySlashGame(
