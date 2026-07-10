@@ -9,8 +9,8 @@
 	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
 	import { checkCategoryGuess, revealConnectionsAnswers } from '$lib/api/connections';
 	import type { PageData } from './$types';
-	import { get } from 'svelte/store';
-	import { userIdStore } from '$lib/store/session';
+	import { page } from '$app/state';
+	import { session } from '$lib/store/session.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -73,14 +73,14 @@
 		loadingGuess = true;
 
 		const guess = options.filter((option) => option.selected).map((option) => option.value);
-		const userId = get(userIdStore);
+		const userId = page.data.userId;
 
 		let guessResult;
 		try {
 			guessResult = await checkCategoryGuess(guess, userId);
 		} catch (e) {
 			loadingGuess = false;
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 			return;
 		}
@@ -90,6 +90,7 @@
 		if (guessResult.finished) {
 			transitioning = true;
 			finished = guessResult.finished;
+			session.connectionStatus = true;
 		}
 
 		if (guessResult.is_correct) {
@@ -113,7 +114,7 @@
 			try {
 				answers = await revealConnectionsAnswers(userId);
 			} catch (e) {
-				// handle error here
+				// TODO: handle error here
 				console.error(e);
 				return;
 			}

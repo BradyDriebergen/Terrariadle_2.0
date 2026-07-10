@@ -6,8 +6,8 @@
 	import type { WeaponGuess } from '$lib/types/daily-slash';
 	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
-	import { get } from 'svelte/store';
-	import { userIdStore } from '$lib/store/session';
+	import { page } from '$app/state';
+	import { session } from '$lib/store/session.svelte';
 
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),
@@ -45,20 +45,23 @@
 			const res = await getWeaponHint(num);
 			hints[num - 1] = { text: res, visible: true };
 		} catch (e: any) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}
 
 	async function submitGuess(weaponId: number) {
 		try {
-			const userId = get(userIdStore);
-			const res = await checkWeaponGuess(userId, weaponId);
+			const res = await checkWeaponGuess(page.data.userId, weaponId);
 			guesses = [res.guess_result, ...guesses];
 			finished = res.finished;
 			weapons = weapons.filter((w) => w.id !== weaponId);
+
+			if (finished) {
+				session.dailySlashStatus = true;
+			}
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}

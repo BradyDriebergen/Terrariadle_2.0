@@ -8,17 +8,17 @@ import (
 	"time"
 )
 
-func (s *Server) CheckHealth(w http.ResponseWriter, r *http.Request) {
+func (s *Server) checkHealth(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (s *Server) GetRemainingTime(w http.ResponseWriter, r *http.Request) {
+func (s *Server) getRemainingTime(w http.ResponseWriter, r *http.Request) {
 	remaining := int(domain.TimeUntilNextMidnight(time.Now()).Seconds())
 
 	writeJSON(w, http.StatusOK, remaining)
 }
 
-func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
+func (s *Server) guessCountStream(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/event-stream")
 	w.Header().Set("Cache-Control", "no-cache")
 	w.Header().Set("Connection", "keep-alive")
@@ -40,7 +40,7 @@ func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 	defer s.broker.Unsubscribe(ch)
 
 	// Ignore error because it's already accounted for
-	initialCount, _ := s.sseServer.GetGuessCount(mode)
+	initialCount, _ := s.common.GetGuessCount(mode)
 	initialEvent := domain.GuessCountEvent{GameMode: mode, Count: initialCount}
 	data, _ := json.Marshal(initialEvent)
 	fmt.Fprintf(w, "data: %s\n\n", data)
@@ -58,5 +58,19 @@ func (s *Server) GuessCountStream(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "data: %s\n\n", data)
 			flusher.Flush()
 		}
+	}
+}
+
+func (s *Server) getUserGameStatuses(w http.ResponseWriter, r *http.Request) {
+	userID, ok := getUserID(r)
+	if !ok {
+		writeError(w, http.StatusBadRequest, "missing user_id")
+		return
+	}
+
+	result := s.common.GetUserFinishedGames(r.Context(), userID)
+
+	if err := writeJSON(w, http.StatusOK, result); err != nil {
+		// Add logger later
 	}
 }

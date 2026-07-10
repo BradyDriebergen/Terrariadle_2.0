@@ -3,23 +3,23 @@
 **Next items needed**
 - [x] Move data to Atlas
 - [x] Change backend to pull from Atlas rather than JSON
-- [ ] Create page for new game
-    - [ ] Plan and Implement TerraTrivia backend for minigame
-    - [ ] Create front-end components for game
-    - [ ] Integrate backend and front-end
+- [x] Create page for new game
+    - [x] Plan and Implement TerraTrivia backend for minigame
+    - [x] Create front-end components for game
+    - [x] Integrate backend and front-end
 - [ ] Update go and npm packages
 - [x] Updating flying enemies in categories and fix 'Fultures'
-- [ ] Seperate Staff/Wand in db
+- [x] Seperate Staff/Wand in db
 
 **Frontend changes**
-- [ ] Go through all the front-end and update it with new knowledge
-    - [ ] Home page
+- [x] Go through all the front-end and update it with new knowledge
+    - [x] Home page
     - [x] Daily Slash
     - [x] Connections
     - [x] Guess the NPC
     - [x] Hangman
-    - [ ] About
-- [ ] Create tabs at the top to navigate through games
+    - [x] About
+- [x] Create tabs at the top to navigate through games
 - [ ] Change About section link to sign at the bottom
 
 **Backend changes**

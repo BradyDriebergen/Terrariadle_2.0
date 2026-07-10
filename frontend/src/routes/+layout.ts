@@ -1,8 +1,13 @@
-// +layout.ts
 import { browser } from '$app/environment';
-import { getOrCreateUserId } from '$lib/api/shared';
+import { getUserGameResults } from '$lib/api/common';
+import { getOrCreateUserId } from '$lib/utils/user-id';
+import type { LayoutLoad } from './$types';
 
-export function load() {
+export const load: LayoutLoad = async ({ fetch }) => {
 	if (!browser) return { userId: null };
-	return { userId: getOrCreateUserId() };
+
+	const userId = getOrCreateUserId();
+	const gameResults = await getUserGameResults(fetch, userId);
+
+	return { gameResults, userId }
 }

@@ -1,5 +1,5 @@
 import { ApiError } from '$lib/types/error';
-import { parseJsonSafe } from './shared';
+import { parseJsonSafe } from './utils';
 import type {
 	GuessTheNpcCheckResult,
 	GuessTheNpcMiniGameResult,

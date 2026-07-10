@@ -5,7 +5,7 @@ import type {
 	ConnectionsWinningData
 } from '$lib/types/connections';
 import { ApiError } from '$lib/types/error';
-import { parseJsonSafe } from './shared';
+import { parseJsonSafe } from './utils';
 
 export async function initializeConnectionsGame(
 	fetchFn: typeof fetch,

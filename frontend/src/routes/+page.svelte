@@ -1,11 +1,17 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import { fly } from 'svelte/transition';
+	import { session } from '$lib/store/session.svelte';
 
-	let { data } = $props();
+	let isDailySlashPage: boolean = $derived(page.url.pathname === '/daily-slash');
+	let isConnectionsPage: boolean = $derived(page.url.pathname === '/connections');
+	let isGuessTheNpcPage: boolean = $derived(page.url.pathname === '/guess-the-npc');
+	let isHangmanPage: boolean = $derived(page.url.pathname === '/hangman');
+	let isTerraTriviaPage: boolean = $derived(page.url.pathname === '/terratrivia');
 </script>
 
-<div>
+<div in:fly={{ y: 50, duration: 500 }}>
 	<p>
 		A Terraria inspired daily puzzle game. <br />
 		Test your Terraria knowledge.
@@ -13,19 +19,34 @@
 	<br />
 
 	<ul>
-		<li aria-current={page.url.pathname === '/daily-slash'}>
+		<li aria-current={isDailySlashPage}>
+			{#if session.dailySlashStatus}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
 			<a href={resolve('/daily-slash')}>Daily Slash</a>
 		</li>
-		<li aria-current={page.url.pathname === '/connections'}>
+		<li aria-current={isConnectionsPage}>
+			{#if session.connectionStatus}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
 			<a href={resolve('/connections')}>Connections</a>
 		</li>
-		<li aria-current={page.url.pathname === '/guess-the-npc'}>
+		<li aria-current={isGuessTheNpcPage}>
+			{#if session.guessTheNpcStatus}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
 			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
 		</li>
-		<li aria-current={page.url.pathname === '/hangman'}>
+		<li aria-current={isHangmanPage}>
+			{#if session.hangmanStatus}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
 			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
-		<li aria-current={page.url.pathname === '/terratrivia'}>
+		<li aria-current={isTerraTriviaPage}>
+			{#if session.terratriviaStatus}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
 			<a href={resolve('/terratrivia')}>TerraTrivia</a>
 		</li>
 	</ul>
@@ -61,5 +82,9 @@
 	a:hover {
 		transform: scale(1.1) rotate(-3deg); /* grows and tilts left */
 		color: yellow;
+	}
+
+	img {
+		position: absolute;
 	}
 </style>

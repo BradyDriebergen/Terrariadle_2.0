@@ -4,7 +4,7 @@ import type {
 	TerraTriviaSession,
 	TerraTriviaWinningData
 } from '$lib/types/terratrivia';
-import { parseJsonSafe } from './shared';
+import { parseJsonSafe } from './utils';
 
 export async function initializeTerraTriviaGame(
 	fetchFn: typeof fetch,

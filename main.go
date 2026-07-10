@@ -33,7 +33,7 @@ type gameServices struct {
 	guessTheNpc *services.GuessTheNpc
 	hangman     *services.Hangman
 	terraTrivia *services.TerraTrivia
-	sseService  *services.SseStream
+	sseService  *services.Common
 }
 
 func main() {
@@ -141,7 +141,7 @@ func createServices(s stores) gameServices {
 		guessTheNpc: services.NewGuessTheNpcGame(s.answer, s.guessCount, s.catalog, s.user),
 		hangman:     services.NewHangmanGame(s.answer, s.guessCount, s.catalog, s.user),
 		terraTrivia: services.NewTerraTriviaGame(s.answer, s.guessCount, s.catalog, s.user),
-		sseService:  services.NewSseStream(s.guessCount),
+		sseService:  services.NewSseStream(s.guessCount, s.user),
 	}
 }
 

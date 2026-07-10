@@ -1,22 +1,21 @@
 <script lang="ts">
 	import { checkTriviaQuestionGuess } from '$lib/api/terratrivia';
-	import { userIdStore } from '$lib/store/session';
 	import type { TriviaItem } from '$lib/types/terratrivia.js';
 	import { onDestroy } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
-	import { get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 	import WinningCard from './components/WinningCard.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
 	import Confetti from '$lib/components/Confetti.svelte';
+	import type { PageData } from './$types';
+	import { page } from '$app/state';
+	import { session } from '$lib/store/session.svelte';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	let finished: boolean = $state(false);
 	let chunks: string[] = $state([]);
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
-
-	$inspect(chunks);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -54,18 +53,21 @@
 		if (!input) return;
 
 		try {
-			const userId = get(userIdStore);
-			const res = await checkTriviaQuestionGuess(userId, input);
+			const res = await checkTriviaQuestionGuess(page.data.userId, input);
 
 			if (res.is_correct) {
 				triviaItems.set(res.guess_result.id, res.guess_result);
 				finished = res.finished;
 
+				if (finished) {
+					session.terratriviaStatus = true;
+				}
+
 				chunks = chunks.filter((c) => !selectedChunks.includes(c));
 				selectedChunks = [];
 			}
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}
@@ -120,7 +122,7 @@
 					}}
 					disabled={selectedChunks.length === 0}
 				>
-					←
+					<img src="/emojis/backspace.png" alt="backspace" />
 				</button>
 			</div>
 		{/if}
@@ -228,10 +230,13 @@
 	}
 
 	.input-box button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background-color: var(--color-lightblue);
 		border-radius: 8px;
 		border: 2px solid black;
-		padding: 4px 8px 2px;
+		padding: 6px 8px;
 		transition: background-color 0.1s ease;
 	}
 

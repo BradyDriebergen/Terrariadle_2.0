@@ -1,11 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { checkNpcGuess } from '$lib/api/guess-the-npc';
 	import Dropdown from '$lib/components/Dropdown.svelte';
-	import { userIdStore } from '$lib/store/session';
+	import { session } from '$lib/store/session.svelte';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import { cubicInOut } from 'svelte/easing';
-	import { get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 
 	let {
@@ -25,13 +25,16 @@
 
 	async function submitGuess(npcId: number) {
 		try {
-			const userId = get(userIdStore);
-			const res = await checkNpcGuess(userId, npcId);
+			const res = await checkNpcGuess(page.data.userId, npcId);
 			guesses = [res.guess, ...guesses];
 			finished = res.finished;
 			npcs = npcs.filter((w) => w.id !== npcId);
+
+			if (finished) {
+				session.guessTheNpcStatus = true;
+			}
 		} catch (e) {
-			// handle error here
+			// TODO: handle error here
 			console.error(e);
 		}
 	}

@@ -4,12 +4,19 @@
 	import '../app.css';
 	import { navigating, page } from '$app/state';
 	import { onMount } from 'svelte';
-	import { initSession } from '$lib/store/session';
+	import type { LayoutData } from './$types';
+	import { session } from '$lib/store/session.svelte';
 
-	let { children } = $props();
+	let { data, children }: { data: LayoutData; children: any } = $props();
 
 	onMount(() => {
-		initSession();
+		if (data.gameResults) {
+			session.dailySlashStatus = data.gameResults.daily_slash;
+			session.connectionStatus = data.gameResults.connections;
+			session.guessTheNpcStatus = data.gameResults.guess_the_npc;
+			session.hangmanStatus = data.gameResults.hangman;
+			session.terratriviaStatus = data.gameResults.terratrivia;
+		}
 	});
 
 	let title: string = $state(getTitle(page.url.pathname));
