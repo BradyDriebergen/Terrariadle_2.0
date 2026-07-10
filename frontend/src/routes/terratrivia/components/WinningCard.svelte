@@ -1,25 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { getTerraTriviaWinningData } from '$lib/api/terratrivia';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { userIdStore } from '$lib/store/session';
+	import { session } from '$lib/store/session.svelte';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { onMount } from 'svelte';
-	import { get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
-
-	// let {
-	// 	attempts = 0
-	// }: {
-	// 	attempts: number;
-	// } = $props();
 
 	let position: number = $state(0);
 	let playerCount: number = $state(0);
 
 	onMount(async () => {
-		const userId = get(userIdStore);
-		const winningData = await getTerraTriviaWinningData(userId);
+		const winningData = await getTerraTriviaWinningData(page.data.userId);
 
 		position = winningData.position;
 	});

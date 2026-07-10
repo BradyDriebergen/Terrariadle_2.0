@@ -1,23 +1,20 @@
 <script lang="ts">
 	import { checkTriviaQuestionGuess } from '$lib/api/terratrivia';
-	import { userIdStore } from '$lib/store/session';
 	import type { TriviaItem } from '$lib/types/terratrivia.js';
 	import { onDestroy } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
-	import { get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 	import WinningCard from './components/WinningCard.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
 	import Confetti from '$lib/components/Confetti.svelte';
 	import type { PageData } from './$types';
+	import { page } from '$app/state';
 
 	let { data }: { data: PageData } = $props();
 
 	let finished: boolean = $state(false);
 	let chunks: string[] = $state([]);
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
-
-	$inspect(chunks);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -55,8 +52,7 @@
 		if (!input) return;
 
 		try {
-			const userId = get(userIdStore);
-			const res = await checkTriviaQuestionGuess(userId, input);
+			const res = await checkTriviaQuestionGuess(page.data.userId, input);
 
 			if (res.is_correct) {
 				triviaItems.set(res.guess_result.id, res.guess_result);

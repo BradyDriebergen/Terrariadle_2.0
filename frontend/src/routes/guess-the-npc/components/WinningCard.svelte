@@ -1,13 +1,13 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { checkNpcName, getNpcWinningData } from '$lib/api/guess-the-npc';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { userIdStore } from '$lib/store/session';
+	import { session } from '$lib/store/session.svelte';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
-	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
 
 	let { npc }: { npc: NpcGuess } = $props();
@@ -20,8 +20,7 @@
 	let correctName = $state('');
 
 	onMount(async () => {
-		const userId = get(userIdStore);
-		const winningData = await getNpcWinningData(userId);
+		const winningData = await getNpcWinningData(page.data.userId);
 
 		position = winningData.position;
 		names = winningData.names;
@@ -38,8 +37,7 @@
 
 	async function guessName(name: string) {
 		try {
-			const userId = get(userIdStore);
-			const res = await checkNpcName(userId, name);
+			const res = await checkNpcName(page.data.userId, name);
 
 			guessedName = res.guessed_name;
 			correctName = res.correct_name;

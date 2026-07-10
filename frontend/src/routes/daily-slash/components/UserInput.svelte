@@ -6,8 +6,7 @@
 	import type { WeaponGuess } from '$lib/types/daily-slash';
 	import { checkWeaponGuess, getWeaponHint } from '$lib/api/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
-	import { get } from 'svelte/store';
-	import { userIdStore } from '$lib/store/session';
+	import { page } from '$app/state';
 
 	let {
 		guesses = $bindable<WeaponGuess[]>([]),
@@ -52,8 +51,7 @@
 
 	async function submitGuess(weaponId: number) {
 		try {
-			const userId = get(userIdStore);
-			const res = await checkWeaponGuess(userId, weaponId);
+			const res = await checkWeaponGuess(page.data.userId, weaponId);
 			guesses = [res.guess_result, ...guesses];
 			finished = res.finished;
 			weapons = weapons.filter((w) => w.id !== weaponId);

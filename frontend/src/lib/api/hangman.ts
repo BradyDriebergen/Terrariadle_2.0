@@ -1,6 +1,6 @@
 import { ApiError } from '$lib/types/error';
 import type { HangmanCheckResult, HangmanSession, HangmanWinningData } from '$lib/types/hangman';
-import { parseJsonSafe } from './shared';
+import { parseJsonSafe } from './utils';
 
 export async function initializeHangmanGame(
 	fetchFn: typeof fetch,

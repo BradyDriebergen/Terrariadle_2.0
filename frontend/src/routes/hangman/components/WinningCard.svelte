@@ -1,14 +1,13 @@
 <script lang="ts">
 	import Confetti from '$lib/components/Confetti.svelte';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { userIdStore } from '$lib/store/session';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
 	import { onMount } from 'svelte';
-	import { get } from 'svelte/store';
 	import { scale } from 'svelte/transition';
 	import { getHangmanWinningData } from '$lib/api/hangman';
 	import { subscribeToPlayerCount } from '$lib/api/common';
+	import { page } from '$app/state';
 
 	let { attempts } = $props();
 
@@ -18,8 +17,7 @@
 	let position: number = $state(0);
 
 	onMount(async () => {
-		const userId = get(userIdStore);
-		const winningData = await getHangmanWinningData(userId);
+		const winningData = await getHangmanWinningData(page.data.userId);
 
 		position = winningData.position;
 		name = winningData.enemy_name;

@@ -5,10 +5,10 @@
 	import WinningCard from './components/WinningCard.svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import type { PageData } from './$types';
-	import { get } from 'svelte/store';
-	import { userIdStore } from '$lib/store/session';
 	import { checkEnemyGuess } from '$lib/api/hangman';
 	import type { HangmanGuess } from '$lib/types/hangman';
+	import { session } from '$lib/store/session.svelte';
+	import { page } from '$app/state';
 
 	let { data }: { data: PageData } = $props();
 
@@ -39,8 +39,7 @@
 	async function onKeyPressed(letter: string) {
 		let res;
 		try {
-			const userId = get(userIdStore);
-			res = await checkEnemyGuess(userId, letter);
+			res = await checkEnemyGuess(page.data.userId, letter);
 		} catch (e) {
 			// TODO: handle error here
 			console.error(e);

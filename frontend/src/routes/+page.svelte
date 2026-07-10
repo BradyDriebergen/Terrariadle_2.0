@@ -2,9 +2,7 @@
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
 	import { fly } from 'svelte/transition';
-	import type { PageData } from './$types';
-
-	let { data }: { data: PageData } = $props();
+	import { session } from '$lib/store/session.svelte';
 
 	let isDailySlashPage: boolean = $derived(page.url.pathname === '/daily-slash');
 	let isConnectionsPage: boolean = $derived(page.url.pathname === '/connections');
@@ -22,44 +20,34 @@
 
 	<ul>
 		<li aria-current={isDailySlashPage}>
-			<a 
-				href={resolve('/daily-slash')} 
-				class:strikethrough={data.gameResults?.daily_slash}
-			>
-				Daily Slash
-			</a>
+			{#if session.dailySlash}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
+			<a href={resolve('/daily-slash')}>Daily Slash</a>
 		</li>
 		<li aria-current={isConnectionsPage}>
-			<a 
-				href={resolve('/connections')} 
-				class:strikethrough={data.gameResults?.connections}
-			>
-				Connections
-			</a>
+			{#if session.connection}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
+			<a href={resolve('/connections')}>Connections</a>
 		</li>
 		<li aria-current={isGuessTheNpcPage}>
-			<a 
-				href={resolve('/guess-the-npc')} 
-				class:strikethrough={data.gameResults?.guess_the_npc}
-			>
-				Guess The NPC
-			</a>
+			{#if session.guessTheNpc}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
+			<a href={resolve('/guess-the-npc')}>Guess The NPC</a>
 		</li>
 		<li aria-current={isHangmanPage}>
-			<a 
-				href={resolve('/hangman')} 
-				class:strikethrough={data.gameResults?.hangman}
-			>
-				Hangman
-			</a>
+			{#if session.hangman}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
+			<a href={resolve('/hangman')}>Hangman</a>
 		</li>
 		<li aria-current={isTerraTriviaPage}>
-			<a 
-				href={resolve('/terratrivia')} 
-				class:strikethrough={data.gameResults?.terratrivia}
-			>
-				TerraTrivia
-			</a>
+			{#if session.terratrivia}
+				<img  src="/emojis/red_x.png" alt="Game complete!" />
+			{/if}
+			<a href={resolve('/terratrivia')}>TerraTrivia</a>
 		</li>
 	</ul>
 </div>
@@ -96,7 +84,7 @@
 		color: yellow;
 	}
 
-	.strikethrough {
-		text-decoration: line-through;
+	img {
+		position: absolute;
 	}
 </style>

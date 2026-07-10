@@ -9,8 +9,7 @@
 	import type { CategoryOption, SolvedCategory } from '$lib/types/connections';
 	import { checkCategoryGuess, revealConnectionsAnswers } from '$lib/api/connections';
 	import type { PageData } from './$types';
-	import { get } from 'svelte/store';
-	import { userIdStore } from '$lib/store/session';
+	import { page } from '$app/state';
 
 	let { data }: { data: PageData } = $props();
 
@@ -73,7 +72,7 @@
 		loadingGuess = true;
 
 		const guess = options.filter((option) => option.selected).map((option) => option.value);
-		const userId = get(userIdStore);
+		const userId = page.data.userId;
 
 		let guessResult;
 		try {
