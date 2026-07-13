@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly, scale } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	function handleScroll(event: MouseEvent, id: string) {
 		event.preventDefault();
@@ -47,7 +47,7 @@
 		>, and
 		<a class="link" href="https://puzzles.usatoday.com/" target="_blank" rel="noopener noreferrer"
 			>Crossword</a
-		>. I wanted to make a version of these daily guessing games based on my all-time favorite game.
+		>. I wanted to make a version of these daily puzzles based on my all-time favorite game.
 	</p>
 
 	<p>
