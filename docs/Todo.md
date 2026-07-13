@@ -1,6 +1,7 @@
 ## Next Steps for final product
 
 **Next items needed**
+
 - [x] Move data to Atlas
 - [x] Change backend to pull from Atlas rather than JSON
 - [x] Create page for new game
@@ -12,18 +13,20 @@
 - [x] Seperate Staff/Wand in db
 
 **Frontend changes**
+
 - [x] Go through all the front-end and update it with new knowledge
     - [x] Home page
     - [x] Daily Slash
     - [x] Connections
     - [x] Guess the NPC
     - [x] Hangman
-    - [ ] TerraTrivia
+    - [x] TerraTrivia
     - [x] About
 - [x] Create tabs at the top to navigate through games
 - [x] Change About section link to sign at the bottom
 
 **Backend changes**
+
 - [x] Update database package to use dependency injection
 - [x] Split up `server` package for `server` + `service`
 - [x] Create `domain` package for shared types
@@ -34,6 +37,7 @@
 - [x] Go through backend and finalize structure
 
 **Hosting steps**
+
 - [ ] Add static adapter to Sveltekit
 - [x] Reformat the site file structure:
 
@@ -58,6 +62,7 @@ Terrariadle/
 - [ ] Reset MongoDB Atlas password for db
 
 **Finishing steps**
+
 - [ ] Update documentation and wiki
 - [ ] Market the site:
     - [ ] Redit posts
