@@ -38,7 +38,7 @@
 
 **Hosting steps**
 
-- [ ] Add static adapter to Sveltekit
+- [x] Add static adapter to Sveltekit
 - [x] Reformat the site file structure:
 
 Terrariadle/
