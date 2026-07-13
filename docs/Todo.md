@@ -7,7 +7,7 @@
     - [x] Plan and Implement TerraTrivia backend for minigame
     - [x] Create front-end components for game
     - [x] Integrate backend and front-end
-- [ ] Update go and npm packages
+- [x] Update go and npm packages
 - [x] Updating flying enemies in categories and fix 'Fultures'
 - [x] Seperate Staff/Wand in db
 
@@ -18,6 +18,7 @@
     - [x] Connections
     - [x] Guess the NPC
     - [x] Hangman
+    - [ ] TerraTrivia
     - [x] About
 - [x] Create tabs at the top to navigate through games
 - [x] Change About section link to sign at the bottom
@@ -45,6 +46,7 @@ Terrariadle/
 ├── Makefile
 └── docs/
 
+- [ ] Embed frontend build in go binary
 - [ ] Figure out versioning
 - [ ] Update Github to ignore certain files
 - [ ] Add a new user to Oracle instance
