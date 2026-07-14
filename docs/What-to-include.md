@@ -74,3 +74,17 @@ This is where you explain the _why_ behind decisions a casual reader might quest
 <!-- 3-5 screenshots, one per game mode ideally -->
 
 ---
+
+Extra things I should talk about:
+
+- versioning
+- embedding
+- building
+- hosting
+- proxy-ing
+- svelte static adapter / rendering html
+
+Include a document on how to reset version number:
+
+git tag v2.0.0
+git push origin v2.0.0

@@ -15,6 +15,7 @@ import (
 	"terrariadle-backend/internal/repo"
 	"terrariadle-backend/internal/services"
 	"terrariadle-backend/internal/store"
+	"terrariadle-backend/internal/web"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -35,6 +36,9 @@ type gameServices struct {
 	terraTrivia *services.TerraTrivia
 	sseService  *services.Common
 }
+
+// Variable assigned by build flag for version number provided by GitHub
+var version = "dev"
 
 func main() {
 	uri := mustLoadURI()
@@ -68,6 +72,7 @@ func main() {
 		svc.terraTrivia,
 		svc.sseService,
 		sseBroker,
+		web.Assets(),
 	)
 	go func() {
 		if err := srv.Start(); err != nil && !errors.Is(err, http.ErrServerClosed) {
@@ -75,7 +80,7 @@ func main() {
 		}
 	}()
 
-	log.Println("Server started listening on port :8080")
+	log.Printf("Starting Terrariadle version %s, listening on port :8080\n", version)
 
 	// On quit, shuts down the app cleanly
 	quit := make(chan os.Signal, 1)
