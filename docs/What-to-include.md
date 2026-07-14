@@ -82,6 +82,7 @@ Extra things I should talk about:
 - building
 - hosting
 - proxy-ing
+- svelte static adapter / rendering html
 
 Include a document on how to reset version number:
 
