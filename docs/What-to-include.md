@@ -74,3 +74,11 @@ This is where you explain the _why_ behind decisions a casual reader might quest
 <!-- 3-5 screenshots, one per game mode ideally -->
 
 ---
+
+Extra things I should talk about:
+
+- versioning
+- embedding
+- building
+- hosting
+- proxy-ing

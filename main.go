@@ -37,6 +37,9 @@ type gameServices struct {
 	sseService  *services.Common
 }
 
+// Variable assigned by build flag for version number provided by GitHub
+var version = "dev"
+
 func main() {
 	uri := mustLoadURI()
 
@@ -77,7 +80,7 @@ func main() {
 		}
 	}()
 
-	log.Println("Server started listening on port :8080")
+	log.Printf("Starting Terrariadle version %s, listening on port :8080\n", version)
 
 	// On quit, shuts down the app cleanly
 	quit := make(chan os.Signal, 1)
