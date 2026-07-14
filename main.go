@@ -15,6 +15,7 @@ import (
 	"terrariadle-backend/internal/repo"
 	"terrariadle-backend/internal/services"
 	"terrariadle-backend/internal/store"
+	"terrariadle-backend/internal/web"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -68,6 +69,7 @@ func main() {
 		svc.terraTrivia,
 		svc.sseService,
 		sseBroker,
+		web.Assets(),
 	)
 	go func() {
 		if err := srv.Start(); err != nil && !errors.Is(err, http.ErrServerClosed) {

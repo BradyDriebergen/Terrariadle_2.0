@@ -2,6 +2,7 @@ package api
 
 import (
 	"context"
+	"io/fs"
 	"net"
 	"net/http"
 	"terrariadle-backend/internal/domain"
@@ -18,6 +19,7 @@ type Server struct {
 	terraTrivia services.TerraTriviaService
 	common      services.CommonService
 	broker      domain.GuessCountBroker
+	frontend    fs.FS
 }
 
 func NewServer(
@@ -30,6 +32,7 @@ func NewServer(
 	terraTrivia services.TerraTriviaService,
 	sseServer services.CommonService,
 	broker domain.GuessCountBroker,
+	frontend fs.FS,
 ) *Server {
 	baseCtx, cancelBase := context.WithCancel(ctx)
 
@@ -42,6 +45,7 @@ func NewServer(
 		terraTrivia: terraTrivia,
 		common:      sseServer,
 		broker:      broker,
+		frontend:    frontend,
 	}
 
 	s.httpServer = &http.Server{

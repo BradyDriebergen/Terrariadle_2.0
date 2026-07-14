@@ -1,6 +1,10 @@
 package api
 
-import "net/http"
+import (
+	"io/fs"
+	"net/http"
+	"strings"
+)
 
 func (s *Server) newMux() http.Handler {
 	mux := http.NewServeMux()
@@ -12,7 +16,23 @@ func (s *Server) newMux() http.Handler {
 	s.registerHangmanRoutes(mux)
 	s.registerTerraTriviaRoutes(mux)
 
+	mux.Handle("/", s.spaHandler())
+
 	return withCORS(mux)
+}
+
+func (s *Server) spaHandler() http.Handler {
+	fileServer := http.FileServer(http.FS(s.frontend))
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		path := strings.TrimPrefix(r.URL.Path, "/")
+		if path == "" {
+			path = "index.html"
+		}
+		if _, err := fs.Stat(s.frontend, path); err != nil {
+			r.URL.Path = "/" // fall back to index.html for client-side routes
+		}
+		fileServer.ServeHTTP(w, r)
+	})
 }
 
 func (s *Server) registerCommonRoutes(mux *http.ServeMux) {
