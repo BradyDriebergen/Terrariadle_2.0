@@ -77,7 +77,7 @@ This is where you explain the _why_ behind decisions a casual reader might quest
 
 Extra things I should talk about:
 
-- versioning
+- versioning / branch protection
 - embedding
 - building
 - hosting
