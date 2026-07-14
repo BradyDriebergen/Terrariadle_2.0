@@ -82,3 +82,8 @@ Extra things I should talk about:
 - building
 - hosting
 - proxy-ing
+
+Include a document on how to reset version number:
+
+git tag v2.0.0
+git push origin v2.0.0
