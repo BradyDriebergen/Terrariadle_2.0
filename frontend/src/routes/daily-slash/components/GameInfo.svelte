@@ -25,7 +25,7 @@
 
 	<img
 		style="border-color: {colors[prevWeapon?.rarity as Rarity]}"
-		src={`/weapons/${prevWeapon?.path}`}
+		src={`/weapons${prevWeapon?.path}`}
 		alt="Previous weapon"
 	/>
 	<p style="color: {colors[prevWeapon?.rarity as Rarity]}">{prevWeapon?.name}</p>

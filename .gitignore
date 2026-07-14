@@ -6,3 +6,6 @@ DailyReset.js
 
 # Mac specific
 .DS_Store
+
+/internal/web/build
+/bin

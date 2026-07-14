@@ -1,11 +1,11 @@
-import { browser } from '$app/environment';
 import { getUserGameResults } from '$lib/api/common';
 import { getOrCreateUserId } from '$lib/utils/user-id';
 import type { LayoutLoad } from './$types';
 
-export const load: LayoutLoad = async ({ fetch }) => {
-	if (!browser) return { userId: null };
+// prevents server side rendering
+export const ssr = false;
 
+export const load: LayoutLoad = async ({ fetch }) => {
 	const userId = getOrCreateUserId();
 	const gameResults = await getUserGameResults(fetch, userId);
 

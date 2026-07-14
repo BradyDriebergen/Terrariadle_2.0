@@ -1,0 +1,39 @@
+name: Release
+
+on:
+    pull_request:
+        types: [closed]
+        branches: [main]
+
+jobs:
+    tag-release:
+        if: github.event.pull_request.merged == true
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Determine version number from label
+              id: version
+              run: |
+                  labels="${{ join(github.event.pull_request.labels.*.name, ',') }}"
+                  if [[ "$labels" == *"version:major"* ]]; then
+                    echo "level=major" >> "$GITHUB_OUTPUT"
+                  elif [[ "$labels" == *"version:minor"* ]]; then
+                    echo "level=minor" >> "$GITHUB_OUTPUT"
+                  elif [[ "$labels" == *"version:patch"* ]]; then
+                    echo "level=patch" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "level=none" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Update and push tag
+              if: steps.version.outputs.level != 'none'
+              uses: anothrNick/github-tag-action@1.71.0
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  WITH_V: true
+                  DEFAULT_BUMP: ${{ steps.version.outputs.level }}

@@ -1,11 +1,7 @@
 build:
-	echo "Hello World!"
+	cd frontend && npm run build
+	cp -r frontend/build internal/web/build
+	go build -ldflags "-X main.version=$(git describe --tags --always --dirty)" -o bin/terrariadle .
 
-format:
-	cd frontend && npm run format && npm run lint -- --fix
-
-frontend-dev:
-	cd frontend && npm run dev -- --open
-
-backend-dev:
-	cd backend/cmd && go run api/main.go
+run:
+	./bin/terrariadle
