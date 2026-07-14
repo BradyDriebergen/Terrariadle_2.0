@@ -3,19 +3,23 @@
 </script>
 
 <footer>
-	<a href="https://x.com/terrariadle" target="_blank" rel="noopener noreferrer">
-		<img class="icon" src="/logos/x_logo.png" alt="X link" title="x.com" />
-	</a>
-	<a href={resolve('/about')}>
-		<img class="sign" src="/logos/terraria_sign.png" alt="About/help" title="How to play" />
-	</a>
-	<a href="https://ko-fi.com/bytebeard" target="_blank" rel="noopener noreferrer">
-		<img class="icon" src="/logos/kofi_logo.png" alt="Kofi link" title="ko-fi.com" />
-	</a>
+	<div class="links">
+		<a href="https://x.com/terrariadle" target="_blank" rel="noopener noreferrer">
+			<img class="icon" src="/logos/x_logo.png" alt="X link" title="x.com" />
+		</a>
+		<a href={resolve('/about')}>
+			<img class="sign" src="/logos/terraria_sign.png" alt="About/help" title="How to play" />
+		</a>
+		<a href="https://ko-fi.com/bytebeard" target="_blank" rel="noopener noreferrer">
+			<img class="icon" src="/logos/kofi_logo.png" alt="Kofi link" title="ko-fi.com" />
+		</a>
+	</div>
+
+	<p class="version">{__APP_VERSION__}</p>
 </footer>
 
 <style>
-	footer {
+	.links {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -36,5 +40,9 @@
 	.icon:hover,
 	.sign:hover {
 		transform: scale(1.05);
+	}
+
+	.version {
+		font-size: 14px;
 	}
 </style>
