@@ -51,7 +51,7 @@ Terrariadle/
 └── docs/
 
 - [x] Embed frontend build in go binary
-- [ ] Figure out versioning
+- [x] Figure out versioning
 - [ ] Update Github to ignore certain files
 - [ ] Add a new user to Oracle instance
 - [ ] Add .env files to Oracle instance
