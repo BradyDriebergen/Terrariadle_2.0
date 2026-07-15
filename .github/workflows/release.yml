@@ -30,10 +30,62 @@ jobs:
                     echo "level=none" >> "$GITHUB_OUTPUT"
                   fi
 
-            - name: Update and push tag
+            - name: Bump and push tag
               if: steps.version.outputs.level != 'none'
-              uses: anothrNick/github-tag-action@1.71.0
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  WITH_V: true
-                  DEFAULT_BUMP: ${{ steps.version.outputs.level }}
+                  BUMP_LEVEL: ${{ steps.version.outputs.level }}
+              run: |
+                  set -euo pipefail
+
+                  # Make sure we have all tags, not just what checkout grabbed by default.
+                  git fetch --tags
+
+                  # Find the latest tag by actual semver value (not alphabetical,
+                  # not tag-creation date). Falls back to v0.0.0 if no tags exist yet.
+                  latest=$(git tag --list 'v*' --sort=-v:refname | head -n1)
+                  latest=${latest:-v0.0.0}
+
+                  echo "Latest tag: $latest"
+
+                  # Strip leading "v" and split into major/minor/patch.
+                  ver="${latest#v}"
+                  major=$(echo "$ver" | cut -d. -f1)
+                  minor=$(echo "$ver" | cut -d. -f2)
+                  patch=$(echo "$ver" | cut -d. -f3)
+
+                  case "$BUMP_LEVEL" in
+                    major)
+                      major=$((major + 1))
+                      minor=0
+                      patch=0
+                      ;;
+                    minor)
+                      minor=$((minor + 1))
+                      patch=0
+                      ;;
+                    patch)
+                      patch=$((patch + 1))
+                      ;;
+                    *)
+                      echo "Unknown bump level: $BUMP_LEVEL" >&2
+                      exit 1
+                      ;;
+                  esac
+
+                  new_tag="v${major}.${minor}.${patch}"
+                  echo "New tag: $new_tag"
+
+                  # Guard against the (unlikely, but possible) case where this tag
+                  # already exists, e.g. from a manual override done earlier.
+                  if git rev-parse "$new_tag" >/dev/null 2>&1; then
+                    echo "Tag $new_tag already exists, aborting." >&2
+                    exit 1
+                  fi
+
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git tag -a "$new_tag" -m "Release $new_tag"
+                  git push origin "$new_tag"
+
+                  echo "Pushed $new_tag"
