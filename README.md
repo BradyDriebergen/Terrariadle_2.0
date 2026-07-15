@@ -90,6 +90,3 @@ More information on what I'm adding can currently be found in `/docs/Todo.md`.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 _Terrariadle is a fan project and is not affiliated with Re-Logic or the official Terraria game._
-
-patch test
-minor test
