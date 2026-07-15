@@ -4,37 +4,37 @@ During development, it's important to test that all the API calls work properly 
 
 _Note, some endpoints won't work on their own. Most of them require a user to be created in the database. This can be done by calling any of the subsequent `/initialize-game` endpoints. Error messages are provided in the endpoint responses that require a user to be created.`_
 
-### Common Handlers
+### Common Endpoints
 
 ---
 
-Health handler:
+Health check:
 
 ```
 curl -i -X GET http://localhost:8080/api/health
 ```
 
-Remaining time handler:
+Remaining time:
 
 ```
 curl -i -X GET http://localhost:8080/api/remaining-time
 ```
 
-User game result handler:
+User's game results:
 
 ```
 curl -i -X GET "http://localhost:8080/api/finished-games?user_id=123"
 ```
 
-## Daily Slash Tests
+## Daily Slash Endpoints
 
-Daily-slash initialize game handler:
+Daily-slash initialize game:
 
 ```
 curl -i -X GET "http://localhost:8080/api/daily-slash/initialize-game?user_id=123"
 ```
 
-Daily-slash get search weapons:
+Daily-slash get searchable weapons:
 
 ```
 curl -i -X GET "http://localhost:8080/api/daily-slash/search-items"
@@ -60,15 +60,15 @@ Daily-slash winning data:
 curl -i -X GET "http://localhost:8080/api/daily-slash/winning-data?user_id=123"
 ```
 
-Daily-slash player guess count endpoint:
+Daily-slash player guess count (SSE):
 
 ```
 curl -i -X GET "http://localhost:8080/api/guess-count?mode=daily-slash"
 ```
 
-## Connections Tests
+## Connections Endpoints
 
-Connections initialize game handler:
+Connections initialize game:
 
 ```
 curl -i -X GET "http://localhost:8080/api/connections/initialize-game?user_id=123"
@@ -96,15 +96,21 @@ Connections winning data:
 curl -i -X GET "http://localhost:8080/api/connections/winning-data?user_id=123"
 ```
 
-## Guess the NPC Tests
+Connections player guess count (SSE):
 
-Guess the NPC initialize game handler:
+```
+curl -i -X GET "http://localhost:8080/api/guess-count?mode=connections"
+```
+
+## Guess the NPC Endpoints
+
+Guess the NPC initialize game:
 
 ```
 curl -i -X GET "http://localhost:8080/api/guess-the-npc/initialize-game?user_id=123"
 ```
 
-Guess the NPC get search npcs:
+Guess the NPC get searchable NPCs:
 
 ```
 curl -i -X GET "http://localhost:8080/api/guess-the-npc/search-items"
@@ -132,9 +138,15 @@ curl -X POST http://localhost:8080/api/guess-the-npc/check-name-guess \
  -d '{"user_id": "123", "guess": "Agnew"}'
 ```
 
-## Hangman Tests
+Guess the NPC player guess count (SSE):
 
-Hangman initialize game handler:
+```
+curl -i -X GET "http://localhost:8080/api/guess-count?mode=guess-the-npc"
+```
+
+## Hangman Endpoints
+
+Hangman initialize game:
 
 ```
 curl -i -X GET "http://localhost:8080/api/hangman/initialize-game?user_id=123"
@@ -154,9 +166,15 @@ Hangman winning data:
 curl -i -X GET "http://localhost:8080/api/hangman/winning-data?user_id=123"
 ```
 
-## TerraTrivia Tests
+Hangman player guess count (SSE):
 
-TerraTrivia initialize game handler:
+```
+curl -i -X GET "http://localhost:8080/api/guess-count?mode=hangman"
+```
+
+## TerraTrivia Endpoints
+
+TerraTrivia initialize game:
 
 ```
 curl -i -X GET "http://localhost:8080/api/terratrivia/initialize-game?user_id=123"
@@ -174,4 +192,10 @@ TerraTrivia winning data:
 
 ```
 curl -i -X GET "http://localhost:8080/api/terratrivia/winning-data?user_id=123"
+```
+
+TerraTrivia player guess count (SSE):
+
+```
+curl -i -X GET "http://localhost:8080/api/guess-count?mode=terratrivia"
 ```
