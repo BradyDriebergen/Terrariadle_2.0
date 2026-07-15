@@ -86,5 +86,8 @@ Extra things I should talk about:
 
 Include a document on how to reset version number:
 
+git tag -d v2.0.0
+git push origin :refs/tags/v2.0.0 # deletes it from remote
+
 git tag v2.0.0
 git push origin v2.0.0
