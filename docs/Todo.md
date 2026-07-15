@@ -41,6 +41,7 @@
 - [x] Add static adapter to Sveltekit
 - [x] Reformat the site file structure:
 
+```
 Terrariadle/
 ├── main.go
 ├── internal/
@@ -49,6 +50,7 @@ Terrariadle/
 ├── go.sum
 ├── Makefile
 └── docs/
+```
 
 - [x] Embed frontend build in go binary
 - [x] Figure out versioning
@@ -63,21 +65,23 @@ Terrariadle/
 
 **Finishing steps**
 
-- [ ] Update documentation and wiki
+- [ ] Update documentation ~~and wiki~~
 - [ ] Market the site:
     - [ ] Redit posts
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
-- [ ] Add page for contacting support
-- [ ] Add monitoring for better analytics
-- [ ] Add some sort of logging that doesn't bog down my server
-- [ ] Update categories data
-    - [ ] Add more categories
-    - [ ] Update the options to contain only 4 options
 
 **Future nice to haves:**
 
 - [ ] Consider GitHub Actions for automatic deployment
-- [ ] Add a stats screen at the beginning for how many users have guessed
+- [ ] Add a stats screen at the landing page for how many users have guessed
 - [ ] Change cursor to the Terraria cursor (in progress)
+- [ ] Update categories data
+    - [ ] Add more categories
+    - [ ] Update the options to contain only 4 options
+- [ ] Add page for contacting support
+- [ ] Add monitoring for better analytics
+- [ ] Add some sort of logging that doesn't bog down my server
+- [ ] Automate linting script as a check before a PR can be merged into main
+- [ ] Automatically run the prettier format script when pushing to main

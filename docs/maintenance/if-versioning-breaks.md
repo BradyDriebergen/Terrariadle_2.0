@@ -5,6 +5,7 @@ Versioning is a bit delicate, but it shouldn't break because of the branch prote
 ```
 # deletes it from remote
 # a version number looks something like v2.0.0
+
 git tag -d <version number>
 git push origin :refs/tags/<version number>
 
