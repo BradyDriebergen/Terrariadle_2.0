@@ -38,7 +38,7 @@ jobs:
               run: |
                   set -euo pipefail
 
-                  # Make sure we have all tags, not just what checkout grabbed by default.
+                  # Ensure we have all tags, not just what checkout grabbed by default.
                   git fetch --tags
 
                   # Find the latest tag by actual semver value (not alphabetical,
@@ -76,8 +76,8 @@ jobs:
                   new_tag="v${major}.${minor}.${patch}"
                   echo "New tag: $new_tag"
 
-                  # Guard against the (unlikely, but possible) case where this tag
-                  # already exists, e.g. from a manual override done earlier.
+                  # Guard against the case where this tag already exists,
+                  # e.g. from a manual override done earlier.
                   if git rev-parse "$new_tag" >/dev/null 2>&1; then
                     echo "Tag $new_tag already exists, aborting." >&2
                     exit 1
