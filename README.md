@@ -92,3 +92,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 _Terrariadle is a fan project and is not affiliated with Re-Logic or the official Terraria game._
 
 patch test
+minor test
