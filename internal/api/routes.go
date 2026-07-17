@@ -18,7 +18,10 @@ func (s *Server) newMux() http.Handler {
 
 	mux.Handle("/", s.spaHandler())
 
-	return withCORS(mux)
+	// NOTE: This is how you run the site with CORS
+	// return withCORS(mux)
+
+	return mux
 }
 
 func (s *Server) spaHandler() http.Handler {
