@@ -1,4 +1,6 @@
-**Sveltekit**
+# Why I Chose This Stack
+
+## Sveltekit
 
 I chose this framework because of a few reasons:
 
@@ -17,7 +19,7 @@ Shortfalls
 - Updates change a lot of things (prop issues, svelte 4 -> svelte 5)
 - No clear line between legacy features and current features, (svelte/store vs svelte/state).
 
-**Go**
+## Go
 
 I chose this language because:
 
@@ -35,3 +37,9 @@ Challenges:
 - Very easy to mess up a project without proper system design fundamentals. Started out with a web of dependency loops, and after learning about system design where I found out where I was going wrong. It's easy to mess up a project.
 - Error handling can get a bit much at time. Busies up the code and makes certain parts hard to read.
 - Easy to create race conditions with goroutines
+
+## MongoDB
+
+## Caddy
+
+## Oracle Cloud

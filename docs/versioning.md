@@ -1,4 +1,4 @@
-# Versioning Terrariadle: How I Set It Up and Why
+# Setting Up Versioning for Terrariadle
 
 When I was ready for the initial release of this project, I wanted to include a versioning system that represented the current stage of development. In my past iterations, I would just update a string value on my frontend after any change. This process came with a slew of problems, including forgetting to bump up the version number, ignoring any backend changes, and having no clear boundaries between what type of update it was (feature/bug/release). In this new versioning system, I wanted it to be as easy as possible to increment version numbers and not require manual intervention.
 
@@ -90,6 +90,6 @@ export {};
 - **Hard to revert/update version number** If I ever need to revert a change, or I forget to update a version number, there is no concrete process in place to revert/update a version number. Currently, the only way to reset a version number is deleting the version Git tag and creating a new tag with the new version number. While this works, this is a clunky and unpredictable.
 - **Not completely battle tested.** I'm using my own custom logic rather than using a pre-built dependency like `anothrNick/github-tag-action`. I wanted to make my own logic to get the full experience of building out versioning. It also allows me to not trust someone else's Github Action for updating my tags. However, it makes more code for me to maintain. This isn't a major issue, but something I need to keep my eye on.
 
----
+## Takeaway
 
 This was a fun system to learn, and I feel a lot better about versioning. My implementation isn't perfect, but it at least gets me a stepping off point where I can grow from.

@@ -1,4 +1,4 @@
-# Embedding Files in Go: How I Only Run One Service on My Server
+# Embedding Static Files in Go
 
 In my old implementation of this project, I was running the frontend and backend as two separate services on my server. It was never really a major problem, but it resulted in two things to deploy, two ports to manage, and a CORS configuration just to let the frontend talk to the API.
 
@@ -107,6 +107,6 @@ Loading module from ".../start.Brgy2uXm.js" was blocked because of a disallowed 
 
 This happens because of the missing `all:` prefix described above. `_app/` never made it into the embedded binary in the first place. This caused the SPA fallback to treat every asset request as an unmatched route.
 
----
+## Takeaway
 
 While this `embed` package was hard to understand at first, I quickly learned more about how Go can handle embedded static files. I think this feature is super cool. It allows me to only have to run one HTTP server through Go to serve both my backend endpoints and my frontend pages. Super cool learning experience and I recommend trying it out for yourself.

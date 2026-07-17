@@ -16,7 +16,7 @@ This site contains 5 different daily puzzles:
 - **Hangman** — Guess the enemy one letter at a time
 - **TerraTrivia** — Terraria themed Seven Little Words
 
-New puzzles drop daily at [reset time/timezone].
+If your curious on how I made this project, or some of the design choices behind it, I encourage you to look into the [docs](docs) folder. I wrote a ton about my development throughout this rewrite and I hope my struggles can help someone make their own project.
 
 ## Why I built this
 
@@ -46,9 +46,7 @@ After restarting my server constantly and taking a break from developing for a c
 | Web Server / Reverse Proxy | Caddy         |
 | Hosting                    | Oracle Cloud  |
 
-Brief prose paragraph under the table if you want to explain _why_ these choices (e.g., "Go for the backend because I wanted to get comfortable with typed, concurrent services outside of a framework crutch"; "static adapter because the puzzle content doesn't need SSR and it keeps hosting dead simple").
-
-I chose this stack because of its simplicity and speed. Sveltekit was easy to learn, and compiles down to HTML/JS. Go is known for its lightweight procedural design and amazing standard library, making things like concurrency and error handling very easy. Caddy makes reverse-proxies super easy and has automatic certificate renewals. Throughout this stack, I wanted to prioritize readability, reliability, and efficiency. I went into details about technical decisions and their upsides/downsides in **INSERT DIRECTORY HERE BOZO**.
+I chose this stack because of its simplicity and speed. Sveltekit was easy to learn, and compiles down to HTML/JS. Go is known for its lightweight procedural design and amazing standard library, making things like concurrency and error handling very easy. Caddy makes reverse-proxies super easy and has automatic certificate renewals. Throughout this stack, I wanted to prioritize readability, reliability, and efficiency. I went into details about technical decisions and their upsides/downsides in [choosing my stack](docs/choosing-my-stack.md).
 
 This project is a culmination of my efforts to making the project the best it can be. I intentionally avoided AI-driven development tools, opting to get my hands dirty and learn as much as possible. While I did use AI to work through Go and Svelte documentation and as a sounding board for ideas, the vast majority of the code was written by me. This hands-on approach is what taught me so much about system design, language architecture, and process flow.
 

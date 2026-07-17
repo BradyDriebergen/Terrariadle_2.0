@@ -72,6 +72,6 @@ export const load: LayoutLoad = async ({ fetch }) => {
 - **strict: true** makes the build fail if any route isn't covered by prerendering or the fallback. That way we can still take advantage of `error.svelte` pages.
 - **ssr = false** (Server Side Rendering) is the actual switch that makes `load` functions run only in the browser. It applies everywhere, like `npm run dev`, `vite preview`, and the deployed build. This allows dev mode to behave the same way production does.
 
----
+## Takeaway
 
 I struggled with understanding how Svelte handled rendering at first. I had to read a lot into the documentation to learn about SSR and SPA. In the end however, I was left with static website that preformed close to how SvelteKit with its Node server preformed. I am also able to host both my frontend and backend on one service. I'm happy with the result, but interested to see if this will cause problems in the future.
