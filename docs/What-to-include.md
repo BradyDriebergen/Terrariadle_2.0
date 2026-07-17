@@ -37,17 +37,5 @@ This is where you explain the _why_ behind decisions a casual reader might quest
 
 Extra things I should talk about:
 
-- versioning / branch protection
-- embedding
-- building
 - hosting
 - proxy-ing
-- svelte static adapter / rendering html
-
-Include a document on how to reset version number:
-
-git tag -d v2.0.0
-git push origin :refs/tags/v2.0.0 # deletes it from remote
-
-git tag v2.0.0
-git push origin v2.0.0
