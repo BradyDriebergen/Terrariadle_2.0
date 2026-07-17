@@ -1,96 +1,59 @@
-Here are all the API test calls to make:
+# Terrariadle API Reference
 
-## Common Handlers
+## Common
 
-Health handler:
-curl -i -X GET http://localhost:8080/api/health
+| Method | Path                  | Params    | Description                |
+| ------ | --------------------- | --------- | -------------------------- |
+| GET    | `/api/health`         | none      | Health check               |
+| GET    | `/api/remaining-time` | none      | Time until daily reset     |
+| GET    | `/api/finished-games` | `user_id` | Games a user has completed |
 
-Remaining time handler:
-curl -i -X GET http://localhost:8080/api/remaining-time
+## Daily Slash
 
-User game result handler:
-curl -i -X GET "http://localhost:8080/api/finished-games?user_id=123"
+| Method | Path                                | Params / Body              | Description                   |
+| ------ | ----------------------------------- | -------------------------- | ----------------------------- |
+| GET    | `/api/daily-slash/initialize-game`  | `user_id`                  | Start/resume game             |
+| GET    | `/api/daily-slash/search-items`     | none                       | Gets searchable weapons       |
+| GET    | `/api/daily-slash/hint`             | `hint (int)`               | Get a hint                    |
+| POST   | `/api/daily-slash/check-guess`      | `{ user_id, guess (int) }` | Submit guess                  |
+| GET    | `/api/daily-slash/winning-data`     | `user_id`                  | Get results                   |
+| GET    | `/api/guess-count?mode=daily-slash` | none                       | Live player guess count (SSE) |
 
-## Daily Slash Tests
+## Connections
 
-Daily-slash init game handler:
-curl -i -X GET "http://localhost:8080/api/daily-slash/initialize-game?user_id=123"
+| Method | Path                                | Params / Body                   | Description                   |
+| ------ | ----------------------------------- | ------------------------------- | ----------------------------- |
+| GET    | `/api/connections/initialize-game`  | `user_id`                       | Start/resume game             |
+| POST   | `/api/connections/check-guess`      | `{ user_id, guess: string[4] }` | Submit guess                  |
+| POST   | `/api/connections/reveal-answers`   | `{ user_id }`                   | Reveal correct categories     |
+| GET    | `/api/connections/winning-data`     | `user_id`                       | Get results                   |
+| GET    | `/api/guess-count?mode=connections` | none                            | Live player guess count (SSE) |
 
-Daily-slash get search weapons:
-curl -i -X GET "http://localhost:8080/api/daily-slash/search-items"
+## Guess the NPC
 
-Daily-slash get hint:
-curl -i -X GET "http://localhost:8080/api/daily-slash/hint?hint=1"
+| Method | Path                                  | Params / Body                 | Description                   |
+| ------ | ------------------------------------- | ----------------------------- | ----------------------------- |
+| GET    | `/api/guess-the-npc/initialize-game`  | `user_id`                     | Start/resume game             |
+| GET    | `/api/guess-the-npc/search-items`     | none                          | Get searchable NPCs           |
+| POST   | `/api/guess-the-npc/check-guess`      | `{ user_id, guess (int) }`    | Submit guess                  |
+| POST   | `/api/guess-the-npc/check-name-guess` | `{ user_id, guess (string) }` | Submit mini-game guess        |
+| GET    | `/api/guess-the-npc/winning-data`     | `user_id`                     | Get results                   |
+| GET    | `/api/guess-count?mode=guess-the-npc` | none                          | Live player guess count (SSE) |
 
-Daily-shash check guess:
-curl -X POST http://localhost:8080/api/daily-slash/check-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": 10}'
+## Hangman
 
-Daily-slash winning data:
-curl -i -X GET "http://localhost:8080/api/daily-slash/winning-data?user_id=123"
+| Method | Path                            | Params / Body                 | Description                   |
+| ------ | ------------------------------- | ----------------------------- | ----------------------------- |
+| GET    | `/api/hangman/initialize-game`  | `user_id`                     | Start/resume game             |
+| POST   | `/api/hangman/check-guess`      | `{ user_id, guess (letter) }` | Submit guess                  |
+| GET    | `/api/hangman/winning-data`     | `user_id`                     | Get results                   |
+| GET    | `/api/guess-count?mode=hangman` | none                          | Live player guess count (SSE) |
 
-## Connections Tests
+## TerraTrivia
 
-Connections init game handler:
-curl -i -X GET "http://localhost:8080/api/connections/initialize-game?user_id=123"
-
-Connections check guess:
-curl -X POST http://localhost:8080/api/connections/check-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": ["Dunerider Boots","Shark","Bast Statue","Webbed"]}'
-
-Connections reveal answers:
-curl -X POST http://localhost:8080/api/connections/reveal-answers \
- -H "Content-Type: application/json" \
- -d '{ "user_id": "123" }'
-
-Connections winning data:
-curl -i -X GET "http://localhost:8080/api/connections/winning-data?user_id=123"
-
-## Guess the NPC Tests
-
-Guess the NPC init game handler:
-curl -i -X GET "http://localhost:8080/api/guess-the-npc/initialize-game?user_id=123"
-
-Guess the NPC get search npcs:
-curl -i -X GET "http://localhost:8080/api/guess-the-npc/search-items"
-
-Guess the NPC guess check:
-curl -X POST http://localhost:8080/api/guess-the-npc/check-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": 10}'
-
-Guess the NPC winning data:
-curl -i -X GET "http://localhost:8080/api/guess-the-npc/winning-data?user_id=123"
-
-Guess the NPC name guess check:
-curl -X POST http://localhost:8080/api/guess-the-npc/check-name-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": "Agnew"}'
-
-## Hangman Tests
-
-Hangman init game handler:
-curl -i -X GET "http://localhost:8080/api/hangman/initialize-game?user_id=123"
-
-Hangman check guess:
-curl -X POST http://localhost:8080/api/hangman/check-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": "A"}'
-
-Hangman winning data:
-curl -i -X GET "http://localhost:8080/api/hangman/winning-data?user_id=123"
-
-## TerraTrivia Tests
-
-TerraTrivia init game handler:
-curl -i -X GET "http://localhost:8080/api/terratrivia/initialize-game?user_id=123"
-
-TerraTrivia check guess:
-curl -X POST http://localhost:8080/api/terratrivia/check-guess \
- -H "Content-Type: application/json" \
- -d '{"user_id": "123", "guess": "SHRUBSTAR"}'
-
-TerraTrivia winning data:
-curl -i -X GET "http://localhost:8080/api/terratrivia/winning-data?user_id=123"
+| Method | Path                                | Params / Body                 | Description                   |
+| ------ | ----------------------------------- | ----------------------------- | ----------------------------- |
+| GET    | `/api/terratrivia/initialize-game`  | `user_id`                     | Start/resume game             |
+| POST   | `/api/terratrivia/check-guess`      | `{ user_id, guess (string) }` | Submit guess                  |
+| GET    | `/api/terratrivia/winning-data`     | `user_id`                     | Get results                   |
+| GET    | `/api/guess-count?mode=terratrivia` | none                          | Live player guess count (SSE) |

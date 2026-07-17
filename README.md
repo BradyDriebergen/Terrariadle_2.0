@@ -4,6 +4,10 @@
 
 ---
 
+<!-- Screenshot goes here -->
+
+---
+
 Welcome to Terrariadle! This is a passion project based on the best game ever, [Terraria](https://terraria.org/). I'm a solo developer that loved playing daily games such as [Wordle](https://www.nytimes.com/games/wordle/index.html), [Loldle](https://loldle.net/), [Connections](https://www.nytimes.com/games/connections), and [Crossword](https://puzzles.usatoday.com/). I wanted to make a version of these daily puzzles based on my all-time favorite game.
 
 This project aims to remake another developer's project: [Terradle](https://www.terradle.com/). They did an amazing job on his site, but I wanted to expand and improve on the idea.
@@ -48,7 +52,7 @@ After restarting my server constantly and taking a break from developing for a c
 
 I chose this stack because of its simplicity and speed. Sveltekit was easy to learn, and compiles down to HTML/JS. Go is known for its lightweight procedural design and amazing standard library, making things like concurrency and error handling very easy. Caddy makes reverse-proxies super easy and has automatic certificate renewals. Throughout this stack, I wanted to prioritize readability, reliability, and efficiency. I went into details about technical decisions and their upsides/downsides in [choosing my stack](docs/choosing-my-stack.md).
 
-This project is a culmination of my efforts to making the project the best it can be. I intentionally avoided AI-driven development tools, opting to get my hands dirty and learn as much as possible. While I did use AI to work through Go and Svelte documentation and as a sounding board for ideas, the vast majority of the code was written by me. This hands-on approach is what taught me so much about system design, language architecture, and process flow.
+This project is a culmination of my efforts to making the project the best it can be. I intentionally avoided AI-driven development tools, opting to get my hands dirty and learn as much as possible. While I did use AI to work through Go and Svelte documentation and as a sounding board for ideas, the large majority of the code was written by me. This hands-on approach is what taught me so much about system design, language architecture, and process flow.
 
 ## File Structure
 
