@@ -55,6 +55,8 @@ Terrariadle/
 - [x] Embed frontend build in go binary
 - [x] Figure out versioning
 - [ ] Update Github to ignore certain files
+- [x] Create oracle instance and set up networking
+- [x] Update Cloudflare DNS to point to server
 - [ ] Add a new user to Oracle instance
 - [ ] Add .env files to Oracle instance
 - [ ] Reset MongoDB Atlas password for db
@@ -66,6 +68,7 @@ Terrariadle/
 **Finishing steps**
 
 - [ ] Update documentation ~~and wiki~~
+- [ ] Update Cloudflare domain to use Proxied (DNS -> records)
 - [ ] Market the site:
     - [ ] Redit posts
     - [ ] Twitter
