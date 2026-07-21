@@ -1,10 +1,12 @@
 # Why I Chose This Stack
 
-[SvelteKit](#sveltekit)
-[Go](#go)
-[MongoDB](#mongodb-atlass-free-tier)
-[Caddy](#caddy)
-[Oracle Cloud](#oracle-cloud)
+## Table of Contents
+
+- [SvelteKit](#sveltekit)
+- [Go](#go)
+- [MongoDB](#mongodb-atlass-free-tier)
+- [Caddy](#caddy)
+- [Oracle Cloud](#oracle-cloud)
 
 ## SvelteKit
 

@@ -26,7 +26,7 @@ This was the part I initially struggled with, so I wanted to share what I've lea
 
 Rather than having the Svelte config that SvelteKit ships with:
 
-```js
+```ts
 ...
 kit: {
     adapter: adapter()
@@ -35,7 +35,7 @@ kit: {
 
 I instead updated my `svelte.config.js` file:
 
-```js
+```ts
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 

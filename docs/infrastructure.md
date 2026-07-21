@@ -4,80 +4,47 @@ Another area that I haven't had much experience in is configuring and hosting se
 
 Going through this process, I found that all this complex network configuration isn't really too bad. There is a bit of a learning curve, but each of the rules break down into simple concepts.
 
-## Why Oracle Cloud
+### Why Oracle Cloud?
 
 Compared to other cloud providers, Oracle's Free tier is definitely the best free instance option. You can get 1 OCPU (equivalent to 2 vCPUs) and 1 GB of ram with no limit on time or compute hours. The trade-off is it's more manual than something like Railway or Heroku. Also, Oracle's Cloud website is super clunky to navigate through.
 
 I originally planed on using the free ARM shape (`VM.Standard.A1.Flex`), but it wasn't available in my region. Apparently, it is super popular and notoriously capacity-constrained.
 
-## Connecting
+### Specific Commands
 
-Connecting to instances is pretty easy. All you need to do is create an SSH connection between your machine and the cloud instance. For example, this is what I use:
+If you would like to see a more in-depth document about specific actions taken and commands ran, check out the [Instance Setup](./maintenance/instance-setup.md) document in the `/maintenance` folder.
 
-```
-ssh -i <path to private key> ubuntu@<instance public-ip>
-```
-
-`ubuntu` refers to the instance name. This was created because I'm using the Ubuntu image.
+# Setting up
 
 ## Opening Ports on Both Firewalls
 
-This is the part that tripped me up before. There are two independent firewall layers on these instances, and both need to be opened or outside traffic can't leave/enter.
+This is the part that tripped me up before. There are two independent firewall layers on new Oracle instances, and both need to be opened or outside traffic can't leave/enter.
 
 ### 1. OCI Security List (cloud-level)
 
-Within Oracle, I added two rules for my instance (port 22 for SSH was already created). This opens up these ports on the machine so HTTP (port 80) and HTTPS (port 443) can send and receive information.
+Within Oracle, I added two rules for my instance. I opened ports 80 and 443 on the machine so HTTP (port 80) and HTTPS (port 443) can send and receive information.
 
-| Source CIDR | Protocol | Destination Port | Purpose |
-| ----------- | -------- | ---------------- | ------- |
-| `0.0.0.0/0` | TCP      | 22               | SSH     |
-| `0.0.0.0/0` | TCP      | 80               | HTTP    |
-| `0.0.0.0/0` | TCP      | 443              | HTTPS   |
-
-The way I like to think about this is each port is a door to your machine. By default, you only have your front door (port 22), and that allows you to enter the house. These new rules added a couple mail slots on the door (ports 80 and 443). This doesn't allow others to enter the home, but it allows some communication with the outside world (HTTP/HTTPS requests).
+The way I like to think about this is each port is a door to your machine. By default, you only have your front door (port 22), and that allows you to enter the house (SSH). These new rules added a couple mail slots on the door (ports 80 and 443). This doesn't allow others to enter the home, but it allows certain communication with the outside world (HTTP/HTTPS requests).
 
 ### 2. Instance-level firewall (iptables)
 
-Oracle's Ubuntu images ship with iptables rules that block everything except SSH by default. This firewall also needed to be updated to open ports 80 and 443:
-
-```
-sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-sudo iptables -I INPUT -p tcp --dport 443 -j ACCEPT
-sudo apt update
-sudo apt install iptables-persistent -y
-```
-
-The `iptables-persistent` tool allows these rules to remain persistent through reboots.
+Oracle's Ubuntu images ship with iptables rules that block everything except SSH by default. This firewall also needed to be updated to open ports 80 and 443.
 
 This is like the analogy above. However, with both of these firewalls, it's more like the Oracle instance is a hotel and the shape is your hotel room. Requests can still come through, but it has to go through the front desk and your hotel room front door.
 
 ## Setting Up Instance
 
-Setting up the user:
+### Creating a new Linux user
 
-```
-sudo useradd --system --no-create-home --shell /usr/sbin/nologin terrariadle
-sudo mkdir -p /opt/terrariadle
-sudo chown terrariadle:terrariadle /opt/terrariadle
-```
+I run Terrariadle under a dedicated, unprivileged system user rather than root or the instance account. The main reason behind this is security. If a vulnerability in the project or one of its dependencies ever gets exploited, the attacker only has the permissions of that one user. Since this new user has no home directory, no login shell, and access to only its own binary, config, and data directory, there's very little that an attacker can do.
 
-Building the project:
+Making a dedicated user also keeps permissions/access clear. The user owns its binary and its data directory. It keeps the instance account separate from the running service too, so if I run a bad command (`rm -rf`), it can't mess up production files it doesn't currently have open.
 
-```
-build:
-	cd frontend && npm run build
-	rm -rf internal/web/build
-	cp -r frontend/build internal/web/build
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
-		-trimpath \
-		-ldflags "-s -w -X main.version=$$(git describe --tags --always --dirty)" \
-		-o bin/terrariadle .
-```
+I've learned that this is a good method of practicing principle of least priviledge. This new user is the only one responsible for everything the Terrariadle service. This user also only has access to anything involving this service, and nothing else.
 
-- **CGO_ENABLED=0**: produces a fully static binary with no libc dependency. Means you don't have to worry about glibc version mismatches between your build machine and whatever's on the Oracle image, and it plays nicely with a minimal systemd unit (no dynamic linker surprises). Since you're using pure Go MongoDB driver (not cgo-based sqlite or similar), this should be a no-op functionally.
-- **GOOS=linux GOARCH=amd64**: explicit cross-compile target for the E2.1.Micro shape. Only matters if you're building on your MacBook; skip it if you build on the instance itself.
-- **trimpath**: strips local filesystem paths (like /Users/brady/...) from the compiled binary. Minor security/hygiene win, no runtime cost.
-- **ldflags "-s -w"**: strips the symbol table and DWARF debug info. Cuts binary size by roughly a third, which matters more for the free tier's limited boot volume than for runtime RAM (Go binaries don't page in symbol tables at runtime), but smaller is still better for scp transfer time and disk headroom.
+### Setting up the service
+
+### Reverse Proxy (Caddy)
 
 Project environment:
 
@@ -86,57 +53,9 @@ sudo vim /etc/terrariadle.env
 
 `/etc/systemd/system/terrariadle.service`
 
-```
-[Unit]
-Description=Terrariadle - Terraria daily puzzle site
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-Type=simple
-User=terrariadle
-Group=terrariadle
-WorkingDirectory=/opt/terrariadle
-EnvironmentFile=/etc/terrariadle.env
-ExecStart=/opt/terrariadle/terrariadle
-Restart=on-failure
-RestartSec=5s
-
-# Graceful shutdown - give your SSE broker time to drain connections
-KillSignal=SIGTERM
-TimeoutStopSec=15s
-
-# Resource limits - important on a 1GB box, prevents one bad
-# memory leak from taking down the whole instance (Caddy included)
-MemoryMax=400M
-MemoryHigh=350M
-TasksMax=100
-
-# Security hardening
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths=/opt/terrariadle
-ProtectKernelTunables=true
-ProtectKernelModules=true
-ProtectControlGroups=true
-RestrictSUIDSGID=true
-RestrictNamespaces=true
-LockPersonality=true
-
-# Logging goes to journald
-StandardOutput=journal
-StandardError=journal
-SyslogIdentifier=terrariadle
-
-[Install]
-WantedBy=multi-user.target
-```
-
 Installing Caddy:
 
-```
+```bash
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
@@ -144,7 +63,7 @@ sudo apt update
 sudo apt install caddy
 ```
 
-```
+```bash
 sudo systemctl enable --now caddy
 sudo systemctl reload caddy   # after editing the Caddyfile, no downtime
 journalctl -u caddy -f
@@ -152,7 +71,9 @@ journalctl -u caddy -f
 
 caddy file:
 
-```
+`/etc/caddy/Caddyfile`
+
+```caddyfile
 terrariadle.com {
 	redir https://www.terrariadle.com{uri} permanent
 }
@@ -186,10 +107,12 @@ www.terrariadle.com {
 
 Commands to run:
 
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable --now terrariadle
 sudo systemctl status terrariadle
 journalctl -u terrariadle -f
+```
 
 ## DNS (Cloudflare)
 
@@ -208,13 +131,31 @@ If your familiar with Macs, you'll know when they run out of memory, it will use
 
 After learning about this, I added a 1 GB swap file as a buffer against memory spikes:
 
-```
+```bash
 sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
+
+## Building The Project:
+
+```makefile
+build:
+	cd frontend && npm run build
+	rm -rf internal/web/build
+	cp -r frontend/build internal/web/build
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
+		-trimpath \
+		-ldflags "-s -w -X main.version=$$(git describe --tags --always --dirty)" \
+		-o bin/terrariadle .
+```
+
+- **CGO_ENABLED=0**: produces a fully static binary with no libc dependency. Means you don't have to worry about glibc version mismatches between your build machine and whatever's on the Oracle image, and it plays nicely with a minimal systemd unit (no dynamic linker surprises). Since you're using pure Go MongoDB driver (not cgo-based sqlite or similar), this should be a no-op functionally.
+- **GOOS=linux GOARCH=amd64**: explicit cross-compile target for the E2.1.Micro shape. Only matters if you're building on your MacBook; skip it if you build on the instance itself.
+- **trimpath**: strips local filesystem paths (like /Users/brady/...) from the compiled binary. Minor security/hygiene win, no runtime cost.
+- **ldflags "-s -w"**: strips the symbol table and DWARF debug info. Cuts binary size by roughly a third, which matters more for the free tier's limited boot volume than for runtime RAM (Go binaries don't page in symbol tables at runtime), but smaller is still better for scp transfer time and disk headroom.
 
 ## Takeaway
 

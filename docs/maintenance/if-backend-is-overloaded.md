@@ -8,14 +8,14 @@ Currently, the site preloads `+page.ts` data when a user hovers over a link in t
 
 `frontend/src/routes/app.html` - line 9:
 
-```
-<body data-sveltekit-preload-data="hover">
+```html
+<body data-sveltekit-preload-data="hover"></body>
 ```
 
 into:
 
-```
-<body data-sveltekit-preload-data="tap">
+```html
+<body data-sveltekit-preload-data="tap"></body>
 ```
 
 This changes this process so rather than preloading the data when a user hovers over a link, they click on the link for the data to load. This also creates a bit of a delay between clicking on a link and loading it, but it's not much.

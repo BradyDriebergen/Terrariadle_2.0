@@ -1,4 +1,3 @@
-```
 [Unit]
 Description=Terrariadle - Terraria daily puzzle site
 After=network-online.target
@@ -16,7 +15,7 @@ RestartSec=5s
 
 # Graceful shutdown - give your SSE broker time to drain connections
 KillSignal=SIGTERM
-TimeoutStopSec=10s
+TimeoutStopSec=15s
 
 # Resource limits - important on a 1GB box, prevents one bad
 # memory leak from taking down the whole instance (Caddy included)
@@ -44,4 +43,3 @@ SyslogIdentifier=terrariadle
 
 [Install]
 WantedBy=multi-user.target
-```

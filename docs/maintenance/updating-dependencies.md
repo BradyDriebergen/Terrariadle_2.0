@@ -4,7 +4,7 @@ With vulnerabilities being found every day, it's important to keep dependencies 
 
 **Go dependencies:**
 
-```
+```bash
 # See what's outdated
 go list -u -m all
 
@@ -15,7 +15,7 @@ go mod tidy
 
 **NPM dependencies:**
 
-```
+```bash
 # See what's outdated
 npm outdated
 
@@ -25,7 +25,7 @@ npm audit fix
 
 This won't fix every issue, but it will fix a majority of them. If there is ever a dependency that won't update after these commands, manual updating is required. I don't have an example now, but it usually requires going into `frontend/package-lock.json` and updating the version manually. After doing this, you can run the following commands:
 
-```
+```bash
 # Install the new dependency
 npm install
 

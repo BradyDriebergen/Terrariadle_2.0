@@ -2,7 +2,7 @@
 
 Versioning is a bit delicate, but it shouldn't break because of the branch protection in place. However, if it ever does, you can reset the version by running the following commands in the `main` branch in git:
 
-```
+```bash
 # deletes it from remote
 # a version number looks something like v2.0.0
 

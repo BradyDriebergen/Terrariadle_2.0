@@ -57,13 +57,14 @@ Terrariadle/
 - [ ] Update Github to ignore certain files
 - [x] Create oracle instance and set up networking
 - [x] Update Cloudflare DNS to point to server
-- [ ] Add a new user to Oracle instance
-- [ ] Add .env files to Oracle instance
-- [ ] Reset MongoDB Atlas password for db
-- [ ] Create a systemd service for the app
-- [ ] Implement Caddy in place of Nginx
+- [x] Add a new user to Oracle instance
+- [x] Add .env files to Oracle instance
+- [x] Create a systemd service for the app
+- [x] Implement Caddy in place of Nginx
 - [ ] Create new script that automatically builds and deploys
 - [ ] Reset MongoDB Atlas password for db
+- [ ] Run through site one final time
+- [ ] Upload build binary and run service
 
 **Finishing steps**
 
@@ -88,3 +89,4 @@ Terrariadle/
 - [ ] Add some sort of logging that doesn't bog down my server
 - [ ] Automate linting script as a check before a PR can be merged into main
 - [ ] Automatically run the prettier format script when pushing to main
+- [ ] Support mobile view (IMPORTANT)
