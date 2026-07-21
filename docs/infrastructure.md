@@ -44,12 +44,43 @@ I've learned that this is a good method of practicing principle of least privile
 
 ### Setting up the service
 
+Features I never had in the past that I wanted in this iteration include process supervision, automatic restarts, and graceful shutdown handled by the OS. In my previous iteration, I used tmux sessions that had none of these features. In fact, my tmux sessions would constantly crash due to the massive overhead of not building my project. I wanted to use something industry standard and was optimized for hosting.
+
+After researching solutions, I quickly came across Linux `systemd` services. These services were built for this application of work, running as a Linux service in the background of the OS. This system supported extra security, resilience, performance, and built-in logging. It was a no-brainer compared to other options.
+
+Despite its benefits, there is quite a lot of configuration to do to run one of these services. Specifically, some of the things you need are:
+
+1. A unit file at `/etc/systemd/system/<name>.service` defining how to run the process.
+2. `ExecStart`: path to the binary/command to run.
+3. `User` / `Group`: who the process runs as (ideally a dedicated, unprivileged system user).
+4. `WorkingDirectory`: where the process runs from.
+5. A restart policy like `Restart=on-failure` plus a `RestartSec` delay.
+6. `WantedBy=multi-user.target` under [Install] so systemctl enable actually takes effect on boot.
+7. `daemon-reload` after creating/editing the unit, then enable --now to activate it.
+
+There are quite a bit more that goes into hosting a `systemd` service. I recommend reading [Running The Service](./running-the-service.md) to see the specifics to how I run my service.
+
+## Logging
+
+Rather than writing to a log file myself, `StandardOutput=journal` and `StandardError=journal` send everything my binary writes to stdout/stderr into **journald**, tagged with `SyslogIdentifier=terrariadle`:
+
+```ini
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=terrariadle
+```
+
+I read it with `journalctl`:
+
+```bash
+journalctl -u terrariadle -f       # live tail
+journalctl -u terrariadle -n 100   # last 100 lines
+journalctl -u terrariadle -p err   # errors and above only
+```
+
+Since journald stores logs in a structured, queryable format, I get filtering by time, priority, and unit for free, without grepping through rotating flat files.
+
 ### Reverse Proxy (Caddy)
-
-Project environment:
-
-/etc/terrariadle.env
-sudo vim /etc/terrariadle.env
 
 `/etc/systemd/system/terrariadle.service`
 
