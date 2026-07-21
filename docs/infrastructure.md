@@ -51,6 +51,146 @@ The `iptables-persistent` tool allows these rules to remain persistent through r
 
 This is like the analogy above. However, with both of these firewalls, it's more like the Oracle instance is a hotel and the shape is your hotel room. Requests can still come through, but it has to go through the front desk and your hotel room front door.
 
+## Setting Up Instance
+
+Setting up the user:
+
+```
+sudo useradd --system --no-create-home --shell /usr/sbin/nologin terrariadle
+sudo mkdir -p /opt/terrariadle
+sudo chown terrariadle:terrariadle /opt/terrariadle
+```
+
+Building the project:
+
+```
+build:
+	cd frontend && npm run build
+	rm -rf internal/web/build
+	cp -r frontend/build internal/web/build
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
+		-trimpath \
+		-ldflags "-s -w -X main.version=$$(git describe --tags --always --dirty)" \
+		-o bin/terrariadle .
+```
+
+- **CGO_ENABLED=0**: produces a fully static binary with no libc dependency. Means you don't have to worry about glibc version mismatches between your build machine and whatever's on the Oracle image, and it plays nicely with a minimal systemd unit (no dynamic linker surprises). Since you're using pure Go MongoDB driver (not cgo-based sqlite or similar), this should be a no-op functionally.
+- **GOOS=linux GOARCH=amd64**: explicit cross-compile target for the E2.1.Micro shape. Only matters if you're building on your MacBook; skip it if you build on the instance itself.
+- **trimpath**: strips local filesystem paths (like /Users/brady/...) from the compiled binary. Minor security/hygiene win, no runtime cost.
+- **ldflags "-s -w"**: strips the symbol table and DWARF debug info. Cuts binary size by roughly a third, which matters more for the free tier's limited boot volume than for runtime RAM (Go binaries don't page in symbol tables at runtime), but smaller is still better for scp transfer time and disk headroom.
+
+Project environment:
+
+/etc/terrariadle.env
+sudo vim /etc/terrariadle.env
+
+`/etc/systemd/system/terrariadle.service`
+
+```
+[Unit]
+Description=Terrariadle - Terraria daily puzzle site
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=terrariadle
+Group=terrariadle
+WorkingDirectory=/opt/terrariadle
+EnvironmentFile=/etc/terrariadle.env
+ExecStart=/opt/terrariadle/terrariadle
+Restart=on-failure
+RestartSec=5s
+
+# Graceful shutdown - give your SSE broker time to drain connections
+KillSignal=SIGTERM
+TimeoutStopSec=15s
+
+# Resource limits - important on a 1GB box, prevents one bad
+# memory leak from taking down the whole instance (Caddy included)
+MemoryMax=400M
+MemoryHigh=350M
+TasksMax=100
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/terrariadle
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+
+# Logging goes to journald
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=terrariadle
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Installing Caddy:
+
+```
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install caddy
+```
+
+```
+sudo systemctl enable --now caddy
+sudo systemctl reload caddy   # after editing the Caddyfile, no downtime
+journalctl -u caddy -f
+```
+
+caddy file:
+
+```
+terrariadle.com {
+	redir https://www.terrariadle.com{uri} permanent
+}
+
+www.terrariadle.com {
+	reverse_proxy localhost:8080 {
+		header_up X-Real-IP {http.request.header.CF-Connecting-IP}
+	}
+
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	log {
+		output file /var/log/caddy/terrariadle.log {
+			roll_size 10mb
+			roll_keep 5
+		}
+		format json
+	}
+}
+```
+
+`sudo systemctl reload caddy`
+
+Commands to run:
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now terrariadle
+sudo systemctl status terrariadle
+journalctl -u terrariadle -f
+
 ## DNS (Cloudflare)
 
 I use Cloudflare for Domain registrar/DNS. Once my instance was made, I added DNS rules to point directly to my instance:

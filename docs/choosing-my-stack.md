@@ -126,7 +126,7 @@ Challenges:
 - Atlas's free tier has a low connection limit, which is part of why I ended up building a write-behind caching layer instead of hitting the database directly on every request.
 - It's a little difficult to set up locally.
 
-I wanted to compare MongoDB with SQL to show how different my site would've been if I didn't have access to Mongo's generic record finders. Here is a generic function in my program that I use to pull a single item from my Mongo database:
+I wanted to compare MongoDB with SQL to show how different my site would've been if I didn't have access to Mongo's generic record finders. Here is a generic function in my program that I use to pull a single item from a collection in my Mongo database:
 
 ```go
 func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filter Filter) (*T, error) {
@@ -178,29 +178,30 @@ I've had nothing but pleasant experiences with MongoDB. Setting up in Go is supe
 
 I chose Caddy as the reverse proxy in front of the Go binary because:
 
-- Automatic HTTPS. Caddy provisions and renews Let's Encrypt certificates on its own, no cron jobs or certbot scripts to babysit.
-- The config format (a Caddyfile) is dramatically simpler than an equivalent nginx config for the same job.
-- Since Caddy serves the frontend and proxies the backend from the same origin, I avoid CORS entirely by using relative API paths like `/api/...`.
-- It's lightweight enough to run comfortably alongside the Go binary on a small instance without eating into the resources my app needs.
+- Automatic HTTPS. Caddy provisions and renews Let's Encrypt certificates on its own.
+- The config is way simpler than an nginx config for the same job.
+- It's super lightweight.
 
 Challenges:
 
-- Much smaller ecosystem and plugin base than nginx, so when I hit something unusual there were fewer examples or Stack Overflow answers to lean on.
-- Ran into a real gotcha getting the first certificate issued: Let's Encrypt's HTTP-01 challenge needs to reach the origin server directly, and Cloudflare's proxied ("orange-cloud") DNS mode got in the way of that. I had to set the DNS record to DNS-only ("grey-cloud") for the initial issuance before switching back.
-- Fewer resources in general mean debugging Caddy-specific issues takes more trial and error than it would with a more established tool.
+- Like Svelte, Caddy has a much smaller ecosystem and plugin base than nginx.
+- Caddy needs to reach the origin server directly, so if you use something like Cloudflare's proxy, it can't access the server so it fails the cert.
+- Ran into a problem getting the first certificate issued: Let's Encrypt's HTTP-01 challenge needs to reach the origin server directly, and Cloudflare's proxied ("orange-cloud") DNS mode got in the way of that. I had to set the DNS record to DNS-only ("grey-cloud") for the initial issuance before switching back.
 
 ## Oracle Cloud
 
 I chose Oracle Cloud Infrastructure (OCI) for hosting because:
 
-- Oracle's free tier is genuinely generous compared to other providers: an Always Free ARM (Ampere A1) allotment, which is real compute for a solo side project, at no cost.
-- ARM support meant I could cross-compile the Go binary directly for the instance's architecture (`GOOS=linux GOARCH=arm64`), and Go's toolchain makes that painless.
-- The available headroom (multiple gigs of RAM, a full CPU core) is more than enough to run the Go binary and Caddy on the same box with room to spare.
-- Free, indefinitely, as long as you stay within the Always Free limits, which matters a lot for a project I'm not trying to monetize.
+- Oracle's free tier is a steal compared to other providers. I run a server with 1 OCPU and 1 gig of ram unlimited for free.
+- Two-layer firewall, one at the instance level and one at the shape level. Helps provide extra levels of security.
 
 Challenges:
 
-- The well-known "out of capacity" problem with OCI's free-tier ARM shapes. When I went to provision, the ARM shape (VM.Standard.A1.Flex) returned capacity errors across every availability domain, and I ended up falling back to a smaller AMD shape (VM.Standard.E2.1.Micro) just to get something running.
-- Steeper learning curve around OCI-specific networking concepts (VCNs, subnets, CIDR blocks, Shielded Instance options) compared to simpler providers like DigitalOcean or Linode.
-- Two-layer firewall model. Ports have to be opened both at the OCI Security List/NSG level and again at the OS level (iptables/ufw), which tripped me up more than once when a port "should" have been open but wasn't reachable.
-- Some of the default choices during instance setup (like the default Ubuntu image being fairly heavy with snapd and cloud-init extras) required knowing to pick the minimal install instead, which isn't obvious your first time through.
+- I intended on using their ARM instance option (1 OCPU and 6 gigs of ram), but the availability is hard to come by.
+- Steeper learning curve around OCI-specific networking concepts (VCNs, subnets, CIDR blocks, Shielded Instance options) compared to simpler providers like DigitalOcean or Heroku.
+- A bit trickier to set up. You have to know about networks, subnets, shapes, and securities to properly set up your instance.
+- UI is slow and not that user-friendly
+
+I hoped to have a better reason to use this cloud provider, but it really boiled down to their free tier compute. I'm trying to keep this project monetized-free, and that means to find deals where ever I can.
+
+Oracle Cloud is a pretty decent experience to use as long as you have networking fundamentals down. I recommend for anyone looking to save a few bucks a month if they're running a pretty lightweight app.
