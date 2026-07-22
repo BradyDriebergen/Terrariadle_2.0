@@ -1,5 +1,15 @@
 # Running Terrariadle as a systemd Service
 
+### Table of contents
+
+- [Why systemd?](#why-i-chose-a-systemd-service)
+- [Benefits](#benefits)
+- [Resource Limits](#resource-limits)
+- [Security Hardening](#security-hardening)
+- [Logging](#logging)
+
+---
+
 When I first launched my site, I didn't have a clue on how to run a program on a production environment. For a good few months after I deployed my old site, I was running the site off of a development server. This means that every line of code was sent from my program to clients.
 
 This wasn't even the worst of it. I used to host my frontend and backend on separate `tmux` sessions. I didn't know how to make background processes in Linux, so I used tmux sessions to 'run background services'. It was wildly inefficient.

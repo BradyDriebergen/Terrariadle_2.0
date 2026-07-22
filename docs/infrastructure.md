@@ -1,5 +1,16 @@
 # Hosting Terrariadle
 
+### Table of Contents
+
+- [Opening Ports](#opening-ports-on-both-firewalls)
+- [Creating a New Linux User](#creating-a-new-linux-user)
+- [Setting up a systemd Service](#setting-up-the-service)
+- [Setting up Caddy](#reverse-proxy-caddy)
+- [Logging](#logging)
+- [Building](#building-the-project)
+
+---
+
 Another area that I haven't had much experience in is configuring and hosting server instances. The only experience I've had is with the first iteration of this project. I basically had AI (before the good models came out) configure it all for me. It was a mess of random network rules, complex port routing, and an inefficient way of hosting my site. I decided to start fresh on this release, making a new instance from scratch and understanding.
 
 Going through this process, I found that all this complex network configuration isn't really too bad. There is a bit of a learning curve, but each of the rules break down into simple concepts.
@@ -59,26 +70,6 @@ Despite its benefits, there is quite a lot of configuration to do to run one of 
 7. `daemon-reload` after creating/editing the unit, then enable --now to activate it.
 
 There are quite a bit more that goes into hosting a `systemd` service. I recommend reading [Running The Service](./running-the-service.md) to see the specifics to how I run my service.
-
-## Logging
-
-Rather than writing to a log file myself, `StandardOutput=journal` and `StandardError=journal` send everything my binary writes to stdout/stderr into **journald**, tagged with `SyslogIdentifier=terrariadle`:
-
-```ini
-StandardOutput=journal
-StandardError=journal
-SyslogIdentifier=terrariadle
-```
-
-I read it with `journalctl`:
-
-```bash
-journalctl -u terrariadle -f       # live tail
-journalctl -u terrariadle -n 100   # last 100 lines
-journalctl -u terrariadle -p err   # errors and above only
-```
-
-Since journald stores logs in a structured, queryable format, I get filtering by time, priority, and unit for free, without grepping through rotating flat files.
 
 ### Reverse Proxy (Caddy)
 
@@ -144,6 +135,26 @@ sudo systemctl enable --now terrariadle
 sudo systemctl status terrariadle
 journalctl -u terrariadle -f
 ```
+
+## Logging
+
+Rather than writing to a log file myself, `StandardOutput=journal` and `StandardError=journal` send everything my binary writes to stdout/stderr into **journald**, tagged with `SyslogIdentifier=terrariadle`:
+
+```ini
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=terrariadle
+```
+
+I read it with `journalctl`:
+
+```bash
+journalctl -u terrariadle -f       # live tail
+journalctl -u terrariadle -n 100   # last 100 lines
+journalctl -u terrariadle -p err   # errors and above only
+```
+
+Since journald stores logs in a structured, queryable format, I get filtering by time, priority, and unit for free, without grepping through rotating flat files.
 
 ## DNS (Cloudflare)
 

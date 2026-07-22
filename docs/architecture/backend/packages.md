@@ -1,5 +1,18 @@
 # Terrariadle Go Packages
 
+## Table of Contents
+
+- [api](#api)
+- [db](#db)
+- [domain](#domain)
+- [jobs](#jobs)
+- [repo](#repo)
+- [services](#services)
+- [store](#store)
+- [web](#web)
+
+_For more details on developing these packages, see [managing go packages](../../managing-go-packages.md)._
+
 ## `api`
 
 The HTTP layer. This is where the `Server` lives, routes are registered, and requests are handled. It's the only package that touches Go's `HTTP` package.

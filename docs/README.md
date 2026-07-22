@@ -1,68 +1,59 @@
 # Terrariadle Documentation
 
-Welcome to the Terrariadle project documentation. This table of contents goes over all the important developer documents and where you can find them.
+Welcome to the Terrariadle project's documentation. This table of contents goes over all the important developer documents and where you can find them. I appreciate you taking the time to read through my struggles, design choices, and how I've grown as a developer.
 
-## Table of Contents
+## Growth points as a developer
 
-### Growth points as a developer
+This section of documents goes over the struggles I had with developing the site and what I've learned.
 
-This section of documents goes over the struggles I had with developing the site.
+- **[Choosing My Stack](./choosing-my-stack.md)** - What drew me to choosing this stack, and the benefits and shortfalls of each layer.
 
-- [Choosing My Stack](./choosing-my-stack.md)
-    - This document goes over what drew me to choosing this stack, and the benefits and shortfalls of each layer.
-- [Managing Go Packages](./managing-go-packages.md)
-    - This document goes over my struggles with designing systems and process flows, and how this became my cleanest project yet. Specifically, my Go backend.
-- [Embedding Binaries](./embedding-binaries.md)
-    - This document goes over how I was able to make running two separate services into a single service utilizing Go's `embed` package.
-- [Static Adapter](./static-adapter.md)
-    - This document goes over my use of SvelteKit's `adapter-static` tool to generate static HTML/JS files, rather than a site with a node runtime. Plays into Embedding Binaries
-- [Versioning](./versioning.md)
-    - This document goes over how I learned to version my site without having to manually update my codebase with every release.
-- [Infrastructure](./infrastructure.md)
-    - This document goes over hosting my project, and the configurations/optimizations I used in my instance.
+- **[Managing Go Packages](./managing-go-packages.md)** - My struggles with designing systems and process flows, and how this became my cleanest project yet. Specifically, my Go backend.
 
-### Architecture
+- **[Embedding Binaries](./embedding-binaries.md)** - How I was able to make running two separate services into a single service utilizing Go's `embed` package.
 
-This section goes over the architecture of the project, and how the games were designed to play.
+- **[Static Adapter](./static-adapter.md)** - My use of SvelteKit's `adapter-static` tool to generate static HTML/JS files, rather than a site with a node runtime. Plays into _Embedding Binaries_.
+
+- **[Versioning](./versioning.md)** - How I learned to version my site without having to manually update my codebase with every release.
+
+- **[Modifying Git History](./modifying-git-history.md)** - How I kept my Git history from showing specific files and why.
+
+- **[Infrastructure](./infrastructure.md)** - Hosting my project, and the configurations/optimizations I used in my instance.
+
+- **[Running the Service](./running-the-service.md)** - Setting up the `systemd` service to run on my Ubuntu shape.
+
+## Architecture
+
+This section goes over the architecture of the project, the backend blueprint, and how the games were designed to play.
 
 #### Backend
 
-- [Endpoints](./architecture/backend/endpoints.md)
-    - This document is a list of my backend endpoints I use in my games
-- [Packages](./architecture/backend/packages.md)
-    - This document summarizes my Go packages and their place in the flow.
-- [Process Flow](./architecture/backend/process-flow.md)
-    - This document contains the dependency map, and how data flows from the database to the client
+- **[Endpoints](./architecture/backend/endpoints.md)** - List of my backend endpoints I use in my games.
+
+- **[Packages](./architecture/backend/packages.md)** - Summarizes my Go packages and their responsibilities.
+
+- **[Process Flow](./architecture/backend/process-flow.md)** - Contains the dependency map, and how data flows from the database to the client
 
 #### Games (Frontend)
 
-- [Daily Slash](./architecture/frontend/daily-slash-design.md)
-    - This document contains Daily Slash's design and game sequence.
-- [Connections](./architecture/frontend/connections-design.md)
-    - This document contains Connections's design and game sequence.
-- [Guess The NPC](./architecture/frontend/guess-the-npc-design.md)
-    - This document contains Guess the NPC's design and game sequence.
-- [Hangman](./architecture/frontend/hangman-design.md)
-    - This document contains Hangman's design and game sequence.
-- [TerraTrivia](./architecture/frontend/terratrivia-design.md)
-    - This document contains TerraTrivia's design and game sequence.
+- **[Daily Slash](./architecture/frontend/daily-slash-design.md)** - Daily Slash's design and game sequence.
 
-### Dev-Notes
+- **[Connections](./architecture/frontend/connections-design.md)** - Connections's design and game sequence.
 
-- [Deployment](./ops/deployment.md)
-- [Versioning & Release Process](./ops/versioning.md)
-- [Puzzle Refresh Job](./ops/puzzle-refresh.md)
-- [robots.txt & Sitemap](./ops/seo-config.md)
+- **[Guess The NPC](./architecture/frontend/guess-the-npc-design.md)** - Guess the NPC's design and game sequence.
 
-### Development Journal
+- **[Hangman](./architecture/frontend/hangman-design.md)** - Hangman's design and game sequence.
 
-- [Dev Journal Index](./dev-journal/README.md)
+- **[TerraTrivia](./architecture/frontend/terratrivia-design.md)** - TerraTrivia's design and game sequence.
 
-### Contributing
+## Maintenance
 
-- [Contributing Guide](./contributing.md)
-- [Code Style & Conventions](./code-style.md)
+These notes are used by me to maintain the project and to refer back to if anything breaks.
+
+- **[Building for Production](./maintenance/building-for-prod.md)** - Describes how to build for production.
+
+- **[Curl API Calls](./maintenance/curl-api-calls.md)** - List of all `curl` calls I use to test the backend during development.'
+
+- **[If the Backend is Overloaded](./maintenance/if-backend-is-overloaded.md)** - Gives tips and tricks to mediate issues if too much traffic hits the backend.
 
 ---
-
-_Keep this index up to date as new docs are added. Each linked file should exist under `docs/` with a matching path._

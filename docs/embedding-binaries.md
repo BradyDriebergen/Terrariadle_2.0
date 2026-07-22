@@ -1,5 +1,16 @@
 # Embedding Static Files in Go
 
+### Table of Contents
+
+- [What is it?](#what-is-embedding-files-into-go-binaries)
+- [Layer 1: Embedding](#1-embedding-getting-the-files-into-the-binary)
+- [Layer 2: Serving](#2-serving-turning-the-embedded-fs-into-http-responses)
+- [Layer 3: SPA Fallback](#3-spa-fallback-handling-client-side-routes)
+- [Wiring it in](#wiring-it-into-the-server)
+- [Other Issues](#other-issues-i-ran-into)
+
+---
+
 In my old implementation of this project, I was running the frontend and backend as two separate services on my server. It was never really a major problem, but it resulted in two things to deploy, two ports to manage, and a CORS configuration just to let the frontend talk to the API.
 
 I expected to do the same for this project, until I did more research on embedding files into a Go binary. In short, I was able to bundle my frontend and backend into one executable. I was blown away at this capability because it allowed me to only need to run one service on my server. This reduced complexity also meant I only had to manage one port. I decided it would be perfect for this project.

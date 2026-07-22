@@ -1,5 +1,15 @@
 # Setting Up Versioning for Terrariadle
 
+### Table of Contents
+
+- [Versioning Approach](#the-approach-i-landed-on)
+- [How it Works](#how-it-works)
+- [Backend Injection](#backend-injection)
+- [Frontend Injection](#frontend-injection)
+- [Downsides](#downsides-to-this-approach)
+
+---
+
 When I was ready for the initial release of this project, I wanted to include a versioning system that represented the current stage of development. In my past iterations, I would just update a string value on my frontend after any change. This process came with a slew of problems, including forgetting to bump up the version number, ignoring any backend changes, and having no clear boundaries between what type of update it was (feature/bug/release). In this new versioning system, I wanted it to be as easy as possible to increment version numbers and not require manual intervention.
 
 ## The Approach I Landed On
