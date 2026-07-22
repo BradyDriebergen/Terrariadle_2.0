@@ -69,7 +69,7 @@ Terrariadle/
 **Finishing steps**
 
 - [ ] Update documentation ~~and wiki~~
-- [ ] Update Cloudflare domain to use Proxied (DNS -> records)
+- [x] Update Cloudflare domain to use Proxied (DNS -> records)
 - [ ] Market the site:
     - [ ] Redit posts
     - [ ] Twitter
