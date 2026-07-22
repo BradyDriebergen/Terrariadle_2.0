@@ -54,7 +54,7 @@ Terrariadle/
 
 - [x] Embed frontend build in go binary
 - [x] Figure out versioning
-- [ ] Update Github to ignore certain files
+- [x] Update Github to ignore certain files
 - [x] Create oracle instance and set up networking
 - [x] Update Cloudflare DNS to point to server
 - [x] Add a new user to Oracle instance
