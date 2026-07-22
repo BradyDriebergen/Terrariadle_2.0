@@ -100,6 +100,12 @@ This is stored in `/etc/systemd/system/terrariadle.service`. To modify this file
 sudo vim terrariadle.service
 ```
 
+To check the securities of this file, you can also run:
+
+```bash
+systemd-analyze security terrariadle
+```
+
 ## Caddy
 
 Caddy is being used as a reverse proxy to support HTTPS and to map port `8080` to port `443`. Below is how I installed Caddy:
