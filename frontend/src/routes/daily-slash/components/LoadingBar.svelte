@@ -94,4 +94,10 @@
 	.background {
 		z-index: 1;
 	}
+
+	@media (max-width: 700px) {
+		.wrapper {
+			width: 220px;
+		}
+	}
 </style>

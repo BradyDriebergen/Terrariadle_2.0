@@ -46,7 +46,7 @@
 		font-size: 14px;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 700px) {
 		.sign {
 			height: 50px;
 			padding: 0 15px;

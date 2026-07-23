@@ -71,7 +71,7 @@
 	<div class="guess-panel" out:slide={{ duration: 700, easing: cubicInOut }}>
 		<h2>Guess Today's Weapon</h2>
 
-		<div class="loadingBar" class:finished>
+		<div class="loading-bar" class:finished>
 			<LoadingBar {guessCount} {finished} />
 		</div>
 
@@ -136,6 +136,10 @@
 
 <style>
 	.guess-panel {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background-color: var(--color-backgroundblue);
 		width: fit-content;
 		text-align: center;
@@ -197,7 +201,7 @@
 		background-color: var(--color-lightblue);
 	}
 
-	.loadingBar {
+	.loading-bar {
 		margin-top: 25px;
 		margin-bottom: 10px;
 	}
@@ -205,5 +209,21 @@
 	.dropdown {
 		margin-top: 15px;
 		margin-bottom: 5px;
+	}
+
+	@media (max-width: 700px) {
+		.loading-bar {
+			margin-top: 10px;
+		}
+
+		.hint-buttons button {
+			width: 90px;
+			height: 90px;
+		}
+
+		.hint-buttons button .lock {
+			left: 23px;
+			width: 45px;
+		}
 	}
 </style>
