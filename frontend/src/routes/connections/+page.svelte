@@ -401,4 +401,29 @@
 	.game-buttons button:disabled {
 		background-color: rgba(0, 0, 0, 0.518);
 	}
+
+	@media (max-width: 550px) {
+		.grid {
+			width: 100%;
+			height: 300px;
+			gap: 5px;
+		}
+
+		.answer-pane h4 {
+			font-size: 20px;
+		}
+
+		.answer-pane span {
+			font-size: 11px;
+		}
+
+		.option span {
+			padding: 5px;
+			font-size: 15px;
+		}
+
+		.game-buttons button {
+			font-size: 15px;
+		}
+	}
 </style>
