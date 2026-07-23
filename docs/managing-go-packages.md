@@ -12,6 +12,8 @@ Early on in developing this second iteration of my project, the backend was orga
 
 ![Old dependency diagram](assets/Old-Dependency-Diagram.png)
 
+You can also see how I originally had my project structured in [v2 File Structure](./legacy-notes/v2-file-structure.txt).
+
 As you can see, my old structure was a web of imports between all of my packages. After finishing this draft, I started noticing a lot of issues with this approach.
 
 - **No clear ownership of methods**: This structure had no clear ownership of functions or types. There were some packages like `jsonreader` and `store` that did very similar functionalities. I also had a trickle-down effect where I would declare something in one package, and use a package to pass it down to another package. Just from the diagram, you can see how messy it got.
