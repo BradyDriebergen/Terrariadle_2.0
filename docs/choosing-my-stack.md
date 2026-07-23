@@ -1,6 +1,6 @@
 # Why I Chose This Stack
 
-## Table of Contents
+### Table of Contents
 
 - [SvelteKit](#sveltekit)
 - [Go](#go)

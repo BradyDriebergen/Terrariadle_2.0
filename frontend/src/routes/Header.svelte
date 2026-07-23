@@ -106,7 +106,7 @@
 
 	.centered {
 		justify-self: center;
-		width: 400px;
+		max-width: 400px;
 	}
 
 	.corner {
@@ -158,5 +158,11 @@
 
 	.incomplete {
 		filter: grayscale(100%);
+	}
+
+	@media (max-width: 600px) {
+		.centered {
+			margin-top: 20px;
+		}
 	}
 </style>

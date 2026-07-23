@@ -87,4 +87,10 @@
 	img {
 		position: absolute;
 	}
+
+	@media (max-width: 600px) {
+		p {
+			font-size: 17px;
+		}
+	}
 </style>

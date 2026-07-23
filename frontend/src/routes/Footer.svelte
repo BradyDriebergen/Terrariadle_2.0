@@ -45,4 +45,15 @@
 	.version {
 		font-size: 14px;
 	}
+
+	@media (max-width: 600px) {
+		.sign {
+			height: 50px;
+			padding: 0 15px;
+		}
+
+		.icon {
+			height: 30px;
+		}
+	}
 </style>
