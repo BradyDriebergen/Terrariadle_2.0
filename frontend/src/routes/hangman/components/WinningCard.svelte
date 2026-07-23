@@ -122,4 +122,12 @@
 		height: auto;
 		object-fit: contain;
 	}
+
+	@media (max-width: 700px) {
+		.container {
+			min-width: 0;
+			max-width: 300px;
+			width: 75%;
+		}
+	}
 </style>

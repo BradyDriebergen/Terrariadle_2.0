@@ -62,7 +62,7 @@
 		width: 50px;
 		height: 62px;
 		font-size: 17px;
-		border: 2px solid #000000;
+		border: 2px solid black;
 		border-radius: 5px;
 		transition: background-color 0.2s ease;
 	}
@@ -82,5 +82,11 @@
 
 	.keyboard-key:disabled.incorrect {
 		background: var(--color-red);
+	}
+
+	@media (max-width: 700px) {
+		.keyboard-key {
+			width: 35px;
+		}
 	}
 </style>
