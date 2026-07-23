@@ -216,4 +216,11 @@
 	.winning-card {
 		color: yellow;
 	}
+
+	@media (max-width: 700px) {
+		.bonus-container {
+			width: 90%;
+			margin: 50px 0 20px 0;
+		}
+	}
 </style>

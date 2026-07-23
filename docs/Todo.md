@@ -92,3 +92,4 @@ Terrariadle/
 - [ ] Automatically run the prettier format script when pushing to main
 - [ ] Support mobile view (IMPORTANT)
 - [ ] Implement Sitelinks for Google indexing
+- [ ] Add error handling on try-catch loops on the frontend

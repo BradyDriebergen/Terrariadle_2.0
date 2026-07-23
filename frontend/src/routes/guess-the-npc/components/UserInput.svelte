@@ -126,4 +126,10 @@
 	.dropdown {
 		margin-top: 20px;
 	}
+
+	@media (max-width: 650px) {
+		.quote-box {
+			width: 80%;
+		}
+	}
 </style>
