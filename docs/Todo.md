@@ -41,6 +41,7 @@
 - [x] Add static adapter to Sveltekit
 - [x] Reformat the site file structure:
 
+```
 Terrariadle/
 ├── main.go
 ├── internal/
@@ -49,35 +50,45 @@ Terrariadle/
 ├── go.sum
 ├── Makefile
 └── docs/
+```
 
 - [x] Embed frontend build in go binary
 - [x] Figure out versioning
-- [ ] Update Github to ignore certain files
-- [ ] Add a new user to Oracle instance
-- [ ] Add .env files to Oracle instance
-- [ ] Reset MongoDB Atlas password for db
-- [ ] Create a systemd service for the app
-- [ ] Implement Caddy in place of Nginx
+- [x] Update Github to ignore certain files
+- [x] Create oracle instance and set up networking
+- [x] Update Cloudflare DNS to point to server
+- [x] Add a new user to Oracle instance
+- [x] Add .env files to Oracle instance
+- [x] Create a systemd service for the app
+- [x] Implement Caddy in place of Nginx
 - [ ] Create new script that automatically builds and deploys
 - [ ] Reset MongoDB Atlas password for db
+- [ ] Run through site one final time
+- [ ] Upload build binary and run service
 
 **Finishing steps**
 
-- [ ] Update documentation and wiki
+- [x] Update documentation ~~and wiki~~
+- [x] Update Cloudflare domain to use Proxied (DNS -> records)
 - [ ] Market the site:
     - [ ] Redit posts
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
-- [ ] Add page for contacting support
-- [ ] Add monitoring for better analytics
-- [ ] Add some sort of logging that doesn't bog down my server
-- [ ] Update categories data
-    - [ ] Add more categories
-    - [ ] Update the options to contain only 4 options
+- Add it to google search index, or anything equivalent
 
 **Future nice to haves:**
 
 - [ ] Consider GitHub Actions for automatic deployment
-- [ ] Add a stats screen at the beginning for how many users have guessed
+- [ ] Add a stats screen at the landing page for how many users have guessed
 - [ ] Change cursor to the Terraria cursor (in progress)
+- [ ] Update categories data
+    - [ ] Add more categories
+    - [ ] Update the options to contain only 4 options
+- [ ] Add page for contacting support
+- [ ] Add monitoring for better analytics
+- [ ] Add some sort of logging that doesn't bog down my server
+- [ ] Automate linting script as a check before a PR can be merged into main
+- [ ] Automatically run the prettier format script when pushing to main
+- [ ] Support mobile view (IMPORTANT)
+- [ ] Implement Sitelinks for Google indexing

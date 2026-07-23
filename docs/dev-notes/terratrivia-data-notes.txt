@@ -32,9 +32,6 @@ REMEMBER TO MAKE ALGORITHM THAT DOESN'T ALLOW MULTIPLE SOLUTIONS
 
 Finished at item 1539
 
-REMEMBER! Ask AI to see any duplicates between armors
-- Ex. BEETLE vs BEETLEARMOR
-
 Skipping 501 - 700, will update after 3 chunk words
 
 NOTES ABOUT NAMING CONVENTIONS:
