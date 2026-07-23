@@ -56,4 +56,14 @@ These notes are used by me to maintain the project and to refer back to if anyth
 
 - **[If the Backend is Overloaded](./maintenance/if-backend-is-overloaded.md)** - Gives tips and tricks to mediate issues if too much traffic hits the backend.
 
+- **[If Versioning Breaks](./maintenance/if-versioning-breaks.md)** - Provides steps to fix versioning if it gets out of sync.
+
+- **[Instance Setup](./maintenance/instance-setup.md)** - Overview of all commands and configs up to set up cloud instance.
+
+- **[Logging](./maintenance/logging.md)** - Contains commands for viewing logs.
+
+- **[`systemd` Text File](./maintenance/systemd-file.txt)** - Service file used to run Terrariadle
+
+- **[Updating Dependencies](./maintenance/updating-dependencies.md)** - Instructions for updating Go and NPM dependencies.
+
 ---

@@ -20,7 +20,7 @@ This site contains 5 different daily puzzles:
 - **Hangman** — Guess the enemy one letter at a time
 - **TerraTrivia** — Terraria themed Seven Little Words
 
-If your curious on how I made this project, or some of the design choices behind it, I encourage you to look into the [docs](docs) folder. I wrote a ton about my development throughout this rewrite and I hope my struggles can help someone make their own project.
+If your curious on how I made this project, or some of the design choices behind it, I encourage you to look into the [docs](docs) folder. I wrote a ton about my development throughout this rewrite and I hope my struggles can help you make your own project.
 
 ## Why I built this
 

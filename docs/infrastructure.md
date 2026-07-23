@@ -73,27 +73,11 @@ There are quite a bit more that goes into hosting a `systemd` service. I recomme
 
 ### Reverse Proxy (Caddy)
 
-`/etc/systemd/system/terrariadle.service`
+With my project running on port 8080, I needed to map my traffic from port 443 (where HTTPS requests come in) to port 8080, so my app can serve the client with the requested data. This is what a reverse proxy is for.
 
-Installing Caddy:
+I used to use `nginx` for my reverse proxy in my previous implementation. I am actually quite fond of `nginx`, but after some research, I found a more modern tool called `Caddy`. Caddy is super nice because it's a more hands off reverse proxy tool. It has automatic HTTPS certification, a more simple configuration file, and many features built in rather than having to be configured. This includes things like logging, headers, TLS settings, etc. I felt for a project of this scale, this made more sense than `nginx`.
 
-```bash
-sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
-sudo apt update
-sudo apt install caddy
-```
-
-```bash
-sudo systemctl enable --now caddy
-sudo systemctl reload caddy   # after editing the Caddyfile, no downtime
-journalctl -u caddy -f
-```
-
-caddy file:
-
-`/etc/caddy/Caddyfile`
+Here is my current Caddy file configuration:
 
 ```caddyfile
 terrariadle.com {
@@ -125,16 +109,7 @@ www.terrariadle.com {
 }
 ```
 
-`sudo systemctl reload caddy`
-
-Commands to run:
-
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable --now terrariadle
-sudo systemctl status terrariadle
-journalctl -u terrariadle -f
-```
+As you can see, Caddy is a lot simpler than the equivalent nginx config. This is great for my project because I don't have to worry about issue like renewing my cert. It's a great low-effort option for proxying, but doesn't come without some tradeoffs. Nginx is typically more efficient and has a lot bigger ecosystem when working with it. While nginx is typically a better option for performance at scale, Caddy provides me with a lightweight, super easy way to proxy my application.
 
 ## Logging
 
@@ -201,4 +176,8 @@ build:
 
 ## Takeaway
 
-Once I took the time to learn more about infrastructure and hosting this project, the concepts didn't seem that complicated. I am definitely more confident this time around because of the memory overflow safety and the knowledge over how my server is configured.
+Infrastructure used to be one of those areas where I struggled with. There are so many nuances when it comes to building, configuring, hosting, and serving data to people across the internet.
+
+Every step here maps to something I didn't understand when making the first iteration of this project. I didn't understand how firewalls worked, I didn't configure my cert renewal correctly, and I didn't know how to run a service. Looking back on it, I'm surprised my old site worked at all.
+
+Once I took the time to learn more about infrastructure and hosting this project, the concepts didn't seem that complicated. I get where requests come in, and responses leave. I understand the tradeoffs of using specific serving platforms. I am starting to learn more about how to make my application better just from configuring my instance. This was a massive learning journey for me, and while I'm not a pro at it yet, I feel a lot better hosting this new project this time around.
