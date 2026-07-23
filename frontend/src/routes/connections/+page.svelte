@@ -250,7 +250,7 @@
 		background-color: var(--color-backgroundblue);
 		width: fit-content;
 		text-align: center;
-		margin: 30px auto 15px auto;
+		margin: 20px auto 15px auto;
 		padding: 0 15px;
 
 		border-radius: 15px;

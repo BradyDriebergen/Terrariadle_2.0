@@ -140,7 +140,7 @@
 		width: fit-content;
 		text-align: center;
 		margin: auto;
-		margin-top: 40px;
+		margin-top: 20px;
 		padding: 15px;
 
 		border-radius: 15px;

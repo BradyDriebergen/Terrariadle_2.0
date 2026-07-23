@@ -39,6 +39,3 @@
 {:else}
 	<p>Loading...</p>
 {/if}
-
-<style>
-</style>

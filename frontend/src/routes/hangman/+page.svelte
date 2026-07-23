@@ -136,7 +136,7 @@
 		width: fit-content;
 		text-align: center;
 		margin: auto;
-		margin-top: 30px;
+		margin-top: 20px;
 		padding: 0 15px;
 
 		border-radius: 15px;

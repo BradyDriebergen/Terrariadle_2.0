@@ -160,9 +160,21 @@
 		filter: grayscale(100%);
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 700px) {
+		header {
+			margin-bottom: 70px;
+		}
+		
 		.centered {
 			margin-top: 20px;
+		}
+
+		.corner {
+			justify-self: center;
+		}
+
+		.links {
+			margin-top: 100px;
 		}
 	}
 </style>
