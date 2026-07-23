@@ -141,6 +141,7 @@
 		border-radius: 8px;
 		border: 2px solid black;
 		padding: 6px;
+		transition: background 0.08s;
 	}
 
 	.links a:hover {
