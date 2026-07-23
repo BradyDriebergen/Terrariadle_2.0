@@ -1,3 +1,8 @@
+## Running Terrariadle v1.0
+
+Here is how I ran the frontend (was Node.js, not angular):
+
+```bash
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -10,3 +15,10 @@ while true; do
   echo "[$(date)] ng serve exited with code $code; restarting in 2s..."
   sleep 2
 done
+```
+
+And here is how I ran the backend:
+
+```bash
+node ./src/DailyGuessAPI.js
+```

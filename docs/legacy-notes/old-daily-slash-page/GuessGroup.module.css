@@ -1,0 +1,31 @@
+.wrapper {
+    overflow-x: auto;
+    min-width: 300px
+}
+.container {
+    display: grid;
+    width: fit-content;
+    margin: 0 auto;
+}
+.container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categories {
+    border-color: transparent;
+    border-bottom: #fff;
+    border-style: solid;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+.category {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

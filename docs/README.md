@@ -66,4 +66,16 @@ These notes are used by me to maintain the project and to refer back to if anyth
 
 - **[Updating Dependencies](./maintenance/updating-dependencies.md)** - Instructions for updating Go and NPM dependencies.
 
----
+## Dev Notes
+
+- **[Site Component Planning](./dev-notes/Site-Component-Planning.pdf)** - Old plan for component structure in Svelte frontend.
+
+- **[Svelte Issues](./dev-notes/svelte-issues.md)** - Issue found after upgrading svelte (brought up in [Choosing my Stack](./choosing-my-stack.md)).
+
+- **[SvelteKit Notes](./dev-notes/SvelteKitNotes.md)** - Notes I took when learning SvelteKit.
+
+- **[Svelte Notes](./dev-notes/SvelteNotes.md)** - Notes I took when learning Svelte.
+
+## Legacy Notes
+
+**[Legacy Notes](./legacy-notes/)** - This folder contains a collection of notes, files, and logic my first iteration of the site and planning v2. If you got some extra time, feel free to learn what not to do when building a fullstack project.

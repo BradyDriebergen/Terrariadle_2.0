@@ -68,13 +68,14 @@ Terrariadle/
 
 **Finishing steps**
 
-- [ ] Update documentation ~~and wiki~~
+- [x] Update documentation ~~and wiki~~
 - [x] Update Cloudflare domain to use Proxied (DNS -> records)
 - [ ] Market the site:
     - [ ] Redit posts
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
+- Add it to google search index, or anything equivalent
 
 **Future nice to haves:**
 
@@ -90,3 +91,4 @@ Terrariadle/
 - [ ] Automate linting script as a check before a PR can be merged into main
 - [ ] Automatically run the prettier format script when pushing to main
 - [ ] Support mobile view (IMPORTANT)
+- [ ] Implement Sitelinks for Google indexing

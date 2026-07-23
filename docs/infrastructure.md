@@ -57,6 +57,8 @@ I've learned that this is a good method of practicing principle of least privile
 
 Features I never had in the past that I wanted in this iteration include process supervision, automatic restarts, and graceful shutdown handled by the OS. In my previous iteration, I used tmux sessions that had none of these features. In fact, my tmux sessions would constantly crash due to the massive overhead of not building my project. I wanted to use something industry standard and was optimized for hosting.
 
+To see how these tmux sessions operated, see [How to Redeploy](./legacy-notes/how_to_redeploy.md) in the legacy notes.
+
 After researching solutions, I quickly came across Linux `systemd` services. These services were built for this application of work, running as a Linux service in the background of the OS. This system supported extra security, resilience, performance, and built-in logging. It was a no-brainer compared to other options.
 
 Despite its benefits, there is quite a lot of configuration to do to run one of these services. Specifically, some of the things you need are:

@@ -14,6 +14,8 @@ When I first launched my site, I didn't have a clue on how to run a program on a
 
 This wasn't even the worst of it. I used to host my frontend and backend on separate `tmux` sessions. I didn't know how to make background processes in Linux, so I used tmux sessions to 'run background services'. It was wildly inefficient.
 
+To see how these tmux sessions operated, see [How to Redeploy](./legacy-notes/how_to_redeploy.md) in the legacy notes.
+
 As an example of how bad my original hosting was, here is the script I used to run my frontend:
 
 ```bash

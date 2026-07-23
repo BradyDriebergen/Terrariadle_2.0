@@ -1,0 +1,6290 @@
+[
+    {
+        "id": 1,
+        "name": "Abigail's Flower",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Abigails_Flower.png",
+            "damage-type": "Summon",
+            "damage": 6,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Adamantite Glaive",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Adamantite_Glaive.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Adamantite Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Adamantite_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 42,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Adamantite Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Adamantite_Sword.png",
+            "damage-type": "Melee",
+            "damage": 61,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Aerial Bane",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Aerial_Bane.png",
+            "damage-type": "Ranged",
+            "damage": 39,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Ale Tosser",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ale_Tosser.png",
+            "damage-type": "Throwing",
+            "damage": 20,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Amarok",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Amarok.png",
+            "damage-type": "Melee",
+            "damage": 43,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Amazon",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Amazon.png",
+            "damage-type": "Melee",
+            "damage": 18,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Amber Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Amber_Staff.png",
+            "damage-type": "Magic",
+            "damage": 21,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Amethyst Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Amethyst_Staff.png",
+            "damage-type": "Magic",
+            "damage": 15,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Anchor",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Anchor.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Aqua Scepter",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Aqua_Scepter.png",
+            "damage-type": "Magic",
+            "damage": 27,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Arkhalis",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Arkhalis.png",
+            "damage-type": "Melee",
+            "damage": 25,
+            "use-time": "Fast",
+            "rarity": "./rarities/Cyan.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Artery",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Artery.png",
+            "damage-type": "Melee",
+            "damage": 17,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Ball O' Hurt",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ball_O_Hurt.png",
+            "damage-type": "Melee",
+            "damage": 30,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Ballista Cane",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ballista_Cane.png",
+            "damage-type": "Summon",
+            "damage": 74,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 19,
+        "name": "Ballista Rod",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ballista_Rod.png",
+            "damage-type": "Summon",
+            "damage": 30,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 20,
+        "name": "Ballista Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ballista_Staff.png",
+            "damage-type": "Summon",
+            "damage": 156,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 21,
+        "name": "Bananarang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Bananarang.png",
+            "damage-type": "Melee",
+            "damage": 45,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 22,
+        "name": "Bat Bat",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bat_Bat.png",
+            "damage-type": "Melee",
+            "damage": 36,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Bat Scepter",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Bat_Scepter.png",
+            "damage-type": "Magic",
+            "damage": 45,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Beam Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Beam_Sword.png",
+            "damage-type": "Melee",
+            "damage": 52,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 25,
+        "name": "Bee Gun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bee_Gun.png",
+            "damage-type": "Magic",
+            "damage": 9,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Bee Keeper",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bee_Keeper.png",
+            "damage-type": "Melee",
+            "damage": 30,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 27,
+        "name": "Beenade",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Beenade.png",
+            "damage-type": "Throwing",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 28,
+        "name": "Betsy's Wrath",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Betsys_Wrath.png",
+            "damage-type": "Magic",
+            "damage": 100,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 29,
+        "name": "Blade of Grass",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blade_of_Grass.png",
+            "damage-type": "Melee",
+            "damage": 18,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 30,
+        "name": "Blade Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Blade_Staff.png",
+            "damage-type": "Summon",
+            "damage": 6,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 31,
+        "name": "Bladed Glove",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bladed_Glove.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 32,
+        "name": "Bladetongue",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Bladetongue.png",
+            "damage-type": "Melee",
+            "damage": 55,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 33,
+        "name": "Blizzard Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Blizzard_Staff.png",
+            "damage-type": "Magic",
+            "damage": 58,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 34,
+        "name": "Blood Butcherer",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blood_Butcherer.png",
+            "damage-type": "Melee",
+            "damage": 22,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 36,
+        "name": "Blood Rain Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blood_Rain_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 37,
+        "name": "Blood Thorn",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Blood_Thorn.png",
+            "damage-type": "Magic",
+            "damage": 34,
+            "use-time": "Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 38,
+        "name": "Bloody Machete",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bloody_Machete.png",
+            "damage-type": "Melee",
+            "damage": 20,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 39,
+        "name": "Blowgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blowgun.png",
+            "damage-type": "Ranged",
+            "damage": 27,
+            "use-time": "Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 40,
+        "name": "Blowpipe",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blowpipe.png",
+            "damage-type": "Ranged",
+            "damage": 9,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 41,
+        "name": "Blue Moon",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Blue_Moon.png",
+            "damage-type": "Melee",
+            "damage": 54,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 42,
+        "name": "Phaseblade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Phaseblade.png",
+            "damage-type": "Melee",
+            "damage": 26,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 43,
+        "name": "Phasesaber",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Phasesaber.png",
+            "damage-type": "Melee",
+            "damage": 48,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 44,
+        "name": "Bone",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bone.png",
+            "damage-type": "Throwing",
+            "damage": 20,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 45,
+        "name": "Bone Javelin",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bone_Javelin.png",
+            "damage-type": "Throwing",
+            "damage": 20,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 46,
+        "name": "Bone Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bone_Sword.png",
+            "damage-type": "Melee",
+            "damage": 19,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Bone Throwing Knife",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Bone_Throwing_Knife.png",
+            "damage-type": "Throwing",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 48,
+        "name": "Book of Skulls",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Book_of_Skulls.png",
+            "damage-type": "Magic",
+            "damage": 29,
+            "use-time": "Average",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 49,
+        "name": "Boomstick",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Boomstick.png",
+            "damage-type": "Ranged",
+            "damage": 14,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 53,
+        "name": "Brand of the Inferno",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Brand_of_the_Inferno.png",
+            "damage-type": "Melee",
+            "damage": 95,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 54,
+        "name": "Breaker Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Breaker_Blade.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 55,
+        "name": "Breathing Reed",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Breathing_Reed.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 56,
+        "name": "Bubble Gun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Bubble_Gun.png",
+            "damage-type": "Magic",
+            "damage": 70,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 57,
+        "name": "Cactus Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Cactus_Sword.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 58,
+        "name": "Candy Cane Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Candy_Cane_Sword.png",
+            "damage-type": "Melee",
+            "damage": 19,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 59,
+        "name": "Candy Corn Rifle",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Candy_Corn_Rifle.png",
+            "damage-type": "Ranged",
+            "damage": 44,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 60,
+        "name": "Cascade",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Cascade.png",
+            "damage-type": "Melee",
+            "damage": 27,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 61,
+        "name": "Celebration",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Celebration.png",
+            "damage-type": "Ranged",
+            "damage": 25,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 62,
+        "name": "Celebration Mk2",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Celebration_Mk2.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 63,
+        "name": "Chain Guillotines",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chain_Guillotines.png",
+            "damage-type": "Melee",
+            "damage": 59,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 64,
+        "name": "Chain Gun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chain_Gun.png",
+            "damage-type": "Ranged",
+            "damage": 31,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 65,
+        "name": "Chain Knife",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Chain_Knife.png",
+            "damage-type": "Melee",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 66,
+        "name": "Charged Blaster Cannon",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Charged_Blaster_Cannon.png",
+            "damage-type": "Magic",
+            "damage": 100,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 67,
+        "name": "Chik",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chik.png",
+            "damage-type": "Melee",
+            "damage": 39,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 68,
+        "name": "Chlorophyte Claymore",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chlorophyte_Claymore.png",
+            "damage-type": "Melee",
+            "damage": 95,
+            "use-time": "Average",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 69,
+        "name": "Chlorophyte Partisan",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chlorophyte_Partisan.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 70,
+        "name": "Chlorophyte Saber",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chlorophyte_Saber.png",
+            "damage-type": "Melee",
+            "damage": 57,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 71,
+        "name": "Chlorophyte Shotbow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Chlorophyte_Shotbow.png",
+            "damage-type": "Ranged",
+            "damage": 34,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 72,
+        "name": "Christmas Tree Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Christmas_Tree_Sword.png",
+            "damage-type": "Melee",
+            "damage": 86,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 73,
+        "name": "Classy Cane",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Classy_Cane.png",
+            "damage-type": "Melee",
+            "damage": 16,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 74,
+        "name": "Clinger Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Clinger_Staff.png",
+            "damage-type": "Magic",
+            "damage": 43,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 75,
+        "name": "Clockwork Assault Rifle",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Clockwork_Assault_Rifle.png",
+            "damage-type": "Ranged",
+            "damage": 17,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 76,
+        "name": "Cobalt Naginata",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cobalt_Naginata.png",
+            "damage-type": "Melee",
+            "damage": 44,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 77,
+        "name": "Cobalt Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cobalt_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 35,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 78,
+        "name": "Cobalt Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cobalt_Sword.png",
+            "damage-type": "Melee",
+            "damage": 40,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 79,
+        "name": "Code 1",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Code_1.png",
+            "damage-type": "Melee",
+            "damage": 21,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 80,
+        "name": "Code 2",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Code_2.png",
+            "damage-type": "Melee",
+            "damage": 54,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 81,
+        "name": "Coin Gun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Coin_Gun.png",
+            "damage-type": "Ranged",
+            "damage": 0,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 82,
+        "name": "Combat Wrench",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Combat_Wrench.png",
+            "damage-type": "Melee",
+            "damage": 25,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 83,
+        "name": "Cool Whip",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cool_Whip.png",
+            "damage-type": "Summon",
+            "damage": 45,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 84,
+        "name": "Copper Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Copper_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 6,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 85,
+        "name": "Copper Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Copper_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 9,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 86,
+        "name": "Copper Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Copper_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 5,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 87,
+        "name": "Crimson Rod",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Crimson_Rod.png",
+            "damage-type": "Magic",
+            "damage": 12,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 88,
+        "name": "Crystal Serpent",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Crystal_Serpent.png",
+            "damage-type": "Magic",
+            "damage": 40,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 89,
+        "name": "Crystal Storm",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Crystal_Storm.png",
+            "damage-type": "Magic",
+            "damage": 32,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 90,
+        "name": "Crystal Vile Shard",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Crystal_Vile_Shard.png",
+            "damage-type": "Magic",
+            "damage": 25,
+            "use-time": "Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 91,
+        "name": "Cursed Flames",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cursed_Flames.png",
+            "damage-type": "Magic",
+            "damage": 55,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 92,
+        "name": "Cutlass",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Cutlass.png",
+            "damage-type": "Melee",
+            "damage": 53,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 93,
+        "name": "Daedalus Stormbow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Daedalus_Stormbow.png",
+            "damage-type": "Ranged",
+            "damage": 38,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 94,
+        "name": "Dao of Pow",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Dao_of_Pow.png",
+            "damage-type": "Melee",
+            "damage": 100,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 95,
+        "name": "Dark Harvest",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Dark_Harvest.png",
+            "damage-type": "Summon",
+            "damage": 100,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 96,
+        "name": "Dark Lance",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Dark_Lance.png",
+            "damage-type": "Melee",
+            "damage": 34,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 97,
+        "name": "Dart Pistol",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Dart_Pistol.png",
+            "damage-type": "Ranged",
+            "damage": 28,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 98,
+        "name": "Dart Rifle",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Dart_Rifle.png",
+            "damage-type": "Ranged",
+            "damage": 52,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 99,
+        "name": "Daybreak",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Daybreak.png",
+            "damage-type": "Melee",
+            "damage": 150,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 100,
+        "name": "Deadly Sphere Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Deadly_Sphere_Staff.png",
+            "damage-type": "Summon",
+            "damage": 40,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 101,
+        "name": "Death Sickle",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Death_Sickle.png",
+            "damage-type": "Melee",
+            "damage": 57,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 102,
+        "name": "Demon Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Demon_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 14,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 103,
+        "name": "Demon Scythe",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Demon_Scythe.png",
+            "damage-type": "Magic",
+            "damage": 35,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 104,
+        "name": "Desert Tiger Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Desert_Tiger_Staff.png",
+            "damage-type": "Summon",
+            "damage": 41,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 105,
+        "name": "Diamond Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Diamond_Staff.png",
+            "damage-type": "Magic",
+            "damage": 23,
+            "use-time": "Average",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 107,
+        "name": "Drippler Crippler",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Drippler_Crippler.png",
+            "damage-type": "Melee",
+            "damage": 110,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 108,
+        "name": "Durendal",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Durendal.png",
+            "damage-type": "Summon",
+            "damage": 55,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 111,
+        "name": "Electrosphere Launcher",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Electrosphere_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 40,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 112,
+        "name": "Elf Melter",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Elf_Melter.png",
+            "damage-type": "Ranged",
+            "damage": 53,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 113,
+        "name": "Emerald Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Emerald_Staff.png",
+            "damage-type": "Magic",
+            "damage": 19,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 114,
+        "name": "Enchanted Boomerang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Enchanted_Boomerang.png",
+            "damage-type": "Melee",
+            "damage": 17,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Crafting", "Chest"]
+        }
+    },
+    {
+        "id": 115,
+        "name": "Enchanted Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Enchanted_Sword.png",
+            "damage-type": "Melee",
+            "damage": 23,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 116,
+        "name": "Eventide",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Eventide.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 117,
+        "name": "Excalibur",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Excalibur.png",
+            "damage-type": "Melee",
+            "damage": 72,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 118,
+        "name": "Exotic Scimitar",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Exotic_Scimitar.png",
+            "damage-type": "Melee",
+            "damage": 20,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 119,
+        "name": "Explosive Trap Cane",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Explosive_Trap_Cane.png",
+            "damage-type": "Summon",
+            "damage": 59,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 120,
+        "name": "Explosive Trap Rod",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Explosive_Trap_Rod.png",
+            "damage-type": "Summon",
+            "damage": 24,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 121,
+        "name": "Explosive Trap Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Explosive_Trap_Staff.png",
+            "damage-type": "Summon",
+            "damage": 126,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 122,
+        "name": "Falcon Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Falcon_Blade.png",
+            "damage-type": "Melee",
+            "damage": 25,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 123,
+        "name": "Fetid Baghnakhs",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Fetid_Baghnakhs.png",
+            "damage-type": "Melee",
+            "damage": 60,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 124,
+        "name": "Finch Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Finch_Staff.png",
+            "damage-type": "Summon",
+            "damage": 7,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 125,
+        "name": "Firecracker",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Firecracker.png",
+            "damage-type": "Summon",
+            "damage": 37,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 126,
+        "name": "Flairon",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flairon.png",
+            "damage-type": "Melee",
+            "damage": 66,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 127,
+        "name": "Flamarang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flamarang.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 128,
+        "name": "Flameburst Cane",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flameburst_Cane.png",
+            "damage-type": "Summon",
+            "damage": 42,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 129,
+        "name": "Flameburst Rod",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flameburst_Rod.png",
+            "damage-type": "Summon",
+            "damage": 17,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 130,
+        "name": "Flameburst Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flameburst_Staff.png",
+            "damage-type": "Summon",
+            "damage": 88,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 131,
+        "name": "Flamelash",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flamelash.png",
+            "damage-type": "Magic",
+            "damage": 32,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 132,
+        "name": "Flamethrower",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flamethrower.png",
+            "damage-type": "Ranged",
+            "damage": 35,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 133,
+        "name": "Flaming Mace",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flaming_Mace.png",
+            "damage-type": "Melee",
+            "damage": 18,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 135,
+        "name": "Flintlock Pistol",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flintlock_Pistol.png",
+            "damage-type": "Ranged",
+            "damage": 13,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 136,
+        "name": "Flinx Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flinx_Staff.png",
+            "damage-type": "Summon",
+            "damage": 8,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 137,
+        "name": "Flower of Fire",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flower_of_Fire.png",
+            "damage-type": "Magic",
+            "damage": 48,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 138,
+        "name": "Flower of Frost",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flower_of_Frost.png",
+            "damage-type": "Magic",
+            "damage": 60,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 139,
+        "name": "Flower Pow",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flower_Pow.png",
+            "damage-type": "Melee",
+            "damage": 130,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 140,
+        "name": "Flying Dragon",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flying_Dragon.png",
+            "damage-type": "Melee",
+            "damage": 180,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 141,
+        "name": "Flying Knife",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Flying_Knife.png",
+            "damage-type": "Melee",
+            "damage": 40,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 142,
+        "name": "Flymeal",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Flymeal.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 143,
+        "name": "Format:C",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Format:C.png",
+            "damage-type": "Melee",
+            "damage": 39,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 144,
+        "name": "Frost Daggerfish",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Frost_Daggerfish.png",
+            "damage-type": "Throwing",
+            "damage": 17,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 145,
+        "name": "Frost Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Frost_Staff.png",
+            "damage-type": "Magic",
+            "damage": 46,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 146,
+        "name": "Frostbrand",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Frostbrand.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 147,
+        "name": "Fruitcake Chakram",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Fruitcake_Chakram.png",
+            "damage-type": "Melee",
+            "damage": 19,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 148,
+        "name": "Gatligator",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Gatligator.png",
+            "damage-type": "Ranged",
+            "damage": 21,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 149,
+        "name": "Ghastly Glaive",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ghastly_Glaive.png",
+            "damage-type": "Melee",
+            "damage": 45,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 150,
+        "name": "Gladius",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Gladius.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 151,
+        "name": "Gold Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Gold_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 11,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 152,
+        "name": "Gold Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Gold_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 153,
+        "name": "Gold Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Gold_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 154,
+        "name": "Golden Shower",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Golden_Shower.png",
+            "damage-type": "Magic",
+            "damage": 30,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 155,
+        "name": "Golem Fist",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Golem_Fist.png",
+            "damage-type": "Melee",
+            "damage": 90,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 156,
+        "name": "Gradient",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Gradient.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 157,
+        "name": "Gray Zapinator",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Gray_Zapinator.png",
+            "damage-type": "Magic",
+            "damage": 42,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 160,
+        "name": "Grenade",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Grenade.png",
+            "damage-type": "Throwing",
+            "damage": 60,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Chest"]
+        }
+    },
+    {
+        "id": 161,
+        "name": "Grenade Launcher",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Grenade_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 60,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 162,
+        "name": "Gungnir",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Gungnir.png",
+            "damage-type": "Melee",
+            "damage": 61,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 163,
+        "name": "Hallowed Jousting Lance",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Hallowed_Jousting_Lance.png",
+            "damage-type": "Melee",
+            "damage": 90,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 164,
+        "name": "Hallowed Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Hallowed_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 165,
+        "name": "Ham Bat",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ham_Bat.png",
+            "damage-type": "Melee",
+            "damage": 57,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 166,
+        "name": "Hammush",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Hammush.png",
+            "damage-type": "Melee",
+            "damage": 26,
+            "use-time": "Average",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 167,
+        "name": "Handgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Handgun.png",
+            "damage-type": "Ranged",
+            "damage": 26,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 169,
+        "name": "Harpoon",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Harpoon.png",
+            "damage-type": "Ranged",
+            "damage": 25,
+            "use-time": "Average",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 170,
+        "name": "Heat Ray",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Heat_Ray.png",
+            "damage-type": "Magic",
+            "damage": 90,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 171,
+        "name": "Hel-Fire",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Hel-Fire.png",
+            "damage-type": "Melee",
+            "damage": 41,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 172,
+        "name": "Hellwing Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Hellwing_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 22,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 173,
+        "name": "Hive-Five",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Hive-Five.png",
+            "damage-type": "Melee",
+            "damage": 24,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 174,
+        "name": "Hornet Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Hornet_Staff.png",
+            "damage-type": "Summon",
+            "damage": 12,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 175,
+        "name": "Houndius Shootius",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Houndius_Shootius.png",
+            "damage-type": "Summon",
+            "damage": 24,
+            "use-time": "Average",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 176,
+        "name": "Ice Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ice_Blade.png",
+            "damage-type": "Melee",
+            "damage": 17,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 177,
+        "name": "Ice Boomerang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ice_Boomerang.png",
+            "damage-type": "Melee",
+            "damage": 21,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 178,
+        "name": "Ice Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ice_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 39,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 179,
+        "name": "Ice Rod",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ice_Rod.png",
+            "damage-type": "Magic",
+            "damage": 28,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 180,
+        "name": "Ice Sickle",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Ice_Sickle.png",
+            "damage-type": "Melee",
+            "damage": 50,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 181,
+        "name": "Imp Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Imp_Staff.png",
+            "damage-type": "Summon",
+            "damage": 17,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 182,
+        "name": "Inferno Fork",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Inferno_Fork.png",
+            "damage-type": "Magic",
+            "damage": 70,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 183,
+        "name": "Influx Waver",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Influx_Waver.png",
+            "damage-type": "Melee",
+            "damage": 100,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 184,
+        "name": "Iron Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Iron_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 8,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 185,
+        "name": "Iron Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Iron_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 186,
+        "name": "Iron Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Iron_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 8,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 187,
+        "name": "Jack 'O Lantern Launcher",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Jack_O_Lantern_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 65,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 188,
+        "name": "Javelin",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Javelin.png",
+            "damage-type": "Throwing",
+            "damage": 17,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 189,
+        "name": "Jousting Lance",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Jousting_Lance.png",
+            "damage-type": "Melee",
+            "damage": 60,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 190,
+        "name": "Kaleidoscope",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Kaleidoscope.png",
+            "damage-type": "Summon",
+            "damage": 180,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 191,
+        "name": "Katana",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Katana.png",
+            "damage-type": "Melee",
+            "damage": 18,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 192,
+        "name": "Keybrand",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Keybrand.png",
+            "damage-type": "Melee",
+            "damage": 105,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 193,
+        "name": "KO Cannon",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/KO_Cannon.png",
+            "damage-type": "Melee",
+            "damage": 40,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 194,
+        "name": "Kraken",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Kraken.png",
+            "damage-type": "Melee",
+            "damage": 95,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 195,
+        "name": "Laser Machinegun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Laser_Machinegun.png",
+            "damage-type": "Magic",
+            "damage": 60,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 196,
+        "name": "Laser Rifle",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Laser_Rifle.png",
+            "damage-type": "Magic",
+            "damage": 29,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 197,
+        "name": "Last Prism",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Last_Prism.png",
+            "damage-type": "Magic",
+            "damage": 100,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 198,
+        "name": "Lead Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Lead_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 9,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 199,
+        "name": "Lead Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Lead_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 13,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 200,
+        "name": "Lead Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Lead_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 9,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 201,
+        "name": "Leaf Blower",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Leaf_Blower.png",
+            "damage-type": "Magic",
+            "damage": 48,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 202,
+        "name": "Leather Whip",
+        "weapon-type": "Whip",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Leather_Whip.png",
+            "damage-type": "Summon",
+            "damage": 14,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 203,
+        "name": "Life Drain",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Life_Drain.png",
+            "damage-type": "Magic",
+            "damage": 35,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 204,
+        "name": "Light Disc",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Light_Disc.png",
+            "damage-type": "Melee",
+            "damage": 60,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 205,
+        "name": "Light's Bane",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Lights_Bane.png",
+            "damage-type": "Melee",
+            "damage": 16,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 206,
+        "name": "Lightning Aura Cane",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Lightning_Aura_Cane.png",
+            "damage-type": "Summon",
+            "damage": 11,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 207,
+        "name": "Lightning Aura Rod",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Lightning_Aura_Rod.png",
+            "damage-type": "Summon",
+            "damage": 4,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 208,
+        "name": "Lightning Aura Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Lightning_Aura_Staff.png",
+            "damage-type": "Summon",
+            "damage": 34,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Crafting"]
+        }
+    },
+    {
+        "id": 209,
+        "name": "Lunar Flare",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Lunar_Flare.png",
+            "damage-type": "Magic",
+            "damage": 100,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 210,
+        "name": "Lunar Portal Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Lunar_Portal_Staff.png",
+            "damage-type": "Summon",
+            "damage": 100,
+            "use-time": "Average",
+            "rarity": "./rarities/Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 211,
+        "name": "Mace",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Mace.png",
+            "damage-type": "Melee",
+            "damage": 18,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 212,
+        "name": "Magic Dagger",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Magic_Dagger.png",
+            "damage-type": "Magic",
+            "damage": 35,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 213,
+        "name": "Magic Missile",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Magic_Missile.png",
+            "damage-type": "Magic",
+            "damage": 35,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 214,
+        "name": "Magical Harp",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Magical_Harp.png",
+            "damage-type": "Magic",
+            "damage": 42,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 215,
+        "name": "Magnet Sphere",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Magnet_Sphere.png",
+            "damage-type": "Magic",
+            "damage": 48,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 216,
+        "name": "Malaise",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Malaise.png",
+            "damage-type": "Melee",
+            "damage": 16,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 217,
+        "name": "Mandible Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Mandible_Blade.png",
+            "damage-type": "Melee",
+            "damage": 16,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 218,
+        "name": "Marrow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Marrow.png",
+            "damage-type": "Ranged",
+            "damage": 53,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 219,
+        "name": "Medusa Head",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Medusa_Head.png",
+            "damage-type": "Magic",
+            "damage": 40,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 220,
+        "name": "Megashark",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Megashark.png",
+            "damage-type": "Ranged",
+            "damage": 25,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 221,
+        "name": "Meowmere",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Meowmere.png",
+            "damage-type": "Melee",
+            "damage": 200,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 222,
+        "name": "Meteor Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Meteor_Staff.png",
+            "damage-type": "Magic",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 223,
+        "name": "Minishark",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Minishark.png",
+            "damage-type": "Ranged",
+            "damage": 6,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 224,
+        "name": "Molotov Cocktail",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Molotov_Cocktail.png",
+            "damage-type": "Throwing",
+            "damage": 23,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 225,
+        "name": "Molten Fury",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Molten_Fury.png",
+            "damage-type": "Ranged",
+            "damage": 31,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 226,
+        "name": "Morning Star",
+        "weapon-type": "Whip",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Morning_Star.png",
+            "damage-type": "Summon",
+            "damage": 165,
+            "use-time": "Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 227,
+        "name": "Muramasa",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Muramasa.png",
+            "damage-type": "Melee",
+            "damage": 24,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 228,
+        "name": "Mushroom Spear",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Mushroom_Spear.png",
+            "damage-type": "Melee",
+            "damage": 60,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 229,
+        "name": "Musket",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Musket.png",
+            "damage-type": "Ranged",
+            "damage": 31,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 230,
+        "name": "Mythril Halberd",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Mythril_Halberd.png",
+            "damage-type": "Melee",
+            "damage": 45,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 231,
+        "name": "Mythril Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Mythril_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 39,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 232,
+        "name": "Mythril Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Mythril_Sword.png",
+            "damage-type": "Melee",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 233,
+        "name": "Nail Gun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nail_Gun.png",
+            "damage-type": "Ranged",
+            "damage": 85,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 234,
+        "name": "Nebula Arcanum",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nebula_Arcanum.png",
+            "damage-type": "Magic",
+            "damage": 70,
+            "use-time": "Average",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 235,
+        "name": "Nebula Blaze",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nebula_Blaze.png",
+            "damage-type": "Magic",
+            "damage": 130,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 236,
+        "name": "Nettle Burst",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nettle_Burst.png",
+            "damage-type": "Magic",
+            "damage": 35,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 237,
+        "name": "Night's Edge",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Nights_Edge.png",
+            "damage-type": "Melee",
+            "damage": 40,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 238,
+        "name": "Nightglow",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nightglow.png",
+            "damage-type": "Magic",
+            "damage": 50,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 239,
+        "name": "Nimbus Rod",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Nimbus_Rod.png",
+            "damage-type": "Magic",
+            "damage": 30,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 240,
+        "name": "North Pole",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/North_Pole.png",
+            "damage-type": "Melee",
+            "damage": 80,
+            "use-time": "Average",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 241,
+        "name": "Obsidian Swordfish",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Obsidian_Swordfish.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 242,
+        "name": "Onyx Blaster",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Onyx_Blaster.png",
+            "damage-type": "Ranged",
+            "damage": 24,
+            "use-time": "Extremely Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 243,
+        "name": "Optic Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Optic_Staff.png",
+            "damage-type": "Summon",
+            "damage": 24,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 246,
+        "name": "Orange Zapinator",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Orange_Zapinator.png",
+            "damage-type": "Magic",
+            "damage": 100,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 247,
+        "name": "Orichalcum Halberd",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Orichalcum_Halberd.png",
+            "damage-type": "Melee",
+            "damage": 46,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 248,
+        "name": "Orichalcum Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Orichalcum_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 40,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 249,
+        "name": "Orichalcum Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Orichalcum_Sword.png",
+            "damage-type": "Melee",
+            "damage": 59,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 250,
+        "name": "Paintball Gun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Paintball_Gun.png",
+            "damage-type": "Ranged",
+            "damage": 12,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 251,
+        "name": "Palladium Pike",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Palladium_Pike.png",
+            "damage-type": "Melee",
+            "damage": 44,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 252,
+        "name": "Palladium Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Palladium_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 37,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 253,
+        "name": "Palladium Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Palladium_Sword.png",
+            "damage-type": "Melee",
+            "damage": 49,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 256,
+        "name": "Paper Airplane",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Paper_Airplane.png",
+            "damage-type": "Ranged",
+            "damage": 4,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 259,
+        "name": "Pew-matic Horn",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Pew-matic_Horn.png",
+            "damage-type": "Ranged",
+            "damage": 20,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 260,
+        "name": "Phantasm",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Phantasm.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 261,
+        "name": "Phantom Phoenix",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Phantom_Phoenix.png",
+            "damage-type": "Ranged",
+            "damage": 32,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 262,
+        "name": "Phoenix Blaster",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Phoenix_Blaster.png",
+            "damage-type": "Ranged",
+            "damage": 30,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 263,
+        "name": "Piranha Gun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Piranha_Gun.png",
+            "damage-type": "Ranged",
+            "damage": 38,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 264,
+        "name": "Pirate Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Pirate_Staff.png",
+            "damage-type": "Summon",
+            "damage": 40,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 265,
+        "name": "Platinum Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Platinum_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 13,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 266,
+        "name": "Platinum Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Platinum_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 16,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 267,
+        "name": "Platinum Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Platinum_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 13,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 268,
+        "name": "Poison Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Poison_Staff.png",
+            "damage-type": "Magic",
+            "damage": 43,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 269,
+        "name": "Poisoned Knife",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Poisoned_Knife.png",
+            "damage-type": "Throwing",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 270,
+        "name": "Possessed Hatchet",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Possessed_Hatchet.png",
+            "damage-type": "Melee",
+            "damage": 80,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 271,
+        "name": "Proximity Mine Launcher",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Proximity_Mine_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 80,
+            "use-time": "Extremely Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 272,
+        "name": "Psycho Knife",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Psycho_Knife.png",
+            "damage-type": "Melee",
+            "damage": 85,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 273,
+        "name": "Pulse Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Pulse_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 80,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 274,
+        "name": "Purple Clubberfish",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Purple_Clubberfish.png",
+            "damage-type": "Melee",
+            "damage": 35,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 277,
+        "name": "Pygmy Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Pygmy_Staff.png",
+            "damage-type": "Summon",
+            "damage": 40,
+            "use-time": "Average",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 278,
+        "name": "Quad-Barrel Shotgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Quad-Barrel_Shotgun.png",
+            "damage-type": "Ranged",
+            "damage": 14,
+            "use-time": "Extremely Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 279,
+        "name": "Queen Spider Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Queen_Spider_Staff.png",
+            "damage-type": "Summon",
+            "damage": 26,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 280,
+        "name": "Rainbow Crystal Staff",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Rainbow_Crystal_Staff.png",
+            "damage-type": "Summon",
+            "damage": 130,
+            "use-time": "Average",
+            "rarity": "./rarities/Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 281,
+        "name": "Rainbow Gun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Rainbow_Gun.png",
+            "damage-type": "Magic",
+            "damage": 45,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 282,
+        "name": "Rainbow Rod",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Rainbow_Rod.png",
+            "damage-type": "Magic",
+            "damage": 50,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 283,
+        "name": "Rally",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Rally.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 284,
+        "name": "Raven Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Raven_Staff.png",
+            "damage-type": "Summon",
+            "damage": 55,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 285,
+        "name": "Razorblade Typhoon",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Razorblade_Typhoon.png",
+            "damage-type": "Magic",
+            "damage": 85,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 286,
+        "name": "Razorpine",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Razorpine.png",
+            "damage-type": "Magic",
+            "damage": 48,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 290,
+        "name": "Red Ryder",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Red_Ryder.png",
+            "damage-type": "Ranged",
+            "damage": 20,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 291,
+        "name": "Red's Throw",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Reds_Throw.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Fast",
+            "rarity": "./rarities/Cyan.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 292,
+        "name": "Resonance Scepter",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Resonance_Scepter.png",
+            "damage-type": "Magic",
+            "damage": 70,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 293,
+        "name": "Revolver",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Revolver.png",
+            "damage-type": "Ranged",
+            "damage": 20,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 296,
+        "name": "Rocket Launcher",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Rocket_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 55,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 297,
+        "name": "Rockfish",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Rockfish.png",
+            "damage-type": "Melee",
+            "damage": 24,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 298,
+        "name": "Rotten Egg",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Rotten_Egg.png",
+            "damage-type": "Throwing",
+            "damage": 13,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 299,
+        "name": "Ruby Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ruby_Staff.png",
+            "damage-type": "Magic",
+            "damage": 21,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 300,
+        "name": "Ruler",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Ruler.png",
+            "damage-type": "Melee",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 301,
+        "name": "S.D.M.G.",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/S.D.M.G..png",
+            "damage-type": "Ranged",
+            "damage": 85,
+            "use-time": "Insanely Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 302,
+        "name": "Sandgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Sandgun.png",
+            "damage-type": "Ranged",
+            "damage": 30,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 303,
+        "name": "Sanguine Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sanguine_Staff.png",
+            "damage-type": "Summon",
+            "damage": 35,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 304,
+        "name": "Sapphire Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Sapphire_Staff.png",
+            "damage-type": "Magic",
+            "damage": 18,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 305,
+        "name": "Scourge of the Corruptor",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Scourge_of_the_Corruptor.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 306,
+        "name": "Seedler",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Seedler.png",
+            "damage-type": "Melee",
+            "damage": 50,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 307,
+        "name": "Sergeant United Shield",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sergeant_United_Shield.png",
+            "damage-type": "Melee",
+            "damage": 92,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 310,
+        "name": "Shadow Jousting Lance",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shadow_Jousting_Lance.png",
+            "damage-type": "Melee",
+            "damage": 130,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 311,
+        "name": "Shadowbeam Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shadowbeam_Staff.png",
+            "damage-type": "Magic",
+            "damage": 80,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 312,
+        "name": "Shadowflame Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shadowflame_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 47,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 313,
+        "name": "Shadowflame Hex Doll",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shadowflame_Hex_Doll.png",
+            "damage-type": "Magic",
+            "damage": 66,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 314,
+        "name": "Shadowflame Knife",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shadowflame_Knife.png",
+            "damage-type": "Melee",
+            "damage": 38,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 315,
+        "name": "Shotgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Shotgun.png",
+            "damage-type": "Ranged",
+            "damage": 24,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 316,
+        "name": "Shroomerang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Shroomerang.png",
+            "damage-type": "Melee",
+            "damage": 23,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 318,
+        "name": "Shuriken",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Shuriken.png",
+            "damage-type": "Throwing",
+            "damage": 10,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": ["Buy", "Chest"]
+        }
+    },
+    {
+        "id": 319,
+        "name": "Sickle",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Sickle.png",
+            "damage-type": "Melee",
+            "damage": 9,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 320,
+        "name": "Silver Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Silver_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 9,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 321,
+        "name": "Silver Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Silver_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 322,
+        "name": "Silver Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Silver_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 9,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 323,
+        "name": "Sky Dragon's Fury",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sky_Dragons_Fury.png",
+            "damage-type": "Melee",
+            "damage": 140,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 324,
+        "name": "Sky Fracture",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sky_Fracture.png",
+            "damage-type": "Magic",
+            "damage": 38,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 325,
+        "name": "Slap Hand",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Slap_Hand.png",
+            "damage-type": "Melee",
+            "damage": 55,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 326,
+        "name": "Sleepy Octopod",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sleepy_Octopod.png",
+            "damage-type": "Melee",
+            "damage": 50,
+            "use-time": "Average",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 327,
+        "name": "Slime Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Slime_Staff.png",
+            "damage-type": "Summon",
+            "damage": 8,
+            "use-time": "Average",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 328,
+        "name": "Snapthorn",
+        "weapon-type": "Whip",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Snapthorn.png",
+            "damage-type": "Summon",
+            "damage": 18,
+            "use-time": "Average",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 329,
+        "name": "Sniper Rifle",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Sniper_Rifle.png",
+            "damage-type": "Ranged",
+            "damage": 185,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 330,
+        "name": "Snowball",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Snowball.png",
+            "damage-type": "Throwing",
+            "damage": 8,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 331,
+        "name": "Snowball Cannon",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Snowball_Cannon.png",
+            "damage-type": "Ranged",
+            "damage": 10,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 332,
+        "name": "Snowman Cannon",
+        "weapon-type": "Launcher",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Snowman_Cannon.png",
+            "damage-type": "Ranged",
+            "damage": 67,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 333,
+        "name": "Solar Eruption",
+        "weapon-type": "Flail",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Solar_Eruption.png",
+            "damage-type": "Melee",
+            "damage": 105,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 334,
+        "name": "Space Gun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Space_Gun.png",
+            "damage-type": "Magic",
+            "damage": 17,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 335,
+        "name": "Spear",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Spear.png",
+            "damage-type": "Melee",
+            "damage": 8,
+            "use-time": "Slow",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 336,
+        "name": "Spectre Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Spectre_Staff.png",
+            "damage-type": "Magic",
+            "damage": 65,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 337,
+        "name": "Spider Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Spider_Staff.png",
+            "damage-type": "Summon",
+            "damage": 26,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 338,
+        "name": "Spiky Ball",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Spiky_Ball.png",
+            "damage-type": "Throwing",
+            "damage": 16,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 339,
+        "name": "Spinal Tap",
+        "weapon-type": "Whip",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Spinal_Tap.png",
+            "damage-type": "Summon",
+            "damage": 27,
+            "use-time": "Average",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 340,
+        "name": "Spirit Flame",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Spirit_Flame.png",
+            "damage-type": "Magic",
+            "damage": 85,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 341,
+        "name": "Staff of Earth",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Staff_of_Earth.png",
+            "damage-type": "Magic",
+            "damage": 125,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 343,
+        "name": "Staff of the Frost Hydra",
+        "weapon-type": "Sentry",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Staff_of_the_Frost_Hydra.png",
+            "damage-type": "Summon",
+            "damage": 100,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 344,
+        "name": "Stake Launcher",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Stake_Launcher.png",
+            "damage-type": "Ranged",
+            "damage": 75,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 345,
+        "name": "Star Anise",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Star_Anise.png",
+            "damage-type": "Throwing",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 346,
+        "name": "Star Cannon",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Star_Cannon.png",
+            "damage-type": "Ranged",
+            "damage": 55,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 347,
+        "name": "Star Wrath",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Star_Wrath.png",
+            "damage-type": "Melee",
+            "damage": 170,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 348,
+        "name": "Stardust Cell Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Stardust_Cell_Staff.png",
+            "damage-type": "Summon",
+            "damage": 60,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 349,
+        "name": "Stardust Dragon Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Stardust_Dragon_Staff.png",
+            "damage-type": "Summon",
+            "damage": 40,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 350,
+        "name": "Starfury",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Starfury.png",
+            "damage-type": "Melee",
+            "damage": 25,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 351,
+        "name": "Starlight",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Starlight.png",
+            "damage-type": "Melee",
+            "damage": 80,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 352,
+        "name": "Stellar Tune",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Stellar_Tune.png",
+            "damage-type": "Magic",
+            "damage": 85,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 354,
+        "name": "Storm Spear",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Storm_Spear.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 355,
+        "name": "Stylish Scissors",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Stylish_Scissors.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 356,
+        "name": "Stynger",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Stynger.png",
+            "damage-type": "Ranged",
+            "damage": 45,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 357,
+        "name": "Sunfury",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Sunfury.png",
+            "damage-type": "Melee",
+            "damage": 64,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 358,
+        "name": "Super Star Shooter",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Super_Star_Shooter.png",
+            "damage-type": "Ranged",
+            "damage": 60,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 359,
+        "name": "Swordfish",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Swordfish.png",
+            "damage-type": "Melee",
+            "damage": 19,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 360,
+        "name": "Tactical Shotgun",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Tactical_Shotgun.png",
+            "damage-type": "Ranged",
+            "damage": 29,
+            "use-time": "Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 361,
+        "name": "Tempest Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Tempest_Staff.png",
+            "damage-type": "Summon",
+            "damage": 50,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 362,
+        "name": "Tendon Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tendon_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 19,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 363,
+        "name": "Tentacle Spike",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tentacle_Spike.png",
+            "damage-type": "Melee",
+            "damage": 19,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 364,
+        "name": "Terra Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Terra_Blade.png",
+            "damage-type": "Melee",
+            "damage": 85,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 365,
+        "name": "Terragrim",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Terragrim.png",
+            "damage-type": "Melee",
+            "damage": 17,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 366,
+        "name": "Terraprisma",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Terraprisma.png",
+            "damage-type": "Summon",
+            "damage": 90,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 367,
+        "name": "Terrarian",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Terrarian.png",
+            "damage-type": "Melee",
+            "damage": 190,
+            "use-time": "Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 368,
+        "name": "The Bee's Knees",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/The_Bees_Knees.png",
+            "damage-type": "Ranged",
+            "damage": 23,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 370,
+        "name": "The Eye of Cthulhu",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/The_Eye_of_Cthulhu.png",
+            "damage-type": "Melee",
+            "damage": 115,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 371,
+        "name": "The Horseman's Blade",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/The_Horsemans_Blade.png",
+            "damage-type": "Melee",
+            "damage": 150,
+            "use-time": "Average",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 372,
+        "name": "The Meatball",
+        "weapon-type": "Flail",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/The_Meatball.png",
+            "damage-type": "Melee",
+            "damage": 34,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 373,
+        "name": "The Rotted Fork",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/The_Rotted_Fork.png",
+            "damage-type": "Melee",
+            "damage": 17,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 374,
+        "name": "The Undertaker",
+        "weapon-type": "Gun",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/The_Undertaker.png",
+            "damage-type": "Ranged",
+            "damage": 19,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 375,
+        "name": "Thorn Chakram",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Thorn_Chakram.png",
+            "damage-type": "Melee",
+            "damage": 25,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 376,
+        "name": "Throwing Knife",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Throwing_Knife.png",
+            "damage-type": "Throwing",
+            "damage": 12,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Buy", "Chest"]
+        }
+    },
+    {
+        "id": 377,
+        "name": "Thunder Zapper",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Thunder_Zapper.png",
+            "damage-type": "Magic",
+            "damage": 20,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 378,
+        "name": "Tin Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tin_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 7,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 379,
+        "name": "Tin Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tin_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 380,
+        "name": "Tin Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tin_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 7,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 381,
+        "name": "Titanium Repeater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Titanium_Repeater.png",
+            "damage-type": "Ranged",
+            "damage": 43,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 382,
+        "name": "Titanium Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Titanium_Sword.png",
+            "damage-type": "Melee",
+            "damage": 61,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 383,
+        "name": "Titanium Trident",
+        "weapon-type": "Spear",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Titanium_Trident.png",
+            "damage-type": "Melee",
+            "damage": 48,
+            "use-time": "Fast",
+            "rarity": "./rarities/Light_Red.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 385,
+        "name": "Tome of Infinite Wisdom",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Tome_of_Infinite_Wisdom.png",
+            "damage-type": "Magic",
+            "damage": 36,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 387,
+        "name": "Topaz Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Topaz_Staff.png",
+            "damage-type": "Magic",
+            "damage": 16,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 388,
+        "name": "Toxic Flask",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Toxic_Flask.png",
+            "damage-type": "Magic",
+            "damage": 52,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 389,
+        "name": "Toxikarp",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Toxikarp.png",
+            "damage-type": "Ranged",
+            "damage": 43,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Fishing"
+        }
+    },
+    {
+        "id": 390,
+        "name": "Tragic Umbrella",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tragic_Umbrella.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Buy"
+        }
+    },
+    {
+        "id": 391,
+        "name": "Trident",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Trident.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Slow",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": ["Chest", "Fishing"]
+        }
+    },
+    {
+        "id": 392,
+        "name": "Trimarang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Trimarang.png",
+            "damage-type": "Melee",
+            "damage": 21,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 393,
+        "name": "True Excalibur",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/True_Excalibur.png",
+            "damage-type": "Melee",
+            "damage": 72,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 394,
+        "name": "True Night's Edge",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/True_Nights_Edge.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 395,
+        "name": "Tsunami",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Tsunami.png",
+            "damage-type": "Ranged",
+            "damage": 53,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 396,
+        "name": "Tungsten Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tungsten_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 10,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 397,
+        "name": "Tungsten Broadsword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tungsten_Broadsword.png",
+            "damage-type": "Melee",
+            "damage": 14,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 398,
+        "name": "Tungsten Shortsword",
+        "weapon-type": "Shortsword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Tungsten_Shortsword.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 399,
+        "name": "Umbrella",
+        "weapon-type": "Spear",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Umbrella.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 400,
+        "name": "Unholy Trident",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Unholy_Trident.png",
+            "damage-type": "Magic",
+            "damage": 88,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Light_Purple.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 401,
+        "name": "Uzi",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Uzi.png",
+            "damage-type": "Ranged",
+            "damage": 30,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 402,
+        "name": "Valkyrie Yoyo",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Valkyrie_Yoyo.png",
+            "damage-type": "Melee",
+            "damage": 70,
+            "use-time": "Fast",
+            "rarity": "./rarities/Cyan.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 403,
+        "name": "Valor",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Valor.png",
+            "damage-type": "Melee",
+            "damage": 28,
+            "use-time": "Fast",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 404,
+        "name": "Vampire Frog Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Vampire_Frog_Staff.png",
+            "damage-type": "Summon",
+            "damage": 11,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 405,
+        "name": "Vampire Knives",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Vampire_Knives.png",
+            "damage-type": "Melee",
+            "damage": 29,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 406,
+        "name": "Venom Staff",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Venom_Staff.png",
+            "damage-type": "Magic",
+            "damage": 44,
+            "use-time": "Average",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 407,
+        "name": "Venus Magnum",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Venus_Magnum.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 408,
+        "name": "Vilethorn",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Vilethorn.png",
+            "damage-type": "Magic",
+            "damage": 10,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 409,
+        "name": "Volcano",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Volcano.png",
+            "damage-type": "Melee",
+            "damage": 40,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Orange.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 410,
+        "name": "Vortex Beater",
+        "weapon-type": "Bow",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Vortex_Beater.png",
+            "damage-type": "Ranged",
+            "damage": 50,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 412,
+        "name": "Waffle's Iron",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Waffles_Iron.png",
+            "damage-type": "Melee",
+            "damage": 50,
+            "use-time": "Fast",
+            "rarity": "./rarities/Pink.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 413,
+        "name": "Wand of Frosting",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wand_of_Frosting.png",
+            "damage-type": "Magic",
+            "damage": 15,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 414,
+        "name": "Wand of Sparking",
+        "weapon-type": "Staff/Wand",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wand_of_Sparking.png",
+            "damage-type": "Magic",
+            "damage": 14,
+            "use-time": "Average",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Chest"
+        }
+    },
+    {
+        "id": 415,
+        "name": "Wasp Gun",
+        "weapon-type": "Magic Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Wasp_Gun.png",
+            "damage-type": "Magic",
+            "damage": 31,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 416,
+        "name": "Water Bolt",
+        "weapon-type": "Tomb",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Water_Bolt.png",
+            "damage-type": "Magic",
+            "damage": 19,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Green.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Background Object"
+        }
+    },
+    {
+        "id": 417,
+        "name": "Weather Pain",
+        "weapon-type": "Magic Trinket",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Weather_Pain.png",
+            "damage-type": "Magic",
+            "damage": 13,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Green.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 418,
+        "name": "White Paper Airplane",
+        "weapon-type": "Throwable",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/White_Paper_Airplane.png",
+            "damage-type": "Ranged",
+            "damage": 4,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 421,
+        "name": "Wooden Boomerang",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wooden_Boomerang.png",
+            "damage-type": "Melee",
+            "damage": 10,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Blue.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": ["Chest", "Buy"]
+        }
+    },
+    {
+        "id": 422,
+        "name": "Wooden Bow",
+        "weapon-type": "Bow",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wooden_Bow.png",
+            "damage-type": "Ranged",
+            "damage": 4,
+            "use-time": "Average",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 423,
+        "name": "Wooden Sword",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wooden_Sword.png",
+            "damage-type": "Melee",
+            "damage": 7,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 424,
+        "name": "Wooden Yoyo",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Wooden_Yoyo.png",
+            "damage-type": "Melee",
+            "damage": 9,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "Yes",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 425,
+        "name": "Xeno Staff",
+        "weapon-type": "Summoning Weapon",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Xeno_Staff.png",
+            "damage-type": "Summon",
+            "damage": 36,
+            "use-time": "Very Slow",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 426,
+        "name": "Xenopopper",
+        "weapon-type": "Gun",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Xenopopper.png",
+            "damage-type": "Ranged",
+            "damage": 45,
+            "use-time": "Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 427,
+        "name": "Yelets",
+        "weapon-type": "YoYo",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Yelets.png",
+            "damage-type": "Melee",
+            "damage": 60,
+            "use-time": "Fast",
+            "rarity": "./rarities/Lime.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 431,
+        "name": "Zenith",
+        "weapon-type": "Sword",
+        "mode-obtained": "Hardmode",
+        "info": {
+            "image-path": "./weapon_icons/Zenith.png",
+            "damage-type": "Melee",
+            "damage": 190,
+            "use-time": "Average",
+            "rarity": "./rarities/Red.png",
+            "operation": "Auto",
+            "material": "No",
+            "obtained": "Crafting"
+        }
+    },
+    {
+        "id": 432,
+        "name": "Zombie Arm",
+        "weapon-type": "Sword",
+        "mode-obtained": "Pre-HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Zombie_Arm.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Fast",
+            "rarity": "./rarities/White.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    },
+    {
+        "id": 433,
+        "name": "Paladin's Hammer",
+        "weapon-type": "Boomerang",
+        "mode-obtained": "HardMode",
+        "info": {
+            "image-path": "./weapon_icons/Paladins_Hammer.png",
+            "damage-type": "Melee",
+            "damage": 15,
+            "use-time": "Very Fast",
+            "rarity": "./rarities/Yellow.png",
+            "operation": "Manual",
+            "material": "No",
+            "obtained": "Drop"
+        }
+    }
+]

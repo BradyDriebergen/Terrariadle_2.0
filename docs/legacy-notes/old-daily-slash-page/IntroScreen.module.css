@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #303f83;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #000;
+    border-width: 2px;
+    opacity: 90%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.container img{
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

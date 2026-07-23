@@ -1,0 +1,29 @@
+.guess-row {
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.guess-row div{
+    background-color: #36454f;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    opacity: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guess-row div img {
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
