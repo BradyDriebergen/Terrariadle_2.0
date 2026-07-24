@@ -89,9 +89,9 @@
 	{/if}
 
 	<div class="phrase-container">
-		{#each phraseWords as word}
+		{#each phraseWords as word, i (i)}
 			<div class="word">
-				{#each word as letter}
+				{#each word as letter, i (i)}
 					<span>{letter}</span>
 				{/each}
 			</div>
@@ -105,7 +105,7 @@
 {/if}
 
 <!-- Audio that only plays after final guess is made -->
-<audio bind:this={audio} src={'/hangman/GuideDeath.mp3'}></audio>
+<audio bind:this={audio} src="/hangman/GuideDeath.mp3"></audio>
 
 <style>
 	.bg-fade {
