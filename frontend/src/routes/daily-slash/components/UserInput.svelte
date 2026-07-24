@@ -44,7 +44,7 @@
 
 			const res = await getWeaponHint(num);
 			hints[num - 1] = { text: res, visible: true };
-		} catch (e: any) {
+		} catch (e) {
 			// TODO: handle error here
 			console.error(e);
 		}

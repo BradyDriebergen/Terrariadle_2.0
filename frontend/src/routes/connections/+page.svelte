@@ -173,7 +173,7 @@
 
 {#if data.gameContext}
 	<div class="grid">
-		{#each solvedCategories as category, index}
+		{#each solvedCategories as category, index (index)}
 			<div
 				class="answer-pane pane-{index}"
 				id={String(index)}
@@ -223,7 +223,7 @@
 	<div>
 		<div class="attempts-bar">
 			<span>Attempts Left:</span>
-			{#each Array(attempts) as _, i}
+			{#each Array(attempts) as _, i (i)}
 				<img src="/emojis/LifeHeart.png" alt="Number of changes left" out:scale />
 			{/each}
 			{#if attempts === 0}

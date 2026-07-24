@@ -5,3 +5,5 @@ export class ApiError extends Error {
 		this.status = status;
 	}
 }
+
+export type ApiErrorBody = { error: string };

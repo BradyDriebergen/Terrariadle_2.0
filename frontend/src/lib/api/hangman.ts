@@ -1,4 +1,4 @@
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import type { HangmanCheckResult, HangmanSession, HangmanWinningData } from '$lib/types/hangman';
 import { parseJsonSafe } from './utils';
 
@@ -7,13 +7,13 @@ export async function initializeHangmanGame(
 	userId: string
 ): Promise<HangmanSession> {
 	const res = await fetchFn(`/api/hangman/initialize-game?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
-	return body as HangmanSession;
+	return parseJsonSafe<HangmanSession>(res);
 }
 
 export async function checkEnemyGuess(userId: string, letter: string): Promise<HangmanCheckResult> {
@@ -23,21 +23,21 @@ export async function checkEnemyGuess(userId: string, letter: string): Promise<H
 		body: JSON.stringify({ user_id: userId, guess: letter })
 	});
 
-	const body = await parseJsonSafe(res);
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as HangmanCheckResult;
+	return parseJsonSafe<HangmanCheckResult>(res);
 }
 
 export async function getHangmanWinningData(userId: string): Promise<HangmanWinningData> {
 	const res = await fetch(`/api/hangman/winning-data?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to load winning data');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to load winning data');
 	}
 
-	return body as HangmanWinningData;
+	return parseJsonSafe<HangmanWinningData>(res);
 }

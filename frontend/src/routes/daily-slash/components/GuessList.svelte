@@ -53,7 +53,7 @@
 		<span title={materialTitle}>Material</span>
 		<span title={obtainedTitle}>Obtained</span>
 	</div>
-	{#each guesses as guess, i (guess.weapon.id)}
+	{#each guesses as guess (guess.weapon.id)}
 		<div class="row" animate:flip>
 			<!-- Weapon icon -->
 			<div in:fly={{ x: 560, duration: 2000 }}>
@@ -122,7 +122,7 @@
 				style="flex-direction: column; {checkedObtained(guess.checks.obtained)}"
 				in:fly={{ x: 0, duration: 2000 }}
 			>
-				{#each guess.weapon.obtained as item}
+				{#each guess.weapon.obtained as item (item)}
 					<span>{item}</span>
 				{/each}
 			</div>

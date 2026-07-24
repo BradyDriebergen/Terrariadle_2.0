@@ -3,11 +3,11 @@
 	import Footer from './Footer.svelte';
 	import '../app.css';
 	import { navigating, page } from '$app/state';
-	import { onMount } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 	import type { LayoutData } from './$types';
 	import { session } from '$lib/store/session.svelte';
 
-	let { data, children }: { data: LayoutData; children: any } = $props();
+	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 
 	onMount(() => {
 		if (data.gameResults) {
