@@ -301,4 +301,19 @@
 		background: none;
 		cursor: default;
 	}
+
+	@media (max-width: 700px) {
+		.game-window {
+			width: 310px;
+		}
+
+		.clue-box {
+			width: 98%;
+			font-size: 12px;
+		}
+
+		.input-box {
+			font-size: 18px;
+		}
+	}
 </style>
