@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
+	let width: number = $state(0);
+
 	function handleScroll(event: MouseEvent, id: string) {
 		event.preventDefault();
 		const element = document.getElementById(id);
@@ -8,15 +10,35 @@
 	}
 </script>
 
+<svelte:window bind:innerWidth={width} />
+
 <div class="how-to-play" in:fly={{ x: 80, duration: 500 }}>
 	<div class="directory">
 		<h3>How to Play</h3>
 		<nav>
-			<a class="link" href="#dw" on:click={(e) => handleScroll(e, 'dw')}>Daily Weapon</a>
-			<a class="link" href="#tc" on:click={(e) => handleScroll(e, 'tc')}>Connections</a>
-			<a class="link" href="#gtn" on:click={(e) => handleScroll(e, 'gtn')}>Guess The NPC</a>
-			<a class="link" href="#hm" on:click={(e) => handleScroll(e, 'hm')}>Hangman</a>
-			<a class="link" href="#tt" on:click={(e) => handleScroll(e, 'tt')}>TerraTrivia</a>
+			{#if width > 700}
+				<a class="link" href="#dw" onclick={(e) => handleScroll(e, 'dw')}>Daily Slash</a>
+				<a class="link" href="#tc" onclick={(e) => handleScroll(e, 'tc')}>Connections</a>
+				<a class="link" href="#gtn" onclick={(e) => handleScroll(e, 'gtn')}>Guess The NPC</a>
+				<a class="link" href="#hm" onclick={(e) => handleScroll(e, 'hm')}>Hangman</a>
+				<a class="link" href="#tt" onclick={(e) => handleScroll(e, 'tt')}>TerraTrivia</a>
+			{:else}
+				<a class="img-link" href="#dw">
+					<img src="/logos/daily_slash_logo.png" alt="Daily slash" />
+				</a>
+				<a class="img-link" href="#tc">
+					<img src="/logos/connections_logo.png" alt="Connections" />
+				</a>
+				<a class="img-link" href="#gtn">
+					<img src="/logos/guess_the_npc_logo.png" alt="Guess the NPC" />
+				</a>
+				<a class="img-link" href="hm">
+					<img src="/logos/hangman_logo.png" alt="Hangman" />
+				</a>
+				<a class="img-link" href="#tt">
+					<img src="/logos/terratrivia_logo.png" alt="TerraTrivia" />
+				</a>
+			{/if}
 		</nav>
 	</div>
 
@@ -259,25 +281,24 @@
 		border: 2px solid black;
 		border-radius: 25px;
 	}
+
 	.directory h3 {
 		margin: 5px;
 	}
+
 	.directory nav {
 		display: flex;
 		gap: 20px;
 	}
+
 	.directory a {
 		font-size: 18px;
-	}
-	@media (max-width: 600px) {
-		.directory a {
-			font-size: 14px;
-		}
 	}
 
 	.link {
 		color: rgb(111, 255, 255);
 	}
+
 	.link:hover {
 		color: yellow;
 	}
@@ -295,13 +316,16 @@
 		border-radius: 15px;
 		background-color: var(--color-button);
 	}
+
 	.how-to-play h1 {
 		margin-bottom: -5px;
 	}
+
 	.how-to-play h2 {
 		padding-top: 20px;
 		margin-bottom: -5px;
 	}
+
 	.how-to-play ul {
 		list-style-type: none;
 		margin: 0;
@@ -314,5 +338,23 @@
 		width: 15px;
 		height: 15px;
 		object-fit: contain;
+	}
+
+	@media (max-width: 700px) {
+		.how-to-play {
+			margin-top: 0;
+		}
+
+		.directory h3 {
+			margin-bottom: 10px;
+		}
+
+		.directory nav {
+			gap: 10px;
+		}
+
+		.img-link img {
+			width: 100%;
+		}
 	}
 </style>

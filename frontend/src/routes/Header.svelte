@@ -106,7 +106,7 @@
 
 	.centered {
 		justify-self: center;
-		width: 400px;
+		max-width: 400px;
 	}
 
 	.corner {
@@ -141,6 +141,7 @@
 		border-radius: 8px;
 		border: 2px solid black;
 		padding: 6px;
+		transition: background 0.08s;
 	}
 
 	.links a:hover {
@@ -158,5 +159,23 @@
 
 	.incomplete {
 		filter: grayscale(100%);
+	}
+
+	@media (max-width: 700px) {
+		header {
+			margin-bottom: 70px;
+		}
+
+		.centered {
+			margin-top: 20px;
+		}
+
+		.corner {
+			justify-self: center;
+		}
+
+		.links {
+			margin-top: 100px;
+		}
 	}
 </style>

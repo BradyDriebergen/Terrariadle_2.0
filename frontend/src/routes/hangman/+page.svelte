@@ -62,17 +62,13 @@
 
 	// Effect for updating the background with fade
 	let failed: boolean = $derived(attempts <= 0);
-	$effect(() => {
-		if (failed) {
-			document.body.style.setProperty('--bg-image', "url('/page-backgrounds/Underworld.png')");
-			document.body.style.setProperty('--bg-opacity', '1');
-		}
-
-		return () => {
-			document.body.style.setProperty('--bg-opacity', '0');
-		};
-	});
 </script>
+
+<div
+	class="bg-fade"
+	style:opacity={failed ? 1 : 0}
+	style:background-image={failed ? "url('/page-backgrounds/Underworld.png')" : 'none'}
+></div>
 
 {#if data.gameContext}
 	{#if !finished}
@@ -112,20 +108,11 @@
 <audio bind:this={audio} src={'/hangman/GuideDeath.mp3'}></audio>
 
 <style>
-	/* global CSS used for fading the background */
-	:global(body) {
-		margin: 0;
-		min-height: 100vh;
-	}
-
-	:global(body::before) {
-		content: '';
+	.bg-fade {
 		position: fixed;
 		inset: 0;
-		background-image: var(--bg-image, none);
 		background-size: cover;
 		background-position: center;
-		opacity: var(--bg-opacity, 0);
 		transition: opacity 0.5s ease;
 		z-index: -1;
 		pointer-events: none;
@@ -136,7 +123,7 @@
 		width: fit-content;
 		text-align: center;
 		margin: auto;
-		margin-top: 30px;
+		margin-top: 20px;
 		padding: 0 15px;
 
 		border-radius: 15px;

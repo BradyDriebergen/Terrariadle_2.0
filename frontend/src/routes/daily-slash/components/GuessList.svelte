@@ -42,7 +42,7 @@
 	}
 </script>
 
-<div in:fly={{ x: 800, duration: 1000 }}>
+<div class="container" in:fly={{ x: 800, duration: 1000 }}>
 	<div class="header">
 		<span title={weaponTitle}>Weapon</span>
 		<span title={damageTypeTitle}>Damage Type</span>
@@ -216,5 +216,28 @@
 		border-left: 30px solid transparent;
 		border-right: 30px solid transparent;
 		border-top: 55px solid rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 800px) {
+		.container {
+			max-width: 100%;
+			overflow-y: auto;
+		}
+
+		.header {
+			gap: 11px;
+			padding: 5px 0;
+		}
+
+		.header span {
+			font-size: 12px;
+			width: 70px;
+		}
+
+		.row div,
+		.row span {
+			width: 70px;
+			height: 70px;
+		}
 	}
 </style>

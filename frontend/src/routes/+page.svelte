@@ -11,7 +11,7 @@
 	let isTerraTriviaPage: boolean = $derived(page.url.pathname === '/terratrivia');
 </script>
 
-<div in:fly={{ y: 50, duration: 500 }}>
+<div class="landing-page" in:fly={{ y: 50, duration: 500 }}>
 	<p>
 		A Terraria inspired daily puzzle game. <br />
 		Test your Terraria knowledge.
@@ -86,5 +86,15 @@
 
 	img {
 		position: absolute;
+	}
+
+	@media (max-width: 700px) {
+		.landing-page {
+			margin-top: -60px;
+		}
+
+		p {
+			font-size: 17px;
+		}
 	}
 </style>

@@ -44,7 +44,7 @@
 	<span class="color-cycle">Guess The NPC Results</span>
 {/if}
 
-<div class="container" style="margin-top: {finished ? 15 : 40}px;">
+<div class="container" style="margin-top: {finished ? 15 : 20}px;">
 	{#if !finished}
 		<h2 out:slide={{ duration: 700, easing: cubicInOut }}>Guess the NPC</h2>
 		<p out:slide={{ duration: 700, easing: cubicInOut }}>Which NPC says this quote?</p>
@@ -125,5 +125,11 @@
 
 	.dropdown {
 		margin-top: 20px;
+	}
+
+	@media (max-width: 650px) {
+		.quote-box {
+			width: 80%;
+		}
 	}
 </style>

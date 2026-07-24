@@ -7,6 +7,7 @@
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import type { PageData } from './$types';
+	import { scale } from 'svelte/transition';
 
 	let { data }: { data: PageData } = $props();
 
@@ -15,6 +16,7 @@
 	let finished: boolean = $state(false);
 
 	let correctWeapon: Weapon | null = $derived(finished ? guesses[0].weapon : null);
+	let width: number = $state(0);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
@@ -30,6 +32,8 @@
 	);
 </script>
 
+<svelte:window bind:innerWidth={width} />
+
 <svelte:document style:overflow-y="hidden" />
 
 {#if data.gameContext}
@@ -43,6 +47,10 @@
 		{#if guesses.length < 1}
 			<GameInfo {prevWeapon} />
 		{:else}
+			{#if width <= 700}
+				<p class="mobile-msg" in:scale>← swipe to view →</p>
+			{/if}
+
 			<GuessList {guesses} />
 		{/if}
 
@@ -51,3 +59,10 @@
 {:else}
 	<p>Loading...</p>
 {/if}
+
+<style>
+	.mobile-msg {
+		color: grey;
+		margin: 10px auto -5px;
+	}
+</style>
