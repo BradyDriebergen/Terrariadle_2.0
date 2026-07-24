@@ -3,7 +3,6 @@
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { checkNpcName, getNpcWinningData } from '$lib/api/guess-the-npc';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { session } from '$lib/store/session.svelte';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { typewriter } from '$lib/utils/transitions';
@@ -85,7 +84,7 @@
 			<h2 in:scale={{ duration: 600 }}>Better Luck Next Time</h2>
 		{/if}
 		<div class="bonus-options">
-			{#each names as name}
+			{#each names as name (name)}
 				<button
 					class="bonus-button"
 					onclick={() => guessName(name)}
