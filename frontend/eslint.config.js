@@ -30,7 +30,8 @@ export default defineConfig(
 					args: 'all',
 					argsIgnorePattern: '^_'
 				}
-			]
+			],
+			'svelte/no-unnecessary-state-wrap': ['error', { allowReassign: true }]
 		}
 	},
 	{

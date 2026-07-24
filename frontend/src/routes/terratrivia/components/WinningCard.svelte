@@ -3,7 +3,6 @@
 	import { subscribeToPlayerCount } from '$lib/api/common';
 	import { getTerraTriviaWinningData } from '$lib/api/terratrivia';
 	import RemainingTime from '$lib/components/RemainingTime.svelte';
-	import { session } from '$lib/store/session.svelte';
 	import { ConvertPositionToString } from '$lib/utils/posToString';
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
