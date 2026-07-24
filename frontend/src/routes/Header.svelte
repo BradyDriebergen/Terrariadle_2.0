@@ -106,7 +106,6 @@
 		top: 100px;
 		transform: rotate(-4deg);
 		font-size: 22px;
-
 	}
 
 	.logo-slot {

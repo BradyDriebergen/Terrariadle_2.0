@@ -41,8 +41,8 @@
 			guessedName = res.guessed_name;
 			correctName = res.correct_name;
 		} catch (e) {
-			alert("Games have refreshed! Refresh the page to start guessing.")
-			
+			alert('Games have refreshed! Refresh the page to start guessing.');
+
 			// TODO: handle error here
 			console.error(e);
 		}

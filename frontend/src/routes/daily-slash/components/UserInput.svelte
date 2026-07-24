@@ -45,7 +45,7 @@
 			const res = await getWeaponHint(num);
 			hints[num - 1] = { text: res, visible: true };
 		} catch (e) {
-			alert("Games have refreshed! Refresh the page to start guessing.")
+			alert('Games have refreshed! Refresh the page to start guessing.');
 			// TODO: handle error here
 			console.error(e);
 		}
@@ -62,8 +62,8 @@
 				session.dailySlashStatus = true;
 			}
 		} catch (e) {
-			alert("Games have refreshed! Refresh the page to start guessing.")
-			
+			alert('Games have refreshed! Refresh the page to start guessing.');
+
 			// TODO: handle error here
 			console.error(e);
 		}

@@ -4,7 +4,11 @@
 
 <footer>
 	<div class="links">
-		<a href="https://github.com/BradyDriebergen/Terrariadle_2.0" target="_blank" rel="noopener noreferrer">
+		<a
+			href="https://github.com/BradyDriebergen/Terrariadle_2.0"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<img class="github-icon" src="/logos/github-logo.png" alt="github link" title="github.com" />
 		</a>
 		<a href={resolve('/about')}>
@@ -44,7 +48,7 @@
 		transition: height 0.2s ease;
 	}
 
-	img:hover{
+	img:hover {
 		transform: scale(1.05);
 	}
 
