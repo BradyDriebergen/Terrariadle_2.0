@@ -1,4 +1,4 @@
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import { parseJsonSafe } from './utils';
 import type {
 	GuessTheNpcCheckResult,
@@ -13,24 +13,24 @@ export async function initializeNpcGame(
 	userId: string
 ): Promise<GuessTheNpcSession> {
 	const res = await fetchFn(`/api/guess-the-npc/initialize-game?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
-	return body as GuessTheNpcSession;
+	return parseJsonSafe<GuessTheNpcSession>(res);
 }
 
 export async function getSearchableNpcs(fetchFn: typeof fetch) {
 	const res = await fetchFn('/api/guess-the-npc/search-items');
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to find npcs');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to find npcs');
 	}
 
-	return body as DropdownListItem[];
+	return parseJsonSafe<DropdownListItem[]>(res);
 }
 
 export async function checkNpcGuess(
@@ -43,18 +43,23 @@ export async function checkNpcGuess(
 		body: JSON.stringify({ user_id: userId, guess: npcId })
 	});
 
-	const body = await parseJsonSafe(res);
-
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as GuessTheNpcCheckResult;
+	return parseJsonSafe<GuessTheNpcCheckResult>(res);
 }
 
 export async function getNpcWinningData(userId: string): Promise<GuessTheNpcWinningData> {
 	const res = await fetch(`/api/guess-the-npc/winning-data?user_id=${userId}`);
-	return (await res.json()) as GuessTheNpcWinningData;
+
+	if (!res.ok) {
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when getting winning data');
+	}
+
+	return parseJsonSafe<GuessTheNpcWinningData>(res);
 }
 
 export async function checkNpcName(
@@ -67,11 +72,10 @@ export async function checkNpcName(
 		body: JSON.stringify({ user_id: userId, guess: name })
 	});
 
-	const body = await parseJsonSafe(res);
-
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as GuessTheNpcMiniGameResult;
+	return parseJsonSafe<GuessTheNpcMiniGameResult>(res);
 }

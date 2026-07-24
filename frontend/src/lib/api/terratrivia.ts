@@ -1,4 +1,4 @@
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import type {
 	TerraTriviaCheckResult,
 	TerraTriviaSession,
@@ -11,13 +11,13 @@ export async function initializeTerraTriviaGame(
 	userId: string
 ): Promise<TerraTriviaSession> {
 	const res = await fetchFn(`/api/terratrivia/initialize-game?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
-	return body as TerraTriviaSession;
+	return parseJsonSafe<TerraTriviaSession>(res);
 }
 
 export async function checkTriviaQuestionGuess(
@@ -30,21 +30,21 @@ export async function checkTriviaQuestionGuess(
 		body: JSON.stringify({ user_id: userId, guess })
 	});
 
-	const body = await parseJsonSafe(res);
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as TerraTriviaCheckResult;
+	return parseJsonSafe<TerraTriviaCheckResult>(res);
 }
 
 export async function getTerraTriviaWinningData(userId: string): Promise<TerraTriviaWinningData> {
 	const res = await fetch(`/api/terratrivia/winning-data?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to load winning data');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to load winning data');
 	}
 
-	return body as TerraTriviaWinningData;
+	return parseJsonSafe<TerraTriviaWinningData>(res);
 }

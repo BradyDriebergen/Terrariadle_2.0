@@ -92,4 +92,41 @@ Terrariadle/
 - [ ] Automatically run the prettier format script when pushing to main
 - [ ] Support mobile view (IMPORTANT)
 - [ ] Implement Sitelinks for Google indexing
-- [ ] Add error handling on try-catch loops on the frontend
+- [ ] Add error handling on try-catch loops on the frontend / api
+- [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
+
+```ts
+export async function parseJsonSafe<T = unknown>(
+	res: Response,
+): Promise<T | null> {
+	try {
+		return (await res.json()) as T;
+	} catch {
+		return null;
+	}
+}
+
+export async function initializeDailySlashGame(
+	fetchFn: typeof fetch,
+	userId: string,
+): Promise<DailySlashSession> {
+	const res = await fetchFn(
+		`/api/daily-slash/initialize-game?user_id=${userId}`,
+	);
+
+	if (!res.ok) {
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(
+			res.status,
+			err?.error ?? "Unable to initialize game",
+		);
+	}
+
+	const body = await parseJsonSafe<DailySlashSession>(res);
+	if (!body) {
+		throw new ApiError(res.status, "Received empty or malformed response");
+	}
+
+	return body;
+}
+```

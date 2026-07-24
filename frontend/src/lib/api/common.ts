@@ -1,4 +1,4 @@
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import type { UserGameResults } from '$lib/types/shared';
 import { parseJsonSafe } from './utils';
 
@@ -25,11 +25,11 @@ export async function getUserGameResults(
 	userId: string
 ): Promise<UserGameResults> {
 	const res = await fetchFn(`/api/finished-games?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to get game results');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to get game results');
 	}
 
-	return body as UserGameResults;
+	return parseJsonSafe<UserGameResults>(res);
 }

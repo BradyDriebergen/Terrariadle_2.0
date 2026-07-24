@@ -4,7 +4,7 @@ import type {
 	ConnectionsSession,
 	ConnectionsWinningData
 } from '$lib/types/connections';
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import { parseJsonSafe } from './utils';
 
 export async function initializeConnectionsGame(
@@ -12,13 +12,13 @@ export async function initializeConnectionsGame(
 	userId: string
 ): Promise<ConnectionsSession> {
 	const res = await fetchFn(`/api/connections/initialize-game?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
-	return body as ConnectionsSession;
+	return parseJsonSafe<ConnectionsSession>(res);
 }
 
 export async function checkCategoryGuess(
@@ -35,13 +35,12 @@ export async function checkCategoryGuess(
 		body: JSON.stringify({ user_id: userId, guess: options })
 	});
 
-	const body = await parseJsonSafe(res);
-
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as ConnectionsCheckResult;
+	return parseJsonSafe<ConnectionsCheckResult>(res);
 }
 
 export async function revealConnectionsAnswers(userId: string): Promise<ConnectionsRevealData> {
@@ -51,22 +50,21 @@ export async function revealConnectionsAnswers(userId: string): Promise<Connecti
 		body: JSON.stringify({ user_id: userId })
 	});
 
-	const body = await parseJsonSafe(res);
-
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when revealing answers');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when revealing answers');
 	}
 
-	return body as ConnectionsRevealData;
+	return parseJsonSafe<ConnectionsRevealData>(res);
 }
 
 export async function getConnectionsWinningData(userId: string): Promise<ConnectionsWinningData> {
 	const res = await fetch(`/api/connections/winning-data?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to load winning data');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to load winning data');
 	}
 
-	return body as ConnectionsWinningData;
+	return parseJsonSafe<ConnectionsWinningData>(res);
 }

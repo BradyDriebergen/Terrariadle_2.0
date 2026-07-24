@@ -3,7 +3,7 @@ import type {
 	DailySlashSession,
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
-import { ApiError } from '$lib/types/error';
+import { ApiError, type ApiErrorBody } from '$lib/types/error';
 import { parseJsonSafe } from './utils';
 import type { DropdownListItem } from '$lib/types/shared';
 
@@ -12,24 +12,24 @@ export async function initializeDailySlashGame(
 	userId: string
 ): Promise<DailySlashSession> {
 	const res = await fetchFn(`/api/daily-slash/initialize-game?user_id=${userId}`);
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to initialize game');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
-	return body as DailySlashSession;
+	return parseJsonSafe<DailySlashSession>(res);
 }
 
 export async function getSearchableWeapons(fetchFn: typeof fetch) {
 	const res = await fetchFn('/api/daily-slash/search-items');
-	const body = await parseJsonSafe(res);
 
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'Unable to find weapons');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'Unable to find weapons');
 	}
 
-	return body as DropdownListItem[];
+	return parseJsonSafe<DropdownListItem[]>(res);
 }
 
 export async function getWeaponHint(num: number): Promise<string> {
@@ -51,16 +51,21 @@ export async function checkWeaponGuess(
 		body: JSON.stringify({ user_id: userId, guess: weaponId })
 	});
 
-	const body = await parseJsonSafe(res);
-
 	if (!res.ok) {
-		throw new ApiError(res.status, body?.error ?? 'An error occurred when checking guess');
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
-	return body as DailySlashCheckResult;
+	return parseJsonSafe<DailySlashCheckResult>(res);
 }
 
 export async function getDailySlashWinningData(userId: string): Promise<DailySlashWinningData> {
 	const res = await fetch(`/api/daily-slash/winning-data?user_id=${userId}`);
-	return (await res.json()) as DailySlashWinningData;
+
+	if (!res.ok) {
+		const err = await parseJsonSafe<ApiErrorBody>(res);
+		throw new ApiError(res.status, err.error ?? 'An error occurred when getting winning data');
+	}
+
+	return parseJsonSafe<DailySlashWinningData>(res);
 }

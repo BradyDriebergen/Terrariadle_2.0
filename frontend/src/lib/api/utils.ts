@@ -1,7 +1,7 @@
-export async function parseJsonSafe(res: Response): Promise<any> {
+export async function parseJsonSafe<T = unknown>(res: Response): Promise<T> {
 	try {
-		return await res.json();
+		return (await res.json()) as T;
 	} catch {
-		return null;
+		return {} as T;
 	}
 }
