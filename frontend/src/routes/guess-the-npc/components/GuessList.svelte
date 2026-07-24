@@ -11,7 +11,7 @@
 		finished: boolean;
 	} = $props();
 
-	function shake(node: Element, { delay = 80, duration = 500, x = 6 } = {}) {
+	function shake(_node: Element, { delay = 80, duration = 500, x = 6 } = {}) {
 		return {
 			delay,
 			duration,
