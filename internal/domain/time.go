@@ -20,7 +20,7 @@ func TimeUntilNextMidnightFromNow() time.Duration {
 	return TimeUntilNextMidnight(time.Now())
 }
 
-// Used for testing, get's the next ten seconds
-func NextShortTime(t time.Time) time.Time {
-	return t.Truncate(10 * time.Second).Add(10 * time.Second)
+// Used for testing, get's the duration `second` seconds from now
+func NextIn(seconds int) time.Duration {
+    return time.Duration(seconds) * time.Second
 }

@@ -86,6 +86,7 @@
 
 	img {
 		position: absolute;
+		pointer-events: none;
 	}
 
 	@media (max-width: 700px) {

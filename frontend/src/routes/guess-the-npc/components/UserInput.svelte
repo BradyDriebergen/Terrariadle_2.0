@@ -34,6 +34,8 @@
 				session.guessTheNpcStatus = true;
 			}
 		} catch (e) {
+			alert("Games have refreshed! Refresh the page to start guessing.")
+			
 			// TODO: handle error here
 			console.error(e);
 		}

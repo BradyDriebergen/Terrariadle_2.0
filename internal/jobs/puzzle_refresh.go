@@ -42,7 +42,9 @@ func (j *PuzzleRefreshJob) Start(ctx context.Context) {
 	j.refresh((ctx))
 
 	for {
-		waitDur := domain.TimeUntilNextMidnightFromNow()
+		// waitDur := domain.TimeUntilNextMidnightFromNow()
+
+		waitDur := domain.NextIn(20)
 
 		select {
 		case <-ctx.Done():

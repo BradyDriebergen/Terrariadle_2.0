@@ -80,6 +80,9 @@
 			guessResult = await checkCategoryGuess(guess, userId);
 		} catch (e) {
 			loadingGuess = false;
+
+			alert("Games have refreshed! Refresh the page to start guessing.")
+
 			// TODO: handle error here
 			console.error(e);
 			return;
@@ -114,6 +117,8 @@
 			try {
 				answers = await revealConnectionsAnswers(userId);
 			} catch (e) {
+				alert("Games have refreshed! Refresh the page to start guessing.")
+
 				// TODO: handle error here
 				console.error(e);
 				return;
