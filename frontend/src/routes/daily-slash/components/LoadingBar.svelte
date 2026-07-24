@@ -38,13 +38,13 @@
 	/>
 	<img
 		class="bar"
-		src={'/loading-bar-assets/LoadingBar1.png'}
+		src="/loading-bar-assets/LoadingBar1.png"
 		alt="Loading bar 1"
 		style="clip-path: inset(0 {progressBar1}% 0 0);"
 	/>
 	<img
 		class="bar"
-		src={'/loading-bar-assets/LoadingBar2.png'}
+		src="/loading-bar-assets/LoadingBar2.png"
 		alt="Loading bar 2"
 		style="clip-path: inset(0 {progressBar2}% 0 0);"
 	/>
