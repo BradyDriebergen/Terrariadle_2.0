@@ -13,8 +13,8 @@
 
 <div class="landing-page" in:fly={{ y: 50, duration: 500 }}>
 	<p>
-		A Terraria inspired daily puzzle game. <br />
-		Test your Terraria knowledge.
+		Welcome to Terrariadle! <br />
+		Test your Terraria knowledge through daily puzzle games.
 	</p>
 	<br />
 

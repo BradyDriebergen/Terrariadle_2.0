@@ -20,7 +20,7 @@ This site contains 5 different daily puzzles:
 - **Hangman** — Guess the enemy one letter at a time
 - **TerraTrivia** — Terraria themed Seven Little Words
 
-If your curious on how I made this project, or some of the design choices behind it, I encourage you to look into the [docs](docs) folder. I wrote a ton about my development throughout this rewrite and I hope my struggles can help you make your own project.
+If your curious on how I made this project, or some of the design choices behind it, I encourage you to look into the [docs](./docs/) folder. I wrote a ton about my development throughout this rewrite and I hope my struggles can help you make your own project.
 
 ## Why I built this
 
@@ -36,7 +36,7 @@ I'm happy to share this site with you, and I hope it's useful if you're learning
 
 This repository is actually a remake of the first iteration of the game. If you've been playing before this release, I made the first version in college with little knowledge on full-stack development and deployment. While I learned a lot, version 1.0 was the definition of MVP.
 
-My backend was in `Node.js`, and was a combination of 2 JavaScript files. My frontend was built in `React`, with no experience in any frontend framework beforehand. The site was extremely buggy, always crashing, and throwing constant errors about rendering images. I've included some parts of my old projects in **INSERT DIRECTORY HERE BOZO**. I recommend looking if you want to know what not to do.
+My backend was in `Node.js`, and was a combination of 2 JavaScript files. My frontend was built in `React`, with no experience in any frontend framework beforehand. The site was extremely buggy, always crashing, and throwing constant errors about rendering images. I've included some parts of my old project files in [Legacy Notes](./docs/legacy-notes/). I recommend looking if you want to know what not to do.
 
 After restarting my server constantly and taking a break from developing for a couple of months, I decided that this project needed a massive overhaul. I decided to ditch my stack in place for modern languages. I did a ton of research into different options for my stack, until I came across `Svelte` and `Go`. These two quickly became my favorite due to their speed and simplicity. I then spent 9 months learning and refactoring the entire app, which has led us to where we are today.
 

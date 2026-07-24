@@ -98,6 +98,7 @@ Terrariadle/
     - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
 
 - [ ] Add error handling on try-catch loops on the frontend / api
+- [ ] Add dark mode
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
 
 ```ts
