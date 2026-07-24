@@ -90,7 +90,8 @@ Terrariadle/
 - [ ] Add some sort of logging that doesn't bog down my server
 - [ ] Automate linting script as a check before a PR can be merged into main
 - [ ] Automatically run the prettier format script when pushing to main
-- [ ] Support mobile view (IMPORTANT)
+- [x] Support mobile view (IMPORTANT)
+- [x] Fix Linter errors
 - [ ] Implement Sitelinks for Google indexing
 - [ ] Add error handling on try-catch loops on the frontend / api
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
