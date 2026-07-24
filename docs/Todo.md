@@ -67,6 +67,7 @@ Terrariadle/
 - [ ] Run through site one final time
 - [ ] Upload build binary and run service
 - [ ] Make Github repo public
+- [ ] Route terrariadle.net to terrariadle.com
 
 **Finishing steps**
 
