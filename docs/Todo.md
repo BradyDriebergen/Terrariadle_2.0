@@ -75,7 +75,7 @@ Terrariadle/
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
-- Add it to google search index, or anything equivalent
+- [ ] Add it to google search index, or anything equivalent
 
 **Future nice to haves:**
 
