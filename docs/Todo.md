@@ -93,6 +93,10 @@ Terrariadle/
 - [x] Support mobile view (IMPORTANT)
 - [x] Fix Linter errors
 - [ ] Implement Sitelinks for Google indexing
+    - Verify domain ownership (DNS TXT record or HTML file upload).
+    - Submit sitemap.xml under Sitemaps.
+    - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
+
 - [ ] Add error handling on try-catch loops on the frontend / api
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
 
