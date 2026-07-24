@@ -1,10 +1,12 @@
 # Terrariadle_2.0
 
-[Live Site](#) - [Report a Bug](#) - [Reach Out](#) - [Support Me](#)
+[Live Site](#terrariadle.com) - [Report a Bug](#mailto:terrariadle@gmail.com) - [Reach Out](#mailto:terrariadle@gmail.com) - [Support Me](#)
 
 ---
 
-<!-- Screenshot goes here -->
+<!-- ![Terrariadle Screenshot](./frontend/static/terrariadle-screenshot.png) -->
+
+<img src="./frontend/static/terrariadle-screenshot.png" alt="Terrariadle Screenshot" height="300">
 
 ---
 

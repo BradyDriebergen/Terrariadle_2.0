@@ -4,14 +4,14 @@
 
 <footer>
 	<div class="links">
-		<a href="https://x.com/terrariadle" target="_blank" rel="noopener noreferrer">
-			<img class="icon" src="/logos/x_logo.png" alt="X link" title="x.com" />
+		<a href="https://github.com/BradyDriebergen/Terrariadle_2.0" target="_blank" rel="noopener noreferrer">
+			<img class="github-icon" src="/logos/github-logo.png" alt="github link" title="github.com" />
 		</a>
 		<a href={resolve('/about')}>
 			<img class="sign" src="/logos/terraria_sign.png" alt="About/help" title="How to play" />
 		</a>
 		<a href="https://ko-fi.com/bytebeard" target="_blank" rel="noopener noreferrer">
-			<img class="icon" src="/logos/kofi_logo.png" alt="Kofi link" title="ko-fi.com" />
+			<img class="kofi-icon" src="/logos/kofi_logo.png" alt="Kofi link" title="ko-fi.com" />
 		</a>
 	</div>
 
@@ -23,6 +23,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 0;
 	}
 
 	.sign {
@@ -31,14 +32,19 @@
 		padding: 0 10px;
 	}
 
-	.icon {
+	.github-icon {
+		width: auto;
+		height: 26px;
+		transition: height 0.2s ease;
+	}
+
+	.kofi-icon {
 		width: auto;
 		height: 24px;
 		transition: height 0.2s ease;
 	}
 
-	.icon:hover,
-	.sign:hover {
+	img:hover{
 		transform: scale(1.05);
 	}
 
@@ -52,7 +58,8 @@
 			padding: 0 15px;
 		}
 
-		.icon {
+		.kofi-icon,
+		.github-icon {
 			height: 30px;
 		}
 	}

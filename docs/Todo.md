@@ -63,8 +63,10 @@ Terrariadle/
 - [x] Implement Caddy in place of Nginx
 - [ ] Create new script that automatically builds and deploys
 - [ ] Reset MongoDB Atlas password for db
+- [ ] Update Kofi
 - [ ] Run through site one final time
 - [ ] Upload build binary and run service
+- [ ] Make Github repo public
 
 **Finishing steps**
 
