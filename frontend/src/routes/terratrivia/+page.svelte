@@ -139,11 +139,9 @@
 				<button
 					class="chunk"
 					class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
-					disabled={
-						selectedChunks.includes(chunk.value) ||
+					disabled={selectedChunks.includes(chunk.value) ||
 						selectedChunks.length >= 4 ||
-						loadingGuess
-					}
+						loadingGuess}
 					onclick={() => {
 						selectedChunks.push(chunk.value);
 						handleClick();

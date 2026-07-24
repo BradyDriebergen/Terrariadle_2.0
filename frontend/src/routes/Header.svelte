@@ -165,7 +165,7 @@
 		header {
 			margin-bottom: 70px;
 		}
-		
+
 		.centered {
 			margin-top: 20px;
 		}

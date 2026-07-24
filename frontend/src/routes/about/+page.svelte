@@ -33,10 +33,10 @@
 					<img src="/logos/guess_the_npc_logo.png" alt="Guess the NPC" />
 				</a>
 				<a class="img-link" href="hm">
-					<img src="/logos/hangman_logo.png" alt="Hangman"/>
+					<img src="/logos/hangman_logo.png" alt="Hangman" />
 				</a>
 				<a class="img-link" href="#tt">
-					<img src="/logos/terratrivia_logo.png" alt="TerraTrivia"/>
+					<img src="/logos/terratrivia_logo.png" alt="TerraTrivia" />
 				</a>
 			{/if}
 		</nav>

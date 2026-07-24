@@ -228,7 +228,7 @@
 			gap: 11px;
 			padding: 5px 0;
 		}
-		
+
 		.header span {
 			font-size: 12px;
 			width: 70px;
