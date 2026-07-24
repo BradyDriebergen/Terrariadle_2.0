@@ -4,35 +4,12 @@
 	import { fly } from 'svelte/transition';
 	import { session } from '$lib/store/session.svelte';
 
-	const SITE_URL = 'https://terrariadle.com';
-
-    const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        url: SITE_URL,
-        name: 'Terrariadle',
-        description: 'A Terraria inspired daily puzzle game. Test your Terraria knowledge.',
-        hasPart: [
-            { '@type': 'WebPage', name: 'Daily Slash', url: `${SITE_URL}/daily-slash` },
-            { '@type': 'WebPage', name: 'Connections', url: `${SITE_URL}/connections` },
-            { '@type': 'WebPage', name: 'Guess The NPC', url: `${SITE_URL}/guess-the-npc` },
-            { '@type': 'WebPage', name: 'Hangman', url: `${SITE_URL}/hangman` },
-            { '@type': 'WebPage', name: 'TerraTrivia', url: `${SITE_URL}/terratrivia` }
-        ]
-    };
-
 	let isDailySlashPage: boolean = $derived(page.url.pathname === '/daily-slash');
 	let isConnectionsPage: boolean = $derived(page.url.pathname === '/connections');
 	let isGuessTheNpcPage: boolean = $derived(page.url.pathname === '/guess-the-npc');
 	let isHangmanPage: boolean = $derived(page.url.pathname === '/hangman');
 	let isTerraTriviaPage: boolean = $derived(page.url.pathname === '/terratrivia');
 </script>
-
-<svelte:head>
-    <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-    </script>
-</svelte:head>
 
 <div class="landing-page" in:fly={{ y: 50, duration: 500 }}>
 	<p>

@@ -23,7 +23,8 @@
 	const routeMeta: Record<string, { title: string; description: string }> = {
 		'/': {
 			title: '',
-			description: 'Welcome to Terrariadle! Test your Terraria knowledge through daily puzzle games.'
+			description:
+				'Welcome to Terrariadle! Test your Terraria knowledge through daily puzzle games.'
 		},
 		'/daily-slash': {
 			title: '| Daily Slash',
@@ -56,26 +57,26 @@
 </script>
 
 <svelte:head>
-    <title>Terrariadle {meta.title}</title>
-    <link rel="icon" href="/logos/TabLogo.ico" />
-    <meta name="description" content={meta.description} />
-    <link rel="canonical" href={canonicalUrl} />
+	<title>Terrariadle {meta.title}</title>
+	<link rel="icon" href="/logos/TabLogo.ico" />
+	<meta name="description" content={meta.description} />
+	<link rel="canonical" href={canonicalUrl} />
 
-    <!-- Open Graph — Discord, Slack, Facebook, iMessage all read these -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Terrariadle" />
-    <meta property="og:title" content={`Terrariadle ${meta.title}`} />
-    <meta property="og:description" content={meta.description} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+	<!-- Open Graph — Discord, Slack, Facebook, iMessage all read these -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Terrariadle" />
+	<meta property="og:title" content={`Terrariadle ${meta.title}`} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:url" content={canonicalUrl} />
+	<meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 
-    <!-- Twitter/X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`Terrariadle ${meta.title}`} />
-    <meta name="twitter:description" content={meta.description} />
-    <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
+	<!-- Twitter/X Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={`Terrariadle ${meta.title}`} />
+	<meta name="twitter:description" content={meta.description} />
+	<meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
 </svelte:head>
 
 <div class="app">
