@@ -39,6 +39,7 @@
 
 	// Debouncer function for api calls
 	let timeoutId: ReturnType<typeof setTimeout> | undefined;
+	let loadingGuess: boolean = $state(false);
 	function handleClick() {
 		if (selectedChunks.length <= 1 || !input) return;
 
@@ -51,6 +52,8 @@
 
 	async function submitGuess() {
 		if (!input) return;
+
+		loadingGuess = true;
 
 		try {
 			const res = await checkTriviaQuestionGuess(page.data.userId, input);
@@ -70,6 +73,8 @@
 			// TODO: handle error here
 			console.error(e);
 		}
+
+		loadingGuess = false;
 	}
 
 	function shuffle() {
@@ -134,7 +139,11 @@
 				<button
 					class="chunk"
 					class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
-					disabled={selectedChunks.includes(chunk.value) || selectedChunks.length >= 4}
+					disabled={
+						selectedChunks.includes(chunk.value) ||
+						selectedChunks.length >= 4 ||
+						loadingGuess
+					}
 					onclick={() => {
 						selectedChunks.push(chunk.value);
 						handleClick();
