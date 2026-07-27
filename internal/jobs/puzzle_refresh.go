@@ -44,6 +44,9 @@ func (j *PuzzleRefreshJob) Start(ctx context.Context) {
 	for {
 		waitDur := domain.TimeUntilNextMidnightFromNow()
 
+		// Used for testing refresh
+		// waitDur := domain.NextIn(20)
+
 		select {
 		case <-ctx.Done():
 			return

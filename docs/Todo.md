@@ -61,10 +61,13 @@ Terrariadle/
 - [x] Add .env files to Oracle instance
 - [x] Create a systemd service for the app
 - [x] Implement Caddy in place of Nginx
-- [ ] Create new script that automatically builds and deploys
-- [ ] Reset MongoDB Atlas password for db
+- [x] Create new script that automatically builds and deploys
+- [x] Reset MongoDB Atlas password for db
+- [x] Update Kofi
 - [ ] Run through site one final time
 - [ ] Upload build binary and run service
+- [ ] Make Github repo public
+- [ ] Route terrariadle.net to terrariadle.com
 
 **Finishing steps**
 
@@ -75,7 +78,7 @@ Terrariadle/
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
-- Add it to google search index, or anything equivalent
+- [ ] Add it to google search index, or anything equivalent
 
 **Future nice to haves:**
 
@@ -90,9 +93,16 @@ Terrariadle/
 - [ ] Add some sort of logging that doesn't bog down my server
 - [ ] Automate linting script as a check before a PR can be merged into main
 - [ ] Automatically run the prettier format script when pushing to main
-- [ ] Support mobile view (IMPORTANT)
+- [x] Support mobile view (IMPORTANT)
+- [x] Fix Linter errors
 - [ ] Implement Sitelinks for Google indexing
+    - Verify domain ownership (DNS TXT record or HTML file upload).
+    - Submit sitemap.xml under Sitemaps.
+    - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
+
 - [ ] Add error handling on try-catch loops on the frontend / api
+- [ ] Add dark mode
+- [ ] Maintain socials (kofi, twitter, redit, etc)
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
 
 ```ts

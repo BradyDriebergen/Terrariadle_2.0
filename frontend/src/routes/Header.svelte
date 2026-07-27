@@ -43,6 +43,8 @@
 			out:send={{ key: 'block' }}
 		>
 			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
+			<!-- Remove once the site's been up for a bit -->
+			<h2 class="new-msg color-cycle">NEW AND IMPROVED!</h2>
 		</a>
 	{:else}
 		<a
@@ -95,6 +97,15 @@
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
 		align-items: center;
+	}
+
+	/* Remove once site has been up a few months */
+	.new-msg {
+		position: absolute;
+		left: 50%;
+		top: 100px;
+		transform: rotate(-4deg);
+		font-size: 22px;
 	}
 
 	.logo-slot {
@@ -164,6 +175,10 @@
 	@media (max-width: 700px) {
 		header {
 			margin-bottom: 70px;
+		}
+
+		.new-msg {
+			font-size: 20px;
 		}
 
 		.centered {
