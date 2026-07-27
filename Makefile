@@ -13,5 +13,5 @@ build-prod:
 	cp -r frontend/build internal/web/build
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
 		-trimpath \
-		-ldflags "-s -w -X main.version=$$(git describe --tags --always --dirty)" \
+		-ldflags "-s -w -X main.version=$$(git describe --tags --abbrev=0)" \
 		-o bin/terrariadle .
