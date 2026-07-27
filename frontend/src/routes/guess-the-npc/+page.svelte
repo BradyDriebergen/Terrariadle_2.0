@@ -10,19 +10,21 @@
 	let { data }: { data: PageData } = $props();
 
 	let guesses: NpcGuess[] = $state([]);
+	let guessedIds: number[] = $state([]);
 	let finished: boolean = $state(false);
 
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			guesses = data.gameContext.guesses;
+			guessedIds = data.gameContext.guessed_ids;
 			finished = data.gameContext.finished;
 		}
 	});
 
 	let quote: string = $derived(data.gameContext?.quote ?? '');
 	let npcList: DropdownListItem[] = $derived(
-		(data.npcList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
+		(data.npcList ?? []).filter((w) => guessedIds.includes(w.id))
 	);
 </script>
 
