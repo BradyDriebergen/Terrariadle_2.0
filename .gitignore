@@ -5,3 +5,5 @@
 
 /internal/web/build
 /bin
+
+deploy.sh

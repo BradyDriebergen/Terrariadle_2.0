@@ -61,9 +61,9 @@ Terrariadle/
 - [x] Add .env files to Oracle instance
 - [x] Create a systemd service for the app
 - [x] Implement Caddy in place of Nginx
-- [ ] Create new script that automatically builds and deploys
-- [ ] Reset MongoDB Atlas password for db
-- [ ] Update Kofi
+- [x] Create new script that automatically builds and deploys
+- [x] Reset MongoDB Atlas password for db
+- [x] Update Kofi
 - [ ] Run through site one final time
 - [ ] Upload build binary and run service
 - [ ] Make Github repo public
@@ -102,6 +102,7 @@ Terrariadle/
 
 - [ ] Add error handling on try-catch loops on the frontend / api
 - [ ] Add dark mode
+- [ ] Maintain socials (kofi, twitter, redit, etc)
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
 
 ```ts

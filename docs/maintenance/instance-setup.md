@@ -100,6 +100,8 @@ This is stored in `/etc/systemd/system/terrariadle.service`. To modify this file
 sudo vim terrariadle.service
 ```
 
+The actual binary file goes in `/opt/terrariadle`.
+
 To check the securities of this file, you can also run:
 
 ```bash
@@ -130,31 +132,36 @@ And here is the Caddy file (`/etc/caddy/Caddyfile`):
 
 ```caddyfile
 terrariadle.com {
-	redir https://www.terrariadle.com{uri} permanent
+        redir https://www.terrariadle.com{uri} permanent
 }
 
 www.terrariadle.com {
-	reverse_proxy localhost:8080 {
-		header_up X-Real-IP {http.request.header.CF-Connecting-IP}
-	}
+    reverse_proxy /api/* localhost:8080 {
+        header_up X-Real-IP {http.request.header.CF-Connecting-IP}
+        flush_interval -1
+    }
 
-	encode zstd gzip
+    reverse_proxy localhost:8080 {
+        header_up X-Real-IP {http.request.header.CF-Connecting-IP}
+    }
 
-	header {
-		Strict-Transport-Security "max-age=31536000; includeSubDomains"
-		X-Content-Type-Options "nosniff"
-		X-Frame-Options "DENY"
-		Referrer-Policy "strict-origin-when-cross-origin"
-		-Server
-	}
+    encode zstd gzip
 
-	log {
-		output file /var/log/caddy/terrariadle.log {
-			roll_size 10mb
-			roll_keep 5
-		}
-		format json
-	}
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+
+    log {
+        output file /var/log/caddy/terrariadle.log {
+            roll_size 10mb
+            roll_keep 5
+        }
+        format json
+    }
 }
 ```
 
