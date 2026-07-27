@@ -64,9 +64,9 @@ Terrariadle/
 - [x] Create new script that automatically builds and deploys
 - [x] Reset MongoDB Atlas password for db
 - [x] Update Kofi
-- [ ] Run through site one final time
-- [ ] Upload build binary and run service
-- [ ] Make Github repo public
+- [x] Run through site one final time
+- [x] Upload build binary and run service
+- [x] Make Github repo public
 - [ ] Route terrariadle.net to terrariadle.com
 
 **Finishing steps**
@@ -79,6 +79,7 @@ Terrariadle/
     - [ ] Reach out to Youtubers
     - [ ] Svelte promotions
 - [ ] Add it to google search index, or anything equivalent
+- [ ] Fix versioning to ignore pushes to main without tag
 
 **Future nice to haves:**
 
