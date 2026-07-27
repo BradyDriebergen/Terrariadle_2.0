@@ -67,7 +67,6 @@ Terrariadle/
 - [x] Run through site one final time
 - [x] Upload build binary and run service
 - [x] Make Github repo public
-- [ ] Route terrariadle.net to terrariadle.com
 
 **Finishing steps**
 
@@ -77,9 +76,23 @@ Terrariadle/
     - [ ] Redit posts
     - [ ] Twitter
     - [ ] Reach out to Youtubers
-    - [ ] Svelte promotions
+    - [x] Svelte promotions
 - [ ] Add it to google search index, or anything equivalent
 - [ ] Fix versioning to ignore pushes to main without tag
+- [ ] Fix mobile issue with daily slash and guess the NPC
+- [ ] Route terrariadle.net to terrariadle.com
+- [ ] Fix the following errors from the browser console:
+
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496. (Reason: CORS request did not succeed). Status code: (null).
+
+None of the “sha512” hashes in the integrity attribute match the content of the subresource at “https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496”. The computed hash is “z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==”.
+
+- [ ] Implement Sitelinks for Google indexing
+    - Verify domain ownership (DNS TXT record or HTML file upload).
+    - Submit sitemap.xml under Sitemaps.
+    - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
+
+- [ ] Add error handling on try-catch loops on the frontend / api
 
 **Future nice to haves:**
 
@@ -96,12 +109,6 @@ Terrariadle/
 - [ ] Automatically run the prettier format script when pushing to main
 - [x] Support mobile view (IMPORTANT)
 - [x] Fix Linter errors
-- [ ] Implement Sitelinks for Google indexing
-    - Verify domain ownership (DNS TXT record or HTML file upload).
-    - Submit sitemap.xml under Sitemaps.
-    - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
-
-- [ ] Add error handling on try-catch loops on the frontend / api
 - [ ] Add dark mode
 - [ ] Maintain socials (kofi, twitter, redit, etc)
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
