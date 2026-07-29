@@ -30,8 +30,10 @@
 	});
 
 	let weaponList: DropdownListItem[] = $derived(
-		(data.weaponList ?? []).filter((w) => guessedIds.includes(w.id))
+		(data.weaponList ?? []).filter((w) => !guessedIds.includes(w.id))
 	);
+
+	$inspect(guessedIds);
 </script>
 
 <svelte:window bind:innerWidth={width} />

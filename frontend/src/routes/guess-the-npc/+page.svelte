@@ -24,7 +24,7 @@
 
 	let quote: string = $derived(data.gameContext?.quote ?? '');
 	let npcList: DropdownListItem[] = $derived(
-		(data.npcList ?? []).filter((w) => guessedIds.includes(w.id))
+		(data.npcList ?? []).filter((w) => !guessedIds.includes(w.id))
 	);
 </script>
 
