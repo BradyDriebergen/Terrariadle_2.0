@@ -40,6 +40,10 @@ a {
 	color: rgb(92, 193, 255);
 }
 
+img {
+	color: transparent;
+}
+
 .color-cycle {
 	font-size: 22px;
 	animation: colors 6s linear infinite;
