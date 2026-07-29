@@ -12,6 +12,7 @@
 	let { data }: { data: PageData } = $props();
 
 	let guesses: WeaponGuess[] = $state([]);
+	let guessedIds: number[] = $state([]);
 	let prevWeapon: WeaponPreview | null = $state(null);
 	let finished: boolean = $state(false);
 
@@ -22,13 +23,14 @@
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			guesses = data.gameContext.guesses;
+			guessedIds = data.gameContext.guessed_ids;
 			prevWeapon = data.gameContext.previous_weapon;
 			finished = data.gameContext.finished;
 		}
 	});
 
 	let weaponList: DropdownListItem[] = $derived(
-		(data.weaponList ?? []).filter((w) => !data.gameContext?.guessed_ids.includes(w.id))
+		(data.weaponList ?? []).filter((w) => guessedIds.includes(w.id))
 	);
 </script>
 
