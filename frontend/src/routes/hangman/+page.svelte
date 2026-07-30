@@ -12,7 +12,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	let attempts: number = $state(0);
+	let attempts: number = $state(6);
 	let finished: boolean = $state(false);
 	let guesses: HangmanGuess[] = $state([]);
 	let phrase: string[] = $state([]);

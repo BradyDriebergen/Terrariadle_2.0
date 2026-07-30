@@ -5,6 +5,7 @@
 	import { crossfade, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { session } from '$lib/store/session.svelte';
+	import logo from '$lib/assets/TerrariadleLogo.webp';
 
 	let isHome = $derived(page.url.pathname === '/' || page.url.pathname === '/about');
 	// svelte-ignore state_referenced_locally
@@ -41,8 +42,9 @@
 			class="logo-slot centered"
 			in:receive={{ key: 'block' }}
 			out:send={{ key: 'block' }}
+			title="Terrariadle Home Page"
 		>
-			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
+			<img class="game-logo" src={logo} alt="Terrariadle" />
 			<!-- Remove once the site's been up for a bit -->
 			<h2 class="new-msg color-cycle">NEW AND IMPROVED!</h2>
 		</a>
@@ -52,8 +54,9 @@
 			class="logo-slot corner"
 			in:receive={{ key: 'block' }}
 			out:send={{ key: 'block' }}
+			title="Terrariadle Home Page"
 		>
-			<img class="game-logo" src="/logos/TerrariadleLogo.png" alt="Terrariadle" />
+			<img class="game-logo" src={logo} alt="Terrariadle" />
 		</a>
 		<div class="links" in:scale out:scale>
 			<a class:Selected={page.url.pathname === '/daily-slash'} href={resolve('/daily-slash')}>
