@@ -39,7 +39,7 @@ func (j *PuzzleRefreshJob) Start(ctx context.Context) {
 	}
 
 	// Testing method for refreshing on startup
-	j.refresh((ctx))
+	// j.refresh((ctx))
 
 	for {
 		waitDur := domain.TimeUntilNextMidnightFromNow()
