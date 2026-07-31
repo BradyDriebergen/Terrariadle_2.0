@@ -77,17 +77,17 @@ Terrariadle/
     - [ ] Twitter
     - [ ] Reach out to Youtubers
     - [x] Svelte promotions
-- [ ] Add it to google search index, or anything equivalent
-- [ ] Fix versioning to ignore pushes to main without tag
-- [ ] Fix mobile issue with daily slash and guess the NPC
+- [x] Add it to google search index, or anything equivalent
+- [x] Fix versioning to ignore pushes to main without tag
+- [x] Fix mobile issue with daily slash and guess the NPC
 - [ ] Route terrariadle.net to terrariadle.com
-- [ ] Fix the following errors from the browser console:
+- [x] Fix the following errors from the browser console:
 
 Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496. (Reason: CORS request did not succeed). Status code: (null).
 
 None of the “sha512” hashes in the integrity attribute match the content of the subresource at “https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496”. The computed hash is “z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==”.
 
-- [ ] Implement Sitelinks for Google indexing
+- [x] Implement Sitelinks for Google indexing
     - Verify domain ownership (DNS TXT record or HTML file upload).
     - Submit sitemap.xml under Sitemaps.
     - Use URL Inspection to request indexing on your key pages manually — speeds up first crawl significantly rather than waiting for organic discovery.
@@ -98,19 +98,14 @@ None of the “sha512” hashes in the integrity attribute match the content of 
 
 - [ ] Consider GitHub Actions for automatic deployment
 - [ ] Add a stats screen at the landing page for how many users have guessed
-- [ ] Change cursor to the Terraria cursor (in progress)
+- [ ] Change cursor to the Terraria cursor
 - [ ] Update categories data
     - [ ] Add more categories
     - [ ] Update the options to contain only 4 options
 - [ ] Add page for contacting support
-- [ ] Add monitoring for better analytics
-- [ ] Add some sort of logging that doesn't bog down my server
-- [ ] Automate linting script as a check before a PR can be merged into main
-- [ ] Automatically run the prettier format script when pushing to main
 - [x] Support mobile view (IMPORTANT)
 - [x] Fix Linter errors
 - [ ] Add dark mode
-- [ ] Maintain socials (kofi, twitter, redit, etc)
 - [ ] Add malformed input error protection in `/frontend/src/lib/api`, like so:
 
 ```ts
@@ -148,3 +143,6 @@ export async function initializeDailySlashGame(
 	return body;
 }
 ```
+
+- [ ] Add monitoring for better analytics
+- [ ] Add some sort of logging that doesn't bog down my server
