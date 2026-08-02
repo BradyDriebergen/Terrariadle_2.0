@@ -12,7 +12,8 @@ export default defineConfig({
 				target: 'http://localhost:8080',
 				changeOrigin: false
 			}
-		}
+		},
+		allowedHosts: ['iodize-maritime-frosting.ngrok-free.dev']
 	},
 	define: {
 		__APP_VERSION__: JSON.stringify(appVersion)
