@@ -29,21 +29,41 @@ func (j *PuzzleRefreshJob) refreshCategories() domain.ConnectionAnswer {
 	oldCategories := j.answerStore.GetAnswers().Connections.CategoryIDs
 	newCategoryOptions := make([]domain.ConnectionOption, 0, 16)
 	newCategoryIDs := []int{}
+	selectedOptions := make([]string, 0, 16)
 	index := 0
 
 	for len(newCategoryIDs) < 4 && index < len(categories) {
 		cat := categories[index]
 
+		// If category wasn't in yesterday's puzzle
 		if !slices.Contains(oldCategories, cat.ID) {
-			newCategoryIDs = append(newCategoryIDs, cat.ID)
+			options := make([]string, 0, 4)
+			optionIndex := 0
 
 			shuffle(cat.Options, j.rng)
+			
+			// Check if there are duplicate options in other categories
+			for len(options) < 4 && optionIndex < len(cat.Options) {
+				currentOption := cat.Options[optionIndex]
 
-			for i := range 4 {
-				newCategoryOptions = append(newCategoryOptions, domain.ConnectionOption{
-					CategoryID: cat.ID,
-					Option:     cat.Options[i],
-				})
+				if !slices.Contains(selectedOptions, currentOption) {
+					options = append(options, currentOption)
+				}
+
+				optionIndex++
+			}
+
+			// If 4 unique options were found, save them as the answers
+			if len(options) == 4 {
+				selectedOptions = append(selectedOptions, options...)
+
+				newCategoryIDs = append(newCategoryIDs, cat.ID)
+				for i := range 4 {
+					newCategoryOptions = append(newCategoryOptions, domain.ConnectionOption{
+						CategoryID: cat.ID,
+						Option:     options[i],
+					})
+				}
 			}
 		}
 
