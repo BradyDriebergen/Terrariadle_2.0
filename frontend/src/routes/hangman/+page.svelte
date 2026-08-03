@@ -36,8 +36,11 @@
 		return enemyString.split(' ').map((word) => word.split(''));
 	});
 
+	let loading: boolean = $state(false);
 	async function onKeyPressed(letter: string) {
+		loading = true;
 		let res;
+
 		try {
 			res = await checkEnemyGuess(page.data.userId, letter);
 		} catch (e) {
@@ -60,6 +63,8 @@
 		if (attempts <= 0) {
 			audio?.play();
 		}
+
+		loading = false;
 	}
 
 	// Effect for updating the background with fade
@@ -100,7 +105,7 @@
 		{/each}
 	</div>
 	{#if !finished}
-		<Keyboard {onKeyPressed} {guesses} />
+		<Keyboard {onKeyPressed} {guesses} disabled={loading} />
 	{/if}
 {:else}
 	<p>Loading...</p>

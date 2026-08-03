@@ -5,10 +5,12 @@
 
 	let {
 		onKeyPressed = () => {},
-		guesses = []
+		guesses = [],
+		disabled = false
 	}: {
 		onKeyPressed: (letter: string) => void;
 		guesses: HangmanGuess[];
+		disabled: boolean;
 	} = $props();
 
 	const rows: string[][] = [
@@ -30,7 +32,7 @@
 					class:correct={guessMap.get(letter) ?? false}
 					// double negative conditional
 					class:incorrect={!(guessMap.get(letter) ?? true)}
-					disabled={guessedLetters.includes(letter)}
+					disabled={guessedLetters.includes(letter) || disabled}
 					onclick={() => onKeyPressed(letter)}
 				>
 					{letter}
