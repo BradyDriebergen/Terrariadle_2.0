@@ -2,6 +2,7 @@ package store
 
 import (
 	"fmt"
+	"strings"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/repo"
 )
@@ -26,6 +27,7 @@ func toAnswerDomain(ad repo.AnswerData, cs CatalogStore) (domain.DailyAnswers, e
 	if !ok {
 		return domain.DailyAnswers{}, fmt.Errorf("failed to find enemy with id: %v", ad.Hangman.EnemyID)
 	}
+	enemy.Name = strings.ToUpper(enemy.Name)
 
 	triviaQuestions := make([]domain.TriviaQuestion, 7)
 	for i, q := range ad.TerraTrivia.QuestionIDs {
