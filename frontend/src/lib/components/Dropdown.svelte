@@ -97,7 +97,7 @@
 		padding: 10px;
 		width: 220px;
 		height: 20px;
-		font-size: 15px;
+		font-size: 16px;
 		text-align: left;
 
 		border-radius: 5px;

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { colors, CompareResult, type Rarity, type WeaponGuess } from '$lib/types/daily-slash';
+	import { useMediaQuery } from '$lib/utils/mediaQuery.svelte';
 	import { flip } from 'svelte/animate';
 	import { fly } from 'svelte/transition';
 
@@ -40,9 +41,14 @@
 	function getRarityColor(rarity: Rarity): string {
 		return 'color: ' + colors[rarity];
 	}
+
+	const isMobile = useMediaQuery('(max-width: 800px)');
+
+	const flyX = (x: number) => (isMobile.current ? x / 4 : x);
+	const flyDuration = () => (isMobile.current ? 400 : 2000);
 </script>
 
-<div class="container" in:fly={{ x: 800, duration: 1000 }}>
+{#snippet body()}
 	<div class="header">
 		<span title={weaponTitle}>Weapon</span>
 		<span title={damageTypeTitle}>Damage Type</span>
@@ -56,14 +62,14 @@
 	{#each guesses as guess (guess.weapon.id)}
 		<div class="row" animate:flip>
 			<!-- Weapon icon -->
-			<div in:fly={{ x: 560, duration: 2000 }}>
+			<div in:fly={{ x: flyX(560), duration: flyDuration() }}>
 				<img src={`/weapons/${guess.weapon.image_path}`} alt={`${guess.weapon.name} image`} />
 			</div>
 
 			<!-- Damage type -->
 			<span
 				style={guess.checks.damage_type ? guessCorrect : guessWrong}
-				in:fly={{ x: 480, duration: 2000 }}
+				in:fly={{ x: flyX(480), duration: flyDuration() }}
 			>
 				{guess.weapon.damage_type}
 			</span>
@@ -74,7 +80,7 @@
 				class:arrow-up={guess.checks.damage === CompareResult.Higher}
 				class:arrow-down={guess.checks.damage === CompareResult.Lower}
 				style={guess.checks.damage === CompareResult.Match ? guessCorrect : guessWrong}
-				in:fly={{ x: 400, duration: 2000 }}
+				in:fly={{ x: flyX(400), duration: flyDuration() }}
 			>
 				{guess.weapon.damage}
 			</span>
@@ -85,7 +91,7 @@
 				class:arrow-up={guess.checks.use_time === CompareResult.Higher}
 				class:arrow-down={guess.checks.use_time === CompareResult.Lower}
 				style={guess.checks.use_time === CompareResult.Match ? guessCorrect : guessWrong}
-				in:fly={{ x: 320, duration: 2000 }}
+				in:fly={{ x: flyX(320), duration: flyDuration() }}
 			>
 				{guess.weapon.use_time}
 			</span>
@@ -97,7 +103,7 @@
 				class:arrow-down={guess.checks.rarity === CompareResult.Lower}
 				style={(guess.checks.rarity === CompareResult.Match ? guessCorrect : guessWrong) +
 					getRarityColor(guess.weapon.rarity as Rarity)}
-				in:fly={{ x: 240, duration: 2000 }}
+				in:fly={{ x: flyX(240), duration: flyDuration() }}
 			>
 				{guess.weapon.rarity}
 			</span>
@@ -105,7 +111,7 @@
 			<!-- Operation -->
 			<span
 				style={guess.checks.operation ? guessCorrect : guessWrong}
-				in:fly={{ x: 160, duration: 2000 }}
+				in:fly={{ x: flyX(160), duration: flyDuration() }}
 			>
 				{guess.weapon.operation}
 			</span>
@@ -113,14 +119,14 @@
 			<!-- Material -->
 			<span
 				style={guess.checks.material ? guessCorrect : guessWrong}
-				in:fly={{ x: 80, duration: 2000 }}
+				in:fly={{ x: flyX(80), duration: flyDuration() }}
 			>
 				{guess.weapon.material}
 			</span>
 
 			<div
 				style="flex-direction: column; {checkedObtained(guess.checks.obtained)}"
-				in:fly={{ x: 0, duration: 2000 }}
+				in:fly={{ x: flyX(0), duration: flyDuration() }}
 			>
 				{#each guess.weapon.obtained as item (item)}
 					<span>{item}</span>
@@ -128,7 +134,17 @@
 			</div>
 		</div>
 	{/each}
-</div>
+{/snippet}
+
+{#if !isMobile.current}
+	<div class="container" in:fly={{ x: flyX(800), duration: flyDuration() }}>
+		{@render body()}
+	</div>
+{:else}
+	<div class="container">
+		{@render body()}
+	</div>
+{/if}
 
 <style>
 	.header {
