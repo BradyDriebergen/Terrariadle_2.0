@@ -31,7 +31,10 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-color: #000;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #5972f7;
 
 	/* cursor: url('/emojis/cursor.png'), auto; */
 }
