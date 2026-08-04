@@ -6,6 +6,7 @@
 	import type { PageData } from './$types';
 	import type { NpcGuess } from '$lib/types/guess-the-npc';
 	import type { DropdownListItem } from '$lib/types/shared';
+	import { fly } from 'svelte/transition';
 
 	let { data }: { data: PageData } = $props();
 
@@ -32,15 +33,17 @@
 </script>
 
 {#if !pageLoading}
-	{#if finished}
-		<WinningCard npc={guesses[0]} />
-	{/if}
+	<div in:fly={{ y: 20, duration: 400 }}>
+		{#if finished}
+			<WinningCard npc={guesses[0]} />
+		{/if}
 
-	<UserInput bind:guesses bind:finished {npcList} {quote} />
+		<UserInput bind:guesses bind:finished {npcList} {quote} />
 
-	<GuessList {guesses} {finished} />
-
-	<Confetti {finished} />
+		<GuessList {guesses} {finished} />
+		
+		<Confetti {finished} />
+	</div>
 {:else}
 	<p>Loading...</p>
 {/if}

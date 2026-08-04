@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 	import Guide from './components/Guide.svelte';
 	import Keyboard from './components/Keyboard.svelte';
 	import WinningCard from './components/WinningCard.svelte';
@@ -81,35 +81,38 @@
 ></div>
 
 {#if !pageLoading}
-	{#if !finished}
-		<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-			<h2>Hangman</h2>
-			<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
-		</div>
-	{:else}
-		<div style="margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
-			<span class="color-cycle">Hangman Results</span>
-		</div>
-	{/if}
-
-	<Guide {attempts} />
-
-	{#if finished}
-		<WinningCard {attempts} />
-	{/if}
-
-	<div class="phrase-container">
-		{#each phraseWords as word, i (i)}
-			<div class="word">
-				{#each word as letter, i (i)}
-					<span>{letter}</span>
-				{/each}
+	<div in:fly={{ y: 20, duration: 400 }}>
+		{#if !finished}
+			<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
+				<h2>Hangman</h2>
+				<p>Guess letters one by one to figure out the enemy before hanging the Guide!</p>
 			</div>
-		{/each}
+		{:else}
+			<div style="margin-bottom: {attempts === 0 ? '15px' : '-20px'}">
+				<span class="color-cycle">Hangman Results</span>
+			</div>
+		{/if}
+
+		<Guide {attempts} />
+
+		{#if finished}
+			<WinningCard {attempts} />
+		{/if}
+
+		<div class="phrase-container">
+			{#each phraseWords as word, i (i)}
+				<div class="word">
+					{#each word as letter, i (i)}
+						<span>{letter}</span>
+					{/each}
+				</div>
+			{/each}
+		</div>
+
+		{#if !finished}
+			<Keyboard {onKeyPressed} {guesses} disabled={loading} />
+		{/if}
 	</div>
-	{#if !finished}
-		<Keyboard {onKeyPressed} {guesses} disabled={loading} />
-	{/if}
 {:else}
 	<p>Loading...</p>
 {/if}

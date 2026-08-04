@@ -7,7 +7,7 @@
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import type { PageData } from './$types';
-	import { scale } from 'svelte/transition';
+	import { fly, scale } from 'svelte/transition';
 
 	let { data }: { data: PageData } = $props();
 
@@ -42,7 +42,7 @@
 <svelte:document style:overflow-y="hidden" />
 
 {#if !pageLoading}
-	<div>
+	<div in:fly={{ y: 20, duration: 400 }}>
 		<UserInput bind:guesses bind:finished {weaponList} />
 
 		{#if finished}
