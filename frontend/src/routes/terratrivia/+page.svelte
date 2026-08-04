@@ -17,6 +17,7 @@
 	let chunks: string[] = $state([]);
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -25,6 +26,8 @@
 			triviaItems = new SvelteMap<number, TriviaItem>(
 				data.gameContext.trivia_items.map((item) => [item.id, item])
 			);
+
+			pageLoading = false;
 		}
 	});
 
@@ -84,7 +87,7 @@
 	}
 </script>
 
-{#if data.gameContext}
+{#if !pageLoading}
 	{#if finished}
 		<WinningCard />
 		<Confetti finished />

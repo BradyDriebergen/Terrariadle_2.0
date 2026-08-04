@@ -13,12 +13,15 @@
 	let guessedIds: number[] = $state([]);
 	let finished: boolean = $state(false);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			guesses = data.gameContext.guesses;
 			guessedIds = data.gameContext.guessed_ids;
 			finished = data.gameContext.finished;
+
+			pageLoading = false;
 		}
 	});
 
@@ -28,12 +31,12 @@
 	);
 </script>
 
-{#if data.gameContext}
-	<UserInput bind:guesses bind:finished {npcList} {quote} />
-
+{#if !pageLoading}
 	{#if finished}
 		<WinningCard npc={guesses[0]} />
 	{/if}
+
+	<UserInput bind:guesses bind:finished {npcList} {quote} />
 
 	<GuessList {guesses} {finished} />
 

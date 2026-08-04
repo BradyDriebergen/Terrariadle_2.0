@@ -19,6 +19,7 @@
 	let options: CategoryOption[] = $state([]);
 	let solvedCategories: SolvedCategory[] = $state([]);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -30,6 +31,8 @@
 				selected: false
 			})) as CategoryOption[];
 			solvedCategories = data.gameContext.solved_categories as SolvedCategory[];
+
+			pageLoading = false;
 		}
 	});
 
@@ -160,23 +163,23 @@
 	}
 </script>
 
-{#if !finished || transitioning}
-	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-		<h2>Connections</h2>
-		<p>Find groups of 4 with something in common!</p>
-	</div>
-{/if}
+{#if !pageLoading}
+	{#if !finished || transitioning}
+		<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
+			<h2>Connections</h2>
+			<p>Find groups of 4 with something in common!</p>
+		</div>
+	{/if}
 
-{#if showOneAway && !finished}
-	<span class="one-away-msg" transition:scale>One Away!</span>
-{/if}
+	{#if showOneAway && !finished}
+		<span class="one-away-msg" transition:scale>One Away!</span>
+	{/if}
 
-{#if finished && !transitioning}
-	<WinningCard {attempts} />
-	<Confetti finished={attempts > 0} />
-{/if}
+	{#if finished && !transitioning}
+		<WinningCard {attempts} />
+		<Confetti finished={attempts > 0} />
+	{/if}
 
-{#if data.gameContext}
 	<div class="grid">
 		{#each solvedCategories as category, index (index)}
 			<div

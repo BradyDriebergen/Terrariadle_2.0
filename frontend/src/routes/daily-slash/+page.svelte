@@ -19,6 +19,7 @@
 	let correctWeapon: Weapon | null = $derived(finished ? guesses[0].weapon : null);
 	let width: number = $state(0);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -26,21 +27,21 @@
 			guessedIds = data.gameContext.guessed_ids;
 			prevWeapon = data.gameContext.previous_weapon;
 			finished = data.gameContext.finished;
+
+			pageLoading = false;
 		}
 	});
 
 	let weaponList: DropdownListItem[] = $derived(
 		(data.weaponList ?? []).filter((w) => !guessedIds.includes(w.id))
 	);
-
-	$inspect(guessedIds);
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
 <svelte:document style:overflow-y="hidden" />
 
-{#if data.gameContext}
+{#if !pageLoading}
 	<div>
 		<UserInput bind:guesses bind:finished {weaponList} />
 

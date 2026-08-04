@@ -17,6 +17,7 @@
 	let guesses: HangmanGuess[] = $state([]);
 	let phrase: string[] = $state([]);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -24,6 +25,8 @@
 			finished = data.gameContext.finished;
 			guesses = data.gameContext.guesses;
 			phrase = data.gameContext.phrase;
+
+			pageLoading = false;
 		}
 	});
 
@@ -77,7 +80,7 @@
 	style:background-image={failed ? "url('/page-backgrounds/Underworld.png')" : 'none'}
 ></div>
 
-{#if data.gameContext}
+{#if !pageLoading}
 	{#if !finished}
 		<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
 			<h2>Hangman</h2>

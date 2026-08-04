@@ -49,6 +49,8 @@
 	}
 </script>
 
+<span class="color-cycle">Guess The NPC Results</span>
+
 <div class="winning-container" in:scale>
 	<h1>Spot On!</h1>
 
