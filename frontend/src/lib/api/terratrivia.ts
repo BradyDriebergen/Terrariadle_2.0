@@ -4,7 +4,7 @@ import type {
 	TerraTriviaSession,
 	TerraTriviaWinningData
 } from '$lib/types/terratrivia';
-import { parseJsonSafe } from './utils';
+import { parseJsonError, parseJsonSafe } from './utils';
 
 export async function initializeTerraTriviaGame(
 	fetchFn: typeof fetch,
@@ -13,7 +13,7 @@ export async function initializeTerraTriviaGame(
 	const res = await fetchFn(`/api/terratrivia/initialize-game?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
@@ -31,7 +31,7 @@ export async function checkTriviaQuestionGuess(
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
@@ -42,7 +42,7 @@ export async function getTerraTriviaWinningData(userId: string): Promise<TerraTr
 	const res = await fetch(`/api/terratrivia/winning-data?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to load winning data');
 	}
 

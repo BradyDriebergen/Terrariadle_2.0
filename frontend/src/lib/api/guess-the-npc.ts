@@ -1,5 +1,5 @@
 import { ApiError, type ApiErrorBody } from '$lib/types/error';
-import { parseJsonSafe } from './utils';
+import { parseJsonError, parseJsonSafe } from './utils';
 import type {
 	GuessTheNpcCheckResult,
 	GuessTheNpcMiniGameResult,
@@ -15,7 +15,7 @@ export async function initializeNpcGame(
 	const res = await fetchFn(`/api/guess-the-npc/initialize-game?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
@@ -26,7 +26,7 @@ export async function getSearchableNpcs(fetchFn: typeof fetch) {
 	const res = await fetchFn('/api/guess-the-npc/search-items');
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to find npcs');
 	}
 
@@ -44,7 +44,7 @@ export async function checkNpcGuess(
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
@@ -55,7 +55,7 @@ export async function getNpcWinningData(userId: string): Promise<GuessTheNpcWinn
 	const res = await fetch(`/api/guess-the-npc/winning-data?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when getting winning data');
 	}
 
@@ -73,7 +73,7 @@ export async function checkNpcName(
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 

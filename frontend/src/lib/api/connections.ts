@@ -5,7 +5,7 @@ import type {
 	ConnectionsWinningData
 } from '$lib/types/connections';
 import { ApiError, type ApiErrorBody } from '$lib/types/error';
-import { parseJsonSafe } from './utils';
+import { parseJsonError, parseJsonSafe } from './utils';
 
 export async function initializeConnectionsGame(
 	fetchFn: typeof fetch,
@@ -14,7 +14,7 @@ export async function initializeConnectionsGame(
 	const res = await fetchFn(`/api/connections/initialize-game?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
@@ -36,7 +36,7 @@ export async function checkCategoryGuess(
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
@@ -51,7 +51,7 @@ export async function revealConnectionsAnswers(userId: string): Promise<Connecti
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when revealing answers');
 	}
 
@@ -62,7 +62,7 @@ export async function getConnectionsWinningData(userId: string): Promise<Connect
 	const res = await fetch(`/api/connections/winning-data?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to load winning data');
 	}
 
