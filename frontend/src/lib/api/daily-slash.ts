@@ -3,8 +3,8 @@ import type {
 	DailySlashSession,
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
-import { parseJsonSafe } from './utils';
+import { ApiError } from '$lib/types/error';
+import { parseJsonError, parseJsonSafe } from './utils';
 import type { DropdownListItem } from '$lib/types/shared';
 
 export async function initializeDailySlashGame(
@@ -14,7 +14,7 @@ export async function initializeDailySlashGame(
 	const res = await fetchFn(`/api/daily-slash/initialize-game?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to initialize game');
 	}
 
@@ -25,7 +25,7 @@ export async function getSearchableWeapons(fetchFn: typeof fetch) {
 	const res = await fetchFn('/api/daily-slash/search-items');
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to find weapons');
 	}
 
@@ -52,7 +52,7 @@ export async function checkWeaponGuess(
 	});
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when checking guess');
 	}
 
@@ -63,7 +63,7 @@ export async function getDailySlashWinningData(userId: string): Promise<DailySla
 	const res = await fetch(`/api/daily-slash/winning-data?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'An error occurred when getting winning data');
 	}
 

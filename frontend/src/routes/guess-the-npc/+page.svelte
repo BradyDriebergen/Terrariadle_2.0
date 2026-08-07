@@ -41,7 +41,7 @@
 		<UserInput bind:guesses bind:finished {npcList} {quote} />
 
 		<GuessList {guesses} {finished} />
-		
+
 		<Confetti {finished} />
 	</div>
 {:else}

@@ -1,6 +1,6 @@
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
+import { ApiError } from '$lib/types/error';
 import type { UserGameResults } from '$lib/types/shared';
-import { parseJsonSafe } from './utils';
+import { parseJsonError, parseJsonSafe } from './utils';
 
 export function subscribeToPlayerCount(mode: string, onCount: (count: number) => void): () => void {
 	const es = new EventSource(`/api/guess-count?mode=${mode}`);
@@ -27,7 +27,7 @@ export async function getUserGameResults(
 	const res = await fetchFn(`/api/finished-games?user_id=${userId}`);
 
 	if (!res.ok) {
-		const err = await parseJsonSafe<ApiErrorBody>(res);
+		const err = await parseJsonError(res);
 		throw new ApiError(res.status, err.error ?? 'Unable to get game results');
 	}
 
