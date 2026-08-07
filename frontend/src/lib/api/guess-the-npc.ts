@@ -1,4 +1,4 @@
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
+import { ApiError } from '$lib/types/error';
 import { parseJsonError, parseJsonSafe } from './utils';
 import type {
 	GuessTheNpcCheckResult,

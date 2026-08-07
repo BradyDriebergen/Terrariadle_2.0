@@ -4,7 +4,7 @@ import type {
 	ConnectionsSession,
 	ConnectionsWinningData
 } from '$lib/types/connections';
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
+import { ApiError } from '$lib/types/error';
 import { parseJsonError, parseJsonSafe } from './utils';
 
 export async function initializeConnectionsGame(

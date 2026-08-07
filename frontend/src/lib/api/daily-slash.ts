@@ -3,7 +3,7 @@ import type {
 	DailySlashSession,
 	DailySlashWinningData
 } from '$lib/types/daily-slash';
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
+import { ApiError } from '$lib/types/error';
 import { parseJsonError, parseJsonSafe } from './utils';
 import type { DropdownListItem } from '$lib/types/shared';
 

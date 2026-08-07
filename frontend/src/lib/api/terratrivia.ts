@@ -1,4 +1,4 @@
-import { ApiError, type ApiErrorBody } from '$lib/types/error';
+import { ApiError } from '$lib/types/error';
 import type {
 	TerraTriviaCheckResult,
 	TerraTriviaSession,
