@@ -3,7 +3,7 @@
 	import type { TriviaItem } from '$lib/types/terratrivia.js';
 	import { onDestroy } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
-	import { slide } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 	import WinningCard from './components/WinningCard.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
 	import Confetti from '$lib/components/Confetti.svelte';
@@ -17,6 +17,7 @@
 	let chunks: string[] = $state([]);
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -25,6 +26,8 @@
 			triviaItems = new SvelteMap<number, TriviaItem>(
 				data.gameContext.trivia_items.map((item) => [item.id, item])
 			);
+
+			pageLoading = false;
 		}
 	});
 
@@ -84,69 +87,71 @@
 	}
 </script>
 
-{#if data.gameContext}
-	{#if finished}
-		<WinningCard />
-		<Confetti finished />
-	{/if}
-
-	<div class="game-window">
-		{#if !finished}
-			<div out:slide={{ duration: 700, easing: cubicInOut }}>
-				<h2>TerraTrivia</h2>
-				<p>Use clues to decipher all 7 words!</p>
-			</div>
+{#if !pageLoading}
+	<div in:fly={{ y: 20, duration: 400 }}>
+		{#if finished}
+			<WinningCard />
+			<Confetti finished />
 		{/if}
 
-		<div class="clue-box">
-			{#each triviaItems as [id, item] (id)}
-				<div class="clue-row">
-					<span>{item.clue}</span>
-					<span>{item.answer !== '' ? item.answer : item.letter_count + ' letters'}</span>
+		<div class="game-window">
+			{#if !finished}
+				<div out:slide={{ duration: 700, easing: cubicInOut }}>
+					<h2>TerraTrivia</h2>
+					<p>Use clues to decipher all 7 words!</p>
 				</div>
-			{/each}
+			{/if}
+
+			<div class="clue-box">
+				{#each triviaItems as [id, item] (id)}
+					<div class="clue-row">
+						<span>{item.clue}</span>
+						<span>{item.answer !== '' ? item.answer : item.letter_count + ' letters'}</span>
+					</div>
+				{/each}
+			</div>
+
+			{#if !finished}
+				<div class="selection-menu">
+					<button onclick={shuffle}>Shuffle</button>
+					<button onclick={() => (selectedChunks = [])}>Clear</button>
+				</div>
+
+				<div class="input-box">
+					<span class:empty={selectedChunks.length > 0}>
+						{input ?? 'Start building words...'}
+					</span>
+					<button
+						onclick={() => {
+							selectedChunks.pop();
+							handleClick();
+						}}
+						disabled={selectedChunks.length === 0}
+					>
+						<img src="/emojis/backspace.png" alt="backspace" />
+					</button>
+				</div>
+			{/if}
 		</div>
 
 		{#if !finished}
-			<div class="selection-menu">
-				<button onclick={shuffle}>Shuffle</button>
-				<button onclick={() => (selectedChunks = [])}>Clear</button>
-			</div>
-
-			<div class="input-box">
-				<span class:empty={selectedChunks.length > 0}>
-					{input ?? 'Start building words...'}
-				</span>
-				<button
-					onclick={() => {
-						selectedChunks.pop();
-						handleClick();
-					}}
-					disabled={selectedChunks.length === 0}
-				>
-					<img src="/emojis/backspace.png" alt="backspace" />
-				</button>
+			<div class="chunk-grid" out:slide={{ duration: 300, easing: cubicInOut }}>
+				{#each chunkButtons as chunk (chunk.id)}
+					<button
+						class="chunk"
+						class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
+						disabled={selectedChunks.includes(chunk.value) || selectedChunks.length >= 4}
+						onclick={() => {
+							selectedChunks.push(chunk.value);
+							handleClick();
+						}}
+					>
+						{!selectedChunks.includes(chunk.value) ? chunk.value : ''}
+					</button>
+				{/each}
 			</div>
 		{/if}
 	</div>
-
-	{#if !finished}
-		<div class="chunk-grid" out:slide={{ duration: 300, easing: cubicInOut }}>
-			{#each chunkButtons as chunk (chunk.id)}
-				<button
-					class="chunk"
-					class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
-					disabled={selectedChunks.includes(chunk.value) || selectedChunks.length >= 4}
-					onclick={() => {
-						selectedChunks.push(chunk.value);
-						handleClick();
-					}}
-				>
-					{!selectedChunks.includes(chunk.value) ? chunk.value : ''}
-				</button>
-			{/each}
-		</div>
-	{/if}
 {:else}
 	<p>Loading...</p>
 {/if}

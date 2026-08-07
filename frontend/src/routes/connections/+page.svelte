@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { send, receive } from '$lib/utils/transitions';
 	import { flip } from 'svelte/animate';
-	import { scale, slide } from 'svelte/transition';
+	import { fly, scale, slide } from 'svelte/transition';
 	import WinningCard from './components/WinningCard.svelte';
 	import Confetti from '$lib/components/Confetti.svelte';
 	import { Tween } from 'svelte/motion';
@@ -19,6 +19,7 @@
 	let options: CategoryOption[] = $state([]);
 	let solvedCategories: SolvedCategory[] = $state([]);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -30,6 +31,8 @@
 				selected: false
 			})) as CategoryOption[];
 			solvedCategories = data.gameContext.solved_categories as SolvedCategory[];
+
+			pageLoading = false;
 		}
 	});
 
@@ -160,91 +163,93 @@
 	}
 </script>
 
-{#if !finished || transitioning}
-	<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
-		<h2>Connections</h2>
-		<p>Find groups of 4 with something in common!</p>
-	</div>
-{/if}
-
-{#if showOneAway && !finished}
-	<span class="one-away-msg" transition:scale>One Away!</span>
-{/if}
-
-{#if finished && !transitioning}
-	<WinningCard {attempts} />
-	<Confetti finished={attempts > 0} />
-{/if}
-
-{#if data.gameContext}
-	<div class="grid">
-		{#each solvedCategories as category, index (index)}
-			<div
-				class="answer-pane pane-{index}"
-				id={String(index)}
-				style="grid-column: span 4;"
-				in:scale
-			>
-				<h4>{category.name}</h4>
-				<span>
-					{category.options[0]},
-					{category.options[1]},
-					{category.options[2]},
-					{category.options[3]}
-				</span>
-			</div>
-		{/each}
-
-		{#each animatingOptions as option (option.id)}
-			<button class="option" in:receive={{ key: option.value }}>
-				<span>{option.value}</span>
-			</button>
-		{/each}
-
-		{#each options as option (option.id)}
-			<button
-				type="button"
-				class="option"
-				class:Selected={option.selected}
-				style:transform={option.selected ? `translateX(${shakeTween.current}px)` : undefined}
-				onclick={() => (option.selected = !option.selected)}
-				disabled={(selectedOptionCount >= 4 && !option.selected) || transitioning}
-				out:send={{ key: option.value }}
-				animate:flip={{ duration: 220, easing: (t) => t }}
-				onoutrostart={() => {
-					index = MAX;
-					transitioning = true;
-				}}
-				onoutroend={() => {
-					updateAnswerPanes();
-					transitioning = false;
-				}}
-			>
-				<span>{option.value}</span>
-			</button>
-		{/each}
-	</div>
-
-	<div>
-		<div class="attempts-bar">
-			<span>Attempts Left:</span>
-			{#each Array(attempts) as _, i (i)}
-				<img src="/emojis/LifeHeart.png" alt="Number of changes left" out:scale />
-			{/each}
-			{#if attempts === 0}
-				<span>None</span>
-			{/if}
-		</div>
-
-		{#if !finished}
-			<div class="game-buttons">
-				<button onclick={shuffle}>Shuffle</button>
-				<button onclick={deselectOptions}>Deselect All</button>
-				<button onclick={submitGuess} disabled={selectedOptionCount !== 4 || loadingGuess}>
-					Check Connection
-				</button>
+{#if !pageLoading}
+	<div in:fly={{ y: 20, duration: 400 }}>
+		{#if !finished || transitioning}
+			<div class="title-box" out:slide={{ duration: 700, easing: cubicInOut }}>
+				<h2>Connections</h2>
+				<p>Find groups of 4 with something in common!</p>
 			</div>
 		{/if}
+
+		{#if showOneAway && !finished}
+			<span class="one-away-msg" transition:scale>One Away!</span>
+		{/if}
+
+		{#if finished && !transitioning}
+			<WinningCard {attempts} />
+			<Confetti finished={attempts > 0} />
+		{/if}
+
+		<div class="grid">
+			{#each solvedCategories as category, index (index)}
+				<div
+					class="answer-pane pane-{index}"
+					id={String(index)}
+					style="grid-column: span 4;"
+					in:scale
+				>
+					<h4>{category.name}</h4>
+					<span>
+						{category.options[0]},
+						{category.options[1]},
+						{category.options[2]},
+						{category.options[3]}
+					</span>
+				</div>
+			{/each}
+
+			{#each animatingOptions as option (option.id)}
+				<button class="option" in:receive={{ key: option.value }}>
+					<span>{option.value}</span>
+				</button>
+			{/each}
+
+			{#each options as option (option.id)}
+				<button
+					type="button"
+					class="option"
+					class:Selected={option.selected}
+					style:transform={option.selected ? `translateX(${shakeTween.current}px)` : undefined}
+					onclick={() => (option.selected = !option.selected)}
+					disabled={(selectedOptionCount >= 4 && !option.selected) || transitioning}
+					out:send={{ key: option.value }}
+					animate:flip={{ duration: 220, easing: (t) => t }}
+					onoutrostart={() => {
+						index = MAX;
+						transitioning = true;
+					}}
+					onoutroend={() => {
+						updateAnswerPanes();
+						transitioning = false;
+					}}
+				>
+					<span>{option.value}</span>
+				</button>
+			{/each}
+		</div>
+
+		<div>
+			<div class="attempts-bar">
+				<span>Attempts Left:</span>
+				{#each Array(attempts) as _, i (i)}
+					<img src="/emojis/LifeHeart.png" alt="Number of changes left" out:scale />
+				{/each}
+				{#if attempts === 0}
+					<span>None</span>
+				{/if}
+			</div>
+
+			{#if !finished}
+				<div class="game-buttons">
+					<button onclick={shuffle}>Shuffle</button>
+					<button onclick={deselectOptions}>Deselect All</button>
+					<button onclick={submitGuess} disabled={selectedOptionCount !== 4 || loadingGuess}>
+						Check Connection
+					</button>
+				</div>
+			{/if}
+		</div>
 	</div>
 {:else}
 	<p>loading...</p>

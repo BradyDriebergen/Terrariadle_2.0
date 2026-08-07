@@ -42,10 +42,6 @@
 	}
 </script>
 
-{#if finished}
-	<span class="color-cycle">Guess The NPC Results</span>
-{/if}
-
 <div class="container" style="margin-top: {finished ? 15 : 20}px;">
 	{#if !finished}
 		<h2 out:slide={{ duration: 700, easing: cubicInOut }}>Guess the NPC</h2>

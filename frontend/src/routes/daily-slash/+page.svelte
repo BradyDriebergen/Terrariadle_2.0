@@ -7,7 +7,7 @@
 	import type { WeaponGuess, Weapon, WeaponPreview } from '$lib/types/daily-slash';
 	import type { DropdownListItem } from '$lib/types/shared';
 	import type { PageData } from './$types';
-	import { scale } from 'svelte/transition';
+	import { fly, scale } from 'svelte/transition';
 
 	let { data }: { data: PageData } = $props();
 
@@ -19,6 +19,7 @@
 	let correctWeapon: Weapon | null = $derived(finished ? guesses[0].weapon : null);
 	let width: number = $state(0);
 
+	let pageLoading: boolean = $state(true);
 	$effect(() => {
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
@@ -26,22 +27,22 @@
 			guessedIds = data.gameContext.guessed_ids;
 			prevWeapon = data.gameContext.previous_weapon;
 			finished = data.gameContext.finished;
+
+			pageLoading = false;
 		}
 	});
 
 	let weaponList: DropdownListItem[] = $derived(
 		(data.weaponList ?? []).filter((w) => !guessedIds.includes(w.id))
 	);
-
-	$inspect(guessedIds);
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
 <svelte:document style:overflow-y="hidden" />
 
-{#if data.gameContext}
-	<div>
+{#if !pageLoading}
+	<div in:fly={{ y: 20, duration: 400 }}>
 		<UserInput bind:guesses bind:finished {weaponList} />
 
 		{#if finished}
