@@ -2,7 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { execSync } from 'child_process';
 import { defineConfig } from 'vite';
 
-const appVersion = execSync('git describe --tags --always --dirty').toString().trim();
+const appVersion = execSync('git describe --tags --abbrev=0').toString().trim();
 
 export default defineConfig({
 	plugins: [sveltekit()],
