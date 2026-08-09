@@ -18,7 +18,7 @@ type userData struct {
 }
 
 type game struct {
-	Guesses  []int `bson:"guesses,omitempty"`
+	Guesses  []int `bson:"guesses"`
 	HasWon   bool  `bson:"hasWon,omitempty"`
 	Position int   `bson:"position,omitempty"`
 }
