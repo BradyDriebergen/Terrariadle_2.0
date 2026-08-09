@@ -155,6 +155,12 @@ terrariadle.com {
     }
     header @images Cache-Control "public, max-age=604800"
 
+    @html {
+        not path /_app/immutable/*
+        not path *.png *.jpg *.jpeg *.webp *.avif *.svg *.gif *.ico
+    }
+    header @html Cache-Control "no-cache, must-revalidate"
+
     reverse_proxy localhost:8080 {
         header_up X-Real-IP {http.request.header.CF-Connecting-IP}
     }
