@@ -131,15 +131,29 @@ journalctl -u caddy -f
 And here is the Caddy file (`/etc/caddy/Caddyfile`):
 
 ```caddyfile
-terrariadle.com {
-        redir https://www.terrariadle.com{uri} permanent
+www.terrariadle.com {
+    redir https://terrariadle.com{uri} permanent
 }
 
-www.terrariadle.com {
+terrariadle.net, www.terrariadle.net {
+    redir https://terrariadle.com{uri} permanent
+}
+
+terrariadle.com {
     reverse_proxy /api/* localhost:8080 {
         header_up X-Real-IP {http.request.header.CF-Connecting-IP}
         flush_interval -1
     }
+
+    @immutable {
+        path /_app/immutable/*
+    }
+    header @immutable Cache-Control "public, max-age=31536000, immutable"
+
+    @images {
+        path *.png *.jpg *.jpeg *.webp *.avif *.svg *.gif *.ico
+    }
+    header @images Cache-Control "public, max-age=604800"
 
     reverse_proxy localhost:8080 {
         header_up X-Real-IP {http.request.header.CF-Connecting-IP}
