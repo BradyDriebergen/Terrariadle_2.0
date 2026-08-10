@@ -3,6 +3,7 @@ package jobs
 import (
 	"math/rand"
 	"slices"
+	"strings"
 	"terrariadle-backend/internal/domain"
 )
 
@@ -117,6 +118,8 @@ func (j *PuzzleRefreshJob) refreshEnemy() domain.HangmanAnswer {
 	for newEnemy.ID == oldEnemy.ID {
 		newEnemy = randomItem(enemies, j.rng)
 	}
+
+	newEnemy.Name = strings.ToUpper(newEnemy.Name)
 
 	return domain.HangmanAnswer{
 		Enemy: newEnemy,
