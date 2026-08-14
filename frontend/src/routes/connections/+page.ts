@@ -5,7 +5,15 @@ import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId) return { gameContext: {} };
+	if (!userId)
+		return {
+			gameContext: {
+				attempts: 4,
+				finished: false,
+				options: [],
+				solved_categories: []
+			}
+		};
 
 	if (!userId) {
 		error(401, 'No session found. Try refreshing the page.');

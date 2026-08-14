@@ -5,7 +5,15 @@ import { initializeHangmanGame } from '$lib/api/hangman';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId) return { gameContext: {} };
+	if (!userId)
+		return {
+			gameContext: {
+				attempts: 6,
+				finished: false,
+				phrase: [],
+				guesses: []
+			}
+		};
 
 	if (!userId) {
 		error(401, 'No session found. Try refreshing the page.');
