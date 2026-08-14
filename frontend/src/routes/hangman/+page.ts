@@ -2,15 +2,17 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { ApiError } from '$lib/types/error';
 import { initializeHangmanGame } from '$lib/api/hangman';
+import { building } from '$app/environment';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId)
+
+	if (building)
 		return {
 			gameContext: {
 				attempts: 6,
 				finished: false,
-				phrase: [],
+				phrase: ['_', '_', '_', ' ', '_', '_', '_', '_', '_'],
 				guesses: []
 			}
 		};
