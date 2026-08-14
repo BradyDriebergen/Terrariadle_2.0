@@ -3,19 +3,25 @@ import type { DropdownListItem } from '$lib/types/shared';
 import { error } from '@sveltejs/kit';
 import { getSearchableNpcs, initializeNpcGame } from '$lib/api/guess-the-npc.js';
 import type { PageLoad } from './$types';
+import { building } from '$app/environment';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId)
+
+	if (building)
 		return {
 			gameContext: {
-				quote: 'This is where the quote is',
+				quote: "<name of Dryad> is a looker.  Too bad she's such a prude.",
 				finished: false,
 				guesses: [],
 				guessed_ids: []
 			},
 			npcList: []
 		};
+
+	if (!userId) {
+		error(401, 'No session found. Try refreshing the page.');
+	}
 
 	try {
 		const gameContext = await initializeNpcGame(fetch, userId);

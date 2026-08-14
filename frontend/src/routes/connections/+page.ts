@@ -2,18 +2,38 @@ import type { PageLoad } from './$types';
 import { initializeConnectionsGame } from '$lib/api/connections';
 import { ApiError } from '$lib/types/error';
 import { error } from '@sveltejs/kit';
+import { building } from '$app/environment';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId)
+
+	if (building) {
 		return {
 			gameContext: {
 				attempts: 4,
 				finished: false,
-				options: [],
+				options: [
+					'Blood Zombie',
+					'Leaf Blower',
+					'Drippler',
+					'Menogoblin Shark',
+					'Nettle Burst',
+					'Dungeon Spirit',
+					'Spinal Tap',
+					'Morning Star',
+					'Moth',
+					'Seedling',
+					'Antlion Swarmer',
+					'Thorn Hook',
+					'Durendal',
+					'Clown',
+					'Kaleidoscope',
+					'Demon Eye'
+				],
 				solved_categories: []
 			}
 		};
+	}
 
 	if (!userId) {
 		error(401, 'No session found. Try refreshing the page.');
