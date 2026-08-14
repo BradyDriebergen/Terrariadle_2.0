@@ -6,7 +6,7 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId) return { gameContext: null, npcList: [] };
+	if (!userId) return { gameContext: {}, npcList: [] };
 
 	try {
 		const gameContext = await initializeNpcGame(fetch, userId);
