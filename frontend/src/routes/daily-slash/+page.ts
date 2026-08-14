@@ -6,7 +6,7 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId) return { gameContext: null, weaponList: [] };
+	if (!userId) return { gameContext: {}, weaponList: [] };
 
 	try {
 		const gameContext = await initializeDailySlashGame(fetch, userId);
