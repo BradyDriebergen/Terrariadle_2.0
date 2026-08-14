@@ -10,7 +10,16 @@ export const prerender = true;
 
 export const load: LayoutLoad = async ({ fetch }) => {
 	if (!browser) {
-		return { gameResults: null, userId: null };
+		return {
+			gameResults: {
+				daily_slash: false,
+				connections: false,
+				guess_the_npc: false,
+				hangman: false,
+				terratrivia: false
+			},
+			userId: 123
+		};
 	}
 
 	const userId = getOrCreateUserId();
