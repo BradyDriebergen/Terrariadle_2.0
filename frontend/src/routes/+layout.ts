@@ -18,7 +18,7 @@ export const load: LayoutLoad = async ({ fetch }) => {
 				hangman: false,
 				terratrivia: false
 			},
-			userId: 123
+			userId: '123'
 		};
 	}
 

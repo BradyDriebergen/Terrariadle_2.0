@@ -5,7 +5,14 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
-	if (!userId) return { gameContext: {} };
+	if (!userId)
+		return {
+			gameContext: {
+				finished: false,
+				trivia_items: [],
+				chunks: []
+			}
+		};
 
 	if (!userId) {
 		error(401, 'No session found. Try refreshing the page.');
