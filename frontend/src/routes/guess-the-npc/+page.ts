@@ -8,7 +8,7 @@ import { building } from '$app/environment';
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 
-	if (building)
+	if (building || !userId)
 		return {
 			gameContext: {
 				quote: "<name of Dryad> is a looker.  Too bad she's such a prude.",
@@ -18,10 +18,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 			},
 			npcList: []
 		};
-
-	if (!userId) {
-		error(401, 'No session found. Try refreshing the page.');
-	}
 
 	try {
 		const gameContext = await initializeNpcGame(fetch, userId);

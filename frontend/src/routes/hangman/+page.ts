@@ -7,7 +7,7 @@ import { building } from '$app/environment';
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 
-	if (building)
+	if (building || !userId)
 		return {
 			gameContext: {
 				attempts: 6,
@@ -16,10 +16,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 				guesses: []
 			}
 		};
-
-	if (!userId) {
-		error(401, 'No session found. Try refreshing the page.');
-	}
 
 	try {
 		const gameContext = await initializeHangmanGame(fetch, userId);

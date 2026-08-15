@@ -1,4 +1,4 @@
-import { browser, building } from '$app/environment';
+import { browser } from '$app/environment';
 import { getUserGameResults } from '$lib/api/common';
 import { getOrCreateUserId } from '$lib/utils/user-id';
 import type { LayoutLoad } from './$types';
@@ -18,7 +18,7 @@ export const load: LayoutLoad = async ({ fetch }) => {
 				hangman: false,
 				terratrivia: false
 			},
-			userId: building ? 'seo-crawler' : null
+			userId: null
 		};
 	}
 

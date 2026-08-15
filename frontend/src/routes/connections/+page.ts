@@ -7,7 +7,7 @@ import { building } from '$app/environment';
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 
-	if (building) {
+	if (building || !userId) {
 		return {
 			gameContext: {
 				attempts: 4,
@@ -33,10 +33,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 				solved_categories: []
 			}
 		};
-	}
-
-	if (!userId) {
-		error(401, 'No session found. Try refreshing the page.');
 	}
 
 	try {

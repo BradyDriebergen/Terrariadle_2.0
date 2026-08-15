@@ -7,7 +7,7 @@ import { building } from '$app/environment';
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 
-	if (building)
+	if (building || !userId)
 		return {
 			gameContext: {
 				finished: false,
@@ -44,10 +44,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 				]
 			}
 		};
-
-	if (!userId) {
-		error(401, 'No session found. Try refreshing the page.');
-	}
 
 	try {
 		const gameContext = await initializeTerraTriviaGame(fetch, userId);
