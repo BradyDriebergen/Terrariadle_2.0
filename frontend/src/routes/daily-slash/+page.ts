@@ -8,7 +8,7 @@ import { building } from '$app/environment';
 export const load: PageLoad = async ({ fetch, parent }) => {
 	const { userId } = await parent();
 
-	if (building)
+	if (building || !userId)
 		return {
 			gameContext: {
 				previous_weapon: {
@@ -22,10 +22,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
 			},
 			weaponList: []
 		};
-
-	if (!userId) {
-		error(401, 'No session found. Try refreshing the page.');
-	}
 
 	try {
 		const gameContext = await initializeDailySlashGame(fetch, userId);
