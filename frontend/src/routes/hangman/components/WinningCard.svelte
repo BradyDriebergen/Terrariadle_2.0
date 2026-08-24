@@ -63,7 +63,7 @@
 	{:else}
 		<br />
 	{/if}
-	<p>{playerCount} people guessed todays enemy</p>
+	<p>{playerCount} people guessed today's enemy</p>
 	<RemainingTime />
 </div>
 
