@@ -59,7 +59,7 @@
 	<h3 class="weapon-name" style="color: {colors[weaponAnswer.rarity as Rarity]}">
 		{weaponAnswer.name}
 	</h3>
-	<p>{playerCount} people guessed todays weapon</p>
+	<p>{playerCount} people guessed today's weapon</p>
 
 	<RemainingTime />
 </div>

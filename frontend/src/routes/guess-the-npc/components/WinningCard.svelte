@@ -77,7 +77,7 @@
 	{:else}
 		<br />
 	{/if}
-	<p>{playerCount} people guessed todays weapon</p>
+	<p>{playerCount} people guessed todays NPC</p>
 
 	<div class="bonus-container">
 		<h2 class="bonus-title">Bonus Round!</h2>
