@@ -41,7 +41,7 @@ func (j *PuzzleRefreshJob) refreshCategories() domain.ConnectionAnswer {
 			optionIndex := 0
 
 			shuffle(cat.Options, j.rng)
-			
+
 			// Check if there are duplicate options in other categories
 			for len(options) < 4 && optionIndex < len(cat.Options) {
 				currentOption := cat.Options[optionIndex]

@@ -22,5 +22,5 @@ func TimeUntilNextMidnightFromNow() time.Duration {
 
 // Used for testing, get's the duration `second` seconds from now
 func NextIn(seconds int) time.Duration {
-    return time.Duration(seconds) * time.Second
+	return time.Duration(seconds) * time.Second
 }

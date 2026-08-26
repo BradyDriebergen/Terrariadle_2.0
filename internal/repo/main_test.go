@@ -55,7 +55,7 @@ func TestMain(m *testing.M) {
 // Helper method that creates a new connection name for each test
 func freshCollection(t *testing.T) string {
 	t.Helper()
-	name := "puzzles_" + t.Name()
+	name := "repo_" + t.Name()
 	t.Cleanup(func() {
 		_ = db.DeleteAll(context.Background(), testMongo, name)
 	})
