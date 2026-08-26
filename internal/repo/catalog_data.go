@@ -15,17 +15,34 @@ type CatalogRepo interface {
 }
 
 type MongoCatalogRepo struct {
-	database *db.MongoDB
+	database           *db.MongoDB
+	weaponCollection   string
+	categoryCollection string
+	npcCollection      string
+	enemyCollection    string
+	triviaCollection   string
 }
 
-func NewCatalogRepo(db *db.MongoDB) *MongoCatalogRepo {
+func NewCatalogRepo(
+	db *db.MongoDB,
+	wCollection,
+	cCollection,
+	nCollection,
+	eCollection,
+	tCollection string,
+) *MongoCatalogRepo {
 	return &MongoCatalogRepo{
-		database: db,
+		database:           db,
+		weaponCollection:   wCollection,
+		categoryCollection: cCollection,
+		npcCollection:      nCollection,
+		enemyCollection:    eCollection,
+		triviaCollection:   tCollection,
 	}
 }
 
 func (r *MongoCatalogRepo) GetWeapons(ctx context.Context) ([]domain.Weapon, error) {
-	weaponCatalog, err := db.GetAll[weapon](ctx, r.database, "daily_slash_weapons")
+	weaponCatalog, err := db.GetAll[weapon](ctx, r.database, r.weaponCollection)
 	if err != nil {
 		return []domain.Weapon{}, err
 	}
@@ -34,7 +51,7 @@ func (r *MongoCatalogRepo) GetWeapons(ctx context.Context) ([]domain.Weapon, err
 }
 
 func (r *MongoCatalogRepo) GetCategories(ctx context.Context) ([]domain.Category, error) {
-	categoryCatalog, err := db.GetAll[category](ctx, r.database, "connections_categories")
+	categoryCatalog, err := db.GetAll[category](ctx, r.database, r.categoryCollection)
 	if err != nil {
 		return []domain.Category{}, err
 	}
@@ -43,7 +60,7 @@ func (r *MongoCatalogRepo) GetCategories(ctx context.Context) ([]domain.Category
 }
 
 func (r *MongoCatalogRepo) GetNpcs(ctx context.Context) ([]domain.Npc, error) {
-	npcCatalog, err := db.GetAll[npc](ctx, r.database, "guess_the_npc_npcs")
+	npcCatalog, err := db.GetAll[npc](ctx, r.database, r.npcCollection)
 	if err != nil {
 		return []domain.Npc{}, err
 	}
@@ -52,7 +69,7 @@ func (r *MongoCatalogRepo) GetNpcs(ctx context.Context) ([]domain.Npc, error) {
 }
 
 func (r *MongoCatalogRepo) GetEnemies(ctx context.Context) ([]domain.Enemy, error) {
-	enemyCatalog, err := db.GetAll[enemy](ctx, r.database, "hangman_enemies")
+	enemyCatalog, err := db.GetAll[enemy](ctx, r.database, r.enemyCollection)
 	if err != nil {
 		return []domain.Enemy{}, err
 	}
@@ -61,7 +78,7 @@ func (r *MongoCatalogRepo) GetEnemies(ctx context.Context) ([]domain.Enemy, erro
 }
 
 func (r *MongoCatalogRepo) GetTriviaQuestions(ctx context.Context) ([]domain.TriviaQuestion, error) {
-	triviaCatalog, err := db.GetAll[triviaQuestion](ctx, r.database, "terratrivia_questions")
+	triviaCatalog, err := db.GetAll[triviaQuestion](ctx, r.database, r.triviaCollection)
 	if err != nil {
 		return []domain.TriviaQuestion{}, err
 	}

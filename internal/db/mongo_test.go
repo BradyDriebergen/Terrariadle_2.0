@@ -7,6 +7,8 @@ import (
 	"terrariadle-backend/internal/db"
 	"testing"
 
+	"github.com/testcontainers/testcontainers-go"
+	"github.com/testcontainers/testcontainers-go/log"
 	"github.com/testcontainers/testcontainers-go/modules/mongodb"
 )
 
@@ -21,7 +23,9 @@ type Puzzle struct {
 func TestMain(m *testing.M) {
 	ctx := context.Background()
 
-	container, err := mongodb.Run(ctx, "mongo:7")
+	container, err := mongodb.Run(ctx, "mongo:7",
+		testcontainers.WithLogger(log.NewNoopLogger()),
+	)
 	if err != nil {
 		fmt.Printf("failed to start mongodb container: %v\n", err)
 		os.Exit(1)

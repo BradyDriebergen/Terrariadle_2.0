@@ -14,17 +14,19 @@ type UserRepo interface {
 }
 
 type MongoUserRepo struct {
-	database *db.MongoDB
+	database       *db.MongoDB
+	userCollection string
 }
 
-func NewUserRepo(db *db.MongoDB) *MongoUserRepo {
+func NewUserRepo(db *db.MongoDB, uCollection string) *MongoUserRepo {
 	return &MongoUserRepo{
-		database: db,
+		database:       db,
+		userCollection: uCollection,
 	}
 }
 
 func (r *MongoUserRepo) GetUser(ctx context.Context, userId string) (domain.User, error) {
-	user, err := db.FindOne[userData](ctx, r.database, "user_data", db.Filter{"userId": userId})
+	user, err := db.FindOne[userData](ctx, r.database, r.userCollection, db.Filter{"userId": userId})
 	if err != nil {
 		if errors.Is(err, db.ErrNotFound) {
 			return domain.User{}, ErrNotFound
@@ -35,11 +37,11 @@ func (r *MongoUserRepo) GetUser(ctx context.Context, userId string) (domain.User
 }
 
 func (r *MongoUserRepo) UpsertUserData(ctx context.Context, user domain.User) error {
-	err := db.Upsert(ctx, r.database, "user_data", db.Filter{"userId": user.UserID}, fromDomain(user))
+	err := db.Upsert(ctx, r.database, r.userCollection, db.Filter{"userId": user.UserID}, fromDomain(user))
 	return err
 }
 
 func (r *MongoUserRepo) DropAllUserData(ctx context.Context) error {
-	err := db.DeleteAll(ctx, r.database, "user_data")
+	err := db.DeleteAll(ctx, r.database, r.userCollection)
 	return err
 }

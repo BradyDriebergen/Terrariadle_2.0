@@ -111,9 +111,23 @@ func mustLoadURI() string {
 }
 
 func mustCreateStores(ctx context.Context, mongoDB *db.MongoDB, broker *domain.Broker) stores {
-	userRepo := repo.NewUserRepo(mongoDB)
-	catalogRepo := repo.NewCatalogRepo(mongoDB)
-	answerRepo := repo.NewAnswerRepo(mongoDB)
+	userRepo := repo.NewUserRepo(
+		mongoDB,
+		"user_data",
+	)
+	catalogRepo := repo.NewCatalogRepo(
+		mongoDB,
+		"daily_slash_weapons",
+		"connections_categories",
+		"guess_the_npc_npcs",
+		"hangman_enemies",
+		"terratrivia_questions",
+	)
+	answerRepo := repo.NewAnswerRepo(
+		mongoDB,
+		"daily_solutions",
+		"player_guess_counts",
+	)
 
 	catalog, err := store.NewCatalogStore(ctx, catalogRepo)
 	if err != nil {
