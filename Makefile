@@ -15,3 +15,7 @@ build-prod:
 		-trimpath \
 		-ldflags "-s -w -X main.version=$$(git describe --tags --abbrev=0)" \
 		-o bin/terrariadle .
+
+format:
+	go fmt ./...
+	cd frontend && npm run format && npm run lint
