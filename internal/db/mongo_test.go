@@ -21,14 +21,16 @@ type Puzzle struct {
 
 // Initial setup of test container for integration tests
 func TestMain(m *testing.M) {
+	os.Exit(runTests(m))
+}
+
+func runTests(m *testing.M) int {
 	ctx := context.Background()
 
-	container, err := mongodb.Run(ctx, "mongo:7",
-		testcontainers.WithLogger(log.NewNoopLogger()),
-	)
+	container, err := mongodb.Run(ctx, "mongo:7", testcontainers.WithLogger(log.NewNoopLogger()))
 	if err != nil {
 		fmt.Printf("failed to start mongodb container: %v\n", err)
-		os.Exit(1)
+		return 1
 	}
 	defer func() {
 		if err := container.Terminate(ctx); err != nil {
@@ -39,17 +41,17 @@ func TestMain(m *testing.M) {
 	connStr, err := container.ConnectionString(ctx)
 	if err != nil {
 		fmt.Printf("failed to get connection string: %v\n", err)
-		os.Exit(1)
+		return 1
 	}
 
 	testMongo, err = db.Connect(connStr, "terrariadle_test")
 	if err != nil {
 		fmt.Printf("failed to connect: %v\n", err)
-		os.Exit(1)
+		return 1
 	}
 	defer db.Close(ctx, testMongo)
 
-	os.Exit(m.Run())
+	return m.Run()
 }
 
 // Helper method that creates a new connection name for each test
