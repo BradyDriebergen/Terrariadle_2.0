@@ -82,6 +82,22 @@ func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter Filte
 	return nil
 }
 
+func InsertMany[T any](ctx context.Context, m *MongoDB, collectionName string, docs []T) error {
+	collection := m.client.Database(m.dbName).Collection(collectionName)
+
+	items := make([]any, len(docs))
+	for i, d := range docs {
+		items[i] = d
+	}
+
+	_, err := collection.InsertMany(ctx, items)
+	if err != nil {
+		return fmt.Errorf("failed to insert into %s: %w", collectionName, err)
+	}
+
+	return nil
+}
+
 func DeleteAll(ctx context.Context, m *MongoDB, collectionName string) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 	if _, err := collection.DeleteMany(ctx, bson.D{}); err != nil {

@@ -7,6 +7,7 @@ import (
 	"terrariadle/internal/db"
 	"testing"
 
+	"github.com/google/go-cmp/cmp"
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/log"
 	"github.com/testcontainers/testcontainers-go/modules/mongodb"
@@ -64,81 +65,103 @@ func freshCollection(t *testing.T) string {
 	return name
 }
 
-// Checks if Upserting a new item adds it to the database
-func TestUpsertAndFindOne(t *testing.T) {
+// Checks if FindOne returns one item from a collection where the
+// filter modifier is true.
+func TestFindOne(t *testing.T) {
 	ctx := context.Background()
-	collection := freshCollection(t)
 
-	puzzle := Puzzle{ID: "1", Mode: "Connections"}
-
-	err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": puzzle.ID}, puzzle)
-	if err != nil {
-		t.Fatalf("upsert failed: %v", err)
+	tests := []struct {
+		name    string
+		seed    *Puzzle
+		id      string
+		wantErr error
+	}{
+		{name: "existing puzzle", seed: &Puzzle{ID: "1", Mode: "Connections"}, id: "1"},
+		{name: "nonexistent puzzle", seed: nil, id: "does-not-exist", wantErr: db.ErrNotFound},
 	}
 
-	got, err := db.FindOne[Puzzle](ctx, testMongo, collection, db.Filter{"_id": puzzle.ID})
-	if err != nil {
-		t.Fatalf("findone failed: %v", err)
-	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			collection := freshCollection(t)
 
-	if got.Mode != puzzle.Mode {
-		t.Errorf("got mode %q, want %q", got.Mode, puzzle.Mode)
+			if tt.seed != nil {
+				if err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": tt.seed.ID}, *tt.seed); err != nil {
+					t.Fatalf("upsert failed: %v", err)
+				}
+			}
+
+			got, err := db.FindOne[Puzzle](ctx, testMongo, collection, db.Filter{"_id": tt.id})
+			if tt.wantErr != nil {
+				if err != tt.wantErr {
+					t.Fatalf("got err %v, want %v", err, tt.wantErr)
+				}
+				return
+			}
+			if err != nil {
+				t.Fatalf("findone failed: %v", err)
+			}
+
+			if got.Mode != tt.seed.Mode {
+				t.Errorf("got mode %q, want %q", got.Mode, tt.seed.Mode)
+			}
+		})
 	}
 }
 
-// Checks if not finding an item returns custom error message
-func TestFindOne_NotFound(t *testing.T) {
-	ctx := context.Background()
-	collection := freshCollection(t)
-
-	_, err := db.FindOne[Puzzle](ctx, testMongo, collection, db.Filter{"_id": "does-not-exist"})
-	if err != db.ErrNotFound {
-		t.Fatalf("expected ErrNotFound, got %v", err)
-	}
-}
-
-// Checks if Upsert updates an item
-func TestUpsert_UpdatesExisting(t *testing.T) {
+// Checks if Upsert adds an item if it doesn't exist, and updates existing
+// items based on the filter.
+func TestUpsert(t *testing.T) {
 	ctx := context.Background()
 	collection := freshCollection(t)
 
 	id := "1"
-
-	// Initially adds the puzzle
-	if err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": id}, Puzzle{ID: id, Mode: "hangman"}); err != nil {
-		t.Fatalf("initial upsert failed: %v", err)
+	puzzles := []Puzzle{
+		{ID: id, Mode: "hangman"},
+		{ID: id, Mode: "trivia"},
+		{ID: id, Mode: "dailyslash"},
 	}
 
-	// Updates the puzzle
-	if err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": id}, Puzzle{ID: id, Mode: "trivia"}); err != nil {
-		t.Fatalf("update upsert failed: %v", err)
+	for i := range puzzles {
+		err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": puzzles[i].ID}, puzzles[i])
+		if err != nil {
+			t.Fatalf("update upsert failed: %v", err)
+		}
+
+		got, err := db.FindOne[Puzzle](ctx, testMongo, collection, db.Filter{"_id": puzzles[i].ID})
+		if err != nil {
+			t.Fatalf("findone failed: %v", err)
+		}
+
+		if got.Mode != puzzles[i].Mode {
+			t.Errorf("got mode %q, want %q", got.Mode, puzzles[i].Mode)
+		}
 	}
 
-	got, err := db.FindOne[Puzzle](ctx, testMongo, collection, db.Filter{"_id": id})
+	got, err := db.GetAll[Puzzle](ctx, testMongo, collection)
 	if err != nil {
-		t.Fatalf("findone failed: %v", err)
+		t.Fatalf("getall failed: %v", err)
 	}
 
-	if got.Mode != "trivia" {
-		t.Errorf("got mode %q, want %q", got.Mode, "trivia")
+	if len(got) != 1 {
+		t.Errorf("expected 1 puzzle after updating, got %d", len(got))
 	}
 }
 
-// Checks if getting all items returns all items
-func TestGetAll(t *testing.T) {
+// Checks if InsertMany adds multiple documents to a colletion, and
+// GetAll returns everything from one collection.
+func TestGetAllAndInsertMany(t *testing.T) {
 	ctx := context.Background()
 	collection := freshCollection(t)
 
 	puzzles := []Puzzle{
-		{ID: "1", Mode: "daily-slash"},
+		{ID: "1", Mode: "dailyslash"},
 		{ID: "2", Mode: "connections"},
 		{ID: "3", Mode: "hangman"},
 	}
 
-	for _, p := range puzzles {
-		if err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": p.ID}, p); err != nil {
-			t.Fatalf("upsert failed: %v", err)
-		}
+	err := db.InsertMany(ctx, testMongo, collection, puzzles)
+	if err != nil {
+		t.Fatalf("insertmany failed: %v", err)
 	}
 
 	got, err := db.GetAll[Puzzle](ctx, testMongo, collection)
@@ -149,6 +172,10 @@ func TestGetAll(t *testing.T) {
 	if len(got) != len(puzzles) {
 		t.Errorf("got %d puzzles, want %d", len(got), len(puzzles))
 	}
+
+	if diff := cmp.Diff(puzzles, got); diff != "" {
+		t.Errorf("Puzzle mismatch (-want +got):\n%s", diff)
+	}
 }
 
 // Checks if DeleteAll deletes all items from a collection.
@@ -158,11 +185,13 @@ func TestDeleteAll(t *testing.T) {
 
 	puzzle := Puzzle{ID: "1", Mode: "connections"}
 
-	if err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": puzzle.ID}, puzzle); err != nil {
+	err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": puzzle.ID}, puzzle)
+	if err != nil {
 		t.Fatalf("upsert failed: %v", err)
 	}
 
-	if err := db.DeleteAll(ctx, testMongo, collection); err != nil {
+	err = db.DeleteAll(ctx, testMongo, collection)
+	if err != nil {
 		t.Fatalf("deleteall failed: %v", err)
 	}
 
