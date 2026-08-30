@@ -1,6 +1,6 @@
 package services
 
-import "terrariadle-backend/internal/domain"
+import "terrariadle/internal/domain"
 
 var rarities = map[string]int{
 	"White":        0,

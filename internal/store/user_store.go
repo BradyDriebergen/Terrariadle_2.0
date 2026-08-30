@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 	"sync"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/repo"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/repo"
 	"time"
 )
 

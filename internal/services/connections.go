@@ -3,8 +3,8 @@ package services
 import (
 	"context"
 	"slices"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/store"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/store"
 )
 
 type ConnectionsService interface {

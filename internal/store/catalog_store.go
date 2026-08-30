@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"maps"
 	"slices"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/repo"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/repo"
 )
 
 type CatalogStore interface {

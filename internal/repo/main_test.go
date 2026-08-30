@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/repo"
+	"terrariadle/internal/db"
+	"terrariadle/internal/repo"
 	"testing"
 	"time"
 

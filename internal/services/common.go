@@ -2,8 +2,8 @@ package services
 
 import (
 	"context"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/store"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/store"
 )
 
 type CommonService interface {

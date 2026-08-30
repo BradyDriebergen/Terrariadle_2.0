@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"terrariadle-backend/internal/db"
+	"terrariadle/internal/db"
 	"testing"
 
 	"github.com/testcontainers/testcontainers-go"

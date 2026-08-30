@@ -2,7 +2,7 @@ package repo
 
 import (
 	"errors"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

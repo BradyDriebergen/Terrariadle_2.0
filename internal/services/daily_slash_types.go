@@ -1,6 +1,6 @@
 package services
 
-import "terrariadle-backend/internal/domain"
+import "terrariadle/internal/domain"
 
 type DailySlashInitData struct {
 	PreviousWeapon WeaponPreview `json:"previous_weapon"`

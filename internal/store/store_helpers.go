@@ -3,8 +3,8 @@ package store
 import (
 	"fmt"
 	"strings"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/repo"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/repo"
 )
 
 func toAnswerDomain(ad repo.AnswerData, cs CatalogStore) (domain.DailyAnswers, error) {

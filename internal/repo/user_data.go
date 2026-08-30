@@ -3,8 +3,8 @@ package repo
 import (
 	"context"
 	"errors"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/db"
+	"terrariadle/internal/domain"
 )
 
 type UserRepo interface {

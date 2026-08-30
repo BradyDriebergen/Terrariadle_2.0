@@ -3,7 +3,7 @@ package services
 import (
 	"slices"
 	"strings"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 	"unicode"
 )
 

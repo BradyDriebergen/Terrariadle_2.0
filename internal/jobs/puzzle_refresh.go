@@ -3,8 +3,8 @@ package jobs
 import (
 	"context"
 	"math/rand"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/store"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/store"
 	"time"
 )
 

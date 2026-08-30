@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"slices"
 	"strings"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 )
 
 func (j *PuzzleRefreshJob) refreshWeapons() domain.WeaponAnswer {

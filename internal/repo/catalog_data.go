@@ -2,8 +2,8 @@ package repo
 
 import (
 	"context"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/db"
+	"terrariadle/internal/domain"
 )
 
 type CatalogRepo interface {

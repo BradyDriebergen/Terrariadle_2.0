@@ -5,8 +5,8 @@ import (
 	"io/fs"
 	"net"
 	"net/http"
-	"terrariadle-backend/internal/domain"
-	"terrariadle-backend/internal/services"
+	"terrariadle/internal/domain"
+	"terrariadle/internal/services"
 )
 
 type Server struct {

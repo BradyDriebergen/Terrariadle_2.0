@@ -1,6 +1,6 @@
 package repo
 
-import "terrariadle-backend/internal/domain"
+import "terrariadle/internal/domain"
 
 func toDomainWeapons(src []weapon) []domain.Weapon {
 	result := make([]domain.Weapon, len(src))

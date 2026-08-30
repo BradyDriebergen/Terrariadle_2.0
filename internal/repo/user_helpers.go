@@ -1,7 +1,7 @@
 package repo
 
 import (
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 	"time"
 )
 

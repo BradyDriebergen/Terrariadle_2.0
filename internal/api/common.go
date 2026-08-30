@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 	"time"
 )
 

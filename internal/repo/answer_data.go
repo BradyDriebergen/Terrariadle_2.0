@@ -2,7 +2,7 @@ package repo
 
 import (
 	"context"
-	"terrariadle-backend/internal/db"
+	"terrariadle/internal/db"
 )
 
 type AnswerRepo interface {

@@ -3,8 +3,8 @@ package repo_test
 import (
 	"context"
 	"reflect"
-	"terrariadle-backend/internal/db"
-	"terrariadle-backend/internal/repo"
+	"terrariadle/internal/db"
+	"terrariadle/internal/repo"
 	"testing"
 )
 

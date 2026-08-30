@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 )
 
 func getUserID(r *http.Request) (string, bool) {

@@ -3,7 +3,7 @@ package jobs
 import (
 	"context"
 	"log"
-	"terrariadle-backend/internal/store"
+	"terrariadle/internal/store"
 	"time"
 )
 

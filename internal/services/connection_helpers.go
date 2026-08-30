@@ -2,7 +2,7 @@ package services
 
 import (
 	"math/rand/v2"
-	"terrariadle-backend/internal/domain"
+	"terrariadle/internal/domain"
 )
 
 func shuffleOptions(options []string) {
