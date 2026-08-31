@@ -2,6 +2,46 @@ package domain
 
 import "time"
 
+type AnswerRefs struct {
+	DailySlash    WeaponRef
+	Connections   ConnectionRef
+	GuessTheNpc   NpcRef
+	Hangman       HangmanRef
+	TerraTrivia   TerraTriviaRef
+	ResetTime     time.Time
+	NextResetTime time.Time
+}
+
+type WeaponRef struct {
+	CurrentWeaponID int
+	PrevWeaponID    int
+}
+
+type ConnectionRef struct {
+	CategoryIDs []int
+	Options     []ConnectionOption
+}
+
+type ConnectionOptionRef struct {
+	Option     string
+	CategoryID int
+}
+
+type NpcRef struct {
+	NpcID       int
+	Quote       string
+	Name        string
+	NameOptions []string
+}
+
+type HangmanRef struct {
+	EnemyID int
+}
+
+type TerraTriviaRef struct {
+	QuestionIDs []int
+}
+
 type DailyAnswers struct {
 	DailySlash    WeaponAnswer
 	Connections   ConnectionAnswer

@@ -4,16 +4,38 @@ import (
 	"terrariadle/internal/domain"
 )
 
-func toAnswerData(da domain.DailyAnswers) answerData {
-	triviaQuestionIDs := make([]int, 7)
-	for i, q := range da.TerraTrivia.Questions {
-		triviaQuestionIDs[i] = q.ID
+func toAnswerRef(ad answerData) domain.AnswerRefs {
+	return domain.AnswerRefs{
+		DailySlash: domain.WeaponRef{
+			CurrentWeaponID: ad.DailySlash.CurrentWeaponID,
+			PrevWeaponID:    ad.DailySlash.PrevWeaponID,
+		},
+		Connections: domain.ConnectionRef{
+			CategoryIDs: ad.Connections.CategoryIDs,
+			Options:     toCategoryOption(ad.Connections.Options),
+		},
+		GuessTheNpc: domain.NpcRef{
+			NpcID:       ad.GuessTheNpc.NpcID,
+			Quote:       ad.GuessTheNpc.Quote,
+			Name:        ad.GuessTheNpc.Name,
+			NameOptions: ad.GuessTheNpc.NameOptions,
+		},
+		Hangman: domain.HangmanRef{
+			EnemyID: ad.Hangman.EnemyID,
+		},
+		TerraTrivia: domain.TerraTriviaRef{
+			QuestionIDs: ad.TerraTrivia.QuestionIDs,
+		},
+		ResetTime:     ad.ResetTime,
+		NextResetTime: ad.NextResetTime,
 	}
+}
 
+func toAnswerData(da domain.AnswerRefs) answerData {
 	return answerData{
 		DailySlash: weaponData{
-			CurrentWeaponID: da.DailySlash.CurrentWeapon.ID,
-			PrevWeaponID:    da.DailySlash.PrevWeapon.ID,
+			CurrentWeaponID: da.DailySlash.CurrentWeaponID,
+			PrevWeaponID:    da.DailySlash.PrevWeaponID,
 		},
 		Connections: connectionData{
 			CategoryIDs: da.Connections.CategoryIDs,
@@ -26,10 +48,10 @@ func toAnswerData(da domain.DailyAnswers) answerData {
 			NameOptions: da.GuessTheNpc.NameOptions,
 		},
 		Hangman: hangmanData{
-			EnemyID: da.Hangman.Enemy.ID,
+			EnemyID: da.Hangman.EnemyID,
 		},
 		TerraTrivia: terraTriviaData{
-			QuestionIDs: triviaQuestionIDs,
+			QuestionIDs: da.TerraTrivia.QuestionIDs,
 		},
 		ResetTime:     da.ResetTime,
 		NextResetTime: da.NextResetTime,
@@ -56,4 +78,24 @@ func toCategoryOption(options []connectionOption) []domain.ConnectionOption {
 		}
 	}
 	return answers
+}
+
+func toPlayerGuessCounts(gc guessCounts) domain.PlayerGuessCounts {
+	return domain.PlayerGuessCounts{
+		DailySlashCount:  gc.DailySlashCount,
+		ConnectionsCount: gc.ConnectionsCount,
+		GuessTheNpcCount: gc.GuessTheNpcCount,
+		HangmanCount:     gc.HangmanCount,
+		TerraTriviaCount: gc.TerraTriviaCount,
+	}
+}
+
+func toGuessCounts(gc domain.PlayerGuessCounts) guessCounts {
+	return guessCounts{
+		DailySlashCount:  gc.DailySlashCount,
+		ConnectionsCount: gc.ConnectionsCount,
+		GuessTheNpcCount: gc.GuessTheNpcCount,
+		HangmanCount:     gc.HangmanCount,
+		TerraTriviaCount: gc.TerraTriviaCount,
+	}
 }

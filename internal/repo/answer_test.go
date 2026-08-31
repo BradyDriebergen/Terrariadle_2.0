@@ -12,9 +12,10 @@ import (
 // Tests getting answer data from the database
 func TestGetAnswerData(t *testing.T) {
 	ctx := context.Background()
-	answerRepo := freshAnswerCollections(t)
+	answerRepo := mockAnswerRepo(t)
 
 	answers := generateAnswerData1()
+	want := toAnswerRef(answers)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1}, answers)
 	if err != nil {
@@ -26,7 +27,7 @@ func TestGetAnswerData(t *testing.T) {
 		t.Fatalf("getanswerdata failed: %v", err)
 	}
 
-	if diff := cmp.Diff(answers, got); diff != "" {
+	if diff := cmp.Diff(want, got); diff != "" {
 		t.Errorf("answer mismatch (-want +got):\n%s", diff)
 	}
 }
@@ -34,7 +35,7 @@ func TestGetAnswerData(t *testing.T) {
 // Tests adding and updating answer data from the database
 func TestUpsertAnswerData(t *testing.T) {
 	ctx := context.Background()
-	answerRepo := freshAnswerCollections(t)
+	answerRepo := mockAnswerRepo(t)
 
 	answers := []answerData{
 		generateAnswerData1(),
@@ -42,7 +43,8 @@ func TestUpsertAnswerData(t *testing.T) {
 	}
 
 	for i := range answers {
-		err := answerRepo.UpsertAnswerData(ctx, &answers[i])
+		ref := toAnswerRef(answers[i])
+		err := answerRepo.UpsertAnswerData(ctx, &ref)
 		if err != nil {
 			t.Fatalf("upsertanswerdata failed: %v", err)
 		}
@@ -70,9 +72,10 @@ func TestUpsertAnswerData(t *testing.T) {
 // Tests getting player guess counts from the database
 func TestGetGuessCounts(t *testing.T) {
 	ctx := context.Background()
-	answerRepo := freshAnswerCollections(t)
+	answerRepo := mockAnswerRepo(t)
 
 	guessCounts := generateGuessCounts1()
+	want := toPlayerGuessCounts(guessCounts)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1}, guessCounts)
 	if err != nil {
@@ -84,7 +87,7 @@ func TestGetGuessCounts(t *testing.T) {
 		t.Fatalf("getguesscounts failed: %v", err)
 	}
 
-	if diff := cmp.Diff(guessCounts, got); diff != "" {
+	if diff := cmp.Diff(want, got); diff != "" {
 		t.Errorf("guess counts mismatch (-want +got):\n%s", diff)
 	}
 }
@@ -92,30 +95,31 @@ func TestGetGuessCounts(t *testing.T) {
 // Tests adding and updating player guess counts to the database
 func TestUpsertGuessCounts(t *testing.T) {
 	ctx := context.Background()
-	answerRepo := freshAnswerCollections(t)
+	answerRepo := mockAnswerRepo(t)
 
-	guessCounts := []playerGuessCounts{
+	counts := []guessCounts{
 		generateGuessCounts1(),
 		generateGuessCounts2(),
 	}
 
-	for i := range guessCounts {
-		err := answerRepo.UpsertGuessCounts(ctx, &guessCounts[i])
+	for i := range counts {
+		ref := toPlayerGuessCounts(counts[i])
+		err := answerRepo.UpsertGuessCounts(ctx, &ref)
 		if err != nil {
 			t.Fatalf("upsertguesscounts failed: %v", err)
 		}
 
-		got, err := db.FindOne[playerGuessCounts](ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1})
+		got, err := db.FindOne[guessCounts](ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1})
 		if err != nil {
 			t.Fatalf("findone failed: %v", err)
 		}
 
-		if diff := cmp.Diff(guessCounts[i], *got); diff != "" {
+		if diff := cmp.Diff(counts[i], *got); diff != "" {
 			t.Errorf("guess counts mismatch (-want +got):\n%s", diff)
 		}
 	}
 
-	all, err := db.GetAll[playerGuessCounts](ctx, testMongo, answerRepo.guessCountCollection)
+	all, err := db.GetAll[guessCounts](ctx, testMongo, answerRepo.guessCountCollection)
 	if err != nil {
 		t.Fatalf("getall failed: %v", err)
 	}
@@ -126,28 +130,21 @@ func TestUpsertGuessCounts(t *testing.T) {
 }
 
 // Helper method creating collections for answer_repo
-func freshAnswerCollections(t *testing.T) *MongoAnswerRepo {
+func mockAnswerRepo(t *testing.T) *MongoAnswerRepo {
 	t.Helper()
 
-	names := map[string]string{}
-	for _, prefix := range []string{"answer", "guess_count", "weapon", "category", "npc", "enemy", "trivia"} {
-		coll := prefix + "_" + t.Name()
-		names[prefix] = coll
+	answerCollection := "answer_" + t.Name()
+	guessCountCollection := "guess_count_" + t.Name()
 
-		t.Cleanup(func() {
-			_ = db.DeleteAll(context.Background(), testMongo, coll)
-		})
-	}
+	t.Cleanup(func() {
+		_ = db.DeleteAll(context.Background(), testMongo, answerCollection)
+		_ = db.DeleteAll(context.Background(), testMongo, guessCountCollection)
+	})
 
 	return NewAnswerRepo(
 		testMongo,
-		names["answer"],
-		names["guess_count"],
-		names["weapon"],
-		names["category"],
-		names["npc"],
-		names["enemy"],
-		names["trivia"],
+		answerCollection,
+		guessCountCollection,
 	)
 }
 
@@ -214,8 +211,8 @@ func generateAnswerData2() answerData {
 }
 
 // Returns unique guess counts
-func generateGuessCounts1() playerGuessCounts {
-	return playerGuessCounts{
+func generateGuessCounts1() guessCounts {
+	return guessCounts{
 		DailySlashCount:  1,
 		ConnectionsCount: 1,
 		GuessTheNpcCount: 1,
@@ -225,8 +222,8 @@ func generateGuessCounts1() playerGuessCounts {
 }
 
 // Returns unique guess counts
-func generateGuessCounts2() playerGuessCounts {
-	return playerGuessCounts{
+func generateGuessCounts2() guessCounts {
+	return guessCounts{
 		DailySlashCount:  2,
 		ConnectionsCount: 2,
 		GuessTheNpcCount: 2,

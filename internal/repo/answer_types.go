@@ -42,7 +42,7 @@ type terraTriviaData struct {
 	QuestionIDs []int `bson:"questionIds"`
 }
 
-type playerGuessCounts struct {
+type guessCounts struct {
 	DailySlashCount  int `bson:"dailySlashCount"`
 	ConnectionsCount int `bson:"connectionsCount"`
 	GuessTheNpcCount int `bson:"guessTheNpcCount"`
