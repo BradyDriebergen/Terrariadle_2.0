@@ -21,7 +21,7 @@ func toWeapon(w weapon) domain.Weapon {
 	}
 }
 
-func toDomainWeapons(src []weapon) []domain.Weapon {
+func toWeapons(src []weapon) []domain.Weapon {
 	result := make([]domain.Weapon, len(src))
 	for i, w := range src {
 		result[i] = toWeapon(w)
@@ -37,7 +37,7 @@ func toCategory(c category) domain.Category {
 	}
 }
 
-func toDomainCategories(src []category) []domain.Category {
+func toCategories(src []category) []domain.Category {
 	result := make([]domain.Category, len(src))
 	for i, c := range src {
 		result[i] = toCategory(c)
@@ -56,7 +56,7 @@ func toNpc(n npc) domain.Npc {
 	}
 }
 
-func toDomainNpcs(src []npc) []domain.Npc {
+func toNpcs(src []npc) []domain.Npc {
 	result := make([]domain.Npc, len(src))
 	for i, n := range src {
 		result[i] = toNpc(n)
@@ -73,7 +73,7 @@ func toEnemy(e enemy) domain.Enemy {
 	}
 }
 
-func toDomainEnemies(src []enemy) []domain.Enemy {
+func toEnemies(src []enemy) []domain.Enemy {
 	result := make([]domain.Enemy, len(src))
 	for i, e := range src {
 		result[i] = toEnemy(e)

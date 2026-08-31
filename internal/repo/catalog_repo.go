@@ -47,7 +47,7 @@ func (r *MongoCatalogRepo) GetWeapons(ctx context.Context) ([]domain.Weapon, err
 		return []domain.Weapon{}, err
 	}
 
-	return toDomainWeapons(weaponCatalog), nil
+	return toWeapons(weaponCatalog), nil
 }
 
 func (r *MongoCatalogRepo) GetCategories(ctx context.Context) ([]domain.Category, error) {
@@ -56,7 +56,7 @@ func (r *MongoCatalogRepo) GetCategories(ctx context.Context) ([]domain.Category
 		return []domain.Category{}, err
 	}
 
-	return toDomainCategories(categoryCatalog), nil
+	return toCategories(categoryCatalog), nil
 }
 
 func (r *MongoCatalogRepo) GetNpcs(ctx context.Context) ([]domain.Npc, error) {
@@ -65,7 +65,7 @@ func (r *MongoCatalogRepo) GetNpcs(ctx context.Context) ([]domain.Npc, error) {
 		return []domain.Npc{}, err
 	}
 
-	return toDomainNpcs(npcCatalog), nil
+	return toNpcs(npcCatalog), nil
 }
 
 func (r *MongoCatalogRepo) GetEnemies(ctx context.Context) ([]domain.Enemy, error) {
@@ -74,7 +74,7 @@ func (r *MongoCatalogRepo) GetEnemies(ctx context.Context) ([]domain.Enemy, erro
 		return []domain.Enemy{}, err
 	}
 
-	return toDomainEnemies(enemyCatalog), nil
+	return toEnemies(enemyCatalog), nil
 }
 
 func (r *MongoCatalogRepo) GetTriviaQuestions(ctx context.Context) ([]domain.TriviaQuestion, error) {
