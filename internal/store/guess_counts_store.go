@@ -39,7 +39,7 @@ func NewGuessCountStore(
 	return &CachedGuessCountsStore{
 		answerRepo:       answerRepo,
 		broker:           broker,
-		guessCountsCache: toGuessCountDomain(guessCounts),
+		guessCountsCache: guessCounts,
 	}, nil
 }
 
@@ -53,13 +53,14 @@ func (s *CachedGuessCountsStore) ResetGuessCounts(ctx context.Context) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	guessCounts := repo.PlayerGuessCounts{}
+	// builds a new guess count struct and initializes all fields to 0
+	guessCounts := domain.PlayerGuessCounts{}
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &guessCounts); err != nil {
 		return fmt.Errorf("set-guess-counts: upserting guess counts: %w", err)
 	}
 
-	s.guessCountsCache = toGuessCountDomain(guessCounts)
+	s.guessCountsCache = guessCounts
 
 	return nil
 }
@@ -69,8 +70,7 @@ func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (
 
 	s.guessCountsCache.DailySlashCount++
 
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.DailySlashCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
 	}
@@ -92,8 +92,7 @@ func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) 
 
 	s.guessCountsCache.ConnectionsCount++
 
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.ConnectionsCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-connections-count: %w", err)
 	}
@@ -115,8 +114,7 @@ func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) 
 
 	s.guessCountsCache.GuessTheNpcCount++
 
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.GuessTheNpcCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-guess-the-npc-count: %w", err)
 	}
@@ -138,8 +136,7 @@ func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int
 
 	s.guessCountsCache.HangmanCount++
 
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.HangmanCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-hangman-count: %w", err)
 	}
@@ -161,8 +158,7 @@ func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) 
 
 	s.guessCountsCache.TerraTriviaCount++
 
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
+	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.TerraTriviaCount-- // roll back on failure
 		return 0, fmt.Errorf("increment-terratrivia-count: %w", err)
 	}

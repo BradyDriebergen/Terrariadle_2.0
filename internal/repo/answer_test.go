@@ -1,9 +1,8 @@
-package repo_test
+package repo
 
 import (
 	"context"
 	"terrariadle/internal/db"
-	"terrariadle/internal/repo"
 	"testing"
 	"time"
 
@@ -13,12 +12,11 @@ import (
 // Tests getting answer data from the database
 func TestGetAnswerData(t *testing.T) {
 	ctx := context.Background()
-	collection := freshCollection(t)
-	answerRepo := repo.NewAnswerRepo(testMongo, collection, "")
+	answerRepo := freshAnswerCollections(t)
 
 	answers := generateAnswerData1()
 
-	err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": 1}, answers)
+	err := db.Upsert(ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1}, answers)
 	if err != nil {
 		t.Fatalf("upsert failed: %v", err)
 	}
@@ -36,10 +34,9 @@ func TestGetAnswerData(t *testing.T) {
 // Tests adding and updating answer data from the database
 func TestUpsertAnswerData(t *testing.T) {
 	ctx := context.Background()
-	collection := freshCollection(t)
-	answerRepo := repo.NewAnswerRepo(testMongo, collection, "")
+	answerRepo := freshAnswerCollections(t)
 
-	answers := []repo.AnswerData{
+	answers := []answerData{
 		generateAnswerData1(),
 		generateAnswerData2(),
 	}
@@ -50,7 +47,7 @@ func TestUpsertAnswerData(t *testing.T) {
 			t.Fatalf("upsertanswerdata failed: %v", err)
 		}
 
-		got, err := db.FindOne[repo.AnswerData](ctx, testMongo, collection, db.Filter{"_id": 1})
+		got, err := db.FindOne[answerData](ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1})
 		if err != nil {
 			t.Fatalf("findone failed: %v", err)
 		}
@@ -60,7 +57,7 @@ func TestUpsertAnswerData(t *testing.T) {
 		}
 	}
 
-	docs, err := db.GetAll[repo.AnswerData](ctx, testMongo, collection)
+	docs, err := db.GetAll[answerData](ctx, testMongo, answerRepo.answerCollection)
 	if err != nil {
 		t.Fatalf("getall failed: %v", err)
 	}
@@ -73,12 +70,11 @@ func TestUpsertAnswerData(t *testing.T) {
 // Tests getting player guess counts from the database
 func TestGetGuessCounts(t *testing.T) {
 	ctx := context.Background()
-	collection := freshCollection(t)
-	answerRepo := repo.NewAnswerRepo(testMongo, "", collection)
+	answerRepo := freshAnswerCollections(t)
 
 	guessCounts := generateGuessCounts1()
 
-	err := db.Upsert(ctx, testMongo, collection, db.Filter{"_id": 1}, guessCounts)
+	err := db.Upsert(ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1}, guessCounts)
 	if err != nil {
 		t.Fatalf("upsert failed: %v", err)
 	}
@@ -96,10 +92,9 @@ func TestGetGuessCounts(t *testing.T) {
 // Tests adding and updating player guess counts to the database
 func TestUpsertGuessCounts(t *testing.T) {
 	ctx := context.Background()
-	collection := freshCollection(t)
-	answerRepo := repo.NewAnswerRepo(testMongo, "", collection)
+	answerRepo := freshAnswerCollections(t)
 
-	guessCounts := []repo.PlayerGuessCounts{
+	guessCounts := []playerGuessCounts{
 		generateGuessCounts1(),
 		generateGuessCounts2(),
 	}
@@ -110,7 +105,7 @@ func TestUpsertGuessCounts(t *testing.T) {
 			t.Fatalf("upsertguesscounts failed: %v", err)
 		}
 
-		got, err := db.FindOne[repo.PlayerGuessCounts](ctx, testMongo, collection, db.Filter{"_id": 1})
+		got, err := db.FindOne[playerGuessCounts](ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1})
 		if err != nil {
 			t.Fatalf("findone failed: %v", err)
 		}
@@ -120,7 +115,7 @@ func TestUpsertGuessCounts(t *testing.T) {
 		}
 	}
 
-	all, err := db.GetAll[repo.PlayerGuessCounts](ctx, testMongo, collection)
+	all, err := db.GetAll[playerGuessCounts](ctx, testMongo, answerRepo.guessCountCollection)
 	if err != nil {
 		t.Fatalf("getall failed: %v", err)
 	}
@@ -130,30 +125,56 @@ func TestUpsertGuessCounts(t *testing.T) {
 	}
 }
 
+// Helper method creating collections for answer_repo
+func freshAnswerCollections(t *testing.T) *MongoAnswerRepo {
+	t.Helper()
+
+	names := map[string]string{}
+	for _, prefix := range []string{"answer", "guess_count", "weapon", "category", "npc", "enemy", "trivia"} {
+		coll := prefix + "_" + t.Name()
+		names[prefix] = coll
+
+		t.Cleanup(func() {
+			_ = db.DeleteAll(context.Background(), testMongo, coll)
+		})
+	}
+
+	return NewAnswerRepo(
+		testMongo,
+		names["answer"],
+		names["guess_count"],
+		names["weapon"],
+		names["category"],
+		names["npc"],
+		names["enemy"],
+		names["trivia"],
+	)
+}
+
 // Returns unique answer data
-func generateAnswerData1() repo.AnswerData {
-	return repo.AnswerData{
-		DailySlash: repo.WeaponData{
+func generateAnswerData1() answerData {
+	return answerData{
+		DailySlash: weaponData{
 			CurrentWeaponID: 42,
 			PrevWeaponID:    17,
 		},
-		Connections: repo.ConnectionData{
+		Connections: connectionData{
 			CategoryIDs: []int{1, 2, 3, 4},
-			Options: []repo.ConnectionOption{
+			Options: []connectionOption{
 				{Option: "Zenith", CategoryID: 1},
 				{Option: "Terra Blade", CategoryID: 2},
 			},
 		},
-		GuessTheNpc: repo.NpcData{
+		GuessTheNpc: npcData{
 			NpcID:       22,
 			Quote:       "Nurses heal wounds. I heal broken bones.",
 			Name:        "Nurse",
 			NameOptions: []string{"Nurse", "Guide", "Merchant"},
 		},
-		Hangman: repo.HangmanData{
+		Hangman: hangmanData{
 			EnemyID: 13,
 		},
-		TerraTrivia: repo.TerraTriviaData{
+		TerraTrivia: terraTriviaData{
 			QuestionIDs: []int{101, 102, 103},
 		},
 		ResetTime:     time.Date(2026, 8, 26, 0, 0, 0, 0, time.UTC),
@@ -162,29 +183,29 @@ func generateAnswerData1() repo.AnswerData {
 }
 
 // Returns unique answer data
-func generateAnswerData2() repo.AnswerData {
-	return repo.AnswerData{
-		DailySlash: repo.WeaponData{
+func generateAnswerData2() answerData {
+	return answerData{
+		DailySlash: weaponData{
 			CurrentWeaponID: 30,
 			PrevWeaponID:    10,
 		},
-		Connections: repo.ConnectionData{
+		Connections: connectionData{
 			CategoryIDs: []int{4, 5, 6, 7},
-			Options: []repo.ConnectionOption{
+			Options: []connectionOption{
 				{Option: "Golden Delight", CategoryID: 3},
 				{Option: "Skeleton", CategoryID: 4},
 			},
 		},
-		GuessTheNpc: repo.NpcData{
+		GuessTheNpc: npcData{
 			NpcID:       22,
 			Quote:       "Hunters shoot bows. I shoot guns.",
 			Name:        "Arms Dealer",
 			NameOptions: []string{"Pirate", "Angler", "Princess"},
 		},
-		Hangman: repo.HangmanData{
+		Hangman: hangmanData{
 			EnemyID: 15,
 		},
-		TerraTrivia: repo.TerraTriviaData{
+		TerraTrivia: terraTriviaData{
 			QuestionIDs: []int{111, 112, 113},
 		},
 		ResetTime:     time.Date(2026, 9, 26, 0, 0, 0, 0, time.UTC),
@@ -193,8 +214,8 @@ func generateAnswerData2() repo.AnswerData {
 }
 
 // Returns unique guess counts
-func generateGuessCounts1() repo.PlayerGuessCounts {
-	return repo.PlayerGuessCounts{
+func generateGuessCounts1() playerGuessCounts {
+	return playerGuessCounts{
 		DailySlashCount:  1,
 		ConnectionsCount: 1,
 		GuessTheNpcCount: 1,
@@ -204,8 +225,8 @@ func generateGuessCounts1() repo.PlayerGuessCounts {
 }
 
 // Returns unique guess counts
-func generateGuessCounts2() repo.PlayerGuessCounts {
-	return repo.PlayerGuessCounts{
+func generateGuessCounts2() playerGuessCounts {
+	return playerGuessCounts{
 		DailySlashCount:  2,
 		ConnectionsCount: 2,
 		GuessTheNpcCount: 2,

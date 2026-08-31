@@ -127,6 +127,11 @@ func mustCreateStores(ctx context.Context, mongoDB *db.MongoDB, broker *domain.B
 		mongoDB,
 		"daily_solutions",
 		"player_guess_counts",
+		"daily_slash_weapons",
+		"connections_categories",
+		"guess_the_npc_npcs",
+		"hangman_enemies",
+		"terratrivia_questions",
 	)
 
 	catalog, err := store.NewCatalogStore(ctx, catalogRepo)

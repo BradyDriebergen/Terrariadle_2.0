@@ -21,12 +21,7 @@ type CachedAnswerStore struct {
 }
 
 func NewAnswerStore(ctx context.Context, answerRepo repo.AnswerRepo, catalogStore CatalogStore) (*CachedAnswerStore, error) {
-	answerData, err := answerRepo.GetAnswerData(ctx)
-	if err != nil {
-		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
-	}
-
-	answers, err := toAnswerDomain(answerData, catalogStore)
+	answers, err := answerRepo.GetAnswerData(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("new-answer-store: failed to initialize: %w", err)
 	}
@@ -45,17 +40,10 @@ func (s *CachedAnswerStore) GetAnswers() domain.DailyAnswers {
 }
 
 func (s *CachedAnswerStore) UpsertAnswers(ctx context.Context, answer domain.DailyAnswers) error {
-	ad := fromAnswerDomain(answer)
-
-	// Validate that all IDs resolve before committing
-	if _, err := toAnswerDomain(ad, s.catalogStore); err != nil {
-		return fmt.Errorf("set-answer: validation failed: %w", err)
-	}
-
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	if err := s.answerRepo.UpsertAnswerData(ctx, &ad); err != nil {
+	if err := s.answerRepo.UpsertAnswerData(ctx, &answer); err != nil {
 		return fmt.Errorf("set-answer: upserting answers: %w", err)
 	}
 

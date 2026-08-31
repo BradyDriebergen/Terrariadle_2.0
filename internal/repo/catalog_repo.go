@@ -83,5 +83,5 @@ func (r *MongoCatalogRepo) GetTriviaQuestions(ctx context.Context) ([]domain.Tri
 		return []domain.TriviaQuestion{}, err
 	}
 
-	return toDomainTriviaQuestions(triviaCatalog), nil
+	return toTriviaQuestions(triviaCatalog), nil
 }
