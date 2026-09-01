@@ -33,11 +33,11 @@ func (r *MongoUserRepo) GetUser(ctx context.Context, userId string) (domain.User
 		}
 		return domain.User{}, err
 	}
-	return user.toDomain(), nil
+	return toUser(*user), nil
 }
 
 func (r *MongoUserRepo) UpsertUserData(ctx context.Context, user domain.User) error {
-	err := db.Upsert(ctx, r.database, r.userCollection, db.Filter{"userId": user.UserID}, fromDomain(user))
+	err := db.Upsert(ctx, r.database, r.userCollection, db.Filter{"userId": user.UserID}, toUserData(user))
 	return err
 }
 

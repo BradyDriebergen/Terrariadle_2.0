@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func (u *userData) toDomain() domain.User {
+func toUser(u userData) domain.User {
 	checks := make([]domain.WeaponChecks, len(u.DailySlash.Checks))
 	for i, c := range u.DailySlash.Checks {
 		checks[i] = domain.WeaponChecks{
@@ -23,30 +23,30 @@ func (u *userData) toDomain() domain.User {
 	return domain.User{
 		UserID: u.UserID,
 		DailySlash: domain.DailySlashGame{
-			Game:   toGameDomain(u.DailySlash.Game),
+			Game:   toGame(u.DailySlash.Game),
 			Checks: checks,
 		},
 		Connections: domain.ConnectionGame{
-			Game:     toGameDomain(u.Connections.Game),
+			Game:     toGame(u.Connections.Game),
 			Attempts: u.Connections.Attempts,
 		},
 		GuessTheNPC: domain.GuessTheNpcGame{
-			Game:        toGameDomain(u.GuessTheNPC.Game),
+			Game:        toGame(u.GuessTheNPC.Game),
 			GuessedName: u.GuessTheNPC.GuessedName,
 		},
 		Hangman: domain.HangmanGame{
-			Game:     toGameDomain(u.Hangman.Game),
+			Game:     toGame(u.Hangman.Game),
 			Attempts: u.Hangman.Attempts,
 		},
 		TerraTrivia: domain.TerraTriviaGame{
-			Game: toGameDomain(u.TerraTrivia.Game),
+			Game: toGame(u.TerraTrivia.Game),
 		},
 		LastSeen: time.Now(),
 		Dirty:    false,
 	}
 }
 
-func toGameDomain(g game) domain.Game {
+func toGame(g game) domain.Game {
 	return domain.Game{
 		Guesses:  g.Guesses,
 		Finished: g.HasWon,
@@ -54,7 +54,7 @@ func toGameDomain(g game) domain.Game {
 	}
 }
 
-func fromDomain(u domain.User) userData {
+func toUserData(u domain.User) userData {
 	checks := make([]weaponChecks, len(u.DailySlash.Checks))
 	for i, c := range u.DailySlash.Checks {
 		checks[i] = weaponChecks{
@@ -70,29 +70,30 @@ func fromDomain(u domain.User) userData {
 	}
 
 	return userData{
+		UserID: u.UserID,
 		DailySlash: dailySlashGame{
-			Game:   fromGameDomain(u.DailySlash.Game),
+			Game:   toGameData(u.DailySlash.Game),
 			Checks: checks,
 		},
 		Connections: connectionGame{
-			Game:     fromGameDomain(u.Connections.Game),
+			Game:     toGameData(u.Connections.Game),
 			Attempts: u.Connections.Attempts,
 		},
 		GuessTheNPC: guessTheNpcGame{
-			Game:        fromGameDomain(u.GuessTheNPC.Game),
+			Game:        toGameData(u.GuessTheNPC.Game),
 			GuessedName: u.GuessTheNPC.GuessedName,
 		},
 		Hangman: hangmanGame{
-			Game:     fromGameDomain(u.Hangman.Game),
+			Game:     toGameData(u.Hangman.Game),
 			Attempts: u.Hangman.Attempts,
 		},
 		TerraTrivia: terraTriviaGame{
-			Game: fromGameDomain(u.TerraTrivia.Game),
+			Game: toGameData(u.TerraTrivia.Game),
 		},
 	}
 }
 
-func fromGameDomain(g domain.Game) game {
+func toGameData(g domain.Game) game {
 	return game{
 		Guesses:  g.Guesses,
 		HasWon:   g.Finished,
