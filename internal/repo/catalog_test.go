@@ -9,6 +9,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 )
 
+// Checks if we can get all weapons from the database
 func TestGetWeapons(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
@@ -34,6 +35,7 @@ func TestGetWeapons(t *testing.T) {
 	}
 }
 
+// Checks if we can get all categories from the database
 func TestGetCategories(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
@@ -59,6 +61,7 @@ func TestGetCategories(t *testing.T) {
 	}
 }
 
+// Checks if we can get all npcs from the database
 func TestGetNpcs(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
@@ -84,6 +87,7 @@ func TestGetNpcs(t *testing.T) {
 	}
 }
 
+// Checks if we can get all enemies from the database
 func TestGetEnemies(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
@@ -109,6 +113,7 @@ func TestGetEnemies(t *testing.T) {
 	}
 }
 
+// Checks if we can get all trivia questions from the database
 func TestGetTriviaQuestions(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
@@ -162,77 +167,152 @@ func mockCatalogRepo(t *testing.T) *MongoCatalogRepo {
 	)
 }
 
+// generates weapon objects for testing
 func generateWeapons() []weapon {
 	return []weapon{
 		{
-			ID:           10,
-			Name:         "Amethyst Staff",
-			WeaponType:   "Staff",
-			ModeObtained: "Pre-HardMode",
+			ID:           1,
+			Name:         "weapon",
+			WeaponType:   "type",
+			ModeObtained: "hardmode",
 			Info: weaponInfo{
-				ImagePath:  "/Amethyst_Staff.png",
-				DamageType: "Magic",
+				ImagePath:  ".png",
+				DamageType: "type",
 				Damage:     15,
-				UseTime:    "Very Slow",
-				Rarity:     "White",
-				Operation:  "Manual",
-				Material:   "No",
-				Obtained: []string{
-					"Crafting",
-				},
+				UseTime:    "time",
+				Rarity:     "rarity",
+				Operation:  "operation",
+				Material:   "no",
+				Obtained:   []string{"obtained"},
 			},
 		},
 		{
 			ID:           2,
-			Name:         "Adamantite Glaive",
-			WeaponType:   "Spear",
-			ModeObtained: "Hardmode",
+			Name:         "weapon",
+			WeaponType:   "type",
+			ModeObtained: "hardmode",
 			Info: weaponInfo{
-				ImagePath:  "/Adamantite_Glaive.png",
-				DamageType: "Melee",
-				Damage:     49,
-				UseTime:    "Fast",
-				Rarity:     "Light Red",
-				Operation:  "Manual",
-				Material:   "No",
-				Obtained: []string{
-					"Crafting",
-				},
+				ImagePath:  ".png",
+				DamageType: "type",
+				Damage:     15,
+				UseTime:    "time",
+				Rarity:     "rarity",
+				Operation:  "operation",
+				Material:   "no",
+				Obtained:   []string{"obtained"},
 			},
 		},
 		{
-			ID:           5,
-			Name:         "Aerial Bane",
-			WeaponType:   "Bow",
-			ModeObtained: "Hardmode",
+			ID:           3,
+			Name:         "weapon",
+			WeaponType:   "type",
+			ModeObtained: "hardmode",
 			Info: weaponInfo{
-				ImagePath:  "/Aerial_Bane.png",
-				DamageType: "Ranged",
-				Damage:     39,
-				UseTime:    "Average",
-				Rarity:     "Yellow",
-				Operation:  "Auto",
-				Material:   "No",
-				Obtained: []string{
-					"Drop",
-				},
+				ImagePath:  ".png",
+				DamageType: "type",
+				Damage:     15,
+				UseTime:    "time",
+				Rarity:     "rarity",
+				Operation:  "operation",
+				Material:   "no",
+				Obtained:   []string{"obtained"},
 			},
 		},
 	}
 }
 
+// generates category objects for testing
 func generateCategories() []category {
-	return []category{}
+	return []category{
+		{
+			ID:       1,
+			Category: "cat1",
+			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
+		},
+		{
+			ID:       2,
+			Category: "cat2",
+			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
+		},
+		{
+			ID:       3,
+			Category: "cat3",
+			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
+		},
+	}
 }
 
+// generates npc objects for testing
 func generateNpcs() []npc {
-	return []npc{}
+	return []npc{
+		{
+			ID:      1,
+			NPC:     "npc1",
+			NpcPath: ".png",
+			Quotes:  []string{"quote1", "quote2"},
+			Names:   []string{"name1", "name2"},
+		},
+		{
+			ID:      2,
+			NPC:     "npc2",
+			NpcPath: ".png",
+			Quotes:  []string{"quote1", "quote2"},
+			Names:   []string{"name1", "name2"},
+		},
+		{
+			ID:      3,
+			NPC:     "npc3",
+			NpcPath: ".png",
+			Quotes:  []string{"quote1", "quote2"},
+			Names:   []string{"name1", "name2"},
+		},
+	}
 }
 
+// generates enemy objects for testing
 func generateEnemies() []enemy {
-	return []enemy{}
+	return []enemy{
+		{
+			ID:        1,
+			Name:      "enemy",
+			ImagePath: ".png",
+		},
+		{
+			ID:        2,
+			Name:      "enemy",
+			ImagePath: ".png",
+		},
+		{
+			ID:        3,
+			Name:      "enemy",
+			ImagePath: ".png",
+		},
+	}
 }
 
+// generates trivia weapon objects for testing
 func generateTriviaQuestions() []triviaQuestion {
-	return []triviaQuestion{}
+	return []triviaQuestion{
+		{
+			ID:         1,
+			Answer:     "answer1",
+			Clue:       "clue",
+			Chunks:     []string{"chunk1", "chunk2"},
+			ChunkCount: 2,
+		},
+		{
+			ID:         2,
+			Answer:     "answer2",
+			Clue:       "clue",
+			Chunks:     []string{"chunk1", "chunk2"},
+			ChunkCount: 2,
+		},
+		{
+			ID:         3,
+			Answer:     "answer3",
+			Clue:       "clue",
+			Chunks:     []string{"chunk1", "chunk2"},
+			ChunkCount: 2,
+		},
+	}
 }
