@@ -15,10 +15,9 @@ type AnswerStore interface {
 }
 
 type CachedAnswerStore struct {
-	answerRepo   repo.AnswerRepo
-	catalogStore CatalogStore
-	mu           sync.RWMutex
-	answerCache  domain.DailyAnswers
+	answerRepo  repo.AnswerRepo
+	mu          sync.RWMutex
+	answerCache domain.DailyAnswers
 }
 
 func NewAnswerStore(ctx context.Context, ar repo.AnswerRepo, cs CatalogStore) (*CachedAnswerStore, error) {
@@ -83,9 +82,8 @@ func NewAnswerStore(ctx context.Context, ar repo.AnswerRepo, cs CatalogStore) (*
 	}
 
 	return &CachedAnswerStore{
-		answerRepo:   ar,
-		catalogStore: cs,
-		answerCache:  dailyAnswers,
+		answerRepo:  ar,
+		answerCache: dailyAnswers,
 	}, nil
 }
 

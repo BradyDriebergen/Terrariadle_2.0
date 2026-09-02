@@ -176,6 +176,6 @@ func toSearchNPC(n domain.Npc) domain.SearchNpcResult {
 	return domain.SearchNpcResult{
 		NpcID: n.ID,
 		Name:  n.NPC,
-		Path:  n.NPCPath,
+		Path:  n.NpcPath,
 	}
 }

@@ -3,7 +3,7 @@ package domain
 type Npc struct {
 	ID      int
 	NPC     string
-	NPCPath string
+	NpcPath string
 	Quotes  []string
 	Names   []string
 }

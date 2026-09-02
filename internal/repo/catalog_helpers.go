@@ -50,7 +50,7 @@ func toNpc(n npc) domain.Npc {
 	return domain.Npc{
 		ID:      n.ID,
 		NPC:     n.NPC,
-		NPCPath: n.NpcPath,
+		NpcPath: n.NpcPath,
 		Quotes:  n.Quotes,
 		Names:   n.Names,
 	}

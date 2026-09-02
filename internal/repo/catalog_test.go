@@ -31,7 +31,7 @@ func TestGetWeapons(t *testing.T) {
 	}
 
 	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("answer mismatch (-want +got):\n%s", diff)
+		t.Errorf("weapon mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -57,7 +57,7 @@ func TestGetCategories(t *testing.T) {
 	}
 
 	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("answer mismatch (-want +got):\n%s", diff)
+		t.Errorf("category mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -83,7 +83,7 @@ func TestGetNpcs(t *testing.T) {
 	}
 
 	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("answer mismatch (-want +got):\n%s", diff)
+		t.Errorf("npc mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -109,7 +109,7 @@ func TestGetEnemies(t *testing.T) {
 	}
 
 	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("answer mismatch (-want +got):\n%s", diff)
+		t.Errorf("enemy mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -135,7 +135,7 @@ func TestGetTriviaQuestions(t *testing.T) {
 	}
 
 	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("answer mismatch (-want +got):\n%s", diff)
+		t.Errorf("trivia question mismatch (-want +got):\n%s", diff)
 	}
 }
 

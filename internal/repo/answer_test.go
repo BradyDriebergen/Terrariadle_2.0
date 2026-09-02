@@ -3,8 +3,8 @@ package repo
 import (
 	"context"
 	"terrariadle/internal/db"
+	"terrariadle/internal/testutils"
 	"testing"
-	"time"
 
 	"github.com/google/go-cmp/cmp"
 )
@@ -14,7 +14,7 @@ func TestGetAnswerData(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	answers := generateAnswerData1()
+	answers := generateAnswerDataA()
 	want := toAnswerRef(answers)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1}, answers)
@@ -38,8 +38,8 @@ func TestUpsertAnswerData(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	answers := []answerData{
-		generateAnswerData1(),
-		generateAnswerData2(),
+		generateAnswerDataA(),
+		generateAnswerDataB(),
 	}
 
 	for i := range answers {
@@ -74,7 +74,7 @@ func TestGetGuessCounts(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	guessCounts := generateGuessCounts1()
+	guessCounts := generateGuessCountsA()
 	want := toPlayerGuessCounts(guessCounts)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1}, guessCounts)
@@ -98,8 +98,8 @@ func TestUpsertGuessCounts(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	counts := []guessCounts{
-		generateGuessCounts1(),
-		generateGuessCounts2(),
+		generateGuessCountsA(),
+		generateGuessCountsB(),
 	}
 
 	for i := range counts {
@@ -149,7 +149,7 @@ func mockAnswerRepo(t *testing.T) *MongoAnswerRepo {
 }
 
 // Returns unique answer data
-func generateAnswerData1() answerData {
+func generateAnswerDataA() answerData {
 	return answerData{
 		DailySlash: weaponData{
 			CurrentWeaponID: 42,
@@ -174,13 +174,13 @@ func generateAnswerData1() answerData {
 		TerraTrivia: terraTriviaData{
 			QuestionIDs: []int{101, 102, 103},
 		},
-		ResetTime:     time.Date(2026, 8, 26, 0, 0, 0, 0, time.UTC),
-		NextResetTime: time.Date(2026, 8, 27, 0, 0, 0, 0, time.UTC),
+		ResetTime:     testutils.TestingTime(),
+		NextResetTime: testutils.TestingTime(),
 	}
 }
 
 // Returns unique answer data
-func generateAnswerData2() answerData {
+func generateAnswerDataB() answerData {
 	return answerData{
 		DailySlash: weaponData{
 			CurrentWeaponID: 30,
@@ -205,13 +205,13 @@ func generateAnswerData2() answerData {
 		TerraTrivia: terraTriviaData{
 			QuestionIDs: []int{111, 112, 113},
 		},
-		ResetTime:     time.Date(2026, 9, 26, 0, 0, 0, 0, time.UTC),
-		NextResetTime: time.Date(2026, 9, 27, 0, 0, 0, 0, time.UTC),
+		ResetTime:     testutils.TestingTime(),
+		NextResetTime: testutils.TestingTime(),
 	}
 }
 
 // Returns unique guess counts
-func generateGuessCounts1() guessCounts {
+func generateGuessCountsA() guessCounts {
 	return guessCounts{
 		DailySlashCount:  1,
 		ConnectionsCount: 1,
@@ -222,7 +222,7 @@ func generateGuessCounts1() guessCounts {
 }
 
 // Returns unique guess counts
-func generateGuessCounts2() guessCounts {
+func generateGuessCountsB() guessCounts {
 	return guessCounts{
 		DailySlashCount:  2,
 		ConnectionsCount: 2,

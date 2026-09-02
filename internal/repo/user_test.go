@@ -15,7 +15,7 @@ func TestGetUser(t *testing.T) {
 	ctx := context.Background()
 	userRepo := mockUserRepo(t)
 
-	user := generateUser1()
+	user := generateUserA()
 	want := toUser(user)
 
 	tests := []struct {
@@ -52,7 +52,7 @@ func TestGetUser(t *testing.T) {
 			want.LastSeen = got.LastSeen
 
 			if diff := cmp.Diff(want, got); diff != "" {
-				t.Errorf("answer mismatch (-want +got):\n%s", diff)
+				t.Errorf("user mismatch (-want +got):\n%s", diff)
 			}
 		})
 	}
@@ -64,8 +64,8 @@ func TestUpsertUser(t *testing.T) {
 	userRepo := mockUserRepo(t)
 
 	users := []domain.User{
-		toUser(generateUser1()),
-		toUser(generateUser2()),
+		toUser(generateUserA()),
+		toUser(generateUserB()),
 	}
 
 	for i := range users {
@@ -83,7 +83,7 @@ func TestUpsertUser(t *testing.T) {
 		got.ID = want.ID
 
 		if diff := cmp.Diff(want, *got); diff != "" {
-			t.Errorf("answer mismatch (-want +got):\n%s", diff)
+			t.Errorf("user mismatch (-want +got):\n%s", diff)
 		}
 	}
 }
@@ -94,8 +94,8 @@ func TestDropAllUserData(t *testing.T) {
 	userRepo := mockUserRepo(t)
 
 	users := []userData{
-		generateUser1(),
-		generateUser2(),
+		generateUserA(),
+		generateUserB(),
 	}
 
 	err := db.InsertMany(ctx, testMongo, userRepo.userCollection, users)
@@ -132,7 +132,7 @@ func mockUserRepo(t *testing.T) *MongoUserRepo {
 }
 
 // generates user data for testing
-func generateUser1() userData {
+func generateUserA() userData {
 	gameDoc := game{
 		Guesses:  []int{2, 3, 4},
 		HasWon:   true,
@@ -164,7 +164,7 @@ func generateUser1() userData {
 }
 
 // generates user data for testing
-func generateUser2() userData {
+func generateUserB() userData {
 	gameDoc := game{
 		Guesses:  []int{1, 2, 3},
 		HasWon:   false,

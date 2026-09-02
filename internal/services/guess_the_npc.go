@@ -53,7 +53,7 @@ func (g *GuessTheNpc) InitializeGame(ctx context.Context, userId string) (GuessT
 
 		guesses = append(guesses, GuessTheNpcGuessData{
 			Name: npc.NPC,
-			Path: npc.NPCPath,
+			Path: npc.NpcPath,
 		})
 	}
 
@@ -111,7 +111,7 @@ func (g *GuessTheNpc) CheckGuess(ctx context.Context, userId string, npcId int) 
 		Finished: isCorrect,
 		Guess: GuessTheNpcGuessData{
 			Name: npcGuess.NPC,
-			Path: npcGuess.NPCPath,
+			Path: npcGuess.NpcPath,
 		},
 	}, nil
 }
