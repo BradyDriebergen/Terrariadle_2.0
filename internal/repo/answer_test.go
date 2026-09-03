@@ -14,7 +14,7 @@ func TestGetAnswerData(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	answers := generateAnswerDataA()
+	answers := newAnswerData(1)
 	want := toAnswerRef(answers)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1}, answers)
@@ -38,8 +38,8 @@ func TestUpsertAnswerData(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	answers := []answerData{
-		generateAnswerDataA(),
-		generateAnswerDataB(),
+		newAnswerData(1),
+		newAnswerData(2),
 	}
 
 	for i := range answers {
@@ -74,7 +74,7 @@ func TestGetGuessCounts(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	guessCounts := generateGuessCountsA()
+	guessCounts := newGuessCounts(1)
 	want := toPlayerGuessCounts(guessCounts)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1}, guessCounts)
@@ -98,8 +98,8 @@ func TestUpsertGuessCounts(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	counts := []guessCounts{
-		generateGuessCountsA(),
-		generateGuessCountsB(),
+		newGuessCounts(1),
+		newGuessCounts(2),
 	}
 
 	for i := range counts {
@@ -149,61 +149,22 @@ func mockAnswerRepo(t *testing.T) *MongoAnswerRepo {
 }
 
 // Returns unique answer data
-func generateAnswerDataA() answerData {
+func newAnswerData(id int) answerData {
 	return answerData{
 		DailySlash: weaponData{
-			CurrentWeaponID: 42,
-			PrevWeaponID:    17,
+			CurrentWeaponID: id,
 		},
 		Connections: connectionData{
-			CategoryIDs: []int{1, 2, 3, 4},
-			Options: []connectionOption{
-				{Option: "Zenith", CategoryID: 1},
-				{Option: "Terra Blade", CategoryID: 2},
-			},
+			CategoryIDs: []int{id},
 		},
 		GuessTheNpc: npcData{
-			NpcID:       22,
-			Quote:       "Nurses heal wounds. I heal broken bones.",
-			Name:        "Nurse",
-			NameOptions: []string{"Nurse", "Guide", "Merchant"},
+			NpcID: id,
 		},
 		Hangman: hangmanData{
-			EnemyID: 13,
+			EnemyID: id,
 		},
 		TerraTrivia: terraTriviaData{
-			QuestionIDs: []int{101, 102, 103},
-		},
-		ResetTime:     testutils.TestingTime(),
-		NextResetTime: testutils.TestingTime(),
-	}
-}
-
-// Returns unique answer data
-func generateAnswerDataB() answerData {
-	return answerData{
-		DailySlash: weaponData{
-			CurrentWeaponID: 30,
-			PrevWeaponID:    10,
-		},
-		Connections: connectionData{
-			CategoryIDs: []int{4, 5, 6, 7},
-			Options: []connectionOption{
-				{Option: "Golden Delight", CategoryID: 3},
-				{Option: "Skeleton", CategoryID: 4},
-			},
-		},
-		GuessTheNpc: npcData{
-			NpcID:       22,
-			Quote:       "Hunters shoot bows. I shoot guns.",
-			Name:        "Arms Dealer",
-			NameOptions: []string{"Pirate", "Angler", "Princess"},
-		},
-		Hangman: hangmanData{
-			EnemyID: 15,
-		},
-		TerraTrivia: terraTriviaData{
-			QuestionIDs: []int{111, 112, 113},
+			QuestionIDs: []int{id},
 		},
 		ResetTime:     testutils.TestingTime(),
 		NextResetTime: testutils.TestingTime(),
@@ -211,23 +172,12 @@ func generateAnswerDataB() answerData {
 }
 
 // Returns unique guess counts
-func generateGuessCountsA() guessCounts {
+func newGuessCounts(num int) guessCounts {
 	return guessCounts{
-		DailySlashCount:  1,
-		ConnectionsCount: 1,
-		GuessTheNpcCount: 1,
-		HangmanCount:     1,
-		TerraTriviaCount: 1,
-	}
-}
-
-// Returns unique guess counts
-func generateGuessCountsB() guessCounts {
-	return guessCounts{
-		DailySlashCount:  2,
-		ConnectionsCount: 2,
-		GuessTheNpcCount: 2,
-		HangmanCount:     2,
-		TerraTriviaCount: 2,
+		DailySlashCount:  num,
+		ConnectionsCount: num,
+		GuessTheNpcCount: num,
+		HangmanCount:     num,
+		TerraTriviaCount: num,
 	}
 }

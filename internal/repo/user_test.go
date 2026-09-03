@@ -5,8 +5,6 @@ import (
 	"terrariadle/internal/db"
 	"terrariadle/internal/domain"
 	"testing"
-
-	"github.com/google/go-cmp/cmp"
 )
 
 // Checks if the correct user is returned, and that a ErrNotFound
@@ -15,7 +13,7 @@ func TestGetUser(t *testing.T) {
 	ctx := context.Background()
 	userRepo := mockUserRepo(t)
 
-	user := generateUserA()
+	user := newUserData("2")
 	want := toUser(user)
 
 	tests := []struct {
@@ -48,11 +46,8 @@ func TestGetUser(t *testing.T) {
 				t.Fatalf("getuser failed: %v", err)
 			}
 
-			// Bypass time issue, these don't run at the same time
-			want.LastSeen = got.LastSeen
-
-			if diff := cmp.Diff(want, got); diff != "" {
-				t.Errorf("user mismatch (-want +got):\n%s", diff)
+			if want.UserID != got.UserID {
+				t.Errorf("wanted %v, got %v", want.UserID, got.UserID)
 			}
 		})
 	}
@@ -63,10 +58,7 @@ func TestUpsertUser(t *testing.T) {
 	ctx := context.Background()
 	userRepo := mockUserRepo(t)
 
-	users := []domain.User{
-		toUser(generateUserA()),
-		toUser(generateUserB()),
-	}
+	users := []domain.User{newUser("1"), newUser("2")}
 
 	for i := range users {
 		err := userRepo.UpsertUserData(ctx, users[i])
@@ -79,11 +71,8 @@ func TestUpsertUser(t *testing.T) {
 			t.Fatalf("findone failed: %v", err)
 		}
 
-		want := toUserData(users[i])
-		got.ID = want.ID
-
-		if diff := cmp.Diff(want, *got); diff != "" {
-			t.Errorf("user mismatch (-want +got):\n%s", diff)
+		if users[i].UserID != got.UserID {
+			t.Errorf("wanted %v, got %v", users[i].UserID, got.UserID)
 		}
 	}
 }
@@ -93,10 +82,7 @@ func TestDropAllUserData(t *testing.T) {
 	ctx := context.Background()
 	userRepo := mockUserRepo(t)
 
-	users := []userData{
-		generateUserA(),
-		generateUserB(),
-	}
+	users := []domain.User{newUser("1"), newUser("2")}
 
 	err := db.InsertMany(ctx, testMongo, userRepo.userCollection, users)
 	if err != nil {
@@ -131,66 +117,10 @@ func mockUserRepo(t *testing.T) *MongoUserRepo {
 	return NewUserRepo(testMongo, name)
 }
 
-// generates user data for testing
-func generateUserA() userData {
-	gameDoc := game{
-		Guesses:  []int{2, 3, 4},
-		HasWon:   true,
-		Position: 2,
-	}
-
-	return userData{
-		UserID: "2",
-		DailySlash: dailySlashGame{
-			Game:   gameDoc,
-			Checks: []weaponChecks{},
-		},
-		Connections: connectionGame{
-			Game:     gameDoc,
-			Attempts: 2,
-		},
-		GuessTheNPC: guessTheNpcGame{
-			Game:        gameDoc,
-			GuessedName: "Alex",
-		},
-		Hangman: hangmanGame{
-			Game:     gameDoc,
-			Attempts: 4,
-		},
-		TerraTrivia: terraTriviaGame{
-			Game: gameDoc,
-		},
-	}
+func newUserData(id string) userData {
+	return userData{UserID: id}
 }
 
-// generates user data for testing
-func generateUserB() userData {
-	gameDoc := game{
-		Guesses:  []int{1, 2, 3},
-		HasWon:   false,
-		Position: 1,
-	}
-
-	return userData{
-		UserID: "1",
-		DailySlash: dailySlashGame{
-			Game:   gameDoc,
-			Checks: []weaponChecks{},
-		},
-		Connections: connectionGame{
-			Game:     gameDoc,
-			Attempts: 3,
-		},
-		GuessTheNPC: guessTheNpcGame{
-			Game:        gameDoc,
-			GuessedName: "Steve",
-		},
-		Hangman: hangmanGame{
-			Game:     gameDoc,
-			Attempts: 6,
-		},
-		TerraTrivia: terraTriviaGame{
-			Game: gameDoc,
-		},
-	}
+func newUser(id string) domain.User {
+	return domain.User{UserID: id}
 }

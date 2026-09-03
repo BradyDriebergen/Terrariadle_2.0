@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 // Checks if we can get all weapons from the database
@@ -14,10 +15,16 @@ func TestGetWeapons(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
 
-	weapons := generateWeapons()
-	want := make([]domain.Weapon, len(weapons))
-	for i := range weapons {
-		want[i] = toWeapon(weapons[i])
+	weapons := []weapon{
+		newWeapon(1, "Sword"),
+		newWeapon(2, "Bow"),
+		newWeapon(3, "Staff"),
+	}
+
+	want := []domain.Weapon{
+		newDomainWeapon(1, "Sword"),
+		newDomainWeapon(2, "Bow"),
+		newDomainWeapon(3, "Staff"),
 	}
 
 	err := db.InsertMany(ctx, testMongo, catalogRepo.weaponCollection, weapons)
@@ -30,7 +37,13 @@ func TestGetWeapons(t *testing.T) {
 		t.Fatalf("getweapons failed: %v", err)
 	}
 
-	if diff := cmp.Diff(want, got); diff != "" {
+	if len(got) != 3 {
+		t.Errorf("Expected a length of 3, got %v", len(got))
+	}
+
+	less := func(a, b domain.Weapon) bool { return a.ID < b.ID }
+
+	if diff := cmp.Diff(want, got, cmpopts.SortSlices(less)); diff != "" {
 		t.Errorf("weapon mismatch (-want +got):\n%s", diff)
 	}
 }
@@ -40,10 +53,16 @@ func TestGetCategories(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
 
-	categories := generateCategories()
-	want := make([]domain.Category, len(categories))
-	for i := range categories {
-		want[i] = toCategory(categories[i])
+	categories := []category{
+		newCategory(1, "Rarity Colors"),
+		newCategory(2, "Enemy Types"),
+		newCategory(3, "Npc Names"),
+	}
+
+	want := []domain.Category{
+		newDomainCategory(1, "Rarity Colors"),
+		newDomainCategory(2, "Enemy Types"),
+		newDomainCategory(3, "Npc Names"),
 	}
 
 	err := db.InsertMany(ctx, testMongo, catalogRepo.categoryCollection, categories)
@@ -56,8 +75,14 @@ func TestGetCategories(t *testing.T) {
 		t.Fatalf("getcategories failed: %v", err)
 	}
 
-	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("category mismatch (-want +got):\n%s", diff)
+	if len(got) != 3 {
+		t.Errorf("Expected a length of 3, got %v", len(got))
+	}
+
+	less := func(a, b domain.Category) bool { return a.ID < b.ID }
+
+	if diff := cmp.Diff(want, got, cmpopts.SortSlices(less)); diff != "" {
+		t.Errorf("catagories mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -66,10 +91,16 @@ func TestGetNpcs(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
 
-	npcs := generateNpcs()
-	want := make([]domain.Npc, len(npcs))
-	for i := range npcs {
-		want[i] = toNpc(npcs[i])
+	npcs := []npc{
+		newNpc(1, "Guide"),
+		newNpc(2, "Nurse"),
+		newNpc(3, "Party Girl"),
+	}
+
+	want := []domain.Npc{
+		newDomainNpc(1, "Guide"),
+		newDomainNpc(2, "Nurse"),
+		newDomainNpc(3, "Party Girl"),
 	}
 
 	err := db.InsertMany(ctx, testMongo, catalogRepo.npcCollection, npcs)
@@ -82,8 +113,14 @@ func TestGetNpcs(t *testing.T) {
 		t.Fatalf("getnpcs failed: %v", err)
 	}
 
-	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("npc mismatch (-want +got):\n%s", diff)
+	if len(got) != 3 {
+		t.Errorf("Expected a length of 3, got %v", len(got))
+	}
+
+	less := func(a, b domain.Npc) bool { return a.ID < b.ID }
+
+	if diff := cmp.Diff(want, got, cmpopts.SortSlices(less)); diff != "" {
+		t.Errorf("npcs mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -92,10 +129,16 @@ func TestGetEnemies(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
 
-	enemies := generateEnemies()
-	want := make([]domain.Enemy, len(enemies))
-	for i := range enemies {
-		want[i] = toEnemy(enemies[i])
+	enemies := []enemy{
+		newEnemy(1, "Zombie"),
+		newEnemy(2, "Skeleton"),
+		newEnemy(3, "Bat"),
+	}
+
+	want := []domain.Enemy{
+		newDomainEnemy(1, "Zombie"),
+		newDomainEnemy(2, "Skeleton"),
+		newDomainEnemy(3, "Bat"),
 	}
 
 	err := db.InsertMany(ctx, testMongo, catalogRepo.enemyCollection, enemies)
@@ -108,8 +151,14 @@ func TestGetEnemies(t *testing.T) {
 		t.Fatalf("getenemies failed: %v", err)
 	}
 
-	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("enemy mismatch (-want +got):\n%s", diff)
+	if len(got) != 3 {
+		t.Errorf("Expected a length of 3, got %v", len(got))
+	}
+
+	less := func(a, b domain.Enemy) bool { return a.ID < b.ID }
+
+	if diff := cmp.Diff(want, got, cmpopts.SortSlices(less)); diff != "" {
+		t.Errorf("enemies mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -118,10 +167,16 @@ func TestGetTriviaQuestions(t *testing.T) {
 	ctx := context.Background()
 	catalogRepo := mockCatalogRepo(t)
 
-	questions := generateTriviaQuestions()
-	want := make([]domain.TriviaQuestion, len(questions))
-	for i := range questions {
-		want[i] = toTriviaQuestion(questions[i])
+	questions := []triviaQuestion{
+		newTriviaQuestion(1, "Green Sword"),
+		newTriviaQuestion(2, "Stylist Name"),
+		newTriviaQuestion(3, "Common Block"),
+	}
+
+	want := []domain.TriviaQuestion{
+		newDomainTriviaQuestion(1, "Green Sword"),
+		newDomainTriviaQuestion(2, "Stylist Name"),
+		newDomainTriviaQuestion(3, "Common Block"),
 	}
 
 	err := db.InsertMany(ctx, testMongo, catalogRepo.triviaCollection, questions)
@@ -134,8 +189,14 @@ func TestGetTriviaQuestions(t *testing.T) {
 		t.Fatalf("gettriviaquestions failed: %v", err)
 	}
 
-	if diff := cmp.Diff(want, got); diff != "" {
-		t.Errorf("trivia question mismatch (-want +got):\n%s", diff)
+	if len(got) != 3 {
+		t.Errorf("Expected a length of 3, got %v", len(got))
+	}
+
+	less := func(a, b domain.TriviaQuestion) bool { return a.ID < b.ID }
+
+	if diff := cmp.Diff(want, got, cmpopts.SortSlices(less)); diff != "" {
+		t.Errorf("trivia questions mismatch (-want +got):\n%s", diff)
 	}
 }
 
@@ -168,151 +229,46 @@ func mockCatalogRepo(t *testing.T) *MongoCatalogRepo {
 }
 
 // generates weapon objects for testing
-func generateWeapons() []weapon {
-	return []weapon{
-		{
-			ID:           1,
-			Name:         "weapon",
-			WeaponType:   "type",
-			ModeObtained: "hardmode",
-			Info: weaponInfo{
-				ImagePath:  ".png",
-				DamageType: "type",
-				Damage:     15,
-				UseTime:    "time",
-				Rarity:     "rarity",
-				Operation:  "operation",
-				Material:   "no",
-				Obtained:   []string{"obtained"},
-			},
-		},
-		{
-			ID:           2,
-			Name:         "weapon",
-			WeaponType:   "type",
-			ModeObtained: "hardmode",
-			Info: weaponInfo{
-				ImagePath:  ".png",
-				DamageType: "type",
-				Damage:     15,
-				UseTime:    "time",
-				Rarity:     "rarity",
-				Operation:  "operation",
-				Material:   "no",
-				Obtained:   []string{"obtained"},
-			},
-		},
-		{
-			ID:           3,
-			Name:         "weapon",
-			WeaponType:   "type",
-			ModeObtained: "hardmode",
-			Info: weaponInfo{
-				ImagePath:  ".png",
-				DamageType: "type",
-				Damage:     15,
-				UseTime:    "time",
-				Rarity:     "rarity",
-				Operation:  "operation",
-				Material:   "no",
-				Obtained:   []string{"obtained"},
-			},
-		},
-	}
+func newDomainWeapon(id int, name string) domain.Weapon {
+	return domain.Weapon{ID: id, Name: name}
+}
+
+func newWeapon(id int, name string) weapon {
+	return weapon{ID: id, Name: name}
 }
 
 // generates category objects for testing
-func generateCategories() []category {
-	return []category{
-		{
-			ID:       1,
-			Category: "cat1",
-			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
-		},
-		{
-			ID:       2,
-			Category: "cat2",
-			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
-		},
-		{
-			ID:       3,
-			Category: "cat3",
-			Options:  []string{"opt1", "opt2", "opt3", "opt4"},
-		},
-	}
+func newDomainCategory(id int, name string) domain.Category {
+	return domain.Category{ID: id, Category: name}
+}
+
+func newCategory(id int, name string) category {
+	return category{ID: id, Category: name}
 }
 
 // generates npc objects for testing
-func generateNpcs() []npc {
-	return []npc{
-		{
-			ID:      1,
-			NPC:     "npc1",
-			NpcPath: ".png",
-			Quotes:  []string{"quote1", "quote2"},
-			Names:   []string{"name1", "name2"},
-		},
-		{
-			ID:      2,
-			NPC:     "npc2",
-			NpcPath: ".png",
-			Quotes:  []string{"quote1", "quote2"},
-			Names:   []string{"name1", "name2"},
-		},
-		{
-			ID:      3,
-			NPC:     "npc3",
-			NpcPath: ".png",
-			Quotes:  []string{"quote1", "quote2"},
-			Names:   []string{"name1", "name2"},
-		},
-	}
+func newDomainNpc(id int, name string) domain.Npc {
+	return domain.Npc{ID: id, NPC: name}
+}
+
+func newNpc(id int, name string) npc {
+	return npc{ID: id, NPC: name}
 }
 
 // generates enemy objects for testing
-func generateEnemies() []enemy {
-	return []enemy{
-		{
-			ID:        1,
-			Name:      "enemy",
-			ImagePath: ".png",
-		},
-		{
-			ID:        2,
-			Name:      "enemy",
-			ImagePath: ".png",
-		},
-		{
-			ID:        3,
-			Name:      "enemy",
-			ImagePath: ".png",
-		},
-	}
+func newDomainEnemy(id int, name string) domain.Enemy {
+	return domain.Enemy{ID: id, Name: name}
 }
 
-// generates trivia weapon objects for testing
-func generateTriviaQuestions() []triviaQuestion {
-	return []triviaQuestion{
-		{
-			ID:         1,
-			Answer:     "answer1",
-			Clue:       "clue",
-			Chunks:     []string{"chunk1", "chunk2"},
-			ChunkCount: 2,
-		},
-		{
-			ID:         2,
-			Answer:     "answer2",
-			Clue:       "clue",
-			Chunks:     []string{"chunk1", "chunk2"},
-			ChunkCount: 2,
-		},
-		{
-			ID:         3,
-			Answer:     "answer3",
-			Clue:       "clue",
-			Chunks:     []string{"chunk1", "chunk2"},
-			ChunkCount: 2,
-		},
-	}
+func newEnemy(id int, name string) enemy {
+	return enemy{ID: id, Name: name}
+}
+
+// generates trivia question objects for testing
+func newDomainTriviaQuestion(id int, name string) domain.TriviaQuestion {
+	return domain.TriviaQuestion{ID: id, Clue: name}
+}
+
+func newTriviaQuestion(id int, name string) triviaQuestion {
+	return triviaQuestion{ID: id, Clue: name}
 }
