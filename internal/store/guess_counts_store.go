@@ -72,6 +72,7 @@ func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.DailySlashCount-- // roll back on failure
+		s.mu.Unlock()
 		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
 	}
 
@@ -84,7 +85,7 @@ func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (
 		Count:    count,
 	})
 
-	return s.guessCountsCache.DailySlashCount, nil
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) (int, error) {
@@ -94,6 +95,7 @@ func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) 
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.ConnectionsCount-- // roll back on failure
+		s.mu.Unlock()
 		return 0, fmt.Errorf("increment-connections-count: %w", err)
 	}
 
@@ -106,7 +108,7 @@ func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) 
 		Count:    count,
 	})
 
-	return s.guessCountsCache.ConnectionsCount, nil
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) (int, error) {
@@ -116,6 +118,7 @@ func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) 
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.GuessTheNpcCount-- // roll back on failure
+		s.mu.Unlock()
 		return 0, fmt.Errorf("increment-guess-the-npc-count: %w", err)
 	}
 
@@ -128,7 +131,7 @@ func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) 
 		Count:    count,
 	})
 
-	return s.guessCountsCache.GuessTheNpcCount, nil
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int, error) {
@@ -138,6 +141,7 @@ func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.HangmanCount-- // roll back on failure
+		s.mu.Unlock()
 		return 0, fmt.Errorf("increment-hangman-count: %w", err)
 	}
 
@@ -150,7 +154,7 @@ func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int
 		Count:    count,
 	})
 
-	return s.guessCountsCache.HangmanCount, nil
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) (int, error) {
@@ -160,6 +164,7 @@ func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) 
 
 	if err := s.answerRepo.UpsertGuessCounts(ctx, &s.guessCountsCache); err != nil {
 		s.guessCountsCache.TerraTriviaCount-- // roll back on failure
+		s.mu.Unlock()
 		return 0, fmt.Errorf("increment-terratrivia-count: %w", err)
 	}
 
@@ -172,5 +177,5 @@ func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) 
 		Count:    count,
 	})
 
-	return s.guessCountsCache.TerraTriviaCount, nil
+	return count, nil
 }
