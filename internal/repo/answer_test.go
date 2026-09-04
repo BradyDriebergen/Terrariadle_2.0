@@ -3,6 +3,7 @@ package repo
 import (
 	"context"
 	"terrariadle/internal/db"
+	"terrariadle/internal/domain"
 	"terrariadle/internal/testutils"
 	"testing"
 
@@ -15,7 +16,7 @@ func TestGetAnswerData(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	answers := newAnswerData(1)
-	want := toAnswerRef(answers)
+	want := newAnswerRef(1)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.answerCollection, db.Filter{"_id": 1}, answers)
 	if err != nil {
@@ -37,14 +38,18 @@ func TestUpsertAnswerData(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	answers := []answerData{
+	answers := []domain.AnswerRefs{
+		newAnswerRef(1),
+		newAnswerRef(2),
+	}
+
+	want := []answerData{
 		newAnswerData(1),
 		newAnswerData(2),
 	}
 
 	for i := range answers {
-		ref := toAnswerRef(answers[i])
-		err := answerRepo.UpsertAnswerData(ctx, &ref)
+		err := answerRepo.UpsertAnswerData(ctx, &answers[i])
 		if err != nil {
 			t.Fatalf("upsertanswerdata failed: %v", err)
 		}
@@ -54,7 +59,7 @@ func TestUpsertAnswerData(t *testing.T) {
 			t.Fatalf("findone failed: %v", err)
 		}
 
-		if diff := cmp.Diff(answers[i], *got); diff != "" {
+		if diff := cmp.Diff(want[i], *got); diff != "" {
 			t.Errorf("answer mismatch (-want +got):\n%s", diff)
 		}
 	}
@@ -75,7 +80,7 @@ func TestGetGuessCounts(t *testing.T) {
 	answerRepo := mockAnswerRepo(t)
 
 	guessCounts := newGuessCounts(1)
-	want := toPlayerGuessCounts(guessCounts)
+	want := newPlayerGuessCounts(1)
 
 	err := db.Upsert(ctx, testMongo, answerRepo.guessCountCollection, db.Filter{"_id": 1}, guessCounts)
 	if err != nil {
@@ -97,14 +102,18 @@ func TestUpsertGuessCounts(t *testing.T) {
 	ctx := context.Background()
 	answerRepo := mockAnswerRepo(t)
 
-	counts := []guessCounts{
+	counts := []domain.PlayerGuessCounts{
+		newPlayerGuessCounts(1),
+		newPlayerGuessCounts(2),
+	}
+
+	want := []guessCounts{
 		newGuessCounts(1),
 		newGuessCounts(2),
 	}
 
 	for i := range counts {
-		ref := toPlayerGuessCounts(counts[i])
-		err := answerRepo.UpsertGuessCounts(ctx, &ref)
+		err := answerRepo.UpsertGuessCounts(ctx, &counts[i])
 		if err != nil {
 			t.Fatalf("upsertguesscounts failed: %v", err)
 		}
@@ -114,7 +123,7 @@ func TestUpsertGuessCounts(t *testing.T) {
 			t.Fatalf("findone failed: %v", err)
 		}
 
-		if diff := cmp.Diff(counts[i], *got); diff != "" {
+		if diff := cmp.Diff(want[i], *got); diff != "" {
 			t.Errorf("guess counts mismatch (-want +got):\n%s", diff)
 		}
 	}
@@ -156,6 +165,7 @@ func newAnswerData(id int) answerData {
 		},
 		Connections: connectionData{
 			CategoryIDs: []int{id},
+			Options:     []connectionOption{},
 		},
 		GuessTheNpc: npcData{
 			NpcID: id,
@@ -171,9 +181,42 @@ func newAnswerData(id int) answerData {
 	}
 }
 
+func newAnswerRef(id int) domain.AnswerRefs {
+	return domain.AnswerRefs{
+		DailySlash: domain.WeaponRef{
+			CurrentWeaponID: id,
+		},
+		Connections: domain.ConnectionRef{
+			CategoryIDs: []int{id},
+			Options:     []domain.ConnectionOption{},
+		},
+		GuessTheNpc: domain.NpcRef{
+			NpcID: id,
+		},
+		Hangman: domain.HangmanRef{
+			EnemyID: id,
+		},
+		TerraTrivia: domain.TerraTriviaRef{
+			QuestionIDs: []int{id},
+		},
+		ResetTime:     testutils.TestingTime(),
+		NextResetTime: testutils.TestingTime(),
+	}
+}
+
 // Returns unique guess counts
 func newGuessCounts(num int) guessCounts {
 	return guessCounts{
+		DailySlashCount:  num,
+		ConnectionsCount: num,
+		GuessTheNpcCount: num,
+		HangmanCount:     num,
+		TerraTriviaCount: num,
+	}
+}
+
+func newPlayerGuessCounts(num int) domain.PlayerGuessCounts {
+	return domain.PlayerGuessCounts{
 		DailySlashCount:  num,
 		ConnectionsCount: num,
 		GuessTheNpcCount: num,
