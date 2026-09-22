@@ -14,29 +14,17 @@ import (
 func TestGetWeapons(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	weapons := fakeRepo.Weapons
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
 
 	got := store.GetWeapons()
 
-	// Conversion from a map -> slice doesn't keep order
-	// This helper sort function sorts the slice, ensuring all the data is present
+	// This helper sort function sorts the slice, used in cmpopts.SortSlice
 	less := func(a, b domain.Weapon) bool { return a.ID < b.ID }
 
 	if diff := cmp.Diff(weapons, got, cmpopts.SortSlices(less)); diff != "" {
@@ -48,21 +36,10 @@ func TestGetWeapons(t *testing.T) {
 func TestGetWeapon(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	weapons := fakeRepo.Weapons
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -81,29 +58,17 @@ func TestGetWeapon(t *testing.T) {
 func TestGetCategories(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	categories := fakeRepo.Categories
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
 
 	got := store.GetCategories()
 
-	// Conversion from a map -> slice doesn't keep order
-	// This helper sort function sorts the slice, ensuring all the data is present
+	// This helper sort function sorts the slice, used in cmpopts.SortSlice
 	less := func(a, b domain.Category) bool { return a.ID < b.ID }
 
 	if diff := cmp.Diff(categories, got, cmpopts.SortSlices(less)); diff != "" {
@@ -115,21 +80,10 @@ func TestGetCategories(t *testing.T) {
 func TestGetCategory(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	categories := fakeRepo.Categories
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -148,29 +102,17 @@ func TestGetCategory(t *testing.T) {
 func TestGetNpcs(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	npcs := fakeRepo.Npcs
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
 
 	got := store.GetNpcs()
 
-	// Conversion from a map -> slice doesn't keep order
-	// This helper sort function sorts the slice, ensuring all the data is present
+	// This helper sort function sorts the slice, used in cmpopts.SortSlice
 	less := func(a, b domain.Npc) bool { return a.ID < b.ID }
 
 	if diff := cmp.Diff(npcs, got, cmpopts.SortSlices(less)); diff != "" {
@@ -182,21 +124,10 @@ func TestGetNpcs(t *testing.T) {
 func TestGetNpc(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	npcs := fakeRepo.Npcs
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -215,29 +146,17 @@ func TestGetNpc(t *testing.T) {
 func TestGetEnemies(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	enemies := fakeRepo.Enemies
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
 
 	got := store.GetEnemies()
 
-	// Conversion from a map -> slice doesn't keep order
-	// This helper sort function sorts the slice, ensuring all the data is present
+	// This helper sort function sorts the slice, used in cmpopts.SortSlice
 	less := func(a, b domain.Enemy) bool { return a.ID < b.ID }
 
 	if diff := cmp.Diff(enemies, got, cmpopts.SortSlices(less)); diff != "" {
@@ -249,21 +168,10 @@ func TestGetEnemies(t *testing.T) {
 func TestGetEnemy(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	enemies := fakeRepo.Enemies
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -282,29 +190,17 @@ func TestGetEnemy(t *testing.T) {
 func TestGetTriviaQuestions(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	triviaQuestions := fakeRepo.TriviaQuestions
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
 
 	got := store.GetTriviaQuestions()
 
-	// Conversion from a map -> slice doesn't keep order
-	// This helper sort function sorts the slice, ensuring all the data is present
+	// This helper sort function sorts the slice, used in cmpopts.SortSlice
 	less := func(a, b domain.TriviaQuestion) bool { return a.ID < b.ID }
 
 	if diff := cmp.Diff(triviaQuestions, got, cmpopts.SortSlices(less)); diff != "" {
@@ -316,21 +212,10 @@ func TestGetTriviaQuestions(t *testing.T) {
 func TestGetTriviaQuestion(t *testing.T) {
 	ctx := context.Background()
 
-	weapons := testutils.GenerateWeapons()
-	npcs := testutils.GenerateNpcs()
-	enemies := testutils.GenerateEnemies()
-	categories := testutils.GenerateCategories()
-	triviaQuestions := testutils.GenerateTriviaQuestions()
+	fakeRepo := testutils.GenerateFakeCatalogRepo()
+	triviaQuestions := fakeRepo.TriviaQuestions
 
-	fakeRepo := &testutils.FakeCatalogRepo{
-		Weapons:         weapons,
-		Npcs:            npcs,
-		Enemies:         enemies,
-		Categories:      categories,
-		TriviaQuestions: triviaQuestions,
-	}
-
-	store, err := NewCatalogStore(ctx, fakeRepo)
+	store, err := NewCatalogStore(ctx, &fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}

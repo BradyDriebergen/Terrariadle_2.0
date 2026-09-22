@@ -13,30 +13,16 @@ import (
 func TestGetGuessCounts(t *testing.T) {
 	ctx := context.Background()
 
-	fakeRepo := &testutils.FakeAnswerRepo{
-		GuessCounts: domain.PlayerGuessCounts{
-			DailySlashCount:  1,
-			ConnectionsCount: 1,
-			GuessTheNpcCount: 1,
-			HangmanCount:     1,
-			TerraTriviaCount: 1,
-		},
-	}
+	fakeRepo := testutils.GenerateFakeAnswerRepo()
 
-	store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
+	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}
 
 	got := store.GetGuessCounts()
 
-	want := domain.PlayerGuessCounts{
-		DailySlashCount:  1,
-		ConnectionsCount: 1,
-		GuessTheNpcCount: 1,
-		HangmanCount:     1,
-		TerraTriviaCount: 1,
-	}
+	want := fakeRepo.GuessCounts
 
 	if diff := cmp.Diff(want, got); diff != "" {
 		t.Errorf("guess count store mismatch (-want +got):\n%s", diff)
@@ -47,17 +33,9 @@ func TestGetGuessCounts(t *testing.T) {
 func TestResetGuessCounts(t *testing.T) {
 	ctx := context.Background()
 
-	fakeRepo := &testutils.FakeAnswerRepo{
-		GuessCounts: domain.PlayerGuessCounts{
-			DailySlashCount:  1,
-			ConnectionsCount: 1,
-			GuessTheNpcCount: 1,
-			HangmanCount:     1,
-			TerraTriviaCount: 1,
-		},
-	}
+	fakeRepo := testutils.GenerateFakeAnswerRepo()
 
-	store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
+	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}
@@ -68,6 +46,8 @@ func TestResetGuessCounts(t *testing.T) {
 	}
 
 	got := store.guessCountsCache
+
+	// Reseted guess counts
 	want := domain.PlayerGuessCounts{
 		DailySlashCount:  0,
 		ConnectionsCount: 0,
@@ -86,65 +66,78 @@ func TestResetGuessCounts(t *testing.T) {
 func TestIncrementGuessCounts(t *testing.T) {
 	ctx := context.Background()
 
+	fakeRepo := testutils.GenerateFakeAnswerRepo()
+
+	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
+	if err != nil {
+		t.Fatalf("newanswerstore failed: %v", err)
+	}
+
 	tests := []struct {
 		name      string
-		increment func(store *CachedGuessCountsStore, ctx context.Context) (int, error)
+		count     func() int
+		increment func(ctx context.Context) (int, error)
 	}{
 		{
 			name: "DailySlash",
-			increment: func(s *CachedGuessCountsStore, ctx context.Context) (int, error) {
-				return s.IncrementDailySlashCount(ctx)
+			count: func() int {
+				return store.GetGuessCounts().DailySlashCount
+			},
+			increment: func(ctx context.Context) (int, error) {
+				return store.IncrementDailySlashCount(ctx)
 			},
 		},
 		{
 			name: "Connections",
-			increment: func(s *CachedGuessCountsStore, ctx context.Context) (int, error) {
-				return s.IncrementConnectionsCount(ctx)
+			count: func() int {
+				return store.GetGuessCounts().ConnectionsCount
+			},
+			increment: func(ctx context.Context) (int, error) {
+				return store.IncrementConnectionsCount(ctx)
 			},
 		},
 		{
 			name: "GuessTheNpc",
-			increment: func(s *CachedGuessCountsStore, ctx context.Context) (int, error) {
-				return s.IncrementGuessTheNpcCount(ctx)
+			count: func() int {
+				return store.GetGuessCounts().GuessTheNpcCount
+			},
+			increment: func(ctx context.Context) (int, error) {
+				return store.IncrementGuessTheNpcCount(ctx)
 			},
 		},
 		{
 			name: "Hangman",
-			increment: func(s *CachedGuessCountsStore, ctx context.Context) (int, error) {
-				return s.IncrementHangmanCount(ctx)
+			count: func() int {
+				return store.GetGuessCounts().HangmanCount
+			},
+			increment: func(ctx context.Context) (int, error) {
+				return store.IncrementHangmanCount(ctx)
 			},
 		},
 		{
 			name: "TerraTrivia",
-			increment: func(s *CachedGuessCountsStore, ctx context.Context) (int, error) {
-				return s.IncrementTerraTriviaCount(ctx)
+			count: func() int {
+				return store.GetGuessCounts().TerraTriviaCount
+			},
+			increment: func(ctx context.Context) (int, error) {
+				return store.IncrementTerraTriviaCount(ctx)
 			},
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			fakeRepo := &testutils.FakeAnswerRepo{
-				GuessCounts: domain.PlayerGuessCounts{
-					DailySlashCount:  1,
-					ConnectionsCount: 1,
-					GuessTheNpcCount: 1,
-					HangmanCount:     1,
-					TerraTriviaCount: 1,
-				},
-			}
+			want := tt.count() + 1
 
-			store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
-			if err != nil {
-				t.Fatalf("newanswerstore failed: %v", err)
-			}
-
-			got, err := tt.increment(store, ctx)
+			got, err := tt.increment(ctx)
 			if err != nil {
 				t.Fatalf("increment failed: %v", err)
 			}
-			if got != 2 {
-				t.Errorf("Expected 2, got: %d", got)
+			if got != want {
+				t.Errorf("Expected returned value %d, got: %d", want, got)
+			}
+			if got != tt.count() {
+				t.Errorf("Expected actual value %d, got: %d", want, got)
 			}
 		})
 	}
