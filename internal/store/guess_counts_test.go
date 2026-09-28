@@ -15,7 +15,7 @@ func TestGetGuessCounts(t *testing.T) {
 
 	fakeRepo := testutils.GenerateFakeAnswerRepo()
 
-	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
+	store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}
@@ -35,7 +35,7 @@ func TestResetGuessCounts(t *testing.T) {
 
 	fakeRepo := testutils.GenerateFakeAnswerRepo()
 
-	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
+	store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}
@@ -68,7 +68,7 @@ func TestIncrementGuessCounts(t *testing.T) {
 
 	fakeRepo := testutils.GenerateFakeAnswerRepo()
 
-	store, err := NewGuessCountStore(ctx, &fakeRepo, &domain.Broker{})
+	store, err := NewGuessCountStore(ctx, fakeRepo, &domain.Broker{})
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}

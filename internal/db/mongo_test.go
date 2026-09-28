@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"terrariadle/internal/db"
+	"terrariadle/internal/domain"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
@@ -77,7 +78,7 @@ func TestFindOne(t *testing.T) {
 		wantErr error
 	}{
 		{name: "existing puzzle", seed: &Puzzle{ID: "1", Mode: "Connections"}, id: "1"},
-		{name: "nonexistent puzzle", seed: nil, id: "does-not-exist", wantErr: db.ErrNotFound},
+		{name: "nonexistent puzzle", seed: nil, id: "does-not-exist", wantErr: domain.MongoErrNotFound},
 	}
 
 	for _, tt := range tests {

@@ -43,7 +43,7 @@ func (s *CachedUserStore) GetOrCreateUser(ctx context.Context, userID string) (d
 
 	user, err := s.userRepo.GetUser(ctx, userID)
 	if err != nil {
-		if errors.Is(err, repo.ErrNotFound) {
+		if errors.Is(err, domain.MongoErrNotFound) {
 			// If no user is found, make a new one and put it in the cache
 			user = createNewUser(userID)
 		} else {

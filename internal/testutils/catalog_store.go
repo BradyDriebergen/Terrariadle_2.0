@@ -86,14 +86,14 @@ func (f *FakeCatalogStore) GetTriviaQuestion(id int) (domain.TriviaQuestion, boo
 	return domain.TriviaQuestion{}, false
 }
 
-func GenerateFakeCatalogStore() FakeCatalogStore {
+func GenerateFakeCatalogStore() *FakeCatalogStore {
 	weapons := GenerateWeapons()
 	npcs := GenerateNpcs()
 	enemies := GenerateEnemies()
 	categories := GenerateCategories()
 	triviaQuestions := GenerateTriviaQuestions()
 
-	return FakeCatalogStore{
+	return &FakeCatalogStore{
 		Weapons:         weapons,
 		Npcs:            npcs,
 		Enemies:         enemies,

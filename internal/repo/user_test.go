@@ -23,7 +23,7 @@ func TestGetUser(t *testing.T) {
 		wantErr error
 	}{
 		{name: "ExistingUser", seed: &user, id: user.UserID},
-		{name: "NonExistingUser", seed: nil, id: "does-not-exist", wantErr: ErrNotFound},
+		{name: "NonExistingUser", seed: nil, id: "does-not-exist", wantErr: domain.MongoErrNotFound},
 	}
 
 	for _, tt := range tests {

@@ -17,7 +17,7 @@ func TestGetWeapons(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	weapons := fakeRepo.Weapons
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -39,7 +39,7 @@ func TestGetWeapon(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	weapons := fakeRepo.Weapons
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -61,7 +61,7 @@ func TestGetCategories(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	categories := fakeRepo.Categories
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -83,7 +83,7 @@ func TestGetCategory(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	categories := fakeRepo.Categories
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -105,7 +105,7 @@ func TestGetNpcs(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	npcs := fakeRepo.Npcs
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -127,7 +127,7 @@ func TestGetNpc(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	npcs := fakeRepo.Npcs
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -149,7 +149,7 @@ func TestGetEnemies(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	enemies := fakeRepo.Enemies
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -171,7 +171,7 @@ func TestGetEnemy(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	enemies := fakeRepo.Enemies
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -193,7 +193,7 @@ func TestGetTriviaQuestions(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	triviaQuestions := fakeRepo.TriviaQuestions
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}
@@ -215,7 +215,7 @@ func TestGetTriviaQuestion(t *testing.T) {
 	fakeRepo := testutils.GenerateFakeCatalogRepo()
 	triviaQuestions := fakeRepo.TriviaQuestions
 
-	store, err := NewCatalogStore(ctx, &fakeRepo)
+	store, err := NewCatalogStore(ctx, fakeRepo)
 	if err != nil {
 		t.Fatalf("newcatalogstore failed: %v", err)
 	}

@@ -18,7 +18,7 @@ func TestGetAnswers(t *testing.T) {
 
 	weapons := fakeStore.Weapons
 
-	store, err := NewAnswerStore(ctx, &fakeRepo, &fakeStore)
+	store, err := NewAnswerStore(ctx, fakeRepo, fakeStore)
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}
@@ -45,7 +45,7 @@ func TestUpsertAnswers(t *testing.T) {
 
 	weapons := fakeStore.Weapons
 
-	store, err := NewAnswerStore(ctx, &fakeRepo, &fakeStore)
+	store, err := NewAnswerStore(ctx, fakeRepo, fakeStore)
 	if err != nil {
 		t.Fatalf("newanswerstore failed: %v", err)
 	}

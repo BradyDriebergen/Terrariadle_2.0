@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"terrariadle/internal/domain"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -17,8 +18,6 @@ type MongoDB struct {
 }
 
 type Filter map[string]any
-
-var ErrNotFound = mongo.ErrNoDocuments
 
 func Connect(uri, dbName string) (*MongoDB, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -44,7 +43,7 @@ func FindOne[T any](ctx context.Context, m *MongoDB, collectionName string, filt
 	err := collection.FindOne(ctx, bson.M(filter)).Decode(&result)
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
-			return nil, ErrNotFound
+			return nil, domain.MongoErrNotFound
 		}
 		return nil, fmt.Errorf("findone %s: %w", collectionName, err)
 	}

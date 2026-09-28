@@ -1,7 +1,6 @@
 package repo
 
 import (
-	"errors"
 	"terrariadle/internal/domain"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -57,6 +56,3 @@ type hangmanGame struct {
 type terraTriviaGame struct {
 	Game game `bson:"game"`
 }
-
-// Error for not found documents
-var ErrNotFound = errors.New("not found")

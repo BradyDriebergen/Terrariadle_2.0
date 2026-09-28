@@ -1,20 +1,22 @@
 package domain
 
+import "errors"
+
 // errors/errors.go (or domain/errors.go)
 type ErrCode string
 
 const (
 	ErrUsrNotFound  ErrCode = "USER_NOT_FOUND"
 	ErrNotFound     ErrCode = "NOT_FOUND"
-	ErrConflict     ErrCode = "CONFLICT" // e.g. already guessed today
+	ErrConflict     ErrCode = "CONFLICT"
 	ErrInvalidInput ErrCode = "INVALID_INPUT"
-	ErrInternal     ErrCode = "INTERNAL" // catch-all, never expose details
+	ErrInternal     ErrCode = "INTERNAL"
 )
 
 type AppError struct {
 	Code    ErrCode
-	Message string // safe to send to client
-	Err     error  // internal cause, log this, never send it
+	Message string
+	Err     error
 }
 
 func (e *AppError) Error() string { return e.Message }
@@ -40,3 +42,6 @@ func InvalidInput(msg string, cause error) *AppError {
 func Internal(msg string, cause error) *AppError {
 	return &AppError{Code: ErrInternal, Message: msg, Err: cause}
 }
+
+// Error used for if a document doesn't exist in MongoDB
+var MongoErrNotFound = errors.New("not found")

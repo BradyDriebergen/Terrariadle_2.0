@@ -45,8 +45,8 @@ func (f *FakeAnswerRepo) UpsertGuessCounts(ctx context.Context, guessCounts *dom
 	return nil
 }
 
-func GenerateFakeAnswerRepo() FakeAnswerRepo {
-	return FakeAnswerRepo{
+func GenerateFakeAnswerRepo() *FakeAnswerRepo {
+	return &FakeAnswerRepo{
 		AnswerData: domain.AnswerRefs{
 			DailySlash: domain.WeaponRef{
 				CurrentWeaponID: 1,
