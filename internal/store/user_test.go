@@ -59,25 +59,40 @@ func TestGetUser(t *testing.T) {
 	ctx := context.Background()
 
 	fakeRepo := testutils.GenerateFakeUserRepo()
-	testUserId := "123"
-	want := testutils.GenerateUser(testUserId)
 
 	store := NewUserStore(fakeRepo)
 
-	_, err := store.GetUser(ctx, testUserId)
-	if !errors.Is(err, domain.MongoErrNotFound) {
-		t.Fatalf("getuser failed: %v", err)
+	tests := []struct {
+		name   string
+		userId string
+		want   domain.User
+		err    error
+	}{
+		{name: "error no user", userId: "1", want: domain.User{}, err: domain.MongoErrNotFound},
+		{name: "get user", userId: "2", want: testutils.GenerateUser("2"), err: nil},
 	}
 
-	store.userCache[testUserId] = want
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if tt.err == nil {
+				store.userCache[tt.userId] = tt.want
+			}
 
-	got, err := store.GetUser(ctx, testUserId)
-	if err != nil {
-		t.Fatalf("getuser failed: %v", err)
-	}
+			got, err := store.GetUser(ctx, tt.userId)
+			if tt.err != nil {
+				if !errors.Is(err, tt.err) {
+					t.Fatalf("got err %v, want %v", err, tt.err)
+				}
+				return
+			}
+			if err != nil {
+				t.Fatalf("getuser failed: %v", err)
+			}
 
-	if diff := cmp.Diff(want, got, cmpopts.EquateApproxTime(time.Second)); diff != "" {
-		t.Errorf("user store mismatch (-want +got):\n%s", diff)
+			if diff := cmp.Diff(tt.want, got, cmpopts.EquateApproxTime(time.Second)); diff != "" {
+				t.Errorf("user store mismatch (-want +got):\n%s", diff)
+			}
+		})
 	}
 }
 
@@ -105,7 +120,30 @@ func TestUpsertUser(t *testing.T) {
 }
 
 func TestDropAllUsers(t *testing.T) {
+	ctx := context.Background()
 
+	fakeRepo := testutils.GenerateFakeUserRepo()
+	userId := "1"
+
+	store := NewUserStore(fakeRepo)
+
+	_, err := store.GetOrCreateUser(ctx, userId)
+	if err != nil {
+		t.Fatalf("getorcreateuser failed: %v", err)
+	}
+
+	err = store.DropAllUsers(ctx)
+	if err != nil {
+		t.Fatalf("dropallusers failed: %v", err)
+	}
+
+	if fakeRepo.User.UserID == userId {
+		t.Errorf("want \"\", got %v", fakeRepo.User.UserID)
+	}
+
+	if len(store.userCache) != 0 {
+		t.Errorf("want 0, got %v", len(store.userCache))
+	}
 }
 
 func TestFlushDirty(t *testing.T) {
