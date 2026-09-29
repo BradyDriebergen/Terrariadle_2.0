@@ -12,7 +12,7 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
-// Tests if GetOrCreateUser gets existing users and creates new users
+// Tests if function gets existing users and creates new users
 func TestGetOrCreateUser(t *testing.T) {
 	ctx := context.Background()
 
@@ -55,6 +55,7 @@ func TestGetOrCreateUser(t *testing.T) {
 	}
 }
 
+// Tests if getting user returns the user. Throws error otherwise.
 func TestGetUser(t *testing.T) {
 	ctx := context.Background()
 
@@ -96,6 +97,7 @@ func TestGetUser(t *testing.T) {
 	}
 }
 
+// Checks if function successfully creates and updates the user
 func TestUpsertUser(t *testing.T) {
 	ctx := context.Background()
 
@@ -117,8 +119,20 @@ func TestUpsertUser(t *testing.T) {
 	if diff := cmp.Diff(want, store.userCache[testUserId], cmpopts.EquateApproxTime(time.Second)); diff != "" {
 		t.Errorf("user store mismatch (-want +got):\n%s", diff)
 	}
+
+	want.DailySlash.Game.Finished = true
+
+	err = store.UpsertUser(ctx, want)
+	if err != nil {
+		t.Fatalf("upsertuser failed: %v", err)
+	}
+
+	if diff := cmp.Diff(want, store.userCache[testUserId], cmpopts.EquateApproxTime(time.Second)); diff != "" {
+		t.Errorf("user store mismatch (-want +got):\n%s", diff)
+	}
 }
 
+// Checks if dropping all users removes them from the cache and database
 func TestDropAllUsers(t *testing.T) {
 	ctx := context.Background()
 
@@ -146,10 +160,54 @@ func TestDropAllUsers(t *testing.T) {
 	}
 }
 
+// Tests if flushing dirty users updates them in the database
+// and updates their status
 func TestFlushDirty(t *testing.T) {
+	ctx := context.Background()
 
+	fakeRepo := testutils.GenerateFakeUserRepo()
+
+	store := NewUserStore(fakeRepo)
+
+	existingUserId := "1"
+	existingUser := testutils.GenerateUser(existingUserId)
+	existingUser.Dirty = true // Sets user to be flushed
+	store.userCache[existingUserId] = existingUser
+
+	err := store.FlushDirty(ctx)
+	if err != nil {
+		t.Fatalf("flushdirty failed: %v", err)
+	}
+
+	if diff := cmp.Diff(existingUser, fakeRepo.User, cmpopts.EquateApproxTime(time.Second)); diff != "" {
+		t.Errorf("user store mismatch (-want +got):\n%s", diff)
+	}
+
+	if store.userCache[existingUserId].Dirty == true {
+		t.Errorf("Dirty: want false, got %v", store.userCache[existingUserId].Dirty)
+	}
 }
 
+// Tests if evicting stale removes users from the cache that haven't guessed
+// in over an hour
 func TestEvictStale(t *testing.T) {
+	fakeRepo := testutils.GenerateFakeUserRepo()
 
+	store := NewUserStore(fakeRepo)
+
+	userToBeRemovedId := "1"
+	userToBeRemoved := testutils.GenerateUser(userToBeRemovedId)
+	userToBeRemoved.LastSeen = time.Now().Add(-1*time.Hour - time.Minute) // Sets user to be evicted
+	store.userCache[userToBeRemovedId] = userToBeRemoved
+
+	userToKeepId := "2"
+	userToKeep := testutils.GenerateUser(userToKeepId)
+	userToKeep.LastSeen = time.Now() // Sets user to be ignored from being evicted
+	store.userCache[userToKeepId] = userToKeep
+
+	store.EvictStale()
+
+	if len(store.userCache) != 1 {
+		t.Errorf("user cache length wanted 1, got %v", len(store.userCache))
+	}
 }
