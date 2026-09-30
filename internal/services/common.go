@@ -50,7 +50,7 @@ func (s *Common) GetUserFinishedGames(ctx context.Context, userId string) UserGa
 	}
 
 	return UserGameStatuses{
-		DaliySlash:  user.DailySlash.Game.Finished,
+		DailySlash:  user.DailySlash.Game.Finished,
 		Connections: user.Connections.Game.Finished,
 		GuessTheNpc: user.GuessTheNPC.Game.Finished,
 		Hangman:     user.Hangman.Game.Finished,

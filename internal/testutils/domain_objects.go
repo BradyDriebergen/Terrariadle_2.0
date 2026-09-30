@@ -3,6 +3,7 @@ package testutils
 import (
 	"strconv"
 	"terrariadle/internal/domain"
+	"time"
 )
 
 func GenerateWeapon(id int) domain.Weapon {
@@ -98,4 +99,37 @@ func GenerateTriviaQuestions() []domain.TriviaQuestion {
 		questions[i] = GenerateTriviaQuestion(i)
 	}
 	return questions
+}
+
+func GenerateUser(id string) domain.User {
+	emptyGame := domain.Game{
+		Guesses:  []int{},
+		Finished: false,
+		Position: 0,
+	}
+
+	return domain.User{
+		UserID: id,
+		DailySlash: domain.DailySlashGame{
+			Game:   emptyGame,
+			Checks: []domain.WeaponChecks{},
+		},
+		Connections: domain.ConnectionGame{
+			Game:     emptyGame,
+			Attempts: 4,
+		},
+		GuessTheNPC: domain.GuessTheNpcGame{
+			Game:        emptyGame,
+			GuessedName: "",
+		},
+		Hangman: domain.HangmanGame{
+			Game:     emptyGame,
+			Attempts: 6,
+		},
+		TerraTrivia: domain.TerraTriviaGame{
+			Game: emptyGame,
+		},
+		LastSeen: time.Now(),
+		Dirty:    true,
+	}
 }
