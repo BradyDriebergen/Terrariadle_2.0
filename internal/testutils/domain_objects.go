@@ -37,7 +37,12 @@ func GenerateCategory(id int) domain.Category {
 	return domain.Category{
 		ID:       id,
 		Category: "cat" + strconv.Itoa(id),
-		Options:  []string{"opt1", "opt2", "opt3", "opt4"},
+		Options: []string{
+			"opt1_" + strconv.Itoa(id),
+			"opt2_" + strconv.Itoa(id),
+			"opt3_" + strconv.Itoa(id),
+			"opt4_" + strconv.Itoa(id),
+		},
 	}
 }
 
@@ -131,5 +136,26 @@ func GenerateUser(id string) domain.User {
 		},
 		LastSeen: time.Now(),
 		Dirty:    true,
+	}
+}
+
+func GenerateAnswers() domain.DailyAnswers {
+	currentWeapon := GenerateWeapon(1)
+	prevWeapon := GenerateWeapon(2)
+
+	npc := GenerateNpc(1)
+
+	return domain.DailyAnswers{
+		DailySlash: domain.WeaponAnswer{
+			CurrentWeapon: currentWeapon,
+			PrevWeapon:    prevWeapon,
+		},
+		Connections: domain.ConnectionAnswer{},
+		GuessTheNpc: domain.NpcAnswer{
+			NpcID: npc.ID,
+			Npc:   npc.NPC,
+			Quote: npc.Quotes[0],
+			Name:  npc.Names[0],
+		},
 	}
 }
