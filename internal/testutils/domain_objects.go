@@ -14,13 +14,13 @@ func GenerateWeapon(id int) domain.Weapon {
 		ModeObtained: "hardmode",
 		Info: domain.WeaponInfo{
 			ImagePath:  ".png",
-			DamageType: "type",
+			DamageType: "Melee",
 			Damage:     15,
-			UseTime:    "time",
-			Rarity:     "rarity",
-			Operation:  "operation",
-			Material:   "no",
-			Obtained:   []string{"obtained"},
+			UseTime:    "Average",
+			Rarity:     "Orange",
+			Operation:  "Manual",
+			Material:   "No",
+			Obtained:   []string{"Crafting"},
 		},
 	}
 }
@@ -47,11 +47,32 @@ func GenerateCategory(id int) domain.Category {
 }
 
 func GenerateCategories() []domain.Category {
-	categories := make([]domain.Category, 3)
-	for i := range 3 {
+	categories := make([]domain.Category, 4)
+	for i := range 4 {
 		categories[i] = GenerateCategory(i)
 	}
 	return categories
+}
+
+func GenerateConnectionsAnswer(categories []domain.Category) domain.ConnectionAnswer {
+	options := []domain.ConnectionOption{}
+	categoryIDs := []int{}
+	for _, cat := range categories {
+		for _, opt := range cat.Options {
+			options = append(options, domain.ConnectionOption{
+				Option:     opt,
+				CategoryID: cat.ID,
+			})
+		}
+		categoryIDs = append(categoryIDs, cat.ID)
+	}
+
+	options = Shuffle(options, 1)
+
+	return domain.ConnectionAnswer{
+		CategoryIDs: categoryIDs,
+		Options:     options,
+	}
 }
 
 func GenerateNpc(id int) domain.Npc {
