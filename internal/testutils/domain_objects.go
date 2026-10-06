@@ -10,8 +10,8 @@ func GenerateWeapon(id int) domain.Weapon {
 	return domain.Weapon{
 		ID:           id,
 		Name:         "weapon" + strconv.Itoa(id),
-		WeaponType:   "type",
-		ModeObtained: "hardmode",
+		WeaponType:   "Sword",
+		ModeObtained: "Hardmode",
 		Info: domain.WeaponInfo{
 			ImagePath:  ".png",
 			DamageType: "Melee",
@@ -120,8 +120,8 @@ func GenerateTriviaQuestion(id int) domain.TriviaQuestion {
 }
 
 func GenerateTriviaQuestions() []domain.TriviaQuestion {
-	questions := make([]domain.TriviaQuestion, 3)
-	for i := range 3 {
+	questions := make([]domain.TriviaQuestion, 7)
+	for i := range 7 {
 		questions[i] = GenerateTriviaQuestion(i)
 	}
 	return questions

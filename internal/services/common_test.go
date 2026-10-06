@@ -50,7 +50,7 @@ func TestGetGuessCount(t *testing.T) {
 			}
 
 			if err != nil {
-				t.Fatalf("GetGuessCount failed: %v", err)
+				t.Fatalf("getguesscount failed: %v", err)
 			}
 			if got != tt.want {
 				t.Errorf("want %v, got %v", tt.want, got)
