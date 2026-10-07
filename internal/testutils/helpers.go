@@ -1,8 +1,10 @@
 package testutils
 
 import (
+	"errors"
 	"math/rand/v2"
 	"slices"
+	"terrariadle/internal/domain"
 	"testing"
 )
 
@@ -25,4 +27,16 @@ func Shuffle[T any](items []T, seed uint64) []T {
 		shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
 	})
 	return shuffled
+}
+
+func AssertErrCode(t *testing.T, err error, want domain.ErrCode) {
+	t.Helper()
+
+	var appErr *domain.AppError
+	if !errors.As(err, &appErr) {
+		t.Fatalf("err = %v, want AppError with code %q", err, want)
+	}
+	if appErr.Code != want {
+		t.Errorf("code = %q, want %q", appErr.Code, want)
+	}
 }

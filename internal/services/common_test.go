@@ -2,7 +2,6 @@ package services
 
 import (
 	"context"
-	"errors"
 	"terrariadle/internal/domain"
 	"terrariadle/internal/testutils"
 	"testing"
@@ -19,39 +18,30 @@ func TestGetGuessCount(t *testing.T) {
 	service := NewSseStream(guessCountStore, userStore)
 
 	tests := []struct {
-		name   string
-		gameId domain.GameMode
-		want   int
-		err    domain.ErrCode
+		name    string
+		gameId  domain.GameMode
+		want    int
+		errCode domain.ErrCode
 	}{
-		{name: "daily slash", gameId: domain.GameModeDailySlash, want: guessCountStore.GuessCounts.DailySlashCount, err: ""},
-		{name: "connections", gameId: domain.GameModeConnections, want: guessCountStore.GuessCounts.ConnectionsCount, err: ""},
-		{name: "guess the npc", gameId: domain.GameModeGuessTheNpc, want: guessCountStore.GuessCounts.GuessTheNpcCount, err: ""},
-		{name: "hangman", gameId: domain.GameModeHangman, want: guessCountStore.GuessCounts.HangmanCount, err: ""},
-		{name: "terratrivia", gameId: domain.GameModeTerraTrivia, want: guessCountStore.GuessCounts.TerraTriviaCount, err: ""},
-		{name: "gamemode not found error", gameId: domain.GameMode("wont_work"), want: 0, err: domain.ErrNotFound},
+		{name: "daily slash", gameId: domain.GameModeDailySlash, want: guessCountStore.GuessCounts.DailySlashCount, errCode: ""},
+		{name: "connections", gameId: domain.GameModeConnections, want: guessCountStore.GuessCounts.ConnectionsCount, errCode: ""},
+		{name: "guess the npc", gameId: domain.GameModeGuessTheNpc, want: guessCountStore.GuessCounts.GuessTheNpcCount, errCode: ""},
+		{name: "hangman", gameId: domain.GameModeHangman, want: guessCountStore.GuessCounts.HangmanCount, errCode: ""},
+		{name: "terratrivia", gameId: domain.GameModeTerraTrivia, want: guessCountStore.GuessCounts.TerraTriviaCount, errCode: ""},
+		{name: "gamemode not found error", gameId: domain.GameMode("wont_work"), want: 0, errCode: domain.ErrNotFound},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := service.GetGuessCount(tt.gameId)
-
-			if tt.err != "" {
-				var appErr *domain.AppError
-
-				if !errors.As(err, &appErr) {
-					t.Fatalf("expected *AppError with code %q, got %v", tt.err, err)
-				}
-				if appErr.Code != tt.err {
-					t.Fatalf("got code %q, want %q", appErr.Code, tt.err)
-				}
-
+			if tt.errCode != "" {
+				testutils.AssertErrCode(t, err, tt.errCode)
 				return
 			}
-
 			if err != nil {
 				t.Fatalf("getguesscount failed: %v", err)
 			}
+
 			if got != tt.want {
 				t.Errorf("want %v, got %v", tt.want, got)
 			}
