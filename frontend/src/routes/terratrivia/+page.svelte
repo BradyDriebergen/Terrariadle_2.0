@@ -38,6 +38,7 @@
 		}))
 	);
 	let selectedChunks: string[] = $state([]);
+	let selectedChunkIds: number[] = $state([]);
 	let input: string | null = $derived(selectedChunks.length > 0 ? selectedChunks.join('') : null);
 
 	// Debouncer function for api calls
@@ -68,6 +69,7 @@
 
 				chunks = chunks.filter((c) => !selectedChunks.includes(c));
 				selectedChunks = [];
+				selectedChunkIds = [];
 			}
 		} catch (e) {
 			alert('Games have refreshed! Refresh the page to start guessing.');
@@ -124,6 +126,7 @@
 					<button
 						onclick={() => {
 							selectedChunks.pop();
+							selectedChunkIds.pop();
 							handleClick();
 						}}
 						disabled={selectedChunks.length === 0}
@@ -139,14 +142,15 @@
 				{#each chunkButtons as chunk (chunk.id)}
 					<button
 						class="chunk"
-						class:chunk-placeholder={selectedChunks.includes(chunk.value) || chunk.value === ''}
-						disabled={selectedChunks.includes(chunk.value) || selectedChunks.length >= 4}
+						class:chunk-placeholder={selectedChunkIds.includes(chunk.id) || chunk.value === ''}
+						disabled={selectedChunkIds.includes(chunk.id) || selectedChunks.length >= 4}
 						onclick={() => {
 							selectedChunks.push(chunk.value);
+							selectedChunkIds.push(chunk.id);
 							handleClick();
 						}}
 					>
-						{!selectedChunks.includes(chunk.value) ? chunk.value : ''}
+						{!selectedChunkIds.includes(chunk.id) ? chunk.value : ''}
 					</button>
 				{/each}
 			</div>
