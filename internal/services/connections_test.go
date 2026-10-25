@@ -460,5 +460,77 @@ func TestRevealAnswers(t *testing.T) {
 }
 
 func TestGetWinningData(t *testing.T) {
+	ctx := context.Background()
 
+	tests := []struct {
+		name    string
+		want    ConnectionsWinningData
+		user    *domain.User
+		errCode domain.ErrCode
+	}{
+		{
+			name: "Successfully returns winning data",
+			want: ConnectionsWinningData{
+				Position: 4,
+			},
+			user: &domain.User{
+				UserID: "testID",
+				Connections: domain.ConnectionGame{
+					Game: domain.Game{
+						Position: 4,
+						Finished: true,
+					},
+				},
+			},
+		},
+		{
+			name:    "Reveal with no user found",
+			want:    ConnectionsWinningData{},
+			user:    nil,
+			errCode: domain.ErrUsrNotFound,
+		},
+		{
+			name: "Reveal with attempts remaining",
+			want: ConnectionsWinningData{},
+			user: &domain.User{
+				UserID: "testID",
+				Connections: domain.ConnectionGame{
+					Game: domain.Game{
+						Finished: false,
+					},
+				},
+			},
+			errCode: domain.ErrConflict,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			answerCache := testutils.GenerateFakeAnswerStore()
+			guessCountCache := testutils.GenerateFakeGuessCountStore()
+			catalogCache := testutils.GenerateFakeCatalogStore()
+			userCache := testutils.GenerateFakeUserStore()
+
+			var userID string
+			if tt.user != nil {
+				userID = tt.user.UserID
+				userCache.UserCache[userID] = *tt.user
+			}
+
+			game := NewConnectionsGame(answerCache, guessCountCache, catalogCache, userCache)
+
+			got, err := game.GetWinningData(ctx, userID)
+			if tt.errCode != "" {
+				testutils.AssertErrCode(t, err, tt.errCode)
+				return
+			}
+			if err != nil {
+				t.Fatalf("getwinningdata failed: %v", err)
+			}
+
+			if got.Position != tt.want.Position {
+				t.Errorf("Position: want %v, got %v", tt.want.Position, got.Position)
+			}
+		})
+	}
 }
