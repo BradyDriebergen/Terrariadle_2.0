@@ -14,7 +14,7 @@
 		<a href={resolve('/about')}>
 			<img class="sign" src="/logos/terraria_sign.png" alt="About/help" title="How to play" />
 		</a>
-		<a href="https://ko-fi.com/bytebeard" target="_blank" rel="noopener noreferrer">
+		<a href="https://ko-fi.com/terrariadle" target="_blank" rel="noopener noreferrer">
 			<img class="kofi-icon" src="/logos/kofi_logo.png" alt="Kofi link" title="ko-fi.com" />
 		</a>
 	</div>
