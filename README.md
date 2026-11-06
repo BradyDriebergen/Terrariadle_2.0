@@ -1,6 +1,6 @@
 # Terrariadle_2.0
 
-[Live Site](https://terrariadle.com) - ~~[Report a Bug](#mailto:terrariadle@gmail.com)~~ - [~~Reach Out](#mailto:terrariadle@gmail.com)~~ - [Support Me](https://ko-fi.com/terrariadle)
+[Live Site](https://terrariadle.com) - ~~Report a Bug~~ (currently being implemented) - ~~Reach Out~~ (currently being implemented) - [Support Me](https://ko-fi.com/terrariadle)
 
 ---
 
