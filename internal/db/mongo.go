@@ -25,10 +25,17 @@ func Connect(uri, dbName string) (*MongoDB, error) {
 	defer cancel()
 
 	// Fix added during 11/3/26 incident. See docs for more information
+	// Optimized pool initialization for 1 vCPU environments and strict cloud firewalls
 	opts := options.Client().
 		ApplyURI(uri).
-		SetMaxConnIdleTime(2 * time.Minute). // drop pooled connections idle longer than this
-		SetTimeout(5 * time.Second)          // backstop deadline for every operation
+		// Keep background monitoring threads warm and active
+		SetMinPoolSize(2).
+		// Limit context-switching overhead on a fractional/shared vCPU instance
+		SetMaxPoolSize(15).
+		// Prune unused connections cleanly inside our 120s keep-alive window
+		SetMaxConnIdleTime(2 * time.Minute).
+		// Hard operational deadline stop to prevent application-wide stalling
+		SetTimeout(5 * time.Second)
 
 	client, err := mongo.Connect(ctx, opts)
 	if err != nil {
