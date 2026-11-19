@@ -6,7 +6,7 @@
 
 <!-- ![Terrariadle Screenshot](./frontend/static/terrariadle-screenshot.png) -->
 
-<img src="./frontend/static/terrariadle-screenshot.png" alt="Terrariadle Screenshot" height="300">
+<img src="./docs/terrariadle-screenshot.png" alt="Terrariadle Screenshot" height="300">
 
 ---
 
