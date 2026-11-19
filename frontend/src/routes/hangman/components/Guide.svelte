@@ -73,7 +73,7 @@
 				]}
 			/>
 		</div>
-		<img class="wof" src="/hangman/Wall_of_Flesh.gif" alt="Wall of Flesh" in:scale />
+		<img class="wof" src="/hangman/Wall_of_Flesh.webp" alt="Wall of Flesh" in:scale />
 	{/if}
 </div>
 <p>Wrong guesses: {6 - attempts} / 6</p>
