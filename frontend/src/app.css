@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Andy';
-	src: url('/fonts/AndyBold.OTF') format('truetype');
+	src: url('/fonts/AndyBold.woff2') format('truetype');
 	font-weight: Bold;
 	font-style: normal;
 }

@@ -23,13 +23,26 @@ func Connect(uri, dbName string) (*MongoDB, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))
+	// Fix added during 11/3/26 incident. See docs for more information
+	// Optimized pool initialization for 1 vCPU environments and strict cloud firewalls
+	opts := options.Client().
+		ApplyURI(uri).
+		// Keep background monitoring threads warm and active
+		SetMinPoolSize(2).
+		// Limit context-switching overhead on a fractional/shared vCPU instance
+		SetMaxPoolSize(15).
+		// Prune unused connections cleanly inside our 120s keep-alive window
+		SetMaxConnIdleTime(2 * time.Minute).
+		// Hard operational deadline stop to prevent application-wide stalling
+		SetTimeout(5 * time.Second)
+
+	client, err := mongo.Connect(ctx, opts)
 	if err != nil {
-		return nil, fmt.Errorf("Error when attempting to connect to MongoDB: %w", err)
+		return nil, fmt.Errorf("connect to MongoDB: %w", err)
 	}
 
 	if err := client.Ping(ctx, nil); err != nil {
-		return nil, fmt.Errorf("Error when pinging MongoDB server: %w", err)
+		return nil, fmt.Errorf("ping MongoDB: %w", err)
 	}
 
 	return &MongoDB{client: client, dbName: dbName}, nil

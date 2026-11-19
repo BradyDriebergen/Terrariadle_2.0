@@ -66,6 +66,12 @@ These notes are used by me to maintain the project and to refer back to if anyth
 
 - **[Updating Dependencies](./maintenance/updating-dependencies.md)** - Instructions for updating Go and NPM dependencies.
 
+## Incidents
+
+These reports go over major incidents with the project for future reference
+
+- **[Check-Guess Endpoint Hang on Winning Guesses (11/3/26)](./incidents/winning-guess-hang.md)** - Report on players not able to guess correctly that lasted 36 hours. Presumed to be caused by idle and expired MongoDB connection.
+
 ## Dev Notes
 
 - **[Site Component Planning](./dev-notes/Site-Component-Planning.pdf)** - Old plan for component structure in Svelte frontend.
