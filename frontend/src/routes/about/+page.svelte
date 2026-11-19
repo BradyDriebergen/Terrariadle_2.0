@@ -116,15 +116,15 @@
 	<p>
 		Each of these games have their own unique styles. Some allow you to guess until you solve it,
 		others give you a certain amount of chances. Players can solve the daily puzzles every 24 hours.
-		Puzzles refresh at mightnight every night. To see specific game functionality, the sections
-		below discribe these games in detail.
+		Puzzles refresh at midnight. To see specific game functionality, the sections
+		below describe these games in detail.
 	</p>
 
 	<h2 id="dw">How to play: Daily Slash</h2>
 	<hr />
 	<p>
 		The Daily Slash plays a lot like Wordle, where you try to guess the daily weapon using hints
-		from previous guesses. To start guessing, you will see a module on the top of the page
+		from previous guesses. To start guessing, you will see a module at the top of the page
 		containing a search bar. Typing in this search bar lists all of the weapons in the game. You can
 		select any of these weapons by clicking/tapping, or you can also navigate using arrow keys and
 		guess using the enter key.
@@ -188,12 +188,12 @@
 	</p>
 	<p>
 		Because this is based on Terraria, each catagory will be based on different parts of the game.
-		This can range from accessories, potions, fish, weapons, biomes, etc. However, catagories are
+		This can range from accessories, potions, fish, weapons, biomes, etc. However, categories are
 		not as straightforward as they seem. Use your best judgement to find the similarities between
 		the objects.
 	</p>
 
-	<h3>Examples of catagories:</h3>
+	<h3>Examples of categories:</h3>
 	<ul style="margin-top: -10px;">
 		<li>- Slime Bonus Drops</li>
 		<li>- Types of Sharks</li>
@@ -212,8 +212,8 @@
 	<p>
 		Terraria's NPCs say all kinds of things. Everyday, a random quote said by a NPC is picked and
 		you are prompted to guess who said it. The quote can be from any NPC found in the game excluding
-		Santa Claus. You can guess through entering the trade of the NPC (Guide, Dryad, Arms Dealer,
-		etc.). You will know when your right when the winning screen appears.
+		Santa Claus. You can guess by entering the trade of the NPC (Guide, Dryad, Arms Dealer,
+		etc.). You will know you're right when the winning screen appears.
 	</p>
 
 	<p>
@@ -264,7 +264,7 @@
 		solved all 7 terms, you've won the game.
 	</p>
 	<p>
-		Don't be fooled by all the words you can create. While you can create all sorts of whacky terms,
+		Don't be fooled by all the words you can create. While you can create all sorts of wacky terms,
 		you can only solve the puzzle with specific Terraria terms. Pay attention to the clues and try
 		your best to guess.
 	</p>
