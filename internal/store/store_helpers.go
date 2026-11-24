@@ -127,13 +127,3 @@ func toGuessCountDomain(guessCounts repo.PlayerGuessCounts) domain.PlayerGuessCo
 		TerraTriviaCount: guessCounts.TerraTriviaCount,
 	}
 }
-
-func fromGuessCountDomain(guessCounts domain.PlayerGuessCounts) repo.PlayerGuessCounts {
-	return repo.PlayerGuessCounts{
-		DailySlashCount:  guessCounts.DailySlashCount,
-		ConnectionsCount: guessCounts.ConnectionsCount,
-		GuessTheNpcCount: guessCounts.GuessTheNpcCount,
-		HangmanCount:     guessCounts.HangmanCount,
-		TerraTriviaCount: guessCounts.TerraTriviaCount,
-	}
-}

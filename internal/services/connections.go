@@ -84,6 +84,8 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 		return ConnectionsCheckData{}, err
 	}
 
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return ConnectionsCheckData{}, domain.UserNotFound("User not found", err)
@@ -172,6 +174,8 @@ func (g *Connections) CheckGuess(ctx context.Context, userId string, guessedOpti
 }
 
 func (g *Connections) RevealAnswers(ctx context.Context, userId string) (ConnectionsRevealData, error) {
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return ConnectionsRevealData{}, domain.UserNotFound("User not found", err)

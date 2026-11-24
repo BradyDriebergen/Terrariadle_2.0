@@ -10,7 +10,17 @@ type AnswerRepo interface {
 	UpsertAnswerData(ctx context.Context, answerData *AnswerData) error
 	GetGuessCounts(ctx context.Context) (PlayerGuessCounts, error)
 	UpsertGuessCounts(ctx context.Context, guessCounts *PlayerGuessCounts) error
+	IncrementGuessCount(ctx context.Context, field string) (PlayerGuessCounts, error)
 }
+
+// Bson field names for PlayerGuessCounts, used with IncrementGuessCount
+const (
+	DailySlashCountField  = "dailySlashCount"
+	ConnectionsCountField = "connectionsCount"
+	GuessTheNpcCountField = "guessTheNpcCount"
+	HangmanCountField     = "hangmanCount"
+	TerraTriviaCountField = "terratriviaCount"
+)
 
 type MongoAnswerRepo struct {
 	database *db.MongoDB
@@ -48,4 +58,13 @@ func (r *MongoAnswerRepo) GetGuessCounts(ctx context.Context) (PlayerGuessCounts
 func (r *MongoAnswerRepo) UpsertGuessCounts(ctx context.Context, guessCounts *PlayerGuessCounts) error {
 	err := db.Upsert(ctx, r.database, "player_guess_counts", db.Filter{"_id": 1}, guessCounts)
 	return err
+}
+
+func (r *MongoAnswerRepo) IncrementGuessCount(ctx context.Context, field string) (PlayerGuessCounts, error) {
+	guessCounts, err := db.Increment[PlayerGuessCounts](ctx, r.database, "player_guess_counts", db.Filter{"_id": 1}, field)
+	if err != nil {
+		return PlayerGuessCounts{}, err
+	}
+
+	return *guessCounts, nil
 }

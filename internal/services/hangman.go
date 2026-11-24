@@ -60,6 +60,8 @@ func (g *Hangman) CheckGuess(ctx context.Context, userId string, guess string) (
 		return HangmanCheckData{}, err
 	}
 
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return HangmanCheckData{}, domain.UserNotFound("User not found", err)
