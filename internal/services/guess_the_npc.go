@@ -70,6 +70,8 @@ func (g *GuessTheNpc) GetSearchableNpcs() []SearchNpcData {
 }
 
 func (g *GuessTheNpc) CheckGuess(ctx context.Context, userId string, npcId int) (GuessTheNpcCheckData, error) {
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return GuessTheNpcCheckData{}, domain.UserNotFound("User not found", err)
@@ -142,6 +144,8 @@ func (g *GuessTheNpc) GetWinningData(ctx context.Context, userId string) (GuessT
 }
 
 func (g *GuessTheNpc) CheckName(ctx context.Context, userId string, name string) (GuessTheNpcMiniGameData, error) {
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return GuessTheNpcMiniGameData{}, domain.UserNotFound("User not found", err)

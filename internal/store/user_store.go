@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"hash/fnv"
 	"sync"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/repo"
@@ -17,12 +18,17 @@ type UserStore interface {
 	DropAllUsers(ctx context.Context) error
 	FlushDirty(ctx context.Context) error
 	EvictStale()
+	LockUser(userID string) (unlock func())
 }
+
+// Number of striped per-user locks. Fixed size so memory never grows with user count.
+const userLockCount = 256
 
 type CachedUserStore struct {
 	mu        sync.RWMutex
 	userCache map[string]domain.User
 	userRepo  repo.UserRepo
+	userLocks [userLockCount]sync.Mutex
 }
 
 func NewUserStore(userRepo repo.UserRepo) *CachedUserStore {
@@ -135,6 +141,17 @@ func (s *CachedUserStore) EvictStale() {
 			delete(s.userCache, userID)
 		}
 	}
+}
+
+// LockUser serializes read-modify-write requests for a single user (double-clicks, multiple tabs).
+// Usage: defer s.LockUser(userID)()
+func (s *CachedUserStore) LockUser(userID string) (unlock func()) {
+	h := fnv.New32a()
+	h.Write([]byte(userID))
+	l := &s.userLocks[h.Sum32()%userLockCount]
+
+	l.Lock()
+	return l.Unlock
 }
 
 func createNewUser(userID string) domain.User {

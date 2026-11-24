@@ -80,6 +80,8 @@ func (g *TerraTrivia) CheckGuess(ctx context.Context, userId string, guess strin
 		return TerraTriviaCheckData{}, domain.InvalidInput("Guess cannot be empty", nil)
 	}
 
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return TerraTriviaCheckData{}, domain.UserNotFound("User not found", err)

@@ -6,6 +6,7 @@ import (
 	"sync"
 	"terrariadle-backend/internal/domain"
 	"terrariadle-backend/internal/repo"
+	"time"
 )
 
 type GuessCountsStore interface {
@@ -22,6 +23,7 @@ type CachedGuessCountsStore struct {
 	answerRepo       repo.AnswerRepo
 	mu               sync.RWMutex
 	guessCountsCache domain.PlayerGuessCounts
+	generation       int // bumped on every reset, so in-flight increments from before the reset are ignored
 	broker           domain.GuessCountBroker
 }
 
@@ -60,121 +62,79 @@ func (s *CachedGuessCountsStore) ResetGuessCounts(ctx context.Context) error {
 	}
 
 	s.guessCountsCache = toGuessCountDomain(guessCounts)
+	s.generation++
 
 	return nil
 }
 
 func (s *CachedGuessCountsStore) IncrementDailySlashCount(ctx context.Context) (int, error) {
-	s.mu.Lock()
-
-	s.guessCountsCache.DailySlashCount++
-
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
-		s.guessCountsCache.DailySlashCount-- // roll back on failure
+	count, err := s.increment(ctx, repo.DailySlashCountField, func(c *domain.PlayerGuessCounts) *int { return &c.DailySlashCount })
+	if err != nil {
 		return 0, fmt.Errorf("increment-daily-slash-count: %w", err)
 	}
-
-	count := s.guessCountsCache.DailySlashCount
-
-	s.mu.Unlock()
-
-	s.broker.Publish(domain.GuessCountEvent{
-		GameMode: domain.GameModeDailySlash,
-		Count:    count,
-	})
-
-	return s.guessCountsCache.DailySlashCount, nil
+	s.broker.Publish(domain.GuessCountEvent{GameMode: domain.GameModeDailySlash, Count: count})
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementConnectionsCount(ctx context.Context) (int, error) {
-	s.mu.Lock()
-
-	s.guessCountsCache.ConnectionsCount++
-
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
-		s.guessCountsCache.ConnectionsCount-- // roll back on failure
+	count, err := s.increment(ctx, repo.ConnectionsCountField, func(c *domain.PlayerGuessCounts) *int { return &c.ConnectionsCount })
+	if err != nil {
 		return 0, fmt.Errorf("increment-connections-count: %w", err)
 	}
-
-	count := s.guessCountsCache.ConnectionsCount
-
-	s.mu.Unlock()
-
-	s.broker.Publish(domain.GuessCountEvent{
-		GameMode: domain.GameModeConnections,
-		Count:    count,
-	})
-
-	return s.guessCountsCache.ConnectionsCount, nil
+	s.broker.Publish(domain.GuessCountEvent{GameMode: domain.GameModeConnections, Count: count})
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementGuessTheNpcCount(ctx context.Context) (int, error) {
-	s.mu.Lock()
-
-	s.guessCountsCache.GuessTheNpcCount++
-
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
-		s.guessCountsCache.GuessTheNpcCount-- // roll back on failure
+	count, err := s.increment(ctx, repo.GuessTheNpcCountField, func(c *domain.PlayerGuessCounts) *int { return &c.GuessTheNpcCount })
+	if err != nil {
 		return 0, fmt.Errorf("increment-guess-the-npc-count: %w", err)
 	}
-
-	count := s.guessCountsCache.GuessTheNpcCount
-
-	s.mu.Unlock()
-
-	s.broker.Publish(domain.GuessCountEvent{
-		GameMode: domain.GameModeGuessTheNpc,
-		Count:    count,
-	})
-
-	return s.guessCountsCache.GuessTheNpcCount, nil
+	s.broker.Publish(domain.GuessCountEvent{GameMode: domain.GameModeGuessTheNpc, Count: count})
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementHangmanCount(ctx context.Context) (int, error) {
-	s.mu.Lock()
-
-	s.guessCountsCache.HangmanCount++
-
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
-		s.guessCountsCache.HangmanCount-- // roll back on failure
+	count, err := s.increment(ctx, repo.HangmanCountField, func(c *domain.PlayerGuessCounts) *int { return &c.HangmanCount })
+	if err != nil {
 		return 0, fmt.Errorf("increment-hangman-count: %w", err)
 	}
-
-	count := s.guessCountsCache.HangmanCount
-
-	s.mu.Unlock()
-
-	s.broker.Publish(domain.GuessCountEvent{
-		GameMode: domain.GameModeHangman,
-		Count:    count,
-	})
-
-	return s.guessCountsCache.HangmanCount, nil
+	s.broker.Publish(domain.GuessCountEvent{GameMode: domain.GameModeHangman, Count: count})
+	return count, nil
 }
 
 func (s *CachedGuessCountsStore) IncrementTerraTriviaCount(ctx context.Context) (int, error) {
-	s.mu.Lock()
-
-	s.guessCountsCache.TerraTriviaCount++
-
-	gc := fromGuessCountDomain(s.guessCountsCache)
-	if err := s.answerRepo.UpsertGuessCounts(ctx, &gc); err != nil {
-		s.guessCountsCache.TerraTriviaCount-- // roll back on failure
+	count, err := s.increment(ctx, repo.TerraTriviaCountField, func(c *domain.PlayerGuessCounts) *int { return &c.TerraTriviaCount })
+	if err != nil {
 		return 0, fmt.Errorf("increment-terratrivia-count: %w", err)
 	}
+	s.broker.Publish(domain.GuessCountEvent{GameMode: domain.GameModeTerraTrivia, Count: count})
+	return count, nil
+}
 
-	count := s.guessCountsCache.TerraTriviaCount
+func (s *CachedGuessCountsStore) increment(ctx context.Context, repoField string, field func(*domain.PlayerGuessCounts) *int) (int, error) {
+	s.mu.RLock()
+	generation := s.generation
+	s.mu.RUnlock()
 
-	s.mu.Unlock()
+	// Other users' positions depend on this write, so don't let a client disconnect abort it
+	ctx, cancel := context.WithTimeout(context.WithoutCancel(ctx), 5*time.Second)
+	defer cancel()
 
-	s.broker.Publish(domain.GuessCountEvent{
-		GameMode: domain.GameModeTerraTrivia,
-		Count:    count,
-	})
+	guessCounts, err := s.answerRepo.IncrementGuessCount(ctx, repoField)
+	if err != nil {
+		return 0, err
+	}
+	updated := toGuessCountDomain(guessCounts)
+	count := *field(&updated)
 
-	return s.guessCountsCache.TerraTriviaCount, nil
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	// Skip stale results: a reset happened mid-write, or a later increment already landed
+	if p := field(&s.guessCountsCache); s.generation == generation && count > *p {
+		*p = count
+	}
+
+	return count, nil
 }

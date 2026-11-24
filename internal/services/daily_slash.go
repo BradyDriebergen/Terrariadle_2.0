@@ -99,6 +99,8 @@ func (g *DailySlash) GetHint(hintNum int) (string, error) {
 }
 
 func (g *DailySlash) CheckGuess(ctx context.Context, userId string, weaponId int) (DailySlashCheckData, error) {
+	defer g.userCache.LockUser(userId)()
+
 	user, err := g.userCache.GetUser(ctx, userId)
 	if err != nil {
 		return DailySlashCheckData{}, domain.UserNotFound("User not found", err)

@@ -95,6 +95,21 @@ func Upsert(ctx context.Context, m *MongoDB, collectionName string, filter Filte
 	return nil
 }
 
+func Increment[T any](ctx context.Context, m *MongoDB, collectionName string, filter Filter, field string) (*T, error) {
+	collection := m.client.Database(m.dbName).Collection(collectionName)
+
+	opts := options.FindOneAndUpdate().SetUpsert(true).SetReturnDocument(options.After)
+
+	var result T
+
+	err := collection.FindOneAndUpdate(ctx, bson.M(filter), bson.M{"$inc": bson.M{field: 1}}, opts).Decode(&result)
+	if err != nil {
+		return nil, fmt.Errorf("failed to increment %s.%s: %w", collectionName, field, err)
+	}
+
+	return &result, nil
+}
+
 func DeleteAll(ctx context.Context, m *MongoDB, collectionName string) error {
 	collection := m.client.Database(m.dbName).Collection(collectionName)
 	if _, err := collection.DeleteMany(ctx, bson.D{}); err != nil {
