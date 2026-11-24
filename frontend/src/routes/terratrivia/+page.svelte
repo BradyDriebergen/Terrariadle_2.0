@@ -10,11 +10,13 @@
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
 	import { session } from '$lib/store/session.svelte';
+	import { send } from '$lib/utils/transitions';
+	import { flip } from 'svelte/animate';
 
 	let { data }: { data: PageData } = $props();
 
 	let finished: boolean = $state(false);
-	let chunks: string[] = $state([]);
+	let chunks: SvelteMap<number, string> = $state(new SvelteMap());
 	let triviaItems: SvelteMap<number, TriviaItem> = $state(new SvelteMap());
 
 	let pageLoading: boolean = $state(true);
@@ -22,7 +24,7 @@
 		// Initialize data once pre-fetch is finished
 		if (data.gameContext) {
 			finished = data.gameContext.finished;
-			chunks = data.gameContext.chunks;
+			chunks = new SvelteMap(data.gameContext.chunks.entries());
 			triviaItems = new SvelteMap<number, TriviaItem>(
 				data.gameContext.trivia_items.map((item) => [item.id, item])
 			);
@@ -31,20 +33,18 @@
 		}
 	});
 
-	let chunkButtons = $derived(
-		Array.from({ length: 20 }, (_, i) => ({
-			id: i,
-			value: chunks[i] ?? ''
-		}))
-	);
-	let selectedChunks: string[] = $state([]);
 	let selectedChunkIds: number[] = $state([]);
-	let input: string | null = $derived(selectedChunks.length > 0 ? selectedChunks.join('') : null);
+	let input: string = $derived(
+		selectedChunkIds
+			.map((id) => chunks.get(id))
+			.filter((s): s is string => s !== undefined)
+			.join('')
+	);
 
 	// Debouncer function for api calls
 	let timeoutId: ReturnType<typeof setTimeout> | undefined;
 	function handleClick() {
-		if (selectedChunks.length <= 1 || !input) return;
+		if (selectedChunkIds.length < 2 || !input) return;
 
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(() => {
@@ -54,23 +54,20 @@
 	onDestroy(() => clearTimeout(timeoutId));
 
 	async function submitGuess() {
-		if (!input) return;
+		const ids = [...selectedChunkIds];
+		const guess = input;
+		if (ids.length < 2 || !guess) return;
 
 		try {
-			const res = await checkTriviaQuestionGuess(page.data.userId, input);
+			const res = await checkTriviaQuestionGuess(page.data.userId, guess);
+			if (!res.is_correct) return;
 
-			if (res.is_correct) {
-				triviaItems.set(res.guess_result.id, res.guess_result);
-				finished = res.finished;
+			triviaItems.set(res.guess_result.id, res.guess_result);
+			finished = res.finished;
+			if (finished) session.terratriviaStatus = true;
 
-				if (finished) {
-					session.terratriviaStatus = true;
-				}
-
-				chunks = chunks.filter((c) => !selectedChunks.includes(c));
-				selectedChunks = [];
-				selectedChunkIds = [];
-			}
+			for (const id of ids) chunks.delete(id);
+			selectedChunkIds = selectedChunkIds.filter((id) => !ids.includes(id));
 		} catch (e) {
 			alert('Games have refreshed! Refresh the page to start guessing.');
 
@@ -80,12 +77,13 @@
 	}
 
 	function shuffle() {
-		const result = [...chunks];
-		for (let i = result.length - 1; i > 0; i--) {
+		let shuffled = [...chunks];
+		for (let i = shuffled.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
-			[result[i], result[j]] = [result[j], result[i]];
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
 		}
-		chunks = result;
+
+		chunks = new SvelteMap(shuffled);
 	}
 </script>
 
@@ -116,20 +114,19 @@
 			{#if !finished}
 				<div class="selection-menu">
 					<button onclick={shuffle}>Shuffle</button>
-					<button onclick={() => (selectedChunks = [])}>Clear</button>
+					<button onclick={() => (selectedChunkIds = [])}>Clear</button>
 				</div>
 
 				<div class="input-box">
-					<span class:empty={selectedChunks.length > 0}>
-						{input ?? 'Start building words...'}
+					<span class:empty={selectedChunkIds.length > 0}>
+						{input || 'Start building words...'}
 					</span>
 					<button
 						onclick={() => {
-							selectedChunks.pop();
 							selectedChunkIds.pop();
 							handleClick();
 						}}
-						disabled={selectedChunks.length === 0}
+						disabled={selectedChunkIds.length === 0}
 					>
 						<img src="/emojis/backspace.png" alt="backspace" />
 					</button>
@@ -139,18 +136,19 @@
 
 		{#if !finished}
 			<div class="chunk-grid" out:slide={{ duration: 300, easing: cubicInOut }}>
-				{#each chunkButtons as chunk (chunk.id)}
+				{#each [...chunks] as [id, chunk] (id)}
 					<button
 						class="chunk"
-						class:chunk-placeholder={selectedChunkIds.includes(chunk.id) || chunk.value === ''}
-						disabled={selectedChunkIds.includes(chunk.id) || selectedChunks.length >= 4}
+						class:selected-chunk={selectedChunkIds.includes(id)}
+						disabled={selectedChunkIds.includes(id) || selectedChunkIds.length >= 4}
+						out:send={{ key: id }}
+						animate:flip={{ duration: 180, easing: (t) => t }}
 						onclick={() => {
-							selectedChunks.push(chunk.value);
-							selectedChunkIds.push(chunk.id);
+							selectedChunkIds.push(id);
 							handleClick();
 						}}
 					>
-						{!selectedChunkIds.includes(chunk.id) ? chunk.value : ''}
+						{!selectedChunkIds.includes(id) ? chunk : ''}
 					</button>
 				{/each}
 			</div>
@@ -286,7 +284,7 @@
 		transition: background-color 0.1s ease;
 	}
 
-	.chunk-placeholder {
+	.selected-chunk {
 		border: none;
 		background: none;
 	}
@@ -296,7 +294,7 @@
 		cursor: pointer;
 	}
 
-	.chunk-placeholder:hover {
+	.selected-chunk:hover {
 		border: none;
 		background: none;
 		cursor: default;
@@ -307,7 +305,7 @@
 		background-color: var(--color-button);
 	}
 
-	.chunk-placeholder:disabled {
+	.selected-chunk:disabled {
 		border: none;
 		background: none;
 		cursor: default;
